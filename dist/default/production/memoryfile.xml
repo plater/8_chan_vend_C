@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production/Andre_8Chan_C.X.production.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>131072</length>
+      <used>2375</used>
+      <free>128697</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>3720</length>
+      <used>99</used>
+      <free>3621</free>
+    </memory>
+  </executable>
+</project>
