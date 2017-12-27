@@ -14393,11 +14393,65 @@ void PIN_MANAGER_IOC(void);
 # 12 "/opt/microchip/xc8/v1.44/include/stdbool.h"
 typedef unsigned char bool;
 
-# 110 "mcc_generated_files/interrupt_manager.h"
+# 157 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
 
-# 122
+# 169
 void interrupt INTERRUPT_InterruptManager (void);
+
+# 99 "mcc_generated_files/tmr5.h"
+void TMR5_Initialize(void);
+
+# 128
+void TMR5_StartTimer(void);
+
+# 160
+void TMR5_StopTimer(void);
+
+# 195
+uint16_t TMR5_ReadTimer(void);
+
+# 234
+void TMR5_WriteTimer(uint16_t timerVal);
+
+# 270
+void TMR5_Reload(void);
+
+# 309
+void TMR5_StartSinglePulseAcquisition(void);
+
+# 348
+uint8_t TMR5_CheckGateValueStatus(void);
+
+# 386
+bool TMR5_HasOverflowOccured(void);
+
+# 99 "mcc_generated_files/tmr3.h"
+void TMR3_Initialize(void);
+
+# 128
+void TMR3_StartTimer(void);
+
+# 160
+void TMR3_StopTimer(void);
+
+# 195
+uint16_t TMR3_ReadTimer(void);
+
+# 234
+void TMR3_WriteTimer(uint16_t timerVal);
+
+# 270
+void TMR3_Reload(void);
+
+# 309
+void TMR3_StartSinglePulseAcquisition(void);
+
+# 348
+uint8_t TMR3_CheckGateValueStatus(void);
+
+# 386
+bool TMR3_HasOverflowOccured(void);
 
 # 99 "mcc_generated_files/tmr1.h"
 void TMR1_Initialize(void);
@@ -14432,6 +14486,12 @@ void CMP1_Initialize(void);
 # 132
 bool CMP1_GetOutputStatus(void);
 
+# 92 "mcc_generated_files/dac1.h"
+void DAC1_Initialize(void);
+
+# 128
+void DAC1_SetOutput(uint8_t inputData);
+
 # 98 "mcc_generated_files/memory.h"
 uint8_t FLASH_ReadByte(uint32_t flashAddr);
 
@@ -14455,39 +14515,38 @@ uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
 
-# 94 "mcc_generated_files/eusart1.h"
-void EUSART1_Initialize(void);
-
-# 114
-uint8_t EUSART1_Read(void);
-
-# 134
-void EUSART1_Write(uint8_t txData);
-
-# 94 "mcc_generated_files/eusart2.h"
+# 93 "mcc_generated_files/eusart2.h"
 void EUSART2_Initialize(void);
 
-# 114
+# 113
 uint8_t EUSART2_Read(void);
 
-# 134
+# 133
 void EUSART2_Write(uint8_t txData);
 
-# 92 "mcc_generated_files/fvr.h"
-void FVR_Initialize(void);
+# 93 "mcc_generated_files/eusart1.h"
+void eusartmdb_Initialize(void);
 
-# 126
-bool FVR_IsOutputReady(void);
+void EUSART1_Initialize(void);
 
-# 74 "mcc_generated_files/mcc.h"
+# 115
+uint8_t EUSART1_Read(void);
+
+# 135
+void EUSART1_Write(uint8_t txData);
+
+# 76 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 87
+# 89
 void OSCILLATOR_Initialize(void);
 
-# 42 "lcd.h"
+# 41 "lcd.h"
+signed char count;
+
 const char dispfunc1 = 0x24;
 const char dispfunc2 = 0x28;
+const char dispfunc3 = 0x2C;
 const char dispon = 0x0C;
 const char dispclr = 0x01;
 const char dispaddr = 0xA8;
@@ -14499,15 +14558,52 @@ const char dispshleft = 0x07;
 const char dispoff = 0x08;
 const char dispsr = 0x1B;
 const char dispsl = 0x18;
+const char line1 = 0x80;
+const char line2 = 0xC0;
+const char line3 = 0x94;
+const char line4 = 0xD4;
 
 
 const uint8_t inscoin[] = "Insert Coins or Notes";
 const uint8_t credits[] = "  Credit = R";
+const uint8_t service[] = "  Service Mode";
+const uint8_t audit[] = "  Audit Mode";
+const uint8_t hopcoin[] = "Hopper Coin         Value";
+const uint8_t senset[] = "  Setup Sensor";
+const uint8_t credclr[] = "Push button 1 to clear credits   and exit";
+const uint8_t vendtest[] = " Push button to     vend";
+const uint8_t notetest[] = "  Insert Note";
+const uint8_t exit[] = "Exit";
+const uint8_t servmsg[] = "Service Mode: press 1 = Audit 2 = Sensor3=Note en 4=Credit  5=Vend 6=Note 7=Exit";
+const uint8_t noteerr[] = "   Note error     code = 0x";
+const uint8_t inithop[] = "  Initialize Hopper";
+const uint8_t initnote[] = "     Initialize          Note Reader";
+const uint8_t nochange[] = "No Change Given";
+const uint8_t setnotes[] = "Enable / Disable    1 = R10, 2 = R20    3 = R50, 4 = R100   5 = R200";
+const uint8_t tenrand[] = "0 R10  ";
+const uint8_t twentyrand[] = "1 R20  ";
+const uint8_t fiftyrand[] = "2 R50  ";
+const uint8_t hundredrand[] = "3 R100 ";
+const uint8_t twohundredrand[] = "4 R200 ";
+const uint8_t enabled[] = "enabled ";
+const uint8_t disabled[] = "disabled";
 
+uint8_t bflag;
+uint8_t lcdfunc;
+uint8_t lcdata;
+uint8_t lcdline;
+uint8_t stradd;
+uint24_t hexnum;
+uint8_t ercode;
+uint8_t lcdaddress;
+
+void lcd_dispadd(uint8_t lcdaddress);
+
+void displ_code(uint8_t ercode);
 
 void lcd_init(void);
 
-void lcd_string(uint8_t *);
+void lcd_string(uint8_t *, uint8_t lcdline);
 
 void lcd_writeC(uint8_t);
 
@@ -14525,29 +14621,21 @@ void displ_hex(uint24_t);
 
 void displ_credit(void);
 
+void displ_noteer(void);
+
 void displ_test(void);
 
 void displ_totals(void);
 
 void displ_empty(void);
 
+uint8_t displ_note(uint8_t *lcdstring);
+
+void displ_nendis(uint8_t notenum);
+
 int8_t read_busy(void);
 
-# 16 "vend.h"
-const uint16_t credmem = 0x00;
-
-const uint16_t cashinv = 0x02;
-
-const uint16_t cashint = 0x04;
-
-const uint16_t vendstore = 0x07;
-
-const uint16_t pricestore = 0x0F;
-
-const uint16_t venderrors = 0x17;
-
-
-
+# 17 "mdb.h"
 const uint8_t note_reset = 0x30;
 
 const uint8_t note_setup = 0x31;
@@ -14577,18 +14665,16 @@ const uint8_t invalid_escrow = 0x0A;
 const uint8_t note_rejected = 0x0B;
 const uint8_t theft_attempt = 0x0C;
 
-# 64
-struct
-{
-unsigned iscredit : 1;
-unsigned error : 1;
-unsigned inscoin : 1;
-unsigned nochange : 1;
-unsigned credisplay : 1;
-unsigned initialrun : 1;
-unsigned spare1 : 1;
-unsigned spare2 : 1;
-} venflags;
+
+uint8_t mdbdata[32];
+uint8_t slvadd;
+uint8_t mcount = 0;
+uint8_t notebyte;
+uint8_t chkbyte;
+uint16_t dbcount=0;
+uint8_t notenum = 0xFF;
+
+
 
 struct
 {
@@ -14596,7 +14682,8 @@ unsigned isdata : 1;
 unsigned noteerr : 1;
 unsigned mode : 1;
 unsigned timeout : 1;
-unsigned spare2 : 1;
+
+unsigned vending : 1;
 unsigned spare3 : 1;
 unsigned spare4 : 1;
 unsigned spare5 : 1;
@@ -14611,9 +14698,11 @@ unsigned R20 : 1;
 unsigned R50 : 1;
 unsigned R100 : 1;
 unsigned R200 : 1;
-unsigned spare : 3;
+unsigned noteset : 1;
+unsigned endis : 1;
+unsigned spare : 1;
 }noteen;
-volatile uint8_t noteen_byte = 0x1F;
+volatile uint8_t noteen_byte;
 
 
 struct
@@ -14628,24 +14717,29 @@ unsigned chan7 : 1;
 unsigned chan8 : 1;
 } errorflags;
 
-
-void credit_add(uint8_t credit);
-
-void credit_subtract(uint8_t credit);
-
-void vend_init(void);
+uint8_t mdbtxbyte;
 
 
-uint8_t credit_check(void);
 
+void mdb_init(void);
 
 void init_mdbdata(uint8_t);
 
 uint8_t mdb_reset(void);
 
-bool mdb_noten(void);
+void set_notes(void);
 
-uint8_t mdb_poll(uint8_t slvadd, uint8_t mcount);
+void enable_notes(uint8_t notenum);
+
+void note_disenable(uint8_t notenum);
+
+void mdb_noten(void);
+
+void mdb_security(void);
+
+uint8_t mdb_poll(void);
+
+uint8_t mdb_comm(uint8_t slvadd, uint8_t mcount);
 
 void mdb_on(void);
 
@@ -14659,16 +14753,137 @@ void mdb_waitx(void);
 
 void mdb_waitr(void);
 
+void mdb_unlock(void);
+
+void mdb_transmit(uint8_t txbyte);
+
+# 18 "cctalk.h"
+const uint8_t hopadd = 0x03;
+
+const uint8_t mastadd = 0x01;
+
+const uint8_t cc_reset = 0x01;
+
+
+
+const uint8_t cc_test = 0xA3;
+
+const uint8_t cc_enable =0xA4;
+
+
+const uint8_t cc_status = 0xA6;
+
+
+const uint8_t cc_pay = 0xA7;
+
+const uint8_t cc_countrq = 0xA8;
+
+const uint8_t cc_stop = 0xAC;
+
+const uint8_t cc_level = 0xEC;
+
+const uint8_t cc_pin = 0xDA;
+
+const uint8_t cc_newpin = 0xDB;
+
+
+const uint8_t cc_serial = 0xF2;
+
+const uint8_t cc_adpoll = 0xFD;
+
+const uint8_t cc_poll = 0xFE;
+
+uint8_t dest;
+uint8_t nobytes;
+uint8_t command;
+
+
+uint8_t hpserial[3];
+
+struct
+{
+unsigned isdata : 1;
+unsigned hoperr : 1;
+unsigned mode : 1;
+unsigned timeout : 1;
+unsigned spare2 : 1;
+unsigned spare3 : 1;
+unsigned spare4 : 1;
+unsigned spare5 : 1;
+}cctflags;
+
+void cctalk_adpoll(void);
+void cctalk_pinenter(void);
+void cctalk_init(void);
+void cctalk_poll(void);
+void cctalk_serial(void);
 void cctalk_on(void);
+uint8_t cctalk_read(void);
 
-# 8 "lcd.c"
-signed char count;
-uint8_t bflag;
-uint8_t lcdfunc;
-uint8_t lcdata;
-uint8_t stradd;
-uint24_t hexnum;
+uint8_t cctalk_comm(uint8_t dest, uint8_t nobytes, uint8_t command);
 
+# 19 "vend.h"
+volatile uint8_t credit;
+volatile uint8_t cash;
+volatile uint8_t buttons;
+
+
+const uint16_t credmem = 0x00;
+
+const uint16_t cashinv = 0x02;
+
+const uint16_t cashint = 0x04;
+
+const uint16_t vendstore = 0x07;
+
+const uint16_t pricestore = 0x0F;
+
+const uint16_t venderrors = 0x17;
+
+const uint16_t notebits = 0x18;
+
+# 41
+struct
+{
+unsigned iscredit : 1;
+unsigned error : 1;
+unsigned inscoin : 1;
+unsigned nochange : 1;
+unsigned credisplay : 1;
+unsigned initialrun : 1;
+unsigned noterr : 1;
+unsigned service : 1;
+} venflags;
+
+void credit_add(uint8_t credit);
+
+void credit_subtract(uint8_t credit);
+
+void vend_init(void);
+
+
+uint8_t credit_check(void);
+
+void setup(void);
+
+uint8_t butindb(void);
+
+uint8_t butin(void);
+
+
+void Audit(void);
+
+void Hopper_coin(void);
+
+void Sensor_set(void);
+
+void Clear_cred(void);
+
+void Vend_test(void);
+
+void Note_test(void);
+
+# 10 "lcd.c"
 void lcd_init()
 {
 LATE = 0x00;
@@ -14677,15 +14892,15 @@ LATD = 0x03;
 for(count = 3; count > 0; count-- )
 {
 lcd_clockE();
-_delay((unsigned long)((5)*(8000000/4000.0)));
+_delay((unsigned long)((5)*(12000000/4000.0)));
 
 }
-_delay((unsigned long)((50)*(8000000/4000000.0)));
+_delay((unsigned long)((50)*(12000000/4000000.0)));
 LATD = 0x02;
 lcd_clockE();
 
 
-lcd_write(dispfunc2);
+lcd_write(dispfunc3);
 
 lcd_write(dispon);
 
@@ -14694,18 +14909,99 @@ lcd_write(dispnormal);
 lcd_write(dispclr);
 
 lcd_test();
+_delay((unsigned long)((250)*(12000000/4000.0)));
 asm("nop");
 
 }
 
+uint8_t displ_note(uint8_t *lcdstring)
+{
+
+
+notenum = 0x01 << (lcdstring[0] & 0x07);
+
+lcdstring ++;
+lcd_write(dispclr);
+lcd_string(*lcdstring, line2);
+return notenum;
+}
+
+void displ_nendis(uint8_t notenum)
+{
+if(notenum && noteen_byte)
+{
+lcd_string(enabled, line2 + 0x06);
+}
+else
+{
+lcd_string(disabled, line2 + 0x06);
+}
+}
+
 void displ_credit(void)
 {
-lcd_string(credits);
+lcd_string(credits, line1);
 uint8_t cash = credit_check();
 displ_hex((uint8_t) cash);
 venflags.credisplay = 0;
 }
 
+void displ_code(uint8_t ercode)
+{
+if((ercode >> 4) < 0x0A)
+{
+lcd_writeC((ercode >> 4) | 0x30);
+}
+else
+{
+switch(ercode >> 4)
+{
+case 0x0A : lcd_writeC(0x41);
+break;
+case 0x0B : lcd_writeC(0x42);
+break;
+case 0x0C : lcd_writeC(0x43);
+break;
+case 0x0D : lcd_writeC(0x44);
+break;
+case 0x0E : lcd_writeC(0x45);
+break;
+case 0x0F : lcd_writeC(0x46);
+}
+}
+if((ercode & 0x0F) < 0x0A)
+{
+lcd_writeC((ercode & 0x0F) | 0x30);
+}
+else
+{
+switch(ercode & 0x0F)
+{
+case 0x0A : lcd_writeC(0x41);
+break;
+case 0x0B : lcd_writeC(0x42);
+break;
+case 0x0C : lcd_writeC(0x43);
+break;
+case 0x0D : lcd_writeC(0x44);
+break;
+case 0x0E : lcd_writeC(0x45);
+break;
+case 0x0F : lcd_writeC(0x46);
+}
+
+}
+}
+
+void displ_noteer(void)
+{
+lcd_string(noteerr, line1);
+ercode = mdbdata[0];
+displ_code(ercode);
+mdbflags.noteerr = 0;
+venflags.noterr = 0;
+venflags.credisplay = 0;
+}
 
 void displ_hex(uint24_t hexnum)
 {
@@ -14732,9 +15028,16 @@ lcd_writeC(0x30);
 }
 
 
-void lcd_string(uint8_t *lcdstring)
+void lcd_string(uint8_t *lcdstring, uint8_t lcdline)
+{
+if(lcdline == line1)
 {
 lcd_write(dispclr);
+}
+else
+{
+lcd_dispadd(lcdline);
+}
 for(stradd = 0; lcdstring[stradd] != 0; stradd++)
 {
 lcdata = lcdstring[stradd];
@@ -14750,17 +15053,27 @@ asm("BSF LATE, 2");
 lcd_write(lcdata);
 
 
-if(bflag == 0x0F)
+
+switch(bflag)
+{
+case 0x13:lcd_dispadd(line2);
+break;
+case 0x53:lcd_dispadd(line3);
+break;
+case 0x27:lcd_dispadd(line4);
+}
+asm("BCF LATE, 2");
+}
+
+void lcd_dispadd(uint8_t lcdaddress)
 {
 uint8_t lcdatasave = lcdata;
 asm("BCF LATE, 2");
 
-lcdata = 0xC0;
-lcd_write(lcdata);
+lcd_write(lcdaddress);
 asm("BSF LATE, 2");
 lcdata = lcdatasave;
-}
-asm("BCF LATE, 2");
+
 }
 
 
@@ -14787,7 +15100,7 @@ LATD = savelatd;
 void lcd_test(void)
 {
 uint8_t character = 0x30;
-while(character < 'P')
+while(character < 0x80)
 {
 lcd_writeC(character);
 character = character+ 1;
@@ -14822,7 +15135,7 @@ return(bflag);
 void lcd_clockH(void)
 {
 asm("BSF LATE, 0");
-_delay((unsigned long)((1)*(8000000/4000000.0)));
+_delay((unsigned long)((1)*(12000000/4000000.0)));
 }
 
 
@@ -14830,7 +15143,7 @@ _delay((unsigned long)((1)*(8000000/4000000.0)));
 void lcd_clockL(void)
 {
 asm("BCF LATE, 0");
-_delay((unsigned long)((1)*(8000000/4000000.0)));
+_delay((unsigned long)((1)*(12000000/4000000.0)));
 }
 
 
@@ -14838,7 +15151,7 @@ _delay((unsigned long)((1)*(8000000/4000000.0)));
 void lcd_clockE(void)
 {
 asm("BSF LATE, 0");
-_delay((unsigned long)((1)*(8000000/4000000.0)));
+_delay((unsigned long)((1)*(12000000/4000000.0)));
 asm("BCF LATE, 0");
-_delay((unsigned long)((1)*(8000000/4000000.0)));
+_delay((unsigned long)((1)*(12000000/4000000.0)));
 }

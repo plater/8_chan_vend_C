@@ -13,7 +13,7 @@
   Description:
     This header file provides implementations for pin APIs for all pins selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - 4.26
+        Product Revision  :  MPLAB(c) Code Configurator - 4.26.1
         Device            :  PIC18F47K40
         Driver Version    :  1.02
     The generated drivers are tested against the following:
@@ -56,7 +56,7 @@ void PIN_MANAGER_Initialize(void)
     */   
     LATE = 0x00;    
     LATD = 0x00;    
-    LATA = 0x00;    
+    LATA = 0xC0;    
     LATB = 0x00;    
     LATC = 0x40;    
 

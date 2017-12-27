@@ -1,26 +1,26 @@
 /**
-  @Generated Interrupt Manager File
+  Generated Interrupt Manager Header File
 
   @Company:
     Microchip Technology Inc.
 
   @File Name:
-    interrupt_manager.c
+    interrupt_manager.h
 
   @Summary:
-    This is the Interrupt Manager file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs 
+    This is the Interrupt Manager file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   @Description:
     This header file provides implementations for global interrupt handling.
     For individual peripheral handlers please see the peripheral driver for
     all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.45
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.55
         Device            :  PIC18F47K40
         Driver Version    :  1.02
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.40
+        Compiler          :  XC8 1.43 or later
+        MPLAB 	          :  MPLAB X 4.00
 */
 
 /*

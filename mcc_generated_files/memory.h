@@ -13,7 +13,7 @@
   @Description
     This header file provides APIs for driver for MEMORY.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.45
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.55
         Device            :  PIC18F47K40
         Driver Version    :  2.00
     The generated drivers are tested against the following:

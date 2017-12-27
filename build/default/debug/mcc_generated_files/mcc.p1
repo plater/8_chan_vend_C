@@ -1,19 +1,23 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"110 mcc_generated_files/interrupt_manager.h
+"157 mcc_generated_files/interrupt_manager.h
 [v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
 "692 mcc_generated_files/pin_manager.h
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"87 mcc_generated_files/mcc.h
+"89 mcc_generated_files/mcc.h
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"92 mcc_generated_files/fvr.h
-[v _FVR_Initialize `(v ~T0 @X0 0 ef ]
 "92 mcc_generated_files/cmp1.h
 [v _CMP1_Initialize `(v ~T0 @X0 0 ef ]
+"99 mcc_generated_files/tmr3.h
+[v _TMR3_Initialize `(v ~T0 @X0 0 ef ]
+"92 mcc_generated_files/dac1.h
+[v _DAC1_Initialize `(v ~T0 @X0 0 ef ]
+"99 mcc_generated_files/tmr5.h
+[v _TMR5_Initialize `(v ~T0 @X0 0 ef ]
 "99 mcc_generated_files/tmr1.h
 [v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
-"94 mcc_generated_files/eusart1.h
+"95 mcc_generated_files/eusart1.h
 [v _EUSART1_Initialize `(v ~T0 @X0 0 ef ]
-"94 mcc_generated_files/eusart2.h
+"93 mcc_generated_files/eusart2.h
 [v _EUSART2_Initialize `(v ~T0 @X0 0 ef ]
 "5165 /opt/microchip/xc8/v1.44/include/pic18f47k40.h
 [v _OSCCON1 `Vuc ~T0 @X0 0 e@3800 ]
@@ -10889,8 +10893,26 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
-[; ;interrupt_manager.h: 122: void interrupt INTERRUPT_InterruptManager (void);
+[; ;interrupt_manager.h: 157: void INTERRUPT_Initialize (void);
+[; ;interrupt_manager.h: 169: void interrupt INTERRUPT_InterruptManager (void);
+[; ;tmr5.h: 99: void TMR5_Initialize(void);
+[; ;tmr5.h: 128: void TMR5_StartTimer(void);
+[; ;tmr5.h: 160: void TMR5_StopTimer(void);
+[; ;tmr5.h: 195: uint16_t TMR5_ReadTimer(void);
+[; ;tmr5.h: 234: void TMR5_WriteTimer(uint16_t timerVal);
+[; ;tmr5.h: 270: void TMR5_Reload(void);
+[; ;tmr5.h: 309: void TMR5_StartSinglePulseAcquisition(void);
+[; ;tmr5.h: 348: uint8_t TMR5_CheckGateValueStatus(void);
+[; ;tmr5.h: 386: bool TMR5_HasOverflowOccured(void);
+[; ;tmr3.h: 99: void TMR3_Initialize(void);
+[; ;tmr3.h: 128: void TMR3_StartTimer(void);
+[; ;tmr3.h: 160: void TMR3_StopTimer(void);
+[; ;tmr3.h: 195: uint16_t TMR3_ReadTimer(void);
+[; ;tmr3.h: 234: void TMR3_WriteTimer(uint16_t timerVal);
+[; ;tmr3.h: 270: void TMR3_Reload(void);
+[; ;tmr3.h: 309: void TMR3_StartSinglePulseAcquisition(void);
+[; ;tmr3.h: 348: uint8_t TMR3_CheckGateValueStatus(void);
+[; ;tmr3.h: 386: bool TMR3_HasOverflowOccured(void);
 [; ;tmr1.h: 99: void TMR1_Initialize(void);
 [; ;tmr1.h: 128: void TMR1_StartTimer(void);
 [; ;tmr1.h: 160: void TMR1_StopTimer(void);
@@ -10902,6 +10924,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr1.h: 386: bool TMR1_HasOverflowOccured(void);
 [; ;cmp1.h: 92: void CMP1_Initialize(void);
 [; ;cmp1.h: 132: bool CMP1_GetOutputStatus(void);
+[; ;dac1.h: 92: void DAC1_Initialize(void);
+[; ;dac1.h: 128: void DAC1_SetOutput(uint8_t inputData);
 [; ;memory.h: 98: uint8_t FLASH_ReadByte(uint32_t flashAddr);
 [; ;memory.h: 124: uint16_t FLASH_ReadWord(uint32_t flashAddr);
 [; ;memory.h: 156: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
@@ -10910,22 +10934,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;memory.h: 248: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [; ;memory.h: 274: uint8_t DATAEE_ReadByte(uint16_t bAdd);
 [; ;memory.h: 276: void MEMORY_Tasks(void);
-[; ;eusart1.h: 94: void EUSART1_Initialize(void);
-[; ;eusart1.h: 114: uint8_t EUSART1_Read(void);
-[; ;eusart1.h: 134: void EUSART1_Write(uint8_t txData);
-[; ;eusart2.h: 94: void EUSART2_Initialize(void);
-[; ;eusart2.h: 114: uint8_t EUSART2_Read(void);
-[; ;eusart2.h: 134: void EUSART2_Write(uint8_t txData);
-[; ;fvr.h: 92: void FVR_Initialize(void);
-[; ;fvr.h: 126: bool FVR_IsOutputReady(void);
-[; ;mcc.h: 74: void SYSTEM_Initialize(void);
-[; ;mcc.h: 87: void OSCILLATOR_Initialize(void);
-"115 mcc_generated_files/mcc.c
+[; ;eusart2.h: 93: void EUSART2_Initialize(void);
+[; ;eusart2.h: 113: uint8_t EUSART2_Read(void);
+[; ;eusart2.h: 133: void EUSART2_Write(uint8_t txData);
+[; ;eusart1.h: 93: void eusartmdb_Initialize(void);
+[; ;eusart1.h: 95: void EUSART1_Initialize(void);
+[; ;eusart1.h: 115: uint8_t EUSART1_Read(void);
+[; ;eusart1.h: 135: void EUSART1_Write(uint8_t txData);
+[; ;mcc.h: 76: void SYSTEM_Initialize(void);
+[; ;mcc.h: 89: void OSCILLATOR_Initialize(void);
+"116 mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
-"116
+"117
 {
-[; ;mcc.c: 115: void SYSTEM_Initialize(void)
-[; ;mcc.c: 116: {
+[; ;mcc.c: 116: void SYSTEM_Initialize(void)
+[; ;mcc.c: 117: {
 [e :U _SYSTEM_Initialize ]
 [f ]
 [; ;mcc.c: 118: INTERRUPT_Initialize();
@@ -10937,49 +10960,55 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mcc.c: 120: OSCILLATOR_Initialize();
 "120
 [e ( _OSCILLATOR_Initialize ..  ]
-[; ;mcc.c: 121: FVR_Initialize();
+[; ;mcc.c: 121: CMP1_Initialize();
 "121
-[e ( _FVR_Initialize ..  ]
-[; ;mcc.c: 122: CMP1_Initialize();
-"122
 [e ( _CMP1_Initialize ..  ]
-[; ;mcc.c: 123: TMR1_Initialize();
+[; ;mcc.c: 122: TMR3_Initialize();
+"122
+[e ( _TMR3_Initialize ..  ]
+[; ;mcc.c: 123: DAC1_Initialize();
 "123
-[e ( _TMR1_Initialize ..  ]
-[; ;mcc.c: 124: EUSART1_Initialize();
+[e ( _DAC1_Initialize ..  ]
+[; ;mcc.c: 124: TMR5_Initialize();
 "124
-[e ( _EUSART1_Initialize ..  ]
-[; ;mcc.c: 125: EUSART2_Initialize();
+[e ( _TMR5_Initialize ..  ]
+[; ;mcc.c: 125: TMR1_Initialize();
 "125
-[e ( _EUSART2_Initialize ..  ]
-[; ;mcc.c: 126: }
+[e ( _TMR1_Initialize ..  ]
+[; ;mcc.c: 126: EUSART1_Initialize();
 "126
+[e ( _EUSART1_Initialize ..  ]
+[; ;mcc.c: 127: EUSART2_Initialize();
+"127
+[e ( _EUSART2_Initialize ..  ]
+[; ;mcc.c: 128: }
+"128
 [e :UE 1371 ]
 }
-"128
+"130
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
-"129
+"131
 {
-[; ;mcc.c: 128: void OSCILLATOR_Initialize(void)
-[; ;mcc.c: 129: {
+[; ;mcc.c: 130: void OSCILLATOR_Initialize(void)
+[; ;mcc.c: 131: {
 [e :U _OSCILLATOR_Initialize ]
 [f ]
-[; ;mcc.c: 131: OSCCON1 = 0x60;
-"131
-[e = _OSCCON1 -> -> 96 `i `uc ]
-[; ;mcc.c: 133: OSCCON3 = 0x00;
+[; ;mcc.c: 133: OSCCON1 = 0x60;
 "133
-[e = _OSCCON3 -> -> 0 `i `uc ]
-[; ;mcc.c: 135: OSCEN = 0x00;
+[e = _OSCCON1 -> -> 96 `i `uc ]
+[; ;mcc.c: 135: OSCCON3 = 0x00;
 "135
-[e = _OSCEN -> -> 0 `i `uc ]
-[; ;mcc.c: 137: OSCFRQ = 0x03;
+[e = _OSCCON3 -> -> 0 `i `uc ]
+[; ;mcc.c: 137: OSCEN = 0x00;
 "137
-[e = _OSCFRQ -> -> 3 `i `uc ]
-[; ;mcc.c: 139: OSCTUNE = 0x00;
+[e = _OSCEN -> -> 0 `i `uc ]
+[; ;mcc.c: 139: OSCFRQ = 0x04;
 "139
+[e = _OSCFRQ -> -> 4 `i `uc ]
+[; ;mcc.c: 141: OSCTUNE = 0x00;
+"141
 [e = _OSCTUNE -> -> 0 `i `uc ]
-[; ;mcc.c: 140: }
-"140
+[; ;mcc.c: 142: }
+"142
 [e :UE 1372 ]
 }

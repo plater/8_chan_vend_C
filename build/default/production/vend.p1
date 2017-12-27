@@ -1,142 +1,45 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"65 vend.h
+"58 mdb.h
 [s S1371 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1371 . iscredit error inscoin nochange credisplay initialrun spare1 spare2 ]
-"77
+[n S1371 . isdata noteerr mode timeout vending spare3 spare4 spare5 ]
+"73
 [s S1372 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1372 . isdata noteerr mode timeout spare2 spare3 spare4 spare5 ]
-"91
-[s S1373 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
-[n S1373 . R10 R20 R50 R100 R200 spare ]
-"103
+[n S1372 . R10 R20 R50 R100 R200 noteset endis spare ]
+"87
+[s S1373 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1373 . chan1 chan2 chan3 chan4 chan5 chan6 chan7 chan8 ]
+"61 cctalk.h
 [s S1374 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1374 . chan1 chan2 chan3 chan4 chan5 chan6 chan7 chan8 ]
-"127
-[v _mdb_reset `(uc ~T0 @X0 0 ef ]
-"129
-[v _mdb_noten `(uc ~T0 @X0 0 ef ]
-"122
+[n S1374 . isdata hoperr mode timeout spare2 spare3 spare4 spare5 ]
+"42 vend.h
+[s S1375 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1375 . iscredit error inscoin nochange credisplay initialrun noterr service ]
+"102 lcd.h
+[v _lcd_string `(v ~T0 @X0 0 ef2`*uc`uc ]
+"74 cctalk.h
+[v _cctalk_init `(v ~T0 @X0 0 ef ]
+"102 mdb.h
+[v _mdb_init `(v ~T0 @X0 0 ef ]
+"60 vend.h
 [v _credit_check `(uc ~T0 @X0 0 ef ]
+"128 mcc_generated_files/dac1.h
+[v _DAC1_SetOutput `(v ~T0 @X0 0 ef1`uc ]
 "274 mcc_generated_files/memory.h
 [v _DATAEE_ReadByte `(uc ~T0 @X0 0 ef1`ui ]
 "248
 [v _DATAEE_WriteByte `(v ~T0 @X0 0 ef2`ui`uc ]
-"131 vend.h
-[v _mdb_poll `(uc ~T0 @X0 0 ef2`uc`uc ]
-"18963 /opt/microchip/xc8/v1.44/include/pic18f47k40.h
-[s S925 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S925 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
-"18973
-[s S926 :6 `uc 1 :1 `uc 1 ]
-[n S926 . . TX8_9 ]
-"18977
-[s S927 :1 `uc 1 ]
-[n S927 . TXD8 ]
-"18962
-[u S924 `S925 1 `S926 1 `S927 1 ]
-[n S924 . . . . ]
-"18981
-[v _TX1STAbits `VS924 ~T0 @X0 0 e@3998 ]
-"133 vend.h
-[v _mdb_on `(v ~T0 @X0 0 ef ]
-"134 mcc_generated_files/eusart1.h
-[v _EUSART1_Write `(v ~T0 @X0 0 ef1`uc ]
-"141 vend.h
-[v _mdb_waitx `(v ~T0 @X0 0 ef ]
-"99 mcc_generated_files/tmr1.h
-[v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
-"114 mcc_generated_files/eusart1.h
-[v _EUSART1_Read `(uc ~T0 @X0 0 ef ]
-"143 vend.h
-[v _mdb_waitr `(v ~T0 @X0 0 ef ]
-"18789 /opt/microchip/xc8/v1.44/include/pic18f47k40.h
-[s S915 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S915 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
-"18799
-[s S916 :6 `uc 1 :1 `uc 1 ]
-[n S916 . . RC8_9 ]
-"18803
-[s S917 :6 `uc 1 :1 `uc 1 ]
-[n S917 . . RC9 ]
-"18807
-[s S918 :1 `uc 1 ]
-[n S918 . RCD8 ]
-"18788
-[u S914 `S915 1 `S916 1 `S917 1 `S918 1 ]
-[n S914 . . . . . ]
-"18811
-[v _RC1STAbits `VS914 ~T0 @X0 0 e@3997 ]
-"4360
-[s S263 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S263 . SSP1IF BCL1IF SSP2IF BCL2IF TX1IF RC1IF TX2IF RC2IF ]
-"4370
-[s S264 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S264 . . RXBNIF . TXBNIF ]
-"4359
-[u S262 `S263 1 `S264 1 ]
-[n S262 . . . ]
-"4377
-[v _PIR3bits `VS262 ~T0 @X0 0 e@3789 ]
-"4438
-[s S266 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S266 . TMR1IF TMR2IF TMR3IF TMR4IF TMR5IF TMR6IF ]
-"4437
-[u S265 `S266 1 ]
-[n S265 . . ]
-"4447
-[v _PIR4bits `VS265 ~T0 @X0 0 e@3790 ]
-"16202
-[s S788 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S788 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-"16212
-[s S789 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S789 . LC0 LC1 LC2 LC3 LC4 LC5 LC6 LC7 ]
-"16201
-[u S787 `S788 1 `S789 1 ]
-[n S787 . . . ]
-"16223
-[v _LATCbits `VS787 ~T0 @X0 0 e@3973 ]
-"19123
-[s S933 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S933 . ABDEN WUE . BRG16 SCKP . RCIDL ABDOVF ]
-"19133
-[s S934 :1 `uc 1 ]
-[n S934 . ABDEN1 ]
-"19136
-[s S935 :7 `uc 1 :1 `uc 1 ]
-[n S935 . . ABDOVF1 ]
-"19140
-[s S936 :3 `uc 1 :1 `uc 1 ]
-[n S936 . . BRG161 ]
-"19144
-[s S937 :4 `uc 1 :1 `uc 1 ]
-[n S937 . . CKTXP ]
-"19148
-[s S938 :6 `uc 1 :1 `uc 1 ]
-[n S938 . . RCIDL1 ]
-"19152
-[s S939 :6 `uc 1 :1 `uc 1 ]
-[n S939 . . RCMT ]
-"19156
-[s S940 :6 `uc 1 :1 `uc 1 ]
-[n S940 . . RCMT1 ]
-"19160
-[s S941 :4 `uc 1 :1 `uc 1 ]
-[n S941 . . SCKP1 ]
-"19164
-[s S942 :4 `uc 1 :1 `uc 1 ]
-[n S942 . . TXCKP ]
-"19168
-[s S943 :4 `uc 1 :1 `uc 1 ]
-[n S943 . . TXCKP1 ]
-"19172
-[s S944 :1 `uc 1 :1 `uc 1 ]
-[n S944 . . WUE1 ]
-"19122
-[u S932 `S933 1 `S934 1 `S935 1 `S936 1 `S937 1 `S938 1 `S939 1 `S940 1 `S941 1 `S942 1 `S943 1 `S944 1 ]
-[n S932 . . . . . . . . . . . . . ]
-"19177
-[v _BAUD1CONbits `VS932 ~T0 @X0 0 e@3999 ]
+"66 vend.h
+[v _butin `(uc ~T0 @X0 0 ef ]
+"28716 /opt/microchip/xc8/v1.44/include/pic18f47k40.h
+[v _LATA7 `Vb ~T0 @X0 0 e@31775 ]
+"28714
+[v _LATA6 `Vb ~T0 @X0 0 e@31774 ]
+[v F11594 `(v ~T0 @X0 1 tf1`ul ]
+"164 /opt/microchip/xc8/v1.44/include/pic18.h
+[v __delay `JF11594 ~T0 @X0 0 e ]
+[p i __delay ]
+"17067 /opt/microchip/xc8/v1.44/include/pic18f47k40.h
+[v _PORTA `Vuc ~T0 @X0 0 e@3981 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -10915,8 +10818,26 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pin_manager.h: 692: void PIN_MANAGER_Initialize (void);
 [; ;pin_manager.h: 704: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
-[; ;interrupt_manager.h: 122: void interrupt INTERRUPT_InterruptManager (void);
+[; ;interrupt_manager.h: 157: void INTERRUPT_Initialize (void);
+[; ;interrupt_manager.h: 169: void interrupt INTERRUPT_InterruptManager (void);
+[; ;tmr5.h: 99: void TMR5_Initialize(void);
+[; ;tmr5.h: 128: void TMR5_StartTimer(void);
+[; ;tmr5.h: 160: void TMR5_StopTimer(void);
+[; ;tmr5.h: 195: uint16_t TMR5_ReadTimer(void);
+[; ;tmr5.h: 234: void TMR5_WriteTimer(uint16_t timerVal);
+[; ;tmr5.h: 270: void TMR5_Reload(void);
+[; ;tmr5.h: 309: void TMR5_StartSinglePulseAcquisition(void);
+[; ;tmr5.h: 348: uint8_t TMR5_CheckGateValueStatus(void);
+[; ;tmr5.h: 386: bool TMR5_HasOverflowOccured(void);
+[; ;tmr3.h: 99: void TMR3_Initialize(void);
+[; ;tmr3.h: 128: void TMR3_StartTimer(void);
+[; ;tmr3.h: 160: void TMR3_StopTimer(void);
+[; ;tmr3.h: 195: uint16_t TMR3_ReadTimer(void);
+[; ;tmr3.h: 234: void TMR3_WriteTimer(uint16_t timerVal);
+[; ;tmr3.h: 270: void TMR3_Reload(void);
+[; ;tmr3.h: 309: void TMR3_StartSinglePulseAcquisition(void);
+[; ;tmr3.h: 348: uint8_t TMR3_CheckGateValueStatus(void);
+[; ;tmr3.h: 386: bool TMR3_HasOverflowOccured(void);
 [; ;tmr1.h: 99: void TMR1_Initialize(void);
 [; ;tmr1.h: 128: void TMR1_StartTimer(void);
 [; ;tmr1.h: 160: void TMR1_StopTimer(void);
@@ -10928,6 +10849,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr1.h: 386: bool TMR1_HasOverflowOccured(void);
 [; ;cmp1.h: 92: void CMP1_Initialize(void);
 [; ;cmp1.h: 132: bool CMP1_GetOutputStatus(void);
+[; ;dac1.h: 92: void DAC1_Initialize(void);
+[; ;dac1.h: 128: void DAC1_SetOutput(uint8_t inputData);
 [; ;memory.h: 98: uint8_t FLASH_ReadByte(uint32_t flashAddr);
 [; ;memory.h: 124: uint16_t FLASH_ReadWord(uint32_t flashAddr);
 [; ;memory.h: 156: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
@@ -10936,95 +10859,127 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;memory.h: 248: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [; ;memory.h: 274: uint8_t DATAEE_ReadByte(uint16_t bAdd);
 [; ;memory.h: 276: void MEMORY_Tasks(void);
-[; ;eusart1.h: 94: void EUSART1_Initialize(void);
-[; ;eusart1.h: 114: uint8_t EUSART1_Read(void);
-[; ;eusart1.h: 134: void EUSART1_Write(uint8_t txData);
-[; ;eusart2.h: 94: void EUSART2_Initialize(void);
-[; ;eusart2.h: 114: uint8_t EUSART2_Read(void);
-[; ;eusart2.h: 134: void EUSART2_Write(uint8_t txData);
-[; ;fvr.h: 92: void FVR_Initialize(void);
-[; ;fvr.h: 126: bool FVR_IsOutputReady(void);
-[; ;mcc.h: 74: void SYSTEM_Initialize(void);
-[; ;mcc.h: 87: void OSCILLATOR_Initialize(void);
-"42 lcd.h
+[; ;eusart2.h: 93: void EUSART2_Initialize(void);
+[; ;eusart2.h: 113: uint8_t EUSART2_Read(void);
+[; ;eusart2.h: 133: void EUSART2_Write(uint8_t txData);
+[; ;eusart1.h: 93: void eusartmdb_Initialize(void);
+[; ;eusart1.h: 95: void EUSART1_Initialize(void);
+[; ;eusart1.h: 115: uint8_t EUSART1_Read(void);
+[; ;eusart1.h: 135: void EUSART1_Write(uint8_t txData);
+[; ;mcc.h: 76: void SYSTEM_Initialize(void);
+[; ;mcc.h: 89: void OSCILLATOR_Initialize(void);
+"41 lcd.h
+[v _count `c ~T0 @X0 1 e ]
+[; ;lcd.h: 41: signed char count;
+"43
 [v _dispfunc1 `Cuc ~T0 @X0 1 e ]
 [i _dispfunc1
 -> -> 36 `i `uc
 ]
-[; ;lcd.h: 42: const char dispfunc1 = 0x24;
-"43
+[; ;lcd.h: 43: const char dispfunc1 = 0x24;
+"44
 [v _dispfunc2 `Cuc ~T0 @X0 1 e ]
 [i _dispfunc2
 -> -> 40 `i `uc
 ]
-[; ;lcd.h: 43: const char dispfunc2 = 0x28;
-"44
+[; ;lcd.h: 44: const char dispfunc2 = 0x28;
+"45
+[v _dispfunc3 `Cuc ~T0 @X0 1 e ]
+[i _dispfunc3
+-> -> 44 `i `uc
+]
+[; ;lcd.h: 45: const char dispfunc3 = 0x2C;
+"46
 [v _dispon `Cuc ~T0 @X0 1 e ]
 [i _dispon
 -> -> 12 `i `uc
 ]
-[; ;lcd.h: 44: const char dispon = 0x0C;
-"45
+[; ;lcd.h: 46: const char dispon = 0x0C;
+"47
 [v _dispclr `Cuc ~T0 @X0 1 e ]
 [i _dispclr
 -> -> 1 `i `uc
 ]
-[; ;lcd.h: 45: const char dispclr = 0x01;
-"46
+[; ;lcd.h: 47: const char dispclr = 0x01;
+"48
 [v _dispaddr `Cuc ~T0 @X0 1 e ]
 [i _dispaddr
 -> -> 168 `i `uc
 ]
-[; ;lcd.h: 46: const char dispaddr = 0xA8;
-"47
+[; ;lcd.h: 48: const char dispaddr = 0xA8;
+"49
 [v _dsphome `Cuc ~T0 @X0 1 e ]
 [i _dsphome
 -> -> 2 `i `uc
 ]
-[; ;lcd.h: 47: const char dsphome = 0x02;
-"48
+[; ;lcd.h: 49: const char dsphome = 0x02;
+"50
 [v _dispnormal `Cuc ~T0 @X0 1 e ]
 [i _dispnormal
 -> -> 6 `i `uc
 ]
-[; ;lcd.h: 48: const char dispnormal = 0x06;
-"49
+[; ;lcd.h: 50: const char dispnormal = 0x06;
+"51
 [v _dispcursor `Cuc ~T0 @X0 1 e ]
 [i _dispcursor
 -> -> 4 `i `uc
 ]
-[; ;lcd.h: 49: const char dispcursor = 0x04;
-"50
+[; ;lcd.h: 51: const char dispcursor = 0x04;
+"52
 [v _dispshright `Cuc ~T0 @X0 1 e ]
 [i _dispshright
 -> -> 5 `i `uc
 ]
-[; ;lcd.h: 50: const char dispshright = 0x05;
-"51
+[; ;lcd.h: 52: const char dispshright = 0x05;
+"53
 [v _dispshleft `Cuc ~T0 @X0 1 e ]
 [i _dispshleft
 -> -> 7 `i `uc
 ]
-[; ;lcd.h: 51: const char dispshleft = 0x07;
-"52
+[; ;lcd.h: 53: const char dispshleft = 0x07;
+"54
 [v _dispoff `Cuc ~T0 @X0 1 e ]
 [i _dispoff
 -> -> 8 `i `uc
 ]
-[; ;lcd.h: 52: const char dispoff = 0x08;
-"53
+[; ;lcd.h: 54: const char dispoff = 0x08;
+"55
 [v _dispsr `Cuc ~T0 @X0 1 e ]
 [i _dispsr
 -> -> 27 `i `uc
 ]
-[; ;lcd.h: 53: const char dispsr = 0x1B;
-"54
+[; ;lcd.h: 55: const char dispsr = 0x1B;
+"56
 [v _dispsl `Cuc ~T0 @X0 1 e ]
 [i _dispsl
 -> -> 24 `i `uc
 ]
-[; ;lcd.h: 54: const char dispsl = 0x18;
+[; ;lcd.h: 56: const char dispsl = 0x18;
 "57
+[v _line1 `Cuc ~T0 @X0 1 e ]
+[i _line1
+-> -> 128 `i `uc
+]
+[; ;lcd.h: 57: const char line1 = 0x80;
+"58
+[v _line2 `Cuc ~T0 @X0 1 e ]
+[i _line2
+-> -> 192 `i `uc
+]
+[; ;lcd.h: 58: const char line2 = 0xC0;
+"59
+[v _line3 `Cuc ~T0 @X0 1 e ]
+[i _line3
+-> -> 148 `i `uc
+]
+[; ;lcd.h: 59: const char line3 = 0x94;
+"60
+[v _line4 `Cuc ~T0 @X0 1 e ]
+[i _line4
+-> -> 212 `i `uc
+]
+[; ;lcd.h: 60: const char line4 = 0xD4;
+"63
 [v _inscoin `Cuc ~T0 @X0 -> 0 `x e ]
 [i _inscoin
 :U ..
@@ -11052,8 +11007,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 57: const uint8_t inscoin[] = "Insert Coins or Notes";
-"58
+[; ;lcd.h: 63: const uint8_t inscoin[] = "Insert Coins or Notes";
+"64
 [v _credits `Cuc ~T0 @X0 -> 0 `x e ]
 [i _credits
 :U ..
@@ -11072,937 +11027,1420 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 58: const uint8_t credits[] = "  Credit = R";
-[; ;lcd.h: 61: void lcd_init(void);
-[; ;lcd.h: 63: void lcd_string(uint8_t *);
-[; ;lcd.h: 65: void lcd_writeC(uint8_t);
-[; ;lcd.h: 67: void lcd_write(uint8_t);
-[; ;lcd.h: 69: void lcd_clockH(void);
-[; ;lcd.h: 71: void lcd_clockL(void);
-[; ;lcd.h: 73: void lcd_clockE(void);
-[; ;lcd.h: 75: void lcd_test(void);
-[; ;lcd.h: 77: void displ_hex(uint24_t);
-[; ;lcd.h: 79: void displ_credit(void);
-[; ;lcd.h: 81: void displ_test(void);
-[; ;lcd.h: 83: void displ_totals(void);
-[; ;lcd.h: 85: void displ_empty(void);
-[; ;lcd.h: 87: int8_t read_busy(void);
-"16 vend.h
-[v _credmem `Cui ~T0 @X0 1 e ]
-[i _credmem
--> -> 0 `i `ui
+[; ;lcd.h: 64: const uint8_t credits[] = "  Credit = R";
+"65
+[v _service `Cuc ~T0 @X0 -> 0 `x e ]
+[i _service
+:U ..
+-> 32 `c
+-> 32 `c
+-> 83 `c
+-> 101 `c
+-> 114 `c
+-> 118 `c
+-> 105 `c
+-> 99 `c
+-> 101 `c
+-> 32 `c
+-> 77 `c
+-> 111 `c
+-> 100 `c
+-> 101 `c
+-> 0 `c
+..
 ]
-[; ;vend.h: 16: const uint16_t credmem = 0x00;
-"18
-[v _cashinv `Cui ~T0 @X0 1 e ]
-[i _cashinv
--> -> 2 `i `ui
+[; ;lcd.h: 65: const uint8_t service[] = "  Service Mode";
+"66
+[v _audit `Cuc ~T0 @X0 -> 0 `x e ]
+[i _audit
+:U ..
+-> 32 `c
+-> 32 `c
+-> 65 `c
+-> 117 `c
+-> 100 `c
+-> 105 `c
+-> 116 `c
+-> 32 `c
+-> 77 `c
+-> 111 `c
+-> 100 `c
+-> 101 `c
+-> 0 `c
+..
 ]
-[; ;vend.h: 18: const uint16_t cashinv = 0x02;
-"20
-[v _cashint `Cui ~T0 @X0 1 e ]
-[i _cashint
--> -> 4 `i `ui
+[; ;lcd.h: 66: const uint8_t audit[] = "  Audit Mode";
+"67
+[v _hopcoin `Cuc ~T0 @X0 -> 0 `x e ]
+[i _hopcoin
+:U ..
+-> 72 `c
+-> 111 `c
+-> 112 `c
+-> 112 `c
+-> 101 `c
+-> 114 `c
+-> 32 `c
+-> 67 `c
+-> 111 `c
+-> 105 `c
+-> 110 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 86 `c
+-> 97 `c
+-> 108 `c
+-> 117 `c
+-> 101 `c
+-> 0 `c
+..
 ]
-[; ;vend.h: 20: const uint16_t cashint = 0x04;
-"22
-[v _vendstore `Cui ~T0 @X0 1 e ]
-[i _vendstore
--> -> 7 `i `ui
+[; ;lcd.h: 67: const uint8_t hopcoin[] = "Hopper Coin         Value";
+"68
+[v _senset `Cuc ~T0 @X0 -> 0 `x e ]
+[i _senset
+:U ..
+-> 32 `c
+-> 32 `c
+-> 83 `c
+-> 101 `c
+-> 116 `c
+-> 117 `c
+-> 112 `c
+-> 32 `c
+-> 83 `c
+-> 101 `c
+-> 110 `c
+-> 115 `c
+-> 111 `c
+-> 114 `c
+-> 0 `c
+..
 ]
-[; ;vend.h: 22: const uint16_t vendstore = 0x07;
-"24
-[v _pricestore `Cui ~T0 @X0 1 e ]
-[i _pricestore
--> -> 15 `i `ui
+[; ;lcd.h: 68: const uint8_t senset[] = "  Setup Sensor";
+"69
+[v _credclr `Cuc ~T0 @X0 -> 0 `x e ]
+[i _credclr
+:U ..
+-> 80 `c
+-> 117 `c
+-> 115 `c
+-> 104 `c
+-> 32 `c
+-> 98 `c
+-> 117 `c
+-> 116 `c
+-> 116 `c
+-> 111 `c
+-> 110 `c
+-> 32 `c
+-> 49 `c
+-> 32 `c
+-> 116 `c
+-> 111 `c
+-> 32 `c
+-> 99 `c
+-> 108 `c
+-> 101 `c
+-> 97 `c
+-> 114 `c
+-> 32 `c
+-> 99 `c
+-> 114 `c
+-> 101 `c
+-> 100 `c
+-> 105 `c
+-> 116 `c
+-> 115 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 97 `c
+-> 110 `c
+-> 100 `c
+-> 32 `c
+-> 101 `c
+-> 120 `c
+-> 105 `c
+-> 116 `c
+-> 0 `c
+..
 ]
-[; ;vend.h: 24: const uint16_t pricestore = 0x0F;
-"26
-[v _venderrors `Cui ~T0 @X0 1 e ]
-[i _venderrors
--> -> 23 `i `ui
+[; ;lcd.h: 69: const uint8_t credclr[] = "Push button 1 to clear credits   and exit";
+"70
+[v _vendtest `Cuc ~T0 @X0 -> 0 `x e ]
+[i _vendtest
+:U ..
+-> 32 `c
+-> 80 `c
+-> 117 `c
+-> 115 `c
+-> 104 `c
+-> 32 `c
+-> 98 `c
+-> 117 `c
+-> 116 `c
+-> 116 `c
+-> 111 `c
+-> 110 `c
+-> 32 `c
+-> 116 `c
+-> 111 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 118 `c
+-> 101 `c
+-> 110 `c
+-> 100 `c
+-> 0 `c
+..
 ]
-[; ;vend.h: 26: const uint16_t venderrors = 0x17;
-"30
+[; ;lcd.h: 70: const uint8_t vendtest[] = " Push button to     vend";
+"71
+[v _notetest `Cuc ~T0 @X0 -> 0 `x e ]
+[i _notetest
+:U ..
+-> 32 `c
+-> 32 `c
+-> 73 `c
+-> 110 `c
+-> 115 `c
+-> 101 `c
+-> 114 `c
+-> 116 `c
+-> 32 `c
+-> 78 `c
+-> 111 `c
+-> 116 `c
+-> 101 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 71: const uint8_t notetest[] = "  Insert Note";
+"72
+[v _exit `Cuc ~T0 @X0 -> 0 `x e ]
+[i _exit
+:U ..
+-> 69 `c
+-> 120 `c
+-> 105 `c
+-> 116 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 72: const uint8_t exit[] = "Exit";
+"73
+[v _servmsg `Cuc ~T0 @X0 -> 0 `x e ]
+[i _servmsg
+:U ..
+-> 83 `c
+-> 101 `c
+-> 114 `c
+-> 118 `c
+-> 105 `c
+-> 99 `c
+-> 101 `c
+-> 32 `c
+-> 77 `c
+-> 111 `c
+-> 100 `c
+-> 101 `c
+-> 58 `c
+-> 32 `c
+-> 112 `c
+-> 114 `c
+-> 101 `c
+-> 115 `c
+-> 115 `c
+-> 32 `c
+-> 49 `c
+-> 32 `c
+-> 61 `c
+-> 32 `c
+-> 65 `c
+-> 117 `c
+-> 100 `c
+-> 105 `c
+-> 116 `c
+-> 32 `c
+-> 50 `c
+-> 32 `c
+-> 61 `c
+-> 32 `c
+-> 83 `c
+-> 101 `c
+-> 110 `c
+-> 115 `c
+-> 111 `c
+-> 114 `c
+-> 51 `c
+-> 61 `c
+-> 78 `c
+-> 111 `c
+-> 116 `c
+-> 101 `c
+-> 32 `c
+-> 101 `c
+-> 110 `c
+-> 32 `c
+-> 52 `c
+-> 61 `c
+-> 67 `c
+-> 114 `c
+-> 101 `c
+-> 100 `c
+-> 105 `c
+-> 116 `c
+-> 32 `c
+-> 32 `c
+-> 53 `c
+-> 61 `c
+-> 86 `c
+-> 101 `c
+-> 110 `c
+-> 100 `c
+-> 32 `c
+-> 54 `c
+-> 61 `c
+-> 78 `c
+-> 111 `c
+-> 116 `c
+-> 101 `c
+-> 32 `c
+-> 55 `c
+-> 61 `c
+-> 69 `c
+-> 120 `c
+-> 105 `c
+-> 116 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 73: const uint8_t servmsg[] = "Service Mode: press 1 = Audit 2 = Sensor3=Note en 4=Credit  5=Vend 6=Note 7=Exit";
+"74
+[v _noteerr `Cuc ~T0 @X0 -> 0 `x e ]
+[i _noteerr
+:U ..
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 78 `c
+-> 111 `c
+-> 116 `c
+-> 101 `c
+-> 32 `c
+-> 101 `c
+-> 114 `c
+-> 114 `c
+-> 111 `c
+-> 114 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 99 `c
+-> 111 `c
+-> 100 `c
+-> 101 `c
+-> 32 `c
+-> 61 `c
+-> 32 `c
+-> 48 `c
+-> 120 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 74: const uint8_t noteerr[] = "   Note error     code = 0x";
+"75
+[v _inithop `Cuc ~T0 @X0 -> 0 `x e ]
+[i _inithop
+:U ..
+-> 32 `c
+-> 32 `c
+-> 73 `c
+-> 110 `c
+-> 105 `c
+-> 116 `c
+-> 105 `c
+-> 97 `c
+-> 108 `c
+-> 105 `c
+-> 122 `c
+-> 101 `c
+-> 32 `c
+-> 72 `c
+-> 111 `c
+-> 112 `c
+-> 112 `c
+-> 101 `c
+-> 114 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 75: const uint8_t inithop[] = "  Initialize Hopper";
+"76
+[v _initnote `Cuc ~T0 @X0 -> 0 `x e ]
+[i _initnote
+:U ..
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 73 `c
+-> 110 `c
+-> 105 `c
+-> 116 `c
+-> 105 `c
+-> 97 `c
+-> 108 `c
+-> 105 `c
+-> 122 `c
+-> 101 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 78 `c
+-> 111 `c
+-> 116 `c
+-> 101 `c
+-> 32 `c
+-> 82 `c
+-> 101 `c
+-> 97 `c
+-> 100 `c
+-> 101 `c
+-> 114 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 76: const uint8_t initnote[] = "     Initialize          Note Reader";
+"77
+[v _nochange `Cuc ~T0 @X0 -> 0 `x e ]
+[i _nochange
+:U ..
+-> 78 `c
+-> 111 `c
+-> 32 `c
+-> 67 `c
+-> 104 `c
+-> 97 `c
+-> 110 `c
+-> 103 `c
+-> 101 `c
+-> 32 `c
+-> 71 `c
+-> 105 `c
+-> 118 `c
+-> 101 `c
+-> 110 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 77: const uint8_t nochange[] = "No Change Given";
+"78
+[v _setnotes `Cuc ~T0 @X0 -> 0 `x e ]
+[i _setnotes
+:U ..
+-> 69 `c
+-> 110 `c
+-> 97 `c
+-> 98 `c
+-> 108 `c
+-> 101 `c
+-> 32 `c
+-> 47 `c
+-> 32 `c
+-> 68 `c
+-> 105 `c
+-> 115 `c
+-> 97 `c
+-> 98 `c
+-> 108 `c
+-> 101 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 49 `c
+-> 32 `c
+-> 61 `c
+-> 32 `c
+-> 82 `c
+-> 49 `c
+-> 48 `c
+-> 44 `c
+-> 32 `c
+-> 50 `c
+-> 32 `c
+-> 61 `c
+-> 32 `c
+-> 82 `c
+-> 50 `c
+-> 48 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 51 `c
+-> 32 `c
+-> 61 `c
+-> 32 `c
+-> 82 `c
+-> 53 `c
+-> 48 `c
+-> 44 `c
+-> 32 `c
+-> 52 `c
+-> 32 `c
+-> 61 `c
+-> 32 `c
+-> 82 `c
+-> 49 `c
+-> 48 `c
+-> 48 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 53 `c
+-> 32 `c
+-> 61 `c
+-> 32 `c
+-> 82 `c
+-> 50 `c
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 78: const uint8_t setnotes[] = "Enable / Disable    1 = R10, 2 = R20    3 = R50, 4 = R100   5 = R200";
+"79
+[v _tenrand `Cuc ~T0 @X0 -> 0 `x e ]
+[i _tenrand
+:U ..
+-> 48 `c
+-> 32 `c
+-> 82 `c
+-> 49 `c
+-> 48 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 79: const uint8_t tenrand[] = "0 R10  ";
+"80
+[v _twentyrand `Cuc ~T0 @X0 -> 0 `x e ]
+[i _twentyrand
+:U ..
+-> 49 `c
+-> 32 `c
+-> 82 `c
+-> 50 `c
+-> 48 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 80: const uint8_t twentyrand[] = "1 R20  ";
+"81
+[v _fiftyrand `Cuc ~T0 @X0 -> 0 `x e ]
+[i _fiftyrand
+:U ..
+-> 50 `c
+-> 32 `c
+-> 82 `c
+-> 53 `c
+-> 48 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 81: const uint8_t fiftyrand[] = "2 R50  ";
+"82
+[v _hundredrand `Cuc ~T0 @X0 -> 0 `x e ]
+[i _hundredrand
+:U ..
+-> 51 `c
+-> 32 `c
+-> 82 `c
+-> 49 `c
+-> 48 `c
+-> 48 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 82: const uint8_t hundredrand[] = "3 R100 ";
+"83
+[v _twohundredrand `Cuc ~T0 @X0 -> 0 `x e ]
+[i _twohundredrand
+:U ..
+-> 52 `c
+-> 32 `c
+-> 82 `c
+-> 50 `c
+-> 48 `c
+-> 48 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 83: const uint8_t twohundredrand[] = "4 R200 ";
+"84
+[v _enabled `Cuc ~T0 @X0 -> 0 `x e ]
+[i _enabled
+:U ..
+-> 101 `c
+-> 110 `c
+-> 97 `c
+-> 98 `c
+-> 108 `c
+-> 101 `c
+-> 100 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 84: const uint8_t enabled[] = "enabled ";
+"85
+[v _disabled `Cuc ~T0 @X0 -> 0 `x e ]
+[i _disabled
+:U ..
+-> 100 `c
+-> 105 `c
+-> 115 `c
+-> 97 `c
+-> 98 `c
+-> 108 `c
+-> 101 `c
+-> 100 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 85: const uint8_t disabled[] = "disabled";
+"87
+[v _bflag `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 87: uint8_t bflag;
+"88
+[v _lcdfunc `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 88: uint8_t lcdfunc;
+"89
+[v _lcdata `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 89: uint8_t lcdata;
+"90
+[v _lcdline `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 90: uint8_t lcdline;
+"91
+[v _stradd `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 91: uint8_t stradd;
+"92
+[v _hexnum `um ~T0 @X0 1 e ]
+[; ;lcd.h: 92: uint24_t hexnum;
+"93
+[v _ercode `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 93: uint8_t ercode;
+"94
+[v _lcdaddress `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 94: uint8_t lcdaddress;
+[; ;lcd.h: 96: void lcd_dispadd(uint8_t lcdaddress);
+[; ;lcd.h: 98: void displ_code(uint8_t ercode);
+[; ;lcd.h: 100: void lcd_init(void);
+[; ;lcd.h: 102: void lcd_string(uint8_t *, uint8_t lcdline);
+[; ;lcd.h: 104: void lcd_writeC(uint8_t);
+[; ;lcd.h: 106: void lcd_write(uint8_t);
+[; ;lcd.h: 108: void lcd_clockH(void);
+[; ;lcd.h: 110: void lcd_clockL(void);
+[; ;lcd.h: 112: void lcd_clockE(void);
+[; ;lcd.h: 114: void lcd_test(void);
+[; ;lcd.h: 116: void displ_hex(uint24_t);
+[; ;lcd.h: 118: void displ_credit(void);
+[; ;lcd.h: 120: void displ_noteer(void);
+[; ;lcd.h: 122: void displ_test(void);
+[; ;lcd.h: 124: void displ_totals(void);
+[; ;lcd.h: 126: void displ_empty(void);
+[; ;lcd.h: 128: uint8_t displ_note(uint8_t *lcdstring);
+[; ;lcd.h: 130: void displ_nendis(uint8_t notenum);
+[; ;lcd.h: 132: int8_t read_busy(void);
+"17 mdb.h
 [v _note_reset `Cuc ~T0 @X0 1 e ]
 [i _note_reset
 -> -> 48 `i `uc
 ]
-[; ;vend.h: 30: const uint8_t note_reset = 0x30;
-"32
+[; ;mdb.h: 17: const uint8_t note_reset = 0x30;
+"19
 [v _note_setup `Cuc ~T0 @X0 1 e ]
 [i _note_setup
 -> -> 49 `i `uc
 ]
-[; ;vend.h: 32: const uint8_t note_setup = 0x31;
-"34
+[; ;mdb.h: 19: const uint8_t note_setup = 0x31;
+"21
 [v _note_security `Cuc ~T0 @X0 1 e ]
 [i _note_security
 -> -> 50 `i `uc
 ]
-[; ;vend.h: 34: const uint8_t note_security = 0x32;
-"36
+[; ;mdb.h: 21: const uint8_t note_security = 0x32;
+"23
 [v _note_poll `Cuc ~T0 @X0 1 e ]
 [i _note_poll
 -> -> 51 `i `uc
 ]
-[; ;vend.h: 36: const uint8_t note_poll = 0x33;
-"38
+[; ;mdb.h: 23: const uint8_t note_poll = 0x33;
+"25
 [v _note_type `Cuc ~T0 @X0 1 e ]
 [i _note_type
 -> -> 52 `i `uc
 ]
-[; ;vend.h: 38: const uint8_t note_type = 0x34;
-"40
+[; ;mdb.h: 25: const uint8_t note_type = 0x34;
+"27
 [v _note_escrow `Cuc ~T0 @X0 1 e ]
 [i _note_escrow
 -> -> 53 `i `uc
 ]
-[; ;vend.h: 40: const uint8_t note_escrow = 0x35;
-"42
+[; ;mdb.h: 27: const uint8_t note_escrow = 0x35;
+"29
 [v _note_stacker `Cuc ~T0 @X0 1 e ]
 [i _note_stacker
 -> -> 54 `i `uc
 ]
-[; ;vend.h: 42: const uint8_t note_stacker = 0x36;
-"44
+[; ;mdb.h: 29: const uint8_t note_stacker = 0x36;
+"31
 [v _note_features `Cuc ~T0 @X0 1 e ]
 [i _note_features
 -> -> 51 `i `uc
 ]
-[; ;vend.h: 44: const uint8_t note_features = 0x33;
-"46
+[; ;mdb.h: 31: const uint8_t note_features = 0x33;
+"33
 [v _motr_error `Cuc ~T0 @X0 1 e ]
 [i _motr_error
 -> -> 1 `i `uc
 ]
-[; ;vend.h: 46: const uint8_t motr_error = 0x01;
-"47
+[; ;mdb.h: 33: const uint8_t motr_error = 0x01;
+"34
 [v _sens_error `Cuc ~T0 @X0 1 e ]
 [i _sens_error
 -> -> 2 `i `uc
 ]
-[; ;vend.h: 47: const uint8_t sens_error = 0x02;
-"48
+[; ;mdb.h: 34: const uint8_t sens_error = 0x02;
+"35
 [v _just_busy `Cuc ~T0 @X0 1 e ]
 [i _just_busy
 -> -> 3 `i `uc
 ]
-[; ;vend.h: 48: const uint8_t just_busy = 0x03;
-"49
+[; ;mdb.h: 35: const uint8_t just_busy = 0x03;
+"36
 [v _rom_error `Cuc ~T0 @X0 1 e ]
 [i _rom_error
 -> -> 4 `i `uc
 ]
-[; ;vend.h: 49: const uint8_t rom_error = 0x04;
-"50
+[; ;mdb.h: 36: const uint8_t rom_error = 0x04;
+"37
 [v _jammed_err `Cuc ~T0 @X0 1 e ]
 [i _jammed_err
 -> -> 5 `i `uc
 ]
-[; ;vend.h: 50: const uint8_t jammed_err = 0x05;
-"51
+[; ;mdb.h: 37: const uint8_t jammed_err = 0x05;
+"38
 [v _just_reset `Cuc ~T0 @X0 1 e ]
 [i _just_reset
 -> -> 6 `i `uc
 ]
-[; ;vend.h: 51: const uint8_t just_reset = 0x06;
-"52
+[; ;mdb.h: 38: const uint8_t just_reset = 0x06;
+"39
 [v _note_removed `Cuc ~T0 @X0 1 e ]
 [i _note_removed
 -> -> 7 `i `uc
 ]
-[; ;vend.h: 52: const uint8_t note_removed = 0x07;
-"53
+[; ;mdb.h: 39: const uint8_t note_removed = 0x07;
+"40
 [v _cashbox_err `Cuc ~T0 @X0 1 e ]
 [i _cashbox_err
 -> -> 8 `i `uc
 ]
-[; ;vend.h: 53: const uint8_t cashbox_err = 0x08;
-"54
+[; ;mdb.h: 40: const uint8_t cashbox_err = 0x08;
+"41
 [v _acept_disabled `Cuc ~T0 @X0 1 e ]
 [i _acept_disabled
 -> -> 9 `i `uc
 ]
-[; ;vend.h: 54: const uint8_t acept_disabled = 0x09;
-"55
+[; ;mdb.h: 41: const uint8_t acept_disabled = 0x09;
+"42
 [v _invalid_escrow `Cuc ~T0 @X0 1 e ]
 [i _invalid_escrow
 -> -> 10 `i `uc
 ]
-[; ;vend.h: 55: const uint8_t invalid_escrow = 0x0A;
-"56
+[; ;mdb.h: 42: const uint8_t invalid_escrow = 0x0A;
+"43
 [v _note_rejected `Cuc ~T0 @X0 1 e ]
 [i _note_rejected
 -> -> 11 `i `uc
 ]
-[; ;vend.h: 56: const uint8_t note_rejected = 0x0B;
-"57
+[; ;mdb.h: 43: const uint8_t note_rejected = 0x0B;
+"44
 [v _theft_attempt `Cuc ~T0 @X0 1 e ]
 [i _theft_attempt
 -> -> 12 `i `uc
 ]
-[; ;vend.h: 57: const uint8_t theft_attempt = 0x0C;
-"74
-[v _venflags `S1371 ~T0 @X0 1 e ]
-[; ;vend.h: 64: struct
-[; ;vend.h: 65: {
-[; ;vend.h: 66: unsigned iscredit : 1;
-[; ;vend.h: 67: unsigned error : 1;
-[; ;vend.h: 68: unsigned inscoin : 1;
-[; ;vend.h: 69: unsigned nochange : 1;
-[; ;vend.h: 70: unsigned credisplay : 1;
-[; ;vend.h: 71: unsigned initialrun : 1;
-[; ;vend.h: 72: unsigned spare1 : 1;
-[; ;vend.h: 73: unsigned spare2 : 1;
-[; ;vend.h: 74: } venflags;
-"86
-[v _mdbflags `S1372 ~T0 @X0 1 e ]
-[; ;vend.h: 76: struct
-[; ;vend.h: 77: {
-[; ;vend.h: 78: unsigned isdata : 1;
-[; ;vend.h: 79: unsigned noteerr : 1;
-[; ;vend.h: 80: unsigned mode : 1;
-[; ;vend.h: 81: unsigned timeout : 1;
-[; ;vend.h: 82: unsigned spare2 : 1;
-[; ;vend.h: 83: unsigned spare3 : 1;
-[; ;vend.h: 84: unsigned spare4 : 1;
-[; ;vend.h: 85: unsigned spare5 : 1;
-[; ;vend.h: 86: }mdbflags;
-"98
-[v _noteen `S1373 ~T0 @X0 1 e ]
-[; ;vend.h: 90: struct
-[; ;vend.h: 91: {
-[; ;vend.h: 92: unsigned R10 : 1;
-[; ;vend.h: 93: unsigned R20 : 1;
-[; ;vend.h: 94: unsigned R50 : 1;
-[; ;vend.h: 95: unsigned R100 : 1;
-[; ;vend.h: 96: unsigned R200 : 1;
-[; ;vend.h: 97: unsigned spare : 3;
-[; ;vend.h: 98: }noteen;
-"99
-[v _noteen_byte `Vuc ~T0 @X0 1 e ]
-[i _noteen_byte
--> -> 31 `i `uc
-]
-[; ;vend.h: 99: volatile uint8_t noteen_byte = 0x1F;
-"112
-[v _errorflags `S1374 ~T0 @X0 1 e ]
-[; ;vend.h: 102: struct
-[; ;vend.h: 103: {
-[; ;vend.h: 104: unsigned chan1 : 1;
-[; ;vend.h: 105: unsigned chan2 : 1;
-[; ;vend.h: 106: unsigned chan3 : 1;
-[; ;vend.h: 107: unsigned chan4 : 1;
-[; ;vend.h: 108: unsigned chan5 : 1;
-[; ;vend.h: 109: unsigned chan6 : 1;
-[; ;vend.h: 110: unsigned chan7 : 1;
-[; ;vend.h: 111: unsigned chan8 : 1;
-[; ;vend.h: 112: } errorflags;
-[; ;vend.h: 115: void credit_add(uint8_t credit);
-[; ;vend.h: 117: void credit_subtract(uint8_t credit);
-[; ;vend.h: 119: void vend_init(void);
-[; ;vend.h: 122: uint8_t credit_check(void);
-[; ;vend.h: 125: void init_mdbdata(uint8_t);
-[; ;vend.h: 127: uint8_t mdb_reset(void);
-[; ;vend.h: 129: bool mdb_noten(void);
-[; ;vend.h: 131: uint8_t mdb_poll(uint8_t slvadd, uint8_t mcount);
-[; ;vend.h: 133: void mdb_on(void);
-[; ;vend.h: 135: void mdb_ron(void);
-[; ;vend.h: 137: uint8_t wait_ack(void);
-[; ;vend.h: 139: void mdb_test(void);
-[; ;vend.h: 141: void mdb_waitx(void);
-[; ;vend.h: 143: void mdb_waitr(void);
-[; ;vend.h: 145: void cctalk_on(void);
-"14 vend.c
-[v _credit `Vuc ~T0 @X0 1 e ]
-[; ;vend.c: 14: volatile uint8_t credit;
-"15
-[v _cash `Vuc ~T0 @X0 1 e ]
-[; ;vend.c: 15: volatile uint8_t cash;
-"17
-[v _vend_init `(v ~T0 @X0 1 ef ]
-"18
-{
-[; ;vend.c: 17: void vend_init(void)
-[; ;vend.c: 18: {
-[e :U _vend_init ]
-[f ]
-[; ;vend.c: 20: mdbflags.noteerr = 0;
-"20
-[e = . _mdbflags 1 -> -> 0 `i `uc ]
-[; ;vend.c: 21: mdbflags.isdata = 0;
-"21
-[e = . _mdbflags 0 -> -> 0 `i `uc ]
-[; ;vend.c: 24: mdb_reset();
-"24
-[e ( _mdb_reset ..  ]
-[; ;vend.c: 25: mdb_noten();
-"25
-[e ( _mdb_noten ..  ]
-[; ;vend.c: 26: venflags.initialrun = 1;
-"26
-[e = . _venflags 5 -> -> 1 `i `uc ]
-[; ;vend.c: 27: if(credit_check() == 0)
-"27
-[e $ ! == -> ( _credit_check ..  `i -> 0 `i 1376  ]
-[; ;vend.c: 28: {
-"28
-{
-[; ;vend.c: 29: venflags.iscredit = 0;
-"29
-[e = . _venflags 0 -> -> 0 `i `uc ]
-[; ;vend.c: 30: venflags.inscoin = 1;
-"30
-[e = . _venflags 2 -> -> 1 `i `uc ]
-[; ;vend.c: 31: venflags.credisplay = 0;
-"31
-[e = . _venflags 4 -> -> 0 `i `uc ]
-"32
-}
-[; ;vend.c: 32: }
-[e $U 1377  ]
-"33
-[e :U 1376 ]
-[; ;vend.c: 33: else
-[; ;vend.c: 34: {
-"34
-{
-[; ;vend.c: 35: venflags.iscredit = 1;
-"35
-[e = . _venflags 0 -> -> 1 `i `uc ]
-[; ;vend.c: 36: venflags.inscoin = 0;
-"36
-[e = . _venflags 2 -> -> 0 `i `uc ]
-[; ;vend.c: 37: venflags.credisplay = 1;
-"37
-[e = . _venflags 4 -> -> 1 `i `uc ]
-"38
-}
-[e :U 1377 ]
-[; ;vend.c: 38: }
-[; ;vend.c: 41: }
-"41
-[e :UE 1375 ]
-}
-"43
-[v _credit_add `(v ~T0 @X0 1 ef1`uc ]
-"44
-{
-[; ;vend.c: 43: void credit_add(uint8_t credit)
-[; ;vend.c: 44: {
-[e :U _credit_add ]
-[v _credit `uc ~T0 @X0 1 r1 ]
-[f ]
-[; ;vend.c: 45: cash = DATAEE_ReadByte(credmem);
-"45
-[e = _cash ( _DATAEE_ReadByte (1 _credmem ]
-[; ;vend.c: 46: cash = cash + credit;
-"46
-[e = _cash -> + -> _cash `i -> _credit `i `uc ]
-[; ;vend.c: 47: DATAEE_WriteByte(credmem, cash);
+[; ;mdb.h: 44: const uint8_t theft_attempt = 0x0C;
 "47
-[e ( _DATAEE_WriteByte (2 , _credmem _cash ]
-[; ;vend.c: 48: if(cash != 0)
-"48
-[e $ ! != -> _cash `i -> 0 `i 1379  ]
-[; ;vend.c: 49: {
-"49
-{
-[; ;vend.c: 50: venflags.iscredit = 1;
-"50
-[e = . _venflags 0 -> -> 1 `i `uc ]
-[; ;vend.c: 51: venflags.inscoin = 0;
-"51
-[e = . _venflags 2 -> -> 0 `i `uc ]
-[; ;vend.c: 52: venflags.credisplay = 1;
-"52
-[e = . _venflags 4 -> -> 1 `i `uc ]
-"54
-}
-[e :U 1379 ]
-[; ;vend.c: 54: }
-[; ;vend.c: 55: }
-"55
-[e :UE 1378 ]
-}
-"57
-[v _credit_subtract `(v ~T0 @X0 1 ef1`uc ]
-"58
-{
-[; ;vend.c: 57: void credit_subtract(uint8_t credit)
-[; ;vend.c: 58: {
-[e :U _credit_subtract ]
-[v _credit `uc ~T0 @X0 1 r1 ]
-[f ]
-[; ;vend.c: 59: cash = DATAEE_ReadByte(credmem);
-"59
-[e = _cash ( _DATAEE_ReadByte (1 _credmem ]
-[; ;vend.c: 60: cash = (cash - credit) & 0xFF;
-"60
-[e = _cash -> & - -> _cash `i -> _credit `i -> 255 `i `uc ]
-[; ;vend.c: 61: DATAEE_WriteByte(credmem, cash);
-"61
-[e ( _DATAEE_WriteByte (2 , _credmem _cash ]
-[; ;vend.c: 62: if(cash == 0)
-"62
-[e $ ! == -> _cash `i -> 0 `i 1381  ]
-[; ;vend.c: 63: {
-"63
-{
-[; ;vend.c: 64: venflags.iscredit = 0;
-"64
-[e = . _venflags 0 -> -> 0 `i `uc ]
-[; ;vend.c: 65: venflags.inscoin = 1;
-"65
-[e = . _venflags 2 -> -> 1 `i `uc ]
-[; ;vend.c: 66: venflags.credisplay = 0;
-"66
-[e = . _venflags 4 -> -> 0 `i `uc ]
-"67
-}
-[e :U 1381 ]
-[; ;vend.c: 67: }
-[; ;vend.c: 68: }
-"68
-[e :UE 1380 ]
-}
-"70
-[v _credit_check `(uc ~T0 @X0 1 ef ]
-"71
-{
-[; ;vend.c: 70: uint8_t credit_check(void)
-[; ;vend.c: 71: {
-[e :U _credit_check ]
-[f ]
-[; ;vend.c: 72: cash = DATAEE_ReadByte(credmem);
-"72
-[e = _cash ( _DATAEE_ReadByte (1 _credmem ]
-[; ;vend.c: 73: return(cash);
-"73
-[e ) _cash ]
-[e $UE 1382  ]
-[; ;vend.c: 74: }
-"74
-[e :UE 1382 ]
-}
-"78
-[v _slvadd `uc ~T0 @X0 1 e ]
-[; ;vend.c: 78: uint8_t slvadd;
-"79
-[v _mcount `c ~T0 @X0 1 e ]
-[i _mcount
--> -> 0 `i `c
-]
-[; ;vend.c: 79: signed char mcount = 0;
-"81
 [v _mdbdata `uc ~T0 @X0 -> 32 `i e ]
-[; ;vend.c: 81: uint8_t mdbdata[32];
-"82
+[; ;mdb.h: 47: uint8_t mdbdata[32];
+"48
+[v _slvadd `uc ~T0 @X0 1 e ]
+[; ;mdb.h: 48: uint8_t slvadd;
+"49
+[v _mcount `uc ~T0 @X0 1 e ]
+[i _mcount
+-> -> 0 `i `uc
+]
+[; ;mdb.h: 49: uint8_t mcount = 0;
+"50
+[v _notebyte `uc ~T0 @X0 1 e ]
+[; ;mdb.h: 50: uint8_t notebyte;
+"51
 [v _chkbyte `uc ~T0 @X0 1 e ]
-[; ;vend.c: 82: uint8_t chkbyte;
-"83
+[; ;mdb.h: 51: uint8_t chkbyte;
+"52
 [v _dbcount `ui ~T0 @X0 1 e ]
 [i _dbcount
 -> -> 0 `i `ui
 ]
-[; ;vend.c: 83: uint16_t dbcount=0;
-"85
-[v _init_mdbdata `(v ~T0 @X0 1 ef1`uc ]
-"86
+[; ;mdb.h: 52: uint16_t dbcount=0;
+"53
+[v _notenum `uc ~T0 @X0 1 e ]
+[i _notenum
+-> -> 255 `i `uc
+]
+[; ;mdb.h: 53: uint8_t notenum = 0xFF;
+"68
+[v _mdbflags `S1371 ~T0 @X0 1 e ]
+[; ;mdb.h: 57: struct
+[; ;mdb.h: 58: {
+[; ;mdb.h: 59: unsigned isdata : 1;
+[; ;mdb.h: 60: unsigned noteerr : 1;
+[; ;mdb.h: 61: unsigned mode : 1;
+[; ;mdb.h: 62: unsigned timeout : 1;
+[; ;mdb.h: 64: unsigned vending : 1;
+[; ;mdb.h: 65: unsigned spare3 : 1;
+[; ;mdb.h: 66: unsigned spare4 : 1;
+[; ;mdb.h: 67: unsigned spare5 : 1;
+[; ;mdb.h: 68: }mdbflags;
+"82
+[v _noteen `S1372 ~T0 @X0 1 e ]
+[; ;mdb.h: 72: struct
+[; ;mdb.h: 73: {
+[; ;mdb.h: 74: unsigned R10 : 1;
+[; ;mdb.h: 75: unsigned R20 : 1;
+[; ;mdb.h: 76: unsigned R50 : 1;
+[; ;mdb.h: 77: unsigned R100 : 1;
+[; ;mdb.h: 78: unsigned R200 : 1;
+[; ;mdb.h: 79: unsigned noteset : 1;
+[; ;mdb.h: 80: unsigned endis : 1;
+[; ;mdb.h: 81: unsigned spare : 1;
+[; ;mdb.h: 82: }noteen;
+"83
+[v _noteen_byte `Vuc ~T0 @X0 1 e ]
+[; ;mdb.h: 83: volatile uint8_t noteen_byte;
+"96
+[v _errorflags `S1373 ~T0 @X0 1 e ]
+[; ;mdb.h: 86: struct
+[; ;mdb.h: 87: {
+[; ;mdb.h: 88: unsigned chan1 : 1;
+[; ;mdb.h: 89: unsigned chan2 : 1;
+[; ;mdb.h: 90: unsigned chan3 : 1;
+[; ;mdb.h: 91: unsigned chan4 : 1;
+[; ;mdb.h: 92: unsigned chan5 : 1;
+[; ;mdb.h: 93: unsigned chan6 : 1;
+[; ;mdb.h: 94: unsigned chan7 : 1;
+[; ;mdb.h: 95: unsigned chan8 : 1;
+[; ;mdb.h: 96: } errorflags;
+"98
+[v _mdbtxbyte `uc ~T0 @X0 1 e ]
+[; ;mdb.h: 98: uint8_t mdbtxbyte;
+[; ;mdb.h: 102: void mdb_init(void);
+[; ;mdb.h: 104: void init_mdbdata(uint8_t);
+[; ;mdb.h: 106: uint8_t mdb_reset(void);
+[; ;mdb.h: 108: void set_notes(void);
+[; ;mdb.h: 110: void enable_notes(uint8_t notenum);
+[; ;mdb.h: 112: void note_disenable(uint8_t notenum);
+[; ;mdb.h: 114: void mdb_noten(void);
+[; ;mdb.h: 116: void mdb_security(void);
+[; ;mdb.h: 118: uint8_t mdb_poll(void);
+[; ;mdb.h: 120: uint8_t mdb_comm(uint8_t slvadd, uint8_t mcount);
+[; ;mdb.h: 122: void mdb_on(void);
+[; ;mdb.h: 124: void mdb_ron(void);
+[; ;mdb.h: 126: uint8_t wait_ack(void);
+[; ;mdb.h: 128: void mdb_test(void);
+[; ;mdb.h: 130: void mdb_waitx(void);
+[; ;mdb.h: 132: void mdb_waitr(void);
+[; ;mdb.h: 134: void mdb_unlock(void);
+[; ;mdb.h: 136: void mdb_transmit(uint8_t txbyte);
+"18 cctalk.h
+[v _hopadd `Cuc ~T0 @X0 1 e ]
+[i _hopadd
+-> -> 3 `i `uc
+]
+[; ;cctalk.h: 18: const uint8_t hopadd = 0x03;
+"20
+[v _mastadd `Cuc ~T0 @X0 1 e ]
+[i _mastadd
+-> -> 1 `i `uc
+]
+[; ;cctalk.h: 20: const uint8_t mastadd = 0x01;
+"22
+[v _cc_reset `Cuc ~T0 @X0 1 e ]
+[i _cc_reset
+-> -> 1 `i `uc
+]
+[; ;cctalk.h: 22: const uint8_t cc_reset = 0x01;
+"26
+[v _cc_test `Cuc ~T0 @X0 1 e ]
+[i _cc_test
+-> -> 163 `i `uc
+]
+[; ;cctalk.h: 26: const uint8_t cc_test = 0xA3;
+"28
+[v _cc_enable `Cuc ~T0 @X0 1 e ]
+[i _cc_enable
+-> -> 164 `i `uc
+]
+[; ;cctalk.h: 28: const uint8_t cc_enable =0xA4;
+"31
+[v _cc_status `Cuc ~T0 @X0 1 e ]
+[i _cc_status
+-> -> 166 `i `uc
+]
+[; ;cctalk.h: 31: const uint8_t cc_status = 0xA6;
+"34
+[v _cc_pay `Cuc ~T0 @X0 1 e ]
+[i _cc_pay
+-> -> 167 `i `uc
+]
+[; ;cctalk.h: 34: const uint8_t cc_pay = 0xA7;
+"36
+[v _cc_countrq `Cuc ~T0 @X0 1 e ]
+[i _cc_countrq
+-> -> 168 `i `uc
+]
+[; ;cctalk.h: 36: const uint8_t cc_countrq = 0xA8;
+"38
+[v _cc_stop `Cuc ~T0 @X0 1 e ]
+[i _cc_stop
+-> -> 172 `i `uc
+]
+[; ;cctalk.h: 38: const uint8_t cc_stop = 0xAC;
+"40
+[v _cc_level `Cuc ~T0 @X0 1 e ]
+[i _cc_level
+-> -> 236 `i `uc
+]
+[; ;cctalk.h: 40: const uint8_t cc_level = 0xEC;
+"42
+[v _cc_pin `Cuc ~T0 @X0 1 e ]
+[i _cc_pin
+-> -> 218 `i `uc
+]
+[; ;cctalk.h: 42: const uint8_t cc_pin = 0xDA;
+"44
+[v _cc_newpin `Cuc ~T0 @X0 1 e ]
+[i _cc_newpin
+-> -> 219 `i `uc
+]
+[; ;cctalk.h: 44: const uint8_t cc_newpin = 0xDB;
+"47
+[v _cc_serial `Cuc ~T0 @X0 1 e ]
+[i _cc_serial
+-> -> 242 `i `uc
+]
+[; ;cctalk.h: 47: const uint8_t cc_serial = 0xF2;
+"49
+[v _cc_adpoll `Cuc ~T0 @X0 1 e ]
+[i _cc_adpoll
+-> -> 253 `i `uc
+]
+[; ;cctalk.h: 49: const uint8_t cc_adpoll = 0xFD;
+"51
+[v _cc_poll `Cuc ~T0 @X0 1 e ]
+[i _cc_poll
+-> -> 254 `i `uc
+]
+[; ;cctalk.h: 51: const uint8_t cc_poll = 0xFE;
+"53
+[v _dest `uc ~T0 @X0 1 e ]
+[; ;cctalk.h: 53: uint8_t dest;
+"54
+[v _nobytes `uc ~T0 @X0 1 e ]
+[; ;cctalk.h: 54: uint8_t nobytes;
+"55
+[v _command `uc ~T0 @X0 1 e ]
+[; ;cctalk.h: 55: uint8_t command;
+"58
+[v _hpserial `uc ~T0 @X0 -> 3 `i e ]
+[; ;cctalk.h: 58: uint8_t hpserial[3];
+"70
+[v _cctflags `S1374 ~T0 @X0 1 e ]
+[; ;cctalk.h: 60: struct
+[; ;cctalk.h: 61: {
+[; ;cctalk.h: 62: unsigned isdata : 1;
+[; ;cctalk.h: 63: unsigned hoperr : 1;
+[; ;cctalk.h: 64: unsigned mode : 1;
+[; ;cctalk.h: 65: unsigned timeout : 1;
+[; ;cctalk.h: 66: unsigned spare2 : 1;
+[; ;cctalk.h: 67: unsigned spare3 : 1;
+[; ;cctalk.h: 68: unsigned spare4 : 1;
+[; ;cctalk.h: 69: unsigned spare5 : 1;
+[; ;cctalk.h: 70: }cctflags;
+[; ;cctalk.h: 72: void cctalk_adpoll(void);
+[; ;cctalk.h: 73: void cctalk_pinenter(void);
+[; ;cctalk.h: 74: void cctalk_init(void);
+[; ;cctalk.h: 75: void cctalk_poll(void);
+[; ;cctalk.h: 76: void cctalk_serial(void);
+[; ;cctalk.h: 77: void cctalk_on(void);
+[; ;cctalk.h: 78: uint8_t cctalk_read(void);
+[; ;cctalk.h: 80: uint8_t cctalk_comm(uint8_t dest, uint8_t nobytes, uint8_t command);
+"19 vend.h
+[v _credit `Vuc ~T0 @X0 1 e ]
+[; ;vend.h: 19: volatile uint8_t credit;
+"20
+[v _cash `Vuc ~T0 @X0 1 e ]
+[; ;vend.h: 20: volatile uint8_t cash;
+"21
+[v _buttons `Vuc ~T0 @X0 1 e ]
+[; ;vend.h: 21: volatile uint8_t buttons;
+"24
+[v _credmem `Cui ~T0 @X0 1 e ]
+[i _credmem
+-> -> 0 `i `ui
+]
+[; ;vend.h: 24: const uint16_t credmem = 0x00;
+"26
+[v _cashinv `Cui ~T0 @X0 1 e ]
+[i _cashinv
+-> -> 2 `i `ui
+]
+[; ;vend.h: 26: const uint16_t cashinv = 0x02;
+"28
+[v _cashint `Cui ~T0 @X0 1 e ]
+[i _cashint
+-> -> 4 `i `ui
+]
+[; ;vend.h: 28: const uint16_t cashint = 0x04;
+"30
+[v _vendstore `Cui ~T0 @X0 1 e ]
+[i _vendstore
+-> -> 7 `i `ui
+]
+[; ;vend.h: 30: const uint16_t vendstore = 0x07;
+"32
+[v _pricestore `Cui ~T0 @X0 1 e ]
+[i _pricestore
+-> -> 15 `i `ui
+]
+[; ;vend.h: 32: const uint16_t pricestore = 0x0F;
+"34
+[v _venderrors `Cui ~T0 @X0 1 e ]
+[i _venderrors
+-> -> 23 `i `ui
+]
+[; ;vend.h: 34: const uint16_t venderrors = 0x17;
+"36
+[v _notebits `Cui ~T0 @X0 1 e ]
+[i _notebits
+-> -> 24 `i `ui
+]
+[; ;vend.h: 36: const uint16_t notebits = 0x18;
+"51
+[v _venflags `S1375 ~T0 @X0 1 e ]
+[; ;vend.h: 41: struct
+[; ;vend.h: 42: {
+[; ;vend.h: 43: unsigned iscredit : 1;
+[; ;vend.h: 44: unsigned error : 1;
+[; ;vend.h: 45: unsigned inscoin : 1;
+[; ;vend.h: 46: unsigned nochange : 1;
+[; ;vend.h: 47: unsigned credisplay : 1;
+[; ;vend.h: 48: unsigned initialrun : 1;
+[; ;vend.h: 49: unsigned noterr : 1;
+[; ;vend.h: 50: unsigned service : 1;
+[; ;vend.h: 51: } venflags;
+[; ;vend.h: 53: void credit_add(uint8_t credit);
+[; ;vend.h: 55: void credit_subtract(uint8_t credit);
+[; ;vend.h: 57: void vend_init(void);
+[; ;vend.h: 60: uint8_t credit_check(void);
+[; ;vend.h: 62: void setup(void);
+[; ;vend.h: 64: uint8_t butindb(void);
+[; ;vend.h: 66: uint8_t butin(void);
+[; ;vend.h: 69: void Audit(void);
+[; ;vend.h: 71: void Hopper_coin(void);
+[; ;vend.h: 73: void Sensor_set(void);
+[; ;vend.h: 75: void Clear_cred(void);
+[; ;vend.h: 77: void Vend_test(void);
+[; ;vend.h: 79: void Note_test(void);
+"13 vend.c
+[v _vend_init `(v ~T0 @X0 1 ef ]
+"14
 {
-[; ;vend.c: 85: void init_mdbdata(uint8_t initdata)
-[; ;vend.c: 86: {
-[e :U _init_mdbdata ]
-"85
-[v _initdata `uc ~T0 @X0 1 r1 ]
-"86
+[; ;vend.c: 13: void vend_init(void)
+[; ;vend.c: 14: {
+[e :U _vend_init ]
 [f ]
-[; ;vend.c: 87: for(uint8_t i = 0;i < 33; i++)
-"87
+[; ;vend.c: 15: lcd_string(inithop, line1);
+"15
+[e ( _lcd_string (2 , -> &U _inithop `*uc _line1 ]
+[; ;vend.c: 16: cctalk_init();
+"16
+[e ( _cctalk_init ..  ]
+[; ;vend.c: 18: lcd_string(initnote, line1);
+"18
+[e ( _lcd_string (2 , -> &U _initnote `*uc _line1 ]
+[; ;vend.c: 19: mdb_init();
+"19
+[e ( _mdb_init ..  ]
+[; ;vend.c: 21: venflags.service = 0;
+"21
+[e = . _venflags 7 -> -> 0 `i `uc ]
+[; ;vend.c: 22: venflags.initialrun = 1;
+"22
+[e = . _venflags 5 -> -> 1 `i `uc ]
+[; ;vend.c: 23: if(credit_check() == 0)
+"23
+[e $ ! == -> ( _credit_check ..  `i -> 0 `i 1377  ]
+[; ;vend.c: 24: {
+"24
 {
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 33 `i 1384  ]
-[e $U 1385  ]
-"88
-[e :U 1384 ]
-[; ;vend.c: 88: {
+[; ;vend.c: 25: venflags.iscredit = 0;
+"25
+[e = . _venflags 0 -> -> 0 `i `uc ]
+[; ;vend.c: 26: venflags.inscoin = 1;
+"26
+[e = . _venflags 2 -> -> 1 `i `uc ]
+[; ;vend.c: 27: venflags.credisplay = 0;
+"27
+[e = . _venflags 4 -> -> 0 `i `uc ]
+[; ;vend.c: 28: mdbflags.noteerr = 0;
+"28
+[e = . _mdbflags 1 -> -> 0 `i `uc ]
+"29
+}
+[; ;vend.c: 29: }
+[e $U 1378  ]
+"30
+[e :U 1377 ]
+[; ;vend.c: 30: else
+[; ;vend.c: 31: {
+"31
 {
-[; ;vend.c: 89: mdbdata[i] = initdata;
-"89
-[e = *U + &U _mdbdata * -> _i `ux -> -> # *U &U _mdbdata `ui `ux _initdata ]
-"90
+[; ;vend.c: 32: venflags.iscredit = 1;
+"32
+[e = . _venflags 0 -> -> 1 `i `uc ]
+[; ;vend.c: 33: venflags.inscoin = 0;
+"33
+[e = . _venflags 2 -> -> 0 `i `uc ]
+[; ;vend.c: 34: venflags.credisplay = 1;
+"34
+[e = . _venflags 4 -> -> 1 `i `uc ]
+[; ;vend.c: 35: mdbflags.noteerr = 0;
+"35
+[e = . _mdbflags 1 -> -> 0 `i `uc ]
+"36
 }
-"87
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 33 `i 1384  ]
-[e :U 1385 ]
-"90
+[e :U 1378 ]
+[; ;vend.c: 36: }
+[; ;vend.c: 38: DAC1_SetOutput(0x00);
+"38
+[e ( _DAC1_SetOutput (1 -> -> 0 `i `uc ]
+[; ;vend.c: 40: }
+"40
+[e :UE 1376 ]
 }
-[; ;vend.c: 90: }
-[; ;vend.c: 91: }
-"91
+"42
+[v _credit_add `(v ~T0 @X0 1 ef1`uc ]
+"43
+{
+[; ;vend.c: 42: void credit_add(uint8_t credit)
+[; ;vend.c: 43: {
+[e :U _credit_add ]
+[v _credit `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;vend.c: 44: cash = DATAEE_ReadByte(credmem);
+"44
+[e = _cash ( _DATAEE_ReadByte (1 _credmem ]
+[; ;vend.c: 45: cash = cash + credit;
+"45
+[e = _cash -> + -> _cash `i -> _credit `i `uc ]
+[; ;vend.c: 46: DATAEE_WriteByte(credmem, cash);
+"46
+[e ( _DATAEE_WriteByte (2 , _credmem _cash ]
+[; ;vend.c: 47: if(cash != 0)
+"47
+[e $ ! != -> _cash `i -> 0 `i 1380  ]
+[; ;vend.c: 48: {
+"48
+{
+[; ;vend.c: 49: venflags.iscredit = 1;
+"49
+[e = . _venflags 0 -> -> 1 `i `uc ]
+[; ;vend.c: 50: venflags.inscoin = 0;
+"50
+[e = . _venflags 2 -> -> 0 `i `uc ]
+[; ;vend.c: 51: venflags.credisplay = 1;
+"51
+[e = . _venflags 4 -> -> 1 `i `uc ]
+"53
+}
+[e :U 1380 ]
+[; ;vend.c: 53: }
+[; ;vend.c: 54: }
+"54
+[e :UE 1379 ]
+}
+"56
+[v _credit_subtract `(v ~T0 @X0 1 ef1`uc ]
+"57
+{
+[; ;vend.c: 56: void credit_subtract(uint8_t credit)
+[; ;vend.c: 57: {
+[e :U _credit_subtract ]
+[v _credit `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;vend.c: 58: cash = DATAEE_ReadByte(credmem);
+"58
+[e = _cash ( _DATAEE_ReadByte (1 _credmem ]
+[; ;vend.c: 59: cash = (cash - credit) & 0xFF;
+"59
+[e = _cash -> & - -> _cash `i -> _credit `i -> 255 `i `uc ]
+[; ;vend.c: 60: DATAEE_WriteByte(credmem, cash);
+"60
+[e ( _DATAEE_WriteByte (2 , _credmem _cash ]
+[; ;vend.c: 61: if(cash == 0)
+"61
+[e $ ! == -> _cash `i -> 0 `i 1382  ]
+[; ;vend.c: 62: {
+"62
+{
+[; ;vend.c: 63: venflags.iscredit = 0;
+"63
+[e = . _venflags 0 -> -> 0 `i `uc ]
+[; ;vend.c: 64: venflags.inscoin = 1;
+"64
+[e = . _venflags 2 -> -> 1 `i `uc ]
+[; ;vend.c: 65: venflags.credisplay = 0;
+"65
+[e = . _venflags 4 -> -> 0 `i `uc ]
+"66
+}
+[e :U 1382 ]
+[; ;vend.c: 66: }
+[; ;vend.c: 67: }
+"67
+[e :UE 1381 ]
+}
+"69
+[v _credit_check `(uc ~T0 @X0 1 ef ]
+"70
+{
+[; ;vend.c: 69: uint8_t credit_check(void)
+[; ;vend.c: 70: {
+[e :U _credit_check ]
+[f ]
+[; ;vend.c: 71: cash = DATAEE_ReadByte(credmem);
+"71
+[e = _cash ( _DATAEE_ReadByte (1 _credmem ]
+[; ;vend.c: 72: return(cash);
+"72
+[e ) _cash ]
+[e $UE 1383  ]
+[; ;vend.c: 73: }
+"73
 [e :UE 1383 ]
 }
+"75
+[v _butindb `(uc ~T0 @X0 1 ef ]
+"76
+{
+[; ;vend.c: 75: uint8_t butindb(void)
+[; ;vend.c: 76: {
+[e :U _butindb ]
+[f ]
+"77
+[v _butt `uc ~T0 @X0 1 a ]
+[; ;vend.c: 77: uint8_t butt = butin();
+[e = _butt ( _butin ..  ]
+"78
+[v _butval `uc ~T0 @X0 1 a ]
+[; ;vend.c: 78: uint8_t butval = buttons;
+[e = _butval _buttons ]
+[; ;vend.c: 79: while(butval != 0x00)
+"79
+[e $U 1385  ]
+[e :U 1386 ]
+[; ;vend.c: 80: {
+"80
+{
+[; ;vend.c: 81: butval = butin();
+"81
+[e = _butval ( _butin ..  ]
+"82
+}
+[e :U 1385 ]
+"79
+[e $ != -> _butval `i -> 0 `i 1386  ]
+[e :U 1387 ]
+[; ;vend.c: 82: }
+[; ;vend.c: 84: return butt;
+"84
+[e ) _butt ]
+[e $UE 1384  ]
+[; ;vend.c: 85: }
+"85
+[e :UE 1384 ]
+}
+"87
+[v _butin `(uc ~T0 @X0 1 ef ]
+"88
+{
+[; ;vend.c: 87: uint8_t butin(void)
+[; ;vend.c: 88: {
+[e :U _butin ]
+[f ]
+[; ;vend.c: 89: LATA7 = 0;
+"89
+[e = _LATA7 -> -> 0 `i `b ]
+[; ;vend.c: 90: LATA6 = 1;
+"90
+[e = _LATA6 -> -> 1 `i `b ]
+[; ;vend.c: 91: _delay((unsigned long)((15)*(12000000/4000000.0)));
+"91
+[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 12000000 `l `d .4000000.0 `ul ]
+[; ;vend.c: 93: buttons = ((PORTA >> 1) & 0x0F) << 4;
 "93
-[v _mdb_reset `(uc ~T0 @X0 1 ef ]
+[e = _buttons -> << & >> -> _PORTA `i -> 1 `i -> 15 `i -> 4 `i `uc ]
+[; ;vend.c: 94: LATA7 = 1;
 "94
-{
-[; ;vend.c: 93: uint8_t mdb_reset(void)
-[; ;vend.c: 94: {
-[e :U _mdb_reset ]
-[f ]
+[e = _LATA7 -> -> 1 `i `b ]
+[; ;vend.c: 95: LATA6 = 0;
 "95
-[v _i `uc ~T0 @X0 1 a ]
-[; ;vend.c: 95: uint8_t i = mdb_poll(note_reset, 0x00);
-[e = _i ( _mdb_poll (2 , _note_reset -> -> 0 `i `uc ]
-[; ;vend.c: 96: asm("nop");
+[e = _LATA6 -> -> 0 `i `b ]
+[; ;vend.c: 96: _delay((unsigned long)((15)*(12000000/4000000.0)));
 "96
-[; <" nop ;# ">
-[; ;vend.c: 97: uint8_t i = mdb_poll(note_poll, 0x00);
-"97
-[e = _i ( _mdb_poll (2 , _note_poll -> -> 0 `i `uc ]
-[; ;vend.c: 98: if(mdbdata[--i] == just_reset)
+[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 12000000 `l `d .4000000.0 `ul ]
+[; ;vend.c: 98: buttons = ((PORTA >> 1) & 0x0F) | buttons;
 "98
-[e $ ! == -> *U + &U _mdbdata * -> =- _i -> -> 1 `i `uc `ux -> -> # *U &U _mdbdata `ui `ux `i -> _just_reset `i 1388  ]
-[; ;vend.c: 99: {
+[e = _buttons -> | & >> -> _PORTA `i -> 1 `i -> 15 `i -> _buttons `i `uc ]
+[; ;vend.c: 99: LATA7 = 1;
 "99
-{
-[v _i `uc ~T0 @X0 1 a ]
-[; ;vend.c: 101: uint8_t i = mdb_poll(note_poll, 0x00);
+[e = _LATA7 -> -> 1 `i `b ]
+[; ;vend.c: 100: LATA6 = 1;
+"100
+[e = _LATA6 -> -> 1 `i `b ]
+[; ;vend.c: 101: return ~buttons;
 "101
-[e = _i ( _mdb_poll (2 , _note_poll -> -> 0 `i `uc ]
-"102
-}
+[e ) -> ~ -> _buttons `i `uc ]
+[e $UE 1388  ]
 [; ;vend.c: 102: }
-[e $U 1389  ]
-"103
-[e :U 1388 ]
-[; ;vend.c: 103: else
-[; ;vend.c: 104: {
+"102
+[e :UE 1388 ]
+}
 "104
+[v _setup `(v ~T0 @X0 1 ef ]
+"105
 {
-[; ;vend.c: 106: return mdbflags.noteerr = 1;
-"106
-[e ) = . _mdbflags 1 -> -> 1 `i `uc ]
-[e $UE 1387  ]
-"107
-}
-[e :U 1389 ]
-[; ;vend.c: 107: }
-[; ;vend.c: 109: return i;
-"109
-[e ) _i ]
-[e $UE 1387  ]
-[; ;vend.c: 110: }
-"110
-[e :UE 1387 ]
-}
-"112
-[v _mdb_noten `(uc ~T0 @X0 1 ef ]
-"113
-{
-[; ;vend.c: 112: bool mdb_noten(void)
-[; ;vend.c: 113: {
-[e :U _mdb_noten ]
+[; ;vend.c: 104: void setup(void)
+[; ;vend.c: 105: {
+[e :U _setup ]
 [f ]
-[; ;vend.c: 115: init_mdbdata(0x00);
-"115
-[e ( _init_mdbdata (1 -> -> 0 `i `uc ]
-[; ;vend.c: 117: mcount = 3;
-"117
-[e = _mcount -> -> 3 `i `c ]
-[; ;vend.c: 119: mdbdata[0] = 0x00;
-"119
-[e = *U + &U _mdbdata * -> -> -> 0 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux -> -> 0 `i `uc ]
-[; ;vend.c: 120: mdbdata[1] = 0x00;
-"120
-[e = *U + &U _mdbdata * -> -> -> 1 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux -> -> 0 `i `uc ]
-[; ;vend.c: 122: mdbdata[2] = noteen_byte;
-"122
-[e = *U + &U _mdbdata * -> -> -> 2 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux _noteen_byte ]
-[; ;vend.c: 124: mdbdata[3] = 0x00;
-"124
-[e = *U + &U _mdbdata * -> -> -> 3 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux -> -> 0 `i `uc ]
-[; ;vend.c: 125: mcount = mdb_poll(note_type, mcount);
-"125
-[e = _mcount -> ( _mdb_poll (2 , _note_type -> _mcount `uc `c ]
-[; ;vend.c: 126: }
-"126
+[; ;vend.c: 107: }
+"107
+[e :UE 1389 ]
+}
+"109
+[v _Audit `(v ~T0 @X0 1 ef ]
+"110
+{
+[; ;vend.c: 109: void Audit(void)
+[; ;vend.c: 110: {
+[e :U _Audit ]
+[f ]
+[; ;vend.c: 112: }
+"112
 [e :UE 1390 ]
 }
-"128
-[v _mdb_poll `(uc ~T0 @X0 1 ef2`uc`uc ]
-"129
+"114
+[v _Hopper_coin `(v ~T0 @X0 1 ef ]
+"115
 {
-[; ;vend.c: 128: uint8_t mdb_poll(uint8_t slvadd, uint8_t mcount)
-[; ;vend.c: 129: {
-[e :U _mdb_poll ]
-[v _slvadd `uc ~T0 @X0 1 r1 ]
-[v _mcount `uc ~T0 @X0 1 r2 ]
+[; ;vend.c: 114: void Hopper_coin(void)
+[; ;vend.c: 115: {
+[e :U _Hopper_coin ]
 [f ]
-"131
-[v _i `uc ~T0 @X0 1 a ]
-[; ;vend.c: 131: uint8_t i = 0;
-[e = _i -> -> 0 `i `uc ]
-[; ;vend.c: 133: TX1STAbits.TX9D = 1;
-"133
-[e = . . _TX1STAbits 0 0 -> -> 1 `i `uc ]
-[; ;vend.c: 134: mdb_on();
-"134
-[e ( _mdb_on ..  ]
-[; ;vend.c: 138: EUSART1_Write(slvadd);
-"138
-[e ( _EUSART1_Write (1 _slvadd ]
-[; ;vend.c: 139: TX1STAbits.TX9D = 0;
-"139
-[e = . . _TX1STAbits 0 0 -> -> 0 `i `uc ]
-[; ;vend.c: 141: mdb_waitx();
-"141
-[e ( _mdb_waitx ..  ]
-[; ;vend.c: 143: chkbyte = slvadd;
-"143
-[e = _chkbyte _slvadd ]
-[; ;vend.c: 144: if(mcount != 0)
-"144
-[e $ ! != -> _mcount `i -> 0 `i 1392  ]
-[; ;vend.c: 145: {
-"145
-{
-[; ;vend.c: 146: while(mcount > -1)
-"146
-[e $U 1393  ]
-[e :U 1394 ]
-[; ;vend.c: 147: {
-"147
-{
-[; ;vend.c: 148: EUSART1_Write(mdbdata[mcount]);
-"148
-[e ( _EUSART1_Write (1 *U + &U _mdbdata * -> _mcount `ux -> -> # *U &U _mdbdata `ui `ux ]
-[; ;vend.c: 150: chkbyte = chkbyte + mdbdata[mcount];
-"150
-[e = _chkbyte -> + -> _chkbyte `i -> *U + &U _mdbdata * -> _mcount `ux -> -> # *U &U _mdbdata `ui `ux `i `uc ]
-[; ;vend.c: 151: mcount--;
-"151
-[e -- _mcount -> -> 1 `i `uc ]
-"152
-}
-[e :U 1393 ]
-"146
-[e $ > -> _mcount `i -U -> 1 `i 1394  ]
-[e :U 1395 ]
-"153
-}
-[e :U 1392 ]
-[; ;vend.c: 152: }
-[; ;vend.c: 153: }
-[; ;vend.c: 154: EUSART1_Write(chkbyte);
-"154
-[e ( _EUSART1_Write (1 _chkbyte ]
-[; ;vend.c: 155: mdb_waitx();
-"155
-[e ( _mdb_waitx ..  ]
-[; ;vend.c: 160: init_mdbdata(0xFF);
-"160
-[e ( _init_mdbdata (1 -> -> 255 `i `uc ]
-[; ;vend.c: 161: TMR1_Initialize();
-"161
-[e ( _TMR1_Initialize ..  ]
-[; ;vend.c: 162: dbcount = 0;
-"162
-[e = _dbcount -> -> 0 `i `ui ]
-[; ;vend.c: 163: mdbflags.isdata = 0;
-"163
-[e = . _mdbflags 0 -> -> 0 `i `uc ]
-[; ;vend.c: 164: i = 0;
-"164
-[e = _i -> -> 0 `i `uc ]
-[; ;vend.c: 166: while(!PIR4bits.TMR1IF && !mdbflags.isdata)
-"166
-[e $U 1396  ]
-[e :U 1397 ]
-[; ;vend.c: 167: {
-"167
-{
-[; ;vend.c: 169: dbcount++;
-"169
-[e ++ _dbcount -> -> 1 `i `ui ]
-[; ;vend.c: 170: mdbflags.isdata = 0;
-"170
-[e = . _mdbflags 0 -> -> 0 `i `uc ]
-[; ;vend.c: 173: while(PIR3bits.RC1IF && !mdbflags.isdata)
-"173
-[e $U 1399  ]
-[e :U 1400 ]
-[; ;vend.c: 174: {
-"174
-{
-[; ;vend.c: 177: mdbdata[i] = EUSART1_Read();
-"177
-[e = *U + &U _mdbdata * -> _i `ux -> -> # *U &U _mdbdata `ui `ux ( _EUSART1_Read ..  ]
-[; ;vend.c: 178: mdb_waitr();
-"178
-[e ( _mdb_waitr ..  ]
-[; ;vend.c: 180: mdbflags.isdata = RC1STAbits.RX9D;
-"180
-[e = . _mdbflags 0 . . _RC1STAbits 0 0 ]
-[; ;vend.c: 181: TMR1_Initialize();
-"181
-[e ( _TMR1_Initialize ..  ]
-[; ;vend.c: 182: i++;
-"182
-[e ++ _i -> -> 1 `i `uc ]
-"184
-}
-[e :U 1399 ]
-"173
-[e $ && != -> . . _PIR3bits 0 5 `i -> -> -> 0 `i `Vuc `i ! != -> . _mdbflags 0 `i -> -> -> 0 `i `uc `i 1400  ]
-[e :U 1401 ]
-"186
-}
-[e :U 1396 ]
-"166
-[e $ && ! != -> . . _PIR4bits 0 0 `i -> -> -> 0 `i `Vuc `i ! != -> . _mdbflags 0 `i -> -> -> 0 `i `uc `i 1397  ]
-[e :U 1398 ]
-[; ;vend.c: 184: }
-[; ;vend.c: 186: }
-[; ;vend.c: 188: i--;
-"188
-[e -- _i -> -> 1 `i `uc ]
-[; ;vend.c: 190: mdbflags.timeout = PIR4bits.TMR1IF;
-"190
-[e = . _mdbflags 3 . . _PIR4bits 0 0 ]
-[; ;vend.c: 192: if(mdbflags.isdata == 1 && mdbdata[i] != 0x00)
-"192
-[e $ ! && == -> . _mdbflags 0 `i -> 1 `i != -> *U + &U _mdbdata * -> _i `ux -> -> # *U &U _mdbdata `ui `ux `i -> 0 `i 1402  ]
-[; ;vend.c: 193: {
-"193
-{
-[; ;vend.c: 194: TX1STAbits.TX9D = 1;
-"194
-[e = . . _TX1STAbits 0 0 -> -> 1 `i `uc ]
-[; ;vend.c: 195: mdb_on();
-"195
-[e ( _mdb_on ..  ]
-[; ;vend.c: 196: EUSART1_Write(0x00);
-"196
-[e ( _EUSART1_Write (1 -> -> 0 `i `uc ]
-[; ;vend.c: 197: mdb_waitx();
-"197
-[e ( _mdb_waitx ..  ]
-"198
-}
-[e :U 1402 ]
-[; ;vend.c: 198: }
-[; ;vend.c: 200: mdb_on();
-"200
-[e ( _mdb_on ..  ]
-[; ;vend.c: 202: return(i);
-"202
-[e ) _i ]
-[e $UE 1391  ]
-[; ;vend.c: 203: }
-"203
+[; ;vend.c: 117: }
+"117
 [e :UE 1391 ]
 }
-"205
-[v _mdb_on `(v ~T0 @X0 1 ef ]
-"206
+"119
+[v _Sensor_set `(v ~T0 @X0 1 ef ]
+"120
 {
-[; ;vend.c: 205: void mdb_on(void)
-[; ;vend.c: 206: {
-[e :U _mdb_on ]
+[; ;vend.c: 119: void Sensor_set(void)
+[; ;vend.c: 120: {
+[e :U _Sensor_set ]
 [f ]
-[; ;vend.c: 207: LATCbits.LATC0 = 1;
-"207
-[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
-[; ;vend.c: 208: LATCbits.LATC1 = 1;
-"208
-[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-[; ;vend.c: 211: }
-"211
-[e :UE 1403 ]
+[; ;vend.c: 122: }
+"122
+[e :UE 1392 ]
 }
-"213
-[v _mdb_ron `(v ~T0 @X0 1 ef ]
-"214
+"124
+[v _Clear_cred `(v ~T0 @X0 1 ef ]
+"125
 {
-[; ;vend.c: 213: void mdb_ron(void)
-[; ;vend.c: 214: {
-[e :U _mdb_ron ]
+[; ;vend.c: 124: void Clear_cred(void)
+[; ;vend.c: 125: {
+[e :U _Clear_cred ]
 [f ]
-[; ;vend.c: 215: LATCbits.LATC0 = 1;
-"215
-[e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
-[; ;vend.c: 216: LATCbits.LATC1 = 0;
-"216
-[e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
-[; ;vend.c: 218: }
-"218
-[e :UE 1404 ]
+[; ;vend.c: 127: }
+"127
+[e :UE 1393 ]
 }
-"220
-[v _mdb_waitx `(v ~T0 @X0 1 ef ]
-"221
+"129
+[v _Vend_test `(v ~T0 @X0 1 ef ]
+"130
 {
-[; ;vend.c: 220: void mdb_waitx(void)
-[; ;vend.c: 221: {
-[e :U _mdb_waitx ]
+[; ;vend.c: 129: void Vend_test(void)
+[; ;vend.c: 130: {
+[e :U _Vend_test ]
 [f ]
-[; ;vend.c: 222: while(TX1STAbits.TRMT == 0)
-"222
-[e $U 1406  ]
-[e :U 1407 ]
-[; ;vend.c: 223: {
-"223
-{
-"225
+[; ;vend.c: 132: }
+"132
+[e :UE 1394 ]
 }
-[e :U 1406 ]
-"222
-[e $ == -> . . _TX1STAbits 0 1 `i -> 0 `i 1407  ]
-[e :U 1408 ]
-[; ;vend.c: 225: }
-[; ;vend.c: 226: }
-"226
-[e :UE 1405 ]
-}
-"228
-[v _mdb_waitr `(v ~T0 @X0 1 ef ]
-"229
+"134
+[v _Note_test `(v ~T0 @X0 1 ef ]
+"135
 {
-[; ;vend.c: 228: void mdb_waitr(void)
-[; ;vend.c: 229: {
-[e :U _mdb_waitr ]
+[; ;vend.c: 134: void Note_test(void)
+[; ;vend.c: 135: {
+[e :U _Note_test ]
 [f ]
-[; ;vend.c: 230: while(BAUD1CONbits.RCIDL == 0)
-"230
-[e $U 1410  ]
-[e :U 1411 ]
-[; ;vend.c: 231: {
-"231
-{
-"233
-}
-[e :U 1410 ]
-"230
-[e $ == -> . . _BAUD1CONbits 0 6 `i -> 0 `i 1411  ]
-[e :U 1412 ]
-[; ;vend.c: 233: }
-[; ;vend.c: 234: }
-"234
-[e :UE 1409 ]
-}
-"236
-[v _wait_ack `(uc ~T0 @X0 1 ef ]
-"237
-{
-[; ;vend.c: 236: uint8_t wait_ack(void)
-[; ;vend.c: 237: {
-[e :U _wait_ack ]
-[f ]
-[; ;vend.c: 239: }
-"239
-[e :UE 1413 ]
-}
-"241
-[v _cctalk_on `(v ~T0 @X0 1 ef ]
-"242
-{
-[; ;vend.c: 241: void cctalk_on(void)
-[; ;vend.c: 242: {
-[e :U _cctalk_on ]
-[f ]
-[; ;vend.c: 243: LATCbits.LATC0 = 0;
-"243
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-[; ;vend.c: 244: LATCbits.LATC1 = 1;
-"244
-[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-[; ;vend.c: 245: }
-"245
-[e :UE 1414 ]
-}
-"246
-[v _mdb_test `(v ~T0 @X0 1 ef ]
-"247
-{
-[; ;vend.c: 246: void mdb_test(void)
-[; ;vend.c: 247: {
-[e :U _mdb_test ]
-[f ]
-"248
-[v _i `uc ~T0 @X0 1 a ]
-[; ;vend.c: 248: uint8_t i = 0;
-[e = _i -> -> 0 `i `uc ]
-"249
-[v _x `uc ~T0 @X0 1 a ]
-[; ;vend.c: 249: uint8_t x = note_reset;
-[e = _x _note_reset ]
-[; ;vend.c: 250: TX1STAbits.TXEN = 1;
-"250
-[e = . . _TX1STAbits 0 5 -> -> 1 `i `uc ]
-[; ;vend.c: 251: while(i < 8)
-"251
-[e $U 1416  ]
-[e :U 1417 ]
-[; ;vend.c: 252: {
-"252
-{
-[; ;vend.c: 255: TX1STAbits.TX9D = 1;
-"255
-[e = . . _TX1STAbits 0 0 -> -> 1 `i `uc ]
-[; ;vend.c: 256: EUSART1_Write(x);
-"256
-[e ( _EUSART1_Write (1 _x ]
-[; ;vend.c: 257: mdb_waitx();
-"257
-[e ( _mdb_waitx ..  ]
-[; ;vend.c: 258: TX1STAbits.TX9D = 0;
-"258
-[e = . . _TX1STAbits 0 0 -> -> 0 `i `uc ]
-[; ;vend.c: 259: EUSART1_Write(x);
-"259
-[e ( _EUSART1_Write (1 _x ]
-[; ;vend.c: 260: mdb_waitx();
-"260
-[e ( _mdb_waitx ..  ]
-[; ;vend.c: 261: TX1STAbits.TXEN = 0;
-"261
-[e = . . _TX1STAbits 0 5 -> -> 0 `i `uc ]
-[; ;vend.c: 262: asm("nop");
-"262
-[; <" nop ;# ">
-[; ;vend.c: 263: mdb_ron();
-"263
-[e ( _mdb_ron ..  ]
-[; ;vend.c: 264: wait_ack();
-"264
-[e ( _wait_ack ..  ]
-[; ;vend.c: 265: i++;
-"265
-[e ++ _i -> -> 1 `i `uc ]
-[; ;vend.c: 266: x++;
-"266
-[e ++ _x -> -> 1 `i `uc ]
-[; ;vend.c: 267: TX1STAbits.TXEN = 1;
-"267
-[e = . . _TX1STAbits 0 5 -> -> 1 `i `uc ]
-[; ;vend.c: 268: mdb_on();
-"268
-[e ( _mdb_on ..  ]
-"269
-}
-[e :U 1416 ]
-"251
-[e $ < -> _i `i -> 8 `i 1417  ]
-[e :U 1418 ]
-[; ;vend.c: 269: }
-[; ;vend.c: 270: TX1STAbits.TXEN = 0;
-"270
-[e = . . _TX1STAbits 0 5 -> -> 0 `i `uc ]
-[; ;vend.c: 271: }
-"271
-[e :UE 1415 ]
+[; ;vend.c: 137: }
+"137
+[e :UE 1395 ]
 }

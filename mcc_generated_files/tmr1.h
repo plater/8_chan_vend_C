@@ -8,17 +8,17 @@
     tmr1.h
 
   @Summary
-    This is the generated header file for the TMR1 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs 
+    This is the generated header file for the TMR1 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   @Description
     This header file provides APIs for driver for TMR1.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.45
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.55
         Device            :  PIC18F47K40
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.40
+        Compiler          :  XC8 1.43
+        MPLAB 	          :  MPLAB X 4.00
 */
 
 /*

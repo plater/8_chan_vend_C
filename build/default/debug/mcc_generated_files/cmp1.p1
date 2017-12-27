@@ -10801,18 +10801,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;cmp1.c: 57: {
 [e :U _CMP1_Initialize ]
 [f ]
-[; ;cmp1.c: 61: CM1CON0 = 0x84;
+[; ;cmp1.c: 61: CM1CON0 = 0x94;
 "61
-[e = _CM1CON0 -> -> 132 `i `uc ]
+[e = _CM1CON0 -> -> 148 `i `uc ]
 [; ;cmp1.c: 64: CM1CON1 = 0x00;
 "64
 [e = _CM1CON1 -> -> 0 `i `uc ]
 [; ;cmp1.c: 67: CM1NCH = 0x00;
 "67
 [e = _CM1NCH -> -> 0 `i `uc ]
-[; ;cmp1.c: 70: CM1PCH = 0x06;
+[; ;cmp1.c: 70: CM1PCH = 0x05;
 "70
-[e = _CM1PCH -> -> 6 `i `uc ]
+[e = _CM1PCH -> -> 5 `i `uc ]
 [; ;cmp1.c: 72: }
 "72
 [e :UE 1371 ]

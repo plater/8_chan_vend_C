@@ -8,19 +8,18 @@
     eusart2.c
 
   @Summary
-    This is the generated driver implementation file for the EUSART2 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs 
+    This is the generated driver implementation file for the EUSART2 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   @Description
-    This header file provides implementations for driver APIs for EUSART2.
+    This source file provides APIs for EUSART2.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.45
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.55
         Device            :  PIC18F47K40
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.40
+        Compiler          :  XC8 1.43
+        MPLAB 	          :  MPLAB X 4.00
 */
-
 /*
     (c) 2016 Microchip Technology Inc. and its subsidiaries. You may use this
     software and any derivatives exclusively with Microchip products.
@@ -42,16 +41,15 @@
     MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
     TERMS.
 */
-
 /**
   Section: Included Files
 */
 #include "eusart2.h"
 
+
 /**
   Section: EUSART2 APIs
 */
-
 void EUSART2_Initialize(void)
 {
     // Set the EUSART2 module to the options selected in the user interface.
@@ -65,18 +63,17 @@ void EUSART2_Initialize(void)
     // TX9 8-bit; TX9D 0; SENDB sync_break_complete; TXEN disabled; SYNC asynchronous; BRGH hi_speed; CSRC slave; 
     TX2STA = 0x04;
 
-    // Baud Rate = 9600; SP2BRGL 207; 
-    SP2BRGL = 0xCF;
+    // SP2BRGL 56; 
+    SP2BRGL = 0x38;
 
-    // Baud Rate = 9600; SP2BRGH 0; 
-    SP2BRGH = 0x00;
+    // SP2BRGH 1; 
+    SP2BRGH = 0x01;
+
 
 }
 
-
 uint8_t EUSART2_Read(void)
 {
-
     while(!PIR3bits.RC2IF)
     {
     }
@@ -86,8 +83,8 @@ uint8_t EUSART2_Read(void)
     {
         // EUSART2 error - restart
 
-        RC2STAbits.SPEN = 0; 
-        RC2STAbits.SPEN = 1; 
+        RC2STAbits.CREN = 0; 
+        RC2STAbits.CREN = 1; 
     }
 
     return RC2REG;
@@ -101,6 +98,9 @@ void EUSART2_Write(uint8_t txData)
 
     TX2REG = txData;    // Write the data byte to the USART.
 }
+
+
+
 /**
   End of File
 */

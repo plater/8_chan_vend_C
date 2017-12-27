@@ -14410,7 +14410,7 @@ uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
 
-# 61 "mcc_generated_files/memory.c"
+# 63 "mcc_generated_files/memory.c"
 uint8_t FLASH_ReadByte(uint32_t flashAddr)
 {
 NVMCON1bits.NVMREG = 2;
@@ -14513,7 +14513,7 @@ NVMCON1bits.WR = 1;
 INTCONbits.GIE = GIEBitValue;
 }
 
-# 167
+# 169
 void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData)
 {
 uint8_t GIEBitValue = INTCONbits.GIE;

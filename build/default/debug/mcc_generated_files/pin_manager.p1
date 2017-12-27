@@ -10861,9 +10861,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pin_manager.c: 58: LATD = 0x00;
 "58
 [e = _LATD -> -> 0 `i `uc ]
-[; ;pin_manager.c: 59: LATA = 0x00;
+[; ;pin_manager.c: 59: LATA = 0xC0;
 "59
-[e = _LATA -> -> 0 `i `uc ]
+[e = _LATA -> -> 192 `i `uc ]
 [; ;pin_manager.c: 60: LATB = 0x00;
 "60
 [e = _LATB -> -> 0 `i `uc ]

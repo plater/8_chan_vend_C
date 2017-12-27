@@ -14393,11 +14393,65 @@ void PIN_MANAGER_IOC(void);
 # 12 "/opt/microchip/xc8/v1.44/include/stdbool.h"
 typedef unsigned char bool;
 
-# 110 "mcc_generated_files/interrupt_manager.h"
+# 157 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
 
-# 122
+# 169
 void interrupt INTERRUPT_InterruptManager (void);
+
+# 99 "mcc_generated_files/tmr5.h"
+void TMR5_Initialize(void);
+
+# 128
+void TMR5_StartTimer(void);
+
+# 160
+void TMR5_StopTimer(void);
+
+# 195
+uint16_t TMR5_ReadTimer(void);
+
+# 234
+void TMR5_WriteTimer(uint16_t timerVal);
+
+# 270
+void TMR5_Reload(void);
+
+# 309
+void TMR5_StartSinglePulseAcquisition(void);
+
+# 348
+uint8_t TMR5_CheckGateValueStatus(void);
+
+# 386
+bool TMR5_HasOverflowOccured(void);
+
+# 99 "mcc_generated_files/tmr3.h"
+void TMR3_Initialize(void);
+
+# 128
+void TMR3_StartTimer(void);
+
+# 160
+void TMR3_StopTimer(void);
+
+# 195
+uint16_t TMR3_ReadTimer(void);
+
+# 234
+void TMR3_WriteTimer(uint16_t timerVal);
+
+# 270
+void TMR3_Reload(void);
+
+# 309
+void TMR3_StartSinglePulseAcquisition(void);
+
+# 348
+uint8_t TMR3_CheckGateValueStatus(void);
+
+# 386
+bool TMR3_HasOverflowOccured(void);
 
 # 99 "mcc_generated_files/tmr1.h"
 void TMR1_Initialize(void);
@@ -14432,6 +14486,12 @@ void CMP1_Initialize(void);
 # 132
 bool CMP1_GetOutputStatus(void);
 
+# 92 "mcc_generated_files/dac1.h"
+void DAC1_Initialize(void);
+
+# 128
+void DAC1_SetOutput(uint8_t inputData);
+
 # 98 "mcc_generated_files/memory.h"
 uint8_t FLASH_ReadByte(uint32_t flashAddr);
 
@@ -14455,39 +14515,38 @@ uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
 
-# 94 "mcc_generated_files/eusart1.h"
-void EUSART1_Initialize(void);
-
-# 114
-uint8_t EUSART1_Read(void);
-
-# 134
-void EUSART1_Write(uint8_t txData);
-
-# 94 "mcc_generated_files/eusart2.h"
+# 93 "mcc_generated_files/eusart2.h"
 void EUSART2_Initialize(void);
 
-# 114
+# 113
 uint8_t EUSART2_Read(void);
 
-# 134
+# 133
 void EUSART2_Write(uint8_t txData);
 
-# 92 "mcc_generated_files/fvr.h"
-void FVR_Initialize(void);
+# 93 "mcc_generated_files/eusart1.h"
+void eusartmdb_Initialize(void);
 
-# 126
-bool FVR_IsOutputReady(void);
+void EUSART1_Initialize(void);
 
-# 74 "mcc_generated_files/mcc.h"
+# 115
+uint8_t EUSART1_Read(void);
+
+# 135
+void EUSART1_Write(uint8_t txData);
+
+# 76 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 87
+# 89
 void OSCILLATOR_Initialize(void);
 
-# 42 "lcd.h"
+# 41 "lcd.h"
+signed char count;
+
 const char dispfunc1 = 0x24;
 const char dispfunc2 = 0x28;
+const char dispfunc3 = 0x2C;
 const char dispon = 0x0C;
 const char dispclr = 0x01;
 const char dispaddr = 0xA8;
@@ -14499,15 +14558,52 @@ const char dispshleft = 0x07;
 const char dispoff = 0x08;
 const char dispsr = 0x1B;
 const char dispsl = 0x18;
+const char line1 = 0x80;
+const char line2 = 0xC0;
+const char line3 = 0x94;
+const char line4 = 0xD4;
 
 
 const uint8_t inscoin[] = "Insert Coins or Notes";
 const uint8_t credits[] = "  Credit = R";
+const uint8_t service[] = "  Service Mode";
+const uint8_t audit[] = "  Audit Mode";
+const uint8_t hopcoin[] = "Hopper Coin         Value";
+const uint8_t senset[] = "  Setup Sensor";
+const uint8_t credclr[] = "Push button 1 to clear credits   and exit";
+const uint8_t vendtest[] = " Push button to     vend";
+const uint8_t notetest[] = "  Insert Note";
+const uint8_t exit[] = "Exit";
+const uint8_t servmsg[] = "Service Mode: press 1 = Audit 2 = Sensor3=Note-en 4=Cred-clr 5=Vend 6=Note 8=Exit";
+const uint8_t noteerr[] = "   Note error     code = 0x";
+const uint8_t inithop[] = "  Initialize Hopper";
+const uint8_t initnote[] = "     Initialize          Note Reader";
+const uint8_t nochange[] = "No Change Given";
+const uint8_t setnotes[] = "Enable / Disable    1 = R10, 2 = R20    3 = R50, 4 = R100   5 = R200";
+const uint8_t tenrand[] = "0 R10  ";
+const uint8_t twentyrand[] = "1 R20  ";
+const uint8_t fiftyrand[] = "2 R50  ";
+const uint8_t hundredrand[] = "3 R100 ";
+const uint8_t twohundredrand[] = "4 R200 ";
+const uint8_t enabled[] = "enabled ";
+const uint8_t disabled[] = "disabled";
 
+uint8_t bflag;
+uint8_t lcdfunc;
+uint8_t lcdata;
+uint8_t lcdline;
+uint8_t stradd;
+uint24_t hexnum;
+uint8_t ercode;
+uint8_t lcdaddress;
+
+void lcd_dispadd(uint8_t lcdaddress);
+
+void displ_code(uint8_t ercode);
 
 void lcd_init(void);
 
-void lcd_string(uint8_t *);
+void lcd_string(uint8_t *, uint8_t lcdline);
 
 void lcd_writeC(uint8_t);
 
@@ -14525,29 +14621,21 @@ void displ_hex(uint24_t);
 
 void displ_credit(void);
 
+void displ_noteer(void);
+
 void displ_test(void);
 
 void displ_totals(void);
 
 void displ_empty(void);
 
+uint8_t displ_note(uint8_t *lcdstring);
+
+void displ_nendis(uint8_t notenum);
+
 int8_t read_busy(void);
 
-# 16 "vend.h"
-const uint16_t credmem = 0x00;
-
-const uint16_t cashinv = 0x02;
-
-const uint16_t cashint = 0x04;
-
-const uint16_t vendstore = 0x07;
-
-const uint16_t pricestore = 0x0F;
-
-const uint16_t venderrors = 0x17;
-
-
-
+# 17 "mdb.h"
 const uint8_t note_reset = 0x30;
 
 const uint8_t note_setup = 0x31;
@@ -14577,18 +14665,16 @@ const uint8_t invalid_escrow = 0x0A;
 const uint8_t note_rejected = 0x0B;
 const uint8_t theft_attempt = 0x0C;
 
-# 64
-struct
-{
-unsigned iscredit : 1;
-unsigned error : 1;
-unsigned inscoin : 1;
-unsigned nochange : 1;
-unsigned credisplay : 1;
-unsigned initialrun : 1;
-unsigned spare1 : 1;
-unsigned spare2 : 1;
-} venflags;
+
+uint8_t mdbdata[32];
+uint8_t slvadd;
+uint8_t mcount = 0;
+uint8_t notebyte;
+uint8_t chkbyte;
+uint16_t dbcount=0;
+uint8_t notenum = 0xFF;
+
+
 
 struct
 {
@@ -14596,7 +14682,8 @@ unsigned isdata : 1;
 unsigned noteerr : 1;
 unsigned mode : 1;
 unsigned timeout : 1;
-unsigned spare2 : 1;
+
+unsigned vending : 1;
 unsigned spare3 : 1;
 unsigned spare4 : 1;
 unsigned spare5 : 1;
@@ -14611,9 +14698,11 @@ unsigned R20 : 1;
 unsigned R50 : 1;
 unsigned R100 : 1;
 unsigned R200 : 1;
-unsigned spare : 3;
+unsigned noteset : 1;
+unsigned endis : 1;
+unsigned spare : 1;
 }noteen;
-volatile uint8_t noteen_byte = 0x1F;
+volatile uint8_t noteen_byte;
 
 
 struct
@@ -14628,24 +14717,29 @@ unsigned chan7 : 1;
 unsigned chan8 : 1;
 } errorflags;
 
-
-void credit_add(uint8_t credit);
-
-void credit_subtract(uint8_t credit);
-
-void vend_init(void);
+uint8_t mdbtxbyte;
 
 
-uint8_t credit_check(void);
 
+void mdb_init(void);
 
 void init_mdbdata(uint8_t);
 
 uint8_t mdb_reset(void);
 
-bool mdb_noten(void);
+void set_notes(void);
 
-uint8_t mdb_poll(uint8_t slvadd, uint8_t mcount);
+void enable_notes(uint8_t notenum);
+
+void note_disable(void);
+
+void mdb_noten(void);
+
+void mdb_security(void);
+
+uint8_t mdb_poll(void);
+
+uint8_t mdb_comm(uint8_t slvadd, uint8_t mcount);
 
 void mdb_on(void);
 
@@ -14659,36 +14753,163 @@ void mdb_waitx(void);
 
 void mdb_waitr(void);
 
-void cctalk_on(void);
+void mdb_unlock(void);
 
-# 14 "vend.c"
+void mdb_transmit(uint8_t txbyte);
+
+# 18 "cctalk.h"
+const uint8_t hopadd = 0x03;
+
+const uint8_t mastadd = 0x01;
+
+const uint8_t cc_reset = 0x01;
+
+
+
+const uint8_t cc_test = 0xA3;
+
+const uint8_t cc_enable =0xA4;
+
+
+const uint8_t cc_status = 0xA6;
+
+
+const uint8_t cc_pay = 0xA7;
+
+const uint8_t cc_countrq = 0xA8;
+
+const uint8_t cc_stop = 0xAC;
+
+const uint8_t cc_level = 0xEC;
+
+const uint8_t cc_pin = 0xDA;
+
+const uint8_t cc_newpin = 0xDB;
+
+
+const uint8_t cc_serial = 0xF2;
+
+const uint8_t cc_adpoll = 0xFD;
+
+const uint8_t cc_poll = 0xFE;
+
+uint8_t dest;
+uint8_t nobytes;
+uint8_t command;
+
+
+uint8_t hpserial[3];
+
+struct
+{
+unsigned isdata : 1;
+unsigned hoperr : 1;
+unsigned mode : 1;
+unsigned timeout : 1;
+unsigned spare2 : 1;
+unsigned spare3 : 1;
+unsigned spare4 : 1;
+unsigned spare5 : 1;
+}cctflags;
+
+void cctalk_adpoll(void);
+void cctalk_pinenter(void);
+void cctalk_init(void);
+void cctalk_poll(void);
+void cctalk_serial(void);
+void cctalk_on(void);
+uint8_t cctalk_read(void);
+
+uint8_t cctalk_comm(uint8_t dest, uint8_t nobytes, uint8_t command);
+
+# 19 "vend.h"
 volatile uint8_t credit;
 volatile uint8_t cash;
+volatile uint8_t buttons;
 
+
+const uint16_t credmem = 0x00;
+
+const uint16_t cashinv = 0x02;
+
+const uint16_t cashint = 0x04;
+
+const uint16_t vendstore = 0x07;
+
+const uint16_t pricestore = 0x0F;
+
+const uint16_t venderrors = 0x17;
+
+const uint16_t notebits = 0x18;
+
+# 41
+struct
+{
+unsigned iscredit : 1;
+unsigned error : 1;
+unsigned inscoin : 1;
+unsigned nochange : 1;
+unsigned credisplay : 1;
+unsigned initialrun : 1;
+unsigned noterr : 1;
+unsigned service : 1;
+} venflags;
+
+void credit_add(uint8_t credit);
+
+void credit_subtract(uint8_t credit);
+
+void vend_init(void);
+
+
+uint8_t credit_check(void);
+
+void setup(void);
+
+uint8_t butindb(void);
+
+uint8_t butin(void);
+
+
+void Audit(void);
+
+void Hopper_coin(void);
+
+void Sensor_set(void);
+
+void Clear_cred(void);
+
+void Vend_test(void);
+
+void Note_test(void);
+
+# 13 "vend.c"
 void vend_init(void)
 {
+lcd_string(inithop, line1);
+cctalk_init();
 
-mdbflags.noteerr = 0;
-mdbflags.isdata = 0;
+lcd_string(initnote, line1);
+mdb_init();
 
-
-mdb_reset();
-mdb_noten();
-uint8_t i = mdb_poll(note_poll, 0x00);
+venflags.service = 0;
 venflags.initialrun = 1;
 if(credit_check() == 0)
 {
 venflags.iscredit = 0;
 venflags.inscoin = 1;
 venflags.credisplay = 0;
+mdbflags.noteerr = 0;
 }
 else
 {
 venflags.iscredit = 1;
 venflags.inscoin = 0;
 venflags.credisplay = 1;
+mdbflags.noteerr = 0;
 }
 
+DAC1_SetOutput(0x00);
 
 }
 
@@ -14725,204 +14946,67 @@ cash = DATAEE_ReadByte(credmem);
 return(cash);
 }
 
-
-
-uint8_t slvadd;
-uint8_t mcount = 0;
-
-uint8_t mdbdata[32];
-uint8_t chkbyte;
-uint16_t dbcount=0;
-
-void init_mdbdata(uint8_t initdata)
+uint8_t butindb(void)
 {
-for(uint8_t i = 0;i < 33; i++)
+uint8_t butt = butin();
+uint8_t butval = buttons;
+while(butval != 0x00)
 {
-mdbdata[i] = initdata;
-}
+butval = butin();
 }
 
-uint8_t mdb_reset(void)
-{
-uint8_t i = mdb_poll(note_reset, 0x00);
-asm("nop");
-uint8_t i = mdb_poll(note_poll, 0x00);
-if(mdbdata[--i] == just_reset)
-{
-
-uint8_t i = mdb_poll(note_poll, 0x00);
-}
-else
-{
-
-return mdbflags.noteerr = 1;
-}
-i = mdb_poll(note_setup, 0x00);
-
-return i;
+return butt;
 }
 
-bool mdb_noten(void)
+uint8_t butin(void)
 {
+LATA7 = 0;
+LATA6 = 1;
+_delay((unsigned long)((15)*(12000000/4000000.0)));
 
-init_mdbdata(0x00);
+buttons = ((PORTA >> 1) & 0x0F) << 4;
+LATA7 = 1;
+LATA6 = 0;
+_delay((unsigned long)((15)*(12000000/4000000.0)));
 
-mcount = 3;
-
-mdbdata[0] = 0x00;
-mdbdata[1] = 0x00;
-
-mdbdata[2] = noteen_byte;
-
-mdbdata[3] = 0x00;
-mcount = mdb_poll(note_type, mcount);
+buttons = ((PORTA >> 1) & 0x0F) | buttons;
+LATA7 = 1;
+LATA6 = 1;
+return ~buttons;
 }
 
-uint8_t mdb_poll(uint8_t slvadd, uint8_t mcount)
-{
-
-uint8_t i = 0;
-
-TX1STAbits.TX9D = 1;
-mdb_on();
-
-
-
-EUSART1_Write(slvadd);
-TX1STAbits.TX9D = 0;
-
-mdb_waitx();
-
-chkbyte = slvadd;
-if(mcount != 0)
-{
-i = mcount + 1;
-while(i != 0)
-{
-EUSART1_Write(mdbdata[mcount]);
-mdb_waitx();
-
-chkbyte = chkbyte + mdbdata[mcount];
-i--;
-mcount--;
-}
-}
-EUSART1_Write(chkbyte);
-mdb_waitx();
-
-
-
-
-init_mdbdata(0xFF);
-TMR1_Initialize();
-dbcount = 0;
-mdbflags.isdata = 0;
-i = 0;
-
-while(!PIR4bits.TMR1IF && !mdbflags.isdata)
-{
-
-dbcount++;
-mdbflags.isdata = 0;
-
-
-while(PIR3bits.RC1IF && !mdbflags.isdata)
-{
-
-
-mdbdata[i] = EUSART1_Read();
-mdb_waitr();
-
-mdbflags.isdata = RC1STAbits.RX9D;
-TMR1_Initialize();
-i++;
-
-}
-
-}
-
-i--;
-
-mdbflags.timeout = PIR4bits.TMR1IF;
-
-if(mdbflags.isdata == 1 && mdbdata[i] != 0x00)
-{
-TX1STAbits.TX9D = 1;
-mdb_on();
-EUSART1_Write(0x00);
-mdb_waitx();
-}
-
-mdb_on();
-
-return(i);
-}
-
-void mdb_on(void)
-{
-LATCbits.LATC0 = 1;
-LATCbits.LATC1 = 1;
-
-
-}
-
-void mdb_ron(void)
-{
-LATCbits.LATC0 = 1;
-LATCbits.LATC1 = 0;
-
-}
-
-void mdb_waitx(void)
-{
-while(TX1STAbits.TRMT == 0)
-{
-
-}
-}
-
-void mdb_waitr(void)
-{
-while(BAUD1CONbits.RCIDL == 0)
-{
-
-}
-}
-
-uint8_t wait_ack(void)
+void setup(void)
 {
 
 }
 
-void cctalk_on(void)
-{
-LATCbits.LATC0 = 0;
-LATCbits.LATC1 = 1;
-}
-void mdb_test(void)
-{
-uint8_t i = 0;
-uint8_t x = note_reset;
-TX1STAbits.TXEN = 1;
-while(i < 8)
+void Audit(void)
 {
 
-
-TX1STAbits.TX9D = 1;
-EUSART1_Write(x);
-mdb_waitx();
-TX1STAbits.TX9D = 0;
-EUSART1_Write(x);
-mdb_waitx();
-TX1STAbits.TXEN = 0;
-asm("nop");
-mdb_ron();
-wait_ack();
-i++;
-x++;
-TX1STAbits.TXEN = 1;
-mdb_on();
 }
-TX1STAbits.TXEN = 0;
+
+void Hopper_coin(void)
+{
+
+}
+
+void Sensor_set(void)
+{
+
+}
+
+void Clear_cred(void)
+{
+
+}
+
+void Vend_test(void)
+{
+
+}
+
+void Note_test(void)
+{
+
 }
 

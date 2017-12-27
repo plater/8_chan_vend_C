@@ -1,5 +1,5 @@
 /**
-  @Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs  Source File
+  @Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs Source File
 
   @Company:
     Microchip Technology Inc.
@@ -8,17 +8,17 @@
     mcc.c
 
   @Summary:
-    This is the mcc.c file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs 
+    This is the mcc.c file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.45
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.55
         Device            :  PIC18F47K40
-        Driver Version    :  1.02
+        Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.40
+        Compiler          :  XC8 1.43 or later
+        MPLAB             :  MPLAB X 4.00
 */
 
 /*
@@ -41,7 +41,7 @@
 
     MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
     TERMS.
-*/
+*/ 
 
 // Configuration bits: selected in the GUI
 
@@ -112,14 +112,16 @@
 
 #include "mcc.h"
 
+
 void SYSTEM_Initialize(void)
 {
-
     INTERRUPT_Initialize();
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
-    FVR_Initialize();
     CMP1_Initialize();
+    TMR3_Initialize();
+    DAC1_Initialize();
+    TMR5_Initialize();
     TMR1_Initialize();
     EUSART1_Initialize();
     EUSART2_Initialize();
@@ -133,8 +135,8 @@ void OSCILLATOR_Initialize(void)
     OSCCON3 = 0x00;
     // MFOEN disabled; LFOEN disabled; ADOEN disabled; SOSCEN disabled; EXTOEN disabled; HFOEN disabled; 
     OSCEN = 0x00;
-    // HFFRQ 8_MHz; 
-    OSCFRQ = 0x03;
+    // HFFRQ 12_MHz; 
+    OSCFRQ = 0x04;
     // TUN 0; 
     OSCTUNE = 0x00;
 }

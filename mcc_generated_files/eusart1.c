@@ -8,19 +8,18 @@
     eusart1.c
 
   @Summary
-    This is the generated driver implementation file for the EUSART1 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs 
+    This is the generated driver implementation file for the EUSART1 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   @Description
-    This header file provides implementations for driver APIs for EUSART1.
+    This source file provides APIs for EUSART1.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.45
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.55
         Device            :  PIC18F47K40
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.40
+        Compiler          :  XC8 1.43
+        MPLAB 	          :  MPLAB X 4.00
 */
-
 /*
     (c) 2016 Microchip Technology Inc. and its subsidiaries. You may use this
     software and any derivatives exclusively with Microchip products.
@@ -42,16 +41,15 @@
     MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
     TERMS.
 */
-
 /**
   Section: Included Files
 */
 #include "eusart1.h"
 
+
 /**
   Section: EUSART1 APIs
 */
-
 void EUSART1_Initialize(void)
 {
     // Set the EUSART1 module to the options selected in the user interface.
@@ -59,24 +57,23 @@ void EUSART1_Initialize(void)
     // ABDOVF no_overflow; SCKP Non-Inverted; BRG16 16bit_generator; WUE disabled; ABDEN disabled; 
     BAUD1CON = 0x08;
 
-    // SPEN enabled; RX9 9-bit; CREN enabled; ADDEN disabled; SREN disabled; 
-    RC1STA = 0xD0;
+    // SPEN enabled; RX9 8-bit; CREN enabled; ADDEN disabled; SREN disabled; 
+    RC1STA = 0x90;
 
-    // TX9 9-bit; TX9D 0; SENDB send_sync_break_next; TXEN enabled; SYNC asynchronous; BRGH hi_speed; CSRC master; 
-    TX1STA = 0xEC;
+    // TX9 8-bit; TX9D 0; SENDB send_sync_break_next; TXEN enabled; SYNC asynchronous; BRGH hi_speed; CSRC master; 
+    TX1STA = 0xAC;
 
-    // Baud Rate = 9600; SP1BRGL 207; 
-    SP1BRGL = 0xCF;
+    // SP1BRGL 56; 
+    SP1BRGL = 0x38;
 
-    // Baud Rate = 9600; SP1BRGH 0; 
-    SP1BRGH = 0x00;
+    // SP1BRGH 1; 
+    SP1BRGH = 0x01;
+
 
 }
 
-
 uint8_t EUSART1_Read(void)
 {
-
     while(!PIR3bits.RC1IF)
     {
     }
@@ -86,8 +83,8 @@ uint8_t EUSART1_Read(void)
     {
         // EUSART1 error - restart
 
-        RC1STAbits.SPEN = 0; 
-        RC1STAbits.SPEN = 1; 
+        RC1STAbits.CREN = 0; 
+        RC1STAbits.CREN = 1; 
     }
 
     return RC1REG;
@@ -101,6 +98,9 @@ void EUSART1_Write(uint8_t txData)
 
     TX1REG = txData;    // Write the data byte to the USART.
 }
+
+
+
 /**
   End of File
 */

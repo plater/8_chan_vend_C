@@ -13,14 +13,13 @@
   @Description
     This header file provides APIs for driver for EUSART1.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.45
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.55
         Device            :  PIC18F47K40
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.40
+        Compiler          :  XC8 1.43
+        MPLAB 	          :  MPLAB X 4.00
 */
-
 /*
     (c) 2016 Microchip Technology Inc. and its subsidiaries. You may use this
     software and any derivatives exclusively with Microchip products.
@@ -42,7 +41,6 @@
     MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
     TERMS.
 */
-
 #ifndef _EUSART1_H
 #define _EUSART1_H
 
@@ -66,6 +64,7 @@
 */
 
 #define EUSART1_DataReady  (PIR3bits.RC1IF)
+
 
 /**
   Section: EUSART1 APIs
@@ -91,6 +90,8 @@
   @Comment
     
 */
+void eusartmdb_Initialize(void);        
+        
 void EUSART1_Initialize(void);
 
 /**
@@ -132,6 +133,8 @@ uint8_t EUSART1_Read(void);
     None
 */
 void EUSART1_Write(uint8_t txData);
+
+
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 

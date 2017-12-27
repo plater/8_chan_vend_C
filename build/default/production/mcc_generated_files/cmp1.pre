@@ -14399,7 +14399,7 @@ void CMP1_Initialize(void)
 
 
 
-CM1CON0 = 0x84;
+CM1CON0 = 0x94;
 
 
 CM1CON1 = 0x00;
@@ -14408,7 +14408,7 @@ CM1CON1 = 0x00;
 CM1NCH = 0x00;
 
 
-CM1PCH = 0x06;
+CM1PCH = 0x05;
 
 }
 

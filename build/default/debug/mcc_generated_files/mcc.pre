@@ -14459,11 +14459,65 @@ typedef uint16_t uintptr_t;
 # 12 "/opt/microchip/xc8/v1.44/include/stdbool.h"
 typedef unsigned char bool;
 
-# 110 "mcc_generated_files/interrupt_manager.h"
+# 157 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
 
-# 122
+# 169
 void interrupt INTERRUPT_InterruptManager (void);
+
+# 99 "mcc_generated_files/tmr5.h"
+void TMR5_Initialize(void);
+
+# 128
+void TMR5_StartTimer(void);
+
+# 160
+void TMR5_StopTimer(void);
+
+# 195
+uint16_t TMR5_ReadTimer(void);
+
+# 234
+void TMR5_WriteTimer(uint16_t timerVal);
+
+# 270
+void TMR5_Reload(void);
+
+# 309
+void TMR5_StartSinglePulseAcquisition(void);
+
+# 348
+uint8_t TMR5_CheckGateValueStatus(void);
+
+# 386
+bool TMR5_HasOverflowOccured(void);
+
+# 99 "mcc_generated_files/tmr3.h"
+void TMR3_Initialize(void);
+
+# 128
+void TMR3_StartTimer(void);
+
+# 160
+void TMR3_StopTimer(void);
+
+# 195
+uint16_t TMR3_ReadTimer(void);
+
+# 234
+void TMR3_WriteTimer(uint16_t timerVal);
+
+# 270
+void TMR3_Reload(void);
+
+# 309
+void TMR3_StartSinglePulseAcquisition(void);
+
+# 348
+uint8_t TMR3_CheckGateValueStatus(void);
+
+# 386
+bool TMR3_HasOverflowOccured(void);
 
 # 99 "mcc_generated_files/tmr1.h"
 void TMR1_Initialize(void);
@@ -14498,6 +14552,12 @@ void CMP1_Initialize(void);
 # 132
 bool CMP1_GetOutputStatus(void);
 
+# 92 "mcc_generated_files/dac1.h"
+void DAC1_Initialize(void);
+
+# 128
+void DAC1_SetOutput(uint8_t inputData);
+
 # 98 "mcc_generated_files/memory.h"
 uint8_t FLASH_ReadByte(uint32_t flashAddr);
 
@@ -14521,45 +14581,42 @@ uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
 
-# 94 "mcc_generated_files/eusart1.h"
-void EUSART1_Initialize(void);
-
-# 114
-uint8_t EUSART1_Read(void);
-
-# 134
-void EUSART1_Write(uint8_t txData);
-
-# 94 "mcc_generated_files/eusart2.h"
+# 93 "mcc_generated_files/eusart2.h"
 void EUSART2_Initialize(void);
 
-# 114
+# 113
 uint8_t EUSART2_Read(void);
 
-# 134
+# 133
 void EUSART2_Write(uint8_t txData);
 
-# 92 "mcc_generated_files/fvr.h"
-void FVR_Initialize(void);
+# 93 "mcc_generated_files/eusart1.h"
+void eusartmdb_Initialize(void);
 
-# 126
-bool FVR_IsOutputReady(void);
+void EUSART1_Initialize(void);
 
-# 74 "mcc_generated_files/mcc.h"
+# 115
+uint8_t EUSART1_Read(void);
+
+# 135
+void EUSART1_Write(uint8_t txData);
+
+# 76 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 87
+# 89
 void OSCILLATOR_Initialize(void);
 
-# 115 "mcc_generated_files/mcc.c"
+# 116 "mcc_generated_files/mcc.c"
 void SYSTEM_Initialize(void)
 {
-
 INTERRUPT_Initialize();
 PIN_MANAGER_Initialize();
 OSCILLATOR_Initialize();
-FVR_Initialize();
 CMP1_Initialize();
+TMR3_Initialize();
+DAC1_Initialize();
+TMR5_Initialize();
 TMR1_Initialize();
 EUSART1_Initialize();
 EUSART2_Initialize();
@@ -14574,7 +14631,7 @@ OSCCON3 = 0x00;
 
 OSCEN = 0x00;
 
-OSCFRQ = 0x03;
+OSCFRQ = 0x04;
 
 OSCTUNE = 0x00;
 }

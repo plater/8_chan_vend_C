@@ -8,7 +8,6 @@
                      displayName="MCC Generated Files"
                      projectFiles="true">
         <itemPath>mcc_generated_files/pin_manager.h</itemPath>
-        <itemPath>mcc_generated_files/fvr.h</itemPath>
         <itemPath>mcc_generated_files/eusart1.h</itemPath>
         <itemPath>mcc_generated_files/cmp1.h</itemPath>
         <itemPath>mcc_generated_files/mcc.h</itemPath>
@@ -16,9 +15,14 @@
         <itemPath>mcc_generated_files/memory.h</itemPath>
         <itemPath>mcc_generated_files/eusart2.h</itemPath>
         <itemPath>mcc_generated_files/tmr1.h</itemPath>
+        <itemPath>mcc_generated_files/tmr3.h</itemPath>
+        <itemPath>mcc_generated_files/tmr5.h</itemPath>
+        <itemPath>mcc_generated_files/dac1.h</itemPath>
       </logicalFolder>
       <itemPath>lcd.h</itemPath>
       <itemPath>vend.h</itemPath>
+      <itemPath>mdb.h</itemPath>
+      <itemPath>cctalk.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -31,7 +35,6 @@
                      displayName="MCC Generated Files"
                      projectFiles="true">
         <itemPath>mcc_generated_files/pin_manager.c</itemPath>
-        <itemPath>mcc_generated_files/fvr.c</itemPath>
         <itemPath>mcc_generated_files/eusart1.c</itemPath>
         <itemPath>mcc_generated_files/cmp1.c</itemPath>
         <itemPath>mcc_generated_files/mcc.c</itemPath>
@@ -39,11 +42,17 @@
         <itemPath>mcc_generated_files/memory.c</itemPath>
         <itemPath>mcc_generated_files/eusart2.c</itemPath>
         <itemPath>mcc_generated_files/tmr1.c</itemPath>
+        <itemPath>mcc_generated_files/tmr3.c</itemPath>
+        <itemPath>mcc_generated_files/tmr5.c</itemPath>
+        <itemPath>mcc_generated_files/dac1.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>lcd.as</itemPath>
       <itemPath>lcd.c</itemPath>
       <itemPath>vend.c</itemPath>
+      <itemPath>mdb.c</itemPath>
+      <itemPath>cctalk.c</itemPath>
+      <itemPath>eusart_mdb.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

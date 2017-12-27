@@ -14,9 +14,22 @@
             <make-dep-projects/>
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>cctalk</word>
+            <word>clr</word>
+            <word>Cred</word>
+            <word>lcd</word>
+            <word>lcdstring</word>
+            <word>lsb</word>
             <word>mdb</word>
             <word>mdbdata</word>
+            <word>msb</word>
+            <word>nobytes</word>
             <word>nop</word>
+            <word>noteen</word>
+            <word>opto</word>
+            <word>uint</word>
+            <word>unclearable</word>
+            <word>vends</word>
         </spellchecker-wordlist>
     </configuration>
 </project>

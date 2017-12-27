@@ -8,17 +8,17 @@
     tmr1.c
 
   @Summary
-    This is the generated driver implementation file for the TMR1 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs 
+    This is the generated driver implementation file for the TMR1 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   @Description
     This source file provides APIs for TMR1.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.45
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.55
         Device            :  PIC18F47K40
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.40
+        Compiler          :  XC8 1.43
+        MPLAB 	          :  MPLAB X 4.00
 */
 
 /*
@@ -41,7 +41,7 @@
 
     MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
     TERMS.
-*/
+*/ 
 
 /**
   Section: Included Files
@@ -62,9 +62,6 @@ volatile uint16_t timer1ReloadVal;
 void TMR1_Initialize(void)
 {
     //Set the Timer to the options selected in the GUI
-
-    //CKPS 1:1; nT1SYNC synchronize; TMR1ON off; T1RD16 disabled; 
-    T1CON = 0x00;
 
     //T1GE disabled; T1GTM disabled; T1GPOL low; T1GGO done; T1GSPM disabled; 
     T1GCON = 0x00;
@@ -87,8 +84,8 @@ void TMR1_Initialize(void)
     // Clearing IF flag.
     PIR4bits.TMR1IF = 0;
 
-    // Start TMR1
-    TMR1_StartTimer();
+    // CKPS 1:1; nT1SYNC synchronize; TMR1ON enabled; T1RD16 disabled; 
+    T1CON = 0x01;
 }
 
 void TMR1_StartTimer(void)

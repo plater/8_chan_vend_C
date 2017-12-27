@@ -1,5 +1,5 @@
 /**
-  @Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs  Header File
+  @Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs Header File
 
   @Company:
     Microchip Technology Inc.
@@ -8,17 +8,17 @@
     mcc.h
 
   @Summary:
-    This is the mcc.h file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs 
+    This is the mcc.h file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.45
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.55
         Device            :  PIC18F47K40
-        Version           :  1.02
+        Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.40
+        Compiler          :  XC8 1.43 or later
+        MPLAB             :  MPLAB X 4.00
 */
 
 /*
@@ -41,7 +41,7 @@
 
     MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
     TERMS.
-*/
+*/ 
 
 #ifndef MCC_H
 #define	MCC_H
@@ -50,14 +50,16 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "interrupt_manager.h"
+#include "tmr5.h"
+#include "tmr3.h"
 #include "tmr1.h"
 #include "cmp1.h"
+#include "dac1.h"
 #include "memory.h"
-#include "eusart1.h"
 #include "eusart2.h"
-#include "fvr.h"
+#include "eusart1.h"
 
-#define _XTAL_FREQ  8000000
+#define _XTAL_FREQ  12000000
 
 
 /**

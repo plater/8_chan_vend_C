@@ -13,7 +13,7 @@
   @Description:
     This header file provides implementations for pin APIs for all pins selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - 4.26
+        Product Revision  :  MPLAB(c) Code Configurator - 4.26.1
         Device            :  PIC18F47K40
         Version           :  1.01
     The generated drivers are tested against the following:
@@ -86,8 +86,8 @@
 #define IO_RA1_SetDigitalOutput()   do { TRISAbits.TRISA1 = 0; } while(0)
 #define IO_RA1_SetPullup()      do { WPUAbits.WPUA1 = 1; } while(0)
 #define IO_RA1_ResetPullup()    do { WPUAbits.WPUA1 = 0; } while(0)
-#define IO_RA1_SetPushPull()    do { ODCONAbits.ODCA1 = 1; } while(0)
-#define IO_RA1_SetOpenDrain()   do { ODCONAbits.ODCA1 = 0; } while(0)
+#define IO_RA1_SetPushPull()    do { ODCONAbits.ODCA1 = 0; } while(0)
+#define IO_RA1_SetOpenDrain()   do { ODCONAbits.ODCA1 = 1; } while(0)
 #define IO_RA1_SetAnalogMode()  do { ANSELAbits.ANSELA1 = 1; } while(0)
 #define IO_RA1_SetDigitalMode() do { ANSELAbits.ANSELA1 = 0; } while(0)
 
@@ -106,8 +106,8 @@
 #define IO_RA2_SetDigitalOutput()   do { TRISAbits.TRISA2 = 0; } while(0)
 #define IO_RA2_SetPullup()      do { WPUAbits.WPUA2 = 1; } while(0)
 #define IO_RA2_ResetPullup()    do { WPUAbits.WPUA2 = 0; } while(0)
-#define IO_RA2_SetPushPull()    do { ODCONAbits.ODCA2 = 1; } while(0)
-#define IO_RA2_SetOpenDrain()   do { ODCONAbits.ODCA2 = 0; } while(0)
+#define IO_RA2_SetPushPull()    do { ODCONAbits.ODCA2 = 0; } while(0)
+#define IO_RA2_SetOpenDrain()   do { ODCONAbits.ODCA2 = 1; } while(0)
 #define IO_RA2_SetAnalogMode()  do { ANSELAbits.ANSELA2 = 1; } while(0)
 #define IO_RA2_SetDigitalMode() do { ANSELAbits.ANSELA2 = 0; } while(0)
 
@@ -126,8 +126,8 @@
 #define IO_RA3_SetDigitalOutput()   do { TRISAbits.TRISA3 = 0; } while(0)
 #define IO_RA3_SetPullup()      do { WPUAbits.WPUA3 = 1; } while(0)
 #define IO_RA3_ResetPullup()    do { WPUAbits.WPUA3 = 0; } while(0)
-#define IO_RA3_SetPushPull()    do { ODCONAbits.ODCA3 = 1; } while(0)
-#define IO_RA3_SetOpenDrain()   do { ODCONAbits.ODCA3 = 0; } while(0)
+#define IO_RA3_SetPushPull()    do { ODCONAbits.ODCA3 = 0; } while(0)
+#define IO_RA3_SetOpenDrain()   do { ODCONAbits.ODCA3 = 1; } while(0)
 #define IO_RA3_SetAnalogMode()  do { ANSELAbits.ANSELA3 = 1; } while(0)
 #define IO_RA3_SetDigitalMode() do { ANSELAbits.ANSELA3 = 0; } while(0)
 
@@ -146,8 +146,8 @@
 #define IO_RA4_SetDigitalOutput()   do { TRISAbits.TRISA4 = 0; } while(0)
 #define IO_RA4_SetPullup()      do { WPUAbits.WPUA4 = 1; } while(0)
 #define IO_RA4_ResetPullup()    do { WPUAbits.WPUA4 = 0; } while(0)
-#define IO_RA4_SetPushPull()    do { ODCONAbits.ODCA4 = 1; } while(0)
-#define IO_RA4_SetOpenDrain()   do { ODCONAbits.ODCA4 = 0; } while(0)
+#define IO_RA4_SetPushPull()    do { ODCONAbits.ODCA4 = 0; } while(0)
+#define IO_RA4_SetOpenDrain()   do { ODCONAbits.ODCA4 = 1; } while(0)
 #define IO_RA4_SetAnalogMode()  do { ANSELAbits.ANSELA4 = 1; } while(0)
 #define IO_RA4_SetDigitalMode() do { ANSELAbits.ANSELA4 = 0; } while(0)
 
@@ -166,8 +166,8 @@
 #define IO_RA5_SetDigitalOutput()   do { TRISAbits.TRISA5 = 0; } while(0)
 #define IO_RA5_SetPullup()      do { WPUAbits.WPUA5 = 1; } while(0)
 #define IO_RA5_ResetPullup()    do { WPUAbits.WPUA5 = 0; } while(0)
-#define IO_RA5_SetPushPull()    do { ODCONAbits.ODCA5 = 1; } while(0)
-#define IO_RA5_SetOpenDrain()   do { ODCONAbits.ODCA5 = 0; } while(0)
+#define IO_RA5_SetPushPull()    do { ODCONAbits.ODCA5 = 0; } while(0)
+#define IO_RA5_SetOpenDrain()   do { ODCONAbits.ODCA5 = 1; } while(0)
 #define IO_RA5_SetAnalogMode()  do { ANSELAbits.ANSELA5 = 1; } while(0)
 #define IO_RA5_SetDigitalMode() do { ANSELAbits.ANSELA5 = 0; } while(0)
 
@@ -186,8 +186,8 @@
 #define IO_RA6_SetDigitalOutput()   do { TRISAbits.TRISA6 = 0; } while(0)
 #define IO_RA6_SetPullup()      do { WPUAbits.WPUA6 = 1; } while(0)
 #define IO_RA6_ResetPullup()    do { WPUAbits.WPUA6 = 0; } while(0)
-#define IO_RA6_SetPushPull()    do { ODCONAbits.ODCA6 = 1; } while(0)
-#define IO_RA6_SetOpenDrain()   do { ODCONAbits.ODCA6 = 0; } while(0)
+#define IO_RA6_SetPushPull()    do { ODCONAbits.ODCA6 = 0; } while(0)
+#define IO_RA6_SetOpenDrain()   do { ODCONAbits.ODCA6 = 1; } while(0)
 #define IO_RA6_SetAnalogMode()  do { ANSELAbits.ANSELA6 = 1; } while(0)
 #define IO_RA6_SetDigitalMode() do { ANSELAbits.ANSELA6 = 0; } while(0)
 
@@ -206,8 +206,8 @@
 #define IO_RA7_SetDigitalOutput()   do { TRISAbits.TRISA7 = 0; } while(0)
 #define IO_RA7_SetPullup()      do { WPUAbits.WPUA7 = 1; } while(0)
 #define IO_RA7_ResetPullup()    do { WPUAbits.WPUA7 = 0; } while(0)
-#define IO_RA7_SetPushPull()    do { ODCONAbits.ODCA7 = 1; } while(0)
-#define IO_RA7_SetOpenDrain()   do { ODCONAbits.ODCA7 = 0; } while(0)
+#define IO_RA7_SetPushPull()    do { ODCONAbits.ODCA7 = 0; } while(0)
+#define IO_RA7_SetOpenDrain()   do { ODCONAbits.ODCA7 = 1; } while(0)
 #define IO_RA7_SetAnalogMode()  do { ANSELAbits.ANSELA7 = 1; } while(0)
 #define IO_RA7_SetDigitalMode() do { ANSELAbits.ANSELA7 = 0; } while(0)
 
@@ -226,8 +226,8 @@
 #define IO_RB0_SetDigitalOutput()   do { TRISBbits.TRISB0 = 0; } while(0)
 #define IO_RB0_SetPullup()      do { WPUBbits.WPUB0 = 1; } while(0)
 #define IO_RB0_ResetPullup()    do { WPUBbits.WPUB0 = 0; } while(0)
-#define IO_RB0_SetPushPull()    do { ODCONBbits.ODCB0 = 1; } while(0)
-#define IO_RB0_SetOpenDrain()   do { ODCONBbits.ODCB0 = 0; } while(0)
+#define IO_RB0_SetPushPull()    do { ODCONBbits.ODCB0 = 0; } while(0)
+#define IO_RB0_SetOpenDrain()   do { ODCONBbits.ODCB0 = 1; } while(0)
 #define IO_RB0_SetAnalogMode()  do { ANSELBbits.ANSELB0 = 1; } while(0)
 #define IO_RB0_SetDigitalMode() do { ANSELBbits.ANSELB0 = 0; } while(0)
 
@@ -246,8 +246,8 @@
 #define IO_RB1_SetDigitalOutput()   do { TRISBbits.TRISB1 = 0; } while(0)
 #define IO_RB1_SetPullup()      do { WPUBbits.WPUB1 = 1; } while(0)
 #define IO_RB1_ResetPullup()    do { WPUBbits.WPUB1 = 0; } while(0)
-#define IO_RB1_SetPushPull()    do { ODCONBbits.ODCB1 = 1; } while(0)
-#define IO_RB1_SetOpenDrain()   do { ODCONBbits.ODCB1 = 0; } while(0)
+#define IO_RB1_SetPushPull()    do { ODCONBbits.ODCB1 = 0; } while(0)
+#define IO_RB1_SetOpenDrain()   do { ODCONBbits.ODCB1 = 1; } while(0)
 #define IO_RB1_SetAnalogMode()  do { ANSELBbits.ANSELB1 = 1; } while(0)
 #define IO_RB1_SetDigitalMode() do { ANSELBbits.ANSELB1 = 0; } while(0)
 
@@ -266,8 +266,8 @@
 #define IO_RB2_SetDigitalOutput()   do { TRISBbits.TRISB2 = 0; } while(0)
 #define IO_RB2_SetPullup()      do { WPUBbits.WPUB2 = 1; } while(0)
 #define IO_RB2_ResetPullup()    do { WPUBbits.WPUB2 = 0; } while(0)
-#define IO_RB2_SetPushPull()    do { ODCONBbits.ODCB2 = 1; } while(0)
-#define IO_RB2_SetOpenDrain()   do { ODCONBbits.ODCB2 = 0; } while(0)
+#define IO_RB2_SetPushPull()    do { ODCONBbits.ODCB2 = 0; } while(0)
+#define IO_RB2_SetOpenDrain()   do { ODCONBbits.ODCB2 = 1; } while(0)
 #define IO_RB2_SetAnalogMode()  do { ANSELBbits.ANSELB2 = 1; } while(0)
 #define IO_RB2_SetDigitalMode() do { ANSELBbits.ANSELB2 = 0; } while(0)
 
@@ -286,8 +286,8 @@
 #define IO_RB3_SetDigitalOutput()   do { TRISBbits.TRISB3 = 0; } while(0)
 #define IO_RB3_SetPullup()      do { WPUBbits.WPUB3 = 1; } while(0)
 #define IO_RB3_ResetPullup()    do { WPUBbits.WPUB3 = 0; } while(0)
-#define IO_RB3_SetPushPull()    do { ODCONBbits.ODCB3 = 1; } while(0)
-#define IO_RB3_SetOpenDrain()   do { ODCONBbits.ODCB3 = 0; } while(0)
+#define IO_RB3_SetPushPull()    do { ODCONBbits.ODCB3 = 0; } while(0)
+#define IO_RB3_SetOpenDrain()   do { ODCONBbits.ODCB3 = 1; } while(0)
 #define IO_RB3_SetAnalogMode()  do { ANSELBbits.ANSELB3 = 1; } while(0)
 #define IO_RB3_SetDigitalMode() do { ANSELBbits.ANSELB3 = 0; } while(0)
 
@@ -330,8 +330,8 @@
 #define IO_RC0_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
 #define IO_RC0_SetPullup()      do { WPUCbits.WPUC0 = 1; } while(0)
 #define IO_RC0_ResetPullup()    do { WPUCbits.WPUC0 = 0; } while(0)
-#define IO_RC0_SetPushPull()    do { ODCONCbits.ODCC0 = 1; } while(0)
-#define IO_RC0_SetOpenDrain()   do { ODCONCbits.ODCC0 = 0; } while(0)
+#define IO_RC0_SetPushPull()    do { ODCONCbits.ODCC0 = 0; } while(0)
+#define IO_RC0_SetOpenDrain()   do { ODCONCbits.ODCC0 = 1; } while(0)
 #define IO_RC0_SetAnalogMode()  do { ANSELCbits.ANSELC0 = 1; } while(0)
 #define IO_RC0_SetDigitalMode() do { ANSELCbits.ANSELC0 = 0; } while(0)
 
@@ -350,8 +350,8 @@
 #define IO_RC1_SetDigitalOutput()   do { TRISCbits.TRISC1 = 0; } while(0)
 #define IO_RC1_SetPullup()      do { WPUCbits.WPUC1 = 1; } while(0)
 #define IO_RC1_ResetPullup()    do { WPUCbits.WPUC1 = 0; } while(0)
-#define IO_RC1_SetPushPull()    do { ODCONCbits.ODCC1 = 1; } while(0)
-#define IO_RC1_SetOpenDrain()   do { ODCONCbits.ODCC1 = 0; } while(0)
+#define IO_RC1_SetPushPull()    do { ODCONCbits.ODCC1 = 0; } while(0)
+#define IO_RC1_SetOpenDrain()   do { ODCONCbits.ODCC1 = 1; } while(0)
 #define IO_RC1_SetAnalogMode()  do { ANSELCbits.ANSELC1 = 1; } while(0)
 #define IO_RC1_SetDigitalMode() do { ANSELCbits.ANSELC1 = 0; } while(0)
 
@@ -370,8 +370,8 @@
 #define IO_RC2_SetDigitalOutput()   do { TRISCbits.TRISC2 = 0; } while(0)
 #define IO_RC2_SetPullup()      do { WPUCbits.WPUC2 = 1; } while(0)
 #define IO_RC2_ResetPullup()    do { WPUCbits.WPUC2 = 0; } while(0)
-#define IO_RC2_SetPushPull()    do { ODCONCbits.ODCC2 = 1; } while(0)
-#define IO_RC2_SetOpenDrain()   do { ODCONCbits.ODCC2 = 0; } while(0)
+#define IO_RC2_SetPushPull()    do { ODCONCbits.ODCC2 = 0; } while(0)
+#define IO_RC2_SetOpenDrain()   do { ODCONCbits.ODCC2 = 1; } while(0)
 #define IO_RC2_SetAnalogMode()  do { ANSELCbits.ANSELC2 = 1; } while(0)
 #define IO_RC2_SetDigitalMode() do { ANSELCbits.ANSELC2 = 0; } while(0)
 
@@ -390,8 +390,8 @@
 #define IO_RC3_SetDigitalOutput()   do { TRISCbits.TRISC3 = 0; } while(0)
 #define IO_RC3_SetPullup()      do { WPUCbits.WPUC3 = 1; } while(0)
 #define IO_RC3_ResetPullup()    do { WPUCbits.WPUC3 = 0; } while(0)
-#define IO_RC3_SetPushPull()    do { ODCONCbits.ODCC3 = 1; } while(0)
-#define IO_RC3_SetOpenDrain()   do { ODCONCbits.ODCC3 = 0; } while(0)
+#define IO_RC3_SetPushPull()    do { ODCONCbits.ODCC3 = 0; } while(0)
+#define IO_RC3_SetOpenDrain()   do { ODCONCbits.ODCC3 = 1; } while(0)
 #define IO_RC3_SetAnalogMode()  do { ANSELCbits.ANSELC3 = 1; } while(0)
 #define IO_RC3_SetDigitalMode() do { ANSELCbits.ANSELC3 = 0; } while(0)
 
@@ -410,8 +410,8 @@
 #define IO_RC4_SetDigitalOutput()   do { TRISCbits.TRISC4 = 0; } while(0)
 #define IO_RC4_SetPullup()      do { WPUCbits.WPUC4 = 1; } while(0)
 #define IO_RC4_ResetPullup()    do { WPUCbits.WPUC4 = 0; } while(0)
-#define IO_RC4_SetPushPull()    do { ODCONCbits.ODCC4 = 1; } while(0)
-#define IO_RC4_SetOpenDrain()   do { ODCONCbits.ODCC4 = 0; } while(0)
+#define IO_RC4_SetPushPull()    do { ODCONCbits.ODCC4 = 0; } while(0)
+#define IO_RC4_SetOpenDrain()   do { ODCONCbits.ODCC4 = 1; } while(0)
 #define IO_RC4_SetAnalogMode()  do { ANSELCbits.ANSELC4 = 1; } while(0)
 #define IO_RC4_SetDigitalMode() do { ANSELCbits.ANSELC4 = 0; } while(0)
 
@@ -430,8 +430,8 @@
 #define IO_RC5_SetDigitalOutput()   do { TRISCbits.TRISC5 = 0; } while(0)
 #define IO_RC5_SetPullup()      do { WPUCbits.WPUC5 = 1; } while(0)
 #define IO_RC5_ResetPullup()    do { WPUCbits.WPUC5 = 0; } while(0)
-#define IO_RC5_SetPushPull()    do { ODCONCbits.ODCC5 = 1; } while(0)
-#define IO_RC5_SetOpenDrain()   do { ODCONCbits.ODCC5 = 0; } while(0)
+#define IO_RC5_SetPushPull()    do { ODCONCbits.ODCC5 = 0; } while(0)
+#define IO_RC5_SetOpenDrain()   do { ODCONCbits.ODCC5 = 1; } while(0)
 #define IO_RC5_SetAnalogMode()  do { ANSELCbits.ANSELC5 = 1; } while(0)
 #define IO_RC5_SetDigitalMode() do { ANSELCbits.ANSELC5 = 0; } while(0)
 
@@ -474,8 +474,8 @@
 #define IO_RD0_SetDigitalOutput()   do { TRISDbits.TRISD0 = 0; } while(0)
 #define IO_RD0_SetPullup()      do { WPUDbits.WPUD0 = 1; } while(0)
 #define IO_RD0_ResetPullup()    do { WPUDbits.WPUD0 = 0; } while(0)
-#define IO_RD0_SetPushPull()    do { ODCONDbits.ODCD0 = 1; } while(0)
-#define IO_RD0_SetOpenDrain()   do { ODCONDbits.ODCD0 = 0; } while(0)
+#define IO_RD0_SetPushPull()    do { ODCONDbits.ODCD0 = 0; } while(0)
+#define IO_RD0_SetOpenDrain()   do { ODCONDbits.ODCD0 = 1; } while(0)
 #define IO_RD0_SetAnalogMode()  do { ANSELDbits.ANSELD0 = 1; } while(0)
 #define IO_RD0_SetDigitalMode() do { ANSELDbits.ANSELD0 = 0; } while(0)
 
@@ -494,8 +494,8 @@
 #define IO_RD1_SetDigitalOutput()   do { TRISDbits.TRISD1 = 0; } while(0)
 #define IO_RD1_SetPullup()      do { WPUDbits.WPUD1 = 1; } while(0)
 #define IO_RD1_ResetPullup()    do { WPUDbits.WPUD1 = 0; } while(0)
-#define IO_RD1_SetPushPull()    do { ODCONDbits.ODCD1 = 1; } while(0)
-#define IO_RD1_SetOpenDrain()   do { ODCONDbits.ODCD1 = 0; } while(0)
+#define IO_RD1_SetPushPull()    do { ODCONDbits.ODCD1 = 0; } while(0)
+#define IO_RD1_SetOpenDrain()   do { ODCONDbits.ODCD1 = 1; } while(0)
 #define IO_RD1_SetAnalogMode()  do { ANSELDbits.ANSELD1 = 1; } while(0)
 #define IO_RD1_SetDigitalMode() do { ANSELDbits.ANSELD1 = 0; } while(0)
 
@@ -514,8 +514,8 @@
 #define IO_RD2_SetDigitalOutput()   do { TRISDbits.TRISD2 = 0; } while(0)
 #define IO_RD2_SetPullup()      do { WPUDbits.WPUD2 = 1; } while(0)
 #define IO_RD2_ResetPullup()    do { WPUDbits.WPUD2 = 0; } while(0)
-#define IO_RD2_SetPushPull()    do { ODCONDbits.ODCD2 = 1; } while(0)
-#define IO_RD2_SetOpenDrain()   do { ODCONDbits.ODCD2 = 0; } while(0)
+#define IO_RD2_SetPushPull()    do { ODCONDbits.ODCD2 = 0; } while(0)
+#define IO_RD2_SetOpenDrain()   do { ODCONDbits.ODCD2 = 1; } while(0)
 #define IO_RD2_SetAnalogMode()  do { ANSELDbits.ANSELD2 = 1; } while(0)
 #define IO_RD2_SetDigitalMode() do { ANSELDbits.ANSELD2 = 0; } while(0)
 
@@ -534,8 +534,8 @@
 #define IO_RD3_SetDigitalOutput()   do { TRISDbits.TRISD3 = 0; } while(0)
 #define IO_RD3_SetPullup()      do { WPUDbits.WPUD3 = 1; } while(0)
 #define IO_RD3_ResetPullup()    do { WPUDbits.WPUD3 = 0; } while(0)
-#define IO_RD3_SetPushPull()    do { ODCONDbits.ODCD3 = 1; } while(0)
-#define IO_RD3_SetOpenDrain()   do { ODCONDbits.ODCD3 = 0; } while(0)
+#define IO_RD3_SetPushPull()    do { ODCONDbits.ODCD3 = 0; } while(0)
+#define IO_RD3_SetOpenDrain()   do { ODCONDbits.ODCD3 = 1; } while(0)
 #define IO_RD3_SetAnalogMode()  do { ANSELDbits.ANSELD3 = 1; } while(0)
 #define IO_RD3_SetDigitalMode() do { ANSELDbits.ANSELD3 = 0; } while(0)
 
@@ -554,8 +554,8 @@
 #define IO_RD4_SetDigitalOutput()   do { TRISDbits.TRISD4 = 0; } while(0)
 #define IO_RD4_SetPullup()      do { WPUDbits.WPUD4 = 1; } while(0)
 #define IO_RD4_ResetPullup()    do { WPUDbits.WPUD4 = 0; } while(0)
-#define IO_RD4_SetPushPull()    do { ODCONDbits.ODCD4 = 1; } while(0)
-#define IO_RD4_SetOpenDrain()   do { ODCONDbits.ODCD4 = 0; } while(0)
+#define IO_RD4_SetPushPull()    do { ODCONDbits.ODCD4 = 0; } while(0)
+#define IO_RD4_SetOpenDrain()   do { ODCONDbits.ODCD4 = 1; } while(0)
 #define IO_RD4_SetAnalogMode()  do { ANSELDbits.ANSELD4 = 1; } while(0)
 #define IO_RD4_SetDigitalMode() do { ANSELDbits.ANSELD4 = 0; } while(0)
 
@@ -574,8 +574,8 @@
 #define IO_RD5_SetDigitalOutput()   do { TRISDbits.TRISD5 = 0; } while(0)
 #define IO_RD5_SetPullup()      do { WPUDbits.WPUD5 = 1; } while(0)
 #define IO_RD5_ResetPullup()    do { WPUDbits.WPUD5 = 0; } while(0)
-#define IO_RD5_SetPushPull()    do { ODCONDbits.ODCD5 = 1; } while(0)
-#define IO_RD5_SetOpenDrain()   do { ODCONDbits.ODCD5 = 0; } while(0)
+#define IO_RD5_SetPushPull()    do { ODCONDbits.ODCD5 = 0; } while(0)
+#define IO_RD5_SetOpenDrain()   do { ODCONDbits.ODCD5 = 1; } while(0)
 #define IO_RD5_SetAnalogMode()  do { ANSELDbits.ANSELD5 = 1; } while(0)
 #define IO_RD5_SetDigitalMode() do { ANSELDbits.ANSELD5 = 0; } while(0)
 
@@ -594,8 +594,8 @@
 #define IO_RD6_SetDigitalOutput()   do { TRISDbits.TRISD6 = 0; } while(0)
 #define IO_RD6_SetPullup()      do { WPUDbits.WPUD6 = 1; } while(0)
 #define IO_RD6_ResetPullup()    do { WPUDbits.WPUD6 = 0; } while(0)
-#define IO_RD6_SetPushPull()    do { ODCONDbits.ODCD6 = 1; } while(0)
-#define IO_RD6_SetOpenDrain()   do { ODCONDbits.ODCD6 = 0; } while(0)
+#define IO_RD6_SetPushPull()    do { ODCONDbits.ODCD6 = 0; } while(0)
+#define IO_RD6_SetOpenDrain()   do { ODCONDbits.ODCD6 = 1; } while(0)
 #define IO_RD6_SetAnalogMode()  do { ANSELDbits.ANSELD6 = 1; } while(0)
 #define IO_RD6_SetDigitalMode() do { ANSELDbits.ANSELD6 = 0; } while(0)
 
@@ -614,8 +614,8 @@
 #define IO_RD7_SetDigitalOutput()   do { TRISDbits.TRISD7 = 0; } while(0)
 #define IO_RD7_SetPullup()      do { WPUDbits.WPUD7 = 1; } while(0)
 #define IO_RD7_ResetPullup()    do { WPUDbits.WPUD7 = 0; } while(0)
-#define IO_RD7_SetPushPull()    do { ODCONDbits.ODCD7 = 1; } while(0)
-#define IO_RD7_SetOpenDrain()   do { ODCONDbits.ODCD7 = 0; } while(0)
+#define IO_RD7_SetPushPull()    do { ODCONDbits.ODCD7 = 0; } while(0)
+#define IO_RD7_SetOpenDrain()   do { ODCONDbits.ODCD7 = 1; } while(0)
 #define IO_RD7_SetAnalogMode()  do { ANSELDbits.ANSELD7 = 1; } while(0)
 #define IO_RD7_SetDigitalMode() do { ANSELDbits.ANSELD7 = 0; } while(0)
 
@@ -634,8 +634,8 @@
 #define IO_RE0_SetDigitalOutput()   do { TRISEbits.TRISE0 = 0; } while(0)
 #define IO_RE0_SetPullup()      do { WPUEbits.WPUE0 = 1; } while(0)
 #define IO_RE0_ResetPullup()    do { WPUEbits.WPUE0 = 0; } while(0)
-#define IO_RE0_SetPushPull()    do { ODCONEbits.ODCE0 = 1; } while(0)
-#define IO_RE0_SetOpenDrain()   do { ODCONEbits.ODCE0 = 0; } while(0)
+#define IO_RE0_SetPushPull()    do { ODCONEbits.ODCE0 = 0; } while(0)
+#define IO_RE0_SetOpenDrain()   do { ODCONEbits.ODCE0 = 1; } while(0)
 #define IO_RE0_SetAnalogMode()  do { ANSELEbits.ANSELE0 = 1; } while(0)
 #define IO_RE0_SetDigitalMode() do { ANSELEbits.ANSELE0 = 0; } while(0)
 
@@ -654,8 +654,8 @@
 #define IO_RE1_SetDigitalOutput()   do { TRISEbits.TRISE1 = 0; } while(0)
 #define IO_RE1_SetPullup()      do { WPUEbits.WPUE1 = 1; } while(0)
 #define IO_RE1_ResetPullup()    do { WPUEbits.WPUE1 = 0; } while(0)
-#define IO_RE1_SetPushPull()    do { ODCONEbits.ODCE1 = 1; } while(0)
-#define IO_RE1_SetOpenDrain()   do { ODCONEbits.ODCE1 = 0; } while(0)
+#define IO_RE1_SetPushPull()    do { ODCONEbits.ODCE1 = 0; } while(0)
+#define IO_RE1_SetOpenDrain()   do { ODCONEbits.ODCE1 = 1; } while(0)
 #define IO_RE1_SetAnalogMode()  do { ANSELEbits.ANSELE1 = 1; } while(0)
 #define IO_RE1_SetDigitalMode() do { ANSELEbits.ANSELE1 = 0; } while(0)
 
@@ -674,8 +674,8 @@
 #define IO_RE2_SetDigitalOutput()   do { TRISEbits.TRISE2 = 0; } while(0)
 #define IO_RE2_SetPullup()      do { WPUEbits.WPUE2 = 1; } while(0)
 #define IO_RE2_ResetPullup()    do { WPUEbits.WPUE2 = 0; } while(0)
-#define IO_RE2_SetPushPull()    do { ODCONEbits.ODCE2 = 1; } while(0)
-#define IO_RE2_SetOpenDrain()   do { ODCONEbits.ODCE2 = 0; } while(0)
+#define IO_RE2_SetPushPull()    do { ODCONEbits.ODCE2 = 0; } while(0)
+#define IO_RE2_SetOpenDrain()   do { ODCONEbits.ODCE2 = 1; } while(0)
 #define IO_RE2_SetAnalogMode()  do { ANSELEbits.ANSELE2 = 1; } while(0)
 #define IO_RE2_SetDigitalMode() do { ANSELEbits.ANSELE2 = 0; } while(0)
 

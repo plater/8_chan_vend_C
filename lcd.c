@@ -3,14 +3,9 @@
  Date:     2017/10/06*/
 #include "lcd.h"
 #include "vend.h"
+#include "mdb.h"
 /* Initialize display E=RE0 R/W=RE1 RS=RE2 D4 to D7 = RD0 to RD3
    All bits initialized as digital outputs */
-signed char count;
-uint8_t bflag;
-uint8_t lcdfunc;
-uint8_t lcdata;
-uint8_t stradd;
-uint24_t hexnum;
 //Initialize LCD display
 void lcd_init()
 {
@@ -28,7 +23,7 @@ void lcd_init()
     lcd_clockE();
     
     //4 bit interface two line 5x8 character
-    lcd_write(dispfunc2);
+    lcd_write(dispfunc3);
     //Display off
     lcd_write(dispon);
     //Entry mode Increment address and no shift
@@ -37,18 +32,99 @@ void lcd_init()
     lcd_write(dispclr);
     //Display characters from 0 to O
     lcd_test();
+    __delay_ms(250);
     asm("nop");
     
 }
 
+uint8_t displ_note(uint8_t *lcdstring)
+{
+    //Mask off 3 bits of enable bit position
+    //Then shift left to position
+    notenum = 0x01 << (lcdstring[0] & 0x07);
+    //Move lcdstring to actual string address.
+    lcdstring ++;
+    lcd_write(dispclr);
+    lcd_string(*lcdstring, line2);
+    return notenum;
+}
+
+void displ_nendis(uint8_t notenum)
+{
+    if(notenum && noteen_byte)
+    {
+        lcd_string(enabled, line2 + 0x06);
+    }
+    else
+    {
+        lcd_string(disabled, line2 + 0x06);
+    }
+}
+
 void displ_credit(void)
 {
-    lcd_string(credits);
+    lcd_string(credits, line1);
     uint8_t cash = credit_check();
     displ_hex((uint8_t) cash);
     venflags.credisplay = 0;
 }
 
+void displ_code(uint8_t ercode)
+{
+    if((ercode >> 4) < 0x0A)
+    {
+        lcd_writeC((ercode >> 4) | 0x30);
+    }
+    else
+    {
+        switch(ercode >> 4)
+        {
+            case 0x0A : lcd_writeC(0x41);
+            break;
+            case 0x0B : lcd_writeC(0x42);
+            break;
+            case 0x0C : lcd_writeC(0x43);
+            break;
+            case 0x0D : lcd_writeC(0x44);
+            break;
+            case 0x0E : lcd_writeC(0x45);
+            break;
+            case 0x0F : lcd_writeC(0x46);
+        }
+    }
+    if((ercode & 0x0F) < 0x0A)
+    {
+        lcd_writeC((ercode & 0x0F) | 0x30);
+    }
+    else
+    {
+        switch(ercode & 0x0F)
+        {
+            case 0x0A : lcd_writeC(0x41);
+            break;
+            case 0x0B : lcd_writeC(0x42);
+            break;
+            case 0x0C : lcd_writeC(0x43);
+            break;
+            case 0x0D : lcd_writeC(0x44);
+            break;
+            case 0x0E : lcd_writeC(0x45);
+            break;
+            case 0x0F : lcd_writeC(0x46);
+        }
+        
+    }
+}
+
+void displ_noteer(void)
+{
+    lcd_string(noteerr, line1);
+    ercode = mdbdata[0];
+    displ_code(ercode);
+    mdbflags.noteerr = 0;
+    venflags.noterr = 0;
+    venflags.credisplay = 0;
+}
 
 void displ_hex(uint24_t hexnum)
 {
@@ -75,9 +151,16 @@ void displ_hex(uint24_t hexnum)
 }
 
 //Write string to display
-void lcd_string(uint8_t *lcdstring)
+void lcd_string(uint8_t *lcdstring, uint8_t lcdline)
 {
-    lcd_write(dispclr);
+    if(lcdline == line1)
+    {
+        lcd_write(dispclr);
+    }
+    else
+    {
+        lcd_dispadd(lcdline);
+    }
     for(stradd = 0; lcdstring[stradd] != 0; stradd++)
     {
         lcdata = lcdstring[stradd];
@@ -93,17 +176,27 @@ void lcd_writeC(uint8_t lcdata)
     lcd_write(lcdata);
     //Check if end of line is reached
     //and start a new one.
-    if(bflag ==  0x0F)
+    //line1 0 line2 40 line3 14 line4 54
+    switch(bflag)
     {
+        case 0x13:lcd_dispadd(line2);
+        break;
+        case 0x53:lcd_dispadd(line3);
+        break;
+        case 0x27:lcd_dispadd(line4);
+    }
+    asm("BCF LATE, 2");
+}
+
+void lcd_dispadd(uint8_t lcdaddress)
+{
         uint8_t lcdatasave = lcdata;
         asm("BCF LATE, 2");
         //Change digit address to 0x40
-        lcdata = 0xC0;
-        lcd_write(lcdata);
+        lcd_write(lcdaddress);
         asm("BSF LATE, 2");
         lcdata = lcdatasave;
-    }
-    asm("BCF LATE, 2");
+
 }
 //Write 4 bit data to display from 8 bits
 //Calling program sets up LATE
@@ -130,7 +223,7 @@ void lcd_write(uint8_t lcdata)
 void lcd_test(void)
 {
     uint8_t character = 0x30;
-    while(character < 'P')
+    while(character < 0x80)
     {
         lcd_writeC(character);
         character = character+ 1;

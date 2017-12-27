@@ -13,7 +13,7 @@
   @Description
     This source file provides APIs for CMP1.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.45
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.55
         Device            :  PIC18F47K40
         Driver Version    :  2.00
     The generated drivers are tested against the following:
@@ -57,8 +57,8 @@ void CMP1_Initialize(void)
 {
 
     // set the CMP to the options selected in PIC10 / PIC12 / PIC16 / PIC18 MCUs 
-    // C1HYS disabled; C1EN enabled; C1POL not inverted; C1SYNC asynchronous;                          
-    CM1CON0 = 0x84;
+    // C1HYS disabled; C1EN enabled; C1POL inverted; C1SYNC asynchronous;                          
+    CM1CON0 = 0x94;
 
     // C1INTN no_intFlag; C1INTP no_intFlag;                          
     CM1CON1 = 0x00;
@@ -66,8 +66,8 @@ void CMP1_Initialize(void)
     // NCH CIN0-;                          
     CM1NCH = 0x00;
 
-    // PCH FVR_buf2;                          
-    CM1PCH = 0x06;
+    // PCH DACOUT;                          
+    CM1PCH = 0x05;
 
 }
 

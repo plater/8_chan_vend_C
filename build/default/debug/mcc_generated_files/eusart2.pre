@@ -14387,16 +14387,16 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 94 "mcc_generated_files/eusart2.h"
+# 93 "mcc_generated_files/eusart2.h"
 void EUSART2_Initialize(void);
 
-# 114
+# 113
 uint8_t EUSART2_Read(void);
 
-# 134
+# 133
 void EUSART2_Write(uint8_t txData);
 
-# 55 "mcc_generated_files/eusart2.c"
+# 53 "mcc_generated_files/eusart2.c"
 void EUSART2_Initialize(void)
 {
 
@@ -14411,17 +14411,16 @@ RC2STA = 0x10;
 TX2STA = 0x04;
 
 
-SP2BRGL = 0xCF;
+SP2BRGL = 0x38;
 
 
-SP2BRGH = 0x00;
+SP2BRGH = 0x01;
+
 
 }
 
-
 uint8_t EUSART2_Read(void)
 {
-
 while(!PIR3bits.RC2IF)
 {
 }
@@ -14431,8 +14430,8 @@ if(1 == RC2STAbits.OERR)
 {
 
 
-RC2STAbits.SPEN = 0;
-RC2STAbits.SPEN = 1;
+RC2STAbits.CREN = 0;
+RC2STAbits.CREN = 1;
 }
 
 return RC2REG;
