@@ -14465,6 +14465,8 @@ uint16_t readVal;
 uint8_t readValHigh;
 uint8_t readValLow;
 
+T5CONbits.T5RD16 = 1;
+
 readValLow = TMR5L;
 readValHigh = TMR5H;
 
@@ -14497,9 +14499,7 @@ TMR5L = timerVal;
 
 void TMR5_Reload(void)
 {
-
-TMR5H = (timer5ReloadVal >> 8);
-TMR5L = timer5ReloadVal;
+TMR5_WriteTimer(timer5ReloadVal);
 }
 
 void TMR5_StartSinglePulseAcquisition(void)

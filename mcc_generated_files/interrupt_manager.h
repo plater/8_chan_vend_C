@@ -15,12 +15,12 @@
     For individual peripheral handlers please see the peripheral driver for
     all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.55
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65
         Device            :  PIC18F47K40
         Driver Version    :  1.02
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.43 or later
-        MPLAB 	          :  MPLAB X 4.00
+        Compiler          :  XC8 1.45 or later
+        MPLAB 	          :  MPLAB X 4.10
 */
 
 /*
@@ -96,31 +96,6 @@
     INTERRUPT_GlobalInterruptLowDisable();
  */
 #define INTERRUPT_GlobalInterruptLowDisable() (INTCONbits.GIEL = 0)
-
-/**
- * @Param
-    none
- * @Returns
-    none
- * @Description
-    This macro will enable global interrupts.
- * @Example
-    INTERRUPT_GlobalInterruptEnable();
- */
-#define INTERRUPT_GlobalInterruptEnable() (INTCONbits.GIE = 1)
-
-/**
- * @Param
-    none
- * @Returns
-    none
- * @Description
-    This macro will disable global interrupts.
- * @Example
-    INTERRUPT_GlobalInterruptDisable();
- */
-#define INTERRUPT_GlobalInterruptDisable() (INTCONbits.GIE = 0)
-
 /**
  * @Param
     none

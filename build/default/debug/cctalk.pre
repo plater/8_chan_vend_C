@@ -14393,10 +14393,10 @@ void PIN_MANAGER_IOC(void);
 # 12 "/opt/microchip/xc8/v1.44/include/stdbool.h"
 typedef unsigned char bool;
 
-# 157 "mcc_generated_files/interrupt_manager.h"
+# 132 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
 
-# 169
+# 144
 void interrupt INTERRUPT_InterruptManager (void);
 
 # 99 "mcc_generated_files/tmr5.h"
@@ -14480,17 +14480,32 @@ uint8_t TMR1_CheckGateValueStatus(void);
 # 386
 bool TMR1_HasOverflowOccured(void);
 
-# 92 "mcc_generated_files/cmp1.h"
+# 91 "mcc_generated_files/cmp1.h"
 void CMP1_Initialize(void);
 
-# 132
+# 131
 bool CMP1_GetOutputStatus(void);
 
-# 92 "mcc_generated_files/dac1.h"
-void DAC1_Initialize(void);
+# 99 "mcc_generated_files/tmr0.h"
+void TMR0_Initialize(void);
 
 # 128
-void DAC1_SetOutput(uint8_t inputData);
+void TMR0_StartTimer(void);
+
+# 160
+void TMR0_StopTimer(void);
+
+# 196
+uint16_t TMR0_Read16bitTimer(void);
+
+# 235
+void TMR0_Write16bitTimer(uint16_t timerVal);
+
+# 271
+void TMR0_Reload16bit(void);
+
+# 309
+bool TMR0_HasOverflowOccured(void);
 
 # 98 "mcc_generated_files/memory.h"
 uint8_t FLASH_ReadByte(uint32_t flashAddr);
@@ -14515,6 +14530,12 @@ uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
 
+# 92 "mcc_generated_files/dac1.h"
+void DAC1_Initialize(void);
+
+# 128
+void DAC1_SetOutput(uint8_t inputData);
+
 # 93 "mcc_generated_files/eusart2.h"
 void EUSART2_Initialize(void);
 
@@ -14535,11 +14556,14 @@ uint8_t EUSART1_Read(void);
 # 135
 void EUSART1_Write(uint8_t txData);
 
-# 76 "mcc_generated_files/mcc.h"
+# 77 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 89
+# 90
 void OSCILLATOR_Initialize(void);
+
+# 103
+void PMD_Initialize(void);
 
 # 41 "lcd.h"
 signed char count;
@@ -14558,35 +14582,48 @@ const char dispshleft = 0x07;
 const char dispoff = 0x08;
 const char dispsr = 0x1B;
 const char dispsl = 0x18;
-const char line1 = 0x80;
-const char line2 = 0xC0;
-const char line3 = 0x94;
-const char line4 = 0xD4;
+
+const char line1 = 0x00;
+
+const char line2 = 0x40;
+
+const char line3 = 0x14;
+
+const char line4 = 0x54;
 
 
-const uint8_t inscoin[] = "Insert Coins or Notes";
+const uint8_t inscoin[] = "Insert Notes & Press Lighted Button To      Vend" ;
 const uint8_t credits[] = "  Credit = R";
-const uint8_t service[] = "  Service Mode";
-const uint8_t audit[] = "  Audit Mode";
-const uint8_t hopcoin[] = "Hopper Coin         Value";
+const uint8_t pricesetmsg[] = "   Price set mode";
+const uint8_t pricesetm2[] = "Press channel button    to set price      Service = Exit";
+const uint8_t pricemsg[] = "Price R";
+const uint8_t priceexit[] ="Press service to exit";
+const uint8_t auditmsg[] = "  Audit Mode";
+const uint8_t hoppcoin[] = "Hopper Coin         Button 1 = + & 2 = - Value = R";
 const uint8_t senset[] = "  Setup Sensor";
 const uint8_t credclr[] = "Push button 1 to clear credits   and exit";
 const uint8_t vendtest[] = " Push button to     vend";
 const uint8_t notetest[] = "  Insert Note";
 const uint8_t exit[] = "Exit";
-const uint8_t servmsg[] = "Service Mode: press 1 = Audit 2 = Sensor3=Note-en 4=Cred-clr 5=Vend 6=Note 8=Exit";
+const uint8_t servmsg[] = "1 = Audit 2 = Sensor3=Hop-Coin 4=Note-en5=Cred-clr 6=Prices 8=Exit";
 const uint8_t noteerr[] = "   Note error     code = 0x";
 const uint8_t inithop[] = "  Initialize Hopper";
 const uint8_t initnote[] = "     Initialize          Note Reader";
 const uint8_t nochange[] = "No Change Given";
 const uint8_t setnotes[] = "Enable / Disable    1 = R10, 2 = R20    3 = R50, 4 = R100   5 = R200";
-const uint8_t tenrand[] = "0 R10  ";
-const uint8_t twentyrand[] = "1 R20  ";
-const uint8_t fiftyrand[] = "2 R50  ";
-const uint8_t hundredrand[] = "3 R100 ";
-const uint8_t twohundredrand[] = "4 R200 ";
-const uint8_t enabled[] = "enabled ";
-const uint8_t disabled[] = "disabled";
+const uint8_t tenrand[] = "   R10  ";
+const uint8_t twentyrand[] = "  R20  ";
+const uint8_t fiftyrand[] = "  R50  ";
+const uint8_t hundredrand[] = "  R100 ";
+const uint8_t twohundredrand[] = "  R200 ";
+const uint8_t enabled[] = " enabled ";
+const uint8_t disabled[] = " disabled";
+const uint8_t creditclr[] = "Credits Cleared";
+const uint8_t sensmsg[] = "Sensor is ";
+const uint8_t onmsg[] = "On ";
+const uint8_t offmsg[] = "Off";
+const uint8_t clrmsg[] = "     ";
+const uint8_t dacmsg[] = "Sensitivity ";
 
 uint8_t bflag;
 uint8_t lcdfunc;
@@ -14596,6 +14633,7 @@ uint8_t stradd;
 uint24_t hexnum;
 uint8_t ercode;
 uint8_t lcdaddress;
+uint8_t dspposition;
 
 void lcd_dispadd(uint8_t lcdaddress);
 
@@ -14619,6 +14657,8 @@ void lcd_test(void);
 
 void displ_hex(uint24_t);
 
+void displ_price(uint8_t vendprice);
+
 void displ_credit(void);
 
 void displ_noteer(void);
@@ -14629,7 +14669,9 @@ void displ_totals(void);
 
 void displ_empty(void);
 
-uint8_t displ_note(uint8_t *lcdstring);
+void displ_sens(uint8_t smsgpos, uint8_t dmsgpos);
+
+uint8_t displ_note(uint8_t *notestring);
 
 void displ_nendis(uint8_t notenum);
 
@@ -14684,8 +14726,8 @@ unsigned mode : 1;
 unsigned timeout : 1;
 
 unsigned vending : 1;
-unsigned spare3 : 1;
-unsigned spare4 : 1;
+unsigned noteset : 1;
+unsigned endis : 1;
 unsigned spare5 : 1;
 }mdbflags;
 
@@ -14698,9 +14740,9 @@ unsigned R20 : 1;
 unsigned R50 : 1;
 unsigned R100 : 1;
 unsigned R200 : 1;
-unsigned noteset : 1;
-unsigned endis : 1;
 unsigned spare : 1;
+unsigned spare1 : 1;
+unsigned spare2 : 1;
 }noteen;
 volatile uint8_t noteen_byte;
 
@@ -14728,6 +14770,8 @@ void init_mdbdata(uint8_t);
 uint8_t mdb_reset(void);
 
 void set_notes(void);
+
+void save_notes(void);
 
 void enable_notes(uint8_t notenum);
 
@@ -14761,6 +14805,21 @@ void mdb_transmit(uint8_t txbyte);
 volatile uint8_t credit;
 volatile uint8_t cash;
 volatile uint8_t buttons;
+volatile uint8_t vendprice;
+volatile uint8_t sensorval;
+volatile uint8_t vcash[2];
+volatile uint8_t nvcash[3];
+volatile uint8_t tvends[8];
+volatile uint8_t vcashout[2];
+volatile uint16_t pvcash;
+volatile uint24_t pnvcash;
+volatile uint8_t senspos;
+
+
+const uint16_t second1 = 0xE1BA;
+
+const uint16_t secondadd = 0x1E46;
+
 
 
 const uint16_t credmem = 0x00;
@@ -14777,7 +14836,149 @@ const uint16_t venderrors = 0x17;
 
 const uint16_t notebits = 0x18;
 
-# 41
+
+const uint16_t sensval = 0x19;
+
+const uint16_t cashoutv = 0x1A;
+
+const uint16_t hopcoin = 0x1C;
+
+const uint16_t chan1linkbits = 0x1D;
+const uint16_t chan2linkbits = 0x1E;
+const uint16_t chan3linkbits = 0x1F;
+const uint16_t chan4linkbits = 0x20;
+const uint16_t chan5linkbits = 0x21;
+const uint16_t chan6linkbits = 0x22;
+const uint16_t chan7linkbits = 0x23;
+const uint16_t chan8linkbits = 0x24;
+
+
+const uint16_t chan1time = 0x25;
+const uint16_t chan2time = 0x26;
+const uint16_t chan3time = 0x27;
+const uint16_t chan4time = 0x28;
+const uint16_t chan5time = 0x29;
+const uint16_t chan6time = 0x2A;
+const uint16_t chan7time = 0x2B;
+const uint16_t chan8time = 0x2C;
+
+const uint16_t hoperror = 0x2D;
+
+
+
+
+struct
+{
+unsigned chan1 : 1;
+unsigned chan2 : 1;
+unsigned chan3 : 1;
+unsigned chan4 : 1;
+unsigned chan5 : 1;
+unsigned chan6 : 1;
+unsigned chan7 : 1;
+unsigned chan8 : 1;
+} venderr;
+
+
+
+
+struct
+{
+unsigned chan1 : 1;
+unsigned chan2 : 1;
+unsigned chan3 : 1;
+unsigned chan4 : 1;
+unsigned chan5 : 1;
+unsigned chan6 : 1;
+unsigned chan7 : 1;
+unsigned chan8 : 1;
+} chanlink1 @ 0x003;
+
+struct
+{
+unsigned chan1 : 1;
+unsigned chan2 : 1;
+unsigned chan3 : 1;
+unsigned chan4 : 1;
+unsigned chan5 : 1;
+unsigned chan6 : 1;
+unsigned chan7 : 1;
+unsigned chan8 : 1;
+} chanlink2 @ 0x004;
+
+struct
+{
+unsigned chan1 : 1;
+unsigned chan2 : 1;
+unsigned chan3 : 1;
+unsigned chan4 : 1;
+unsigned chan5 : 1;
+unsigned chan6 : 1;
+unsigned chan7 : 1;
+unsigned chan8 : 1;
+} chanlink3 @ 0x005;
+
+struct
+{
+unsigned chan1 : 1;
+unsigned chan2 : 1;
+unsigned chan3 : 1;
+unsigned chan4 : 1;
+unsigned chan5 : 1;
+unsigned chan6 : 1;
+unsigned chan7 : 1;
+unsigned chan8 : 1;
+} chanlink4 @ 0x006;
+
+struct
+{
+unsigned chan1 : 1;
+unsigned chan2 : 1;
+unsigned chan3 : 1;
+unsigned chan4 : 1;
+unsigned chan5 : 1;
+unsigned chan6 : 1;
+unsigned chan7 : 1;
+unsigned chan8 : 1;
+} chanlink5 @ 0x007;
+
+struct
+{
+unsigned chan1 : 1;
+unsigned chan2 : 1;
+unsigned chan3 : 1;
+unsigned chan4 : 1;
+unsigned chan5 : 1;
+unsigned chan6 : 1;
+unsigned chan7 : 1;
+unsigned chan8 : 1;
+} chanlink6 @ 0x008;
+
+struct
+{
+unsigned chan1 : 1;
+unsigned chan2 : 1;
+unsigned chan3 : 1;
+unsigned chan4 : 1;
+unsigned chan5 : 1;
+unsigned chan6 : 1;
+unsigned chan7 : 1;
+unsigned chan8 : 1;
+} chanlink7 @ 0x009;
+
+struct
+{
+unsigned chan1 : 1;
+unsigned chan2 : 1;
+unsigned chan3 : 1;
+unsigned chan4 : 1;
+unsigned chan5 : 1;
+unsigned chan6 : 1;
+unsigned chan7 : 1;
+unsigned chan8 : 1;
+} chanlink8 @ 0x00A;
+
+# 197
 struct
 {
 unsigned iscredit : 1;
@@ -14788,13 +14989,31 @@ unsigned credisplay : 1;
 unsigned initialrun : 1;
 unsigned noterr : 1;
 unsigned service : 1;
+unsigned priceset : 1;
+unsigned setprice : 1;
+unsigned spare2 : 1;
+unsigned spare3 : 1;
+unsigned spare4 : 1;
+unsigned spare5 : 1;
+unsigned spare6 : 1;
+unsigned spare7 : 1;
 } venflags;
+
+void Write_NVstore(uint16_t storeadd, uint8_t *storemem, uint8_t storesize);
+
+void Read_NVstore(uint16_t storeadd, uint8_t *storemem, uint8_t storesize);
 
 void credit_add(uint8_t credit);
 
 void credit_subtract(uint8_t credit);
 
 void vend_init(void);
+
+void Init_vendmem(void);
+
+void Update_cashaudit(uint8_t addcash);
+
+void Update_Hopcoin(uint8_t newval, uint8_t direction);
 
 
 uint8_t credit_check(void);
@@ -14814,9 +15033,13 @@ void Sensor_set(void);
 
 void Clear_cred(void);
 
-void Vend_test(void);
+uint8_t Read_Service(void);
 
-void Note_test(void);
+void price_set(void);
+
+void set_price(uint8_t buttons);
+
+void Vend_setup(void);
 
 # 18 "cctalk.h"
 const uint8_t hopadd = 0x03;

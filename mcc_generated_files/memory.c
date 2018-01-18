@@ -13,12 +13,12 @@
   @Description
     This file provides implementations of driver APIs for MEMORY.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.55
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65
         Device            :  PIC18F47K40
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.40
+        Compiler          :  XC8 1.45
+        MPLAB             :  MPLAB X 4.10
 */
 
 /*
@@ -175,7 +175,7 @@ void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData)
     NVMDAT = bData;
     NVMCON1bits.NVMREG = 0;
     NVMCON1bits.WREN = 1;
-	INTCONbits.GIE = 0; // Disable interrupts
+	INTCONbits.GIE = 0;     // Disable interrupts
     NVMCON2 = 0x55;
     NVMCON2 = 0xAA;
     NVMCON1bits.WR = 1;

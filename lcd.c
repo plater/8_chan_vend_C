@@ -37,27 +37,40 @@ void lcd_init()
     
 }
 
-uint8_t displ_note(uint8_t *lcdstring)
+void displ_sens(uint8_t smsgpos, uint8_t dmsgpos)
 {
-    //Mask off 3 bits of enable bit position
-    //Then shift left to position
-    notenum = 0x01 << (lcdstring[0] & 0x07);
-    //Move lcdstring to actual string address.
-    lcdstring ++;
-    lcd_write(dispclr);
-    lcd_string(*lcdstring, line2);
-    return notenum;
-}
-
-void displ_nendis(uint8_t notenum)
-{
-    if(notenum && noteen_byte)
+    if(CMP1_GetOutputStatus())
     {
-        lcd_string(enabled, line2 + 0x06);
+        lcd_string(offmsg, smsgpos);
     }
     else
     {
-        lcd_string(disabled, line2 + 0x06);
+        lcd_string(onmsg, smsgpos);
+    }
+    DATAEE_WriteByte(sensval, sensorval);
+    lcd_string(clrmsg, dmsgpos);
+    lcd_dispadd(dmsgpos);
+    displ_hex((uint8_t) DAC1CON1);
+    
+}
+
+uint8_t displ_note(uint8_t *notestring)
+{
+    lcd_write(dispclr);
+    lcd_string(notestring, line2);
+    return bflag+2;
+}
+
+void displ_nendis(uint8_t note2disp)
+{
+    uint8_t x = note2disp & noteen_byte;
+    if(x != 0x00)
+    {
+        lcd_string(enabled, dspposition);
+    }
+    else
+    {
+        lcd_string(disabled, dspposition);
     }
 }
 
@@ -159,7 +172,8 @@ void lcd_string(uint8_t *lcdstring, uint8_t lcdline)
     }
     else
     {
-        lcd_dispadd(lcdline);
+        //MSB high for address
+        lcd_dispadd(lcdline | 0x80);
     }
     for(stradd = 0; lcdstring[stradd] != 0; stradd++)
     {
@@ -167,6 +181,15 @@ void lcd_string(uint8_t *lcdstring, uint8_t lcdline)
         lcd_writeC(lcdstring[stradd]);
     }
 }
+
+void displ_price(uint8_t vendprice)
+{
+    lcd_write(dispclr);
+    lcd_dispadd(line2 + 4);
+    lcd_writeC((uint8_t)'R');
+    displ_hex(vendprice);
+}
+
 //Write character to LCD
 void lcd_writeC(uint8_t lcdata)
 {
@@ -193,7 +216,7 @@ void lcd_dispadd(uint8_t lcdaddress)
         uint8_t lcdatasave = lcdata;
         asm("BCF LATE, 2");
         //Change digit address to 0x40
-        lcd_write(lcdaddress);
+        lcd_write(lcdaddress | 0x80);
         asm("BSF LATE, 2");
         lcdata = lcdatasave;
 

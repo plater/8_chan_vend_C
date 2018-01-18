@@ -13,12 +13,12 @@
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.55
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65
         Device            :  PIC18F47K40
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.43 or later
-        MPLAB             :  MPLAB X 4.00
+        Compiler          :  XC8 1.45 or later
+        MPLAB             :  MPLAB X 4.10
 */
 
 /*
@@ -54,8 +54,9 @@
 #include "tmr3.h"
 #include "tmr1.h"
 #include "cmp1.h"
-#include "dac1.h"
+#include "tmr0.h"
 #include "memory.h"
+#include "dac1.h"
 #include "eusart2.h"
 #include "eusart1.h"
 
@@ -88,6 +89,18 @@ void SYSTEM_Initialize(void);
  */
 void OSCILLATOR_Initialize(void);
 
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Initializes the PMD module to the default states configured in the
+ *                  MCC GUI
+ * @Example
+    PMD_Initialize(void);
+ */
+void PMD_Initialize(void);
 
 
 #endif	/* MCC_H */

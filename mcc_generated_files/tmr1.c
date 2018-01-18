@@ -13,12 +13,12 @@
   @Description
     This source file provides APIs for TMR1.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.55
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65
         Device            :  PIC18F47K40
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.43
-        MPLAB 	          :  MPLAB X 4.00
+        Compiler          :  XC8 1.45
+        MPLAB 	          :  MPLAB X 4.10
 */
 
 /*
@@ -106,6 +106,8 @@ uint16_t TMR1_ReadTimer(void)
     uint8_t readValHigh;
     uint8_t readValLow;
     
+    T1CONbits.T1RD16 = 1;
+	
     readValLow = TMR1L;
     readValHigh = TMR1H;
     
@@ -138,9 +140,7 @@ void TMR1_WriteTimer(uint16_t timerVal)
 
 void TMR1_Reload(void)
 {
-    //Write to the Timer1 register
-    TMR1H = (timer1ReloadVal >> 8);
-    TMR1L = timer1ReloadVal;
+    TMR1_WriteTimer(timer1ReloadVal);
 }
 
 void TMR1_StartSinglePulseAcquisition(void)

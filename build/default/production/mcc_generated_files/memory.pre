@@ -14430,7 +14430,7 @@ return ((((uint16_t)FLASH_ReadByte(flashAddr+1))<<8)|(FLASH_ReadByte(flashAddr))
 
 void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte)
 {
-uint32_t blockStartAddr = (uint32_t)(flashAddr & ((131072-1) ^ (128-1)));
+uint32_t blockStartAddr = (uint32_t)(flashAddr & ((0x020000-1) ^ (128-1)));
 uint8_t offset = (uint8_t)(flashAddr & (128-1));
 uint8_t i;
 
@@ -14449,7 +14449,7 @@ FLASH_WriteBlock(blockStartAddr, flashRdBufPtr);
 
 int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr)
 {
-uint32_t blockStartAddr = (uint32_t )(writeAddr & ((131072-1) ^ (128-1)));
+uint32_t blockStartAddr = (uint32_t )(writeAddr & ((0x020000-1) ^ (128-1)));
 uint8_t GIEBitValue = INTCONbits.GIE;
 uint8_t i;
 

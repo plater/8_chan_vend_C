@@ -46,40 +46,44 @@
 "10 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
 [v _lcd_init lcd_init `(v  1 e 1 0 ]
 "40
+[v _displ_sens displ_sens `(v  1 e 1 0 ]
+"57
 [v _displ_note displ_note `(uc  1 e 1 0 ]
-"52
-[v _displ_nendis displ_nendis `(v  1 e 1 0 ]
 "64
+[v _displ_nendis displ_nendis `(v  1 e 1 0 ]
+"77
 [v _displ_credit displ_credit `(v  1 e 1 0 ]
-"72
+"85
 [v _displ_code displ_code `(v  1 e 1 0 ]
-"119
+"132
 [v _displ_noteer displ_noteer `(v  1 e 1 0 ]
-"129
+"142
 [v _displ_hex displ_hex `(v  1 e 1 0 ]
-"154
+"167
 [v _lcd_string lcd_string `(v  1 e 1 0 ]
-"171
+"185
+[v _displ_price displ_price `(v  1 e 1 0 ]
+"194
 [v _lcd_writeC lcd_writeC `(v  1 e 1 0 ]
-"191
+"214
 [v _lcd_dispadd lcd_dispadd `(v  1 e 1 0 ]
-"203
+"226
 [v _lcd_write lcd_write `(v  1 e 1 0 ]
-"223
+"246
 [v _lcd_test lcd_test `(v  1 e 1 0 ]
-"234
+"257
 [v _read_busy read_busy `(c  1 e 1 0 ]
-"258
+"281
 [v _lcd_clockH lcd_clockH `(v  1 e 1 0 ]
-"266
+"289
 [v _lcd_clockL lcd_clockL `(v  1 e 1 0 ]
-"274
+"297
 [v _lcd_clockE lcd_clockE `(v  1 e 1 0 ]
 "56 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/main.c
 [v _main main `(v  1 e 1 0 ]
-"157
+"165
 [v _enter_service enter_service `(v  1 e 1 0 ]
-"56 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/cmp1.c
+"57 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/cmp1.c
 [v _CMP1_Initialize CMP1_Initialize `(v  1 e 1 0 ]
 "74
 [v _CMP1_GetOutputStatus CMP1_GetOutputStatus `(uc  1 e 1 0 ]
@@ -101,8 +105,10 @@
 [v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `II(v  1 e 1 0 ]
 "116 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"130
+"132
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"146
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 "63 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/memory.c
 [v _FLASH_ReadByte FLASH_ReadByte `(uc  1 e 1 0 ]
 "99
@@ -117,62 +123,90 @@
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 "124
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+"64 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 "62 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"119
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
 "62 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/tmr3.c
 [v _TMR3_Initialize TMR3_Initialize `(v  1 e 1 0 ]
+"119
+[v _TMR3_WriteTimer TMR3_WriteTimer `(v  1 e 1 0 ]
 "62 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/tmr5.c
 [v _TMR5_Initialize TMR5_Initialize `(v  1 e 1 0 ]
+"119
+[v _TMR5_WriteTimer TMR5_WriteTimer `(v  1 e 1 0 ]
 "13 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mdb.c
 [v _init_mdbdata init_mdbdata `(v  1 e 1 0 ]
 "21
 [v _mdb_init mdb_init `(v  1 e 1 0 ]
-"34
+"36
 [v _mdb_reset mdb_reset `(uc  1 e 1 0 ]
-"56
+"57
 [v _set_notes set_notes `(v  1 e 1 0 ]
-"85
+"98
 [v _enable_notes enable_notes `(v  1 e 1 0 ]
-"118
-[v _mdb_noten mdb_noten `(v  1 e 1 0 ]
-"134
-[v _mdb_security mdb_security `(v  1 e 1 0 ]
-"140
-[v _mdb_poll mdb_poll `(uc  1 e 1 0 ]
-"220
-[v _mdb_comm mdb_comm `(uc  1 e 1 0 ]
-"301
-[v _mdb_on mdb_on `(v  1 e 1 0 ]
-"314
-[v _mdb_waitx mdb_waitx `(v  1 e 1 0 ]
-"322
-[v _mdb_waitr mdb_waitr `(v  1 e 1 0 ]
-"365
-[v _mdb_transmit mdb_transmit `(v  1 e 1 0 ]
-"13 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
-[v _vend_init vend_init `(v  1 e 1 0 ]
-"42
-[v _credit_add credit_add `(v  1 e 1 0 ]
-"56
-[v _credit_subtract credit_subtract `(v  1 e 1 0 ]
-"69
-[v _credit_check credit_check `(uc  1 e 1 0 ]
-"75
-[v _butindb butindb `(uc  1 e 1 0 ]
-"87
-[v _butin butin `(uc  1 e 1 0 ]
-"109
-[v _Audit Audit `(v  1 e 1 0 ]
-"114
-[v _Hopper_coin Hopper_coin `(v  1 e 1 0 ]
-"119
-[v _Sensor_set Sensor_set `(v  1 e 1 0 ]
-"124
-[v _Clear_cred Clear_cred `(v  1 e 1 0 ]
 "129
-[v _Vend_test Vend_test `(v  1 e 1 0 ]
-"134
-[v _Note_test Note_test `(v  1 e 1 0 ]
+[v _save_notes save_notes `(v  1 e 1 0 ]
+"135
+[v _mdb_noten mdb_noten `(v  1 e 1 0 ]
+"151
+[v _mdb_security mdb_security `(v  1 e 1 0 ]
+"157
+[v _mdb_poll mdb_poll `(uc  1 e 1 0 ]
+"237
+[v _mdb_comm mdb_comm `(uc  1 e 1 0 ]
+"318
+[v _mdb_on mdb_on `(v  1 e 1 0 ]
+"331
+[v _mdb_waitx mdb_waitx `(v  1 e 1 0 ]
+"339
+[v _mdb_waitr mdb_waitr `(v  1 e 1 0 ]
+"375
+[v _mdb_unlock mdb_unlock `(v  1 e 1 0 ]
+"440
+[v _mdb_transmit mdb_transmit `(v  1 e 1 0 ]
+"9 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
+[v _Init_vendmem Init_vendmem `(v  1 e 1 0 ]
+"28
+[v _vend_init vend_init `(v  1 e 1 0 ]
+"61
+[v _Write_NVstore Write_NVstore `(v  1 e 1 0 ]
+"71
+[v _Read_NVstore Read_NVstore `(v  1 e 1 0 ]
+"81
+[v _Update_cashaudit Update_cashaudit `(v  1 e 1 0 ]
+"96
+[v _credit_add credit_add `(v  1 e 1 0 ]
+"111
+[v _credit_subtract credit_subtract `(v  1 e 1 0 ]
+"124
+[v _credit_check credit_check `(uc  1 e 1 0 ]
+"130
+[v _butindb butindb `(uc  1 e 1 0 ]
+"143
+[v _butin butin `(uc  1 e 1 0 ]
+"165
+[v _Audit Audit `(v  1 e 1 0 ]
+"179
+[v _Hopper_coin Hopper_coin `(v  1 e 1 0 ]
+"205
+[v _Update_Hopcoin Update_Hopcoin `(v  1 e 1 0 ]
+"246
+[v _Read_Service Read_Service `(uc  1 e 1 0 ]
+"254
+[v _Sensor_set Sensor_set `(v  1 e 1 0 ]
+"288
+[v _Clear_cred Clear_cred `(v  1 e 1 0 ]
+"296
+[v _price_set price_set `(v  1 e 1 0 ]
+"316
+[v _set_price set_price `(v  1 e 1 0 ]
+"357
+[v _Vend_setup Vend_setup `(v  1 e 1 0 ]
+"371
+[v _Vend_timeset Vend_timeset `(v  1 e 1 0 ]
 [s S72 . 1 `uc 1 RXPPS 1 0 :5:0 
 ]
 "60 /opt/microchip/xc8/v1.44/include/pic18f47k40.h
@@ -198,16 +232,16 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "1393
-[s S543 . 1 `uc 1 . 1 0 :6:0 
+[s S558 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_92 1 0 :1:6 
 ]
-[s S546 . 1 `uc 1 . 1 0 :6:0 
+[s S561 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC92 1 0 :1:6 
 ]
-[s S549 . 1 `uc 1 RCD82 1 0 :1:0 
+[s S564 . 1 `uc 1 RCD82 1 0 :1:0 
 ]
-[u S551 . 1 `S160 1 . 1 0 `S543 1 . 1 0 `S546 1 . 1 0 `S549 1 . 1 0 ]
-[v _RC2STAbits RC2STAbits `VES551  1 e 1 @3741 ]
+[u S566 . 1 `S160 1 . 1 0 `S558 1 . 1 0 `S561 1 . 1 0 `S564 1 . 1 0 ]
+[v _RC2STAbits RC2STAbits `VES566  1 e 1 @3741 ]
 "1534
 [v _TX2STA TX2STA `VEuc  1 e 1 @3742 ]
 "1690
@@ -221,7 +255,7 @@
 [v _PPSLOCKbits PPSLOCKbits `VES67  1 e 1 @3744 ]
 "3258
 [v _RX1PPSbits RX1PPSbits `VES74  1 e 1 @3765 ]
-[s S317 . 1 `uc 1 INT0IP 1 0 :1:0 
+[s S332 . 1 `uc 1 INT0IP 1 0 :1:0 
 `uc 1 INT1IP 1 0 :1:1 
 `uc 1 INT2IP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -229,8 +263,8 @@
 `uc 1 TMR0IP 1 0 :1:5 
 ]
 "3426
-[u S324 . 1 `S317 1 . 1 0 ]
-[v _IPR0bits IPR0bits `VES324  1 e 1 @3770 ]
+[u S339 . 1 `S332 1 . 1 0 ]
+[v _IPR0bits IPR0bits `VES339  1 e 1 @3770 ]
 [s S46 . 1 `uc 1 INT0IE 1 0 :1:0 
 `uc 1 INT1IE 1 0 :1:1 
 `uc 1 INT2IE 1 0 :1:2 
@@ -268,7 +302,7 @@
 ]
 [u S142 . 1 `S128 1 . 1 0 `S137 1 . 1 0 ]
 [v _PIR3bits PIR3bits `VES142  1 e 1 @3789 ]
-[s S593 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S608 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 TMR3IF 1 0 :1:2 
 `uc 1 TMR4IF 1 0 :1:3 
@@ -276,19 +310,19 @@
 `uc 1 TMR6IF 1 0 :1:5 
 ]
 "4447
-[u S600 . 1 `S593 1 . 1 0 ]
-[v _PIR4bits PIR4bits `VES600  1 e 1 @3790 ]
-[s S448 . 1 `uc 1 CWGIF 1 0 :1:0 
+[u S615 . 1 `S608 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES615  1 e 1 @3790 ]
+[s S463 . 1 `uc 1 CWGIF 1 0 :1:0 
 `uc 1 . 1 0 :4:1 
 `uc 1 NVMIF 1 0 :1:5 
 `uc 1 CRCIF 1 0 :1:6 
 `uc 1 SCANIF 1 0 :1:7 
 ]
 "4557
-[s S454 . 1 `uc 1 CWG1IF 1 0 :1:0 
+[s S469 . 1 `uc 1 CWG1IF 1 0 :1:0 
 ]
-[u S456 . 1 `S448 1 . 1 0 `S454 1 . 1 0 ]
-[v _PIR7bits PIR7bits `VES456  1 e 1 @3793 ]
+[u S471 . 1 `S463 1 . 1 0 `S469 1 . 1 0 ]
+[v _PIR7bits PIR7bits `VES471  1 e 1 @3793 ]
 "5165
 [v _OSCCON1 OSCCON1 `VEuc  1 e 1 @3800 ]
 "5305
@@ -299,6 +333,18 @@
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3805 ]
 "5566
 [v _OSCFRQ OSCFRQ `VEuc  1 e 1 @3806 ]
+"5673
+[v _PMD0 PMD0 `VEuc  1 e 1 @3809 ]
+"5750
+[v _PMD1 PMD1 `VEuc  1 e 1 @3810 ]
+"5814
+[v _PMD2 PMD2 `VEuc  1 e 1 @3811 ]
+"5859
+[v _PMD3 PMD3 `VEuc  1 e 1 @3812 ]
+"5897
+[v _PMD4 PMD4 `VEuc  1 e 1 @3813 ]
+"5950
+[v _PMD5 PMD5 `VEuc  1 e 1 @3814 ]
 "6542
 [v _RB5PPS RB5PPS `VEuc  1 e 1 @3828 ]
 "6938
@@ -345,6 +391,8 @@
 [v _CM1NCH CM1NCH `VEuc  1 e 1 @3899 ]
 "10437
 [v _CM1PCH CM1PCH `VEuc  1 e 1 @3900 ]
+"10497
+[v _CMOUT CMOUT `VEuc  1 e 1 @3901 ]
 [s S226 . 1 `uc 1 MC1OUT 1 0 :1:0 
 `uc 1 MC2OUT 1 0 :1:1 
 ]
@@ -357,7 +405,7 @@
 [v _NVMADRH NVMADRH `VEuc  1 e 1 @3967 ]
 "15816
 [v _NVMDAT NVMDAT `VEuc  1 e 1 @3968 ]
-[s S376 . 1 `uc 1 RD 1 0 :1:0 
+[s S391 . 1 `uc 1 RD 1 0 :1:0 
 `uc 1 WR 1 0 :1:1 
 `uc 1 WREN 1 0 :1:2 
 `uc 1 WRERR 1 0 :1:3 
@@ -366,12 +414,12 @@
 `uc 1 NVMREG 1 0 :2:6 
 ]
 "15907
-[s S384 . 1 `uc 1 . 1 0 :6:0 
+[s S399 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 NVMREG0 1 0 :1:6 
 `uc 1 NVMREG1 1 0 :1:7 
 ]
-[u S388 . 1 `S376 1 . 1 0 `S384 1 . 1 0 ]
-[v _NVMCON1bits NVMCON1bits `VES388  1 e 1 @3969 ]
+[u S403 . 1 `S391 1 . 1 0 `S399 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES403  1 e 1 @3969 ]
 "15952
 [v _NVMCON2 NVMCON2 `VEuc  1 e 1 @3970 ]
 "15972
@@ -380,7 +428,7 @@
 [v _LATB LATB `VEuc  1 e 1 @3972 ]
 "16196
 [v _LATC LATC `VEuc  1 e 1 @3973 ]
-[s S2010 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S2818 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -390,7 +438,7 @@
 `uc 1 LATC7 1 0 :1:7 
 ]
 "16223
-[s S2019 . 1 `uc 1 LC0 1 0 :1:0 
+[s S2827 . 1 `uc 1 LC0 1 0 :1:0 
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
 `uc 1 LC3 1 0 :1:3 
@@ -399,8 +447,8 @@
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
-[u S2028 . 1 `S2010 1 . 1 0 `S2019 1 . 1 0 ]
-[v _LATCbits LATCbits `VES2028  1 e 1 @3973 ]
+[u S2836 . 1 `S2818 1 . 1 0 `S2827 1 . 1 0 ]
+[v _LATCbits LATCbits `VES2836  1 e 1 @3973 ]
 "16308
 [v _LATD LATD `VEuc  1 e 1 @3974 ]
 "16420
@@ -442,7 +490,7 @@
 [v _RC1STAbits RC1STAbits `VES177  1 e 1 @3997 ]
 "18952
 [v _TX1STA TX1STA `VEuc  1 e 1 @3998 ]
-[s S1911 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S2719 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -452,16 +500,16 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "18981
-[s S1920 . 1 `uc 1 . 1 0 :6:0 
+[s S2728 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S1923 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S2731 . 1 `uc 1 TXD8 1 0 :1:0 
 ]
-[u S1925 . 1 `S1911 1 . 1 0 `S1920 1 . 1 0 `S1923 1 . 1 0 ]
-[v _TX1STAbits TX1STAbits `VES1925  1 e 1 @3998 ]
+[u S2733 . 1 `S2719 1 . 1 0 `S2728 1 . 1 0 `S2731 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES2733  1 e 1 @3998 ]
 "19108
 [v _BAUD1CON BAUD1CON `VEuc  1 e 1 @3999 ]
-[s S2050 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S2858 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -471,82 +519,82 @@
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "19177
-[s S2059 . 1 `uc 1 ABDEN1 1 0 :1:0 
+[s S2867 . 1 `uc 1 ABDEN1 1 0 :1:0 
 ]
-[s S2061 . 1 `uc 1 . 1 0 :7:0 
+[s S2869 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 ABDOVF1 1 0 :1:7 
 ]
-[s S2064 . 1 `uc 1 . 1 0 :3:0 
+[s S2872 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 BRG161 1 0 :1:3 
 ]
-[s S2067 . 1 `uc 1 . 1 0 :4:0 
+[s S2875 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 CKTXP 1 0 :1:4 
 ]
-[s S2070 . 1 `uc 1 . 1 0 :6:0 
+[s S2878 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RCIDL1 1 0 :1:6 
 ]
-[s S2073 . 1 `uc 1 . 1 0 :6:0 
+[s S2881 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RCMT 1 0 :1:6 
 ]
-[s S2076 . 1 `uc 1 . 1 0 :6:0 
+[s S2884 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RCMT1 1 0 :1:6 
 ]
-[s S2079 . 1 `uc 1 . 1 0 :4:0 
+[s S2887 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 SCKP1 1 0 :1:4 
 ]
-[s S2082 . 1 `uc 1 . 1 0 :4:0 
+[s S2890 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TXCKP 1 0 :1:4 
 ]
-[s S2085 . 1 `uc 1 . 1 0 :4:0 
+[s S2893 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TXCKP1 1 0 :1:4 
 ]
-[s S2088 . 1 `uc 1 . 1 0 :1:0 
+[s S2896 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 WUE1 1 0 :1:1 
 ]
-[u S2091 . 1 `S2050 1 . 1 0 `S2059 1 . 1 0 `S2061 1 . 1 0 `S2064 1 . 1 0 `S2067 1 . 1 0 `S2070 1 . 1 0 `S2073 1 . 1 0 `S2076 1 . 1 0 `S2079 1 . 1 0 `S2082 1 . 1 0 `S2085 1 . 1 0 `S2088 1 . 1 0 ]
-[v _BAUD1CONbits BAUD1CONbits `VES2091  1 e 1 @3999 ]
+[u S2899 . 1 `S2858 1 . 1 0 `S2867 1 . 1 0 `S2869 1 . 1 0 `S2872 1 . 1 0 `S2875 1 . 1 0 `S2878 1 . 1 0 `S2881 1 . 1 0 `S2884 1 . 1 0 `S2887 1 . 1 0 `S2890 1 . 1 0 `S2893 1 . 1 0 `S2896 1 . 1 0 ]
+[v _BAUD1CONbits BAUD1CONbits `VES2899  1 e 1 @3999 ]
 "22455
 [v _TMR5L TMR5L `VEuc  1 e 1 @4033 ]
 "22625
 [v _TMR5H TMR5H `VEuc  1 e 1 @4034 ]
 "22745
 [v _T5CON T5CON `VEuc  1 e 1 @4035 ]
-[s S611 . 1 `uc 1 . 1 0 :2:0 
+[s S626 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_SYNC 1 0 :1:2 
 ]
 "22784
-[s S614 . 1 `uc 1 ON 1 0 :1:0 
+[s S629 . 1 `uc 1 ON 1 0 :1:0 
 `uc 1 RD16 1 0 :1:1 
 `uc 1 nSYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 CKPS 1 0 :2:4 
 ]
-[s S950 . 1 `uc 1 . 1 0 :2:0 
+[s S967 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T5SYNC 1 0 :1:2 
 ]
-[s S953 . 1 `uc 1 TMR5ON 1 0 :1:0 
+[s S970 . 1 `uc 1 TMR5ON 1 0 :1:0 
 `uc 1 T5RD16 1 0 :1:1 
 `uc 1 nT5SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T5CKPS0 1 0 :1:4 
 `uc 1 T5CKPS1 1 0 :1:5 
 ]
-[s S630 . 1 `uc 1 . 1 0 :4:0 
+[s S645 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 CKPS0 1 0 :1:4 
 `uc 1 CKPS1 1 0 :1:5 
 ]
-[s S964 . 1 `uc 1 . 1 0 :1:0 
+[s S981 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD165 1 0 :1:1 
 ]
-[u S967 . 1 `S611 1 . 1 0 `S614 1 . 1 0 `S950 1 . 1 0 `S953 1 . 1 0 `S630 1 . 1 0 `S964 1 . 1 0 ]
-[v _T5CONbits T5CONbits `VES967  1 e 1 @4035 ]
+[u S984 . 1 `S626 1 . 1 0 `S629 1 . 1 0 `S967 1 . 1 0 `S970 1 . 1 0 `S645 1 . 1 0 `S981 1 . 1 0 ]
+[v _T5CONbits T5CONbits `VES984  1 e 1 @4035 ]
 "22859
 [v _T5GCON T5GCON `VEuc  1 e 1 @4036 ]
-[s S671 . 1 `uc 1 . 1 0 :3:0 
+[s S686 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 GGO_NOT_DONE 1 0 :1:3 
 ]
 "22901
-[s S674 . 1 `uc 1 . 1 0 :2:0 
+[s S689 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 GVAL 1 0 :1:2 
 `uc 1 GGO_nDONE 1 0 :1:3 
 `uc 1 GSPM 1 0 :1:4 
@@ -554,10 +602,10 @@
 `uc 1 GPOL 1 0 :1:6 
 `uc 1 GE 1 0 :1:7 
 ]
-[s S1012 . 1 `uc 1 . 1 0 :3:0 
+[s S1029 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T5GGO_NOT_DONE 1 0 :1:3 
 ]
-[s S1015 . 1 `uc 1 . 1 0 :2:0 
+[s S1032 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T5GVAL 1 0 :1:2 
 `uc 1 T5GGO_nDONE 1 0 :1:3 
 `uc 1 T5GSPM 1 0 :1:4 
@@ -565,11 +613,11 @@
 `uc 1 T5GPOL 1 0 :1:6 
 `uc 1 T5GE 1 0 :1:7 
 ]
-[s S1023 . 1 `uc 1 . 1 0 :3:0 
+[s S1040 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T5GGO 1 0 :1:3 
 ]
-[u S1026 . 1 `S671 1 . 1 0 `S674 1 . 1 0 `S1012 1 . 1 0 `S1015 1 . 1 0 `S1023 1 . 1 0 ]
-[v _T5GCONbits T5GCONbits `VES1026  1 e 1 @4036 ]
+[u S1043 . 1 `S686 1 . 1 0 `S689 1 . 1 0 `S1029 1 . 1 0 `S1032 1 . 1 0 `S1040 1 . 1 0 ]
+[v _T5GCONbits T5GCONbits `VES1043  1 e 1 @4036 ]
 "23091
 [v _T5GATE T5GATE `VEuc  1 e 1 @4037 ]
 "23233
@@ -581,28 +629,28 @@
 "23672
 [v _T3CON T3CON `VEuc  1 e 1 @4041 ]
 "23711
-[s S788 . 1 `uc 1 . 1 0 :2:0 
+[s S804 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T3SYNC 1 0 :1:2 
 ]
-[s S791 . 1 `uc 1 TMR3ON 1 0 :1:0 
+[s S807 . 1 `uc 1 TMR3ON 1 0 :1:0 
 `uc 1 T3RD16 1 0 :1:1 
 `uc 1 nT3SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T3CKPS0 1 0 :1:4 
 `uc 1 T3CKPS1 1 0 :1:5 
 ]
-[s S802 . 1 `uc 1 . 1 0 :1:0 
+[s S818 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD163 1 0 :1:1 
 ]
-[u S805 . 1 `S611 1 . 1 0 `S614 1 . 1 0 `S788 1 . 1 0 `S791 1 . 1 0 `S630 1 . 1 0 `S802 1 . 1 0 ]
-[v _T3CONbits T3CONbits `VES805  1 e 1 @4041 ]
+[u S821 . 1 `S626 1 . 1 0 `S629 1 . 1 0 `S804 1 . 1 0 `S807 1 . 1 0 `S645 1 . 1 0 `S818 1 . 1 0 ]
+[v _T3CONbits T3CONbits `VES821  1 e 1 @4041 ]
 "23786
 [v _T3GCON T3GCON `VEuc  1 e 1 @4042 ]
 "23828
-[s S850 . 1 `uc 1 . 1 0 :3:0 
+[s S866 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T3GGO_NOT_DONE 1 0 :1:3 
 ]
-[s S853 . 1 `uc 1 . 1 0 :2:0 
+[s S869 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T3GVAL 1 0 :1:2 
 `uc 1 T3GGO_nDONE 1 0 :1:3 
 `uc 1 T3GSPM 1 0 :1:4 
@@ -610,11 +658,11 @@
 `uc 1 T3GPOL 1 0 :1:6 
 `uc 1 T3GE 1 0 :1:7 
 ]
-[s S861 . 1 `uc 1 . 1 0 :3:0 
+[s S877 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T3GGO 1 0 :1:3 
 ]
-[u S864 . 1 `S671 1 . 1 0 `S674 1 . 1 0 `S850 1 . 1 0 `S853 1 . 1 0 `S861 1 . 1 0 ]
-[v _T3GCONbits T3GCONbits `VES864  1 e 1 @4042 ]
+[u S880 . 1 `S686 1 . 1 0 `S689 1 . 1 0 `S866 1 . 1 0 `S869 1 . 1 0 `S877 1 . 1 0 ]
+[v _T3GCONbits T3GCONbits `VES880  1 e 1 @4042 ]
 "24018
 [v _T3GATE T3GATE `VEuc  1 e 1 @4043 ]
 "24160
@@ -626,28 +674,28 @@
 "24599
 [v _T1CON T1CON `VEuc  1 e 1 @4047 ]
 "24638
-[s S620 . 1 `uc 1 . 1 0 :2:0 
+[s S635 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T1SYNC 1 0 :1:2 
 ]
-[s S623 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S638 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 T1RD16 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 ]
-[s S634 . 1 `uc 1 . 1 0 :1:0 
+[s S649 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD161 1 0 :1:1 
 ]
-[u S637 . 1 `S611 1 . 1 0 `S614 1 . 1 0 `S620 1 . 1 0 `S623 1 . 1 0 `S630 1 . 1 0 `S634 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES637  1 e 1 @4047 ]
+[u S652 . 1 `S626 1 . 1 0 `S629 1 . 1 0 `S635 1 . 1 0 `S638 1 . 1 0 `S645 1 . 1 0 `S649 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES652  1 e 1 @4047 ]
 "24713
 [v _T1GCON T1GCON `VEuc  1 e 1 @4048 ]
 "24755
-[s S682 . 1 `uc 1 . 1 0 :3:0 
+[s S697 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T1GGO_NOT_DONE 1 0 :1:3 
 ]
-[s S685 . 1 `uc 1 . 1 0 :2:0 
+[s S700 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO_nDONE 1 0 :1:3 
 `uc 1 T1GSPM 1 0 :1:4 
@@ -655,16 +703,38 @@
 `uc 1 T1GPOL 1 0 :1:6 
 `uc 1 T1GE 1 0 :1:7 
 ]
-[s S693 . 1 `uc 1 . 1 0 :3:0 
+[s S708 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T1GGO 1 0 :1:3 
 ]
-[u S696 . 1 `S671 1 . 1 0 `S674 1 . 1 0 `S682 1 . 1 0 `S685 1 . 1 0 `S693 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES696  1 e 1 @4048 ]
+[u S711 . 1 `S686 1 . 1 0 `S689 1 . 1 0 `S697 1 . 1 0 `S700 1 . 1 0 `S708 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES711  1 e 1 @4048 ]
 "24945
 [v _T1GATE T1GATE `VEuc  1 e 1 @4049 ]
 "25087
 [v _T1CLK T1CLK `VEuc  1 e 1 @4050 ]
-[s S280 . 1 `uc 1 INT0EDG 1 0 :1:0 
+"25229
+[v _TMR0L TMR0L `VEuc  1 e 1 @4051 ]
+"25367
+[v _TMR0H TMR0H `VEuc  1 e 1 @4052 ]
+"25621
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @4053 ]
+[s S1124 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T016BIT 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+"25641
+[s S1130 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+`uc 1 T0OUTPS1 1 0 :1:1 
+`uc 1 T0OUTPS2 1 0 :1:2 
+`uc 1 T0OUTPS3 1 0 :1:3 
+]
+[u S1135 . 1 `S1124 1 . 1 0 `S1130 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES1135  1 e 1 @4053 ]
+"25686
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @4054 ]
+[s S295 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -673,16 +743,16 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "26539
-[s S288 . 1 `uc 1 . 1 0 :6:0 
+[s S303 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S292 . 1 `uc 1 . 1 0 :6:0 
+[s S307 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S296 . 1 `S280 1 . 1 0 `S288 1 . 1 0 `S292 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES296  1 e 1 @4082 ]
+[u S311 . 1 `S295 1 . 1 0 `S303 1 . 1 0 `S307 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES311  1 e 1 @4082 ]
 "26641
 [v _TABLAT TABLAT `VEuc  1 e 1 @4085 ]
 "26670
@@ -711,7 +781,7 @@
 [v _cc_poll cc_poll `Cuc  1 e 1 0 ]
 "58
 [v _hpserial hpserial `[3]uc  1 e 3 0 ]
-[s S1119 . 1 `uc 1 isdata 1 0 :1:0 
+[s S1194 . 1 `uc 1 isdata 1 0 :1:0 
 `uc 1 hoperr 1 0 :1:1 
 `uc 1 mode 1 0 :1:2 
 `uc 1 timeout 1 0 :1:3 
@@ -721,7 +791,7 @@
 `uc 1 spare5 1 0 :1:7 
 ]
 "70
-[v _cctflags cctflags `S1119  1 e 1 0 ]
+[v _cctflags cctflags `S1194  1 e 1 0 ]
 "41 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.h
 [v _count count `c  1 e 1 0 ]
 "45
@@ -732,50 +802,74 @@
 [v _dispclr dispclr `Cuc  1 e 1 0 ]
 "50
 [v _dispnormal dispnormal `Cuc  1 e 1 0 ]
-"57
-[v _line1 line1 `Cuc  1 e 1 0 ]
 "58
-[v _line2 line2 `Cuc  1 e 1 0 ]
-"59
-[v _line3 line3 `Cuc  1 e 1 0 ]
+[v _line1 line1 `Cuc  1 e 1 0 ]
 "60
-[v _line4 line4 `Cuc  1 e 1 0 ]
-"63
-[v _inscoin inscoin `C[22]uc  1 e 22 0 ]
+[v _line2 line2 `Cuc  1 e 1 0 ]
+"62
+[v _line3 line3 `Cuc  1 e 1 0 ]
 "64
+[v _line4 line4 `Cuc  1 e 1 0 ]
+"67
+[v _inscoin inscoin `C[49]uc  1 e 49 0 ]
+"68
 [v _credits credits `C[13]uc  1 e 13 0 ]
-"73
-[v _servmsg servmsg `C[81]uc  1 e 81 0 ]
-"74
-[v _noteerr noteerr `C[28]uc  1 e 28 0 ]
+"69
+[v _pricesetmsg pricesetmsg `C[18]uc  1 e 18 0 ]
+"70
+[v _pricesetm2 pricesetm2 `C[57]uc  1 e 57 0 ]
+"71
+[v _vendsetup vendsetup `C[77]uc  1 e 77 0 ]
 "75
-[v _inithop inithop `C[20]uc  1 e 20 0 ]
-"76
-[v _initnote initnote `C[37]uc  1 e 37 0 ]
-"78
-[v _setnotes setnotes `C[69]uc  1 e 69 0 ]
-"79
-[v _tenrand tenrand `C[8]uc  1 e 8 0 ]
-"80
-[v _twentyrand twentyrand `C[8]uc  1 e 8 0 ]
+[v _hoppcoin hoppcoin `C[51]uc  1 e 51 0 ]
 "81
-[v _fiftyrand fiftyrand `C[8]uc  1 e 8 0 ]
+[v _servmsg servmsg `C[67]uc  1 e 67 0 ]
 "82
-[v _hundredrand hundredrand `C[8]uc  1 e 8 0 ]
+[v _noteerr noteerr `C[28]uc  1 e 28 0 ]
 "83
-[v _twohundredrand twohundredrand `C[8]uc  1 e 8 0 ]
+[v _inithop inithop `C[20]uc  1 e 20 0 ]
 "84
-[v _enabled enabled `C[9]uc  1 e 9 0 ]
-"85
-[v _disabled disabled `C[9]uc  1 e 9 0 ]
+[v _initnote initnote `C[37]uc  1 e 37 0 ]
+"86
+[v _setnotes setnotes `C[69]uc  1 e 69 0 ]
 "87
-[v _bflag bflag `uc  1 e 1 0 ]
+[v _tenrand tenrand `C[9]uc  1 e 9 0 ]
+"88
+[v _twentyrand twentyrand `C[8]uc  1 e 8 0 ]
 "89
-[v _lcdata lcdata `uc  1 e 1 0 ]
+[v _fiftyrand fiftyrand `C[8]uc  1 e 8 0 ]
+"90
+[v _hundredrand hundredrand `C[8]uc  1 e 8 0 ]
 "91
-[v _stradd stradd `uc  1 e 1 0 ]
+[v _twohundredrand twohundredrand `C[8]uc  1 e 8 0 ]
+"92
+[v _enabled enabled `C[10]uc  1 e 10 0 ]
 "93
+[v _disabled disabled `C[10]uc  1 e 10 0 ]
+"94
+[v _creditclr creditclr `C[16]uc  1 e 16 0 ]
+"95
+[v _sensmsg sensmsg `C[11]uc  1 e 11 0 ]
+"96
+[v _onmsg onmsg `C[4]uc  1 e 4 0 ]
+"97
+[v _offmsg offmsg `C[4]uc  1 e 4 0 ]
+"98
+[v _clrmsg clrmsg `C[6]uc  1 e 6 0 ]
+"99
+[v _dacmsg dacmsg `C[13]uc  1 e 13 0 ]
+"101
+[v _bflag bflag `uc  1 e 1 0 ]
+"103
+[v _lcdata lcdata `uc  1 e 1 0 ]
+"105
+[v _stradd stradd `uc  1 e 1 0 ]
+"107
 [v _ercode ercode `uc  1 e 1 0 ]
+"109
+[v _dspposition dspposition `uc  1 e 1 0 ]
+"57 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/tmr0.c
+[v _timer0ReloadVal16bit timer0ReloadVal16bit `VEui  1 e 2 0 ]
 "56 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/tmr1.c
 [v _timer1ReloadVal timer1ReloadVal `VEui  1 e 2 0 ]
 "56 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/tmr3.c
@@ -804,28 +898,28 @@
 [v _dbcount dbcount `ui  1 e 2 0 ]
 "53
 [v _notenum notenum `uc  1 e 1 0 ]
-[s S1092 . 1 `uc 1 isdata 1 0 :1:0 
+[s S1167 . 1 `uc 1 isdata 1 0 :1:0 
 `uc 1 noteerr 1 0 :1:1 
 `uc 1 mode 1 0 :1:2 
 `uc 1 timeout 1 0 :1:3 
 `uc 1 vending 1 0 :1:4 
-`uc 1 spare3 1 0 :1:5 
-`uc 1 spare4 1 0 :1:6 
+`uc 1 noteset 1 0 :1:5 
+`uc 1 endis 1 0 :1:6 
 `uc 1 spare5 1 0 :1:7 
 ]
 "68
-[v _mdbflags mdbflags `S1092  1 e 1 0 ]
-[s S1101 . 1 `uc 1 R10 1 0 :1:0 
+[v _mdbflags mdbflags `S1167  1 e 1 0 ]
+[s S1176 . 1 `uc 1 R10 1 0 :1:0 
 `uc 1 R20 1 0 :1:1 
 `uc 1 R50 1 0 :1:2 
 `uc 1 R100 1 0 :1:3 
 `uc 1 R200 1 0 :1:4 
-`uc 1 noteset 1 0 :1:5 
-`uc 1 endis 1 0 :1:6 
-`uc 1 spare 1 0 :1:7 
+`uc 1 spare 1 0 :1:5 
+`uc 1 spare1 1 0 :1:6 
+`uc 1 spare2 1 0 :1:7 
 ]
 "82
-[v _noteen noteen `S1101  1 e 1 0 ]
+[v _noteen noteen `S1176  1 e 1 0 ]
 "83
 [v _noteen_byte noteen_byte `VEuc  1 e 1 0 ]
 "19 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.h
@@ -834,11 +928,74 @@
 [v _cash cash `VEuc  1 e 1 0 ]
 "21
 [v _buttons buttons `VEuc  1 e 1 0 ]
+"22
+[v _vendprice vendprice `VEuc  1 e 1 0 ]
+"23
+[v _sensorval sensorval `VEuc  1 e 1 0 ]
 "24
+[v _vcash vcash `VE[2]uc  1 e 2 0 ]
+"25
+[v _nvcash nvcash `VE[3]uc  1 e 3 0 ]
+"26
+[v _tvends tvends `VE[8]uc  1 e 8 0 ]
+"27
+[v _vcashout vcashout `VE[2]uc  1 e 2 0 ]
+"28
+[v _pvcash pvcash `VEui  1 e 2 0 ]
+"29
+[v _pnvcash pnvcash `VEum  1 e 3 0 ]
+"30
+[v _senspos senspos `VEuc  1 e 1 0 ]
+"39
 [v _credmem credmem `Cui  1 e 2 0 ]
-"36
+"41
+[v _cashinv cashinv `Cui  1 e 2 0 ]
+"43
+[v _cashint cashint `Cui  1 e 2 0 ]
+"47
+[v _pricestore pricestore `Cui  1 e 2 0 ]
+"49
+[v _venderrors venderrors `Cui  1 e 2 0 ]
+"51
 [v _notebits notebits `Cui  1 e 2 0 ]
-[s S1128 . 1 `uc 1 iscredit 1 0 :1:0 
+"54
+[v _sensval sensval `Cui  1 e 2 0 ]
+"58
+[v _hopcoin hopcoin `Cui  1 e 2 0 ]
+"60
+[v _chan1linkbits chan1linkbits `Cui  1 e 2 0 ]
+"81
+[v _sensorflags sensorflags `Cui  1 e 2 0 ]
+[s S1185 . 1 `uc 1 chan1 1 0 :1:0 
+`uc 1 chan2 1 0 :1:1 
+`uc 1 chan3 1 0 :1:2 
+`uc 1 chan4 1 0 :1:3 
+`uc 1 chan5 1 0 :1:4 
+`uc 1 chan6 1 0 :1:5 
+`uc 1 chan7 1 0 :1:6 
+`uc 1 chan8 1 0 :1:7 
+]
+"93
+[v _senschk senschk `S1185  1 e 1 0 ]
+"108
+[v _venderr venderr `S1185  1 e 1 0 ]
+"123
+[v _chanlink1 chanlink1 `S1185  1 e 1 @3 ]
+"135
+[v _chanlink2 chanlink2 `S1185  1 e 1 @4 ]
+"147
+[v _chanlink3 chanlink3 `S1185  1 e 1 @5 ]
+"159
+[v _chanlink4 chanlink4 `S1185  1 e 1 @6 ]
+"171
+[v _chanlink5 chanlink5 `S1185  1 e 1 @7 ]
+"183
+[v _chanlink6 chanlink6 `S1185  1 e 1 @8 ]
+"195
+[v _chanlink7 chanlink7 `S1185  1 e 1 @9 ]
+"207
+[v _chanlink8 chanlink8 `S1185  1 e 1 @10 ]
+[s S1293 . 2 `uc 1 iscredit 1 0 :1:0 
 `uc 1 error 1 0 :1:1 
 `uc 1 inscoin 1 0 :1:2 
 `uc 1 nochange 1 0 :1:3 
@@ -846,44 +1003,52 @@
 `uc 1 initialrun 1 0 :1:5 
 `uc 1 noterr 1 0 :1:6 
 `uc 1 service 1 0 :1:7 
+`uc 1 priceset 1 1 :1:0 
+`uc 1 setprice 1 1 :1:1 
+`uc 1 vendset 1 1 :1:2 
+`uc 1 chanlink 1 1 :1:3 
+`uc 1 mottime 1 1 :1:4 
+`uc 1 nosense 1 1 :1:5 
+`uc 1 spare6 1 1 :1:6 
+`uc 1 spare7 1 1 :1:7 
 ]
-"51
-[v _venflags venflags `S1128  1 e 1 0 ]
+"229
+[v _venflags venflags `S1293  1 e 2 0 ]
 "56 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"143
+"151
 } 0
-"13 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
+"28 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
 [v _vend_init vend_init `(v  1 e 1 0 ]
 {
-"40
+"59
 } 0
 "21 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mdb.c
 [v _mdb_init mdb_init `(v  1 e 1 0 ]
 {
-"30
-[v mdb_init@i i `uc  1 a 1 26 ]
 "32
+[v mdb_init@i i `uc  1 a 1 28 ]
+"34
 } 0
-"134
+"151
 [v _mdb_security mdb_security `(v  1 e 1 0 ]
 {
-"138
+"155
 } 0
-"34
+"36
 [v _mdb_reset mdb_reset `(uc  1 e 1 0 ]
 {
-"42
+"44
 [v mdb_reset@i i `uc  1 a 1 24 ]
-"45
-[v mdb_reset@i_2280 i `uc  1 a 1 25 ]
-"54
+"47
+[v mdb_reset@i_3182 i `uc  1 a 1 25 ]
+"55
 } 0
-"118
+"135
 [v _mdb_noten mdb_noten `(v  1 e 1 0 ]
 {
-"133
+"150
 } 0
 "9 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/cctalk.c
 [v _cctalk_init cctalk_init `(v  1 e 1 0 ]
@@ -943,6 +1108,17 @@
 [v cctalk_read@data data `uc  1 a 1 18 ]
 "130
 } 0
+"9 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
+[v _Init_vendmem Init_vendmem `(v  1 e 1 0 ]
+{
+"17
+[v Init_vendmem@chanlink chanlink `*.39uc  1 a 2 22 ]
+"16
+[v Init_vendmem@chanlinkbits chanlinkbits `ui  1 a 2 20 ]
+"18
+[v Init_vendmem@i i `uc  1 a 1 24 ]
+"24
+} 0
 "65 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/dac1.c
 [v _DAC1_SetOutput DAC1_SetOutput `(v  1 e 1 0 ]
 {
@@ -952,45 +1128,45 @@
 [v DAC1_SetOutput@inputData inputData `uc  1 a 1 18 ]
 "68
 } 0
-"140 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mdb.c
+"157 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mdb.c
 [v _mdb_poll mdb_poll `(uc  1 e 1 0 ]
 {
-"145
+"162
 [v mdb_poll@i i `uc  1 a 1 23 ]
-"218
+"235
 } 0
-"220
+"237
 [v _mdb_comm mdb_comm `(uc  1 e 1 0 ]
 {
-"221
+"238
 [v mdb_comm@slvadd slvadd `uc  1 a 1 wreg ]
-"223
+"240
 [v mdb_comm@i i `uc  1 a 1 22 ]
-"221
+"238
 [v mdb_comm@slvadd slvadd `uc  1 a 1 wreg ]
 [v mdb_comm@mcount mcount `uc  1 p 1 20 ]
-"223
+"240
 [v mdb_comm@slvadd slvadd `uc  1 a 1 21 ]
-"299
+"316
 } 0
-"322
+"339
 [v _mdb_waitr mdb_waitr `(v  1 e 1 0 ]
 {
-"328
+"345
 } 0
-"365
+"440
 [v _mdb_transmit mdb_transmit `(v  1 e 1 0 ]
 {
 [v mdb_transmit@txbyte txbyte `uc  1 a 1 wreg ]
 [v mdb_transmit@txbyte txbyte `uc  1 a 1 wreg ]
-"367
+"442
 [v mdb_transmit@txbyte txbyte `uc  1 a 1 19 ]
-"369
+"444
 } 0
-"314
+"331
 [v _mdb_waitx mdb_waitx `(v  1 e 1 0 ]
 {
-"320
+"337
 } 0
 "93 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/eusart1.c
 [v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
@@ -1000,10 +1176,10 @@
 [v EUSART1_Write@txData txData `uc  1 a 1 18 ]
 "100
 } 0
-"301 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mdb.c
+"318 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mdb.c
 [v _mdb_on mdb_on `(v  1 e 1 0 ]
 {
-"311
+"328
 } 0
 "13
 [v _init_mdbdata init_mdbdata `(v  1 e 1 0 ]
@@ -1027,189 +1203,263 @@
 {
 "38
 } 0
-"223
+"246
 [v _lcd_test lcd_test `(v  1 e 1 0 ]
 {
-"225
+"248
 [v lcd_test@character character `uc  1 a 1 25 ]
-"231
+"254
 } 0
-"157 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/main.c
+"165 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/main.c
 [v _enter_service enter_service `(v  1 e 1 0 ]
 {
-"184
+"196
 } 0
-"56 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mdb.c
+"57 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mdb.c
 [v _set_notes set_notes `(v  1 e 1 0 ]
 {
-"83
+"96
 } 0
-"85
+"98
 [v _enable_notes enable_notes `(v  1 e 1 0 ]
 {
-"86
+"99
 [v enable_notes@notenum notenum `uc  1 a 1 wreg ]
 [v enable_notes@notenum notenum `uc  1 a 1 wreg ]
-[v enable_notes@notenum notenum `uc  1 a 1 31 ]
-"105
+[v enable_notes@notenum notenum `uc  1 a 1 32 ]
+"121
 } 0
-"52 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+"129
+[v _save_notes save_notes `(v  1 e 1 0 ]
+{
+"133
+} 0
+"64 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
 [v _displ_nendis displ_nendis `(v  1 e 1 0 ]
 {
-"53
-[v displ_nendis@notenum notenum `uc  1 a 1 wreg ]
-[v displ_nendis@notenum notenum `uc  1 a 1 wreg ]
-[v displ_nendis@notenum notenum `uc  1 a 1 30 ]
-"62
+[v displ_nendis@note2disp note2disp `uc  1 a 1 wreg ]
+"66
+[v displ_nendis@x x `uc  1 a 1 31 ]
+"64
+[v displ_nendis@note2disp note2disp `uc  1 a 1 wreg ]
+"66
+[v displ_nendis@note2disp note2disp `uc  1 a 1 30 ]
+"75
 } 0
-"75 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
-[v _butindb butindb `(uc  1 e 1 0 ]
-{
-"78
-[v butindb@butval butval `uc  1 a 1 20 ]
-"77
-[v butindb@butt butt `uc  1 a 1 19 ]
-"85
-} 0
-"87
-[v _butin butin `(uc  1 e 1 0 ]
-{
-"102
-} 0
-"40 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+"57
 [v _displ_note displ_note `(uc  1 e 1 0 ]
 {
-[v displ_note@lcdstring lcdstring `*.32uc  1 p 2 30 ]
-"50
+[v displ_note@notestring notestring `*.32uc  1 p 2 30 ]
+"62
 } 0
-"129 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
-[v _Vend_test Vend_test `(v  1 e 1 0 ]
+"296 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
+[v _price_set price_set `(v  1 e 1 0 ]
 {
-"132
+"314
 } 0
-"119
+"316
+[v _set_price set_price `(v  1 e 1 0 ]
+{
+"317
+[v set_price@buttons buttons `uc  1 a 1 wreg ]
+"319
+[v set_price@channel channel `uc  1 a 1 15 ]
+"317
+[v set_price@buttons buttons `uc  1 a 1 wreg ]
+[v set_price@buttons buttons `uc  1 a 1 14 ]
+"353
+} 0
+"185 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+[v _displ_price displ_price `(v  1 e 1 0 ]
+{
+"186
+[v displ_price@vendprice vendprice `uc  1 a 1 wreg ]
+[v displ_price@vendprice vendprice `uc  1 a 1 wreg ]
+[v displ_price@vendprice vendprice `uc  1 a 1 31 ]
+"191
+} 0
+"246 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
+[v _Read_Service Read_Service `(uc  1 e 1 0 ]
+{
+"249
+[v Read_Service@senval senval `uc  1 a 1 18 ]
+"252
+} 0
+"375 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mdb.c
+[v _mdb_unlock mdb_unlock `(v  1 e 1 0 ]
+{
+"438
+} 0
+"357 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
+[v _Vend_setup Vend_setup `(v  1 e 1 0 ]
+{
+"369
+} 0
+"371
+[v _Vend_timeset Vend_timeset `(v  1 e 1 0 ]
+{
+"374
+} 0
+"254
 [v _Sensor_set Sensor_set `(v  1 e 1 0 ]
 {
-"122
+"264
+[v Sensor_set@dacpos dacpos `uc  1 a 1 12 ]
+"286
 } 0
-"134
-[v _Note_test Note_test `(v  1 e 1 0 ]
+"40 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+[v _displ_sens displ_sens `(v  1 e 1 0 ]
 {
-"137
+[v displ_sens@smsgpos smsgpos `uc  1 a 1 wreg ]
+[v displ_sens@smsgpos smsgpos `uc  1 a 1 wreg ]
+[v displ_sens@dmsgpos dmsgpos `uc  1 p 1 31 ]
+"42
+[v displ_sens@smsgpos smsgpos `uc  1 a 1 32 ]
+"55
 } 0
-"114
+"74 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/cmp1.c
+[v _CMP1_GetOutputStatus CMP1_GetOutputStatus `(uc  1 e 1 0 ]
+{
+"77
+} 0
+"179 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
 [v _Hopper_coin Hopper_coin `(v  1 e 1 0 ]
 {
-"117
+"184
+[v Hopper_coin@coinval coinval `uc  1 a 1 12 ]
+"203
 } 0
-"124
+"130
+[v _butindb butindb `(uc  1 e 1 0 ]
+{
+"132
+[v butindb@butt butt `uc  1 a 1 22 ]
+"133
+[v butindb@butval butval `uc  1 a 1 21 ]
+"141
+} 0
+"143
+[v _butin butin `(uc  1 e 1 0 ]
+{
+"158
+} 0
+"205
+[v _Update_Hopcoin Update_Hopcoin `(v  1 e 1 0 ]
+{
+[v Update_Hopcoin@newval newval `uc  1 a 1 wreg ]
+[v Update_Hopcoin@newval newval `uc  1 a 1 wreg ]
+[v Update_Hopcoin@direction direction `uc  1 p 1 31 ]
+[v Update_Hopcoin@newval newval `uc  1 a 1 32 ]
+"244
+} 0
+"288
 [v _Clear_cred Clear_cred `(v  1 e 1 0 ]
 {
-"127
+"293
 } 0
-"109
+"165
 [v _Audit Audit `(v  1 e 1 0 ]
 {
-"112
+"177
 } 0
-"119 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+"132 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
 [v _displ_noteer displ_noteer `(v  1 e 1 0 ]
 {
-"127
+"140
 } 0
-"72
+"85
 [v _displ_code displ_code `(v  1 e 1 0 ]
 {
-"73
+"86
 [v displ_code@ercode ercode `uc  1 a 1 wreg ]
 [v displ_code@ercode ercode `uc  1 a 1 wreg ]
 [v displ_code@ercode ercode `uc  1 a 1 27 ]
-"117
+"130
 } 0
-"64
+"77
 [v _displ_credit displ_credit `(v  1 e 1 0 ]
 {
-"66
+"79
 [v displ_credit@cash cash `uc  1 a 1 31 ]
-"70
+"83
 } 0
-"154
+"167
 [v _lcd_string lcd_string `(v  1 e 1 0 ]
 {
-[v lcd_string@lcdstring lcdstring `*.34uc  1 p 2 25 ]
+[v lcd_string@lcdstring lcdstring `*.32uc  1 p 2 25 ]
 [v lcd_string@lcdline lcdline `uc  1 p 1 27 ]
-"169
+"183
 } 0
-"129
+"142
 [v _displ_hex displ_hex `(v  1 e 1 0 ]
 {
-"132
+"145
 [v displ_hex@value value `[8]uc  1 a 8 0 ]
-"133
+"146
 [v displ_hex@hexnumsave hexnumsave `um  1 a 3 8 ]
-"131
+"144
 [v displ_hex@i i `c  1 a 1 11 ]
-"130
+"143
 [v displ_hex@hexnum hexnum `um  1 p 3 28 ]
-"151
+"164
 } 0
-"171
+"194
 [v _lcd_writeC lcd_writeC `(v  1 e 1 0 ]
 {
-"172
+"195
 [v lcd_writeC@lcdata lcdata `uc  1 a 1 wreg ]
 [v lcd_writeC@lcdata lcdata `uc  1 a 1 wreg ]
-"175
+"198
 [v lcd_writeC@lcdata lcdata `uc  1 a 1 24 ]
-"189
+"212
 } 0
-"191
+"214
 [v _lcd_dispadd lcd_dispadd `(v  1 e 1 0 ]
 {
-"192
+"215
 [v lcd_dispadd@lcdaddress lcdaddress `uc  1 a 1 wreg ]
-"193
+"216
 [v lcd_dispadd@lcdatasave lcdatasave `uc  1 a 1 23 ]
-"192
+"215
 [v lcd_dispadd@lcdaddress lcdaddress `uc  1 a 1 wreg ]
 [v lcd_dispadd@lcdaddress lcdaddress `uc  1 a 1 22 ]
-"200
+"223
 } 0
-"203
+"226
 [v _lcd_write lcd_write `(v  1 e 1 0 ]
 {
-"204
+"227
 [v lcd_write@lcdata lcdata `uc  1 a 1 wreg ]
-"205
+"228
 [v lcd_write@savelatd savelatd `uc  1 a 1 20 ]
-"204
+"227
 [v lcd_write@lcdata lcdata `uc  1 a 1 wreg ]
 [v lcd_write@lcdata lcdata `uc  1 a 1 21 ]
-"221
+"244
 } 0
-"234
+"257
 [v _read_busy read_busy `(c  1 e 1 0 ]
 {
-"237
+"260
 [v read_busy@savelatd savelatd `uc  1 a 1 19 ]
-"236
+"259
 [v read_busy@savelate savelate `uc  1 a 1 18 ]
-"253
+"276
 } 0
-"266
+"289
 [v _lcd_clockL lcd_clockL `(v  1 e 1 0 ]
 {
-"270
+"293
 } 0
-"258
+"281
 [v _lcd_clockH lcd_clockH `(v  1 e 1 0 ]
 {
-"262
+"285
 } 0
-"274
+"297
 [v _lcd_clockE lcd_clockE `(v  1 e 1 0 ]
 {
-"280
+"303
 } 0
 "8 /opt/microchip/xc8/v1.44/sources/common/ltmod.c
 [v ___ltmod __ltmod `(um  1 e 3 0 ]
@@ -1233,28 +1483,48 @@
 [v ___ltdiv@divisor divisor `um  1 p 3 21 ]
 "31
 } 0
-"69 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
+"124 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
 [v _credit_check credit_check `(uc  1 e 1 0 ]
 {
-"73
+"128
 } 0
-"56
+"111
 [v _credit_subtract credit_subtract `(v  1 e 1 0 ]
 {
-"57
+"112
 [v credit_subtract@credit credit `uc  1 a 1 wreg ]
 [v credit_subtract@credit credit `uc  1 a 1 wreg ]
 [v credit_subtract@credit credit `uc  1 a 1 22 ]
-"67
+"122
 } 0
-"42
+"96
 [v _credit_add credit_add `(v  1 e 1 0 ]
 {
-"43
+"97
 [v credit_add@credit credit `uc  1 a 1 wreg ]
 [v credit_add@credit credit `uc  1 a 1 wreg ]
-[v credit_add@credit credit `uc  1 a 1 22 ]
-"54
+[v credit_add@credit credit `uc  1 a 1 29 ]
+"109
+} 0
+"81
+[v _Update_cashaudit Update_cashaudit `(v  1 e 1 0 ]
+{
+[v Update_cashaudit@addcash addcash `uc  1 a 1 wreg ]
+[v Update_cashaudit@addcash addcash `uc  1 a 1 wreg ]
+"83
+[v Update_cashaudit@addcash addcash `uc  1 a 1 28 ]
+"93
+} 0
+"61
+[v _Write_NVstore Write_NVstore `(v  1 e 1 0 ]
+{
+"63
+[v Write_NVstore@i i `uc  1 a 1 27 ]
+"61
+[v Write_NVstore@storeadd storeadd `ui  1 p 2 22 ]
+[v Write_NVstore@storemem storemem `*.39uc  1 p 2 24 ]
+[v Write_NVstore@storesize storesize `uc  1 p 1 26 ]
+"69
 } 0
 "169 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/memory.c
 [v _DATAEE_WriteByte DATAEE_WriteByte `(v  1 e 1 0 ]
@@ -1266,7 +1536,18 @@
 [v DATAEE_WriteByte@bData bData `uc  1 p 1 20 ]
 "189
 } 0
-"191
+"71 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
+[v _Read_NVstore Read_NVstore `(v  1 e 1 0 ]
+{
+"73
+[v Read_NVstore@i i `uc  1 a 1 25 ]
+"71
+[v Read_NVstore@storeadd storeadd `ui  1 p 2 20 ]
+[v Read_NVstore@storemem storemem `*.39uc  1 p 2 22 ]
+[v Read_NVstore@storesize storesize `uc  1 p 1 24 ]
+"79
+} 0
+"191 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/memory.c
 [v _DATAEE_ReadByte DATAEE_ReadByte `(uc  1 e 1 0 ]
 {
 [v DATAEE_ReadByte@bAdd bAdd `ui  1 p 2 18 ]
@@ -1275,7 +1556,7 @@
 "116 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"128
+"130
 } 0
 "62 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/tmr5.c
 [v _TMR5_Initialize TMR5_Initialize `(v  1 e 1 0 ]
@@ -1292,6 +1573,16 @@
 {
 "89
 } 0
+"64 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/tmr0.c
+[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+{
+"85
+} 0
+"146 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/mcc.c
+[v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
+{
+"160
+} 0
 "52 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
@@ -1299,10 +1590,10 @@
 [v PIN_MANAGER_Initialize@state state `uc  1 a 1 18 ]
 "122
 } 0
-"130 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/mcc.c
+"132 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"142
+"144
 } 0
 "51 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
@@ -1324,15 +1615,10 @@
 {
 "63
 } 0
-"56 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/cmp1.c
+"57 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/cmp1.c
 [v _CMP1_Initialize CMP1_Initialize `(v  1 e 1 0 ]
 {
 "72
-} 0
-"74
-[v _CMP1_GetOutputStatus CMP1_GetOutputStatus `(uc  1 e 1 0 ]
-{
-"77
 } 0
 "64 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `II(v  1 e 1 0 ]

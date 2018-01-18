@@ -17,10 +17,12 @@ void init_mdbdata(uint8_t initdata)
         mdbdata[i] = initdata;
     }
 }
-
+//Undefined error mode flashes 4 slow 2 fast
 void mdb_init(void)
 {
+    __delay_ms(250);
     noteen_byte = DATAEE_ReadByte(notebits);
+    ((uint8_t*) &noteen)[0] = noteen_byte;
     eusartmdb_Initialize();
     mdbflags.noteerr = 0;
     mdbflags.isdata = 0;
@@ -45,7 +47,6 @@ uint8_t mdb_reset(void)
     uint8_t i = mdb_comm(note_poll, 0x00);
     if(mdbdata[--i] == just_reset)
     {
-    //    mdb_noten();
         //Get status
         i = mdb_comm(note_poll, 0x00);
     }
@@ -56,48 +57,63 @@ uint8_t mdb_reset(void)
 void set_notes(void)
 {
     lcd_string(setnotes, line1);
-    noteen.noteset = 1;
-    noteen.endis = 1;
-    while(noteen.noteset)
+    mdbflags.noteset = 1;
+    mdbflags.endis = 1;
+    while(mdbflags.noteset)
     {
         buttons = butindb();
+        notenum = buttons;
         switch(buttons)
         {
             //R10
-            case 0x01 : enable_notes(displ_note(tenrand));
-            
+            case 0x01 : dspposition = displ_note(tenrand);
+            enable_notes(0x01);
+            break;
             //R20
-            case 0x02 : enable_notes(displ_note(twentyrand));
+            case 0x02 : dspposition = displ_note(twentyrand);
+            enable_notes(0x02);
+            break;
             //R50
-            case 0x04 : enable_notes(displ_note(fiftyrand));
+            case 0x04 : dspposition = displ_note(fiftyrand);
+            enable_notes(0x04);
+            break;
             //R100
-            case 0x08 : enable_notes(displ_note(hundredrand));
-            //200
-            case 0x10 : enable_notes(displ_note(twohundredrand));
+            case 0x08 : dspposition = displ_note(hundredrand);
+            enable_notes(0x08);
+            break;
+            //R200
+            case 0x10 : dspposition = displ_note(twohundredrand);
+            enable_notes(0x10);
+            break;
             //Exit
             case 0x80 : lcd_string(servmsg, line1);
-            noteen.noteset = 0;
+            mdbflags.noteset = 0;
             default : break;
         }
+        ((uint8_t*) &noteen)[0] = noteen_byte;
+        asm("nop");
     }
 }
 
 void enable_notes(uint8_t notenum)
 {
-    noteen.endis = 1;
+    mdbflags.endis = 1;
     displ_nendis(notenum);
-    while(noteen.endis)
+    while(mdbflags.endis)
     {
         buttons = butindb();
         switch(buttons)
         {
             case 0x01 : noteen_byte = noteen_byte | notenum;
+            save_notes();
             displ_nendis(notenum);
             break;
             case 0x02 : noteen_byte = noteen_byte & ~notenum;
+            save_notes();
             displ_nendis(notenum);
             break;
-            case 0x04 : noteen.endis = 0;
+            case 0x80 : mdbflags.endis = 0;
+            lcd_string(setnotes, line1);
             buttons = 0;
             default : break;
         }
@@ -354,13 +370,71 @@ void mdb_test(void)
     }
     TX1STAbits.TXEN = 0;
 }
+//Turn off and bus reset mdb bus
+//Used to disable all mdb devices
 void mdb_unlock(void)
 {
-    LATC = 0x03;
+    __delay_ms(50);
+    LATE = 0x00;    
+    LATD = 0x00;    
+    LATA = 0xC0;    
+    LATB = 0x00;    
+    LATC = 0x01;    
+
+    /**
+    TRISx registers
+    */    
+    TRISE = 0x00;
+    TRISA = 0x1F;
+    TRISB = 0xD0;
+    TRISC = 0x80;
+    TRISD = 0x00;
+
+    /**
+    ANSELx registers
+    */   
+    ANSELC = 0x00;
+    ANSELB = 0xC0;
+    ANSELD = 0x00;
+    ANSELE = 0x00;
+    ANSELA = 0x01;
+
+    /**
+    WPUx registers
+    */ 
+    WPUD = 0x00;
+    WPUE = 0x00;
+    WPUB = 0x00;
+    WPUA = 0x00;
+    WPUC = 0x00;
+
+    /**
+    ODx registers
+    */   
+    ODCONE = 0x00;
+    ODCONA = 0x00;
+    ODCONB = 0x00;
+    ODCONC = 0x00;
+    ODCOND = 0x00;
+    LATC = 0x01;
     TRISC = 0x80;
     ANSELC = 0x00;
     WPUC = 0x00;
     ODCONC = 0x00;
+    PPSLOCK = 0x55;
+    PPSLOCK = 0xAA;
+    PPSLOCKbits.PPSLOCKED = 0x00; // unlock PPS
+
+    RX1PPSbits.RXPPS = 0x0;   //RC7->EUSART1:RX1;
+    RC6PPS = 0x0;   //RC6->EUSART1:TX1;
+    RB5PPS = 0x0;   //RB5->EUSART2:TX2;
+    RX2PPSbits.RXPPS = 0x0;   //RB4->EUSART2:RX2;*/
+    CMP1_Initialize();
+    TMR3_Initialize();
+    DAC1_Initialize();
+    TMR5_Initialize();
+    TMR1_Initialize();
+
 }
 
 void mdb_transmit(uint8_t txbyte)

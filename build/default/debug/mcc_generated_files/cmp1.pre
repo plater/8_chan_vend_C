@@ -14387,19 +14387,18 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 92 "mcc_generated_files/cmp1.h"
+# 91 "mcc_generated_files/cmp1.h"
 void CMP1_Initialize(void);
 
-# 132
+# 131
 bool CMP1_GetOutputStatus(void);
 
-# 56 "mcc_generated_files/cmp1.c"
+# 57 "mcc_generated_files/cmp1.c"
 void CMP1_Initialize(void)
 {
 
 
-
-CM1CON0 = 0x94;
+CM1CON0 = 0x90;
 
 
 CM1CON1 = 0x00;

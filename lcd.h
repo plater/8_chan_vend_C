@@ -54,35 +54,49 @@ const char dispshleft = 0x07;	//Shift display left, increment address on write/r
 const char dispoff = 0x08;	//Display off
 const char dispsr = 0x1B;	//Display shift right
 const char dispsl = 0x18;	//Display shift left
-const char line1 = 0x80;
-const char line2 = 0xC0;
-const char line3 = 0x94;
-const char line4 = 0xD4;
+//Line one is 0 to 19
+const char line1 = 0x00;
+//Line two is actually second 64 characters begining
+const char line2 = 0x40;
+//Line 3 follows line 1 20 to 39 the other 24 characters don't display
+const char line3 = 0x14;
+//Line 4 follows line 2
+const char line4 = 0x54;
 
-//Message strings
-const uint8_t inscoin[] = "Insert Coins or Notes";
+//Message strings for 20x4 LCD
+const uint8_t inscoin[] = "Insert Notes & Press Lighted Button To      Vend" ;
 const uint8_t credits[] = "  Credit = R";
-const uint8_t service[] = "  Service Mode";
-const uint8_t audit[] = "  Audit Mode";
-const uint8_t hopcoin[] = "Hopper Coin         Value";
+const uint8_t pricesetmsg[] = "   Price set mode";
+const uint8_t pricesetm2[] = "Press channel button    to set price      Service = Exit";
+const uint8_t vendsetup[] = "Press 1 = Vend Time Press 2 = Chan Link Press 3 = Sensor Off Press 8 to exit";
+const uint8_t pricemsg[] = "Price R";
+const uint8_t priceexit[] ="Press service to exit";
+const uint8_t auditmsg[] = "  Audit Mode";
+const uint8_t hoppcoin[] = "Hopper Coin         Button 1 = + & 2 = - Value = R";
 const uint8_t senset[] = "  Setup Sensor";
 const uint8_t credclr[] = "Push button 1 to clear credits   and exit";
 const uint8_t vendtest[] = " Push button to     vend";
 const uint8_t notetest[] = "  Insert Note";
 const uint8_t exit[] = "Exit";
-const uint8_t servmsg[] = "Service Mode: press 1 = Audit 2 = Sensor3=Note-en 4=Cred-clr 5=Vend 6=Note 8=Exit";
+const uint8_t servmsg[] = "1 = Audit 2 = Sensor3=Hop-Coin 4=Note-en5=Cred-clr 6=Prices 8=Exit";
 const uint8_t noteerr[] = "   Note error     code = 0x";
 const uint8_t inithop[] = "  Initialize Hopper";
 const uint8_t initnote[] = "     Initialize          Note Reader";
 const uint8_t nochange[] = "No Change Given";
 const uint8_t setnotes[] = "Enable / Disable    1 = R10, 2 = R20    3 = R50, 4 = R100   5 = R200";
-const uint8_t tenrand[] = "0 R10  ";
-const uint8_t twentyrand[] = "1 R20  ";
-const uint8_t fiftyrand[] = "2 R50  ";
-const uint8_t hundredrand[] = "3 R100 ";
-const uint8_t twohundredrand[] = "4 R200 ";
-const uint8_t enabled[] = "enabled ";
-const uint8_t disabled[] = "disabled";
+const uint8_t tenrand[] = "   R10  ";
+const uint8_t twentyrand[] = "  R20  ";
+const uint8_t fiftyrand[] = "  R50  ";
+const uint8_t hundredrand[] = "  R100 ";
+const uint8_t twohundredrand[] = "  R200 ";
+const uint8_t enabled[] = " enabled ";
+const uint8_t disabled[] = " disabled";
+const uint8_t creditclr[] = "Credits Cleared";
+const uint8_t sensmsg[] = "Sensor is ";
+const uint8_t onmsg[] = "On ";
+const uint8_t offmsg[] = "Off";
+const uint8_t clrmsg[] = "     ";
+const uint8_t dacmsg[] = "Sensitivity ";
 
 uint8_t bflag;
 uint8_t lcdfunc;
@@ -92,6 +106,7 @@ uint8_t stradd;
 uint24_t hexnum;
 uint8_t ercode;
 uint8_t lcdaddress;
+uint8_t dspposition;
 
 void lcd_dispadd(uint8_t lcdaddress);
 
@@ -115,6 +130,8 @@ void lcd_test(void);
 
 void displ_hex(uint24_t);
 
+void displ_price(uint8_t vendprice);
+
 void displ_credit(void);
 
 void displ_noteer(void);
@@ -124,8 +141,10 @@ void displ_test(void);
 void displ_totals(void);
 
 void displ_empty(void);
+
+void displ_sens(uint8_t smsgpos, uint8_t dmsgpos);
 //Pointer to note value message displays it.
-uint8_t displ_note(uint8_t *lcdstring);
+uint8_t displ_note(uint8_t *notestring);
 
 void displ_nendis(uint8_t notenum);
  //Returns busy and  character position + 1

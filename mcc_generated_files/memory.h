@@ -8,17 +8,17 @@
     memory.h
 
   @Summary
-    This is the generated header file for the MEMORY driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs 
+    This is the generated header file for the MEMORY driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   @Description
     This header file provides APIs for driver for MEMORY.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.55
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65
         Device            :  PIC18F47K40
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.40
+        Compiler          :  XC8 1.45
+        MPLAB             :  MPLAB X 4.10
 *******************************************************************************/
 
 /*
@@ -65,7 +65,7 @@
 
 #define WRITE_FLASH_BLOCKSIZE    128
 #define ERASE_FLASH_BLOCKSIZE    128
-#define END_FLASH                131072
+#define END_FLASH                0x020000
 
 /**
   Section: Flash Module APIs

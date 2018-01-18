@@ -10933,90 +10933,90 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr1.c: 105: uint16_t readVal;
 [; ;tmr1.c: 106: uint8_t readValHigh;
 [; ;tmr1.c: 107: uint8_t readValLow;
-[; ;tmr1.c: 109: readValLow = TMR1L;
+[; ;tmr1.c: 109: T1CONbits.T1RD16 = 1;
 "109
+[e = . . _T1CONbits 3 1 -> -> 1 `i `uc ]
+[; ;tmr1.c: 111: readValLow = TMR1L;
+"111
 [e = _readValLow _TMR1L ]
-[; ;tmr1.c: 110: readValHigh = TMR1H;
-"110
-[e = _readValHigh _TMR1H ]
-[; ;tmr1.c: 112: readVal = ((uint16_t)readValHigh << 8) | readValLow;
+[; ;tmr1.c: 112: readValHigh = TMR1H;
 "112
-[e = _readVal | << -> _readValHigh `ui -> 8 `i -> _readValLow `ui ]
-[; ;tmr1.c: 114: return readVal;
+[e = _readValHigh _TMR1H ]
+[; ;tmr1.c: 114: readVal = ((uint16_t)readValHigh << 8) | readValLow;
 "114
+[e = _readVal | << -> _readValHigh `ui -> 8 `i -> _readValLow `ui ]
+[; ;tmr1.c: 116: return readVal;
+"116
 [e ) _readVal ]
 [e $UE 1374  ]
-[; ;tmr1.c: 115: }
-"115
+[; ;tmr1.c: 117: }
+"117
 [e :UE 1374 ]
 }
-"117
-[v _TMR1_WriteTimer `(v ~T0 @X0 1 ef1`ui ]
-"118
-{
-[; ;tmr1.c: 117: void TMR1_WriteTimer(uint16_t timerVal)
-[; ;tmr1.c: 118: {
-[e :U _TMR1_WriteTimer ]
-"117
-[v _timerVal `ui ~T0 @X0 1 r1 ]
-"118
-[f ]
-[; ;tmr1.c: 119: if (T1CONbits.nT1SYNC == 1)
 "119
-[e $ ! == -> . . _T1CONbits 3 2 `i -> 1 `i 1376  ]
-[; ;tmr1.c: 120: {
+[v _TMR1_WriteTimer `(v ~T0 @X0 1 ef1`ui ]
 "120
 {
-[; ;tmr1.c: 122: T1CONbits.TMR1ON = 0;
+[; ;tmr1.c: 119: void TMR1_WriteTimer(uint16_t timerVal)
+[; ;tmr1.c: 120: {
+[e :U _TMR1_WriteTimer ]
+"119
+[v _timerVal `ui ~T0 @X0 1 r1 ]
+"120
+[f ]
+[; ;tmr1.c: 121: if (T1CONbits.nT1SYNC == 1)
+"121
+[e $ ! == -> . . _T1CONbits 3 2 `i -> 1 `i 1376  ]
+[; ;tmr1.c: 122: {
 "122
-[e = . . _T1CONbits 3 0 -> -> 0 `i `uc ]
-[; ;tmr1.c: 125: TMR1H = (timerVal >> 8);
-"125
-[e = _TMR1H -> >> _timerVal -> 8 `i `uc ]
-[; ;tmr1.c: 126: TMR1L = timerVal;
-"126
-[e = _TMR1L -> _timerVal `uc ]
-[; ;tmr1.c: 129: T1CONbits.TMR1ON =1;
-"129
-[e = . . _T1CONbits 3 0 -> -> 1 `i `uc ]
-"130
-}
-[; ;tmr1.c: 130: }
-[e $U 1377  ]
-"131
-[e :U 1376 ]
-[; ;tmr1.c: 131: else
-[; ;tmr1.c: 132: {
-"132
 {
-[; ;tmr1.c: 134: TMR1H = (timerVal >> 8);
-"134
+[; ;tmr1.c: 124: T1CONbits.TMR1ON = 0;
+"124
+[e = . . _T1CONbits 3 0 -> -> 0 `i `uc ]
+[; ;tmr1.c: 127: TMR1H = (timerVal >> 8);
+"127
 [e = _TMR1H -> >> _timerVal -> 8 `i `uc ]
-[; ;tmr1.c: 135: TMR1L = timerVal;
-"135
+[; ;tmr1.c: 128: TMR1L = timerVal;
+"128
 [e = _TMR1L -> _timerVal `uc ]
+[; ;tmr1.c: 131: T1CONbits.TMR1ON =1;
+"131
+[e = . . _T1CONbits 3 0 -> -> 1 `i `uc ]
+"132
+}
+[; ;tmr1.c: 132: }
+[e $U 1377  ]
+"133
+[e :U 1376 ]
+[; ;tmr1.c: 133: else
+[; ;tmr1.c: 134: {
+"134
+{
+[; ;tmr1.c: 136: TMR1H = (timerVal >> 8);
 "136
+[e = _TMR1H -> >> _timerVal -> 8 `i `uc ]
+[; ;tmr1.c: 137: TMR1L = timerVal;
+"137
+[e = _TMR1L -> _timerVal `uc ]
+"138
 }
 [e :U 1377 ]
-[; ;tmr1.c: 136: }
-[; ;tmr1.c: 137: }
-"137
+[; ;tmr1.c: 138: }
+[; ;tmr1.c: 139: }
+"139
 [e :UE 1375 ]
 }
-"139
+"141
 [v _TMR1_Reload `(v ~T0 @X0 1 ef ]
-"140
+"142
 {
-[; ;tmr1.c: 139: void TMR1_Reload(void)
-[; ;tmr1.c: 140: {
+[; ;tmr1.c: 141: void TMR1_Reload(void)
+[; ;tmr1.c: 142: {
 [e :U _TMR1_Reload ]
 [f ]
-[; ;tmr1.c: 142: TMR1H = (timer1ReloadVal >> 8);
-"142
-[e = _TMR1H -> >> _timer1ReloadVal -> 8 `i `uc ]
-[; ;tmr1.c: 143: TMR1L = timer1ReloadVal;
+[; ;tmr1.c: 143: TMR1_WriteTimer(timer1ReloadVal);
 "143
-[e = _TMR1L -> _timer1ReloadVal `uc ]
+[e ( _TMR1_WriteTimer (1 _timer1ReloadVal ]
 [; ;tmr1.c: 144: }
 "144
 [e :UE 1378 ]

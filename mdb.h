@@ -62,8 +62,8 @@ struct
     unsigned timeout : 1;
     //This flag is set when note reader is deliberately disabled
     unsigned vending : 1;
-    unsigned spare3 : 1;
-    unsigned spare4 : 1;
+    unsigned noteset : 1;
+    unsigned endis : 1;
     unsigned spare5 : 1;
 }mdbflags;
 
@@ -76,9 +76,9 @@ struct
     unsigned R50 : 1;
     unsigned R100 : 1;
     unsigned R200 : 1;
-    unsigned noteset : 1;
-    unsigned endis : 1;
     unsigned spare : 1;
+    unsigned spare1 : 1;
+    unsigned spare2 : 1;
 }noteen;
 volatile uint8_t noteen_byte;
 
@@ -106,6 +106,8 @@ void init_mdbdata(uint8_t);
 uint8_t mdb_reset(void);
 
 void set_notes(void);
+
+void save_notes(void);
 
 void enable_notes(uint8_t notenum);
 

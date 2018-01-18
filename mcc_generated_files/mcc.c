@@ -13,12 +13,12 @@
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.55
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65
         Device            :  PIC18F47K40
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.43 or later
-        MPLAB             :  MPLAB X 4.00
+        Compiler          :  XC8 1.45 or later
+        MPLAB             :  MPLAB X 4.10
 */
 
 /*
@@ -63,7 +63,7 @@
 // CONFIG2H
 #pragma config BORV = VBOR_2P45    // Brown Out Reset Voltage selection bits->Brown-out Reset Voltage (VBOR) set to 2.45V
 #pragma config ZCD = OFF    // ZCD Disable bit->ZCD disabled. ZCD can be enabled by setting the ZCDSEN bit of ZCDCON
-#pragma config PPS1WAY = ON    // PPSLOCK bit One-Way Set Enable bit->PPSLOCK bit can be cleared and set only once; PPS registers remain locked after one clear/set cycle
+#pragma config PPS1WAY = OFF    // PPSLOCK bit One-Way Set Enable bit->PPSLOCK bit can be set and cleared repeatedly (subject to the unlock sequence)
 #pragma config STVREN = ON    // Stack Full/Underflow Reset Enable bit->Stack full/underflow will cause Reset
 #pragma config DEBUG = OFF    // Debugger Enable bit->Background debugger disabled
 #pragma config XINST = OFF    // Extended Instruction Set Enable bit->Extended Instruction Set and Indexed Addressing Mode disabled
@@ -116,6 +116,7 @@
 void SYSTEM_Initialize(void)
 {
     INTERRUPT_Initialize();
+    PMD_Initialize();
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     CMP1_Initialize();
@@ -123,6 +124,7 @@ void SYSTEM_Initialize(void)
     DAC1_Initialize();
     TMR5_Initialize();
     TMR1_Initialize();
+    TMR0_Initialize();
     EUSART1_Initialize();
     EUSART2_Initialize();
 }
@@ -139,6 +141,22 @@ void OSCILLATOR_Initialize(void)
     OSCFRQ = 0x04;
     // TUN 0; 
     OSCTUNE = 0x00;
+}
+
+void PMD_Initialize(void)
+{
+    // CLKRMD CLKR enabled; SYSCMD SYSCLK enabled; SCANMD SCANNER enabled; FVRMD FVR enabled; IOCMD IOC enabled; CRCMD CRC enabled; HLVDMD HLVD enabled; NVMMD NVM enabled; 
+    PMD0 = 0x00;
+    // TMR0MD TMR0 enabled; TMR1MD TMR1 enabled; TMR4MD TMR4 enabled; TMR5MD TMR5 enabled; TMR2MD TMR2 enabled; TMR3MD TMR3 enabled; TMR6MD TMR6 enabled; 
+    PMD1 = 0x00;
+    // ZCDMD ZCD enabled; DACMD DAC enabled; CMP1MD CMP1 enabled; ADCMD ADC enabled; CMP2MD CMP2 enabled; 
+    PMD2 = 0x00;
+    // CCP2MD CCP2 enabled; CCP1MD CCP1 enabled; PWM4MD PWM4 enabled; PWM3MD PWM3 enabled; 
+    PMD3 = 0x00;
+    // CWG1MD CWG1 enabled; UART2MD EUSART2 enabled; MSSP1MD MSSP1 enabled; UART1MD EUSART enabled; MSSP2MD MSSP2 enabled; 
+    PMD4 = 0x00;
+    // DSMMD DSM enabled; 
+    PMD5 = 0x00;
 }
 
 

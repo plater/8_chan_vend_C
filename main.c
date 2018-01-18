@@ -64,12 +64,13 @@ void main(void)
     while(1 == 1)
     {
         asm("nop");
-        
+        DAC1CON1 = 0x00;
         if (!CMP1_GetOutputStatus())
         {
             venflags.service = 1;
             
         }
+        DAC1CON1 = sensorval;
         
         if(venflags.service == 1)
         {
@@ -150,20 +151,20 @@ void main(void)
 }
 
 /*Service main menu:
- button 0 = Audit menu
- button 1 = Hopper coin value
- button 2 = Sensor setup ie. DAC value for comparator
- button 3 = Notes accepted
- button 4 = Clear Credit and exit
- button 5 = Vend test
- button 6 = Note test
+ button 1 = Audit menu
+ button 2 = Hopper coin value
+ button 3 = Sensor setup ie. DAC value for comparator
+ button 4 = Notes accepted
+ button 5 = Clear Credit and exit
+ button 6 = Price set
+ button 7 = Vend Setup
  button 8 = Exit
  
  */
 
 void enter_service(void)
 {
-    mdb_reset();
+    mdb_unlock();
     lcd_string(servmsg, line1);
     
     
@@ -174,20 +175,21 @@ void enter_service(void)
         {
             case 0x01 : Audit();
             break;
-            case 0x02 : Hopper_coin();
+            case 0x02 : Sensor_set();
             break;
-            case 0x04 : Sensor_set();
+            case 0x04 : Hopper_coin();
             break;
             case 0x08 : set_notes();
             break;
             case 0x10 : Clear_cred();
+            venflags.service = 0;
+            asm("RESET");
+            case 0x20 : price_set();
             break;
-            case 0x20 : Vend_test();
-            break;
-            case 0x40 : Note_test();
+            case 0x40 : Vend_setup();
             break;
             case 0x80 : venflags.service = 0;
-            venflags.initialrun = 1;
+            asm("RESET");
             break;
         }
     }

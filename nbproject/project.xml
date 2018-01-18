@@ -14,11 +14,19 @@
             <make-dep-projects/>
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>cashint</word>
+            <word>cashinv</word>
             <word>cctalk</word>
+            <word>chan</word>
+            <word>chanlinkx</word>
+            <word>chany</word>
             <word>clr</word>
+            <word>const</word>
             <word>Cred</word>
+            <word>hexnum</word>
             <word>lcd</word>
             <word>lcdstring</word>
+            <word>linkbits</word>
             <word>lsb</word>
             <word>mdb</word>
             <word>mdbdata</word>
@@ -26,9 +34,18 @@
             <word>nobytes</word>
             <word>nop</word>
             <word>noteen</word>
+            <word>nvcash</word>
             <word>opto</word>
+            <word>pnvcash</word>
+            <word>pvcash</word>
+            <word>storeadd</word>
+            <word>storemem</word>
+            <word>storesize</word>
+            <word>struct</word>
             <word>uint</word>
             <word>unclearable</word>
+            <word>vcash</word>
+            <word>venderrors</word>
             <word>vends</word>
         </spellchecker-wordlist>
     </configuration>

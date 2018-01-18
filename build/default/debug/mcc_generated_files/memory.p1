@@ -10910,7 +10910,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 "82
 [v _blockStartAddr `ul ~T0 @X0 1 a ]
-[; ;memory.c: 82: uint32_t blockStartAddr = (uint32_t)(flashAddr & ((131072-1) ^ (128-1)));
+[; ;memory.c: 82: uint32_t blockStartAddr = (uint32_t)(flashAddr & ((0x020000-1) ^ (128-1)));
 [e = _blockStartAddr & _flashAddr -> ^ - -> 131072 `l -> -> 1 `i `l -> - -> 128 `i -> 1 `i `l `ul ]
 "83
 [v _offset `uc ~T0 @X0 1 a ]
@@ -10965,7 +10965,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 "101
 [v _blockStartAddr `ul ~T0 @X0 1 a ]
-[; ;memory.c: 101: uint32_t blockStartAddr = (uint32_t )(writeAddr & ((131072-1) ^ (128-1)));
+[; ;memory.c: 101: uint32_t blockStartAddr = (uint32_t )(writeAddr & ((0x020000-1) ^ (128-1)));
 [e = _blockStartAddr & _writeAddr -> ^ - -> 131072 `l -> -> 1 `i `l -> - -> 128 `i -> 1 `i `l `ul ]
 "102
 [v _GIEBitValue `uc ~T0 @X0 1 a ]

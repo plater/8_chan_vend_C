@@ -13,12 +13,12 @@
   @Description
     This source file provides APIs for TMR3.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.55
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65
         Device            :  PIC18F47K40
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.43
-        MPLAB 	          :  MPLAB X 4.00
+        Compiler          :  XC8 1.45
+        MPLAB 	          :  MPLAB X 4.10
 */
 
 /*
@@ -106,6 +106,8 @@ uint16_t TMR3_ReadTimer(void)
     uint8_t readValHigh;
     uint8_t readValLow;
     
+    T3CONbits.T3RD16 = 1;
+	
     readValLow = TMR3L;
     readValHigh = TMR3H;
     
@@ -138,9 +140,7 @@ void TMR3_WriteTimer(uint16_t timerVal)
 
 void TMR3_Reload(void)
 {
-    //Write to the Timer3 register
-    TMR3H = (timer3ReloadVal >> 8);
-    TMR3L = timer3ReloadVal;
+    TMR3_WriteTimer(timer3ReloadVal);
 }
 
 void TMR3_StartSinglePulseAcquisition(void)

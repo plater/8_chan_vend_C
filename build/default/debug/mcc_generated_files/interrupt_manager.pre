@@ -1,10 +1,10 @@
 
 # 1 "mcc_generated_files/interrupt_manager.c"
 
-# 157 "mcc_generated_files/interrupt_manager.h"
+# 132 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
 
-# 169
+# 144
 void interrupt INTERRUPT_InterruptManager (void);
 
 # 26 "/opt/microchip/xc8/v1.44/include/htc.h"
@@ -14480,17 +14480,32 @@ uint8_t TMR1_CheckGateValueStatus(void);
 # 386
 bool TMR1_HasOverflowOccured(void);
 
-# 92 "mcc_generated_files/cmp1.h"
+# 91 "mcc_generated_files/cmp1.h"
 void CMP1_Initialize(void);
 
-# 132
+# 131
 bool CMP1_GetOutputStatus(void);
 
-# 92 "mcc_generated_files/dac1.h"
-void DAC1_Initialize(void);
+# 99 "mcc_generated_files/tmr0.h"
+void TMR0_Initialize(void);
 
 # 128
-void DAC1_SetOutput(uint8_t inputData);
+void TMR0_StartTimer(void);
+
+# 160
+void TMR0_StopTimer(void);
+
+# 196
+uint16_t TMR0_Read16bitTimer(void);
+
+# 235
+void TMR0_Write16bitTimer(uint16_t timerVal);
+
+# 271
+void TMR0_Reload16bit(void);
+
+# 309
+bool TMR0_HasOverflowOccured(void);
 
 # 98 "mcc_generated_files/memory.h"
 uint8_t FLASH_ReadByte(uint32_t flashAddr);
@@ -14515,6 +14530,12 @@ uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
 
+# 92 "mcc_generated_files/dac1.h"
+void DAC1_Initialize(void);
+
+# 128
+void DAC1_SetOutput(uint8_t inputData);
+
 # 93 "mcc_generated_files/eusart2.h"
 void EUSART2_Initialize(void);
 
@@ -14535,11 +14556,14 @@ uint8_t EUSART1_Read(void);
 # 135
 void EUSART1_Write(uint8_t txData);
 
-# 76 "mcc_generated_files/mcc.h"
+# 77 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 89
+# 90
 void OSCILLATOR_Initialize(void);
+
+# 103
+void PMD_Initialize(void);
 
 # 51 "mcc_generated_files/interrupt_manager.c"
 void INTERRUPT_Initialize (void)

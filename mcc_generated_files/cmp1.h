@@ -1,25 +1,25 @@
-/**
-  CMP1 Generated Driver API Header File
+ /**
+   CMP1 Generated Driver API Header File
+ 
+   @Company
+     Microchip Technology Inc. 
 
-  @Company
-    Microchip Technology Inc.
-
-  @File Name
+   @File Name
     cmp1.h
 
-  @Summary
-    This is the generated header file for the CMP1 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs 
-
-  @Description
-    This header file provides APIs for driver for CMP1.
-    Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs  - 1.55
-        Device            :  PIC18F47K40
-        Driver Version    :  2.00
-    The generated drivers are tested against the following:
-        Compiler          :  XC8 1.35
-        MPLAB             :  MPLAB X 3.40
-*/
+   @Summary
+     This is the generated header file for the CMP1 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+ 
+   @Description
+     This header file provides APIs for driver for CMP1.
+     Generation Information :
+         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65
+         Device            :  PIC18F47K40
+         Driver Version    :  2.00
+     The generated drivers are tested against the following:
+         Compiler          :  XC8 1.45 or later
+         MPLAB             :  MPLAB X 4.10
+ */
 
 /*
     (c) 2016 Microchip Technology Inc. and its subsidiaries. You may use this
@@ -43,12 +43,12 @@
     TERMS.
 */
 
-#ifndef _CMP1_H
-#define _CMP1_H
-
-/**
-  Section: Included Files
-*/
+ #ifndef _CMP1_H
+ #define _CMP1_H
+ 
+ /**
+   Section: Included Files
+ */
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -82,7 +82,6 @@
     None
 
   @Comment
-    
 
   @Example
     <code>
@@ -114,7 +113,7 @@ void CMP1_Initialize(void);
     #define LED_On  LATAbits.LATA0=1
     #define LED_Off LATAbits.LATA0=0
 
-    CMP1_Initialize()
+    CMP1_Initialize();
 
     while(1)
     {

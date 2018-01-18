@@ -14465,6 +14465,8 @@ uint16_t readVal;
 uint8_t readValHigh;
 uint8_t readValLow;
 
+T1CONbits.T1RD16 = 1;
+
 readValLow = TMR1L;
 readValHigh = TMR1H;
 
@@ -14497,9 +14499,7 @@ TMR1L = timerVal;
 
 void TMR1_Reload(void)
 {
-
-TMR1H = (timer1ReloadVal >> 8);
-TMR1L = timer1ReloadVal;
+TMR1_WriteTimer(timer1ReloadVal);
 }
 
 void TMR1_StartSinglePulseAcquisition(void)

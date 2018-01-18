@@ -10791,19 +10791,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 205: typedef uint32_t uintmax_t;
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
-[; ;cmp1.h: 92: void CMP1_Initialize(void);
-[; ;cmp1.h: 132: bool CMP1_GetOutputStatus(void);
-"56 mcc_generated_files/cmp1.c
+[; ;cmp1.h: 91: void CMP1_Initialize(void);
+[; ;cmp1.h: 131: bool CMP1_GetOutputStatus(void);
+"57 mcc_generated_files/cmp1.c
 [v _CMP1_Initialize `(v ~T0 @X0 1 ef ]
-"57
+"58
 {
-[; ;cmp1.c: 56: void CMP1_Initialize(void)
-[; ;cmp1.c: 57: {
+[; ;cmp1.c: 57: void CMP1_Initialize(void)
+[; ;cmp1.c: 58: {
 [e :U _CMP1_Initialize ]
 [f ]
-[; ;cmp1.c: 61: CM1CON0 = 0x94;
+[; ;cmp1.c: 61: CM1CON0 = 0x90;
 "61
-[e = _CM1CON0 -> -> 148 `i `uc ]
+[e = _CM1CON0 -> -> 144 `i `uc ]
 [; ;cmp1.c: 64: CM1CON1 = 0x00;
 "64
 [e = _CM1CON1 -> -> 0 `i `uc ]

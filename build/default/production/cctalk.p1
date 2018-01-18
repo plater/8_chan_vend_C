@@ -1,19 +1,49 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "58 mdb.h
 [s S1371 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1371 . isdata noteerr mode timeout vending spare3 spare4 spare5 ]
+[n S1371 . isdata noteerr mode timeout vending noteset endis spare5 ]
 "73
 [s S1372 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1372 . R10 R20 R50 R100 R200 noteset endis spare ]
+[n S1372 . R10 R20 R50 R100 R200 spare spare1 spare2 ]
 "87
 [s S1373 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1373 . chan1 chan2 chan3 chan4 chan5 chan6 chan7 chan8 ]
-"42 vend.h
+"84 vend.h
 [s S1374 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1374 . iscredit error inscoin nochange credisplay initialrun noterr service ]
-"61 cctalk.h
+[n S1374 . chan1 chan2 chan3 chan4 chan5 chan6 chan7 chan8 ]
+"99
 [s S1375 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1375 . isdata hoperr mode timeout spare2 spare3 spare4 spare5 ]
+[n S1375 . chan1 chan2 chan3 chan4 chan5 chan6 chan7 chan8 ]
+"114
+[s S1376 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1376 . chan1 chan2 chan3 chan4 chan5 chan6 chan7 chan8 ]
+"126
+[s S1377 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1377 . chan1 chan2 chan3 chan4 chan5 chan6 chan7 chan8 ]
+"138
+[s S1378 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1378 . chan1 chan2 chan3 chan4 chan5 chan6 chan7 chan8 ]
+"150
+[s S1379 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1379 . chan1 chan2 chan3 chan4 chan5 chan6 chan7 chan8 ]
+"162
+[s S1380 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1380 . chan1 chan2 chan3 chan4 chan5 chan6 chan7 chan8 ]
+"174
+[s S1381 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1381 . chan1 chan2 chan3 chan4 chan5 chan6 chan7 chan8 ]
+"186
+[s S1382 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1382 . chan1 chan2 chan3 chan4 chan5 chan6 chan7 chan8 ]
+"198
+[s S1383 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1383 . chan1 chan2 chan3 chan4 chan5 chan6 chan7 chan8 ]
+"212
+[s S1384 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1384 . iscredit error inscoin nochange credisplay initialrun noterr service priceset setprice vendset chanlink mottime nosense spare6 spare7 ]
+"61 cctalk.h
+[s S1385 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1385 . isdata hoperr mode timeout spare2 spare3 spare4 spare5 ]
 "77
 [v _cctalk_on `(v ~T0 @X0 0 ef ]
 "72
@@ -28,7 +58,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _cctalk_poll `(v ~T0 @X0 0 ef ]
 "93 mcc_generated_files/eusart1.h
 [v _eusartmdb_Initialize `(v ~T0 @X0 0 ef ]
-"122 mdb.h
+"124 mdb.h
 [v _mdb_on `(v ~T0 @X0 0 ef ]
 "80 cctalk.h
 [v _cctalk_comm `(uc ~T0 @X0 0 ef3`uc`uc`uc ]
@@ -36,7 +66,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _init_mdbdata `(v ~T0 @X0 0 ef1`uc ]
 "18619 /opt/microchip/xc8/v1.44/include/pic18f47k40.h
 [v _RC1REG `Vuc ~T0 @X0 0 e@3993 ]
-"136 mdb.h
+"138 mdb.h
 [v _mdb_transmit `(v ~T0 @X0 0 ef1`uc ]
 "18789 /opt/microchip/xc8/v1.44/include/pic18f47k40.h
 [s S915 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -69,7 +99,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PIR4bits `VS265 ~T0 @X0 0 e@3790 ]
 "115 mcc_generated_files/eusart1.h
 [v _EUSART1_Read `(uc ~T0 @X0 0 ef ]
-"132 mdb.h
+"134 mdb.h
 [v _mdb_waitr `(v ~T0 @X0 0 ef ]
 "4360 /opt/microchip/xc8/v1.44/include/pic18f47k40.h
 [s S263 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -10871,8 +10901,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pin_manager.h: 692: void PIN_MANAGER_Initialize (void);
 [; ;pin_manager.h: 704: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;interrupt_manager.h: 157: void INTERRUPT_Initialize (void);
-[; ;interrupt_manager.h: 169: void interrupt INTERRUPT_InterruptManager (void);
+[; ;interrupt_manager.h: 132: void INTERRUPT_Initialize (void);
+[; ;interrupt_manager.h: 144: void interrupt INTERRUPT_InterruptManager (void);
 [; ;tmr5.h: 99: void TMR5_Initialize(void);
 [; ;tmr5.h: 128: void TMR5_StartTimer(void);
 [; ;tmr5.h: 160: void TMR5_StopTimer(void);
@@ -10900,10 +10930,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr1.h: 309: void TMR1_StartSinglePulseAcquisition(void);
 [; ;tmr1.h: 348: uint8_t TMR1_CheckGateValueStatus(void);
 [; ;tmr1.h: 386: bool TMR1_HasOverflowOccured(void);
-[; ;cmp1.h: 92: void CMP1_Initialize(void);
-[; ;cmp1.h: 132: bool CMP1_GetOutputStatus(void);
-[; ;dac1.h: 92: void DAC1_Initialize(void);
-[; ;dac1.h: 128: void DAC1_SetOutput(uint8_t inputData);
+[; ;cmp1.h: 91: void CMP1_Initialize(void);
+[; ;cmp1.h: 131: bool CMP1_GetOutputStatus(void);
+[; ;tmr0.h: 99: void TMR0_Initialize(void);
+[; ;tmr0.h: 128: void TMR0_StartTimer(void);
+[; ;tmr0.h: 160: void TMR0_StopTimer(void);
+[; ;tmr0.h: 196: uint16_t TMR0_Read16bitTimer(void);
+[; ;tmr0.h: 235: void TMR0_Write16bitTimer(uint16_t timerVal);
+[; ;tmr0.h: 271: void TMR0_Reload16bit(void);
+[; ;tmr0.h: 309: bool TMR0_HasOverflowOccured(void);
 [; ;memory.h: 98: uint8_t FLASH_ReadByte(uint32_t flashAddr);
 [; ;memory.h: 124: uint16_t FLASH_ReadWord(uint32_t flashAddr);
 [; ;memory.h: 156: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
@@ -10912,6 +10947,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;memory.h: 248: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [; ;memory.h: 274: uint8_t DATAEE_ReadByte(uint16_t bAdd);
 [; ;memory.h: 276: void MEMORY_Tasks(void);
+[; ;dac1.h: 92: void DAC1_Initialize(void);
+[; ;dac1.h: 128: void DAC1_SetOutput(uint8_t inputData);
 [; ;eusart2.h: 93: void EUSART2_Initialize(void);
 [; ;eusart2.h: 113: uint8_t EUSART2_Read(void);
 [; ;eusart2.h: 133: void EUSART2_Write(uint8_t txData);
@@ -10919,8 +10956,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart1.h: 95: void EUSART1_Initialize(void);
 [; ;eusart1.h: 115: uint8_t EUSART1_Read(void);
 [; ;eusart1.h: 135: void EUSART1_Write(uint8_t txData);
-[; ;mcc.h: 76: void SYSTEM_Initialize(void);
-[; ;mcc.h: 89: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 77: void SYSTEM_Initialize(void);
+[; ;mcc.h: 90: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 103: void PMD_Initialize(void);
 "41 lcd.h
 [v _count `c ~T0 @X0 1 e ]
 [; ;lcd.h: 41: signed char count;
@@ -11008,31 +11046,31 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 24 `i `uc
 ]
 [; ;lcd.h: 56: const char dispsl = 0x18;
-"57
+"58
 [v _line1 `Cuc ~T0 @X0 1 e ]
 [i _line1
--> -> 128 `i `uc
+-> -> 0 `i `uc
 ]
-[; ;lcd.h: 57: const char line1 = 0x80;
-"58
+[; ;lcd.h: 58: const char line1 = 0x00;
+"60
 [v _line2 `Cuc ~T0 @X0 1 e ]
 [i _line2
--> -> 192 `i `uc
+-> -> 64 `i `uc
 ]
-[; ;lcd.h: 58: const char line2 = 0xC0;
-"59
+[; ;lcd.h: 60: const char line2 = 0x40;
+"62
 [v _line3 `Cuc ~T0 @X0 1 e ]
 [i _line3
--> -> 148 `i `uc
+-> -> 20 `i `uc
 ]
-[; ;lcd.h: 59: const char line3 = 0x94;
-"60
+[; ;lcd.h: 62: const char line3 = 0x14;
+"64
 [v _line4 `Cuc ~T0 @X0 1 e ]
 [i _line4
--> -> 212 `i `uc
+-> -> 84 `i `uc
 ]
-[; ;lcd.h: 60: const char line4 = 0xD4;
-"63
+[; ;lcd.h: 64: const char line4 = 0x54;
+"67
 [v _inscoin `Cuc ~T0 @X0 -> 0 `x e ]
 [i _inscoin
 :U ..
@@ -11043,25 +11081,52 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 114 `c
 -> 116 `c
 -> 32 `c
--> 67 `c
--> 111 `c
--> 105 `c
--> 110 `c
--> 115 `c
--> 32 `c
--> 111 `c
--> 114 `c
--> 32 `c
 -> 78 `c
 -> 111 `c
 -> 116 `c
 -> 101 `c
 -> 115 `c
+-> 32 `c
+-> 38 `c
+-> 32 `c
+-> 80 `c
+-> 114 `c
+-> 101 `c
+-> 115 `c
+-> 115 `c
+-> 32 `c
+-> 76 `c
+-> 105 `c
+-> 103 `c
+-> 104 `c
+-> 116 `c
+-> 101 `c
+-> 100 `c
+-> 32 `c
+-> 66 `c
+-> 117 `c
+-> 116 `c
+-> 116 `c
+-> 111 `c
+-> 110 `c
+-> 32 `c
+-> 84 `c
+-> 111 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 86 `c
+-> 101 `c
+-> 110 `c
+-> 100 `c
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 63: const uint8_t inscoin[] = "Insert Coins or Notes";
-"64
+[; ;lcd.h: 67: const uint8_t inscoin[] = "Insert Notes & Press Lighted Button To      Vend" ;
+"68
 [v _credits `Cuc ~T0 @X0 -> 0 `x e ]
 [i _credits
 :U ..
@@ -11080,11 +11145,76 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 64: const uint8_t credits[] = "  Credit = R";
-"65
-[v _service `Cuc ~T0 @X0 -> 0 `x e ]
-[i _service
+[; ;lcd.h: 68: const uint8_t credits[] = "  Credit = R";
+"69
+[v _pricesetmsg `Cuc ~T0 @X0 -> 0 `x e ]
+[i _pricesetmsg
 :U ..
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 80 `c
+-> 114 `c
+-> 105 `c
+-> 99 `c
+-> 101 `c
+-> 32 `c
+-> 115 `c
+-> 101 `c
+-> 116 `c
+-> 32 `c
+-> 109 `c
+-> 111 `c
+-> 100 `c
+-> 101 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 69: const uint8_t pricesetmsg[] = "   Price set mode";
+"70
+[v _pricesetm2 `Cuc ~T0 @X0 -> 0 `x e ]
+[i _pricesetm2
+:U ..
+-> 80 `c
+-> 114 `c
+-> 101 `c
+-> 115 `c
+-> 115 `c
+-> 32 `c
+-> 99 `c
+-> 104 `c
+-> 97 `c
+-> 110 `c
+-> 110 `c
+-> 101 `c
+-> 108 `c
+-> 32 `c
+-> 98 `c
+-> 117 `c
+-> 116 `c
+-> 116 `c
+-> 111 `c
+-> 110 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 116 `c
+-> 111 `c
+-> 32 `c
+-> 115 `c
+-> 101 `c
+-> 116 `c
+-> 32 `c
+-> 112 `c
+-> 114 `c
+-> 105 `c
+-> 99 `c
+-> 101 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
 -> 32 `c
 -> 32 `c
 -> 83 `c
@@ -11095,17 +11225,147 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 99 `c
 -> 101 `c
 -> 32 `c
--> 77 `c
--> 111 `c
--> 100 `c
--> 101 `c
+-> 61 `c
+-> 32 `c
+-> 69 `c
+-> 120 `c
+-> 105 `c
+-> 116 `c
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 65: const uint8_t service[] = "  Service Mode";
-"66
-[v _audit `Cuc ~T0 @X0 -> 0 `x e ]
-[i _audit
+[; ;lcd.h: 70: const uint8_t pricesetm2[] = "Press channel button    to set price      Service = Exit";
+"71
+[v _vendsetup `Cuc ~T0 @X0 -> 0 `x e ]
+[i _vendsetup
+:U ..
+-> 80 `c
+-> 114 `c
+-> 101 `c
+-> 115 `c
+-> 115 `c
+-> 32 `c
+-> 49 `c
+-> 32 `c
+-> 61 `c
+-> 32 `c
+-> 86 `c
+-> 101 `c
+-> 110 `c
+-> 100 `c
+-> 32 `c
+-> 84 `c
+-> 105 `c
+-> 109 `c
+-> 101 `c
+-> 32 `c
+-> 80 `c
+-> 114 `c
+-> 101 `c
+-> 115 `c
+-> 115 `c
+-> 32 `c
+-> 50 `c
+-> 32 `c
+-> 61 `c
+-> 32 `c
+-> 67 `c
+-> 104 `c
+-> 97 `c
+-> 110 `c
+-> 32 `c
+-> 76 `c
+-> 105 `c
+-> 110 `c
+-> 107 `c
+-> 32 `c
+-> 80 `c
+-> 114 `c
+-> 101 `c
+-> 115 `c
+-> 115 `c
+-> 32 `c
+-> 51 `c
+-> 32 `c
+-> 61 `c
+-> 32 `c
+-> 83 `c
+-> 101 `c
+-> 110 `c
+-> 115 `c
+-> 111 `c
+-> 114 `c
+-> 32 `c
+-> 79 `c
+-> 102 `c
+-> 102 `c
+-> 32 `c
+-> 80 `c
+-> 114 `c
+-> 101 `c
+-> 115 `c
+-> 115 `c
+-> 32 `c
+-> 56 `c
+-> 32 `c
+-> 116 `c
+-> 111 `c
+-> 32 `c
+-> 101 `c
+-> 120 `c
+-> 105 `c
+-> 116 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 71: const uint8_t vendsetup[] = "Press 1 = Vend Time Press 2 = Chan Link Press 3 = Sensor Off Press 8 to exit";
+"72
+[v _pricemsg `Cuc ~T0 @X0 -> 0 `x e ]
+[i _pricemsg
+:U ..
+-> 80 `c
+-> 114 `c
+-> 105 `c
+-> 99 `c
+-> 101 `c
+-> 32 `c
+-> 82 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 72: const uint8_t pricemsg[] = "Price R";
+"73
+[v _priceexit `Cuc ~T0 @X0 -> 0 `x e ]
+[i _priceexit
+:U ..
+-> 80 `c
+-> 114 `c
+-> 101 `c
+-> 115 `c
+-> 115 `c
+-> 32 `c
+-> 115 `c
+-> 101 `c
+-> 114 `c
+-> 118 `c
+-> 105 `c
+-> 99 `c
+-> 101 `c
+-> 32 `c
+-> 116 `c
+-> 111 `c
+-> 32 `c
+-> 101 `c
+-> 120 `c
+-> 105 `c
+-> 116 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 73: const uint8_t priceexit[] ="Press service to exit";
+"74
+[v _auditmsg `Cuc ~T0 @X0 -> 0 `x e ]
+[i _auditmsg
 :U ..
 -> 32 `c
 -> 32 `c
@@ -11122,10 +11382,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 66: const uint8_t audit[] = "  Audit Mode";
-"67
-[v _hopcoin `Cuc ~T0 @X0 -> 0 `x e ]
-[i _hopcoin
+[; ;lcd.h: 74: const uint8_t auditmsg[] = "  Audit Mode";
+"75
+[v _hoppcoin `Cuc ~T0 @X0 -> 0 `x e ]
+[i _hoppcoin
 :U ..
 -> 72 `c
 -> 111 `c
@@ -11147,16 +11407,41 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 32 `c
 -> 32 `c
 -> 32 `c
+-> 66 `c
+-> 117 `c
+-> 116 `c
+-> 116 `c
+-> 111 `c
+-> 110 `c
+-> 32 `c
+-> 49 `c
+-> 32 `c
+-> 61 `c
+-> 32 `c
+-> 43 `c
+-> 32 `c
+-> 38 `c
+-> 32 `c
+-> 50 `c
+-> 32 `c
+-> 61 `c
+-> 32 `c
+-> 45 `c
+-> 32 `c
 -> 86 `c
 -> 97 `c
 -> 108 `c
 -> 117 `c
 -> 101 `c
+-> 32 `c
+-> 61 `c
+-> 32 `c
+-> 82 `c
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 67: const uint8_t hopcoin[] = "Hopper Coin         Value";
-"68
+[; ;lcd.h: 75: const uint8_t hoppcoin[] = "Hopper Coin         Button 1 = + & 2 = - Value = R";
+"76
 [v _senset `Cuc ~T0 @X0 -> 0 `x e ]
 [i _senset
 :U ..
@@ -11177,8 +11462,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 68: const uint8_t senset[] = "  Setup Sensor";
-"69
+[; ;lcd.h: 76: const uint8_t senset[] = "  Setup Sensor";
+"77
 [v _credclr `Cuc ~T0 @X0 -> 0 `x e ]
 [i _credclr
 :U ..
@@ -11226,8 +11511,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 69: const uint8_t credclr[] = "Push button 1 to clear credits   and exit";
-"70
+[; ;lcd.h: 77: const uint8_t credclr[] = "Push button 1 to clear credits   and exit";
+"78
 [v _vendtest `Cuc ~T0 @X0 -> 0 `x e ]
 [i _vendtest
 :U ..
@@ -11258,8 +11543,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 70: const uint8_t vendtest[] = " Push button to     vend";
-"71
+[; ;lcd.h: 78: const uint8_t vendtest[] = " Push button to     vend";
+"79
 [v _notetest `Cuc ~T0 @X0 -> 0 `x e ]
 [i _notetest
 :U ..
@@ -11279,8 +11564,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 71: const uint8_t notetest[] = "  Insert Note";
-"72
+[; ;lcd.h: 79: const uint8_t notetest[] = "  Insert Note";
+"80
 [v _exit `Cuc ~T0 @X0 -> 0 `x e ]
 [i _exit
 :U ..
@@ -11291,31 +11576,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 72: const uint8_t exit[] = "Exit";
-"73
+[; ;lcd.h: 80: const uint8_t exit[] = "Exit";
+"81
 [v _servmsg `Cuc ~T0 @X0 -> 0 `x e ]
 [i _servmsg
 :U ..
--> 83 `c
--> 101 `c
--> 114 `c
--> 118 `c
--> 105 `c
--> 99 `c
--> 101 `c
--> 32 `c
--> 77 `c
--> 111 `c
--> 100 `c
--> 101 `c
--> 58 `c
--> 32 `c
--> 112 `c
--> 114 `c
--> 101 `c
--> 115 `c
--> 115 `c
--> 32 `c
 -> 49 `c
 -> 32 `c
 -> 61 `c
@@ -11338,39 +11603,45 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 114 `c
 -> 51 `c
 -> 61 `c
+-> 72 `c
+-> 111 `c
+-> 112 `c
+-> 45 `c
+-> 67 `c
+-> 111 `c
+-> 105 `c
+-> 110 `c
+-> 32 `c
+-> 52 `c
+-> 61 `c
 -> 78 `c
 -> 111 `c
 -> 116 `c
 -> 101 `c
--> 32 `c
+-> 45 `c
 -> 101 `c
 -> 110 `c
--> 32 `c
--> 52 `c
+-> 53 `c
 -> 61 `c
 -> 67 `c
 -> 114 `c
 -> 101 `c
 -> 100 `c
--> 105 `c
--> 116 `c
--> 32 `c
--> 32 `c
--> 53 `c
--> 61 `c
--> 86 `c
--> 101 `c
--> 110 `c
--> 100 `c
+-> 45 `c
+-> 99 `c
+-> 108 `c
+-> 114 `c
 -> 32 `c
 -> 54 `c
 -> 61 `c
--> 78 `c
--> 111 `c
--> 116 `c
+-> 80 `c
+-> 114 `c
+-> 105 `c
+-> 99 `c
 -> 101 `c
+-> 115 `c
 -> 32 `c
--> 55 `c
+-> 56 `c
 -> 61 `c
 -> 69 `c
 -> 120 `c
@@ -11379,8 +11650,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 73: const uint8_t servmsg[] = "Service Mode: press 1 = Audit 2 = Sensor3=Note en 4=Credit  5=Vend 6=Note 7=Exit";
-"74
+[; ;lcd.h: 81: const uint8_t servmsg[] = "1 = Audit 2 = Sensor3=Hop-Coin 4=Note-en5=Cred-clr 6=Prices 8=Exit";
+"82
 [v _noteerr `Cuc ~T0 @X0 -> 0 `x e ]
 [i _noteerr
 :U ..
@@ -11414,8 +11685,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 74: const uint8_t noteerr[] = "   Note error     code = 0x";
-"75
+[; ;lcd.h: 82: const uint8_t noteerr[] = "   Note error     code = 0x";
+"83
 [v _inithop `Cuc ~T0 @X0 -> 0 `x e ]
 [i _inithop
 :U ..
@@ -11441,8 +11712,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 75: const uint8_t inithop[] = "  Initialize Hopper";
-"76
+[; ;lcd.h: 83: const uint8_t inithop[] = "  Initialize Hopper";
+"84
 [v _initnote `Cuc ~T0 @X0 -> 0 `x e ]
 [i _initnote
 :U ..
@@ -11485,8 +11756,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 76: const uint8_t initnote[] = "     Initialize          Note Reader";
-"77
+[; ;lcd.h: 84: const uint8_t initnote[] = "     Initialize          Note Reader";
+"85
 [v _nochange `Cuc ~T0 @X0 -> 0 `x e ]
 [i _nochange
 :U ..
@@ -11508,8 +11779,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 77: const uint8_t nochange[] = "No Change Given";
-"78
+[; ;lcd.h: 85: const uint8_t nochange[] = "No Change Given";
+"86
 [v _setnotes `Cuc ~T0 @X0 -> 0 `x e ]
 [i _setnotes
 :U ..
@@ -11584,12 +11855,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 78: const uint8_t setnotes[] = "Enable / Disable    1 = R10, 2 = R20    3 = R50, 4 = R100   5 = R200";
-"79
+[; ;lcd.h: 86: const uint8_t setnotes[] = "Enable / Disable    1 = R10, 2 = R20    3 = R50, 4 = R100   5 = R200";
+"87
 [v _tenrand `Cuc ~T0 @X0 -> 0 `x e ]
 [i _tenrand
 :U ..
--> 48 `c
+-> 32 `c
+-> 32 `c
 -> 32 `c
 -> 82 `c
 -> 49 `c
@@ -11599,12 +11871,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 79: const uint8_t tenrand[] = "0 R10  ";
-"80
+[; ;lcd.h: 87: const uint8_t tenrand[] = "   R10  ";
+"88
 [v _twentyrand `Cuc ~T0 @X0 -> 0 `x e ]
 [i _twentyrand
 :U ..
--> 49 `c
+-> 32 `c
 -> 32 `c
 -> 82 `c
 -> 50 `c
@@ -11614,12 +11886,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 80: const uint8_t twentyrand[] = "1 R20  ";
-"81
+[; ;lcd.h: 88: const uint8_t twentyrand[] = "  R20  ";
+"89
 [v _fiftyrand `Cuc ~T0 @X0 -> 0 `x e ]
 [i _fiftyrand
 :U ..
--> 50 `c
+-> 32 `c
 -> 32 `c
 -> 82 `c
 -> 53 `c
@@ -11629,12 +11901,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 81: const uint8_t fiftyrand[] = "2 R50  ";
-"82
+[; ;lcd.h: 89: const uint8_t fiftyrand[] = "  R50  ";
+"90
 [v _hundredrand `Cuc ~T0 @X0 -> 0 `x e ]
 [i _hundredrand
 :U ..
--> 51 `c
+-> 32 `c
 -> 32 `c
 -> 82 `c
 -> 49 `c
@@ -11644,12 +11916,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 82: const uint8_t hundredrand[] = "3 R100 ";
-"83
+[; ;lcd.h: 90: const uint8_t hundredrand[] = "  R100 ";
+"91
 [v _twohundredrand `Cuc ~T0 @X0 -> 0 `x e ]
 [i _twohundredrand
 :U ..
--> 52 `c
+-> 32 `c
 -> 32 `c
 -> 82 `c
 -> 50 `c
@@ -11659,11 +11931,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 83: const uint8_t twohundredrand[] = "4 R200 ";
-"84
+[; ;lcd.h: 91: const uint8_t twohundredrand[] = "  R200 ";
+"92
 [v _enabled `Cuc ~T0 @X0 -> 0 `x e ]
 [i _enabled
 :U ..
+-> 32 `c
 -> 101 `c
 -> 110 `c
 -> 97 `c
@@ -11675,11 +11948,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 84: const uint8_t enabled[] = "enabled ";
-"85
+[; ;lcd.h: 92: const uint8_t enabled[] = " enabled ";
+"93
 [v _disabled `Cuc ~T0 @X0 -> 0 `x e ]
 [i _disabled
 :U ..
+-> 32 `c
 -> 100 `c
 -> 105 `c
 -> 115 `c
@@ -11691,50 +11965,151 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;lcd.h: 85: const uint8_t disabled[] = "disabled";
-"87
-[v _bflag `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 87: uint8_t bflag;
-"88
-[v _lcdfunc `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 88: uint8_t lcdfunc;
-"89
-[v _lcdata `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 89: uint8_t lcdata;
-"90
-[v _lcdline `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 90: uint8_t lcdline;
-"91
-[v _stradd `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 91: uint8_t stradd;
-"92
-[v _hexnum `um ~T0 @X0 1 e ]
-[; ;lcd.h: 92: uint24_t hexnum;
-"93
-[v _ercode `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 93: uint8_t ercode;
+[; ;lcd.h: 93: const uint8_t disabled[] = " disabled";
 "94
+[v _creditclr `Cuc ~T0 @X0 -> 0 `x e ]
+[i _creditclr
+:U ..
+-> 67 `c
+-> 114 `c
+-> 101 `c
+-> 100 `c
+-> 105 `c
+-> 116 `c
+-> 115 `c
+-> 32 `c
+-> 67 `c
+-> 108 `c
+-> 101 `c
+-> 97 `c
+-> 114 `c
+-> 101 `c
+-> 100 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 94: const uint8_t creditclr[] = "Credits Cleared";
+"95
+[v _sensmsg `Cuc ~T0 @X0 -> 0 `x e ]
+[i _sensmsg
+:U ..
+-> 83 `c
+-> 101 `c
+-> 110 `c
+-> 115 `c
+-> 111 `c
+-> 114 `c
+-> 32 `c
+-> 105 `c
+-> 115 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 95: const uint8_t sensmsg[] = "Sensor is ";
+"96
+[v _onmsg `Cuc ~T0 @X0 -> 0 `x e ]
+[i _onmsg
+:U ..
+-> 79 `c
+-> 110 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 96: const uint8_t onmsg[] = "On ";
+"97
+[v _offmsg `Cuc ~T0 @X0 -> 0 `x e ]
+[i _offmsg
+:U ..
+-> 79 `c
+-> 102 `c
+-> 102 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 97: const uint8_t offmsg[] = "Off";
+"98
+[v _clrmsg `Cuc ~T0 @X0 -> 0 `x e ]
+[i _clrmsg
+:U ..
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 98: const uint8_t clrmsg[] = "     ";
+"99
+[v _dacmsg `Cuc ~T0 @X0 -> 0 `x e ]
+[i _dacmsg
+:U ..
+-> 83 `c
+-> 101 `c
+-> 110 `c
+-> 115 `c
+-> 105 `c
+-> 116 `c
+-> 105 `c
+-> 118 `c
+-> 105 `c
+-> 116 `c
+-> 121 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 99: const uint8_t dacmsg[] = "Sensitivity ";
+"101
+[v _bflag `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 101: uint8_t bflag;
+"102
+[v _lcdfunc `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 102: uint8_t lcdfunc;
+"103
+[v _lcdata `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 103: uint8_t lcdata;
+"104
+[v _lcdline `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 104: uint8_t lcdline;
+"105
+[v _stradd `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 105: uint8_t stradd;
+"106
+[v _hexnum `um ~T0 @X0 1 e ]
+[; ;lcd.h: 106: uint24_t hexnum;
+"107
+[v _ercode `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 107: uint8_t ercode;
+"108
 [v _lcdaddress `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 94: uint8_t lcdaddress;
-[; ;lcd.h: 96: void lcd_dispadd(uint8_t lcdaddress);
-[; ;lcd.h: 98: void displ_code(uint8_t ercode);
-[; ;lcd.h: 100: void lcd_init(void);
-[; ;lcd.h: 102: void lcd_string(uint8_t *, uint8_t lcdline);
-[; ;lcd.h: 104: void lcd_writeC(uint8_t);
-[; ;lcd.h: 106: void lcd_write(uint8_t);
-[; ;lcd.h: 108: void lcd_clockH(void);
-[; ;lcd.h: 110: void lcd_clockL(void);
-[; ;lcd.h: 112: void lcd_clockE(void);
-[; ;lcd.h: 114: void lcd_test(void);
-[; ;lcd.h: 116: void displ_hex(uint24_t);
-[; ;lcd.h: 118: void displ_credit(void);
-[; ;lcd.h: 120: void displ_noteer(void);
-[; ;lcd.h: 122: void displ_test(void);
-[; ;lcd.h: 124: void displ_totals(void);
-[; ;lcd.h: 126: void displ_empty(void);
-[; ;lcd.h: 128: uint8_t displ_note(uint8_t *lcdstring);
-[; ;lcd.h: 130: void displ_nendis(uint8_t notenum);
-[; ;lcd.h: 132: int8_t read_busy(void);
+[; ;lcd.h: 108: uint8_t lcdaddress;
+"109
+[v _dspposition `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 109: uint8_t dspposition;
+[; ;lcd.h: 111: void lcd_dispadd(uint8_t lcdaddress);
+[; ;lcd.h: 113: void displ_code(uint8_t ercode);
+[; ;lcd.h: 115: void lcd_init(void);
+[; ;lcd.h: 117: void lcd_string(uint8_t *, uint8_t lcdline);
+[; ;lcd.h: 119: void lcd_writeC(uint8_t);
+[; ;lcd.h: 121: void lcd_write(uint8_t);
+[; ;lcd.h: 123: void lcd_clockH(void);
+[; ;lcd.h: 125: void lcd_clockL(void);
+[; ;lcd.h: 127: void lcd_clockE(void);
+[; ;lcd.h: 129: void lcd_test(void);
+[; ;lcd.h: 131: void displ_hex(uint24_t);
+[; ;lcd.h: 133: void displ_price(uint8_t vendprice);
+[; ;lcd.h: 135: void displ_credit(void);
+[; ;lcd.h: 137: void displ_noteer(void);
+[; ;lcd.h: 139: void displ_test(void);
+[; ;lcd.h: 141: void displ_totals(void);
+[; ;lcd.h: 143: void displ_empty(void);
+[; ;lcd.h: 145: void displ_sens(uint8_t smsgpos, uint8_t dmsgpos);
+[; ;lcd.h: 147: uint8_t displ_note(uint8_t *notestring);
+[; ;lcd.h: 149: void displ_nendis(uint8_t notenum);
+[; ;lcd.h: 151: int8_t read_busy(void);
 "17 mdb.h
 [v _note_reset `Cuc ~T0 @X0 1 e ]
 [i _note_reset
@@ -11894,8 +12269,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mdb.h: 61: unsigned mode : 1;
 [; ;mdb.h: 62: unsigned timeout : 1;
 [; ;mdb.h: 64: unsigned vending : 1;
-[; ;mdb.h: 65: unsigned spare3 : 1;
-[; ;mdb.h: 66: unsigned spare4 : 1;
+[; ;mdb.h: 65: unsigned noteset : 1;
+[; ;mdb.h: 66: unsigned endis : 1;
 [; ;mdb.h: 67: unsigned spare5 : 1;
 [; ;mdb.h: 68: }mdbflags;
 "82
@@ -11907,9 +12282,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mdb.h: 76: unsigned R50 : 1;
 [; ;mdb.h: 77: unsigned R100 : 1;
 [; ;mdb.h: 78: unsigned R200 : 1;
-[; ;mdb.h: 79: unsigned noteset : 1;
-[; ;mdb.h: 80: unsigned endis : 1;
-[; ;mdb.h: 81: unsigned spare : 1;
+[; ;mdb.h: 79: unsigned spare : 1;
+[; ;mdb.h: 80: unsigned spare1 : 1;
+[; ;mdb.h: 81: unsigned spare2 : 1;
 [; ;mdb.h: 82: }noteen;
 "83
 [v _noteen_byte `Vuc ~T0 @X0 1 e ]
@@ -11934,20 +12309,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mdb.h: 104: void init_mdbdata(uint8_t);
 [; ;mdb.h: 106: uint8_t mdb_reset(void);
 [; ;mdb.h: 108: void set_notes(void);
-[; ;mdb.h: 110: void enable_notes(uint8_t notenum);
-[; ;mdb.h: 112: void note_disenable(uint8_t notenum);
-[; ;mdb.h: 114: void mdb_noten(void);
-[; ;mdb.h: 116: void mdb_security(void);
-[; ;mdb.h: 118: uint8_t mdb_poll(void);
-[; ;mdb.h: 120: uint8_t mdb_comm(uint8_t slvadd, uint8_t mcount);
-[; ;mdb.h: 122: void mdb_on(void);
-[; ;mdb.h: 124: void mdb_ron(void);
-[; ;mdb.h: 126: uint8_t wait_ack(void);
-[; ;mdb.h: 128: void mdb_test(void);
-[; ;mdb.h: 130: void mdb_waitx(void);
-[; ;mdb.h: 132: void mdb_waitr(void);
-[; ;mdb.h: 134: void mdb_unlock(void);
-[; ;mdb.h: 136: void mdb_transmit(uint8_t txbyte);
+[; ;mdb.h: 110: void save_notes(void);
+[; ;mdb.h: 112: void enable_notes(uint8_t notenum);
+[; ;mdb.h: 114: void note_disable(void);
+[; ;mdb.h: 116: void mdb_noten(void);
+[; ;mdb.h: 118: void mdb_security(void);
+[; ;mdb.h: 120: uint8_t mdb_poll(void);
+[; ;mdb.h: 122: uint8_t mdb_comm(uint8_t slvadd, uint8_t mcount);
+[; ;mdb.h: 124: void mdb_on(void);
+[; ;mdb.h: 126: void mdb_ron(void);
+[; ;mdb.h: 128: uint8_t wait_ack(void);
+[; ;mdb.h: 130: void mdb_test(void);
+[; ;mdb.h: 132: void mdb_waitx(void);
+[; ;mdb.h: 134: void mdb_waitr(void);
+[; ;mdb.h: 136: void mdb_unlock(void);
+[; ;mdb.h: 138: void mdb_transmit(uint8_t txbyte);
 "19 vend.h
 [v _credit `Vuc ~T0 @X0 1 e ]
 [; ;vend.h: 19: volatile uint8_t credit;
@@ -11957,74 +12333,387 @@ Version 3.2 HI-TECH Software Intermediate Code
 "21
 [v _buttons `Vuc ~T0 @X0 1 e ]
 [; ;vend.h: 21: volatile uint8_t buttons;
+"22
+[v _vendprice `Vuc ~T0 @X0 1 e ]
+[; ;vend.h: 22: volatile uint8_t vendprice;
+"23
+[v _sensorval `Vuc ~T0 @X0 1 e ]
+[; ;vend.h: 23: volatile uint8_t sensorval;
 "24
+[v _vcash `Vuc ~T0 @X0 -> 2 `i e ]
+[; ;vend.h: 24: volatile uint8_t vcash[2];
+"25
+[v _nvcash `Vuc ~T0 @X0 -> 3 `i e ]
+[; ;vend.h: 25: volatile uint8_t nvcash[3];
+"26
+[v _tvends `Vuc ~T0 @X0 -> 8 `i e ]
+[; ;vend.h: 26: volatile uint8_t tvends[8];
+"27
+[v _vcashout `Vuc ~T0 @X0 -> 2 `i e ]
+[; ;vend.h: 27: volatile uint8_t vcashout[2];
+"28
+[v _pvcash `Vui ~T0 @X0 1 e ]
+[; ;vend.h: 28: volatile uint16_t pvcash;
+"29
+[v _pnvcash `Vum ~T0 @X0 1 e ]
+[; ;vend.h: 29: volatile uint24_t pnvcash;
+"30
+[v _senspos `Vuc ~T0 @X0 1 e ]
+[; ;vend.h: 30: volatile uint8_t senspos;
+"33
+[v _second1 `Cui ~T0 @X0 1 e ]
+[i _second1
+-> 57786 `ui
+]
+[; ;vend.h: 33: const uint16_t second1 = 0xE1BA;
+"35
+[v _secondadd `Cui ~T0 @X0 1 e ]
+[i _secondadd
+-> -> 7750 `i `ui
+]
+[; ;vend.h: 35: const uint16_t secondadd = 0x1E46;
+"39
 [v _credmem `Cui ~T0 @X0 1 e ]
 [i _credmem
 -> -> 0 `i `ui
 ]
-[; ;vend.h: 24: const uint16_t credmem = 0x00;
-"26
+[; ;vend.h: 39: const uint16_t credmem = 0x00;
+"41
 [v _cashinv `Cui ~T0 @X0 1 e ]
 [i _cashinv
 -> -> 2 `i `ui
 ]
-[; ;vend.h: 26: const uint16_t cashinv = 0x02;
-"28
+[; ;vend.h: 41: const uint16_t cashinv = 0x02;
+"43
 [v _cashint `Cui ~T0 @X0 1 e ]
 [i _cashint
 -> -> 4 `i `ui
 ]
-[; ;vend.h: 28: const uint16_t cashint = 0x04;
-"30
+[; ;vend.h: 43: const uint16_t cashint = 0x04;
+"45
 [v _vendstore `Cui ~T0 @X0 1 e ]
 [i _vendstore
 -> -> 7 `i `ui
 ]
-[; ;vend.h: 30: const uint16_t vendstore = 0x07;
-"32
+[; ;vend.h: 45: const uint16_t vendstore = 0x07;
+"47
 [v _pricestore `Cui ~T0 @X0 1 e ]
 [i _pricestore
 -> -> 15 `i `ui
 ]
-[; ;vend.h: 32: const uint16_t pricestore = 0x0F;
-"34
+[; ;vend.h: 47: const uint16_t pricestore = 0x0F;
+"49
 [v _venderrors `Cui ~T0 @X0 1 e ]
 [i _venderrors
 -> -> 23 `i `ui
 ]
-[; ;vend.h: 34: const uint16_t venderrors = 0x17;
-"36
+[; ;vend.h: 49: const uint16_t venderrors = 0x17;
+"51
 [v _notebits `Cui ~T0 @X0 1 e ]
 [i _notebits
 -> -> 24 `i `ui
 ]
-[; ;vend.h: 36: const uint16_t notebits = 0x18;
-"51
-[v _venflags `S1374 ~T0 @X0 1 e ]
-[; ;vend.h: 41: struct
-[; ;vend.h: 42: {
-[; ;vend.h: 43: unsigned iscredit : 1;
-[; ;vend.h: 44: unsigned error : 1;
-[; ;vend.h: 45: unsigned inscoin : 1;
-[; ;vend.h: 46: unsigned nochange : 1;
-[; ;vend.h: 47: unsigned credisplay : 1;
-[; ;vend.h: 48: unsigned initialrun : 1;
-[; ;vend.h: 49: unsigned noterr : 1;
-[; ;vend.h: 50: unsigned service : 1;
-[; ;vend.h: 51: } venflags;
-[; ;vend.h: 53: void credit_add(uint8_t credit);
-[; ;vend.h: 55: void credit_subtract(uint8_t credit);
-[; ;vend.h: 57: void vend_init(void);
-[; ;vend.h: 60: uint8_t credit_check(void);
-[; ;vend.h: 62: void setup(void);
-[; ;vend.h: 64: uint8_t butindb(void);
-[; ;vend.h: 66: uint8_t butin(void);
-[; ;vend.h: 69: void Audit(void);
-[; ;vend.h: 71: void Hopper_coin(void);
-[; ;vend.h: 73: void Sensor_set(void);
-[; ;vend.h: 75: void Clear_cred(void);
-[; ;vend.h: 77: void Vend_test(void);
-[; ;vend.h: 79: void Note_test(void);
+[; ;vend.h: 51: const uint16_t notebits = 0x18;
+"54
+[v _sensval `Cui ~T0 @X0 1 e ]
+[i _sensval
+-> -> 25 `i `ui
+]
+[; ;vend.h: 54: const uint16_t sensval = 0x19;
+"56
+[v _cashoutv `Cui ~T0 @X0 1 e ]
+[i _cashoutv
+-> -> 26 `i `ui
+]
+[; ;vend.h: 56: const uint16_t cashoutv = 0x1A;
+"58
+[v _hopcoin `Cui ~T0 @X0 1 e ]
+[i _hopcoin
+-> -> 28 `i `ui
+]
+[; ;vend.h: 58: const uint16_t hopcoin = 0x1C;
+"60
+[v _chan1linkbits `Cui ~T0 @X0 1 e ]
+[i _chan1linkbits
+-> -> 29 `i `ui
+]
+[; ;vend.h: 60: const uint16_t chan1linkbits = 0x1D;
+"61
+[v _chan2linkbits `Cui ~T0 @X0 1 e ]
+[i _chan2linkbits
+-> -> 30 `i `ui
+]
+[; ;vend.h: 61: const uint16_t chan2linkbits = 0x1E;
+"62
+[v _chan3linkbits `Cui ~T0 @X0 1 e ]
+[i _chan3linkbits
+-> -> 31 `i `ui
+]
+[; ;vend.h: 62: const uint16_t chan3linkbits = 0x1F;
+"63
+[v _chan4linkbits `Cui ~T0 @X0 1 e ]
+[i _chan4linkbits
+-> -> 32 `i `ui
+]
+[; ;vend.h: 63: const uint16_t chan4linkbits = 0x20;
+"64
+[v _chan5linkbits `Cui ~T0 @X0 1 e ]
+[i _chan5linkbits
+-> -> 33 `i `ui
+]
+[; ;vend.h: 64: const uint16_t chan5linkbits = 0x21;
+"65
+[v _chan6linkbits `Cui ~T0 @X0 1 e ]
+[i _chan6linkbits
+-> -> 34 `i `ui
+]
+[; ;vend.h: 65: const uint16_t chan6linkbits = 0x22;
+"66
+[v _chan7linkbits `Cui ~T0 @X0 1 e ]
+[i _chan7linkbits
+-> -> 35 `i `ui
+]
+[; ;vend.h: 66: const uint16_t chan7linkbits = 0x23;
+"67
+[v _chan8linkbits `Cui ~T0 @X0 1 e ]
+[i _chan8linkbits
+-> -> 36 `i `ui
+]
+[; ;vend.h: 67: const uint16_t chan8linkbits = 0x24;
+"70
+[v _chan1time `Cui ~T0 @X0 1 e ]
+[i _chan1time
+-> -> 37 `i `ui
+]
+[; ;vend.h: 70: const uint16_t chan1time = 0x25;
+"71
+[v _chan2time `Cui ~T0 @X0 1 e ]
+[i _chan2time
+-> -> 38 `i `ui
+]
+[; ;vend.h: 71: const uint16_t chan2time = 0x26;
+"72
+[v _chan3time `Cui ~T0 @X0 1 e ]
+[i _chan3time
+-> -> 39 `i `ui
+]
+[; ;vend.h: 72: const uint16_t chan3time = 0x27;
+"73
+[v _chan4time `Cui ~T0 @X0 1 e ]
+[i _chan4time
+-> -> 40 `i `ui
+]
+[; ;vend.h: 73: const uint16_t chan4time = 0x28;
+"74
+[v _chan5time `Cui ~T0 @X0 1 e ]
+[i _chan5time
+-> -> 41 `i `ui
+]
+[; ;vend.h: 74: const uint16_t chan5time = 0x29;
+"75
+[v _chan6time `Cui ~T0 @X0 1 e ]
+[i _chan6time
+-> -> 42 `i `ui
+]
+[; ;vend.h: 75: const uint16_t chan6time = 0x2A;
+"76
+[v _chan7time `Cui ~T0 @X0 1 e ]
+[i _chan7time
+-> -> 43 `i `ui
+]
+[; ;vend.h: 76: const uint16_t chan7time = 0x2B;
+"77
+[v _chan8time `Cui ~T0 @X0 1 e ]
+[i _chan8time
+-> -> 44 `i `ui
+]
+[; ;vend.h: 77: const uint16_t chan8time = 0x2C;
+"79
+[v _hoperror `Cui ~T0 @X0 1 e ]
+[i _hoperror
+-> -> 45 `i `ui
+]
+[; ;vend.h: 79: const uint16_t hoperror = 0x2D;
+"81
+[v _sensorflags `Cui ~T0 @X0 1 e ]
+[i _sensorflags
+-> -> 46 `i `ui
+]
+[; ;vend.h: 81: const uint16_t sensorflags = 0x2E;
+"93
+[v _senschk `S1374 ~T0 @X0 1 e ]
+[; ;vend.h: 83: struct
+[; ;vend.h: 84: {
+[; ;vend.h: 85: unsigned chan1 : 1;
+[; ;vend.h: 86: unsigned chan2 : 1;
+[; ;vend.h: 87: unsigned chan3 : 1;
+[; ;vend.h: 88: unsigned chan4 : 1;
+[; ;vend.h: 89: unsigned chan5 : 1;
+[; ;vend.h: 90: unsigned chan6 : 1;
+[; ;vend.h: 91: unsigned chan7 : 1;
+[; ;vend.h: 92: unsigned chan8 : 1;
+[; ;vend.h: 93: } senschk;
+"108
+[v _venderr `S1375 ~T0 @X0 1 e ]
+[; ;vend.h: 98: struct
+[; ;vend.h: 99: {
+[; ;vend.h: 100: unsigned chan1 : 1;
+[; ;vend.h: 101: unsigned chan2 : 1;
+[; ;vend.h: 102: unsigned chan3 : 1;
+[; ;vend.h: 103: unsigned chan4 : 1;
+[; ;vend.h: 104: unsigned chan5 : 1;
+[; ;vend.h: 105: unsigned chan6 : 1;
+[; ;vend.h: 106: unsigned chan7 : 1;
+[; ;vend.h: 107: unsigned chan8 : 1;
+[; ;vend.h: 108: } venderr;
+"123
+[v _chanlink1 `S1376 ~T0 @X0 1 e@3 ]
+[; ;vend.h: 113: struct
+[; ;vend.h: 114: {
+[; ;vend.h: 115: unsigned chan1 : 1;
+[; ;vend.h: 116: unsigned chan2 : 1;
+[; ;vend.h: 117: unsigned chan3 : 1;
+[; ;vend.h: 118: unsigned chan4 : 1;
+[; ;vend.h: 119: unsigned chan5 : 1;
+[; ;vend.h: 120: unsigned chan6 : 1;
+[; ;vend.h: 121: unsigned chan7 : 1;
+[; ;vend.h: 122: unsigned chan8 : 1;
+[; ;vend.h: 123: } chanlink1 @ 0x003;
+"135
+[v _chanlink2 `S1377 ~T0 @X0 1 e@4 ]
+[; ;vend.h: 125: struct
+[; ;vend.h: 126: {
+[; ;vend.h: 127: unsigned chan1 : 1;
+[; ;vend.h: 128: unsigned chan2 : 1;
+[; ;vend.h: 129: unsigned chan3 : 1;
+[; ;vend.h: 130: unsigned chan4 : 1;
+[; ;vend.h: 131: unsigned chan5 : 1;
+[; ;vend.h: 132: unsigned chan6 : 1;
+[; ;vend.h: 133: unsigned chan7 : 1;
+[; ;vend.h: 134: unsigned chan8 : 1;
+[; ;vend.h: 135: } chanlink2 @ 0x004;
+"147
+[v _chanlink3 `S1378 ~T0 @X0 1 e@5 ]
+[; ;vend.h: 137: struct
+[; ;vend.h: 138: {
+[; ;vend.h: 139: unsigned chan1 : 1;
+[; ;vend.h: 140: unsigned chan2 : 1;
+[; ;vend.h: 141: unsigned chan3 : 1;
+[; ;vend.h: 142: unsigned chan4 : 1;
+[; ;vend.h: 143: unsigned chan5 : 1;
+[; ;vend.h: 144: unsigned chan6 : 1;
+[; ;vend.h: 145: unsigned chan7 : 1;
+[; ;vend.h: 146: unsigned chan8 : 1;
+[; ;vend.h: 147: } chanlink3 @ 0x005;
+"159
+[v _chanlink4 `S1379 ~T0 @X0 1 e@6 ]
+[; ;vend.h: 149: struct
+[; ;vend.h: 150: {
+[; ;vend.h: 151: unsigned chan1 : 1;
+[; ;vend.h: 152: unsigned chan2 : 1;
+[; ;vend.h: 153: unsigned chan3 : 1;
+[; ;vend.h: 154: unsigned chan4 : 1;
+[; ;vend.h: 155: unsigned chan5 : 1;
+[; ;vend.h: 156: unsigned chan6 : 1;
+[; ;vend.h: 157: unsigned chan7 : 1;
+[; ;vend.h: 158: unsigned chan8 : 1;
+[; ;vend.h: 159: } chanlink4 @ 0x006;
+"171
+[v _chanlink5 `S1380 ~T0 @X0 1 e@7 ]
+[; ;vend.h: 161: struct
+[; ;vend.h: 162: {
+[; ;vend.h: 163: unsigned chan1 : 1;
+[; ;vend.h: 164: unsigned chan2 : 1;
+[; ;vend.h: 165: unsigned chan3 : 1;
+[; ;vend.h: 166: unsigned chan4 : 1;
+[; ;vend.h: 167: unsigned chan5 : 1;
+[; ;vend.h: 168: unsigned chan6 : 1;
+[; ;vend.h: 169: unsigned chan7 : 1;
+[; ;vend.h: 170: unsigned chan8 : 1;
+[; ;vend.h: 171: } chanlink5 @ 0x007;
+"183
+[v _chanlink6 `S1381 ~T0 @X0 1 e@8 ]
+[; ;vend.h: 173: struct
+[; ;vend.h: 174: {
+[; ;vend.h: 175: unsigned chan1 : 1;
+[; ;vend.h: 176: unsigned chan2 : 1;
+[; ;vend.h: 177: unsigned chan3 : 1;
+[; ;vend.h: 178: unsigned chan4 : 1;
+[; ;vend.h: 179: unsigned chan5 : 1;
+[; ;vend.h: 180: unsigned chan6 : 1;
+[; ;vend.h: 181: unsigned chan7 : 1;
+[; ;vend.h: 182: unsigned chan8 : 1;
+[; ;vend.h: 183: } chanlink6 @ 0x008;
+"195
+[v _chanlink7 `S1382 ~T0 @X0 1 e@9 ]
+[; ;vend.h: 185: struct
+[; ;vend.h: 186: {
+[; ;vend.h: 187: unsigned chan1 : 1;
+[; ;vend.h: 188: unsigned chan2 : 1;
+[; ;vend.h: 189: unsigned chan3 : 1;
+[; ;vend.h: 190: unsigned chan4 : 1;
+[; ;vend.h: 191: unsigned chan5 : 1;
+[; ;vend.h: 192: unsigned chan6 : 1;
+[; ;vend.h: 193: unsigned chan7 : 1;
+[; ;vend.h: 194: unsigned chan8 : 1;
+[; ;vend.h: 195: } chanlink7 @ 0x009;
+"207
+[v _chanlink8 `S1383 ~T0 @X0 1 e@10 ]
+[; ;vend.h: 197: struct
+[; ;vend.h: 198: {
+[; ;vend.h: 199: unsigned chan1 : 1;
+[; ;vend.h: 200: unsigned chan2 : 1;
+[; ;vend.h: 201: unsigned chan3 : 1;
+[; ;vend.h: 202: unsigned chan4 : 1;
+[; ;vend.h: 203: unsigned chan5 : 1;
+[; ;vend.h: 204: unsigned chan6 : 1;
+[; ;vend.h: 205: unsigned chan7 : 1;
+[; ;vend.h: 206: unsigned chan8 : 1;
+[; ;vend.h: 207: } chanlink8 @ 0x00A;
+"229
+[v _venflags `S1384 ~T0 @X0 1 e ]
+[; ;vend.h: 211: struct
+[; ;vend.h: 212: {
+[; ;vend.h: 213: unsigned iscredit : 1;
+[; ;vend.h: 214: unsigned error : 1;
+[; ;vend.h: 215: unsigned inscoin : 1;
+[; ;vend.h: 216: unsigned nochange : 1;
+[; ;vend.h: 217: unsigned credisplay : 1;
+[; ;vend.h: 218: unsigned initialrun : 1;
+[; ;vend.h: 219: unsigned noterr : 1;
+[; ;vend.h: 220: unsigned service : 1;
+[; ;vend.h: 221: unsigned priceset : 1;
+[; ;vend.h: 222: unsigned setprice : 1;
+[; ;vend.h: 223: unsigned vendset : 1;
+[; ;vend.h: 224: unsigned chanlink : 1;
+[; ;vend.h: 225: unsigned mottime : 1;
+[; ;vend.h: 226: unsigned nosense : 1;
+[; ;vend.h: 227: unsigned spare6 : 1;
+[; ;vend.h: 228: unsigned spare7 : 1;
+[; ;vend.h: 229: } venflags;
+[; ;vend.h: 231: void Write_NVstore(uint16_t storeadd, uint8_t *storemem, uint8_t storesize);
+[; ;vend.h: 233: void Read_NVstore(uint16_t storeadd, uint8_t *storemem, uint8_t storesize);
+[; ;vend.h: 235: void credit_add(uint8_t credit);
+[; ;vend.h: 237: void credit_subtract(uint8_t credit);
+[; ;vend.h: 239: void vend_init(void);
+[; ;vend.h: 241: void Init_vendmem(void);
+[; ;vend.h: 243: void Update_cashaudit(uint8_t addcash);
+[; ;vend.h: 245: void Update_Hopcoin(uint8_t newval, uint8_t direction);
+[; ;vend.h: 248: uint8_t credit_check(void);
+[; ;vend.h: 250: void setup(void);
+[; ;vend.h: 252: uint8_t butindb(void);
+[; ;vend.h: 254: uint8_t butin(void);
+[; ;vend.h: 257: void Audit(void);
+[; ;vend.h: 259: void Hopper_coin(void);
+[; ;vend.h: 261: void Sensor_set(void);
+[; ;vend.h: 263: void Clear_cred(void);
+[; ;vend.h: 265: uint8_t Read_Service(void);
+[; ;vend.h: 267: void price_set(void);
+[; ;vend.h: 269: void set_price(uint8_t buttons);
+[; ;vend.h: 271: void Vend_setup(void);
+[; ;vend.h: 273: void Vend_timeset(void);
+[; ;vend.h: 275: void Chan_link(void);
+[; ;vend.h: 277: void Sens_off(void);
 "18 cctalk.h
 [v _hopadd `Cuc ~T0 @X0 1 e ]
 [i _hopadd
@@ -12128,7 +12817,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _hpserial `uc ~T0 @X0 -> 3 `i e ]
 [; ;cctalk.h: 58: uint8_t hpserial[3];
 "70
-[v _cctflags `S1375 ~T0 @X0 1 e ]
+[v _cctflags `S1385 ~T0 @X0 1 e ]
 [; ;cctalk.h: 60: struct
 [; ;cctalk.h: 61: {
 [; ;cctalk.h: 62: unsigned isdata : 1;
@@ -12173,8 +12862,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _count -> -> 0 `i `c ]
 [; ;cctalk.c: 16: while(cctflags.timeout && count < 0x03)
 "16
-[e $U 1377  ]
-[e :U 1378 ]
+[e $U 1387  ]
+[e :U 1388 ]
 [; ;cctalk.c: 17: {
 "17
 {
@@ -12189,10 +12878,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _count -> -> 1 `i `c ]
 "21
 }
-[e :U 1377 ]
+[e :U 1387 ]
 "16
-[e $ && != -> . _cctflags 3 `i -> -> -> 0 `i `uc `i < -> _count `i -> 3 `i 1378  ]
-[e :U 1379 ]
+[e $ && != -> . _cctflags 3 `i -> -> -> 0 `i `uc `i < -> _count `i -> 3 `i 1388  ]
+[e :U 1389 ]
 [; ;cctalk.c: 21: }
 [; ;cctalk.c: 22: asm("nop");
 "22
@@ -12205,7 +12894,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _mdb_on ..  ]
 [; ;cctalk.c: 25: }
 "25
-[e :UE 1376 ]
+[e :UE 1386 ]
 }
 "27
 [v _cctalk_adpoll `(v ~T0 @X0 1 ef ]
@@ -12221,7 +12910,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _i ( _cctalk_comm (3 , , -> -> 0 `i `uc -> -> 0 `i `uc _cc_adpoll ]
 [; ;cctalk.c: 30: }
 "30
-[e :UE 1380 ]
+[e :UE 1390 ]
 }
 "32
 [v _cctalk_pinenter `(v ~T0 @X0 1 ef ]
@@ -12240,7 +12929,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _i ( _cctalk_comm (3 , , _hopadd -> -> 4 `i `uc _cc_pin ]
 [; ;cctalk.c: 36: }
 "36
-[e :UE 1381 ]
+[e :UE 1391 ]
 }
 "38
 [v _cctalk_poll `(v ~T0 @X0 1 ef ]
@@ -12256,7 +12945,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _i ( _cctalk_comm (3 , , _hopadd -> -> 0 `i `uc _cc_poll ]
 [; ;cctalk.c: 41: }
 "41
-[e :UE 1382 ]
+[e :UE 1392 ]
 }
 "43
 [v _cctalk_serial `(v ~T0 @X0 1 ef ]
@@ -12275,7 +12964,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _i ( _cctalk_comm (3 , , _hopadd -> -> 0 `i `uc _cc_serial ]
 [; ;cctalk.c: 48: if(!cctflags.timeout)
 "48
-[e $ ! ! != -> . _cctflags 3 `i -> -> -> 0 `i `uc `i 1384  ]
+[e $ ! ! != -> . _cctflags 3 `i -> -> -> 0 `i `uc `i 1394  ]
 [; ;cctalk.c: 49: {
 "49
 {
@@ -12290,11 +12979,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = *U + &U _hpserial * -> -> -> 2 `i `ui `ux -> -> # *U &U _hpserial `ui `ux *U + &U _mdbdata * -> -> -> 6 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux ]
 "53
 }
-[e :U 1384 ]
+[e :U 1394 ]
 [; ;cctalk.c: 53: }
 [; ;cctalk.c: 54: }
 "54
-[e :UE 1383 ]
+[e :UE 1393 ]
 }
 "56
 [v _cctalk_comm `(uc ~T0 @X0 1 ef3`uc`uc`uc ]
@@ -12334,8 +13023,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _mdb_transmit (1 _command ]
 [; ;cctalk.c: 77: while(nobytes != 0)
 "77
-[e $U 1386  ]
-[e :U 1387 ]
+[e $U 1396  ]
+[e :U 1397 ]
 [; ;cctalk.c: 78: {
 "78
 {
@@ -12350,10 +13039,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e -- _nobytes -> -> 1 `i `uc ]
 "83
 }
-[e :U 1386 ]
+[e :U 1396 ]
 "77
-[e $ != -> _nobytes `i -> 0 `i 1387  ]
-[e :U 1388 ]
+[e $ != -> _nobytes `i -> 0 `i 1397  ]
+[e :U 1398 ]
 [; ;cctalk.c: 83: }
 [; ;cctalk.c: 84: chkbyte = 0 - chkbyte;
 "84
@@ -12384,8 +13073,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _TMR3_Initialize ..  ]
 [; ;cctalk.c: 99: while(!cctflags.timeout)
 "99
-[e $U 1389  ]
-[e :U 1390 ]
+[e $U 1399  ]
+[e :U 1400 ]
 [; ;cctalk.c: 100: {
 "100
 {
@@ -12394,7 +13083,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _dest ( _cctalk_read ..  ]
 [; ;cctalk.c: 104: if(cctflags.isdata)
 "104
-[e $ ! != -> . _cctflags 0 `i -> -> -> 0 `i `uc `i 1392  ]
+[e $ ! != -> . _cctflags 0 `i -> -> -> 0 `i `uc `i 1402  ]
 [; ;cctalk.c: 105: {
 "105
 {
@@ -12403,31 +13092,31 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = *U + &U _mdbdata * -> ++ _i -> -> 1 `i `uc `ux -> -> # *U &U _mdbdata `ui `ux _dest ]
 "108
 }
-[e :U 1392 ]
+[e :U 1402 ]
 [; ;cctalk.c: 108: }
 [; ;cctalk.c: 109: cctflags.timeout = PIR4bits.TMR3IF;
 "109
 [e = . _cctflags 3 . . _PIR4bits 0 2 ]
 "110
 }
-[e :U 1389 ]
+[e :U 1399 ]
 "99
-[e $ ! != -> . _cctflags 3 `i -> -> -> 0 `i `uc `i 1390  ]
-[e :U 1391 ]
+[e $ ! != -> . _cctflags 3 `i -> -> -> 0 `i `uc `i 1400  ]
+[e :U 1401 ]
 [; ;cctalk.c: 110: }
 [; ;cctalk.c: 111: if(mdbdata[0] == mastadd && mdbdata[3] == 0x00)
 "111
-[e $ ! && == -> *U + &U _mdbdata * -> -> -> 0 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux `i -> _mastadd `i == -> *U + &U _mdbdata * -> -> -> 3 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux `i -> 0 `i 1393  ]
+[e $ ! && == -> *U + &U _mdbdata * -> -> -> 0 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux `i -> _mastadd `i == -> *U + &U _mdbdata * -> -> -> 3 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux `i -> 0 `i 1403  ]
 [; ;cctalk.c: 112: {
 "112
 {
 [; ;cctalk.c: 113: return i;
 "113
 [e ) _i ]
-[e $UE 1385  ]
+[e $UE 1395  ]
 "114
 }
-[e :U 1393 ]
+[e :U 1403 ]
 [; ;cctalk.c: 114: }
 [; ;cctalk.c: 115: cctflags.timeout = 1;
 "115
@@ -12435,10 +13124,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;cctalk.c: 116: return 0x00;
 "116
 [e ) -> -> 0 `i `uc ]
-[e $UE 1385  ]
+[e $UE 1395  ]
 [; ;cctalk.c: 117: }
 "117
-[e :UE 1385 ]
+[e :UE 1395 ]
 }
 "119
 [v _cctalk_read `(uc ~T0 @X0 1 ef ]
@@ -12457,8 +13146,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . _cctflags 0 -> -> 0 `i `uc ]
 [; ;cctalk.c: 123: while(PIR3bits.RC1IF)
 "123
-[e $U 1395  ]
-[e :U 1396 ]
+[e $U 1405  ]
+[e :U 1406 ]
 [; ;cctalk.c: 124: {
 "124
 {
@@ -12473,18 +13162,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . _cctflags 0 -> -> 1 `i `uc ]
 "128
 }
-[e :U 1395 ]
+[e :U 1405 ]
 "123
-[e $ != -> . . _PIR3bits 0 5 `i -> -> -> 0 `i `Vuc `i 1396  ]
-[e :U 1397 ]
+[e $ != -> . . _PIR3bits 0 5 `i -> -> -> 0 `i `Vuc `i 1406  ]
+[e :U 1407 ]
 [; ;cctalk.c: 128: }
 [; ;cctalk.c: 129: return data;
 "129
 [e ) _data ]
-[e $UE 1394  ]
+[e $UE 1404  ]
 [; ;cctalk.c: 130: }
 "130
-[e :UE 1394 ]
+[e :UE 1404 ]
 }
 "132
 [v _cctalk_on `(v ~T0 @X0 1 ef ]
@@ -12502,5 +13191,5 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
 [; ;cctalk.c: 140: }
 "140
-[e :UE 1398 ]
+[e :UE 1408 ]
 }

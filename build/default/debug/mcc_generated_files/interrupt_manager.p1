@@ -39,8 +39,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PIR0bits `VS254 ~T0 @X0 0 e@3786 ]
 "704 mcc_generated_files/pin_manager.h
 [v _PIN_MANAGER_IOC `(v ~T0 @X0 0 ef ]
-[; ;interrupt_manager.h: 157: void INTERRUPT_Initialize (void);
-[; ;interrupt_manager.h: 169: void interrupt INTERRUPT_InterruptManager (void);
+[; ;interrupt_manager.h: 132: void INTERRUPT_Initialize (void);
+[; ;interrupt_manager.h: 144: void interrupt INTERRUPT_InterruptManager (void);
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -10846,10 +10846,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr1.h: 309: void TMR1_StartSinglePulseAcquisition(void);
 [; ;tmr1.h: 348: uint8_t TMR1_CheckGateValueStatus(void);
 [; ;tmr1.h: 386: bool TMR1_HasOverflowOccured(void);
-[; ;cmp1.h: 92: void CMP1_Initialize(void);
-[; ;cmp1.h: 132: bool CMP1_GetOutputStatus(void);
-[; ;dac1.h: 92: void DAC1_Initialize(void);
-[; ;dac1.h: 128: void DAC1_SetOutput(uint8_t inputData);
+[; ;cmp1.h: 91: void CMP1_Initialize(void);
+[; ;cmp1.h: 131: bool CMP1_GetOutputStatus(void);
+[; ;tmr0.h: 99: void TMR0_Initialize(void);
+[; ;tmr0.h: 128: void TMR0_StartTimer(void);
+[; ;tmr0.h: 160: void TMR0_StopTimer(void);
+[; ;tmr0.h: 196: uint16_t TMR0_Read16bitTimer(void);
+[; ;tmr0.h: 235: void TMR0_Write16bitTimer(uint16_t timerVal);
+[; ;tmr0.h: 271: void TMR0_Reload16bit(void);
+[; ;tmr0.h: 309: bool TMR0_HasOverflowOccured(void);
 [; ;memory.h: 98: uint8_t FLASH_ReadByte(uint32_t flashAddr);
 [; ;memory.h: 124: uint16_t FLASH_ReadWord(uint32_t flashAddr);
 [; ;memory.h: 156: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
@@ -10858,6 +10863,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;memory.h: 248: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [; ;memory.h: 274: uint8_t DATAEE_ReadByte(uint16_t bAdd);
 [; ;memory.h: 276: void MEMORY_Tasks(void);
+[; ;dac1.h: 92: void DAC1_Initialize(void);
+[; ;dac1.h: 128: void DAC1_SetOutput(uint8_t inputData);
 [; ;eusart2.h: 93: void EUSART2_Initialize(void);
 [; ;eusart2.h: 113: uint8_t EUSART2_Read(void);
 [; ;eusart2.h: 133: void EUSART2_Write(uint8_t txData);
@@ -10865,8 +10872,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart1.h: 95: void EUSART1_Initialize(void);
 [; ;eusart1.h: 115: uint8_t EUSART1_Read(void);
 [; ;eusart1.h: 135: void EUSART1_Write(uint8_t txData);
-[; ;mcc.h: 76: void SYSTEM_Initialize(void);
-[; ;mcc.h: 89: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 77: void SYSTEM_Initialize(void);
+[; ;mcc.h: 90: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 103: void PMD_Initialize(void);
 "51 mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize `(v ~T0 @X0 1 ef ]
 "52
@@ -10886,9 +10894,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 1371 ]
 }
 [v $root$_INTERRUPT_InterruptManagerHigh `(v ~T0 @X0 0 e ]
-[v F11742 `(v ~T0 @X0 1 tf ]
+[v F11758 `(v ~T0 @X0 1 tf ]
 "64
-[v _INTERRUPT_InterruptManagerHigh `IF11742 ~T0 @X0 1 e ]
+[v _INTERRUPT_InterruptManagerHigh `IF11758 ~T0 @X0 1 e ]
 "65
 {
 [; ;interrupt_manager.c: 64: void interrupt INTERRUPT_InterruptManagerHigh (void)
