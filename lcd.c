@@ -4,6 +4,7 @@
 #include "lcd.h"
 #include "vend.h"
 #include "mdb.h"
+#include "hopper.h"
 /* Initialize display E=RE0 R/W=RE1 RS=RE2 D4 to D7 = RD0 to RD3
    All bits initialized as digital outputs */
 //Initialize LCD display
@@ -30,11 +31,10 @@ void lcd_init()
     lcd_write(dispnormal);
     //Display clear
     lcd_write(dispclr);
-    //Display characters from 0 to O
+    //Display characters from 0 to >
     lcd_test();
     __delay_ms(250);
     asm("nop");
-    
 }
 
 void displ_sens(uint8_t smsgpos, uint8_t dmsgpos)
@@ -52,6 +52,56 @@ void displ_sens(uint8_t smsgpos, uint8_t dmsgpos)
     lcd_dispadd(dmsgpos);
     displ_hex((uint8_t) DAC1CON1);
     
+}
+
+void displ_lflags(uint8_t chanel, uint8_t linkflgs)
+{
+    lcd_string(chanmsg, line1);
+    lcd_writeC(chanel++ | 0x30);
+    uint8_t lchan = 1;
+    //uint8_t 
+    lcd_string(linkmsg, line2);
+    lcd_dispadd(line3);
+    while(lchan < 0x09)
+    {
+        if(linkflgs & 0x01)
+        {
+            lcd_writeC(lchan | 0x30);
+            lcd_writeC(',');
+            lcd_writeC(' ');
+        }
+        lchan++;
+        linkflgs = linkflgs >> 1;
+    }
+}
+
+void displ_sflags(uint8_t senseflags, uint8_t chanel, uint8_t chanbit)
+{
+    
+    lcd_string(chanmsg, line1);
+    lcd_writeC(chanel++ | 0x30);
+    lcd_string(sensmsg, line2);
+    lcd_string(sensoffmsg, line3);
+    
+    if(senseflags && chanbit)
+    {
+        lcd_string(disabled, line2 + 10);
+    }
+    else
+    {
+        lcd_string(enabled, line2 + 10);
+    }
+
+}
+
+void displ_time(uint8_t motortime, uint8_t channel)
+{
+    lcd_string(clrline, line3);
+    lcd_string(clrline, line4);
+    lcd_string(chanmsg, line3);
+    lcd_writeC(channel++ | 0x30);
+    lcd_string(timemsg, line4);
+    displ_hex((uint8_t) motortime);
 }
 
 uint8_t displ_note(uint8_t *notestring)

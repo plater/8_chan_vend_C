@@ -121,12 +121,13 @@ void SYSTEM_Initialize(void)
     OSCILLATOR_Initialize();
     CMP1_Initialize();
     TMR3_Initialize();
+    TMR4_Initialize();
     DAC1_Initialize();
+    TMR2_Initialize();
     TMR5_Initialize();
     TMR1_Initialize();
     TMR0_Initialize();
     EUSART1_Initialize();
-    EUSART2_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)

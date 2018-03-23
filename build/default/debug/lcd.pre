@@ -14384,10 +14384,10 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 692 "mcc_generated_files/pin_manager.h"
+# 708 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 
-# 704
+# 720
 void PIN_MANAGER_IOC(void);
 
 # 12 "/opt/microchip/xc8/v1.44/include/stdbool.h"
@@ -14453,6 +14453,156 @@ uint8_t TMR3_CheckGateValueStatus(void);
 # 386
 bool TMR3_HasOverflowOccured(void);
 
+# 78 "mcc_generated_files/tmr4.h"
+typedef enum
+{
+
+# 88
+TMR4_ROP_STARTS_TMRON,
+
+# 93
+TMR4_ROP_STARTS_TMRON_ERSHIGH,
+
+# 98
+TMR4_ROP_STARTS_TMRON_ERSLOW,
+
+# 103
+TMR4_ROP_RESETS_ERSBOTHEDGE,
+
+# 108
+TMR4_ROP_RESETS_ERSRISINGEDGE,
+
+# 113
+TMR4_ROP_RESETS_ERSFALLINGEDGE,
+
+# 118
+TMR4_ROP_RESETS_ERSLOW,
+
+# 123
+TMR4_ROP_RESETS_ERSHIGH,
+
+# 134
+TMR4_OS_STARTS_TMRON,
+
+# 139
+TMR4_OS_STARTS_ERSRISINGEDGE ,
+
+# 144
+TMR4_OS_STARTS_ERSFALLINGEDGE ,
+
+# 149
+TMR4_OS_STARTS_ERSBOTHEDGE,
+
+# 155
+TMR4_OS_STARTS_ERSFIRSTRISINGEDGE,
+
+# 161
+TMR4_OS_STARTS_ERSFIRSTFALLINGEDGE,
+
+# 167
+TMR4_OS_STARTS_ERSRISINGEDGEDETECT,
+
+# 172
+TMR4_OS_STARTS_ERSFALLINGEDGEDETECT,
+
+# 177
+TMR4_OS_STARTS_TMRON_ERSHIGH = 0x16,
+
+# 182
+TMR4_OS_STARTS_TMRON_ERSLOW = 0x17,
+
+# 191
+TMR4_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
+
+# 196
+TMR4_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT = 0x12,
+
+# 202
+TMR4_MS_STARTS_TMRON_ERSBOTHEDGE = 0x13
+
+} TMR4_HLT_MODE;
+
+# 219
+typedef enum
+{
+
+# 223
+TMR4_T4INPPS,
+
+# 227
+TMR4_T2POSTSCALED,
+
+# 231
+TMR4_RESERVED,
+
+# 235
+TMR4_T6POSTSCALED,
+
+# 238
+TMR4_CCP1_OUT,
+
+# 242
+TMR4_CCP2_OUT,
+
+# 246
+TMR4_PWM3_OUT,
+
+# 250
+TMR4_PWM4_OUT,
+
+# 254
+TMR4_C1_OUT_SYNC,
+
+# 258
+TMR4_C2_OUT_SYNC,
+
+# 262
+TMR4_ZCD_OUTPUT
+
+} TMR4_HLT_EXT_RESET_SOURCE;
+
+# 306
+void TMR4_Initialize(void);
+
+# 342
+void TMR4_ModeSet(TMR4_HLT_MODE mode);
+
+# 377
+void TMR4_ExtResetSourceSet(TMR4_HLT_EXT_RESET_SOURCE reset);
+
+# 406
+void TMR4_Start(void);
+
+# 435
+void TMR4_StartTimer(void);
+
+# 467
+void TMR4_Stop(void);
+
+# 499
+void TMR4_StopTimer(void);
+
+# 534
+uint8_t TMR4_Counter8BitGet(void);
+
+# 569
+uint8_t TMR4_ReadTimer(void);
+
+# 608
+void TMR4_Counter8BitSet(uint8_t timerVal);
+
+# 647
+void TMR4_WriteTimer(uint8_t timerVal);
+
+# 699
+void TMR4_Period8BitSet(uint8_t periodVal);
+
+# 751
+void TMR4_LoadPeriodRegister(uint8_t periodVal);
+
+# 789
+bool TMR4_HasOverflowOccured(void);
+
 # 99 "mcc_generated_files/tmr1.h"
 void TMR1_Initialize(void);
 
@@ -14479,6 +14629,156 @@ uint8_t TMR1_CheckGateValueStatus(void);
 
 # 386
 bool TMR1_HasOverflowOccured(void);
+
+# 78 "mcc_generated_files/tmr2.h"
+typedef enum
+{
+
+# 88
+TMR2_ROP_STARTS_TMRON,
+
+# 93
+TMR2_ROP_STARTS_TMRON_ERSHIGH,
+
+# 98
+TMR2_ROP_STARTS_TMRON_ERSLOW,
+
+# 103
+TMR2_ROP_RESETS_ERSBOTHEDGE,
+
+# 108
+TMR2_ROP_RESETS_ERSRISINGEDGE,
+
+# 113
+TMR2_ROP_RESETS_ERSFALLINGEDGE,
+
+# 118
+TMR2_ROP_RESETS_ERSLOW,
+
+# 123
+TMR2_ROP_RESETS_ERSHIGH,
+
+# 134
+TMR2_OS_STARTS_TMRON,
+
+# 139
+TMR2_OS_STARTS_ERSRISINGEDGE ,
+
+# 144
+TMR2_OS_STARTS_ERSFALLINGEDGE ,
+
+# 149
+TMR2_OS_STARTS_ERSBOTHEDGE,
+
+# 155
+TMR2_OS_STARTS_ERSFIRSTRISINGEDGE,
+
+# 161
+TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE,
+
+# 167
+TMR2_OS_STARTS_ERSRISINGEDGEDETECT,
+
+# 172
+TMR2_OS_STARTS_ERSFALLINGEDGEDETECT,
+
+# 177
+TMR2_OS_STARTS_TMRON_ERSHIGH = 0x16,
+
+# 182
+TMR2_OS_STARTS_TMRON_ERSLOW = 0x17,
+
+# 191
+TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
+
+# 196
+TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT = 0x12,
+
+# 202
+TMR2_MS_STARTS_TMRON_ERSBOTHEDGE = 0x13
+
+} TMR2_HLT_MODE;
+
+# 219
+typedef enum
+{
+
+# 223
+TMR2_T2INPPS,
+
+# 227
+TMR2_RESERVED,
+
+# 231
+TMR2_T4POSTSCALED,
+
+# 235
+TMR2_T6POSTSCALED,
+
+# 238
+TMR2_CCP1_OUT,
+
+# 242
+TMR2_CCP2_OUT,
+
+# 246
+TMR2_PWM3_OUT,
+
+# 250
+TMR2_PWM4_OUT,
+
+# 254
+TMR2_C1_OUT_SYNC,
+
+# 258
+TMR2_C2_OUT_SYNC,
+
+# 262
+TMR2_ZCD_OUTPUT
+
+} TMR2_HLT_EXT_RESET_SOURCE;
+
+# 306
+void TMR2_Initialize(void);
+
+# 342
+void TMR2_ModeSet(TMR2_HLT_MODE mode);
+
+# 377
+void TMR2_ExtResetSourceSet(TMR2_HLT_EXT_RESET_SOURCE reset);
+
+# 406
+void TMR2_Start(void);
+
+# 435
+void TMR2_StartTimer(void);
+
+# 467
+void TMR2_Stop(void);
+
+# 499
+void TMR2_StopTimer(void);
+
+# 534
+uint8_t TMR2_Counter8BitGet(void);
+
+# 569
+uint8_t TMR2_ReadTimer(void);
+
+# 608
+void TMR2_Counter8BitSet(uint8_t timerVal);
+
+# 647
+void TMR2_WriteTimer(uint8_t timerVal);
+
+# 699
+void TMR2_Period8BitSet(uint8_t periodVal);
+
+# 751
+void TMR2_LoadPeriodRegister(uint8_t periodVal);
+
+# 789
+bool TMR2_HasOverflowOccured(void);
 
 # 91 "mcc_generated_files/cmp1.h"
 void CMP1_Initialize(void);
@@ -14507,6 +14807,12 @@ void TMR0_Reload16bit(void);
 # 309
 bool TMR0_HasOverflowOccured(void);
 
+# 92 "mcc_generated_files/dac1.h"
+void DAC1_Initialize(void);
+
+# 128
+void DAC1_SetOutput(uint8_t inputData);
+
 # 98 "mcc_generated_files/memory.h"
 uint8_t FLASH_ReadByte(uint32_t flashAddr);
 
@@ -14530,21 +14836,6 @@ uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
 
-# 92 "mcc_generated_files/dac1.h"
-void DAC1_Initialize(void);
-
-# 128
-void DAC1_SetOutput(uint8_t inputData);
-
-# 93 "mcc_generated_files/eusart2.h"
-void EUSART2_Initialize(void);
-
-# 113
-uint8_t EUSART2_Read(void);
-
-# 133
-void EUSART2_Write(uint8_t txData);
-
 # 93 "mcc_generated_files/eusart1.h"
 void eusartmdb_Initialize(void);
 
@@ -14556,13 +14847,13 @@ uint8_t EUSART1_Read(void);
 # 135
 void EUSART1_Write(uint8_t txData);
 
-# 77 "mcc_generated_files/mcc.h"
+# 78 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 
-# 90
+# 91
 void OSCILLATOR_Initialize(void);
 
-# 103
+# 104
 void PMD_Initialize(void);
 
 # 41 "lcd.h"
@@ -14592,10 +14883,19 @@ const char line3 = 0x14;
 const char line4 = 0x54;
 
 
+const uint8_t clrline[] ="                    ";
 const uint8_t inscoin[] = "Insert Notes & Press Lighted Button To      Vend" ;
 const uint8_t credits[] = "  Credit = R";
 const uint8_t pricesetmsg[] = "   Price set mode";
 const uint8_t pricesetm2[] = "Press channel button    to set price      Service = Exit";
+const uint8_t vendsetup[] = "Push 1 = Vend Time, 2 = Chan Link,      3 = Sensor Off,     4 = Reset, 8 = exit";
+const uint8_t setimemsg[] = "Push channel button Push service to exit";
+const uint8_t sensoffms[] = "Hold channel button or Push service to  exit";
+const uint8_t vendtimem[] = "Push 1 = +.5 second Push 2 = -.5 second ";
+const uint8_t chanlinkm[] = "Press channel button    to link to      Service = Exit";
+const uint8_t linkmsg[] = "linked to :";
+const uint8_t chanmsg[] = "   Channel ";
+const uint8_t timemsg[] = "Time in 1/2sec = ";
 const uint8_t pricemsg[] = "Price R";
 const uint8_t priceexit[] ="Press service to exit";
 const uint8_t auditmsg[] = "  Audit Mode";
@@ -14605,7 +14905,7 @@ const uint8_t credclr[] = "Push button 1 to clear credits   and exit";
 const uint8_t vendtest[] = " Push button to     vend";
 const uint8_t notetest[] = "  Insert Note";
 const uint8_t exit[] = "Exit";
-const uint8_t servmsg[] = "1 = Audit 2 = Sensor3=Hop-Coin 4=Note-en5=Cred-clr 6=Prices 8=Exit";
+const uint8_t servmsg[] = "1 = Audit 2 = Sensor3=Hop-Coin 4=Note-en5=Cred-clr 6=Prices 7=Vend setup 8=Exit";
 const uint8_t noteerr[] = "   Note error     code = 0x";
 const uint8_t inithop[] = "  Initialize Hopper";
 const uint8_t initnote[] = "     Initialize          Note Reader";
@@ -14622,8 +14922,13 @@ const uint8_t creditclr[] = "Credits Cleared";
 const uint8_t sensmsg[] = "Sensor is ";
 const uint8_t onmsg[] = "On ";
 const uint8_t offmsg[] = "Off";
-const uint8_t clrmsg[] = "     ";
+const uint8_t clrmsg[] = "         ";
 const uint8_t dacmsg[] = "Sensitivity ";
+const uint8_t motimemsg[] = " Press Channel Vend Button or Press       Service to Exit";
+const uint8_t settimemsg[] = "Press 1 = + or 2 = -  Press 8 to Exit";
+const uint8_t chanlinkmsg[] = "Push Button to Link Push again to UnlinkPush Service to Exit";
+const uint8_t chanresetmsg[] = "Reset to Default    Start Again";
+const uint8_t sensoffmsg[] = "Push 1 = On, 2 = Off, 8 = Exit";
 
 uint8_t bflag;
 uint8_t lcdfunc;
@@ -14670,6 +14975,12 @@ void displ_totals(void);
 void displ_empty(void);
 
 void displ_sens(uint8_t smsgpos, uint8_t dmsgpos);
+
+void displ_lflags(uint8_t chanel, uint8_t linkflgs);
+
+void displ_sflags(uint8_t senseflags, uint8_t channel, uint8_t chanbit);
+
+void displ_time(uint8_t motortime, uint8_t channel);
 
 uint8_t displ_note(uint8_t *notestring);
 
@@ -14861,6 +15172,7 @@ void cctalk_pinenter(void);
 void cctalk_init(void);
 void cctalk_poll(void);
 void cctalk_serial(void);
+void cctalk_off(void);
 void cctalk_on(void);
 uint8_t cctalk_read(void);
 
@@ -14881,9 +15193,11 @@ volatile uint24_t pnvcash;
 volatile uint8_t senspos;
 
 
-const uint16_t second1 = 0xE1BA;
+const uint16_t second1 = 0xE1BA ;
 
-const uint16_t secondadd = 0x1E46;
+const uint16_t second_5 = 0x0F23 ;
+
+const uint16_t secondadd = 0x1E46 ;
 
 
 
@@ -14917,17 +15231,31 @@ const uint16_t chan6linkbits = 0x22;
 const uint16_t chan7linkbits = 0x23;
 const uint16_t chan8linkbits = 0x24;
 
+const uint16_t sensorflags = 0x25;
 
-const uint16_t chan1time = 0x25;
-const uint16_t chan2time = 0x26;
-const uint16_t chan3time = 0x27;
-const uint16_t chan4time = 0x28;
-const uint16_t chan5time = 0x29;
-const uint16_t chan6time = 0x2A;
-const uint16_t chan7time = 0x2B;
-const uint16_t chan8time = 0x2C;
 
-const uint16_t hoperror = 0x2D;
+const uint16_t chan1time = 0x26;
+const uint16_t chan2time = 0x27;
+const uint16_t chan3time = 0x28;
+const uint16_t chan4time = 0x29;
+const uint16_t chan5time = 0x2A;
+const uint16_t chan6time = 0x2B;
+const uint16_t chan7time = 0x2C;
+const uint16_t chan8time = 0x2D;
+
+const uint16_t hoperror = 0x2E;
+
+struct
+{
+unsigned chan1 : 1;
+unsigned chan2 : 1;
+unsigned chan3 : 1;
+unsigned chan4 : 1;
+unsigned chan5 : 1;
+unsigned chan6 : 1;
+unsigned chan7 : 1;
+unsigned chan8 : 1;
+} senschk;
 
 
 
@@ -15043,7 +15371,7 @@ unsigned chan7 : 1;
 unsigned chan8 : 1;
 } chanlink8 @ 0x00A;
 
-# 197
+# 213
 struct
 {
 unsigned iscredit : 1;
@@ -15056,12 +15384,20 @@ unsigned noterr : 1;
 unsigned service : 1;
 unsigned priceset : 1;
 unsigned setprice : 1;
-unsigned spare2 : 1;
-unsigned spare3 : 1;
-unsigned spare4 : 1;
-unsigned spare5 : 1;
-unsigned spare6 : 1;
-unsigned spare7 : 1;
+unsigned vendset : 1;
+unsigned chanlink : 1;
+unsigned mottime : 1;
+unsigned nosense : 1;
+unsigned settime : 1;
+unsigned sensno : 1;
+unsigned linkchan : 1;
+unsigned swclosed : 1;
+unsigned spare19 : 1;
+unsigned spare20 : 1;
+unsigned spare21 : 1;
+unsigned spare22 : 1;
+unsigned spare23 : 1;
+unsigned spare24 : 1;
 } venflags;
 
 void Write_NVstore(uint16_t storeadd, uint8_t *storemem, uint8_t storesize);
@@ -15102,11 +15438,38 @@ uint8_t Read_Service(void);
 
 void price_set(void);
 
+uint8_t get_channel(uint8_t buttons);
+
 void set_price(uint8_t buttons);
 
 void Vend_setup(void);
 
-# 10 "lcd.c"
+void Vend_settime(void);
+
+void Vend_timeset(uint8_t channel);
+
+void Chan_link(void);
+
+void Link_chan(uint8_t channel);
+
+void Sens_off(void);
+
+void off_sens(uint8_t channel);
+
+void Reset_settings(void);
+
+# 15 "hopper.h"
+uint8_t change = 0;
+signed char hopercount = 3;
+
+void hopper_test(void);
+bool hopper_pay(uint8_t change);
+bool switch_read(void);
+bool pay_coin(void);
+void Update_coinsout(uint8_t coinsout);
+bool Reset_hopper(void);
+
+# 11 "lcd.c"
 void lcd_init()
 {
 LATE = 0x00;
@@ -15134,7 +15497,8 @@ lcd_write(dispclr);
 lcd_test();
 _delay((unsigned long)((250)*(12000000/4000.0)));
 asm("nop");
-
+hopper_test();
+asm("nop");
 }
 
 void displ_sens(uint8_t smsgpos, uint8_t dmsgpos)
@@ -15152,6 +15516,56 @@ lcd_string(clrmsg, dmsgpos);
 lcd_dispadd(dmsgpos);
 displ_hex((uint8_t) DAC1CON1);
 
+}
+
+void displ_lflags(uint8_t chanel, uint8_t linkflgs)
+{
+lcd_string(chanmsg, line1);
+lcd_writeC(chanel++ | 0x30);
+uint8_t lchan = 1;
+
+lcd_string(linkmsg, line2);
+lcd_dispadd(line3);
+while(lchan < 0x09)
+{
+if(linkflgs & 0x01)
+{
+lcd_writeC(lchan | 0x30);
+lcd_writeC(',');
+lcd_writeC(' ');
+}
+lchan++;
+linkflgs = linkflgs >> 1;
+}
+}
+
+void displ_sflags(uint8_t senseflags, uint8_t chanel, uint8_t chanbit)
+{
+
+lcd_string(chanmsg, line1);
+lcd_writeC(chanel++ | 0x30);
+lcd_string(sensmsg, line2);
+lcd_string(sensoffmsg, line3);
+
+if(senseflags && chanbit)
+{
+lcd_string(disabled, line2 + 10);
+}
+else
+{
+lcd_string(enabled, line2 + 10);
+}
+
+}
+
+void displ_time(uint8_t motortime, uint8_t channel)
+{
+lcd_string(clrline, line3);
+lcd_string(clrline, line4);
+lcd_string(chanmsg, line3);
+lcd_writeC(channel++ | 0x30);
+lcd_string(timemsg, line4);
+displ_hex((uint8_t) motortime);
 }
 
 uint8_t displ_note(uint8_t *notestring)

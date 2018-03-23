@@ -128,14 +128,19 @@ uint8_t cctalk_read(void)
     }
     return data;
 }
-
+//We aren't using a cctalk hopper this turns the normal hopper off
+void cctalk_off(void)
+{
+    LATCbits.LATC1 = 0;
+}
+//We aren't using a cctalk hopper this turns the normal hopper on
 void cctalk_on(void)
 {
     //Select 8 bit mode for cctalk
     //An MDB reset might be required afterwards
 //    RC1STA = 0x90;
 //    TX1STA = 0xAC;
-    LATCbits.LATC0 = 0;
+//    LATCbits.LATC0 = 0;
     LATCbits.LATC1 = 1;
 }
 

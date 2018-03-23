@@ -14407,10 +14407,10 @@ void EUSART1_Initialize(void)
 BAUD1CON = 0x08;
 
 
-RC1STA = 0x90;
+RC1STA = 0xD0;
 
 
-TX1STA = 0xAC;
+TX1STA = 0xEC;
 
 
 SP1BRGL = 0x38;

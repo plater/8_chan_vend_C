@@ -57,18 +57,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S233 . . ]
 "3822
 [v _PIE0bits `VS233 ~T0 @X0 0 e@3778 ]
-"28246
-[v _GIE `Vb ~T0 @X0 0 e@32663 ]
-"2053
-[v _PPSLOCK `Vuc ~T0 @X0 0 e@3744 ]
-"2059
-[s S125 :1 `uc 1 ]
-[n S125 . PPSLOCKED ]
-"2058
-[u S124 `S125 1 ]
-[n S124 . . ]
-"2063
-[v _PPSLOCKbits `VS124 ~T0 @X0 0 e@3744 ]
 "3254
 [s S194 :5 `uc 1 ]
 [n S194 . RXPPS ]
@@ -79,16 +67,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RX1PPSbits `VS193 ~T0 @X0 0 e@3765 ]
 "6938
 [v _RC6PPS `Vuc ~T0 @X0 0 e@3837 ]
-"6542
-[v _RB5PPS `Vuc ~T0 @X0 0 e@3828 ]
-"56
-[s S2 :5 `uc 1 ]
-[n S2 . RXPPS ]
-"55
-[u S1 `S2 1 ]
-[n S1 . . ]
-"60
-[v _RX2PPSbits `VS1 ~T0 @X0 0 e@3725 ]
 "4219
 [s S255 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S255 . INT0IF INT1IF INT2IF . IOCIF TMR0IF ]
@@ -10844,8 +10822,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
-[; ;pin_manager.h: 692: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 704: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 708: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 720: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 12: typedef unsigned char bool;
 "52 mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
@@ -10876,9 +10854,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pin_manager.c: 67: TRISA = 0x1F;
 "67
 [e = _TRISA -> -> 31 `i `uc ]
-[; ;pin_manager.c: 68: TRISB = 0xD0;
+[; ;pin_manager.c: 68: TRISB = 0xF0;
 "68
-[e = _TRISB -> -> 208 `i `uc ]
+[e = _TRISB -> -> 240 `i `uc ]
 [; ;pin_manager.c: 69: TRISC = 0x80;
 "69
 [e = _TRISC -> -> 128 `i `uc ]
@@ -10933,62 +10911,28 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pin_manager.c: 103: PIE0bits.IOCIE = 1;
 "103
 [e = . . _PIE0bits 0 4 -> -> 1 `i `uc ]
+[; ;pin_manager.c: 106: RX1PPSbits.RXPPS = 0x17;
 "106
-[v _state `uc ~T0 @X0 1 a ]
-[; ;pin_manager.c: 106: bool state = (unsigned char)GIE;
-[e = _state -> -> _GIE `i `uc ]
-[; ;pin_manager.c: 107: GIE = 0;
-"107
-[e = _GIE -> -> 0 `i `b ]
-[; ;pin_manager.c: 108: PPSLOCK = 0x55;
-"108
-[e = _PPSLOCK -> -> 85 `i `uc ]
-[; ;pin_manager.c: 109: PPSLOCK = 0xAA;
-"109
-[e = _PPSLOCK -> -> 170 `i `uc ]
-[; ;pin_manager.c: 110: PPSLOCKbits.PPSLOCKED = 0x00;
-"110
-[e = . . _PPSLOCKbits 0 0 -> -> 0 `i `uc ]
-[; ;pin_manager.c: 112: RX1PPSbits.RXPPS = 0x17;
-"112
 [e = . . _RX1PPSbits 0 0 -> -> 23 `i `uc ]
-[; ;pin_manager.c: 113: RC6PPS = 0x09;
-"113
+[; ;pin_manager.c: 107: RC6PPS = 0x09;
+"107
 [e = _RC6PPS -> -> 9 `i `uc ]
-[; ;pin_manager.c: 114: RB5PPS = 0x0B;
-"114
-[e = _RB5PPS -> -> 11 `i `uc ]
-[; ;pin_manager.c: 115: RX2PPSbits.RXPPS = 0x0C;
-"115
-[e = . . _RX2PPSbits 0 0 -> -> 12 `i `uc ]
-[; ;pin_manager.c: 117: PPSLOCK = 0x55;
-"117
-[e = _PPSLOCK -> -> 85 `i `uc ]
-[; ;pin_manager.c: 118: PPSLOCK = 0xAA;
-"118
-[e = _PPSLOCK -> -> 170 `i `uc ]
-[; ;pin_manager.c: 119: PPSLOCKbits.PPSLOCKED = 0x01;
-"119
-[e = . . _PPSLOCKbits 0 0 -> -> 1 `i `uc ]
-[; ;pin_manager.c: 121: GIE = state;
-"121
-[e = _GIE -> _state `b ]
-[; ;pin_manager.c: 122: }
-"122
+[; ;pin_manager.c: 109: }
+"109
 [e :UE 1371 ]
 }
-"124
+"111
 [v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
-"125
+"112
 {
-[; ;pin_manager.c: 124: void PIN_MANAGER_IOC(void)
-[; ;pin_manager.c: 125: {
+[; ;pin_manager.c: 111: void PIN_MANAGER_IOC(void)
+[; ;pin_manager.c: 112: {
 [e :U _PIN_MANAGER_IOC ]
 [f ]
-[; ;pin_manager.c: 128: PIR0bits.IOCIF = 0;
-"128
+[; ;pin_manager.c: 115: PIR0bits.IOCIF = 0;
+"115
 [e = . . _PIR0bits 0 4 -> -> 0 `i `uc ]
-[; ;pin_manager.c: 130: }
-"130
+[; ;pin_manager.c: 117: }
+"117
 [e :UE 1372 ]
 }

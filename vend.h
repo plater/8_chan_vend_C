@@ -30,9 +30,11 @@ volatile uint24_t pnvcash;
 volatile uint8_t senspos;
 
 //Timer values for vend motor timing
-const uint16_t second1 = 0xE1BA;
-//Add this to increase by 1 second
-const uint16_t secondadd = 0x1E46;
+const uint16_t second1 = 0xE1BA ;
+//Subtract this to increase by 1/2 second
+const uint16_t second_5 = 0x0F23 ;
+//Subtract this to increase by 1 second
+const uint16_t secondadd = 0x1E46 ;
 
 //NVRAM address location definitions
 //This location holds the value of cash in hand
@@ -65,20 +67,20 @@ const uint16_t chan5linkbits = 0x21;
 const uint16_t chan6linkbits = 0x22;
 const uint16_t chan7linkbits = 0x23;
 const uint16_t chan8linkbits = 0x24;
+//Flags to disable sensor check storage
+const uint16_t sensorflags = 0x25;
 //Vend motor drive time for each channel.
 //Contains number of seconds.
-const uint16_t chan1time = 0x25;
-const uint16_t chan2time = 0x26;
-const uint16_t chan3time = 0x27;
-const uint16_t chan4time = 0x28;
-const uint16_t chan5time = 0x29;
-const uint16_t chan6time = 0x2A;
-const uint16_t chan7time = 0x2B;
-const uint16_t chan8time = 0x2C;
+const uint16_t chan1time = 0x26;
+const uint16_t chan2time = 0x27;
+const uint16_t chan3time = 0x28;
+const uint16_t chan4time = 0x29;
+const uint16_t chan5time = 0x2A;
+const uint16_t chan6time = 0x2B;
+const uint16_t chan7time = 0x2C;
+const uint16_t chan8time = 0x2D;
 //Hopper error disable byte
-const uint16_t hoperror = 0x2D;
-//Flags to disable sensor check storage
-const uint16_t sensorflags = 0x2E;
+const uint16_t hoperror = 0x2E;
 //Flags to disable sensor check on vend if set
 struct
 {
@@ -224,8 +226,16 @@ struct
    unsigned chanlink : 1;
    unsigned mottime : 1;
    unsigned nosense : 1;
-   unsigned spare6 : 1;
-   unsigned spare7 : 1;
+   unsigned settime : 1;
+   unsigned sensno : 1;
+   unsigned linkchan : 1;
+   unsigned swclosed : 1;
+   unsigned spare19 : 1;
+   unsigned spare20 : 1;
+   unsigned spare21 : 1;
+   unsigned spare22 : 1;
+   unsigned spare23 : 1;
+   unsigned spare24 : 1;
 } venflags;
 //Write multiple EEprom bytes to ram array
 void Write_NVstore(uint16_t storeadd, uint8_t *storemem, uint8_t storesize);
@@ -265,16 +275,26 @@ void Clear_cred(void);
 uint8_t Read_Service(void);
 
 void price_set(void);
+//Convert button bit to channel number 1 to 8
+uint8_t get_channel(uint8_t buttons);
 
 void set_price(uint8_t buttons);
 
 void Vend_setup(void);
 
-void Vend_timeset(void);
+void Vend_settime(void);
+
+void Vend_timeset(uint8_t channel);
 
 void Chan_link(void);
 
+void Link_chan(uint8_t channel);
+
 void Sens_off(void);
+
+void off_sens(uint8_t channel);
+
+void Reset_settings(void);
 
 #endif	/* VEND_H */
 

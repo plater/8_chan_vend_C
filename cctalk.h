@@ -74,6 +74,7 @@ void cctalk_pinenter(void);
 void cctalk_init(void);
 void cctalk_poll(void);
 void cctalk_serial(void);
+void cctalk_off(void);
 void cctalk_on(void);
 uint8_t cctalk_read(void);
 //cctalk message destination, number of bytes, command, and 

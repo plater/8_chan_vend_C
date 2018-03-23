@@ -13,7 +13,7 @@
   Description:
     This header file provides implementations for pin APIs for all pins selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - 4.26.1
+        Product Revision  :  MPLAB(c) Code Configurator - 4.35
         Device            :  PIC18F47K40
         Driver Version    :  1.02
     The generated drivers are tested against the following:
@@ -65,7 +65,7 @@ void PIN_MANAGER_Initialize(void)
     */    
     TRISE = 0x00;
     TRISA = 0x1F;
-    TRISB = 0xD0;
+    TRISB = 0xF0;
     TRISC = 0x80;
     TRISD = 0x00;
 
@@ -103,22 +103,9 @@ void PIN_MANAGER_Initialize(void)
     PIE0bits.IOCIE = 1; 
     
     
-    bool state = (unsigned char)GIE;
-    GIE = 0;
-    PPSLOCK = 0x55;
-    PPSLOCK = 0xAA;
-    PPSLOCKbits.PPSLOCKED = 0x00; // unlock PPS
-
     RX1PPSbits.RXPPS = 0x17;   //RC7->EUSART1:RX1;
     RC6PPS = 0x09;   //RC6->EUSART1:TX1;
-    RB5PPS = 0x0B;   //RB5->EUSART2:TX2;
-    RX2PPSbits.RXPPS = 0x0C;   //RB4->EUSART2:RX2;
 
-    PPSLOCK = 0x55;
-    PPSLOCK = 0xAA;
-    PPSLOCKbits.PPSLOCKED = 0x01; // lock PPS
-
-    GIE = state;
 }       
 
 void PIN_MANAGER_IOC(void)

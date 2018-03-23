@@ -57,11 +57,11 @@ void EUSART1_Initialize(void)
     // ABDOVF no_overflow; SCKP Non-Inverted; BRG16 16bit_generator; WUE disabled; ABDEN disabled; 
     BAUD1CON = 0x08;
 
-    // SPEN enabled; RX9 8-bit; CREN enabled; ADDEN disabled; SREN disabled; 
-    RC1STA = 0x90;
+    // SPEN enabled; RX9 9-bit; CREN enabled; ADDEN disabled; SREN disabled; 
+    RC1STA = 0xD0;
 
-    // TX9 8-bit; TX9D 0; SENDB send_sync_break_next; TXEN enabled; SYNC asynchronous; BRGH hi_speed; CSRC master; 
-    TX1STA = 0xAC;
+    // TX9 9-bit; TX9D 0; SENDB send_sync_break_next; TXEN enabled; SYNC asynchronous; BRGH hi_speed; CSRC master; 
+    TX1STA = 0xEC;
 
     // SP1BRGL 56; 
     SP1BRGL = 0x38;

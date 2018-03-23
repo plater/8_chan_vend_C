@@ -1,18 +1,22 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "132 mcc_generated_files/interrupt_manager.h
 [v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
-"103 mcc_generated_files/mcc.h
+"104 mcc_generated_files/mcc.h
 [v _PMD_Initialize `(v ~T0 @X0 0 ef ]
-"692 mcc_generated_files/pin_manager.h
+"708 mcc_generated_files/pin_manager.h
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"90 mcc_generated_files/mcc.h
+"91 mcc_generated_files/mcc.h
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
 "91 mcc_generated_files/cmp1.h
 [v _CMP1_Initialize `(v ~T0 @X0 0 ef ]
 "99 mcc_generated_files/tmr3.h
 [v _TMR3_Initialize `(v ~T0 @X0 0 ef ]
+"306 mcc_generated_files/tmr4.h
+[v _TMR4_Initialize `(v ~T0 @X0 0 ef ]
 "92 mcc_generated_files/dac1.h
 [v _DAC1_Initialize `(v ~T0 @X0 0 ef ]
+"306 mcc_generated_files/tmr2.h
+[v _TMR2_Initialize `(v ~T0 @X0 0 ef ]
 "99 mcc_generated_files/tmr5.h
 [v _TMR5_Initialize `(v ~T0 @X0 0 ef ]
 "99 mcc_generated_files/tmr1.h
@@ -21,8 +25,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TMR0_Initialize `(v ~T0 @X0 0 ef ]
 "95 mcc_generated_files/eusart1.h
 [v _EUSART1_Initialize `(v ~T0 @X0 0 ef ]
-"93 mcc_generated_files/eusart2.h
-[v _EUSART2_Initialize `(v ~T0 @X0 0 ef ]
 "5165 /opt/microchip/xc8/v1.44/include/pic18f47k40.h
 [v _OSCCON1 `Vuc ~T0 @X0 0 e@3800 ]
 "5305
@@ -10878,8 +10880,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
-[; ;pin_manager.h: 692: void PIN_MANAGER_Initialize (void);
-[; ;pin_manager.h: 704: void PIN_MANAGER_IOC(void);
+[; ;pin_manager.h: 708: void PIN_MANAGER_Initialize (void);
+[; ;pin_manager.h: 720: void PIN_MANAGER_IOC(void);
 [; ;stdint.h: 13: typedef signed char int8_t;
 [; ;stdint.h: 20: typedef signed int int16_t;
 [; ;stdint.h: 28: typedef signed short long int int24_t;
@@ -10929,6 +10931,58 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr3.h: 309: void TMR3_StartSinglePulseAcquisition(void);
 [; ;tmr3.h: 348: uint8_t TMR3_CheckGateValueStatus(void);
 [; ;tmr3.h: 386: bool TMR3_HasOverflowOccured(void);
+[; ;tmr4.h: 78: typedef enum
+[; ;tmr4.h: 79: {
+[; ;tmr4.h: 88: TMR4_ROP_STARTS_TMRON,
+[; ;tmr4.h: 93: TMR4_ROP_STARTS_TMRON_ERSHIGH,
+[; ;tmr4.h: 98: TMR4_ROP_STARTS_TMRON_ERSLOW,
+[; ;tmr4.h: 103: TMR4_ROP_RESETS_ERSBOTHEDGE,
+[; ;tmr4.h: 108: TMR4_ROP_RESETS_ERSRISINGEDGE,
+[; ;tmr4.h: 113: TMR4_ROP_RESETS_ERSFALLINGEDGE,
+[; ;tmr4.h: 118: TMR4_ROP_RESETS_ERSLOW,
+[; ;tmr4.h: 123: TMR4_ROP_RESETS_ERSHIGH,
+[; ;tmr4.h: 134: TMR4_OS_STARTS_TMRON,
+[; ;tmr4.h: 139: TMR4_OS_STARTS_ERSRISINGEDGE ,
+[; ;tmr4.h: 144: TMR4_OS_STARTS_ERSFALLINGEDGE ,
+[; ;tmr4.h: 149: TMR4_OS_STARTS_ERSBOTHEDGE,
+[; ;tmr4.h: 155: TMR4_OS_STARTS_ERSFIRSTRISINGEDGE,
+[; ;tmr4.h: 161: TMR4_OS_STARTS_ERSFIRSTFALLINGEDGE,
+[; ;tmr4.h: 167: TMR4_OS_STARTS_ERSRISINGEDGEDETECT,
+[; ;tmr4.h: 172: TMR4_OS_STARTS_ERSFALLINGEDGEDETECT,
+[; ;tmr4.h: 177: TMR4_OS_STARTS_TMRON_ERSHIGH = 0x16,
+[; ;tmr4.h: 182: TMR4_OS_STARTS_TMRON_ERSLOW = 0x17,
+[; ;tmr4.h: 191: TMR4_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
+[; ;tmr4.h: 196: TMR4_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT = 0x12,
+[; ;tmr4.h: 202: TMR4_MS_STARTS_TMRON_ERSBOTHEDGE = 0x13
+[; ;tmr4.h: 204: } TMR4_HLT_MODE;
+[; ;tmr4.h: 219: typedef enum
+[; ;tmr4.h: 220: {
+[; ;tmr4.h: 223: TMR4_T4INPPS,
+[; ;tmr4.h: 227: TMR4_T2POSTSCALED,
+[; ;tmr4.h: 231: TMR4_RESERVED,
+[; ;tmr4.h: 235: TMR4_T6POSTSCALED,
+[; ;tmr4.h: 238: TMR4_CCP1_OUT,
+[; ;tmr4.h: 242: TMR4_CCP2_OUT,
+[; ;tmr4.h: 246: TMR4_PWM3_OUT,
+[; ;tmr4.h: 250: TMR4_PWM4_OUT,
+[; ;tmr4.h: 254: TMR4_C1_OUT_SYNC,
+[; ;tmr4.h: 258: TMR4_C2_OUT_SYNC,
+[; ;tmr4.h: 262: TMR4_ZCD_OUTPUT
+[; ;tmr4.h: 264: } TMR4_HLT_EXT_RESET_SOURCE;
+[; ;tmr4.h: 306: void TMR4_Initialize(void);
+[; ;tmr4.h: 342: void TMR4_ModeSet(TMR4_HLT_MODE mode);
+[; ;tmr4.h: 377: void TMR4_ExtResetSourceSet(TMR4_HLT_EXT_RESET_SOURCE reset);
+[; ;tmr4.h: 406: void TMR4_Start(void);
+[; ;tmr4.h: 435: void TMR4_StartTimer(void);
+[; ;tmr4.h: 467: void TMR4_Stop(void);
+[; ;tmr4.h: 499: void TMR4_StopTimer(void);
+[; ;tmr4.h: 534: uint8_t TMR4_Counter8BitGet(void);
+[; ;tmr4.h: 569: uint8_t TMR4_ReadTimer(void);
+[; ;tmr4.h: 608: void TMR4_Counter8BitSet(uint8_t timerVal);
+[; ;tmr4.h: 647: void TMR4_WriteTimer(uint8_t timerVal);
+[; ;tmr4.h: 699: void TMR4_Period8BitSet(uint8_t periodVal);
+[; ;tmr4.h: 751: void TMR4_LoadPeriodRegister(uint8_t periodVal);
+[; ;tmr4.h: 789: bool TMR4_HasOverflowOccured(void);
 [; ;tmr1.h: 99: void TMR1_Initialize(void);
 [; ;tmr1.h: 128: void TMR1_StartTimer(void);
 [; ;tmr1.h: 160: void TMR1_StopTimer(void);
@@ -10938,6 +10992,58 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr1.h: 309: void TMR1_StartSinglePulseAcquisition(void);
 [; ;tmr1.h: 348: uint8_t TMR1_CheckGateValueStatus(void);
 [; ;tmr1.h: 386: bool TMR1_HasOverflowOccured(void);
+[; ;tmr2.h: 78: typedef enum
+[; ;tmr2.h: 79: {
+[; ;tmr2.h: 88: TMR2_ROP_STARTS_TMRON,
+[; ;tmr2.h: 93: TMR2_ROP_STARTS_TMRON_ERSHIGH,
+[; ;tmr2.h: 98: TMR2_ROP_STARTS_TMRON_ERSLOW,
+[; ;tmr2.h: 103: TMR2_ROP_RESETS_ERSBOTHEDGE,
+[; ;tmr2.h: 108: TMR2_ROP_RESETS_ERSRISINGEDGE,
+[; ;tmr2.h: 113: TMR2_ROP_RESETS_ERSFALLINGEDGE,
+[; ;tmr2.h: 118: TMR2_ROP_RESETS_ERSLOW,
+[; ;tmr2.h: 123: TMR2_ROP_RESETS_ERSHIGH,
+[; ;tmr2.h: 134: TMR2_OS_STARTS_TMRON,
+[; ;tmr2.h: 139: TMR2_OS_STARTS_ERSRISINGEDGE ,
+[; ;tmr2.h: 144: TMR2_OS_STARTS_ERSFALLINGEDGE ,
+[; ;tmr2.h: 149: TMR2_OS_STARTS_ERSBOTHEDGE,
+[; ;tmr2.h: 155: TMR2_OS_STARTS_ERSFIRSTRISINGEDGE,
+[; ;tmr2.h: 161: TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE,
+[; ;tmr2.h: 167: TMR2_OS_STARTS_ERSRISINGEDGEDETECT,
+[; ;tmr2.h: 172: TMR2_OS_STARTS_ERSFALLINGEDGEDETECT,
+[; ;tmr2.h: 177: TMR2_OS_STARTS_TMRON_ERSHIGH = 0x16,
+[; ;tmr2.h: 182: TMR2_OS_STARTS_TMRON_ERSLOW = 0x17,
+[; ;tmr2.h: 191: TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT = 0x11,
+[; ;tmr2.h: 196: TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT = 0x12,
+[; ;tmr2.h: 202: TMR2_MS_STARTS_TMRON_ERSBOTHEDGE = 0x13
+[; ;tmr2.h: 204: } TMR2_HLT_MODE;
+[; ;tmr2.h: 219: typedef enum
+[; ;tmr2.h: 220: {
+[; ;tmr2.h: 223: TMR2_T2INPPS,
+[; ;tmr2.h: 227: TMR2_RESERVED,
+[; ;tmr2.h: 231: TMR2_T4POSTSCALED,
+[; ;tmr2.h: 235: TMR2_T6POSTSCALED,
+[; ;tmr2.h: 238: TMR2_CCP1_OUT,
+[; ;tmr2.h: 242: TMR2_CCP2_OUT,
+[; ;tmr2.h: 246: TMR2_PWM3_OUT,
+[; ;tmr2.h: 250: TMR2_PWM4_OUT,
+[; ;tmr2.h: 254: TMR2_C1_OUT_SYNC,
+[; ;tmr2.h: 258: TMR2_C2_OUT_SYNC,
+[; ;tmr2.h: 262: TMR2_ZCD_OUTPUT
+[; ;tmr2.h: 264: } TMR2_HLT_EXT_RESET_SOURCE;
+[; ;tmr2.h: 306: void TMR2_Initialize(void);
+[; ;tmr2.h: 342: void TMR2_ModeSet(TMR2_HLT_MODE mode);
+[; ;tmr2.h: 377: void TMR2_ExtResetSourceSet(TMR2_HLT_EXT_RESET_SOURCE reset);
+[; ;tmr2.h: 406: void TMR2_Start(void);
+[; ;tmr2.h: 435: void TMR2_StartTimer(void);
+[; ;tmr2.h: 467: void TMR2_Stop(void);
+[; ;tmr2.h: 499: void TMR2_StopTimer(void);
+[; ;tmr2.h: 534: uint8_t TMR2_Counter8BitGet(void);
+[; ;tmr2.h: 569: uint8_t TMR2_ReadTimer(void);
+[; ;tmr2.h: 608: void TMR2_Counter8BitSet(uint8_t timerVal);
+[; ;tmr2.h: 647: void TMR2_WriteTimer(uint8_t timerVal);
+[; ;tmr2.h: 699: void TMR2_Period8BitSet(uint8_t periodVal);
+[; ;tmr2.h: 751: void TMR2_LoadPeriodRegister(uint8_t periodVal);
+[; ;tmr2.h: 789: bool TMR2_HasOverflowOccured(void);
 [; ;cmp1.h: 91: void CMP1_Initialize(void);
 [; ;cmp1.h: 131: bool CMP1_GetOutputStatus(void);
 [; ;tmr0.h: 99: void TMR0_Initialize(void);
@@ -10947,6 +11053,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 235: void TMR0_Write16bitTimer(uint16_t timerVal);
 [; ;tmr0.h: 271: void TMR0_Reload16bit(void);
 [; ;tmr0.h: 309: bool TMR0_HasOverflowOccured(void);
+[; ;dac1.h: 92: void DAC1_Initialize(void);
+[; ;dac1.h: 128: void DAC1_SetOutput(uint8_t inputData);
 [; ;memory.h: 98: uint8_t FLASH_ReadByte(uint32_t flashAddr);
 [; ;memory.h: 124: uint16_t FLASH_ReadWord(uint32_t flashAddr);
 [; ;memory.h: 156: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
@@ -10955,18 +11063,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;memory.h: 248: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [; ;memory.h: 274: uint8_t DATAEE_ReadByte(uint16_t bAdd);
 [; ;memory.h: 276: void MEMORY_Tasks(void);
-[; ;dac1.h: 92: void DAC1_Initialize(void);
-[; ;dac1.h: 128: void DAC1_SetOutput(uint8_t inputData);
-[; ;eusart2.h: 93: void EUSART2_Initialize(void);
-[; ;eusart2.h: 113: uint8_t EUSART2_Read(void);
-[; ;eusart2.h: 133: void EUSART2_Write(uint8_t txData);
 [; ;eusart1.h: 93: void eusartmdb_Initialize(void);
 [; ;eusart1.h: 95: void EUSART1_Initialize(void);
 [; ;eusart1.h: 115: uint8_t EUSART1_Read(void);
 [; ;eusart1.h: 135: void EUSART1_Write(uint8_t txData);
-[; ;mcc.h: 77: void SYSTEM_Initialize(void);
-[; ;mcc.h: 90: void OSCILLATOR_Initialize(void);
-[; ;mcc.h: 103: void PMD_Initialize(void);
+[; ;mcc.h: 78: void SYSTEM_Initialize(void);
+[; ;mcc.h: 91: void OSCILLATOR_Initialize(void);
+[; ;mcc.h: 104: void PMD_Initialize(void);
 "116 mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
 "117
@@ -10993,82 +11096,85 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mcc.c: 123: TMR3_Initialize();
 "123
 [e ( _TMR3_Initialize ..  ]
-[; ;mcc.c: 124: DAC1_Initialize();
+[; ;mcc.c: 124: TMR4_Initialize();
 "124
-[e ( _DAC1_Initialize ..  ]
-[; ;mcc.c: 125: TMR5_Initialize();
+[e ( _TMR4_Initialize ..  ]
+[; ;mcc.c: 125: DAC1_Initialize();
 "125
-[e ( _TMR5_Initialize ..  ]
-[; ;mcc.c: 126: TMR1_Initialize();
+[e ( _DAC1_Initialize ..  ]
+[; ;mcc.c: 126: TMR2_Initialize();
 "126
-[e ( _TMR1_Initialize ..  ]
-[; ;mcc.c: 127: TMR0_Initialize();
+[e ( _TMR2_Initialize ..  ]
+[; ;mcc.c: 127: TMR5_Initialize();
 "127
-[e ( _TMR0_Initialize ..  ]
-[; ;mcc.c: 128: EUSART1_Initialize();
+[e ( _TMR5_Initialize ..  ]
+[; ;mcc.c: 128: TMR1_Initialize();
 "128
-[e ( _EUSART1_Initialize ..  ]
-[; ;mcc.c: 129: EUSART2_Initialize();
+[e ( _TMR1_Initialize ..  ]
+[; ;mcc.c: 129: TMR0_Initialize();
 "129
-[e ( _EUSART2_Initialize ..  ]
-[; ;mcc.c: 130: }
+[e ( _TMR0_Initialize ..  ]
+[; ;mcc.c: 130: EUSART1_Initialize();
 "130
+[e ( _EUSART1_Initialize ..  ]
+[; ;mcc.c: 131: }
+"131
 [e :UE 1371 ]
 }
-"132
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
 "133
+[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
+"134
 {
-[; ;mcc.c: 132: void OSCILLATOR_Initialize(void)
-[; ;mcc.c: 133: {
+[; ;mcc.c: 133: void OSCILLATOR_Initialize(void)
+[; ;mcc.c: 134: {
 [e :U _OSCILLATOR_Initialize ]
 [f ]
-[; ;mcc.c: 135: OSCCON1 = 0x60;
-"135
+[; ;mcc.c: 136: OSCCON1 = 0x60;
+"136
 [e = _OSCCON1 -> -> 96 `i `uc ]
-[; ;mcc.c: 137: OSCCON3 = 0x00;
-"137
+[; ;mcc.c: 138: OSCCON3 = 0x00;
+"138
 [e = _OSCCON3 -> -> 0 `i `uc ]
-[; ;mcc.c: 139: OSCEN = 0x00;
-"139
+[; ;mcc.c: 140: OSCEN = 0x00;
+"140
 [e = _OSCEN -> -> 0 `i `uc ]
-[; ;mcc.c: 141: OSCFRQ = 0x04;
-"141
+[; ;mcc.c: 142: OSCFRQ = 0x04;
+"142
 [e = _OSCFRQ -> -> 4 `i `uc ]
-[; ;mcc.c: 143: OSCTUNE = 0x00;
-"143
-[e = _OSCTUNE -> -> 0 `i `uc ]
-[; ;mcc.c: 144: }
+[; ;mcc.c: 144: OSCTUNE = 0x00;
 "144
+[e = _OSCTUNE -> -> 0 `i `uc ]
+[; ;mcc.c: 145: }
+"145
 [e :UE 1372 ]
 }
-"146
-[v _PMD_Initialize `(v ~T0 @X0 1 ef ]
 "147
+[v _PMD_Initialize `(v ~T0 @X0 1 ef ]
+"148
 {
-[; ;mcc.c: 146: void PMD_Initialize(void)
-[; ;mcc.c: 147: {
+[; ;mcc.c: 147: void PMD_Initialize(void)
+[; ;mcc.c: 148: {
 [e :U _PMD_Initialize ]
 [f ]
-[; ;mcc.c: 149: PMD0 = 0x00;
-"149
+[; ;mcc.c: 150: PMD0 = 0x00;
+"150
 [e = _PMD0 -> -> 0 `i `uc ]
-[; ;mcc.c: 151: PMD1 = 0x00;
-"151
+[; ;mcc.c: 152: PMD1 = 0x00;
+"152
 [e = _PMD1 -> -> 0 `i `uc ]
-[; ;mcc.c: 153: PMD2 = 0x00;
-"153
+[; ;mcc.c: 154: PMD2 = 0x00;
+"154
 [e = _PMD2 -> -> 0 `i `uc ]
-[; ;mcc.c: 155: PMD3 = 0x00;
-"155
+[; ;mcc.c: 156: PMD3 = 0x00;
+"156
 [e = _PMD3 -> -> 0 `i `uc ]
-[; ;mcc.c: 157: PMD4 = 0x00;
-"157
+[; ;mcc.c: 158: PMD4 = 0x00;
+"158
 [e = _PMD4 -> -> 0 `i `uc ]
-[; ;mcc.c: 159: PMD5 = 0x00;
-"159
-[e = _PMD5 -> -> 0 `i `uc ]
-[; ;mcc.c: 160: }
+[; ;mcc.c: 160: PMD5 = 0x00;
 "160
+[e = _PMD5 -> -> 0 `i `uc ]
+[; ;mcc.c: 161: }
+"161
 [e :UE 1373 ]
 }

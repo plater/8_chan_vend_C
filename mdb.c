@@ -322,7 +322,7 @@ void mdb_on(void)
     // TX9 9-bit; TX9D 0; SENDB send_sync_break_next; TXEN enabled; SYNC asynchronous; BRGH hi_speed; CSRC master; 
 //    TX1STA = 0xEC;
     LATCbits.LATC0 = 1;
-    LATCbits.LATC1 = 0;
+//    LATCbits.LATC1 = 0;
 //    TX1STAbits.TXEN = 1;
 //    mdb_comm(note_poll);
 }

@@ -3,18 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/cmp1.c</file>
             <file>file:/home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.h</file>
             <file>file:/home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.h</file>
-            <file>file:/home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/memory.c</file>
+            <file>file:/home/davepl/MPLABXProjects/Andre_8Chan_C.X/hopper.h</file>
             <file>file:/home/davepl/MPLABXProjects/Andre_8Chan_C.X/mdb.h</file>
-            <file>file:/home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/pin_manager.c</file>
-            <file>file:/home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/tmr0.c</file>
             <file>file:/home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c</file>
             <file>file:/home/davepl/MPLABXProjects/Andre_8Chan_C.X/mdb.c</file>
             <file>file:/home/davepl/MPLABXProjects/Andre_8Chan_C.X/main.c</file>
             <file>file:/home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c</file>
-            <file>file:/home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/dac1.c</file>
+            <file>file:/home/davepl/MPLABXProjects/Andre_8Chan_C.X/hopper.c</file>
         </group>
     </open-files>
 </project-private>

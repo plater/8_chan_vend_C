@@ -10832,12 +10832,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eusart1.c: 58: BAUD1CON = 0x08;
 "58
 [e = _BAUD1CON -> -> 8 `i `uc ]
-[; ;eusart1.c: 61: RC1STA = 0x90;
+[; ;eusart1.c: 61: RC1STA = 0xD0;
 "61
-[e = _RC1STA -> -> 144 `i `uc ]
-[; ;eusart1.c: 64: TX1STA = 0xAC;
+[e = _RC1STA -> -> 208 `i `uc ]
+[; ;eusart1.c: 64: TX1STA = 0xEC;
 "64
-[e = _TX1STA -> -> 172 `i `uc ]
+[e = _TX1STA -> -> 236 `i `uc ]
 [; ;eusart1.c: 67: SP1BRGL = 0x38;
 "67
 [e = _SP1BRGL -> -> 56 `i `uc ]

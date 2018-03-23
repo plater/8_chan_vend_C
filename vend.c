@@ -8,9 +8,7 @@
 //Read values stored in NVRam and initialize link and time flags.
 void Init_vendmem(void)
 {
-    //Initialize 8 vend error flags
-    ((uint8_t*) &venderr)[0] = DATAEE_ReadByte(venderrors);
-    //Initialize sensor check flags
+    //Initialize sensor check on/off flags
     ((uint8_t*) &senschk)[0] = DATAEE_ReadByte(sensorflags);
     //Initialize 8 x 8 channel link flags
     uint16_t chanlinkbits = chan1linkbits;
@@ -27,14 +25,16 @@ void Init_vendmem(void)
 //Initialize vend flags
 void vend_init(void)
 {
+    //Initialize 8 vend error flags
+    ((uint8_t*) &venderr)[0] = DATAEE_ReadByte(venderrors);
     //Initialize channel links and vend inhibit flags
     Init_vendmem();
     //Retrieve and set DAC for sensor comparator
     sensorval = DATAEE_ReadByte(sensval);
     DAC1_SetOutput(sensorval);
     //Initialize cctalk for cctalk hopper if used
-    lcd_string(inithop, line1);
-    cctalk_init();
+    //lcd_string(inithop, line1);
+    //cctalk_init();
     //Turn on MDB
     lcd_string(initnote, line1);
     mdb_init();
@@ -146,15 +146,15 @@ uint8_t butin(void)
     LATA6 = 1;
     __delay_ms(15);
     //Read buttons 5 to 8
-    buttons = ((PORTA >> 1) & 0x0F) << 4;
+    uint8_t butons = ((PORTA >> 1) & 0x0F) << 4;
     LATA7 = 1;
     LATA6 = 0;
     __delay_ms(15);
     //Read buttons 1 to 4
-    buttons = ((PORTA >> 1) & 0x0F) | buttons;
+    butons = ((PORTA >> 1) & 0x0F) | butons;
     LATA7 = 1;
     LATA6 = 1;
-    return ~buttons;
+    return ~butons;
 }
 
 void setup(void)
@@ -313,18 +313,24 @@ void price_set(void)
     lcd_string(servmsg, line1);
 }
 
+uint8_t get_channel(uint8_t butons)
+{
+    //Convert button bit to channel number 1 to 8
+    uint8_t channel = 0x00;
+    while(butons != 0)
+    {
+        channel++;
+        butons = butons >> 1;
+    }
+    channel--;
+    return channel;
+}
+
 void set_price(uint8_t buttons)
 {
     venflags.setprice = 1;
-    uint8_t channel = 0x00;
-    //Convert button bit to channel number 1 to 8
-    while(buttons != 0)
-    {
-        channel++;
-        buttons = buttons >> 1;
-    }
+    uint8_t channel = get_channel(buttons);
     //Get existing price
-    channel--;
     vendprice = DATAEE_ReadByte(pricestore + channel);
     displ_price(vendprice);
     while(venflags.setprice)
@@ -353,7 +359,7 @@ void set_price(uint8_t buttons)
 }
 //Time to drive vend motor, sensor disable and link channels
 //"Press 1 = Vend Time Press 2 = Chan Link Press 3 = Sensor Off"
-// Press 8 to exit
+// 4 = Reset Press 8 to exit
 void Vend_setup(void)
 {
     venflags.vendset = 1;
@@ -363,7 +369,7 @@ void Vend_setup(void)
         buttons = butindb();
         switch(buttons)
         {
-            case 0x01 : Vend_timeset();
+            case 0x01 : Vend_settime();
             lcd_string(vendsetup, line1);
             break;
             case 0x02 : Chan_link();
@@ -372,26 +378,181 @@ void Vend_setup(void)
             case 0x04 : Sens_off();
             lcd_string(vendsetup, line1);
             break;
+            case 0x08 : Reset_settings();
+            lcd_string(vendsetup, line1);
+            break;
             case 0x80 : venflags.vendset = 0;
+            //Reinitialize changed flags
+            Init_vendmem();
             lcd_string(servmsg, line1);
             break;
         }
     }
 }
 
-void Vend_timeset(void)
+void Vend_settime(void)
+{
+    //setimemsg[] = "Push channel button Push service to exit"
+    lcd_string(setimemsg, line1);
+    buttons = butindb();
+    venflags.settime = 1;
+    
+    while(venflags.settime)
+    {
+        buttons = butindb();
+        if(buttons != 0x00)
+        {
+            Vend_timeset(get_channel(buttons));
+        }
+        if(Read_Service() == 0x00)
+        {
+            venflags.settime = 0;
+        }
+        
+    }
+}
+
+// vendtimem[] = "Push 1 = +.5 second Push 2 = -.5 second "
+void Vend_timeset(uint8_t channel)
 {
     venflags.mottime = 1;
+    lcd_string(vendtimem, line1);
+    uint8_t chantime = DATAEE_ReadByte(chan1time + channel);
+    displ_time(chantime, channel);
+    while(venflags.mottime)
+    {
+        buttons = butindb();
+        switch(buttons)
+        {
+            case 0x01 : chantime++;
+            DATAEE_WriteByte(chan1time + channel, chantime);
+            displ_time(chantime, channel);
+            break;
+            case 0x02 : chantime--;
+            DATAEE_WriteByte(chan1time + channel, chantime);
+            displ_time(chantime, channel);
+            break;
+            case 0x80 : venflags.mottime = 0;
+        }
+    }
+    
 }
 
 void Chan_link(void)
 {
+    lcd_string(chanlinkm, line1);
     venflags.chanlink = 1;
+    while(venflags.chanlink)
+    {
+        buttons = butindb();
+        if(buttons != 0x00)
+        {
+            Link_chan(get_channel(buttons));
+            __delay_ms(1000);
+        }
+        if(Read_Service() == 0x00)
+        {
+            venflags.chanlink = 0;
+        }
+        
+    }
+    
 }
+
+void Link_chan(uint8_t channel)
+{
+    venflags.linkchan = 1;
+    uint8_t chanbit = buttons;
+    uint8_t linkflags = DATAEE_ReadByte(chan1linkbits + channel);
+    displ_lflags(channel, linkflags);
+    while(venflags.linkchan)
+    {
+        buttons = butindb();
+        if(buttons != 0x00)
+        {
+            if(buttons && linkflags)
+            {
+                //linkflag set so unset it
+                linkflags = linkflags & ~buttons;
+            }
+            else
+            {
+                //linkflag not set so set it
+                linkflags = linkflags | buttons;
+            }
+            DATAEE_WriteByte(chan1linkbits + channel, linkflags);
+            displ_lflags(channel, linkflags);
+        }
+        while(Read_Service() == 0x00)
+        {
+            venflags.linkchan = 0;
+        }
+    }
+    
+}
+
 
 void Sens_off(void)
 {
     venflags.nosense = 1;
+    lcd_string(setimemsg, line1);
+    buttons = butindb();
+    while(venflags.nosense)
+    {
+        buttons = butindb();
+        if(buttons != 0x00)
+        {
+            off_sens(get_channel(buttons));
+        }
+        if(Read_Service() == 0x00)
+        {
+            venflags.nosense = 0;
+        }
+        
+    }
+    
+}
+//"Hold channel button or Push service to  exit"
+void off_sens(uint8_t channel)
+{
+    uint8_t chanbit = buttons;
+    venflags.sensno = 1;
+    uint8_t senseflags = DATAEE_ReadByte(sensorflags);
+    displ_sflags(senseflags, channel, chanbit);
+    //Push 1 = On, 2 = Off, 8 = Exit
+    while(venflags.sensno)
+    {
+        buttons = butindb();
+        switch(buttons)
+        {
+            //clear bit for sensed vend
+            case 0x01 : senseflags = senseflags & ~chanbit;
+            DATAEE_WriteByte(sensorflags, senseflags);
+            displ_sflags(senseflags, channel, chanbit);
+            break;
+            //set bit to 1 for no sensor
+            case 0x02 : senseflags = senseflags | chanbit;
+            DATAEE_WriteByte(sensorflags, senseflags);
+            displ_sflags(senseflags, channel, chanbit);
+            break;
+            case 0x80 : venflags.sensno = 0;
+            break;
+        }
+    }
+}
+
+void Reset_settings(void)
+{
+    lcd_string(chanresetmsg, line1);
+    uint16_t chanlinkbits = chan1linkbits;
+    while(chanlinkbits < chan1time)
+    {
+        //Set to zero all link bits and sensor disable bits
+        DATAEE_WriteByte(chanlinkbits, 0x00);
+        chanlinkbits++;
+    }
+    DATAEE_WriteByte(sensorflags, 0x00);
+    __delay_ms(2000);
 }
 
 

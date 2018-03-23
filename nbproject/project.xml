@@ -16,6 +16,7 @@
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
             <word>cashint</word>
             <word>cashinv</word>
+            <word>cashoutv</word>
             <word>cctalk</word>
             <word>chan</word>
             <word>chanlinkx</word>
@@ -23,10 +24,14 @@
             <word>clr</word>
             <word>const</word>
             <word>Cred</word>
+            <word>eeprom</word>
             <word>hexnum</word>
+            <word>init</word>
+            <word>inithop</word>
             <word>lcd</word>
             <word>lcdstring</word>
             <word>linkbits</word>
+            <word>linkflag</word>
             <word>lsb</word>
             <word>mdb</word>
             <word>mdbdata</word>
@@ -38,6 +43,7 @@
             <word>opto</word>
             <word>pnvcash</word>
             <word>pvcash</word>
+            <word>setimemsg</word>
             <word>storeadd</word>
             <word>storemem</word>
             <word>storesize</word>
@@ -47,6 +53,8 @@
             <word>vcash</word>
             <word>venderrors</word>
             <word>vends</word>
+            <word>vendtimem</word>
+            <word>vendtimemsg</word>
         </spellchecker-wordlist>
     </configuration>
 </project>

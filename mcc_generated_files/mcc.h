@@ -52,12 +52,13 @@
 #include "interrupt_manager.h"
 #include "tmr5.h"
 #include "tmr3.h"
+#include "tmr4.h"
 #include "tmr1.h"
+#include "tmr2.h"
 #include "cmp1.h"
 #include "tmr0.h"
-#include "memory.h"
 #include "dac1.h"
-#include "eusart2.h"
+#include "memory.h"
 #include "eusart1.h"
 
 #define _XTAL_FREQ  12000000
