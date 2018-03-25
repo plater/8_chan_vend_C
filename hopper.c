@@ -34,6 +34,8 @@ bool hopper_pay(uint8_t change)
         {
             cctalk_off();
             Update_coinsout(outcoins);
+            venflags.nochange = 1;
+            DATAEE_WriteByte(hoperror, 0x01);
             return 1;
         }
         outcoins++;

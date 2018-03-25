@@ -10959,6 +10959,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr0.h: 235: void TMR0_Write16bitTimer(uint16_t timerVal);
 [; ;tmr0.h: 271: void TMR0_Reload16bit(void);
 [; ;tmr0.h: 309: bool TMR0_HasOverflowOccured(void);
+[; ;dac1.h: 92: void DAC1_Initialize(void);
+[; ;dac1.h: 128: void DAC1_SetOutput(uint8_t inputData);
 [; ;memory.h: 98: uint8_t FLASH_ReadByte(uint32_t flashAddr);
 [; ;memory.h: 124: uint16_t FLASH_ReadWord(uint32_t flashAddr);
 [; ;memory.h: 156: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
@@ -10967,8 +10969,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;memory.h: 248: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [; ;memory.h: 274: uint8_t DATAEE_ReadByte(uint16_t bAdd);
 [; ;memory.h: 276: void MEMORY_Tasks(void);
-[; ;dac1.h: 92: void DAC1_Initialize(void);
-[; ;dac1.h: 128: void DAC1_SetOutput(uint8_t inputData);
 [; ;eusart1.h: 93: void eusartmdb_Initialize(void);
 [; ;eusart1.h: 95: void EUSART1_Initialize(void);
 [; ;eusart1.h: 115: uint8_t EUSART1_Read(void);

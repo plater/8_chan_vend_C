@@ -1,6 +1,6 @@
- build/default/production/main.d  \
- build/default/production/main.p1:  \
- main.c  \
+ build/default/production/dispense.d  \
+ build/default/production/dispense.p1:  \
+ dispense.c  \
 mcc_generated_files/cmp1.h  \
 mcc_generated_files/mcc.h  \
 mcc_generated_files/eusart1.h  \

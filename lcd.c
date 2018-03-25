@@ -240,6 +240,12 @@ void displ_price(uint8_t vendprice)
     displ_hex(vendprice);
 }
 
+void displ_nochange(void)
+{
+    lcd_dispadd(line3);
+    lcd_string(nochange, line3);
+}
+
 //Write character to LCD
 void lcd_writeC(uint8_t lcdata)
 {

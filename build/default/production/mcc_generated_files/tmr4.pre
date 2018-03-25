@@ -14552,7 +14552,7 @@ T4HLT = 0x00;
 T4RST = 0x00;
 
 
-T4PR = 0x98;
+T4PR = 0x4B;
 
 
 T4TMR = 0x00;

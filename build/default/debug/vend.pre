@@ -15191,6 +15191,7 @@ volatile uint8_t vcashout[2];
 volatile uint16_t pvcash;
 volatile uint24_t pnvcash;
 volatile uint8_t senspos;
+volatile uint8_t pricevend[8];
 
 
 const uint16_t second1 = 0xE1BA ;
@@ -15371,7 +15372,7 @@ unsigned chan7 : 1;
 unsigned chan8 : 1;
 } chanlink8 @ 0x00A;
 
-# 213
+# 214
 struct
 {
 unsigned iscredit : 1;
@@ -15392,7 +15393,7 @@ unsigned settime : 1;
 unsigned sensno : 1;
 unsigned linkchan : 1;
 unsigned swclosed : 1;
-unsigned spare19 : 1;
+unsigned pricedisplay : 1;
 unsigned spare20 : 1;
 unsigned spare21 : 1;
 unsigned spare22 : 1;
@@ -15492,6 +15493,7 @@ DAC1_SetOutput(sensorval);
 lcd_string(initnote, line1);
 mdb_init();
 
+venflags.pricedisplay = 0;
 venflags.service = 0;
 venflags.initialrun = 1;
 if(credit_check() == 0)
@@ -15618,7 +15620,7 @@ void setup(void)
 void Audit(void)
 {
 
-# 177
+# 178
 }
 
 void Hopper_coin(void)

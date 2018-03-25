@@ -26,6 +26,7 @@
       <itemPath>mdb.h</itemPath>
       <itemPath>cctalk.h</itemPath>
       <itemPath>hopper.h</itemPath>
+      <itemPath>dispense.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -58,6 +59,7 @@
       <itemPath>cctalk.c</itemPath>
       <itemPath>eusart_mdb.c</itemPath>
       <itemPath>hopper.c</itemPath>
+      <itemPath>dispense.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

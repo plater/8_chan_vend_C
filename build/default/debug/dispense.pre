@@ -1,5 +1,5 @@
 
-# 1 "hopper.c"
+# 1 "dispense.c"
 
 # 26 "/opt/microchip/xc8/v1.44/include/htc.h"
 extern const char __xc8_OPTIM_SPEED;
@@ -14884,8 +14884,7 @@ const char line4 = 0x54;
 
 
 const uint8_t clrline[] ="                    ";
-const uint8_t inscoin[] = "Insert Notes & PressLit Button To Vend" ;
-const uint8_t nochange[] = "No Change Use Exact      Amount!";
+const uint8_t inscoin[] = "Insert Notes & Press Lighted Button To      Vend" ;
 const uint8_t credits[] = "  Credit = R";
 const uint8_t pricesetmsg[] = "   Price set mode";
 const uint8_t pricesetm2[] = "Press channel button    to set price      Service = Exit";
@@ -14910,6 +14909,7 @@ const uint8_t servmsg[] = "1 = Audit 2 = Sensor3=Hop-Coin 4=Note-en5=Cred-clr 6=
 const uint8_t noteerr[] = "   Note error     code = 0x";
 const uint8_t inithop[] = "  Initialize Hopper";
 const uint8_t initnote[] = "     Initialize          Note Reader";
+const uint8_t nochange[] = "No Change Given";
 const uint8_t setnotes[] = "Enable / Disable    1 = R10, 2 = R20    3 = R50, 4 = R100   5 = R200";
 const uint8_t tenrand[] = "   R10  ";
 const uint8_t twentyrand[] = "  R20  ";
@@ -14963,8 +14963,6 @@ void lcd_test(void);
 void displ_hex(uint24_t);
 
 void displ_price(uint8_t vendprice);
-
-void displ_nochange(void);
 
 void displ_credit(void);
 
@@ -15461,146 +15459,11 @@ void off_sens(uint8_t channel);
 
 void Reset_settings(void);
 
-# 15 "hopper.h"
-uint8_t change = 0;
-uint8_t outcoins;
-signed char hopercount = 3;
+# 14 "dispense.h"
+void price_check(void);
 
-void hopper_test(void);
-bool hopper_pay(uint8_t change);
-bool switch_read(void);
-bool pay_coin(void);
-void Update_coinsout(uint8_t coinsout);
-bool Reset_hopper(void);
+# 10 "dispense.c"
+void price_check(void)
+{
 
-# 10 "hopper.c"
-void hopper_test(void)
-{
-if(!hopper_pay(0x05))
-{
-asm("nop");
-}
-else
-{
-asm("nop");
-}
-}
-
-# 26
-bool hopper_pay(uint8_t change)
-{
-cctalk_on();
-outcoins = 0x00;
-while(change > 0)
-{
-venflags.nochange = pay_coin();
-if(venflags.nochange)
-{
-cctalk_off();
-Update_coinsout(outcoins);
-venflags.nochange = 1;
-DATAEE_WriteByte(hoperror, 0x01);
-return 1;
-}
-outcoins++;
-change--;
-}
-cctalk_off();
-Update_coinsout(outcoins);
-return 0;
-}
-
-bool Reset_hopper(void)
-{
-hopercount--;
-cctalk_off();
-_delay((unsigned long)((2000)*(12000000/4000.0)));
-TMR4_Initialize();
-if(hopercount > 0)
-{
-cctalk_on();
-return 0;
-}
-else
-{
-return 1;
-}
-}
-
-bool pay_coin(void)
-{
-hopercount = 3;
-if(switch_read())
-{
-TMR2_Initialize();
-while(switch_read() && !PIR4bits.TMR2IF){}
-if(PIR4bits.TMR2IF)
-{
-return 1;
-}
-else
-{
-return 0;
-}
-}
-else
-{
-TMR4_Initialize();
-
-while(!switch_read())
-{
-if(PIR4bits.TMR4IF)
-{
-if(Reset_hopper())
-{
-return 1;
-}
-
-}
-}
-TMR2_Initialize();
-while(switch_read() && !PIR4bits.TMR2IF){}
-if(PIR4bits.TMR2IF)
-{
-return 1;
-}
-else
-{
-return 0;
-}
-}
-
-
-}
-
-bool switch_read(void)
-{
-if(PORTBbits.RB4 == venflags.swclosed)
-{
-if(venflags.swclosed)
-{
-_delay((unsigned long)((5)*(12000000/4000.0)));
-}
-else
-{
-_delay((unsigned long)((20)*(12000000/4000.0)));
-}
-}
-if(PORTBbits.RB4)
-{
-venflags.swclosed = 0;
-return 0;
-}
-else
-{
-venflags.swclosed = 1;
-return 1;
-}
-}
-
-void Update_coinsout(uint8_t coinsout)
-{
-Read_NVstore(cashoutv, ((uint8_t*) &pvcash), 0x02);
-pvcash = pvcash + (uint16_t)coinsout;
-Write_NVstore(cashinv, ((uint8_t*) &pvcash), 0x02);
 }

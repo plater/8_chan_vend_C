@@ -14873,6 +14873,12 @@ void TMR0_Reload16bit(void);
 # 309
 bool TMR0_HasOverflowOccured(void);
 
+# 92 "mcc_generated_files/dac1.h"
+void DAC1_Initialize(void);
+
+# 128
+void DAC1_SetOutput(uint8_t inputData);
+
 # 98 "mcc_generated_files/memory.h"
 uint8_t FLASH_ReadByte(uint32_t flashAddr);
 
@@ -14895,12 +14901,6 @@ void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
-
-# 92 "mcc_generated_files/dac1.h"
-void DAC1_Initialize(void);
-
-# 128
-void DAC1_SetOutput(uint8_t inputData);
 
 # 93 "mcc_generated_files/eusart1.h"
 void eusartmdb_Initialize(void);

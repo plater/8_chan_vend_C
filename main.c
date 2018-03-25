@@ -48,6 +48,7 @@
 #include "vend.h"
 #include "mdb.h"
 #include "cctalk.h"
+#include "dispense.h"
 void enter_service(void);
 
 /*
@@ -81,6 +82,10 @@ void main(void)
         {
             lcd_string(inscoin, line1);
             venflags.inscoin = 0;
+            if(venflags.nochange)
+            {
+                displ_nochange();
+            }
         }
         if(venflags.initialrun == 1)
         {
@@ -92,6 +97,10 @@ void main(void)
         if(venflags.credisplay == 1)
         {
             displ_credit();
+            if(venflags.nochange)
+            {
+                displ_nochange();
+            }
         }
         
         if(PIR4bits.TMR3IF)
@@ -132,6 +141,7 @@ void main(void)
                 else
                 {
                     credit_add(credit);
+                    venflags.iscredit = 1;
                 }
             }
             else
@@ -144,6 +154,37 @@ void main(void)
                 
            }
         }
+        if(venflags.iscredit)
+        {
+            price_check();
+        }
+        else
+        {
+            if(butin() != 0)
+            {
+                
+                buttons = butin();
+                if(!venflags.pricedisplay)
+                {
+                    uint8_t channel = get_channel(buttons);
+                    vendprice = DATAEE_ReadByte(pricestore + channel);
+                    displ_price(vendprice);
+                    venflags.pricedisplay = 1;
+                }
+            }
+            else
+            {
+                if(venflags.pricedisplay)
+                {
+                    venflags.pricedisplay = 0;
+                    venflags.inscoin = 1;
+                }
+            }
+                
+                
+        }
+        
+        
         
     }
 

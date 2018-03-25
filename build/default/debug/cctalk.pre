@@ -15125,6 +15125,7 @@ volatile uint8_t vcashout[2];
 volatile uint16_t pvcash;
 volatile uint24_t pnvcash;
 volatile uint8_t senspos;
+volatile uint8_t pricevend[8];
 
 
 const uint16_t second1 = 0xE1BA ;
@@ -15305,7 +15306,7 @@ unsigned chan7 : 1;
 unsigned chan8 : 1;
 } chanlink8 @ 0x00A;
 
-# 213
+# 214
 struct
 {
 unsigned iscredit : 1;
@@ -15326,7 +15327,7 @@ unsigned settime : 1;
 unsigned sensno : 1;
 unsigned linkchan : 1;
 unsigned swclosed : 1;
-unsigned spare19 : 1;
+unsigned pricedisplay : 1;
 unsigned spare20 : 1;
 unsigned spare21 : 1;
 unsigned spare22 : 1;

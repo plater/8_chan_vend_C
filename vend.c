@@ -19,6 +19,13 @@ void Init_vendmem(void)
        chanlink[i] = DATAEE_ReadByte(chanlinkbits + i);
        i++;
     }
+    //Transfer prices to pricevend[]
+    i = 0;
+    while(i < 8)
+    {
+        pricevend[i] = DATAEE_ReadByte(pricestore + i);
+        i++;
+    }
 }
 
 
@@ -27,6 +34,15 @@ void vend_init(void)
 {
     //Initialize 8 vend error flags
     ((uint8_t*) &venderr)[0] = DATAEE_ReadByte(venderrors);
+    //Initialize no change flag
+    if(DATAEE_ReadByte(hoperror) != 0)
+    {
+        venflags.nochange = 1;
+    }
+    else
+    {
+        venflags.nochange = 0;
+    }
     //Initialize channel links and vend inhibit flags
     Init_vendmem();
     //Retrieve and set DAC for sensor comparator
@@ -39,6 +55,7 @@ void vend_init(void)
     lcd_string(initnote, line1);
     mdb_init();
     
+    venflags.pricedisplay = 0;
     venflags.service = 0;
     venflags.initialrun = 1;
     if(credit_check() == 0)

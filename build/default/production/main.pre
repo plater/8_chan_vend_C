@@ -14807,6 +14807,12 @@ void TMR0_Reload16bit(void);
 # 309
 bool TMR0_HasOverflowOccured(void);
 
+# 92 "mcc_generated_files/dac1.h"
+void DAC1_Initialize(void);
+
+# 128
+void DAC1_SetOutput(uint8_t inputData);
+
 # 98 "mcc_generated_files/memory.h"
 uint8_t FLASH_ReadByte(uint32_t flashAddr);
 
@@ -14829,12 +14835,6 @@ void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
-
-# 92 "mcc_generated_files/dac1.h"
-void DAC1_Initialize(void);
-
-# 128
-void DAC1_SetOutput(uint8_t inputData);
 
 # 93 "mcc_generated_files/eusart1.h"
 void eusartmdb_Initialize(void);
@@ -14884,7 +14884,8 @@ const char line4 = 0x54;
 
 
 const uint8_t clrline[] ="                    ";
-const uint8_t inscoin[] = "Insert Notes & Press Lighted Button To      Vend" ;
+const uint8_t inscoin[] = "Insert Notes & PressLit Button To Vend" ;
+const uint8_t nochange[] = "No Change Use Exact      Amount!";
 const uint8_t credits[] = "  Credit = R";
 const uint8_t pricesetmsg[] = "   Price set mode";
 const uint8_t pricesetm2[] = "Press channel button    to set price      Service = Exit";
@@ -14909,7 +14910,6 @@ const uint8_t servmsg[] = "1 = Audit 2 = Sensor3=Hop-Coin 4=Note-en5=Cred-clr 6=
 const uint8_t noteerr[] = "   Note error     code = 0x";
 const uint8_t inithop[] = "  Initialize Hopper";
 const uint8_t initnote[] = "     Initialize          Note Reader";
-const uint8_t nochange[] = "No Change Given";
 const uint8_t setnotes[] = "Enable / Disable    1 = R10, 2 = R20    3 = R50, 4 = R100   5 = R200";
 const uint8_t tenrand[] = "   R10  ";
 const uint8_t twentyrand[] = "  R20  ";
@@ -14963,6 +14963,8 @@ void lcd_test(void);
 void displ_hex(uint24_t);
 
 void displ_price(uint8_t vendprice);
+
+void displ_nochange(void);
 
 void displ_credit(void);
 
@@ -15191,6 +15193,7 @@ volatile uint8_t vcashout[2];
 volatile uint16_t pvcash;
 volatile uint24_t pnvcash;
 volatile uint8_t senspos;
+volatile uint8_t pricevend[8];
 
 
 const uint16_t second1 = 0xE1BA ;
@@ -15371,7 +15374,7 @@ unsigned chan7 : 1;
 unsigned chan8 : 1;
 } chanlink8 @ 0x00A;
 
-# 213
+# 214
 struct
 {
 unsigned iscredit : 1;
@@ -15392,7 +15395,7 @@ unsigned settime : 1;
 unsigned sensno : 1;
 unsigned linkchan : 1;
 unsigned swclosed : 1;
-unsigned spare19 : 1;
+unsigned pricedisplay : 1;
 unsigned spare20 : 1;
 unsigned spare21 : 1;
 unsigned spare22 : 1;
@@ -15458,10 +15461,13 @@ void off_sens(uint8_t channel);
 
 void Reset_settings(void);
 
-# 51 "main.c"
+# 14 "dispense.h"
+void price_check(void);
+
+# 52 "main.c"
 void enter_service(void);
 
-# 56
+# 57
 void main(void)
 {
 
@@ -15490,6 +15496,10 @@ if(venflags.inscoin == 1)
 {
 lcd_string(inscoin, line1);
 venflags.inscoin = 0;
+if(venflags.nochange)
+{
+displ_nochange();
+}
 }
 if(venflags.initialrun == 1)
 {
@@ -15501,6 +15511,10 @@ mdbflags.noteerr == 0;
 if(venflags.credisplay == 1)
 {
 displ_credit();
+if(venflags.nochange)
+{
+displ_nochange();
+}
 }
 
 if(PIR4bits.TMR3IF)
@@ -15541,6 +15555,7 @@ default: displ_noteer();
 else
 {
 credit_add(credit);
+venflags.iscredit = 1;
 }
 }
 else
@@ -15553,13 +15568,44 @@ displ_noteer();
 
 }
 }
+if(venflags.iscredit)
+{
+price_check();
+}
+else
+{
+if(butin() != 0)
+{
+
+buttons = butin();
+if(!venflags.pricedisplay)
+{
+uint8_t channel = get_channel(buttons);
+vendprice = DATAEE_ReadByte(pricestore + channel);
+displ_price(vendprice);
+venflags.pricedisplay = 1;
+}
+}
+else
+{
+if(venflags.pricedisplay)
+{
+venflags.pricedisplay = 0;
+venflags.inscoin = 1;
+}
+}
+
+
+}
+
+
 
 }
 
 
 }
 
-# 165
+# 206
 void enter_service(void)
 {
 mdb_unlock();

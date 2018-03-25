@@ -65,7 +65,8 @@ const char line4 = 0x54;
 
 //Message strings for 20x4 LCD
 const uint8_t clrline[] ="                    ";
-const uint8_t inscoin[] = "Insert Notes & Press Lighted Button To      Vend" ;
+const uint8_t inscoin[] = "Insert Notes & PressLit Button To Vend" ;
+const uint8_t nochange[] = "No Change Use Exact      Amount!";
 const uint8_t credits[] = "  Credit = R";
 const uint8_t pricesetmsg[] = "   Price set mode";
 const uint8_t pricesetm2[] = "Press channel button    to set price      Service = Exit";
@@ -90,7 +91,6 @@ const uint8_t servmsg[] = "1 = Audit 2 = Sensor3=Hop-Coin 4=Note-en5=Cred-clr 6=
 const uint8_t noteerr[] = "   Note error     code = 0x";
 const uint8_t inithop[] = "  Initialize Hopper";
 const uint8_t initnote[] = "     Initialize          Note Reader";
-const uint8_t nochange[] = "No Change Given";
 const uint8_t setnotes[] = "Enable / Disable    1 = R10, 2 = R20    3 = R50, 4 = R100   5 = R200";
 const uint8_t tenrand[] = "   R10  ";
 const uint8_t twentyrand[] = "  R20  ";
@@ -144,6 +144,8 @@ void lcd_test(void);
 void displ_hex(uint24_t);
 
 void displ_price(uint8_t vendprice);
+
+void displ_nochange(void);
 
 void displ_credit(void);
 

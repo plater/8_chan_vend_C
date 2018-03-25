@@ -28,6 +28,7 @@ volatile uint8_t vcashout[2];
 volatile uint16_t pvcash;
 volatile uint24_t pnvcash;
 volatile uint8_t senspos;
+volatile uint8_t pricevend[8];
 
 //Timer values for vend motor timing
 const uint16_t second1 = 0xE1BA ;
@@ -230,7 +231,7 @@ struct
    unsigned sensno : 1;
    unsigned linkchan : 1;
    unsigned swclosed : 1;
-   unsigned spare19 : 1;
+   unsigned pricedisplay : 1;
    unsigned spare20 : 1;
    unsigned spare21 : 1;
    unsigned spare22 : 1;
