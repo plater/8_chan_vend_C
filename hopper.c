@@ -18,12 +18,25 @@ void hopper_test(void)
         asm("nop");
     }
 }
-//PIR4bits.TMR4IF TMR4_Initialize = 10 sec wait for coin
+void give_change(uint8_t paycash)
+{
+    cash = paycash;
+    credit_subtract(cash);
+    uint8_t i = DATAEE_ReadByte(hopcoin);
+    change = paycash / i;
+    change = hopper_pay(change);
+    if(change > 0)
+    {
+        change = change * i;
+        credit_add(change);
+    }
+}
+//PIR4bits.TMR4IF TMR4_Initialize = 5 sec wait for coin
 //PIR2bits.TMR2IF TMR2_Initialize = 1 sec coin exit
 //LATCbits.LATC1 = 1 is no coin
 //Read PORTBbits.PORTB4 zero is closed switch.
 //cashoutv is total coins out eeprom storage
-bool hopper_pay(uint8_t change)
+uint8_t hopper_pay(uint8_t change)
 {
     cctalk_on();
     outcoins = 0x00;
@@ -36,14 +49,14 @@ bool hopper_pay(uint8_t change)
             Update_coinsout(outcoins);
             venflags.nochange = 1;
             DATAEE_WriteByte(hoperror, 0x01);
-            return 1;
+            return change;
         }
         outcoins++;
         change--;
     }
     cctalk_off();
     Update_coinsout(outcoins);
-    return 0;
+    return change;
 }
 
 bool Reset_hopper(void)
@@ -65,13 +78,16 @@ bool Reset_hopper(void)
 
  bool pay_coin(void)
 {//Pickup and exit one coin, return 0 for successful cycle.
+    //cctalk_on();
     hopercount = 3;
     if(switch_read())
     {//Switch closed start exit timer 1 second
         TMR2_Initialize();
         while(switch_read() && !PIR4bits.TMR2IF){}
+       // cctalk_off();
         if(PIR4bits.TMR2IF)
         {//Timeout occurred - error
+            
             return 1;
         }
         else
@@ -81,6 +97,7 @@ bool Reset_hopper(void)
     }
     else
     {//Switch open start pick up timer 10 second
+        cctalk_on();
         TMR4_Initialize();
         // && !PIR4bits.TMR4IF
         while(!switch_read())
@@ -89,13 +106,17 @@ bool Reset_hopper(void)
             {
                 if(Reset_hopper())
                 {
+                    cctalk_off();
                     return 1;
                 }
                 
             }
         }
+        cctalk_off();
         TMR2_Initialize();
+        cctalk_on();
         while(switch_read() && !PIR4bits.TMR2IF){}
+        cctalk_off();
         if(PIR4bits.TMR2IF)
         {
             return 1;
@@ -138,5 +159,5 @@ void Update_coinsout(uint8_t coinsout)
 {
     Read_NVstore(cashoutv, ((uint8_t*) &pvcash), 0x02);
     pvcash = pvcash + (uint16_t)coinsout;
-    Write_NVstore(cashinv, ((uint8_t*) &pvcash), 0x02);
+    Write_NVstore(cashoutv, ((uint8_t*) &pvcash), 0x02);
 }

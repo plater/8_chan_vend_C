@@ -44,7 +44,7 @@ const uint8_t note_rejected = 0x0B;
 const uint8_t theft_attempt = 0x0C;
 
 //32 bytes allowed location 32 should always be zero
-uint8_t mdbdata[32];
+uint8_t mdbdata[31];
 uint8_t slvadd;
 uint8_t mcount = 0;
 uint8_t notebyte;

@@ -22,6 +22,7 @@ bool switch_read(void);
 bool pay_coin(void);
 void Update_coinsout(uint8_t coinsout);
 bool Reset_hopper(void);
+void give_change(uint8_t paycash);
 
 #endif	/* HOPPER_H */
 

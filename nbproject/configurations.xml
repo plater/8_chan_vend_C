@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="62">
+<configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -20,6 +20,8 @@
         <itemPath>mcc_generated_files/tmr0.h</itemPath>
         <itemPath>mcc_generated_files/tmr2.h</itemPath>
         <itemPath>mcc_generated_files/tmr4.h</itemPath>
+        <itemPath>mcc_generated_files/eusart2.h</itemPath>
+        <itemPath>mcc_generated_files/device_config.h</itemPath>
       </logicalFolder>
       <itemPath>lcd.h</itemPath>
       <itemPath>vend.h</itemPath>
@@ -27,6 +29,7 @@
       <itemPath>cctalk.h</itemPath>
       <itemPath>hopper.h</itemPath>
       <itemPath>dispense.h</itemPath>
+      <itemPath>gsm.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -51,6 +54,8 @@
         <itemPath>mcc_generated_files/tmr0.c</itemPath>
         <itemPath>mcc_generated_files/tmr2.c</itemPath>
         <itemPath>mcc_generated_files/tmr4.c</itemPath>
+        <itemPath>mcc_generated_files/eusart2.c</itemPath>
+        <itemPath>mcc_generated_files/device_config.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>lcd.c</itemPath>
@@ -60,6 +65,7 @@
       <itemPath>eusart_mdb.c</itemPath>
       <itemPath>hopper.c</itemPath>
       <itemPath>dispense.c</itemPath>
+      <itemPath>gsm.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -78,9 +84,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.44</languageToolchainVersion>
+        <languageToolchainVersion>1.45</languageToolchainVersion>
         <platform>2</platform>
       </toolsSet>
+      <packs>
+        <pack name="PIC18F-K_DFP" vendor="Microchip" version="1.0.40"/>
+      </packs>
       <compileType>
         <linkerTool>
           <linkerLibItems>
@@ -130,7 +139,7 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="verbose" value="false"/>
-        <property key="warning-level" value="-3"/>
+        <property key="warning-level" value="0"/>
         <property key="what-to-do" value="ignore"/>
       </HI-TECH-COMP>
       <HI-TECH-LINK>
