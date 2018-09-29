@@ -1,5 +1,5 @@
 /* 
- * File:   vend.c
+ * File:   vend.h
  * Author: Dave Plater
  *
  * Created on 16 October 2017, 12:38 PM
@@ -34,7 +34,6 @@ void vend_init(void)
 {
     //Initialize 8 vend error flags
     ((uint8_t*) &venderr)[0] = DATAEE_ReadByte(venderrors);
-    venflags.hiprice = 0;
     //Initialize no change flag
     if(DATAEE_ReadByte(hoperror) != 0)
     {
@@ -46,12 +45,9 @@ void vend_init(void)
     }
     //Initialize channel links and vend inhibit flags
     Init_vendmem();
-    find_highprice();
-    find_lowprice();
     //Retrieve and set DAC for sensor comparator
     sensorval = DATAEE_ReadByte(sensval);
     DAC1_SetOutput(sensorval);
-    errormask = DATAEE_ReadByte(venderrors);
     //Initialize cctalk for cctalk hopper if used
     //lcd_string(inithop, line1);
     //cctalk_init();
@@ -76,10 +72,6 @@ void vend_init(void)
         venflags.credisplay = 1;
         mdbflags.noteerr = 0;
     }
-    //Turn off vend motor common.
-    LATAbits.LA5 = 0;
-    //Turn on button light common.
-    LATCbits.LC2 = 1;
         
 }
 //Transfer bytes in storemem to storeadd
@@ -88,7 +80,7 @@ void Write_NVstore(uint16_t storeadd, uint8_t *storemem, uint8_t storesize)
      uint8_t i = 0;
      while(i < storesize)
      {
-         DATAEE_WriteByte(storeadd + i, storemem[i]);
+         DATAEE_WriteByte(storeadd, storemem + i);
          i++;
      }
 }
@@ -154,10 +146,6 @@ uint8_t credit_check(void)
 
 uint8_t butindb(void)
 {
-    if(butin() == 0)
-    {
-        return 0x00;
-    }
     uint8_t butt = butin();
     uint8_t butval = butt;
     while(butval != 0x00)
@@ -193,47 +181,16 @@ void setup(void)
 
 void Audit(void)
 {
-    DAC1CON1 = 0x01;
-    Read_NVstore(cashinv, ((uint8_t*) &pvcash), 0x02);
-    Read_NVstore(cashint, ((uint8_t*) &pnvcash), 0x03);
-    lcd_string(cashinmsg, line1);
+    /*lcd_write(dispclr);
+    lcd_dispadd(line1 +3);
     displ_hex((uint24_t)pvcash);
-    lcd_string(totalmsg, line2);
+    lcd_dispadd(line2 +3);
     displ_hex(pnvcash);
-    lcd_string(vendispmsg, line3);
-    venflags.audit = 1;
-    while(venflags.audit)
-    {
-        buttons = butin();
-        if(buttons != 0x00)
-        {
-            buttons = butin();
-            lcd_string(clrline, line4);
-            channel = get_channel(buttons);
-            uint8_t vends = DATAEE_ReadByte(vendstore + channel);
-            lcd_string(totalvendsm, line4);
-            displ_hex((uint24_t)vends);
-            while(butin() != 0x00){}
-            lcd_string(clrline, line4);
-        }
-        if(!CMP1_GetOutputStatus())
-        {
-            DAC1CON1 = sensorval;
-            venflags.audit = 0;
-            lcd_string(servmsg, line1);
-        }
-    }
-}
-
-void Clear_Totals(void)
-{
-    uint16_t eeaddress = cashinv;
-    while(eeaddress < 0x0C)
-    {
-        DATAEE_WriteByte(eeaddress, 0x00);
-        eeaddress++;
-    }
-    asm("RESET");
+    lcd_dispadd(line3 +3);
+    displ_hex((uint24_t)pvcash);
+    lcd_dispadd(line4 +3);
+    displ_hex(pnvcash);*/
+   
 }
 
 void Hopper_coin(void)
@@ -305,8 +262,7 @@ void Update_Hopcoin(uint8_t newval, uint8_t direction)
 
 uint8_t Read_Service(void)
 {
-    DAC1CON1 = 0x01;
-    __delay_us(50);
+    DAC1CON1 = 0x00;
     uint8_t senval = CMOUT;
     DAC1CON1 = sensorval;
     return senval;
@@ -349,8 +305,6 @@ void Sensor_set(void)
 void Clear_cred(void)
 {
     DATAEE_WriteByte(credmem, 0x00);
-    DATAEE_WriteByte(venderrors, 0x00);
-    DATAEE_WriteByte(hoperror, 0x00);
     lcd_string(creditclr, line1);
     __delay_ms(1000);
 }
@@ -379,7 +333,7 @@ void price_set(void)
 uint8_t get_channel(uint8_t butons)
 {
     //Convert button bit to channel number 1 to 8
-    channel = 0x00;
+    uint8_t channel = 0x00;
     while(butons != 0)
     {
         channel++;
@@ -421,7 +375,8 @@ void set_price(uint8_t buttons)
     
 }
 //Time to drive vend motor, sensor disable and link channels
-//"Push 1 Vend Time,   2 ChanLink 3 SensOff4 ClrTot 5 FacReset 8 exit"
+//"Press 1 = Vend Time Press 2 = Chan Link Press 3 = Sensor Off"
+// 4 = Reset Press 8 to exit
 void Vend_setup(void)
 {
     venflags.vendset = 1;
@@ -440,9 +395,7 @@ void Vend_setup(void)
             case 0x04 : Sens_off();
             lcd_string(vendsetup, line1);
             break;
-            case 0x08 : Clear_Totals();
-            break;
-            case 0x10 : Reset_settings();
+            case 0x08 : Reset_settings();
             lcd_string(vendsetup, line1);
             break;
             case 0x80 : venflags.vendset = 0;
@@ -497,8 +450,6 @@ void Vend_timeset(uint8_t channel)
             displ_time(chantime, channel);
             break;
             case 0x80 : venflags.mottime = 0;
-            lcd_string(setimemsg, line1);
-            break;
         }
     }
     
@@ -552,7 +503,6 @@ void Link_chan(uint8_t channel)
         while(Read_Service() == 0x00)
         {
             venflags.linkchan = 0;
-            lcd_string(chanlinkm, line1);
         }
     }
     
@@ -561,12 +511,6 @@ void Link_chan(uint8_t channel)
 
 void Sens_off(void)
 {
-    __delay_ms(250);
-    buttons = butindb();
-    while(0x04 == buttons)
-    {
-        buttons = butindb();
-    }
     venflags.nosense = 1;
     lcd_string(setimemsg, line1);
     buttons = butindb();
@@ -609,7 +553,6 @@ void off_sens(uint8_t channel)
             displ_sflags(senseflags, channel, chanbit);
             break;
             case 0x80 : venflags.sensno = 0;
-            lcd_string(setimemsg, line1);
             break;
         }
     }
@@ -625,14 +568,7 @@ void Reset_settings(void)
         DATAEE_WriteByte(chanlinkbits, 0x00);
         chanlinkbits++;
     }
-    uint16_t chantimebits = chan1time;
-    while(chantimebits < nosentime)
-    {
-        //Set all motors to 4 seconds
-        DATAEE_WriteByte(chantimebits, 0x08);
-        chantimebits++;
-    }
-   DATAEE_WriteByte(sensorflags, 0x05);
+    DATAEE_WriteByte(sensorflags, 0x00);
     __delay_ms(2000);
 }
 

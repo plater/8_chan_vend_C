@@ -12,13 +12,10 @@
 
 void init_mdbdata(uint8_t initdata)
 {
-    char i = 0;
-    while(i < 32)
+    for(uint8_t i = 0;i < 33; i++)
     {
         mdbdata[i] = initdata;
-        i++;
     }
-    init_pricestore();
 }
 //Undefined error mode flashes 4 slow 2 fast
 void mdb_init(void)
@@ -137,10 +134,6 @@ void save_notes(void)
 
 void mdb_noten(void)
 {
-    if(venflags.hiprice)
-    {
-        noteen_byte = 0x00;
-    }
     //Initialize message store to 0s
     init_mdbdata(0x00);
     //Note enable message is 4 bytes long

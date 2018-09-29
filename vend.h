@@ -12,8 +12,6 @@
 #include "lcd.h"
 #include "mdb.h"
 #include "cctalk.h"
-#include "hopper.h"
-#include "dispense.h"
 #include "mcc_generated_files/mcc.h"
 #include "mcc_generated_files/pin_manager.h"
 //This location is the value of cash to be added or
@@ -30,13 +28,7 @@ volatile uint8_t vcashout[2];
 volatile uint16_t pvcash;
 volatile uint24_t pnvcash;
 volatile uint8_t senspos;
-volatile uint8_t dummy[8];
 volatile uint8_t pricevend[8];
-volatile uint8_t highprice;
-volatile uint8_t lowprice;
-volatile uint8_t chanmask;
-volatile uint8_t errormask;
-volatile uint8_t channel;
 
 //Timer values for vend motor timing
 const uint16_t second1 = 0xE1BA ;
@@ -50,10 +42,10 @@ const uint16_t secondadd = 0x1E46 ;
 const uint16_t credmem = 0x00;
 //Clearable total cash uint16_t
 const uint16_t  cashinv = 0x02;
-//Total vends, clearable 8 x uint8_t
-const uint16_t vendstore = 0x04;
 //Non clearable total cash uint_24_t
-const uint16_t cashint = 0x0C;
+const uint16_t cashint = 0x04;
+//Total vends, clearable 8 x uint8_t
+const uint16_t vendstore = 0x07;
 //Prices per vend 8 x uint8_t
 const uint16_t pricestore = 0x0F;
 //Vend error flags bits 0 to 7 uint8_t
@@ -88,10 +80,8 @@ const uint16_t chan5time = 0x2A;
 const uint16_t chan6time = 0x2B;
 const uint16_t chan7time = 0x2C;
 const uint16_t chan8time = 0x2D;
-//No sensor pulse time.
-const uint16_t nosentime = 0x2E;
 //Hopper error disable byte
-const uint16_t hoperror = 0x2F;
+const uint16_t hoperror = 0x2E;
 //Flags to disable sensor check on vend if set
 struct
 {
@@ -242,8 +232,8 @@ struct
    unsigned linkchan : 1;
    unsigned swclosed : 1;
    unsigned pricedisplay : 1;
-   unsigned audit : 1;
-   unsigned hiprice : 1;
+   unsigned spare20 : 1;
+   unsigned spare21 : 1;
    unsigned spare22 : 1;
    unsigned spare23 : 1;
    unsigned spare24 : 1;
@@ -278,8 +268,6 @@ uint8_t butin(void);
 void Audit(void);
 //Set the value of dispensed coin
 void Hopper_coin(void);
-
-void Clear_Totals(void);
 
 void Sensor_set(void);
 

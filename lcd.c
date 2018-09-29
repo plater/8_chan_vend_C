@@ -57,7 +57,7 @@ void displ_sens(uint8_t smsgpos, uint8_t dmsgpos)
 void displ_lflags(uint8_t chanel, uint8_t linkflgs)
 {
     lcd_string(chanmsg, line1);
-    lcd_writeC(++chanel | 0x30);
+    lcd_writeC(chanel++ | 0x30);
     uint8_t lchan = 1;
     //uint8_t 
     lcd_string(linkmsg, line2);
@@ -79,11 +79,11 @@ void displ_sflags(uint8_t senseflags, uint8_t chanel, uint8_t chanbit)
 {
     
     lcd_string(chanmsg, line1);
-    lcd_writeC(++chanel | 0x30);
+    lcd_writeC(chanel++ | 0x30);
     lcd_string(sensmsg, line2);
     lcd_string(sensoffmsg, line3);
     
-    if((senseflags & chanbit) != 0)
+    if(senseflags && chanbit)
     {
         lcd_string(disabled, line2 + 10);
     }
@@ -186,6 +186,7 @@ void displ_noteer(void)
     displ_code(ercode);
     mdbflags.noteerr = 0;
     venflags.noterr = 0;
+    venflags.credisplay = 0;
 }
 
 void displ_hex(uint24_t hexnum)

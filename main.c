@@ -49,7 +49,6 @@
 #include "mdb.h"
 #include "cctalk.h"
 #include "dispense.h"
-#include "gsm.h"
 void enter_service(void);
 
 /*
@@ -61,14 +60,12 @@ void main(void)
     SYSTEM_Initialize();
     // Initialize lcd display
     lcd_init();
-    gsm_init();
     vend_init();
-
     
     while(1 == 1)
     {
         asm("nop");
-        DAC1CON1 = 0x01;
+        DAC1CON1 = 0x00;
         if (!CMP1_GetOutputStatus())
         {
             venflags.service = 1;
@@ -92,6 +89,8 @@ void main(void)
         }
         if(venflags.initialrun == 1)
         {
+            credit_add(0x00);
+            credit_subtract(0x00);
             venflags.initialrun = 0;
             mdbflags.noteerr == 0;
         }
@@ -114,7 +113,7 @@ void main(void)
                     switch(credit)
                     {
                         //Just reset
-                        case 0x06 : mdb_init();
+                        case 0x06:mdb_init();
                         mdbflags.noteerr == 0;
                         credit = 0;
                         break;
@@ -157,10 +156,7 @@ void main(void)
         }
         if(venflags.iscredit)
         {
-            if(price_check())
-            {
-                asm("RESET");
-            }
+            price_check();
         }
         else
         {
@@ -168,18 +164,13 @@ void main(void)
             {
                 
                 buttons = butin();
-                if(((buttons & ~errormask) == 0x00) && !venflags.pricedisplay)
-                {
-                    lcd_string(emptymsg, line1);
-                    venflags.pricedisplay = 1;
-                }
                 if(!venflags.pricedisplay)
                 {
                     uint8_t channel = get_channel(buttons);
                     vendprice = DATAEE_ReadByte(pricestore + channel);
                     displ_price(vendprice);
                     venflags.pricedisplay = 1;
-               }
+                }
             }
             else
             {
@@ -241,7 +232,6 @@ void enter_service(void)
             case 0x80 : venflags.service = 0;
             asm("RESET");
             break;
-            case 0x03 : hopper_test();
         }
     }
 }

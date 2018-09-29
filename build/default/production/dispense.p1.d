@@ -3,9 +3,7 @@
  dispense.c  \
 mcc_generated_files/cmp1.h  \
 mcc_generated_files/mcc.h  \
-hopper.h  \
 mcc_generated_files/eusart1.h  \
-mcc_generated_files/eusart2.h  \
 mcc_generated_files/dac1.h  \
 mcc_generated_files/memory.h  \
 lcd.h  \
