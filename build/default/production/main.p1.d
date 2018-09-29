@@ -3,8 +3,12 @@
  main.c  \
 mcc_generated_files/cmp1.h  \
 mcc_generated_files/mcc.h  \
+hopper.h  \
 mcc_generated_files/eusart1.h  \
+mcc_generated_files/eusart2.h  \
 mcc_generated_files/dac1.h  \
+gsm.h  \
+mcc_generated_files/device_config.h  \
 mcc_generated_files/memory.h  \
 lcd.h  \
 mdb.h  \
