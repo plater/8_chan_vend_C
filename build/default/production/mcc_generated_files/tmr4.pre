@@ -14526,7 +14526,7 @@ T4HLT = 0x00;
 T4RST = 0x00;
 
 
-T4PR = 0x4B;
+T4PR = 0xA0;
 
 
 T4TMR = 0x00;
@@ -14535,7 +14535,7 @@ T4TMR = 0x00;
 PIR4bits.TMR4IF = 0;
 
 
-T4CON = 0xFF;
+T4CON = 0xF8;
 }
 
 void TMR4_ModeSet(TMR4_HLT_MODE mode)

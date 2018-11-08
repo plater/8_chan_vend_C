@@ -1,6 +1,41 @@
 
 # 1 "gsm.c"
 
+# 4 "/opt/microchip/xc8/v1.45/include/__size_t.h"
+typedef unsigned size_t;
+
+# 14 "/opt/microchip/xc8/v1.45/include/string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 36
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
 # 26 "/opt/microchip/xc8/v1.45/include/htc.h"
 extern const char __xc8_OPTIM_SPEED;
 
@@ -14367,7 +14402,7 @@ void PIN_MANAGER_IOC(void);
 # 12 "/opt/microchip/xc8/v1.45/include/stdbool.h"
 typedef unsigned char bool;
 
-# 132 "mcc_generated_files/interrupt_manager.h"
+# 110 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
 
 # 100 "mcc_generated_files/tmr5.h"
@@ -14810,23 +14845,42 @@ uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
 
-# 97 "mcc_generated_files/eusart2.h"
+# 64 "mcc_generated_files/eusart2.h"
+volatile uint8_t eusart2RxHead = 0;
+volatile uint8_t eusart2RxTail = 0;
+volatile uint8_t eusart2RxBuffer[512];
+volatile uint8_t eusart2RxCount;
+
+# 90
+extern volatile uint8_t eusart2TxBufferRemaining;
+extern volatile uint8_t eusart2RxCount;
+
+# 97
+void (*EUSART2_RxDefaultInterruptHandler)(void);
+
+# 119
 void EUSART2_Initialize(void);
 
-# 145
+# 167
 bool EUSART2_is_tx_ready(void);
 
-# 193
-bool EUSART2_is_rx_ready(void);
+# 219
+uint8_t EUSART2_is_rx_ready(void);
 
-# 240
+# 266
 bool EUSART2_is_tx_done(void);
 
-# 260
+# 286
 uint8_t EUSART2_Read(void);
 
-# 280
+# 306
 void EUSART2_Write(uint8_t txData);
+
+# 328
+void EUSART2_Receive_ISR(void);
+
+# 349
+void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 
 # 93 "mcc_generated_files/eusart1.h"
 void eusartmdb_Initialize(void);
@@ -14926,6 +14980,8 @@ const uint8_t totalmsg[] = "Total R";
 const uint8_t cashinmsg[] = "Cash in R";
 const uint8_t totalvendsm[] = "Vends ";
 const uint8_t vendispmsg[] = "Use button / Service";
+const uint8_t clocktime[] = "Time ";
+const uint8_t clockdate[] = "Date ";
 
 uint8_t bflag;
 uint8_t lcdfunc;
@@ -14954,6 +15010,8 @@ void lcd_clockH(void);
 void lcd_clockL(void);
 
 void lcd_clockE(void);
+
+void disp_clock(void);
 
 void lcd_test(void);
 
@@ -15504,12 +15562,59 @@ void off_sens(uint8_t channel);
 
 void Reset_settings(void);
 
-# 20 "gsm.h"
+# 21 "gsm.h"
 uint8_t gsmbyte = 0;
-uint8_t gsmmsg[];
+uint8_t gsmmsg[512];
+uint8_t gsmums[512];
+uint8_t gsmusm[256];
+uint8_t gsmtim[23];
+uint8_t gsdate[10];
+uint8_t gstime[10];
+uint8_t noofline;
 
 
-const uint8_t noecho = "ATE0";
+const uint8_t smsdel[] = "AT+CMGDA=\"DEL ALL\"\r";
+const uint8_t smslst[] = "AT+CMGL=\"ALL\"\r";
+const uint8_t smscap[] = "AT+CMGL=?\r";
+const uint8_t smstxt[] = "AT+CMGF=1\r";
+const uint8_t engqry[] = "AT+AT+CEER\r";
+const uint8_t engfmt[] = "AT+CENG=?";
+const uint8_t engwrt[] = "AT+CENG?";
+const uint8_t noecho[] = "ATE0;V0\r";
+const uint8_t usdtst[] = "AT+CUSD=?\r";
+const uint8_t ussdrd[] = "AT+CUSD?\r";
+const uint8_t ussdwe[] = "AT+CUSD=1\r";
+const uint8_t ussdwc[] = "AT+CUSD=2\r";
+const uint8_t ussdwv[] = "AT+CUSD=1,\"*135*500#\"\r";
+const uint8_t ussdwm[] = "AT+CUSD=1,\"*136#\"\r";
+const uint8_t ussdw2[] = "AT+CUSD=1,\"*136#\",2\r";
+const uint8_t setgsm[] = "AT+CSCS=\"GSM\"\r";
+const uint8_t airtim[] = "AT+CUSD =1\r";
+const uint8_t prodid[] = "ATI\r";
+const uint8_t dconfg[] = "AT&V\r";
+const uint8_t ownnum[] = "AT+CNUM\r";
+const uint8_t clockr[] = "AT+CCLK?\r";
+const uint8_t clockw[] = "AT+CCLK=";
+const uint8_t pwrsta[] = "AT+CBC\r";
+const uint8_t loctim[] = "AT+CIPGSMLOC=2\r";
+const uint8_t nettst[] = "AT+CLTS=1\r";
+const uint8_t netoff[] = "AT+CLTS=0\r";
+const uint8_t baudra[] = "AT+IPR=19200\r";
+const uint8_t facres[] = "AT&F0\r";
+
+struct
+{
+unsigned retransmit : 1;
+unsigned meerror : 1;
+unsigned mtn : 1;
+unsigned msgavl : 1;
+unsigned spare4 : 1;
+unsigned spare5 : 1;
+unsigned spare6 : 1;
+unsigned spare7 : 1;
+} gsmflags;
+
+void gsm_zerobuff(uint8_t* gsmsgbuf, uint16_t count );
 
 void gsm_waitx(void);
 
@@ -15517,20 +15622,42 @@ void gsm_waitr(void);
 
 void gsm_transmit(uint8_t txbyte);
 
+void gsm_gettime(void);
+
+void gsm_getbalance(void);
+
+void gsm_setime(void);
+
+void parse_date_time(void);
+
+uint8_t gsm_unsolic(void);
+
+void clock_display(void);
+
+void gsm_receive(uint8_t noofline, uint8_t *messagebuf);
+
+void gsm_msg(uint8_t *msgadd);
+
 void gsm_init(void);
 
 void gsm_txAT(void);
 
 void gsm_on(void);
 
+uint8_t gsm_Read(void);
+
 void gsm_off(void);
+
+void gsm_netwait(void);
+
+uint8_t EUSARTG_Read(void);
 
 # 10 "gsm.c"
 void gsm_waitx(void)
 {
-while(0 == PIR3bits.TX2IF)
+TX2STAbits.TXEN = 1;
+while(!PIR3bits.TX2IF)
 {
-
 }
 }
 
@@ -15544,21 +15671,355 @@ while(!PIR3bits.RC2IF)
 
 void gsm_transmit(uint8_t txbyte)
 {
+TX2STAbits.TXEN = 1;
 EUSART2_Write(txbyte);
-gsm_waitx();
+while(!TX2STAbits.TRMT){}
 }
+
+void gsm_zerobuff(uint8_t* gsmsgbuf, uint16_t count )
+{
+uint16_t x = 0;
+while(x < count)
+{
+gsmsgbuf[x] = 0x00;
+x++;
+}
+
+}
+
+void gsm_msg(uint8_t *msgadd)
+{
+uint24_t msgbkup = msgadd;
+retrans:
+msgadd = msgbkup;
+gsmflags.retransmit = 0;
+
+for(uint8_t gsmstr = 0; msgadd[gsmstr] != 0x00; gsmstr++)
+{
+gsmbyte = msgadd[gsmstr];
+gsm_transmit(gsmbyte);
+}
+if(gsmflags.retransmit)
+{
+goto retrans;
+}
+
+}
+
 
 void gsm_init(void)
 {
-gsm_on();
-while(!PIR3bits.RC2IF)
-{
-gsm_txAT();
-_delay((unsigned long)((10)*(12000000/4000.0)));
-}
-gsmbyte = EUSART2_Read();
+PIE3bits.RC2IE =1;
+gsmflags.meerror = 0;
+eusart2RxCount = 512;
+gsminit:
 
+gsm_zerobuff(gsmmsg, 0x200);
+
+while(!PIR4bits.TMR4IF)
+{
+
+}
+
+
+
+gsm_txAT();
+gsm_transmit(0x0D);
+
+gsm_receive(2, gsmmsg);
+gsm_msg(noecho);
+gsm_receive(1, gsmmsg);
+gsm_netwait();
+
+if(gsmflags.meerror)
+{
+LATCbits.LC3 = 0;
+_delay((unsigned long)((2000)*(64000000/4000.0)));
+gsm_on();
+goto gsminit;
+}
+
+# 103
+gsm_setime();
+if(gsmflags.meerror)
+{
+LATCbits.LC3 = 0;
+_delay((unsigned long)((2000)*(64000000/4000.0)));
+gsm_on();
+goto gsminit;
+}
+
+
+
+gsm_getbalance();
+
+
+
+
+clock_display();
+
+
+gsm_msg(smstxt);
+gsm_receive(1, gsmmsg);
+
+gsm_msg(smsdel);
+gsm_receive(1, gsmmsg);
+
+gsm_msg(setgsm);
+gsm_receive(1,gsmmsg);
+
+gsm_msg(ussdw2);
+gsm_receive(2, gsmmsg);
+
+gsm_msg(engqry);
+gsm_receive(2, gsmmsg);
+
+gsm_msg(netoff);
+gsm_receive(2, gsmmsg);
+
+gsm_msg(facres);
+gsm_receive(1, gsmmsg);
 asm("nop");
+}
+
+void clock_display(void)
+{
+INTCONbits.PEIE = 0;
+PIE3bits.RC2IE =1;
+dispclka:
+TMR2_Initialize();
+T2CONbits.TMR2ON = 1;
+gsm_gettime();
+disp_clock();
+INTCONbits.PEIE = 1;
+gsmflags.msgavl = 0;
+while(!PIR4bits.TMR2IF)
+{
+if(PIR3bits.RC2IF)
+{
+gsm_receive(1, gsmusm);
+gsmflags.msgavl = 1;
+}
+}
+if(eusart2RxHead != 0x00 )
+{
+asm("nop");
+}
+INTCONbits.PEIE = 0;
+
+# 174
+goto dispclka;
+}
+
+void parse_date_time(void)
+{
+gsm_zerobuff(gsdate, 0x014);
+gsm_zerobuff(gstime, 0x014);
+uint8_t x = 8;
+uint8_t i = 0x07;
+gsmbyte = gsmmsg[27];
+gsmbyte = gsmbyte & 0x0F;
+gsmbyte = gsmbyte/4;
+uint8_t hour = (gsmmsg[18] & 0x0F) + gsmbyte;
+uint8_t hhour = gsmmsg[17] & 0x0F;
+if(hour > 9)
+{
+gsmmsg[18] = 0x30;
+gsmmsg[17]++;
+if(gsmmsg[17] > 0x32)
+{
+gsmmsg[17] = 0x30;
+}
+while(hour > 0x0A)
+{
+hour--;
+gsmmsg[18]++;
+}
+}
+else
+{
+gsmmsg[18] = hour | 0x30;
+}
+while(x < 0x10)
+{
+gsdate[i - 1] = gsmmsg[x++];
+gsdate[i--] = gsmmsg[x++];
+gsdate[--i] = gsmmsg[x++];
+i--;
+}
+i = 0;
+while(i < 0x08)
+{
+gstime[i++] = gsmmsg[x++];
+}
+}
+
+void gsm_gettime(void)
+{
+gsm_msg(clockr);
+
+gsm_receive(2,gsmmsg);
+parse_date_time();
+}
+
+void gsm_getbalance(void)
+{
+gsm_msg(setgsm);
+gsm_receive(1,gsmmsg);
+if(gsmflags.mtn)
+{
+gsm_msg(ussdwm);
+gsm_receive(11,gsmmsg);
+}
+else
+{
+gsm_msg(ussdwv);
+gsm_receive(3,gsmmsg);
+}
+gsm_msg(ussdwc);
+gsm_receive(1,gsmmsg);
+}
+
+void gsm_setime(void)
+{
+gsm_zerobuff(gsmmsg, 0x200);
+gsm_msg(nettst);
+
+retry:
+gsmbyte = 0;
+uint8_t x = 0;
+
+while(gsmbyte != '*')
+{
+gsmbyte = EUSARTG_Read();
+if(gsmflags.meerror)
+{
+goto offnet;
+}
+}
+gsmbyte = EUSARTG_Read();
+gsmbyte = EUSARTG_Read();
+gsmbyte = EUSARTG_Read();
+if(gsmbyte != 'U')
+{
+goto retry;
+}
+while(gsmbyte != ':')
+{
+gsmbyte = EUSARTG_Read();
+}
+while(gsmbyte != '\n')
+{
+gsmbyte = EUSARTG_Read();
+gsmmsg[x++] = gsmbyte;
+}
+
+_delay((unsigned long)((5)*(64000000/4000.0)));
+
+
+x = 0x03;
+gsmtim[0] = '"';
+uint8_t i = 0x01;
+while(i < 0x09)
+{
+gsmtim[i] = gsmmsg[x];
+gsmtim[i+1] = gsmmsg[x+1];
+if(gsmmsg[x+1] == ',')
+{
+gsmtim[i+1] = gsmmsg[x];
+gsmtim[i] = '0';
+x--;
+}
+gsmtim[i+2] = '/';
+i = i + 3;
+x = x + 3;
+}
+gsmtim[i-1] = ',';
+
+
+while(i < 0x11)
+{
+gsmtim[i] = gsmmsg[x];
+gsmtim[i+1] = gsmmsg[x+1];
+if(gsmmsg[x+1] == ',')
+{
+gsmtim[i+1] = gsmmsg[x];
+gsmtim[i] = '0';
+x--;
+}
+gsmtim[i+2] = ':';
+i = i + 3;
+x = x + 3;
+}
+
+i--;
+x++;
+gsmtim[i] = gsmmsg[x];
+gsmtim[i+1] = '0';
+gsmtim[i+2] = gsmmsg[x+1];
+gsmtim[i+3] = '"';
+gsmtim[i+4] = '\r';
+gsmtim[i+5] = 0x00;
+offnet:
+gsm_msg(netoff);
+gsm_receive(1, gsmmsg);
+gsm_msg(clockw);
+gsm_msg(gsmtim);
+gsm_receive(1, gsmmsg);
+if(gsmmsg[0] != '0')
+{
+LATCbits.LC3 = 0;
+_delay((unsigned long)((2000)*(64000000/4000.0)));
+asm("RESET");
+}
+}
+
+
+uint8_t gsm_unsolic(void)
+{
+gsm_zerobuff(gsmums, 0x200);
+uint8_t i = 1;
+uint16_t x = 0;
+uint8_t y = 0;
+resttim:
+TMR4_Initialize();
+T4CONbits.TMR4ON = 1;
+while(!PIR4bits.TMR4IF && x < 0x200)
+{
+gsmums[x] = gsm_Read();
+if(gsmums[x] == '\n')
+{
+y++;
+}
+x++;
+}
+if(i > 0)
+{
+i--;
+goto resttim;
+}
+return y;
+}
+
+void gsm_receive(uint8_t noofline, uint8_t *messagebuf)
+{
+gsm_zerobuff(messagebuf, 0x200);
+uint8_t x = 0;
+gsmbyte = 0;
+while(noofline > 0x00)
+{
+gsmbyte = EUSARTG_Read();
+if(gsmflags.meerror)
+{
+break;
+}
+messagebuf[x] = gsmbyte;
+x++;
+if(gsmbyte == 0x0A || gsmbyte == 0x00)
+{
+noofline--;
+}
+}
 }
 
 void gsm_txAT(void)
@@ -15567,13 +16028,80 @@ gsm_transmit('A');
 gsm_transmit('T');
 }
 
+
 void gsm_on(void)
 {
 LATCbits.LC3 = 1;
+TMR4_Initialize();
+T4CONbits.T4ON = 1;
+}
 
+uint8_t gsm_Read(void)
+{
+while(!PIR3bits.RC2IF)
+{
+if(PIR4bits.TMR4IF)
+{
+break;
+}
+}
+
+
+if(1 == RC2STAbits.OERR)
+{
+
+
+RC2STAbits.CREN = 0;
+RC2STAbits.CREN = 1;
+}
+
+return RC2REG;
 }
 
 void gsm_off(void)
 {
 LATCbits.LC3 = 0;
 }
+
+void gsm_netwait(void)
+{
+gsmbyte = 0;
+uint8_t x = 0;
+while(gsmbyte != 'S')
+{
+gsmbyte = EUSARTG_Read();
+gsmmsg[x++] = gsmbyte;
+}
+while(gsmbyte != '\n')
+{
+gsmbyte = EUSARTG_Read();
+gsmmsg[x++] = gsmbyte;
+}
+gsmflags.mtn = 0;
+if(gsmmsg[0] == '+')
+{
+gsmflags.mtn = 1;
+}
+}
+
+uint8_t EUSARTG_Read(void)
+{
+
+while(!PIR3bits.RC2IF)
+{
+
+}
+
+
+
+if(RC2STAbits.OERR)
+{
+
+
+RC2STAbits.CREN = 0;
+RC2STAbits.CREN = 1;
+}
+
+return RC2REG;
+}
+

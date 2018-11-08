@@ -10905,18 +10905,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;tmr4.c: 73: T4RST = 0x00;
 "73
 [e = _T4RST -> -> 0 `i `uc ]
-[; ;tmr4.c: 76: T4PR = 0x4B;
+[; ;tmr4.c: 76: T4PR = 0xA0;
 "76
-[e = _T4PR -> -> 75 `i `uc ]
+[e = _T4PR -> -> 160 `i `uc ]
 [; ;tmr4.c: 79: T4TMR = 0x00;
 "79
 [e = _T4TMR -> -> 0 `i `uc ]
 [; ;tmr4.c: 82: PIR4bits.TMR4IF = 0;
 "82
 [e = . . _PIR4bits 0 3 -> -> 0 `i `uc ]
-[; ;tmr4.c: 85: T4CON = 0xFF;
+[; ;tmr4.c: 85: T4CON = 0xF8;
 "85
-[e = _T4CON -> -> 255 `i `uc ]
+[e = _T4CON -> -> 248 `i `uc ]
 [; ;tmr4.c: 86: }
 "86
 [e :UE 1368 ]

@@ -54,6 +54,18 @@
 #include <xc.h>
 #include <stdbool.h>
 #include <stdint.h>
+#define EUSART2_TX_BUFFER_SIZE 8
+#define EUSART2_RX_BUFFER_SIZE 512
+
+/**
+  Section: Global Variables
+*/
+
+volatile uint8_t eusart2RxHead = 0;
+volatile uint8_t eusart2RxTail = 0;
+volatile uint8_t eusart2RxBuffer[EUSART2_RX_BUFFER_SIZE];
+volatile uint8_t eusart2RxCount;
+
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 
@@ -68,11 +80,21 @@
 
 #define EUSART2_DataReady  (EUSART2_is_rx_ready())
 
+/**
+  Section: Data Type Definitions
+*/
+
+/**
+ Section: Global variables
+ */
+extern volatile uint8_t eusart2TxBufferRemaining;
+extern volatile uint8_t eusart2RxCount;
 
 /**
   Section: EUSART2 APIs
 */
 
+void (*EUSART2_RxDefaultInterruptHandler)(void);
 
 /**
   @Summary
@@ -146,11 +168,11 @@ bool EUSART2_is_tx_ready(void);
 
 /**
   @Summary
-    Checks if the EUSART2 receiver ready for reading
+    Checks if EUSART2 receiver is empty
 
   @Description
-    This routine checks if EUSART2 receiver has received data 
-    and ready to be read
+    This routine returns the available number of bytes to be read 
+    from EUSART2 receiver
 
   @Preconditions
     EUSART2_Initialize() function should be called
@@ -162,9 +184,7 @@ bool EUSART2_is_tx_ready(void);
     None
 
   @Returns
-    Status of EUSART2 receiver
-    TRUE: EUSART2 receiver is ready for reading
-    FALSE: EUSART2 receiver is not ready for reading
+    The number of bytes EUSART2 has available for reading
     
   @Example
     <code>
@@ -175,6 +195,12 @@ bool EUSART2_is_tx_ready(void);
         // Initialize the device
         SYSTEM_Initialize();
         
+        // Enable the Global Interrupts
+        INTERRUPT_GlobalInterruptEnable();
+        
+        // Enable the Peripheral Interrupts
+        INTERRUPT_PeripheralInterruptEnable();
+        
         while(1)
         {
             // Logic to echo received data
@@ -183,14 +209,14 @@ bool EUSART2_is_tx_ready(void);
                 rxData = UART1_Read();
                 if(EUSART2_is_tx_ready())
                 {
-                    EUSART2_Write(rxData);
+                    EUSART2T_Write(rxData);
                 }
             }
         }
     }
     </code>
 */
-bool EUSART2_is_rx_ready(void);
+uint8_t EUSART2_is_rx_ready(void);
 
 /**
   @Summary
@@ -280,8 +306,47 @@ uint8_t EUSART2_Read(void);
 void EUSART2_Write(uint8_t txData);
 
 
+/**
+  @Summary
+    Maintains the driver's receiver state machine and implements its ISR
+
+  @Description
+    This routine is used to maintain the driver's internal receiver state
+    machine.This interrupt service routine is called when the state of the
+    receiver needs to be maintained in a non polled manner.
+
+  @Preconditions
+    EUSART2_Initialize() function should have been called
+    for the ISR to execute correctly.
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
+void EUSART2_Receive_ISR(void);
 
 
+/**
+  @Summary
+    Sets the receive handler function to be called by the interrupt service
+
+  @Description
+    Calling this function will set a new custom function that will be 
+    called when the receive interrupt needs servicing.
+
+  @Preconditions
+    EUSART2_Initialize() function should have been called
+    for the ISR to execute correctly.
+
+  @Param
+    A pointer to the new function
+
+  @Returns
+    None
+*/
+void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 

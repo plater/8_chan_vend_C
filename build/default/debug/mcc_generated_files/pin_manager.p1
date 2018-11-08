@@ -19,12 +19,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TRISC `Vuc ~T0 @X0 0 e@3978 ]
 "16839
 [v _TRISD `Vuc ~T0 @X0 0 e@3979 ]
+"9246
+[v _ANSELD `Vuc ~T0 @X0 0 e@3878 ]
 "8936
 [v _ANSELC `Vuc ~T0 @X0 0 e@3873 ]
 "8440
 [v _ANSELB `Vuc ~T0 @X0 0 e@3865 ]
-"9246
-[v _ANSELD `Vuc ~T0 @X0 0 e@3878 ]
 "9511
 [v _ANSELE `Vuc ~T0 @X0 0 e@3886 ]
 "7944
@@ -49,42 +49,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ODCONC `Vuc ~T0 @X0 0 e@3871 ]
 "9122
 [v _ODCOND `Vuc ~T0 @X0 0 e@3876 ]
-"3813
-[s S234 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S234 . INT0IE INT1IE INT2IE . IOCIE TMR0IE ]
-"3812
-[u S233 `S234 1 ]
-[n S233 . . ]
-"3822
-[v _PIE0bits `VS233 ~T0 @X0 0 e@3778 ]
-"3254
-[s S194 :5 `uc 1 ]
-[n S194 . RXPPS ]
-"3253
-[u S193 `S194 1 ]
-[n S193 . . ]
-"3258
-[v _RX1PPSbits `VS193 ~T0 @X0 0 e@3765 ]
-"6938
-[v _RC6PPS `Vuc ~T0 @X0 0 e@3837 ]
+"7758
+[v _SLRCONA `Vuc ~T0 @X0 0 e@3854 ]
+"8254
+[v _SLRCONB `Vuc ~T0 @X0 0 e@3862 ]
+"8750
+[v _SLRCONC `Vuc ~T0 @X0 0 e@3870 ]
+"9060
+[v _SLRCOND `Vuc ~T0 @X0 0 e@3875 ]
+"9409
+[v _SLRCONE `Vuc ~T0 @X0 0 e@3883 ]
+"3243
+[v _RX1PPS `Vuc ~T0 @X0 0 e@3765 ]
 "6542
 [v _RB5PPS `Vuc ~T0 @X0 0 e@3828 ]
-"56
-[s S2 :5 `uc 1 ]
-[n S2 . RXPPS ]
-"55
-[u S1 `S2 1 ]
-[n S1 . . ]
-"60
-[v _RX2PPSbits `VS1 ~T0 @X0 0 e@3725 ]
-"4219
-[s S255 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S255 . INT0IF INT1IF INT2IF . IOCIF TMR0IF ]
-"4218
-[u S254 `S255 1 ]
-[n S254 . . ]
-"4228
-[v _PIR0bits `VS254 ~T0 @X0 0 e@3786 ]
+"6938
+[v _RC6PPS `Vuc ~T0 @X0 0 e@3837 ]
+"50
+[v _RX2PPS `Vuc ~T0 @X0 0 e@3725 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -10815,120 +10797,129 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pin_manager.h: 692: void PIN_MANAGER_Initialize (void);
 [; ;pin_manager.h: 704: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 12: typedef unsigned char bool;
-"52 mcc_generated_files/pin_manager.c
+"57 mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
-"53
+"58
 {
-[; ;pin_manager.c: 52: void PIN_MANAGER_Initialize(void)
-[; ;pin_manager.c: 53: {
+[; ;pin_manager.c: 57: void PIN_MANAGER_Initialize(void)
+[; ;pin_manager.c: 58: {
 [e :U _PIN_MANAGER_Initialize ]
 [f ]
-[; ;pin_manager.c: 57: LATE = 0x00;
-"57
+[; ;pin_manager.c: 62: LATE = 0x00;
+"62
 [e = _LATE -> -> 0 `i `uc ]
-[; ;pin_manager.c: 58: LATD = 0x00;
-"58
+[; ;pin_manager.c: 63: LATD = 0x00;
+"63
 [e = _LATD -> -> 0 `i `uc ]
-[; ;pin_manager.c: 59: LATA = 0xC0;
-"59
-[e = _LATA -> -> 192 `i `uc ]
-[; ;pin_manager.c: 60: LATB = 0x00;
-"60
+[; ;pin_manager.c: 64: LATA = 0x00;
+"64
+[e = _LATA -> -> 0 `i `uc ]
+[; ;pin_manager.c: 65: LATB = 0x00;
+"65
 [e = _LATB -> -> 0 `i `uc ]
-[; ;pin_manager.c: 61: LATC = 0x40;
-"61
-[e = _LATC -> -> 64 `i `uc ]
-[; ;pin_manager.c: 66: TRISE = 0x00;
+[; ;pin_manager.c: 66: LATC = 0x00;
 "66
+[e = _LATC -> -> 0 `i `uc ]
+[; ;pin_manager.c: 71: TRISE = 0x00;
+"71
 [e = _TRISE -> -> 0 `i `uc ]
-[; ;pin_manager.c: 67: TRISA = 0x1F;
-"67
+[; ;pin_manager.c: 72: TRISA = 0x1F;
+"72
 [e = _TRISA -> -> 31 `i `uc ]
-[; ;pin_manager.c: 68: TRISB = 0xD0;
-"68
+[; ;pin_manager.c: 73: TRISB = 0xD0;
+"73
 [e = _TRISB -> -> 208 `i `uc ]
-[; ;pin_manager.c: 69: TRISC = 0x90;
-"69
+[; ;pin_manager.c: 74: TRISC = 0x90;
+"74
 [e = _TRISC -> -> 144 `i `uc ]
-[; ;pin_manager.c: 70: TRISD = 0x00;
-"70
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;pin_manager.c: 75: ANSELC = 0x00;
+[; ;pin_manager.c: 75: TRISD = 0x00;
 "75
-[e = _ANSELC -> -> 0 `i `uc ]
-[; ;pin_manager.c: 76: ANSELB = 0xC0;
-"76
-[e = _ANSELB -> -> 192 `i `uc ]
-[; ;pin_manager.c: 77: ANSELD = 0x00;
-"77
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;pin_manager.c: 80: ANSELD = 0x00;
+"80
 [e = _ANSELD -> -> 0 `i `uc ]
-[; ;pin_manager.c: 78: ANSELE = 0x00;
-"78
+[; ;pin_manager.c: 81: ANSELC = 0x00;
+"81
+[e = _ANSELC -> -> 0 `i `uc ]
+[; ;pin_manager.c: 82: ANSELB = 0xC0;
+"82
+[e = _ANSELB -> -> 192 `i `uc ]
+[; ;pin_manager.c: 83: ANSELE = 0x00;
+"83
 [e = _ANSELE -> -> 0 `i `uc ]
-[; ;pin_manager.c: 79: ANSELA = 0x01;
-"79
-[e = _ANSELA -> -> 1 `i `uc ]
-[; ;pin_manager.c: 84: WPUD = 0x00;
+[; ;pin_manager.c: 84: ANSELA = 0x01;
 "84
+[e = _ANSELA -> -> 1 `i `uc ]
+[; ;pin_manager.c: 89: WPUD = 0x00;
+"89
 [e = _WPUD -> -> 0 `i `uc ]
-[; ;pin_manager.c: 85: WPUE = 0x00;
-"85
+[; ;pin_manager.c: 90: WPUE = 0x00;
+"90
 [e = _WPUE -> -> 0 `i `uc ]
-[; ;pin_manager.c: 86: WPUB = 0x00;
-"86
-[e = _WPUB -> -> 0 `i `uc ]
-[; ;pin_manager.c: 87: WPUA = 0x00;
-"87
+[; ;pin_manager.c: 91: WPUB = 0x10;
+"91
+[e = _WPUB -> -> 16 `i `uc ]
+[; ;pin_manager.c: 92: WPUA = 0x00;
+"92
 [e = _WPUA -> -> 0 `i `uc ]
-[; ;pin_manager.c: 88: WPUC = 0x00;
-"88
-[e = _WPUC -> -> 0 `i `uc ]
-[; ;pin_manager.c: 93: ODCONE = 0x00;
+[; ;pin_manager.c: 93: WPUC = 0x00;
 "93
+[e = _WPUC -> -> 0 `i `uc ]
+[; ;pin_manager.c: 98: ODCONE = 0x00;
+"98
 [e = _ODCONE -> -> 0 `i `uc ]
-[; ;pin_manager.c: 94: ODCONA = 0x00;
-"94
+[; ;pin_manager.c: 99: ODCONA = 0x00;
+"99
 [e = _ODCONA -> -> 0 `i `uc ]
-[; ;pin_manager.c: 95: ODCONB = 0x20;
-"95
+[; ;pin_manager.c: 100: ODCONB = 0x20;
+"100
 [e = _ODCONB -> -> 32 `i `uc ]
-[; ;pin_manager.c: 96: ODCONC = 0x08;
-"96
+[; ;pin_manager.c: 101: ODCONC = 0x08;
+"101
 [e = _ODCONC -> -> 8 `i `uc ]
-[; ;pin_manager.c: 97: ODCOND = 0x00;
-"97
+[; ;pin_manager.c: 102: ODCOND = 0x00;
+"102
 [e = _ODCOND -> -> 0 `i `uc ]
-[; ;pin_manager.c: 103: PIE0bits.IOCIE = 1;
-"103
-[e = . . _PIE0bits 0 4 -> -> 1 `i `uc ]
-[; ;pin_manager.c: 106: RX1PPSbits.RXPPS = 0x17;
-"106
-[e = . . _RX1PPSbits 0 0 -> -> 23 `i `uc ]
-[; ;pin_manager.c: 107: RC6PPS = 0x09;
+[; ;pin_manager.c: 107: SLRCONA = 0xFF;
 "107
-[e = _RC6PPS -> -> 9 `i `uc ]
-[; ;pin_manager.c: 108: RB5PPS = 0x0B;
+[e = _SLRCONA -> -> 255 `i `uc ]
+[; ;pin_manager.c: 108: SLRCONB = 0xFF;
 "108
-[e = _RB5PPS -> -> 11 `i `uc ]
-[; ;pin_manager.c: 109: RX2PPSbits.RXPPS = 0x0C;
+[e = _SLRCONB -> -> 255 `i `uc ]
+[; ;pin_manager.c: 109: SLRCONC = 0xFF;
 "109
-[e = . . _RX2PPSbits 0 0 -> -> 12 `i `uc ]
-[; ;pin_manager.c: 111: }
+[e = _SLRCONC -> -> 255 `i `uc ]
+[; ;pin_manager.c: 110: SLRCOND = 0xFF;
+"110
+[e = _SLRCOND -> -> 255 `i `uc ]
+[; ;pin_manager.c: 111: SLRCONE = 0x07;
 "111
+[e = _SLRCONE -> -> 7 `i `uc ]
+[; ;pin_manager.c: 120: RX1PPS = 0x17;
+"120
+[e = _RX1PPS -> -> 23 `i `uc ]
+[; ;pin_manager.c: 121: RB5PPS = 0x0B;
+"121
+[e = _RB5PPS -> -> 11 `i `uc ]
+[; ;pin_manager.c: 122: RC6PPS = 0x09;
+"122
+[e = _RC6PPS -> -> 9 `i `uc ]
+[; ;pin_manager.c: 123: RX2PPS = 0x0C;
+"123
+[e = _RX2PPS -> -> 12 `i `uc ]
+[; ;pin_manager.c: 124: }
+"124
 [e :UE 1368 ]
 }
-"113
+"126
 [v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
-"114
+"127
 {
-[; ;pin_manager.c: 113: void PIN_MANAGER_IOC(void)
-[; ;pin_manager.c: 114: {
+[; ;pin_manager.c: 126: void PIN_MANAGER_IOC(void)
+[; ;pin_manager.c: 127: {
 [e :U _PIN_MANAGER_IOC ]
 [f ]
-[; ;pin_manager.c: 117: PIR0bits.IOCIF = 0;
-"117
-[e = . . _PIR0bits 0 4 -> -> 0 `i `uc ]
-[; ;pin_manager.c: 119: }
-"119
+[; ;pin_manager.c: 128: }
+"128
 [e :UE 1369 ]
 }

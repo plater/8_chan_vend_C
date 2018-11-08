@@ -66,11 +66,11 @@ void EUSART1_Initialize(void)
     // TX9 9-bit; TX9D 0; SENDB send_sync_break_next; TXEN enabled; SYNC asynchronous; BRGH hi_speed; CSRC master; 
     TX1STA = 0xEC;
 
-    // SP1BRGL 56; 
-    SP1BRGL = 0x38;
+    // SP1BRGL 130; 
+    SP1BRGL = 0x82;
 
-    // SP1BRGH 1; 
-    SP1BRGH = 0x01;
+    // SP1BRGH 6; 
+    SP1BRGH = 0x06;
 
 
 }

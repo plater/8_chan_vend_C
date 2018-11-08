@@ -1,5 +1,5 @@
 /**
-  Generated Interrupt Manager Source File
+  Generated Interrupt Manager Header File
 
   @Company:
     Microchip Technology Inc.
@@ -17,7 +17,7 @@
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65.2
         Device            :  PIC18F47K40
-        Driver Version    :  2.12
+        Driver Version    :  2.03
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.45 or later
         MPLAB 	          :  MPLAB X 4.15
@@ -49,17 +49,6 @@
 #ifndef INTERRUPT_MANAGER_H
 #define INTERRUPT_MANAGER_H
 
-/**
- * @Param
-    none
- * @Returns
-    none
- * @Description
-    This macro will enable high priority global interrupts.
- * @Example
-    INTERRUPT_GlobalInterruptHighEnable();
- */
-#define INTERRUPT_GlobalInterruptHighEnable() (INTCONbits.GIEH = 1)
 
 /**
  * @Param
@@ -67,11 +56,11 @@
  * @Returns
     none
  * @Description
-    This macro will disable high priority global interrupts.
+    This macro will enable global interrupts.
  * @Example
-    INTERRUPT_GlobalInterruptHighDisable();
+    INTERRUPT_GlobalInterruptEnable();
  */
-#define INTERRUPT_GlobalInterruptHighDisable() (INTCONbits.GIEH = 0)
+#define INTERRUPT_GlobalInterruptEnable() (INTCONbits.GIE = 1)
 
 /**
  * @Param
@@ -79,23 +68,11 @@
  * @Returns
     none
  * @Description
-    This macro will enable low priority global interrupts.
+    This macro will disable global interrupts.
  * @Example
-    INTERRUPT_GlobalInterruptLowEnable();
+    INTERRUPT_GlobalInterruptDisable();
  */
-#define INTERRUPT_GlobalInterruptLowEnable() (INTCONbits.GIEL = 1)
-
-/**
- * @Param
-    none
- * @Returns
-    none
- * @Description
-    This macro will disable low priority global interrupts.
- * @Example
-    INTERRUPT_GlobalInterruptLowDisable();
- */
-#define INTERRUPT_GlobalInterruptLowDisable() (INTCONbits.GIEL = 0)
+#define INTERRUPT_GlobalInterruptDisable() (INTCONbits.GIE = 0)
 /**
  * @Param
     none
@@ -119,6 +96,7 @@
     INTERRUPT_PeripheralInterruptDisable();
  */
 #define INTERRUPT_PeripheralInterruptDisable() (INTCONbits.PEIE = 0)
+
 /**
  * @Param
     none

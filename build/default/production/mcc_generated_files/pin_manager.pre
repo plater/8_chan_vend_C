@@ -14277,61 +14277,60 @@ void PIN_MANAGER_IOC(void);
 # 12 "/opt/microchip/xc8/v1.45/include/stdbool.h"
 typedef unsigned char bool;
 
-# 52 "mcc_generated_files/pin_manager.c"
+# 57 "mcc_generated_files/pin_manager.c"
 void PIN_MANAGER_Initialize(void)
 {
 
-# 57
+# 62
 LATE = 0x00;
 LATD = 0x00;
-LATA = 0xC0;
+LATA = 0x00;
 LATB = 0x00;
-LATC = 0x40;
+LATC = 0x00;
 
-# 66
+# 71
 TRISE = 0x00;
 TRISA = 0x1F;
 TRISB = 0xD0;
 TRISC = 0x90;
 TRISD = 0x00;
 
-# 75
+# 80
+ANSELD = 0x00;
 ANSELC = 0x00;
 ANSELB = 0xC0;
-ANSELD = 0x00;
 ANSELE = 0x00;
 ANSELA = 0x01;
 
-# 84
+# 89
 WPUD = 0x00;
 WPUE = 0x00;
-WPUB = 0x00;
+WPUB = 0x10;
 WPUA = 0x00;
 WPUC = 0x00;
 
-# 93
+# 98
 ODCONE = 0x00;
 ODCONA = 0x00;
 ODCONB = 0x20;
 ODCONC = 0x08;
 ODCOND = 0x00;
 
-# 103
-PIE0bits.IOCIE = 1;
+# 107
+SLRCONA = 0xFF;
+SLRCONB = 0xFF;
+SLRCONC = 0xFF;
+SLRCOND = 0xFF;
+SLRCONE = 0x07;
 
-
-RX1PPSbits.RXPPS = 0x17;
-RC6PPS = 0x09;
+# 120
+RX1PPS = 0x17;
 RB5PPS = 0x0B;
-RX2PPSbits.RXPPS = 0x0C;
-
+RC6PPS = 0x09;
+RX2PPS = 0x0C;
 }
 
 void PIN_MANAGER_IOC(void)
 {
-
-
-PIR0bits.IOCIF = 0;
-
 }
 

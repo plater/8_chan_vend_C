@@ -1,4 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
+[v F11927 `(v ~T0 @X0 0 tf ]
 "58 mdb.h
 [s S1368 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1368 . isdata noteerr mode timeout vending noteset endis spare5 ]
@@ -44,7 +45,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 "225
 [s S1382 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1382 . iscredit error inscoin nochange credisplay initialrun noterr service priceset setprice vendset chanlink mottime nosense settime sensno linkchan swclosed pricedisplay audit hiprice spare22 spare23 spare24 ]
-"4360 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
+"61 gsm.h
+[s S1383 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1383 . retransmit meerror mtn msgavl spare4 spare5 spare6 spare7 ]
+"1545 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
+[s S87 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S87 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"1555
+[s S88 :6 `uc 1 :1 `uc 1 ]
+[n S88 . . TX8_92 ]
+"1559
+[s S89 :1 `uc 1 ]
+[n S89 . TXD82 ]
+"1544
+[u S86 `S87 1 `S88 1 `S89 1 ]
+[n S86 . . . . ]
+"1563
+[v _TX2STAbits `VS86 ~T0 @X0 0 e@3742 ]
+"4360
 [s S263 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S263 . SSP1IF BCL1IF SSP2IF BCL2IF TX1IF RC1IF TX2IF RC2IF ]
 "4370
@@ -55,18 +73,36 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S262 . . . ]
 "4377
 [v _PIR3bits `VS262 ~T0 @X0 0 e@3789 ]
-"280 mcc_generated_files/eusart2.h
+"306 mcc_generated_files/eusart2.h
 [v _EUSART2_Write `(v ~T0 @X0 0 ef1`uc ]
-"36 gsm.h
-[v _gsm_on `(v ~T0 @X0 0 ef ]
-"34
+"3954 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
+[s S242 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S242 . SSP1IE BCL1IE SSP2IE BCL2IE TX1IE RC1IE TX2IE RC2IE ]
+"3964
+[s S243 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S243 . RXB0IE RXB1IE TXB0IE TXB1IE TXB2IE ]
+"3971
+[s S244 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S244 . . RXBNIE . TXBNIE ]
+"3953
+[u S241 `S242 1 `S243 1 `S244 1 ]
+[n S241 . . . . ]
+"3978
+[v _PIE3bits `VS241 ~T0 @X0 0 e@3781 ]
+"4438
+[s S266 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S266 . TMR1IF TMR2IF TMR3IF TMR4IF TMR5IF TMR6IF ]
+"4437
+[u S265 `S266 1 ]
+[n S265 . . ]
+"4447
+[v _PIR4bits `VS265 ~T0 @X0 0 e@3790 ]
+"98 gsm.h
 [v _gsm_txAT `(v ~T0 @X0 0 ef ]
-[v F11568 `(v ~T0 @X0 1 tf1`ul ]
-"164 /opt/microchip/xc8/v1.45/include/pic18.h
-[v __delay `JF11568 ~T0 @X0 0 e ]
-[p i __delay ]
-"260 mcc_generated_files/eusart2.h
-[v _EUSART2_Read `(uc ~T0 @X0 0 ef ]
+"92
+[v _gsm_receive `(v ~T0 @X0 0 ef2`uc`*uc ]
+"106
+[v _gsm_netwait `(v ~T0 @X0 0 ef ]
 "16158 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
 [s S785 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S785 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
@@ -78,6 +114,124 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S784 . . . ]
 "16179
 [v _LATCbits `VS784 ~T0 @X0 0 e@3973 ]
+[v F11653 `(v ~T0 @X0 1 tf1`ul ]
+"164 /opt/microchip/xc8/v1.45/include/pic18.h
+[v __delay `JF11653 ~T0 @X0 0 e ]
+[p i __delay ]
+"100 gsm.h
+[v _gsm_on `(v ~T0 @X0 0 ef ]
+"84
+[v _gsm_setime `(v ~T0 @X0 0 ef ]
+"82
+[v _gsm_getbalance `(v ~T0 @X0 0 ef ]
+"90
+[v _clock_display `(v ~T0 @X0 0 ef ]
+"26475 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
+[s S1338 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1338 . INT0EDG INT1EDG INT2EDG . IPEN PEIE_GIEL GIE_GIEH ]
+"26484
+[s S1339 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1339 . . PEIE GIE ]
+"26489
+[s S1340 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1340 . . GIEL GIEH ]
+"26474
+[u S1337 `S1338 1 `S1339 1 `S1340 1 ]
+[n S1337 . . . . ]
+"26495
+[v _INTCONbits `VS1337 ~T0 @X0 0 e@4082 ]
+"307 mcc_generated_files/tmr2.h
+[v _TMR2_Initialize `(v ~T0 @X0 0 ef ]
+"21898 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
+[s S1102 :4 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S1102 . OUTPS CKPS ON ]
+"21903
+[s S1103 :4 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S1103 . T2OUTPS T2CKPS T2ON ]
+"21908
+[s S1104 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1104 . T2OUTPS0 T2OUTPS1 T2OUTPS2 T2OUTPS3 T2CKPS0 T2CKPS1 T2CKPS2 ]
+"21917
+[s S1105 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1105 . OUTPS0 OUTPS1 OUTPS2 OUTPS3 CKPS0 CKPS1 CKPS2 TMR2ON ]
+"21897
+[u S1101 `S1102 1 `S1103 1 `S1104 1 `S1105 1 ]
+[n S1101 . . . . . ]
+"21928
+[v _T2CONbits `VS1101 ~T0 @X0 0 e@4029 ]
+"80 gsm.h
+[v _gsm_gettime `(v ~T0 @X0 0 ef ]
+"149 lcd.h
+[v _disp_clock `(v ~T0 @X0 0 ef ]
+"108 gsm.h
+[v _EUSARTG_Read `(uc ~T0 @X0 0 ef ]
+"307 mcc_generated_files/tmr4.h
+[v _TMR4_Initialize `(v ~T0 @X0 0 ef ]
+"21310 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
+[s S1069 :4 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S1069 . OUTPS CKPS ON ]
+"21315
+[s S1070 :4 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S1070 . T4OUTPS T4CKPS T4ON ]
+"21320
+[s S1071 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1071 . T4OUTPS0 T4OUTPS1 T4OUTPS2 T4OUTPS3 T4CKPS0 T4CKPS1 T4CKPS2 ]
+"21329
+[s S1072 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1072 . OUTPS0 OUTPS1 OUTPS2 OUTPS3 CKPS0 CKPS1 CKPS2 TMR4ON ]
+"21309
+[u S1068 `S1069 1 `S1070 1 `S1071 1 `S1072 1 ]
+[n S1068 . . . . . ]
+"21340
+[v _T4CONbits `VS1068 ~T0 @X0 0 e@4023 ]
+"102 gsm.h
+[v _gsm_Read `(uc ~T0 @X0 0 ef ]
+"1371 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
+[s S77 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S77 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"1381
+[s S78 :6 `uc 1 :1 `uc 1 ]
+[n S78 . . RC8_92 ]
+"1385
+[s S79 :6 `uc 1 :1 `uc 1 ]
+[n S79 . . RC92 ]
+"1389
+[s S80 :1 `uc 1 ]
+[n S80 . RCD82 ]
+"1370
+[u S76 `S77 1 `S78 1 `S79 1 `S80 1 ]
+[n S76 . . . . . ]
+"1393
+[v _RC2STAbits `VS76 ~T0 @X0 0 e@3741 ]
+"1201
+[v _RC2REG `Vuc ~T0 @X0 0 e@3737 ]
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;string.h: 14: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 15: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 16: extern void * memset(void *, int, size_t);
+[; ;string.h: 36: extern char * strcat(char *, const char *);
+[; ;string.h: 37: extern char * strcpy(char *, const char *);
+[; ;string.h: 38: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 39: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 40: extern char * strdup(const char *);
+[; ;string.h: 41: extern char * strtok(char *, const char *);
+[; ;string.h: 44: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 45: extern int strcmp(const char *, const char *);
+[; ;string.h: 46: extern int stricmp(const char *, const char *);
+[; ;string.h: 47: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 48: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 49: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 50: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 51: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 52: extern size_t strspn(const char *, const char *);
+[; ;string.h: 53: extern char * strstr(const char *, const char *);
+[; ;string.h: 54: extern char * stristr(const char *, const char *);
+[; ;string.h: 55: extern char * strerror(int);
+[; ;string.h: 56: extern size_t strlen(const char *);
+[; ;string.h: 57: extern char * strchr(const char *, int);
+[; ;string.h: 58: extern char * strichr(const char *, int);
+[; ;string.h: 59: extern char * strrchr(const char *, int);
+[; ;string.h: 60: extern char * strrichr(const char *, int);
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -10836,7 +10990,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pin_manager.h: 692: void PIN_MANAGER_Initialize (void);
 [; ;pin_manager.h: 704: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;interrupt_manager.h: 132: void INTERRUPT_Initialize (void);
+[; ;interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
 [; ;tmr5.h: 100: void TMR5_Initialize(void);
 [; ;tmr5.h: 129: void TMR5_StartTimer(void);
 [; ;tmr5.h: 161: void TMR5_StopTimer(void);
@@ -10988,12 +11142,37 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;memory.h: 249: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [; ;memory.h: 275: uint8_t DATAEE_ReadByte(uint16_t bAdd);
 [; ;memory.h: 277: void MEMORY_Tasks(void);
-[; ;eusart2.h: 97: void EUSART2_Initialize(void);
-[; ;eusart2.h: 145: bool EUSART2_is_tx_ready(void);
-[; ;eusart2.h: 193: bool EUSART2_is_rx_ready(void);
-[; ;eusart2.h: 240: bool EUSART2_is_tx_done(void);
-[; ;eusart2.h: 260: uint8_t EUSART2_Read(void);
-[; ;eusart2.h: 280: void EUSART2_Write(uint8_t txData);
+"64 mcc_generated_files/eusart2.h
+[v _eusart2RxHead `Vuc ~T0 @X0 1 e ]
+[i _eusart2RxHead
+-> -> 0 `i `uc
+]
+[; ;eusart2.h: 64: volatile uint8_t eusart2RxHead = 0;
+"65
+[v _eusart2RxTail `Vuc ~T0 @X0 1 e ]
+[i _eusart2RxTail
+-> -> 0 `i `uc
+]
+[; ;eusart2.h: 65: volatile uint8_t eusart2RxTail = 0;
+"66
+[v _eusart2RxBuffer `Vuc ~T0 @X0 -> 512 `i e ]
+[; ;eusart2.h: 66: volatile uint8_t eusart2RxBuffer[512];
+"67
+[v _eusart2RxCount `Vuc ~T0 @X0 1 e ]
+[; ;eusart2.h: 67: volatile uint8_t eusart2RxCount;
+[; ;eusart2.h: 90: extern volatile uint8_t eusart2TxBufferRemaining;
+[; ;eusart2.h: 91: extern volatile uint8_t eusart2RxCount;
+"97
+[v _EUSART2_RxDefaultInterruptHandler `*F11927 ~T0 @X0 1 e ]
+[; ;eusart2.h: 97: void (*EUSART2_RxDefaultInterruptHandler)(void);
+[; ;eusart2.h: 119: void EUSART2_Initialize(void);
+[; ;eusart2.h: 167: bool EUSART2_is_tx_ready(void);
+[; ;eusart2.h: 219: uint8_t EUSART2_is_rx_ready(void);
+[; ;eusart2.h: 266: bool EUSART2_is_tx_done(void);
+[; ;eusart2.h: 286: uint8_t EUSART2_Read(void);
+[; ;eusart2.h: 306: void EUSART2_Write(uint8_t txData);
+[; ;eusart2.h: 328: void EUSART2_Receive_ISR(void);
+[; ;eusart2.h: 349: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart1.h: 93: void eusartmdb_Initialize(void);
 [; ;eusart1.h: 95: void EUSART1_Initialize(void);
 [; ;eusart1.h: 115: uint8_t EUSART1_Read(void);
@@ -12764,58 +12943,85 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ]
 [; ;lcd.h: 117: const uint8_t vendispmsg[] = "Use button / Service";
+"118
+[v _clocktime `Cuc ~T0 @X0 -> 0 `x e ]
+[i _clocktime
+:U ..
+-> 84 `c
+-> 105 `c
+-> 109 `c
+-> 101 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 118: const uint8_t clocktime[] = "Time ";
 "119
-[v _bflag `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 119: uint8_t bflag;
-"120
-[v _lcdfunc `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 120: uint8_t lcdfunc;
+[v _clockdate `Cuc ~T0 @X0 -> 0 `x e ]
+[i _clockdate
+:U ..
+-> 68 `c
+-> 97 `c
+-> 116 `c
+-> 101 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 119: const uint8_t clockdate[] = "Date ";
 "121
-[v _lcdata `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 121: uint8_t lcdata;
+[v _bflag `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 121: uint8_t bflag;
 "122
-[v _lcdline `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 122: uint8_t lcdline;
+[v _lcdfunc `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 122: uint8_t lcdfunc;
 "123
-[v _stradd `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 123: uint8_t stradd;
+[v _lcdata `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 123: uint8_t lcdata;
 "124
-[v _hexnum `um ~T0 @X0 1 e ]
-[; ;lcd.h: 124: uint24_t hexnum;
+[v _lcdline `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 124: uint8_t lcdline;
 "125
-[v _ercode `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 125: uint8_t ercode;
+[v _stradd `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 125: uint8_t stradd;
 "126
-[v _lcdaddress `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 126: uint8_t lcdaddress;
+[v _hexnum `um ~T0 @X0 1 e ]
+[; ;lcd.h: 126: uint24_t hexnum;
 "127
+[v _ercode `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 127: uint8_t ercode;
+"128
+[v _lcdaddress `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 128: uint8_t lcdaddress;
+"129
 [v _dspposition `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 127: uint8_t dspposition;
-[; ;lcd.h: 129: void lcd_dispadd(uint8_t lcdaddress);
-[; ;lcd.h: 131: void displ_code(uint8_t ercode);
-[; ;lcd.h: 133: void lcd_init(void);
-[; ;lcd.h: 135: void lcd_string(uint8_t *, uint8_t lcdline);
-[; ;lcd.h: 137: void lcd_writeC(uint8_t);
-[; ;lcd.h: 139: void lcd_write(uint8_t);
-[; ;lcd.h: 141: void lcd_clockH(void);
-[; ;lcd.h: 143: void lcd_clockL(void);
-[; ;lcd.h: 145: void lcd_clockE(void);
-[; ;lcd.h: 147: void lcd_test(void);
-[; ;lcd.h: 149: void displ_hex(uint24_t);
-[; ;lcd.h: 151: void displ_price(uint8_t vendprice);
-[; ;lcd.h: 153: void displ_nochange(void);
-[; ;lcd.h: 155: void displ_credit(void);
-[; ;lcd.h: 157: void displ_noteer(void);
-[; ;lcd.h: 159: void displ_test(void);
-[; ;lcd.h: 161: void displ_totals(void);
-[; ;lcd.h: 163: void displ_empty(void);
-[; ;lcd.h: 165: void displ_sens(uint8_t smsgpos, uint8_t dmsgpos);
-[; ;lcd.h: 167: void displ_lflags(uint8_t chanel, uint8_t linkflgs);
-[; ;lcd.h: 169: void displ_sflags(uint8_t senseflags, uint8_t channel, uint8_t chanbit);
-[; ;lcd.h: 171: void displ_time(uint8_t motortime, uint8_t channel);
-[; ;lcd.h: 173: uint8_t displ_note(uint8_t *notestring);
-[; ;lcd.h: 175: void displ_nendis(uint8_t notenum);
-[; ;lcd.h: 177: int8_t read_busy(void);
+[; ;lcd.h: 129: uint8_t dspposition;
+[; ;lcd.h: 131: void lcd_dispadd(uint8_t lcdaddress);
+[; ;lcd.h: 133: void displ_code(uint8_t ercode);
+[; ;lcd.h: 135: void lcd_init(void);
+[; ;lcd.h: 137: void lcd_string(uint8_t *, uint8_t lcdline);
+[; ;lcd.h: 139: void lcd_writeC(uint8_t);
+[; ;lcd.h: 141: void lcd_write(uint8_t);
+[; ;lcd.h: 143: void lcd_clockH(void);
+[; ;lcd.h: 145: void lcd_clockL(void);
+[; ;lcd.h: 147: void lcd_clockE(void);
+[; ;lcd.h: 149: void disp_clock(void);
+[; ;lcd.h: 151: void lcd_test(void);
+[; ;lcd.h: 153: void displ_hex(uint24_t);
+[; ;lcd.h: 155: void displ_price(uint8_t vendprice);
+[; ;lcd.h: 157: void displ_nochange(void);
+[; ;lcd.h: 159: void displ_credit(void);
+[; ;lcd.h: 161: void displ_noteer(void);
+[; ;lcd.h: 163: void displ_test(void);
+[; ;lcd.h: 165: void displ_totals(void);
+[; ;lcd.h: 167: void displ_empty(void);
+[; ;lcd.h: 169: void displ_sens(uint8_t smsgpos, uint8_t dmsgpos);
+[; ;lcd.h: 171: void displ_lflags(uint8_t chanel, uint8_t linkflgs);
+[; ;lcd.h: 173: void displ_sflags(uint8_t senseflags, uint8_t channel, uint8_t chanbit);
+[; ;lcd.h: 175: void displ_time(uint8_t motortime, uint8_t channel);
+[; ;lcd.h: 177: uint8_t displ_note(uint8_t *notestring);
+[; ;lcd.h: 179: void displ_nendis(uint8_t notenum);
+[; ;lcd.h: 181: int8_t read_busy(void);
 "17 mdb.h
 [v _note_reset `Cuc ~T0 @X0 1 e ]
 [i _note_reset
@@ -13624,28 +13830,597 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;vend.h: 306: void Sens_off(void);
 [; ;vend.h: 308: void off_sens(uint8_t channel);
 [; ;vend.h: 310: void Reset_settings(void);
-"20 gsm.h
+"21 gsm.h
 [v _gsmbyte `uc ~T0 @X0 1 e ]
 [i _gsmbyte
 -> -> 0 `i `uc
 ]
-[; ;gsm.h: 20: uint8_t gsmbyte = 0;
-"21
-[v _gsmmsg `uc ~T0 @X0 -> 0 `x e ]
-[; ;gsm.h: 21: uint8_t gsmmsg[];
+[; ;gsm.h: 21: uint8_t gsmbyte = 0;
+"22
+[v _gsmmsg `uc ~T0 @X0 -> 512 `i e ]
+[; ;gsm.h: 22: uint8_t gsmmsg[512];
+"23
+[v _gsmums `uc ~T0 @X0 -> 512 `i e ]
+[; ;gsm.h: 23: uint8_t gsmums[512];
 "24
-[v _noecho `Cuc ~T0 @X0 1 e ]
-[i _noecho
--> :s 1C `Cuc
+[v _gsmusm `uc ~T0 @X0 -> 256 `i e ]
+[; ;gsm.h: 24: uint8_t gsmusm[256];
+"25
+[v _gsmtim `uc ~T0 @X0 -> 23 `i e ]
+[; ;gsm.h: 25: uint8_t gsmtim[23];
+"26
+[v _gsdate `uc ~T0 @X0 -> 10 `i e ]
+[; ;gsm.h: 26: uint8_t gsdate[10];
+"27
+[v _gstime `uc ~T0 @X0 -> 10 `i e ]
+[; ;gsm.h: 27: uint8_t gstime[10];
+"28
+[v _noofline `uc ~T0 @X0 1 e ]
+[; ;gsm.h: 28: uint8_t noofline;
+"31
+[v _smsdel `Cuc ~T0 @X0 -> 0 `x e ]
+[i _smsdel
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 77 `c
+-> 71 `c
+-> 68 `c
+-> 65 `c
+-> 61 `c
+-> 34 `c
+-> 68 `c
+-> 69 `c
+-> 76 `c
+-> 32 `c
+-> 65 `c
+-> 76 `c
+-> 76 `c
+-> 34 `c
+-> 13 `c
+-> 0 `c
+..
 ]
-[; ;gsm.h: 24: const uint8_t noecho = "ATE0";
-[; ;gsm.h: 26: void gsm_waitx(void);
-[; ;gsm.h: 28: void gsm_waitr(void);
-[; ;gsm.h: 30: void gsm_transmit(uint8_t txbyte);
-[; ;gsm.h: 32: void gsm_init(void);
-[; ;gsm.h: 34: void gsm_txAT(void);
-[; ;gsm.h: 36: void gsm_on(void);
-[; ;gsm.h: 38: void gsm_off(void);
+[; ;gsm.h: 31: const uint8_t smsdel[] = "AT+CMGDA=\"DEL ALL\"\r";
+"32
+[v _smslst `Cuc ~T0 @X0 -> 0 `x e ]
+[i _smslst
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 77 `c
+-> 71 `c
+-> 76 `c
+-> 61 `c
+-> 34 `c
+-> 65 `c
+-> 76 `c
+-> 76 `c
+-> 34 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 32: const uint8_t smslst[] = "AT+CMGL=\"ALL\"\r";
+"33
+[v _smscap `Cuc ~T0 @X0 -> 0 `x e ]
+[i _smscap
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 77 `c
+-> 71 `c
+-> 76 `c
+-> 61 `c
+-> 63 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 33: const uint8_t smscap[] = "AT+CMGL=?\r";
+"34
+[v _smstxt `Cuc ~T0 @X0 -> 0 `x e ]
+[i _smstxt
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 77 `c
+-> 71 `c
+-> 70 `c
+-> 61 `c
+-> 49 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 34: const uint8_t smstxt[] = "AT+CMGF=1\r";
+"35
+[v _engqry `Cuc ~T0 @X0 -> 0 `x e ]
+[i _engqry
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 69 `c
+-> 69 `c
+-> 82 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 35: const uint8_t engqry[] = "AT+AT+CEER\r";
+"36
+[v _engfmt `Cuc ~T0 @X0 -> 0 `x e ]
+[i _engfmt
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 69 `c
+-> 78 `c
+-> 71 `c
+-> 61 `c
+-> 63 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 36: const uint8_t engfmt[] = "AT+CENG=?";
+"37
+[v _engwrt `Cuc ~T0 @X0 -> 0 `x e ]
+[i _engwrt
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 69 `c
+-> 78 `c
+-> 71 `c
+-> 63 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 37: const uint8_t engwrt[] = "AT+CENG?";
+"38
+[v _noecho `Cuc ~T0 @X0 -> 0 `x e ]
+[i _noecho
+:U ..
+-> 65 `c
+-> 84 `c
+-> 69 `c
+-> 48 `c
+-> 59 `c
+-> 86 `c
+-> 48 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 38: const uint8_t noecho[] = "ATE0;V0\r";
+"39
+[v _usdtst `Cuc ~T0 @X0 -> 0 `x e ]
+[i _usdtst
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 61 `c
+-> 63 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 39: const uint8_t usdtst[] = "AT+CUSD=?\r";
+"40
+[v _ussdrd `Cuc ~T0 @X0 -> 0 `x e ]
+[i _ussdrd
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 63 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 40: const uint8_t ussdrd[] = "AT+CUSD?\r";
+"41
+[v _ussdwe `Cuc ~T0 @X0 -> 0 `x e ]
+[i _ussdwe
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 61 `c
+-> 49 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 41: const uint8_t ussdwe[] = "AT+CUSD=1\r";
+"42
+[v _ussdwc `Cuc ~T0 @X0 -> 0 `x e ]
+[i _ussdwc
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 61 `c
+-> 50 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 42: const uint8_t ussdwc[] = "AT+CUSD=2\r";
+"43
+[v _ussdwv `Cuc ~T0 @X0 -> 0 `x e ]
+[i _ussdwv
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 61 `c
+-> 49 `c
+-> 44 `c
+-> 34 `c
+-> 42 `c
+-> 49 `c
+-> 51 `c
+-> 53 `c
+-> 42 `c
+-> 53 `c
+-> 48 `c
+-> 48 `c
+-> 35 `c
+-> 34 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 43: const uint8_t ussdwv[] = "AT+CUSD=1,\"*135*500#\"\r";
+"44
+[v _ussdwm `Cuc ~T0 @X0 -> 0 `x e ]
+[i _ussdwm
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 61 `c
+-> 49 `c
+-> 44 `c
+-> 34 `c
+-> 42 `c
+-> 49 `c
+-> 51 `c
+-> 54 `c
+-> 35 `c
+-> 34 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 44: const uint8_t ussdwm[] = "AT+CUSD=1,\"*136#\"\r";
+"45
+[v _ussdw2 `Cuc ~T0 @X0 -> 0 `x e ]
+[i _ussdw2
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 61 `c
+-> 49 `c
+-> 44 `c
+-> 34 `c
+-> 42 `c
+-> 49 `c
+-> 51 `c
+-> 54 `c
+-> 35 `c
+-> 34 `c
+-> 44 `c
+-> 50 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 45: const uint8_t ussdw2[] = "AT+CUSD=1,\"*136#\",2\r";
+"46
+[v _setgsm `Cuc ~T0 @X0 -> 0 `x e ]
+[i _setgsm
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 83 `c
+-> 67 `c
+-> 83 `c
+-> 61 `c
+-> 34 `c
+-> 71 `c
+-> 83 `c
+-> 77 `c
+-> 34 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 46: const uint8_t setgsm[] = "AT+CSCS=\"GSM\"\r";
+"47
+[v _airtim `Cuc ~T0 @X0 -> 0 `x e ]
+[i _airtim
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 32 `c
+-> 61 `c
+-> 49 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 47: const uint8_t airtim[] = "AT+CUSD =1\r";
+"48
+[v _prodid `Cuc ~T0 @X0 -> 0 `x e ]
+[i _prodid
+:U ..
+-> 65 `c
+-> 84 `c
+-> 73 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 48: const uint8_t prodid[] = "ATI\r";
+"49
+[v _dconfg `Cuc ~T0 @X0 -> 0 `x e ]
+[i _dconfg
+:U ..
+-> 65 `c
+-> 84 `c
+-> 38 `c
+-> 86 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 49: const uint8_t dconfg[] = "AT&V\r";
+"50
+[v _ownnum `Cuc ~T0 @X0 -> 0 `x e ]
+[i _ownnum
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 78 `c
+-> 85 `c
+-> 77 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 50: const uint8_t ownnum[] = "AT+CNUM\r";
+"51
+[v _clockr `Cuc ~T0 @X0 -> 0 `x e ]
+[i _clockr
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 67 `c
+-> 76 `c
+-> 75 `c
+-> 63 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 51: const uint8_t clockr[] = "AT+CCLK?\r";
+"52
+[v _clockw `Cuc ~T0 @X0 -> 0 `x e ]
+[i _clockw
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 67 `c
+-> 76 `c
+-> 75 `c
+-> 61 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 52: const uint8_t clockw[] = "AT+CCLK=";
+"53
+[v _pwrsta `Cuc ~T0 @X0 -> 0 `x e ]
+[i _pwrsta
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 66 `c
+-> 67 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 53: const uint8_t pwrsta[] = "AT+CBC\r";
+"54
+[v _loctim `Cuc ~T0 @X0 -> 0 `x e ]
+[i _loctim
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 73 `c
+-> 80 `c
+-> 71 `c
+-> 83 `c
+-> 77 `c
+-> 76 `c
+-> 79 `c
+-> 67 `c
+-> 61 `c
+-> 50 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 54: const uint8_t loctim[] = "AT+CIPGSMLOC=2\r";
+"55
+[v _nettst `Cuc ~T0 @X0 -> 0 `x e ]
+[i _nettst
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 76 `c
+-> 84 `c
+-> 83 `c
+-> 61 `c
+-> 49 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 55: const uint8_t nettst[] = "AT+CLTS=1\r";
+"56
+[v _netoff `Cuc ~T0 @X0 -> 0 `x e ]
+[i _netoff
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 76 `c
+-> 84 `c
+-> 83 `c
+-> 61 `c
+-> 48 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 56: const uint8_t netoff[] = "AT+CLTS=0\r";
+"57
+[v _baudra `Cuc ~T0 @X0 -> 0 `x e ]
+[i _baudra
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 73 `c
+-> 80 `c
+-> 82 `c
+-> 61 `c
+-> 49 `c
+-> 57 `c
+-> 50 `c
+-> 48 `c
+-> 48 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 57: const uint8_t baudra[] = "AT+IPR=19200\r";
+"58
+[v _facres `Cuc ~T0 @X0 -> 0 `x e ]
+[i _facres
+:U ..
+-> 65 `c
+-> 84 `c
+-> 38 `c
+-> 70 `c
+-> 48 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 58: const uint8_t facres[] = "AT&F0\r";
+"70
+[v _gsmflags `S1383 ~T0 @X0 1 e ]
+[; ;gsm.h: 60: struct
+[; ;gsm.h: 61: {
+[; ;gsm.h: 62: unsigned retransmit : 1;
+[; ;gsm.h: 63: unsigned meerror : 1;
+[; ;gsm.h: 64: unsigned mtn : 1;
+[; ;gsm.h: 65: unsigned msgavl : 1;
+[; ;gsm.h: 66: unsigned spare4 : 1;
+[; ;gsm.h: 67: unsigned spare5 : 1;
+[; ;gsm.h: 68: unsigned spare6 : 1;
+[; ;gsm.h: 69: unsigned spare7 : 1;
+[; ;gsm.h: 70: } gsmflags;
+[; ;gsm.h: 72: void gsm_zerobuff(uint8_t* gsmsgbuf, uint16_t count );
+[; ;gsm.h: 74: void gsm_waitx(void);
+[; ;gsm.h: 76: void gsm_waitr(void);
+[; ;gsm.h: 78: void gsm_transmit(uint8_t txbyte);
+[; ;gsm.h: 80: void gsm_gettime(void);
+[; ;gsm.h: 82: void gsm_getbalance(void);
+[; ;gsm.h: 84: void gsm_setime(void);
+[; ;gsm.h: 86: void parse_date_time(void);
+[; ;gsm.h: 88: uint8_t gsm_unsolic(void);
+[; ;gsm.h: 90: void clock_display(void);
+[; ;gsm.h: 92: void gsm_receive(uint8_t noofline, uint8_t *messagebuf);
+[; ;gsm.h: 94: void gsm_msg(uint8_t *msgadd);
+[; ;gsm.h: 96: void gsm_init(void);
+[; ;gsm.h: 98: void gsm_txAT(void);
+[; ;gsm.h: 100: void gsm_on(void);
+[; ;gsm.h: 102: uint8_t gsm_Read(void);
+[; ;gsm.h: 104: void gsm_off(void);
+[; ;gsm.h: 106: void gsm_netwait(void);
+[; ;gsm.h: 108: uint8_t EUSARTG_Read(void);
 "10 gsm.c
 [v _gsm_waitx `(v ~T0 @X0 1 ef ]
 "11
@@ -13654,23 +14429,26 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;gsm.c: 11: {
 [e :U _gsm_waitx ]
 [f ]
-[; ;gsm.c: 12: while(0 == PIR3bits.TX2IF)
+[; ;gsm.c: 12: TX2STAbits.TXEN = 1;
 "12
-[e $U 1384  ]
-[e :U 1385 ]
-[; ;gsm.c: 13: {
+[e = . . _TX2STAbits 0 5 -> -> 1 `i `uc ]
+[; ;gsm.c: 13: while(!PIR3bits.TX2IF)
 "13
+[e $U 1385  ]
+[e :U 1386 ]
+[; ;gsm.c: 14: {
+"14
 {
 "15
 }
-[e :U 1384 ]
-"12
-[e $ == -> 0 `i -> . . _PIR3bits 0 6 `i 1385  ]
-[e :U 1386 ]
+[e :U 1385 ]
+"13
+[e $ ! != -> . . _PIR3bits 0 6 `i -> -> -> 0 `i `Vuc `i 1386  ]
+[e :U 1387 ]
 [; ;gsm.c: 15: }
 [; ;gsm.c: 16: }
 "16
-[e :UE 1383 ]
+[e :UE 1384 ]
 }
 "18
 [v _gsm_waitr `(v ~T0 @X0 1 ef ]
@@ -13682,21 +14460,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 [; ;gsm.c: 20: while(!PIR3bits.RC2IF)
 "20
-[e $U 1388  ]
-[e :U 1389 ]
+[e $U 1389  ]
+[e :U 1390 ]
 [; ;gsm.c: 21: {
 "21
 {
 "23
 }
-[e :U 1388 ]
+[e :U 1389 ]
 "20
-[e $ ! != -> . . _PIR3bits 0 7 `i -> -> -> 0 `i `Vuc `i 1389  ]
-[e :U 1390 ]
+[e $ ! != -> . . _PIR3bits 0 7 `i -> -> -> 0 `i `Vuc `i 1390  ]
+[e :U 1391 ]
 [; ;gsm.c: 23: }
 [; ;gsm.c: 24: }
 "24
-[e :UE 1387 ]
+[e :UE 1388 ]
 }
 "26
 [v _gsm_transmit `(v ~T0 @X0 1 ef1`uc ]
@@ -13709,104 +14487,1290 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _txbyte `uc ~T0 @X0 1 r1 ]
 "27
 [f ]
-[; ;gsm.c: 28: EUSART2_Write(txbyte);
+[; ;gsm.c: 28: TX2STAbits.TXEN = 1;
 "28
-[e ( _EUSART2_Write (1 _txbyte ]
-[; ;gsm.c: 29: gsm_waitx();
+[e = . . _TX2STAbits 0 5 -> -> 1 `i `uc ]
+[; ;gsm.c: 29: EUSART2_Write(txbyte);
 "29
-[e ( _gsm_waitx ..  ]
-[; ;gsm.c: 30: }
+[e ( _EUSART2_Write (1 _txbyte ]
+[; ;gsm.c: 30: while(!TX2STAbits.TRMT){}
 "30
-[e :UE 1391 ]
-}
-"32
-[v _gsm_init `(v ~T0 @X0 1 ef ]
-"33
-{
-[; ;gsm.c: 32: void gsm_init(void)
-[; ;gsm.c: 33: {
-[e :U _gsm_init ]
-[f ]
-[; ;gsm.c: 34: gsm_on();
-"34
-[e ( _gsm_on ..  ]
-[; ;gsm.c: 35: while(!PIR3bits.RC2IF)
-"35
 [e $U 1393  ]
 [e :U 1394 ]
-[; ;gsm.c: 36: {
-"36
 {
-[; ;gsm.c: 37: gsm_txAT();
-"37
-[e ( _gsm_txAT ..  ]
-[; ;gsm.c: 38: _delay((unsigned long)((10)*(12000000/4000.0)));
-"38
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
-"39
 }
 [e :U 1393 ]
-"35
-[e $ ! != -> . . _PIR3bits 0 7 `i -> -> -> 0 `i `Vuc `i 1394  ]
+[e $ ! != -> . . _TX2STAbits 0 1 `i -> -> -> 0 `i `Vuc `i 1394  ]
 [e :U 1395 ]
-[; ;gsm.c: 39: }
-[; ;gsm.c: 40: gsmbyte = EUSART2_Read();
-"40
-[e = _gsmbyte ( _EUSART2_Read ..  ]
-[; ;gsm.c: 42: asm("nop");
-"42
-[; <" nop ;# ">
-[; ;gsm.c: 43: }
-"43
+[; ;gsm.c: 31: }
+"31
 [e :UE 1392 ]
 }
-"45
-[v _gsm_txAT `(v ~T0 @X0 1 ef ]
-"46
+"33
+[v _gsm_zerobuff `(v ~T0 @X0 1 ef2`*uc`ui ]
+"34
 {
-[; ;gsm.c: 45: void gsm_txAT(void)
-[; ;gsm.c: 46: {
-[e :U _gsm_txAT ]
+[; ;gsm.c: 33: void gsm_zerobuff(uint8_t* gsmsgbuf, uint16_t count )
+[; ;gsm.c: 34: {
+[e :U _gsm_zerobuff ]
+"33
+[v _gsmsgbuf `*uc ~T0 @X0 1 r1 ]
+[v _count `ui ~T0 @X0 1 r2 ]
+"34
 [f ]
-[; ;gsm.c: 47: gsm_transmit('A');
-"47
-[e ( _gsm_transmit (1 -> -> 65 `ui `uc ]
-[; ;gsm.c: 48: gsm_transmit('T');
-"48
-[e ( _gsm_transmit (1 -> -> 84 `ui `uc ]
-[; ;gsm.c: 49: }
-"49
+"35
+[v _x `ui ~T0 @X0 1 a ]
+[; ;gsm.c: 35: uint16_t x = 0;
+[e = _x -> -> 0 `i `ui ]
+[; ;gsm.c: 36: while(x < count)
+"36
+[e $U 1397  ]
+[e :U 1398 ]
+[; ;gsm.c: 37: {
+"37
+{
+[; ;gsm.c: 38: gsmsgbuf[x] = 0x00;
+"38
+[e = *U + _gsmsgbuf * -> _x `ux -> -> # *U _gsmsgbuf `ui `ux -> -> 0 `i `uc ]
+[; ;gsm.c: 39: x++;
+"39
+[e ++ _x -> -> 1 `i `ui ]
+"40
+}
+[e :U 1397 ]
+"36
+[e $ < _x _count 1398  ]
+[e :U 1399 ]
+[; ;gsm.c: 40: }
+[; ;gsm.c: 42: }
+"42
 [e :UE 1396 ]
 }
-"51
-[v _gsm_on `(v ~T0 @X0 1 ef ]
-"52
+"44
+[v _gsm_msg `(v ~T0 @X0 1 ef1`*uc ]
+"45
 {
-[; ;gsm.c: 51: void gsm_on(void)
+[; ;gsm.c: 44: void gsm_msg(uint8_t *msgadd)
+[; ;gsm.c: 45: {
+[e :U _gsm_msg ]
+"44
+[v _msgadd `*uc ~T0 @X0 1 r1 ]
+"45
+[f ]
+"46
+[v _msgbkup `um ~T0 @X0 1 a ]
+[; ;gsm.c: 46: uint24_t msgbkup = msgadd;
+[e = _msgbkup -> _msgadd `um ]
+[; ;gsm.c: 47: retrans:
+"47
+[e :U 1401 ]
+[; ;gsm.c: 48: msgadd = msgbkup;
+"48
+[e = _msgadd -> _msgbkup `*uc ]
+[; ;gsm.c: 49: gsmflags.retransmit = 0;
+"49
+[e = . _gsmflags 0 -> -> 0 `i `uc ]
+[; ;gsm.c: 51: for(uint8_t gsmstr = 0; msgadd[gsmstr] != 0x00; gsmstr++)
+"51
+{
+[v _gsmstr `uc ~T0 @X0 1 a ]
+[e = _gsmstr -> -> 0 `i `uc ]
+[e $U 1405  ]
+"52
+[e :U 1402 ]
 [; ;gsm.c: 52: {
+{
+[; ;gsm.c: 53: gsmbyte = msgadd[gsmstr];
+"53
+[e = _gsmbyte *U + _msgadd * -> _gsmstr `ux -> -> # *U _msgadd `ui `ux ]
+[; ;gsm.c: 54: gsm_transmit(gsmbyte);
+"54
+[e ( _gsm_transmit (1 _gsmbyte ]
+"55
+}
+"51
+[e ++ _gsmstr -> -> 1 `i `uc ]
+[e :U 1405 ]
+[e $ != -> *U + _msgadd * -> _gsmstr `ux -> -> # *U _msgadd `ui `ux `i -> 0 `i 1402  ]
+[e :U 1403 ]
+"55
+}
+[; ;gsm.c: 55: }
+[; ;gsm.c: 56: if(gsmflags.retransmit)
+"56
+[e $ ! != -> . _gsmflags 0 `i -> -> -> 0 `i `uc `i 1406  ]
+[; ;gsm.c: 57: {
+"57
+{
+[; ;gsm.c: 58: goto retrans;
+"58
+[e $U 1401  ]
+"59
+}
+[e :U 1406 ]
+[; ;gsm.c: 59: }
+[; ;gsm.c: 61: }
+"61
+[e :UE 1400 ]
+}
+"64
+[v _gsm_init `(v ~T0 @X0 1 ef ]
+"65
+{
+[; ;gsm.c: 64: void gsm_init(void)
+[; ;gsm.c: 65: {
+[e :U _gsm_init ]
+[f ]
+[; ;gsm.c: 66: PIE3bits.RC2IE =1;
+"66
+[e = . . _PIE3bits 0 7 -> -> 1 `i `uc ]
+[; ;gsm.c: 67: gsmflags.meerror = 0;
+"67
+[e = . _gsmflags 1 -> -> 0 `i `uc ]
+[; ;gsm.c: 68: eusart2RxCount = 512;
+"68
+[e = _eusart2RxCount -> -> 512 `i `uc ]
+[; ;gsm.c: 69: gsminit:
+"69
+[e :U 1408 ]
+[; ;gsm.c: 71: gsm_zerobuff(gsmmsg, 0x200);
+"71
+[e ( _gsm_zerobuff (2 , &U _gsmmsg -> -> 512 `i `ui ]
+[; ;gsm.c: 73: while(!PIR4bits.TMR4IF)
+"73
+[e $U 1409  ]
+[e :U 1410 ]
+[; ;gsm.c: 74: {
+"74
+{
+"76
+}
+[e :U 1409 ]
+"73
+[e $ ! != -> . . _PIR4bits 0 3 `i -> -> -> 0 `i `Vuc `i 1410  ]
+[e :U 1411 ]
+[; ;gsm.c: 76: }
+[; ;gsm.c: 80: gsm_txAT();
+"80
+[e ( _gsm_txAT ..  ]
+[; ;gsm.c: 81: gsm_transmit(0x0D);
+"81
+[e ( _gsm_transmit (1 -> -> 13 `i `uc ]
+[; ;gsm.c: 83: gsm_receive(2, gsmmsg);
+"83
+[e ( _gsm_receive (2 , -> -> 2 `i `uc &U _gsmmsg ]
+[; ;gsm.c: 84: gsm_msg(noecho);
+"84
+[e ( _gsm_msg (1 -> &U _noecho `*uc ]
+[; ;gsm.c: 85: gsm_receive(1, gsmmsg);
+"85
+[e ( _gsm_receive (2 , -> -> 1 `i `uc &U _gsmmsg ]
+[; ;gsm.c: 86: gsm_netwait();
+"86
+[e ( _gsm_netwait ..  ]
+[; ;gsm.c: 88: if(gsmflags.meerror)
+"88
+[e $ ! != -> . _gsmflags 1 `i -> -> -> 0 `i `uc `i 1412  ]
+[; ;gsm.c: 89: {
+"89
+{
+[; ;gsm.c: 90: LATCbits.LC3 = 0;
+"90
+[e = . . _LATCbits 1 3 -> -> 0 `i `uc ]
+[; ;gsm.c: 91: _delay((unsigned long)((2000)*(64000000/4000.0)));
+"91
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;gsm.c: 92: gsm_on();
+"92
+[e ( _gsm_on ..  ]
+[; ;gsm.c: 93: goto gsminit;
+"93
+[e $U 1408  ]
+"94
+}
+[e :U 1412 ]
+[; ;gsm.c: 94: }
+[; ;gsm.c: 103: gsm_setime();
+"103
+[e ( _gsm_setime ..  ]
+[; ;gsm.c: 104: if(gsmflags.meerror)
+"104
+[e $ ! != -> . _gsmflags 1 `i -> -> -> 0 `i `uc `i 1413  ]
+[; ;gsm.c: 105: {
+"105
+{
+[; ;gsm.c: 106: LATCbits.LC3 = 0;
+"106
+[e = . . _LATCbits 1 3 -> -> 0 `i `uc ]
+[; ;gsm.c: 107: _delay((unsigned long)((2000)*(64000000/4000.0)));
+"107
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;gsm.c: 108: gsm_on();
+"108
+[e ( _gsm_on ..  ]
+[; ;gsm.c: 109: goto gsminit;
+"109
+[e $U 1408  ]
+"110
+}
+[e :U 1413 ]
+[; ;gsm.c: 110: }
+[; ;gsm.c: 114: gsm_getbalance();
+"114
+[e ( _gsm_getbalance ..  ]
+[; ;gsm.c: 119: clock_display();
+"119
+[e ( _clock_display ..  ]
+[; ;gsm.c: 122: gsm_msg(smstxt);
+"122
+[e ( _gsm_msg (1 -> &U _smstxt `*uc ]
+[; ;gsm.c: 123: gsm_receive(2, gsmmsg);
+"123
+[e ( _gsm_receive (2 , -> -> 2 `i `uc &U _gsmmsg ]
+[; ;gsm.c: 125: gsm_msg(smsdel);
+"125
+[e ( _gsm_msg (1 -> &U _smsdel `*uc ]
+[; ;gsm.c: 126: gsm_receive(1, gsmmsg);
+"126
+[e ( _gsm_receive (2 , -> -> 1 `i `uc &U _gsmmsg ]
+[; ;gsm.c: 128: gsm_msg(setgsm);
+"128
+[e ( _gsm_msg (1 -> &U _setgsm `*uc ]
+[; ;gsm.c: 129: gsm_receive(1,gsmmsg);
+"129
+[e ( _gsm_receive (2 , -> -> 1 `i `uc &U _gsmmsg ]
+[; ;gsm.c: 131: gsm_msg(ussdw2);
+"131
+[e ( _gsm_msg (1 -> &U _ussdw2 `*uc ]
+[; ;gsm.c: 132: gsm_receive(2, gsmmsg);
+"132
+[e ( _gsm_receive (2 , -> -> 2 `i `uc &U _gsmmsg ]
+[; ;gsm.c: 134: gsm_msg(engqry);
+"134
+[e ( _gsm_msg (1 -> &U _engqry `*uc ]
+[; ;gsm.c: 135: gsm_receive(2, gsmmsg);
+"135
+[e ( _gsm_receive (2 , -> -> 2 `i `uc &U _gsmmsg ]
+[; ;gsm.c: 137: gsm_msg(netoff);
+"137
+[e ( _gsm_msg (1 -> &U _netoff `*uc ]
+[; ;gsm.c: 138: gsm_receive(2, gsmmsg);
+"138
+[e ( _gsm_receive (2 , -> -> 2 `i `uc &U _gsmmsg ]
+[; ;gsm.c: 140: gsm_msg(facres);
+"140
+[e ( _gsm_msg (1 -> &U _facres `*uc ]
+[; ;gsm.c: 141: gsm_receive(1, gsmmsg);
+"141
+[e ( _gsm_receive (2 , -> -> 1 `i `uc &U _gsmmsg ]
+[; ;gsm.c: 142: asm("nop");
+"142
+[; <" nop ;# ">
+[; ;gsm.c: 143: }
+"143
+[e :UE 1407 ]
+}
+"145
+[v _clock_display `(v ~T0 @X0 1 ef ]
+"146
+{
+[; ;gsm.c: 145: void clock_display(void)
+[; ;gsm.c: 146: {
+[e :U _clock_display ]
+[f ]
+[; ;gsm.c: 147: INTCONbits.PEIE = 0;
+"147
+[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
+[; ;gsm.c: 148: PIE3bits.RC2IE =1;
+"148
+[e = . . _PIE3bits 0 7 -> -> 1 `i `uc ]
+[; ;gsm.c: 149: dispclka:
+"149
+[e :U 1415 ]
+[; ;gsm.c: 150: TMR2_Initialize();
+"150
+[e ( _TMR2_Initialize ..  ]
+[; ;gsm.c: 151: T2CONbits.TMR2ON = 1;
+"151
+[e = . . _T2CONbits 3 7 -> -> 1 `i `uc ]
+[; ;gsm.c: 152: gsm_gettime();
+"152
+[e ( _gsm_gettime ..  ]
+[; ;gsm.c: 153: disp_clock();
+"153
+[e ( _disp_clock ..  ]
+[; ;gsm.c: 154: INTCONbits.PEIE = 1;
+"154
+[e = . . _INTCONbits 1 1 -> -> 1 `i `uc ]
+[; ;gsm.c: 155: gsmflags.msgavl = 0;
+"155
+[e = . _gsmflags 3 -> -> 0 `i `uc ]
+[; ;gsm.c: 156: while(!PIR4bits.TMR2IF)
+"156
+[e $U 1416  ]
+[e :U 1417 ]
+[; ;gsm.c: 157: {
+"157
+{
+[; ;gsm.c: 158: if(PIR3bits.RC2IF)
+"158
+[e $ ! != -> . . _PIR3bits 0 7 `i -> -> -> 0 `i `Vuc `i 1419  ]
+[; ;gsm.c: 159: {
+"159
+{
+[; ;gsm.c: 160: gsm_receive(1, gsmusm);
+"160
+[e ( _gsm_receive (2 , -> -> 1 `i `uc &U _gsmusm ]
+[; ;gsm.c: 161: gsmflags.msgavl = 1;
+"161
+[e = . _gsmflags 3 -> -> 1 `i `uc ]
+"162
+}
+[e :U 1419 ]
+"163
+}
+[e :U 1416 ]
+"156
+[e $ ! != -> . . _PIR4bits 0 1 `i -> -> -> 0 `i `Vuc `i 1417  ]
+[e :U 1418 ]
+[; ;gsm.c: 162: }
+[; ;gsm.c: 163: }
+[; ;gsm.c: 164: if(eusart2RxHead != 0x00 )
+"164
+[e $ ! != -> _eusart2RxHead `i -> 0 `i 1420  ]
+[; ;gsm.c: 165: {
+"165
+{
+[; ;gsm.c: 166: asm("nop");
+"166
+[; <" nop ;# ">
+"167
+}
+[e :U 1420 ]
+[; ;gsm.c: 167: }
+[; ;gsm.c: 168: INTCONbits.PEIE = 0;
+"168
+[e = . . _INTCONbits 1 1 -> -> 0 `i `uc ]
+[; ;gsm.c: 174: goto dispclka;
+"174
+[e $U 1415  ]
+[; ;gsm.c: 175: }
+"175
+[e :UE 1414 ]
+}
+"177
+[v _parse_date_time `(v ~T0 @X0 1 ef ]
+"178
+{
+[; ;gsm.c: 177: void parse_date_time(void)
+[; ;gsm.c: 178: {
+[e :U _parse_date_time ]
+[f ]
+[; ;gsm.c: 179: gsm_zerobuff(gsdate, 0x014);
+"179
+[e ( _gsm_zerobuff (2 , &U _gsdate -> -> 20 `i `ui ]
+[; ;gsm.c: 180: gsm_zerobuff(gstime, 0x014);
+"180
+[e ( _gsm_zerobuff (2 , &U _gstime -> -> 20 `i `ui ]
+"181
+[v _x `uc ~T0 @X0 1 a ]
+[; ;gsm.c: 181: uint8_t x = 8;
+[e = _x -> -> 8 `i `uc ]
+"182
+[v _i `uc ~T0 @X0 1 a ]
+[; ;gsm.c: 182: uint8_t i = 0x07;
+[e = _i -> -> 7 `i `uc ]
+[; ;gsm.c: 183: gsmbyte = gsmmsg[27];
+"183
+[e = _gsmbyte *U + &U _gsmmsg * -> -> -> 27 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux ]
+[; ;gsm.c: 184: gsmbyte = gsmbyte & 0x0F;
+"184
+[e = _gsmbyte -> & -> _gsmbyte `i -> 15 `i `uc ]
+[; ;gsm.c: 185: gsmbyte = gsmbyte/4;
+"185
+[e = _gsmbyte -> / -> _gsmbyte `i -> 4 `i `uc ]
+"186
+[v _hour `uc ~T0 @X0 1 a ]
+[; ;gsm.c: 186: uint8_t hour = (gsmmsg[18] & 0x0F) + gsmbyte;
+[e = _hour -> + & -> *U + &U _gsmmsg * -> -> -> 18 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux `i -> 15 `i -> _gsmbyte `i `uc ]
+"187
+[v _hhour `uc ~T0 @X0 1 a ]
+[; ;gsm.c: 187: uint8_t hhour = gsmmsg[17] & 0x0F;
+[e = _hhour -> & -> *U + &U _gsmmsg * -> -> -> 17 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux `i -> 15 `i `uc ]
+[; ;gsm.c: 188: if(hour > 9)
+"188
+[e $ ! > -> _hour `i -> 9 `i 1422  ]
+[; ;gsm.c: 189: {
+"189
+{
+[; ;gsm.c: 190: gsmmsg[18] = 0x30;
+"190
+[e = *U + &U _gsmmsg * -> -> -> 18 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux -> -> 48 `i `uc ]
+[; ;gsm.c: 191: gsmmsg[17]++;
+"191
+[e ++ *U + &U _gsmmsg * -> -> -> 17 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux -> -> 1 `i `uc ]
+[; ;gsm.c: 192: if(gsmmsg[17] > 0x32)
+"192
+[e $ ! > -> *U + &U _gsmmsg * -> -> -> 17 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux `i -> 50 `i 1423  ]
+[; ;gsm.c: 193: {
+"193
+{
+[; ;gsm.c: 194: gsmmsg[17] = 0x30;
+"194
+[e = *U + &U _gsmmsg * -> -> -> 17 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux -> -> 48 `i `uc ]
+"195
+}
+[e :U 1423 ]
+[; ;gsm.c: 195: }
+[; ;gsm.c: 196: while(hour > 0x0A)
+"196
+[e $U 1424  ]
+[e :U 1425 ]
+[; ;gsm.c: 197: {
+"197
+{
+[; ;gsm.c: 198: hour--;
+"198
+[e -- _hour -> -> 1 `i `uc ]
+[; ;gsm.c: 199: gsmmsg[18]++;
+"199
+[e ++ *U + &U _gsmmsg * -> -> -> 18 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux -> -> 1 `i `uc ]
+"200
+}
+[e :U 1424 ]
+"196
+[e $ > -> _hour `i -> 10 `i 1425  ]
+[e :U 1426 ]
+"201
+}
+[; ;gsm.c: 200: }
+[; ;gsm.c: 201: }
+[e $U 1427  ]
+"202
+[e :U 1422 ]
+[; ;gsm.c: 202: else
+[; ;gsm.c: 203: {
+"203
+{
+[; ;gsm.c: 204: gsmmsg[18] = hour | 0x30;
+"204
+[e = *U + &U _gsmmsg * -> -> -> 18 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux -> | -> _hour `i -> 48 `i `uc ]
+"205
+}
+[e :U 1427 ]
+[; ;gsm.c: 205: }
+[; ;gsm.c: 206: while(x < 0x10)
+"206
+[e $U 1428  ]
+[e :U 1429 ]
+[; ;gsm.c: 207: {
+"207
+{
+[; ;gsm.c: 208: gsdate[i - 1] = gsmmsg[x++];
+"208
+[e = *U + &U _gsdate * -> -> - -> _i `i -> 1 `i `ui `ux -> -> # *U &U _gsdate `ui `ux *U + &U _gsmmsg * -> ++ _x -> -> 1 `i `uc `ux -> -> # *U &U _gsmmsg `ui `ux ]
+[; ;gsm.c: 209: gsdate[i--] = gsmmsg[x++];
+"209
+[e = *U + &U _gsdate * -> -- _i -> -> 1 `i `uc `ux -> -> # *U &U _gsdate `ui `ux *U + &U _gsmmsg * -> ++ _x -> -> 1 `i `uc `ux -> -> # *U &U _gsmmsg `ui `ux ]
+[; ;gsm.c: 210: gsdate[--i] = gsmmsg[x++];
+"210
+[e = *U + &U _gsdate * -> =- _i -> -> 1 `i `uc `ux -> -> # *U &U _gsdate `ui `ux *U + &U _gsmmsg * -> ++ _x -> -> 1 `i `uc `ux -> -> # *U &U _gsmmsg `ui `ux ]
+[; ;gsm.c: 211: i--;
+"211
+[e -- _i -> -> 1 `i `uc ]
+"212
+}
+[e :U 1428 ]
+"206
+[e $ < -> _x `i -> 16 `i 1429  ]
+[e :U 1430 ]
+[; ;gsm.c: 212: }
+[; ;gsm.c: 213: i = 0;
+"213
+[e = _i -> -> 0 `i `uc ]
+[; ;gsm.c: 214: while(i < 0x08)
+"214
+[e $U 1431  ]
+[e :U 1432 ]
+[; ;gsm.c: 215: {
+"215
+{
+[; ;gsm.c: 216: gstime[i++] = gsmmsg[x++];
+"216
+[e = *U + &U _gstime * -> ++ _i -> -> 1 `i `uc `ux -> -> # *U &U _gstime `ui `ux *U + &U _gsmmsg * -> ++ _x -> -> 1 `i `uc `ux -> -> # *U &U _gsmmsg `ui `ux ]
+"217
+}
+[e :U 1431 ]
+"214
+[e $ < -> _i `i -> 8 `i 1432  ]
+[e :U 1433 ]
+[; ;gsm.c: 217: }
+[; ;gsm.c: 218: }
+"218
+[e :UE 1421 ]
+}
+"220
+[v _gsm_gettime `(v ~T0 @X0 1 ef ]
+"221
+{
+[; ;gsm.c: 220: void gsm_gettime(void)
+[; ;gsm.c: 221: {
+[e :U _gsm_gettime ]
+[f ]
+[; ;gsm.c: 222: gsm_msg(clockr);
+"222
+[e ( _gsm_msg (1 -> &U _clockr `*uc ]
+[; ;gsm.c: 224: gsm_receive(2,gsmmsg);
+"224
+[e ( _gsm_receive (2 , -> -> 2 `i `uc &U _gsmmsg ]
+[; ;gsm.c: 225: parse_date_time();
+"225
+[e ( _parse_date_time ..  ]
+[; ;gsm.c: 226: }
+"226
+[e :UE 1434 ]
+}
+"228
+[v _gsm_getbalance `(v ~T0 @X0 1 ef ]
+"229
+{
+[; ;gsm.c: 228: void gsm_getbalance(void)
+[; ;gsm.c: 229: {
+[e :U _gsm_getbalance ]
+[f ]
+[; ;gsm.c: 230: gsm_msg(setgsm);
+"230
+[e ( _gsm_msg (1 -> &U _setgsm `*uc ]
+[; ;gsm.c: 231: gsm_receive(1,gsmmsg);
+"231
+[e ( _gsm_receive (2 , -> -> 1 `i `uc &U _gsmmsg ]
+[; ;gsm.c: 232: if(gsmflags.mtn)
+"232
+[e $ ! != -> . _gsmflags 2 `i -> -> -> 0 `i `uc `i 1436  ]
+[; ;gsm.c: 233: {
+"233
+{
+[; ;gsm.c: 234: gsm_msg(ussdwm);
+"234
+[e ( _gsm_msg (1 -> &U _ussdwm `*uc ]
+[; ;gsm.c: 235: gsm_receive(11,gsmmsg);
+"235
+[e ( _gsm_receive (2 , -> -> 11 `i `uc &U _gsmmsg ]
+"236
+}
+[; ;gsm.c: 236: }
+[e $U 1437  ]
+"237
+[e :U 1436 ]
+[; ;gsm.c: 237: else
+[; ;gsm.c: 238: {
+"238
+{
+[; ;gsm.c: 239: gsm_msg(ussdwv);
+"239
+[e ( _gsm_msg (1 -> &U _ussdwv `*uc ]
+[; ;gsm.c: 240: gsm_receive(3,gsmmsg);
+"240
+[e ( _gsm_receive (2 , -> -> 3 `i `uc &U _gsmmsg ]
+"241
+}
+[e :U 1437 ]
+[; ;gsm.c: 241: }
+[; ;gsm.c: 242: gsm_msg(ussdwc);
+"242
+[e ( _gsm_msg (1 -> &U _ussdwc `*uc ]
+[; ;gsm.c: 243: gsm_receive(1,gsmmsg);
+"243
+[e ( _gsm_receive (2 , -> -> 1 `i `uc &U _gsmmsg ]
+[; ;gsm.c: 244: }
+"244
+[e :UE 1435 ]
+}
+"246
+[v _gsm_setime `(v ~T0 @X0 1 ef ]
+"247
+{
+[; ;gsm.c: 246: void gsm_setime(void)
+[; ;gsm.c: 247: {
+[e :U _gsm_setime ]
+[f ]
+[; ;gsm.c: 248: gsm_zerobuff(gsmmsg, 0x200);
+"248
+[e ( _gsm_zerobuff (2 , &U _gsmmsg -> -> 512 `i `ui ]
+[; ;gsm.c: 249: gsm_msg(nettst);
+"249
+[e ( _gsm_msg (1 -> &U _nettst `*uc ]
+[; ;gsm.c: 251: retry:
+"251
+[e :U 1439 ]
+[; ;gsm.c: 252: gsmbyte = 0;
+"252
+[e = _gsmbyte -> -> 0 `i `uc ]
+"253
+[v _x `uc ~T0 @X0 1 a ]
+[; ;gsm.c: 253: uint8_t x = 0;
+[e = _x -> -> 0 `i `uc ]
+[; ;gsm.c: 255: while(gsmbyte != '*')
+"255
+[e $U 1440  ]
+[e :U 1441 ]
+[; ;gsm.c: 256: {
+"256
+{
+[; ;gsm.c: 257: gsmbyte = EUSARTG_Read();
+"257
+[e = _gsmbyte ( _EUSARTG_Read ..  ]
+[; ;gsm.c: 258: if(gsmflags.meerror)
+"258
+[e $ ! != -> . _gsmflags 1 `i -> -> -> 0 `i `uc `i 1443  ]
+[; ;gsm.c: 259: {
+"259
+{
+[; ;gsm.c: 260: goto offnet;
+"260
+[e $U 1444  ]
+"261
+}
+[e :U 1443 ]
+"262
+}
+[e :U 1440 ]
+"255
+[e $ != -> _gsmbyte `ui -> 42 `ui 1441  ]
+[e :U 1442 ]
+[; ;gsm.c: 261: }
+[; ;gsm.c: 262: }
+[; ;gsm.c: 263: gsmbyte = EUSARTG_Read();
+"263
+[e = _gsmbyte ( _EUSARTG_Read ..  ]
+[; ;gsm.c: 264: gsmbyte = EUSARTG_Read();
+"264
+[e = _gsmbyte ( _EUSARTG_Read ..  ]
+[; ;gsm.c: 265: gsmbyte = EUSARTG_Read();
+"265
+[e = _gsmbyte ( _EUSARTG_Read ..  ]
+[; ;gsm.c: 266: if(gsmbyte != 'U')
+"266
+[e $ ! != -> _gsmbyte `ui -> 85 `ui 1445  ]
+[; ;gsm.c: 267: {
+"267
+{
+[; ;gsm.c: 268: goto retry;
+"268
+[e $U 1439  ]
+"269
+}
+[e :U 1445 ]
+[; ;gsm.c: 269: }
+[; ;gsm.c: 270: while(gsmbyte != ':')
+"270
+[e $U 1446  ]
+[e :U 1447 ]
+[; ;gsm.c: 271: {
+"271
+{
+[; ;gsm.c: 272: gsmbyte = EUSARTG_Read();
+"272
+[e = _gsmbyte ( _EUSARTG_Read ..  ]
+"273
+}
+[e :U 1446 ]
+"270
+[e $ != -> _gsmbyte `ui -> 58 `ui 1447  ]
+[e :U 1448 ]
+[; ;gsm.c: 273: }
+[; ;gsm.c: 274: while(gsmbyte != '\n')
+"274
+[e $U 1449  ]
+[e :U 1450 ]
+[; ;gsm.c: 275: {
+"275
+{
+[; ;gsm.c: 276: gsmbyte = EUSARTG_Read();
+"276
+[e = _gsmbyte ( _EUSARTG_Read ..  ]
+[; ;gsm.c: 277: gsmmsg[x++] = gsmbyte;
+"277
+[e = *U + &U _gsmmsg * -> ++ _x -> -> 1 `i `uc `ux -> -> # *U &U _gsmmsg `ui `ux _gsmbyte ]
+"278
+}
+[e :U 1449 ]
+"274
+[e $ != -> _gsmbyte `ui -> 10 `ui 1450  ]
+[e :U 1451 ]
+[; ;gsm.c: 278: }
+[; ;gsm.c: 280: _delay((unsigned long)((5)*(64000000/4000.0)));
+"280
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;gsm.c: 283: x = 0x03;
+"283
+[e = _x -> -> 3 `i `uc ]
+[; ;gsm.c: 284: gsmtim[0] = '"';
+"284
+[e = *U + &U _gsmtim * -> -> -> 0 `i `ui `ux -> -> # *U &U _gsmtim `ui `ux -> -> 34 `ui `uc ]
+"285
+[v _i `uc ~T0 @X0 1 a ]
+[; ;gsm.c: 285: uint8_t i = 0x01;
+[e = _i -> -> 1 `i `uc ]
+[; ;gsm.c: 286: while(i < 0x09)
+"286
+[e $U 1452  ]
+[e :U 1453 ]
+[; ;gsm.c: 287: {
+"287
+{
+[; ;gsm.c: 288: gsmtim[i] = gsmmsg[x];
+"288
+[e = *U + &U _gsmtim * -> _i `ux -> -> # *U &U _gsmtim `ui `ux *U + &U _gsmmsg * -> _x `ux -> -> # *U &U _gsmmsg `ui `ux ]
+[; ;gsm.c: 289: gsmtim[i+1] = gsmmsg[x+1];
+"289
+[e = *U + &U _gsmtim * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _gsmtim `ui `ux *U + &U _gsmmsg * -> -> + -> _x `i -> 1 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux ]
+[; ;gsm.c: 290: if(gsmmsg[x+1] == ',')
+"290
+[e $ ! == -> *U + &U _gsmmsg * -> -> + -> _x `i -> 1 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux `ui -> 44 `ui 1455  ]
+[; ;gsm.c: 291: {
+"291
+{
+[; ;gsm.c: 292: gsmtim[i+1] = gsmmsg[x];
+"292
+[e = *U + &U _gsmtim * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _gsmtim `ui `ux *U + &U _gsmmsg * -> _x `ux -> -> # *U &U _gsmmsg `ui `ux ]
+[; ;gsm.c: 293: gsmtim[i] = '0';
+"293
+[e = *U + &U _gsmtim * -> _i `ux -> -> # *U &U _gsmtim `ui `ux -> -> 48 `ui `uc ]
+[; ;gsm.c: 294: x--;
+"294
+[e -- _x -> -> 1 `i `uc ]
+"295
+}
+[e :U 1455 ]
+[; ;gsm.c: 295: }
+[; ;gsm.c: 296: gsmtim[i+2] = '/';
+"296
+[e = *U + &U _gsmtim * -> -> + -> _i `i -> 2 `i `ui `ux -> -> # *U &U _gsmtim `ui `ux -> -> 47 `ui `uc ]
+[; ;gsm.c: 297: i = i + 3;
+"297
+[e = _i -> + -> _i `i -> 3 `i `uc ]
+[; ;gsm.c: 298: x = x + 3;
+"298
+[e = _x -> + -> _x `i -> 3 `i `uc ]
+"299
+}
+[e :U 1452 ]
+"286
+[e $ < -> _i `i -> 9 `i 1453  ]
+[e :U 1454 ]
+[; ;gsm.c: 299: }
+[; ;gsm.c: 300: gsmtim[i-1] = ',';
+"300
+[e = *U + &U _gsmtim * -> -> - -> _i `i -> 1 `i `ui `ux -> -> # *U &U _gsmtim `ui `ux -> -> 44 `ui `uc ]
+[; ;gsm.c: 303: while(i < 0x11)
+"303
+[e $U 1456  ]
+[e :U 1457 ]
+[; ;gsm.c: 304: {
+"304
+{
+[; ;gsm.c: 305: gsmtim[i] = gsmmsg[x];
+"305
+[e = *U + &U _gsmtim * -> _i `ux -> -> # *U &U _gsmtim `ui `ux *U + &U _gsmmsg * -> _x `ux -> -> # *U &U _gsmmsg `ui `ux ]
+[; ;gsm.c: 306: gsmtim[i+1] = gsmmsg[x+1];
+"306
+[e = *U + &U _gsmtim * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _gsmtim `ui `ux *U + &U _gsmmsg * -> -> + -> _x `i -> 1 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux ]
+[; ;gsm.c: 307: if(gsmmsg[x+1] == ',')
+"307
+[e $ ! == -> *U + &U _gsmmsg * -> -> + -> _x `i -> 1 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux `ui -> 44 `ui 1459  ]
+[; ;gsm.c: 308: {
+"308
+{
+[; ;gsm.c: 309: gsmtim[i+1] = gsmmsg[x];
+"309
+[e = *U + &U _gsmtim * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _gsmtim `ui `ux *U + &U _gsmmsg * -> _x `ux -> -> # *U &U _gsmmsg `ui `ux ]
+[; ;gsm.c: 310: gsmtim[i] = '0';
+"310
+[e = *U + &U _gsmtim * -> _i `ux -> -> # *U &U _gsmtim `ui `ux -> -> 48 `ui `uc ]
+[; ;gsm.c: 311: x--;
+"311
+[e -- _x -> -> 1 `i `uc ]
+"312
+}
+[e :U 1459 ]
+[; ;gsm.c: 312: }
+[; ;gsm.c: 313: gsmtim[i+2] = ':';
+"313
+[e = *U + &U _gsmtim * -> -> + -> _i `i -> 2 `i `ui `ux -> -> # *U &U _gsmtim `ui `ux -> -> 58 `ui `uc ]
+[; ;gsm.c: 314: i = i + 3;
+"314
+[e = _i -> + -> _i `i -> 3 `i `uc ]
+[; ;gsm.c: 315: x = x + 3;
+"315
+[e = _x -> + -> _x `i -> 3 `i `uc ]
+"316
+}
+[e :U 1456 ]
+"303
+[e $ < -> _i `i -> 17 `i 1457  ]
+[e :U 1458 ]
+[; ;gsm.c: 316: }
+[; ;gsm.c: 318: i--;
+"318
+[e -- _i -> -> 1 `i `uc ]
+[; ;gsm.c: 319: x++;
+"319
+[e ++ _x -> -> 1 `i `uc ]
+[; ;gsm.c: 320: gsmtim[i] = gsmmsg[x];
+"320
+[e = *U + &U _gsmtim * -> _i `ux -> -> # *U &U _gsmtim `ui `ux *U + &U _gsmmsg * -> _x `ux -> -> # *U &U _gsmmsg `ui `ux ]
+[; ;gsm.c: 321: gsmtim[i+1] = '0';
+"321
+[e = *U + &U _gsmtim * -> -> + -> _i `i -> 1 `i `ui `ux -> -> # *U &U _gsmtim `ui `ux -> -> 48 `ui `uc ]
+[; ;gsm.c: 322: gsmtim[i+2] = gsmmsg[x+1];
+"322
+[e = *U + &U _gsmtim * -> -> + -> _i `i -> 2 `i `ui `ux -> -> # *U &U _gsmtim `ui `ux *U + &U _gsmmsg * -> -> + -> _x `i -> 1 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux ]
+[; ;gsm.c: 323: gsmtim[i+3] = '"';
+"323
+[e = *U + &U _gsmtim * -> -> + -> _i `i -> 3 `i `ui `ux -> -> # *U &U _gsmtim `ui `ux -> -> 34 `ui `uc ]
+[; ;gsm.c: 324: gsmtim[i+4] = '\r';
+"324
+[e = *U + &U _gsmtim * -> -> + -> _i `i -> 4 `i `ui `ux -> -> # *U &U _gsmtim `ui `ux -> -> 13 `ui `uc ]
+[; ;gsm.c: 325: gsmtim[i+5] = 0x00;
+"325
+[e = *U + &U _gsmtim * -> -> + -> _i `i -> 5 `i `ui `ux -> -> # *U &U _gsmtim `ui `ux -> -> 0 `i `uc ]
+[; ;gsm.c: 326: offnet:
+"326
+[e :U 1444 ]
+[; ;gsm.c: 327: gsm_msg(netoff);
+"327
+[e ( _gsm_msg (1 -> &U _netoff `*uc ]
+[; ;gsm.c: 328: gsm_receive(1, gsmmsg);
+"328
+[e ( _gsm_receive (2 , -> -> 1 `i `uc &U _gsmmsg ]
+[; ;gsm.c: 329: gsm_msg(clockw);
+"329
+[e ( _gsm_msg (1 -> &U _clockw `*uc ]
+[; ;gsm.c: 330: gsm_msg(gsmtim);
+"330
+[e ( _gsm_msg (1 &U _gsmtim ]
+[; ;gsm.c: 331: gsm_receive(1, gsmmsg);
+"331
+[e ( _gsm_receive (2 , -> -> 1 `i `uc &U _gsmmsg ]
+[; ;gsm.c: 332: if(gsmmsg[0] != '0')
+"332
+[e $ ! != -> *U + &U _gsmmsg * -> -> -> 0 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux `ui -> 48 `ui 1460  ]
+[; ;gsm.c: 333: {
+"333
+{
+[; ;gsm.c: 334: LATCbits.LC3 = 0;
+"334
+[e = . . _LATCbits 1 3 -> -> 0 `i `uc ]
+[; ;gsm.c: 335: _delay((unsigned long)((2000)*(64000000/4000.0)));
+"335
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;gsm.c: 336: asm("RESET");
+"336
+[; <" RESET ;# ">
+"337
+}
+[e :U 1460 ]
+[; ;gsm.c: 337: }
+[; ;gsm.c: 338: }
+"338
+[e :UE 1438 ]
+}
+"341
+[v _gsm_unsolic `(uc ~T0 @X0 1 ef ]
+"342
+{
+[; ;gsm.c: 341: uint8_t gsm_unsolic(void)
+[; ;gsm.c: 342: {
+[e :U _gsm_unsolic ]
+[f ]
+[; ;gsm.c: 343: gsm_zerobuff(gsmums, 0x200);
+"343
+[e ( _gsm_zerobuff (2 , &U _gsmums -> -> 512 `i `ui ]
+"344
+[v _i `uc ~T0 @X0 1 a ]
+[; ;gsm.c: 344: uint8_t i = 1;
+[e = _i -> -> 1 `i `uc ]
+"345
+[v _x `ui ~T0 @X0 1 a ]
+[; ;gsm.c: 345: uint16_t x = 0;
+[e = _x -> -> 0 `i `ui ]
+"346
+[v _y `uc ~T0 @X0 1 a ]
+[; ;gsm.c: 346: uint8_t y = 0;
+[e = _y -> -> 0 `i `uc ]
+[; ;gsm.c: 347: resttim:
+"347
+[e :U 1462 ]
+[; ;gsm.c: 348: TMR4_Initialize();
+"348
+[e ( _TMR4_Initialize ..  ]
+[; ;gsm.c: 349: T4CONbits.TMR4ON = 1;
+"349
+[e = . . _T4CONbits 3 7 -> -> 1 `i `uc ]
+[; ;gsm.c: 350: while(!PIR4bits.TMR4IF && x < 0x200)
+"350
+[e $U 1463  ]
+[e :U 1464 ]
+[; ;gsm.c: 351: {
+"351
+{
+[; ;gsm.c: 352: gsmums[x] = gsm_Read();
+"352
+[e = *U + &U _gsmums * -> _x `ux -> -> # *U &U _gsmums `ui `ux ( _gsm_Read ..  ]
+[; ;gsm.c: 353: if(gsmums[x] == '\n')
+"353
+[e $ ! == -> *U + &U _gsmums * -> _x `ux -> -> # *U &U _gsmums `ui `ux `ui -> 10 `ui 1466  ]
+[; ;gsm.c: 354: {
+"354
+{
+[; ;gsm.c: 355: y++;
+"355
+[e ++ _y -> -> 1 `i `uc ]
+"356
+}
+[e :U 1466 ]
+[; ;gsm.c: 356: }
+[; ;gsm.c: 357: x++;
+"357
+[e ++ _x -> -> 1 `i `ui ]
+"358
+}
+[e :U 1463 ]
+"350
+[e $ && ! != -> . . _PIR4bits 0 3 `i -> -> -> 0 `i `Vuc `i < _x -> -> 512 `i `ui 1464  ]
+[e :U 1465 ]
+[; ;gsm.c: 358: }
+[; ;gsm.c: 359: if(i > 0)
+"359
+[e $ ! > -> _i `i -> 0 `i 1467  ]
+[; ;gsm.c: 360: {
+"360
+{
+[; ;gsm.c: 361: i--;
+"361
+[e -- _i -> -> 1 `i `uc ]
+[; ;gsm.c: 362: goto resttim;
+"362
+[e $U 1462  ]
+"363
+}
+[e :U 1467 ]
+[; ;gsm.c: 363: }
+[; ;gsm.c: 364: return y;
+"364
+[e ) _y ]
+[e $UE 1461  ]
+[; ;gsm.c: 365: }
+"365
+[e :UE 1461 ]
+}
+"367
+[v _gsm_receive `(v ~T0 @X0 1 ef2`uc`*uc ]
+"368
+{
+[; ;gsm.c: 367: void gsm_receive(uint8_t noofline, uint8_t *messagebuf)
+[; ;gsm.c: 368: {
+[e :U _gsm_receive ]
+[v _noofline `uc ~T0 @X0 1 r1 ]
+"367
+[v _messagebuf `*uc ~T0 @X0 1 r2 ]
+"368
+[f ]
+[; ;gsm.c: 369: gsm_zerobuff(messagebuf, 0x200);
+"369
+[e ( _gsm_zerobuff (2 , _messagebuf -> -> 512 `i `ui ]
+"370
+[v _x `uc ~T0 @X0 1 a ]
+[; ;gsm.c: 370: uint8_t x = 0;
+[e = _x -> -> 0 `i `uc ]
+[; ;gsm.c: 371: gsmbyte = 0;
+"371
+[e = _gsmbyte -> -> 0 `i `uc ]
+[; ;gsm.c: 372: while(noofline > 0x00)
+"372
+[e $U 1469  ]
+[e :U 1470 ]
+[; ;gsm.c: 373: {
+"373
+{
+[; ;gsm.c: 374: gsmbyte = EUSARTG_Read();
+"374
+[e = _gsmbyte ( _EUSARTG_Read ..  ]
+[; ;gsm.c: 375: if(gsmflags.meerror)
+"375
+[e $ ! != -> . _gsmflags 1 `i -> -> -> 0 `i `uc `i 1472  ]
+[; ;gsm.c: 376: {
+"376
+{
+[; ;gsm.c: 377: break;
+"377
+[e $U 1471  ]
+"378
+}
+[e :U 1472 ]
+[; ;gsm.c: 378: }
+[; ;gsm.c: 379: messagebuf[x] = gsmbyte;
+"379
+[e = *U + _messagebuf * -> _x `ux -> -> # *U _messagebuf `ui `ux _gsmbyte ]
+[; ;gsm.c: 380: x++;
+"380
+[e ++ _x -> -> 1 `i `uc ]
+[; ;gsm.c: 381: if(gsmbyte == 0x0A || gsmbyte == 0x00)
+"381
+[e $ ! || == -> _gsmbyte `i -> 10 `i == -> _gsmbyte `i -> 0 `i 1473  ]
+[; ;gsm.c: 382: {
+"382
+{
+[; ;gsm.c: 383: noofline--;
+"383
+[e -- _noofline -> -> 1 `i `uc ]
+"384
+}
+[e :U 1473 ]
+"385
+}
+[e :U 1469 ]
+"372
+[e $ > -> _noofline `i -> 0 `i 1470  ]
+[e :U 1471 ]
+[; ;gsm.c: 384: }
+[; ;gsm.c: 385: }
+[; ;gsm.c: 386: }
+"386
+[e :UE 1468 ]
+}
+"388
+[v _gsm_txAT `(v ~T0 @X0 1 ef ]
+"389
+{
+[; ;gsm.c: 388: void gsm_txAT(void)
+[; ;gsm.c: 389: {
+[e :U _gsm_txAT ]
+[f ]
+[; ;gsm.c: 390: gsm_transmit('A');
+"390
+[e ( _gsm_transmit (1 -> -> 65 `ui `uc ]
+[; ;gsm.c: 391: gsm_transmit('T');
+"391
+[e ( _gsm_transmit (1 -> -> 84 `ui `uc ]
+[; ;gsm.c: 392: }
+"392
+[e :UE 1474 ]
+}
+"395
+[v _gsm_on `(v ~T0 @X0 1 ef ]
+"396
+{
+[; ;gsm.c: 395: void gsm_on(void)
+[; ;gsm.c: 396: {
 [e :U _gsm_on ]
 [f ]
-[; ;gsm.c: 53: LATCbits.LC3 = 1;
-"53
+[; ;gsm.c: 397: LATCbits.LC3 = 1;
+"397
 [e = . . _LATCbits 1 3 -> -> 1 `i `uc ]
-[; ;gsm.c: 55: }
-"55
-[e :UE 1397 ]
+[; ;gsm.c: 398: TMR4_Initialize();
+"398
+[e ( _TMR4_Initialize ..  ]
+[; ;gsm.c: 399: T4CONbits.T4ON = 1;
+"399
+[e = . . _T4CONbits 1 2 -> -> 1 `i `uc ]
+[; ;gsm.c: 400: }
+"400
+[e :UE 1475 ]
 }
-"57
-[v _gsm_off `(v ~T0 @X0 1 ef ]
-"58
+"402
+[v _gsm_Read `(uc ~T0 @X0 1 ef ]
+"403
 {
-[; ;gsm.c: 57: void gsm_off(void)
-[; ;gsm.c: 58: {
+[; ;gsm.c: 402: uint8_t gsm_Read(void)
+[; ;gsm.c: 403: {
+[e :U _gsm_Read ]
+[f ]
+[; ;gsm.c: 404: while(!PIR3bits.RC2IF)
+"404
+[e $U 1477  ]
+[e :U 1478 ]
+[; ;gsm.c: 405: {
+"405
+{
+[; ;gsm.c: 406: if(PIR4bits.TMR4IF)
+"406
+[e $ ! != -> . . _PIR4bits 0 3 `i -> -> -> 0 `i `Vuc `i 1480  ]
+[; ;gsm.c: 407: {
+"407
+{
+[; ;gsm.c: 408: break;
+"408
+[e $U 1479  ]
+"409
+}
+[e :U 1480 ]
+"410
+}
+[e :U 1477 ]
+"404
+[e $ ! != -> . . _PIR3bits 0 7 `i -> -> -> 0 `i `Vuc `i 1478  ]
+[e :U 1479 ]
+[; ;gsm.c: 409: }
+[; ;gsm.c: 410: }
+[; ;gsm.c: 413: if(1 == RC2STAbits.OERR)
+"413
+[e $ ! == -> 1 `i -> . . _RC2STAbits 0 1 `i 1481  ]
+[; ;gsm.c: 414: {
+"414
+{
+[; ;gsm.c: 417: RC2STAbits.CREN = 0;
+"417
+[e = . . _RC2STAbits 0 4 -> -> 0 `i `uc ]
+[; ;gsm.c: 418: RC2STAbits.CREN = 1;
+"418
+[e = . . _RC2STAbits 0 4 -> -> 1 `i `uc ]
+"419
+}
+[e :U 1481 ]
+[; ;gsm.c: 419: }
+[; ;gsm.c: 421: return RC2REG;
+"421
+[e ) _RC2REG ]
+[e $UE 1476  ]
+[; ;gsm.c: 422: }
+"422
+[e :UE 1476 ]
+}
+"424
+[v _gsm_off `(v ~T0 @X0 1 ef ]
+"425
+{
+[; ;gsm.c: 424: void gsm_off(void)
+[; ;gsm.c: 425: {
 [e :U _gsm_off ]
 [f ]
-[; ;gsm.c: 59: LATCbits.LC3 = 0;
-"59
+[; ;gsm.c: 426: LATCbits.LC3 = 0;
+"426
 [e = . . _LATCbits 1 3 -> -> 0 `i `uc ]
-[; ;gsm.c: 60: }
-"60
-[e :UE 1398 ]
+[; ;gsm.c: 427: }
+"427
+[e :UE 1482 ]
 }
-[a 1C 65 84 69 48 0 ]
-
+"429
+[v _gsm_netwait `(v ~T0 @X0 1 ef ]
+"430
+{
+[; ;gsm.c: 429: void gsm_netwait(void)
+[; ;gsm.c: 430: {
+[e :U _gsm_netwait ]
+[f ]
+[; ;gsm.c: 431: gsmbyte = 0;
+"431
+[e = _gsmbyte -> -> 0 `i `uc ]
+"432
+[v _x `uc ~T0 @X0 1 a ]
+[; ;gsm.c: 432: uint8_t x = 0;
+[e = _x -> -> 0 `i `uc ]
+[; ;gsm.c: 433: while(gsmbyte != 'S')
+"433
+[e $U 1484  ]
+[e :U 1485 ]
+[; ;gsm.c: 434: {
+"434
+{
+[; ;gsm.c: 435: gsmbyte = EUSARTG_Read();
+"435
+[e = _gsmbyte ( _EUSARTG_Read ..  ]
+[; ;gsm.c: 436: gsmmsg[x++] = gsmbyte;
+"436
+[e = *U + &U _gsmmsg * -> ++ _x -> -> 1 `i `uc `ux -> -> # *U &U _gsmmsg `ui `ux _gsmbyte ]
+"437
+}
+[e :U 1484 ]
+"433
+[e $ != -> _gsmbyte `ui -> 83 `ui 1485  ]
+[e :U 1486 ]
+[; ;gsm.c: 437: }
+[; ;gsm.c: 438: while(gsmbyte != '\n')
+"438
+[e $U 1487  ]
+[e :U 1488 ]
+[; ;gsm.c: 439: {
+"439
+{
+[; ;gsm.c: 440: gsmbyte = EUSARTG_Read();
+"440
+[e = _gsmbyte ( _EUSARTG_Read ..  ]
+[; ;gsm.c: 441: gsmmsg[x++] = gsmbyte;
+"441
+[e = *U + &U _gsmmsg * -> ++ _x -> -> 1 `i `uc `ux -> -> # *U &U _gsmmsg `ui `ux _gsmbyte ]
+"442
+}
+[e :U 1487 ]
+"438
+[e $ != -> _gsmbyte `ui -> 10 `ui 1488  ]
+[e :U 1489 ]
+[; ;gsm.c: 442: }
+[; ;gsm.c: 443: gsmflags.mtn = 0;
+"443
+[e = . _gsmflags 2 -> -> 0 `i `uc ]
+[; ;gsm.c: 444: if(gsmmsg[0] == '+')
+"444
+[e $ ! == -> *U + &U _gsmmsg * -> -> -> 0 `i `ui `ux -> -> # *U &U _gsmmsg `ui `ux `ui -> 43 `ui 1490  ]
+[; ;gsm.c: 445: {
+"445
+{
+[; ;gsm.c: 446: gsmflags.mtn = 1;
+"446
+[e = . _gsmflags 2 -> -> 1 `i `uc ]
+"447
+}
+[e :U 1490 ]
+[; ;gsm.c: 447: }
+[; ;gsm.c: 448: }
+"448
+[e :UE 1483 ]
+}
+"450
+[v _EUSARTG_Read `(uc ~T0 @X0 1 ef ]
+"451
+{
+[; ;gsm.c: 450: uint8_t EUSARTG_Read(void)
+[; ;gsm.c: 451: {
+[e :U _EUSARTG_Read ]
+[f ]
+[; ;gsm.c: 453: while(!PIR3bits.RC2IF)
+"453
+[e $U 1492  ]
+[e :U 1493 ]
+[; ;gsm.c: 454: {
+"454
+{
+"456
+}
+[e :U 1492 ]
+"453
+[e $ ! != -> . . _PIR3bits 0 7 `i -> -> -> 0 `i `Vuc `i 1493  ]
+[e :U 1494 ]
+[; ;gsm.c: 456: }
+[; ;gsm.c: 460: if(RC2STAbits.OERR)
+"460
+[e $ ! != -> . . _RC2STAbits 0 1 `i -> -> -> 0 `i `Vuc `i 1495  ]
+[; ;gsm.c: 461: {
+"461
+{
+[; ;gsm.c: 464: RC2STAbits.CREN = 0;
+"464
+[e = . . _RC2STAbits 0 4 -> -> 0 `i `uc ]
+[; ;gsm.c: 465: RC2STAbits.CREN = 1;
+"465
+[e = . . _RC2STAbits 0 4 -> -> 1 `i `uc ]
+"466
+}
+[e :U 1495 ]
+[; ;gsm.c: 466: }
+[; ;gsm.c: 468: return RC2REG;
+"468
+[e ) _RC2REG ]
+[e $UE 1491  ]
+[; ;gsm.c: 469: }
+"469
+[e :UE 1491 ]
+}

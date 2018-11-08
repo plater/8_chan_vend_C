@@ -1,4 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
+[v F11842 `(v ~T0 @X0 0 tf ]
 "58 mdb.h
 [s S1368 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1368 . isdata noteerr mode timeout vending noteset endis spare5 ]
@@ -52,7 +53,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _find_lowprice `(v ~T0 @X0 0 ef ]
 "129 mcc_generated_files/dac1.h
 [v _DAC1_SetOutput `(v ~T0 @X0 0 ef1`uc ]
-"135 lcd.h
+"137 lcd.h
 [v _lcd_string `(v ~T0 @X0 0 ef2`*uc`uc ]
 "102 mdb.h
 [v _mdb_init `(v ~T0 @X0 0 ef ]
@@ -96,19 +97,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PORTA `Vuc ~T0 @X0 0 e@3981 ]
 "9965
 [v _DAC1CON1 `Vuc ~T0 @X0 0 e@3892 ]
-"149 lcd.h
+"153 lcd.h
 [v _displ_hex `(v ~T0 @X0 0 ef1`um ]
 "292 vend.h
 [v _get_channel `(uc ~T0 @X0 0 ef1`uc ]
 "132 mcc_generated_files/cmp1.h
 [v _CMP1_GetOutputStatus `(uc ~T0 @X0 0 ef ]
-"129 lcd.h
+"131 lcd.h
 [v _lcd_dispadd `(v ~T0 @X0 0 ef1`uc ]
 "266 vend.h
 [v _Update_Hopcoin `(v ~T0 @X0 0 ef2`uc`uc ]
 "10497 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
 [v _CMOUT `Vuc ~T0 @X0 0 e@3901 ]
-"165 lcd.h
+"169 lcd.h
 [v _displ_sens `(v ~T0 @X0 0 ef2`uc`uc ]
 "4438 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
 [s S266 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -120,7 +121,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PIR4bits `VS265 ~T0 @X0 0 e@3790 ]
 "294 vend.h
 [v _set_price `(v ~T0 @X0 0 ef1`uc ]
-"151 lcd.h
+"155 lcd.h
 [v _displ_price `(v ~T0 @X0 0 ef1`uc ]
 "298 vend.h
 [v _Vend_settime `(v ~T0 @X0 0 ef ]
@@ -132,15 +133,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _Reset_settings `(v ~T0 @X0 0 ef ]
 "300
 [v _Vend_timeset `(v ~T0 @X0 0 ef1`uc ]
-"171 lcd.h
+"175 lcd.h
 [v _displ_time `(v ~T0 @X0 0 ef2`uc`uc ]
 "304 vend.h
 [v _Link_chan `(v ~T0 @X0 0 ef1`uc ]
-"167 lcd.h
+"171 lcd.h
 [v _displ_lflags `(v ~T0 @X0 0 ef2`uc`uc ]
 "308 vend.h
 [v _off_sens `(v ~T0 @X0 0 ef1`uc ]
-"169 lcd.h
+"173 lcd.h
 [v _displ_sflags `(v ~T0 @X0 0 ef3`uc`uc`uc ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
@@ -10900,7 +10901,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pin_manager.h: 692: void PIN_MANAGER_Initialize (void);
 [; ;pin_manager.h: 704: void PIN_MANAGER_IOC(void);
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;interrupt_manager.h: 132: void INTERRUPT_Initialize (void);
+[; ;interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
 [; ;tmr5.h: 100: void TMR5_Initialize(void);
 [; ;tmr5.h: 129: void TMR5_StartTimer(void);
 [; ;tmr5.h: 161: void TMR5_StopTimer(void);
@@ -11052,12 +11053,37 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;memory.h: 249: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [; ;memory.h: 275: uint8_t DATAEE_ReadByte(uint16_t bAdd);
 [; ;memory.h: 277: void MEMORY_Tasks(void);
-[; ;eusart2.h: 97: void EUSART2_Initialize(void);
-[; ;eusart2.h: 145: bool EUSART2_is_tx_ready(void);
-[; ;eusart2.h: 193: bool EUSART2_is_rx_ready(void);
-[; ;eusart2.h: 240: bool EUSART2_is_tx_done(void);
-[; ;eusart2.h: 260: uint8_t EUSART2_Read(void);
-[; ;eusart2.h: 280: void EUSART2_Write(uint8_t txData);
+"64 mcc_generated_files/eusart2.h
+[v _eusart2RxHead `Vuc ~T0 @X0 1 e ]
+[i _eusart2RxHead
+-> -> 0 `i `uc
+]
+[; ;eusart2.h: 64: volatile uint8_t eusart2RxHead = 0;
+"65
+[v _eusart2RxTail `Vuc ~T0 @X0 1 e ]
+[i _eusart2RxTail
+-> -> 0 `i `uc
+]
+[; ;eusart2.h: 65: volatile uint8_t eusart2RxTail = 0;
+"66
+[v _eusart2RxBuffer `Vuc ~T0 @X0 -> 512 `i e ]
+[; ;eusart2.h: 66: volatile uint8_t eusart2RxBuffer[512];
+"67
+[v _eusart2RxCount `Vuc ~T0 @X0 1 e ]
+[; ;eusart2.h: 67: volatile uint8_t eusart2RxCount;
+[; ;eusart2.h: 90: extern volatile uint8_t eusart2TxBufferRemaining;
+[; ;eusart2.h: 91: extern volatile uint8_t eusart2RxCount;
+"97
+[v _EUSART2_RxDefaultInterruptHandler `*F11842 ~T0 @X0 1 e ]
+[; ;eusart2.h: 97: void (*EUSART2_RxDefaultInterruptHandler)(void);
+[; ;eusart2.h: 119: void EUSART2_Initialize(void);
+[; ;eusart2.h: 167: bool EUSART2_is_tx_ready(void);
+[; ;eusart2.h: 219: uint8_t EUSART2_is_rx_ready(void);
+[; ;eusart2.h: 266: bool EUSART2_is_tx_done(void);
+[; ;eusart2.h: 286: uint8_t EUSART2_Read(void);
+[; ;eusart2.h: 306: void EUSART2_Write(uint8_t txData);
+[; ;eusart2.h: 328: void EUSART2_Receive_ISR(void);
+[; ;eusart2.h: 349: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart1.h: 93: void eusartmdb_Initialize(void);
 [; ;eusart1.h: 95: void EUSART1_Initialize(void);
 [; ;eusart1.h: 115: uint8_t EUSART1_Read(void);
@@ -12828,58 +12854,85 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ]
 [; ;lcd.h: 117: const uint8_t vendispmsg[] = "Use button / Service";
+"118
+[v _clocktime `Cuc ~T0 @X0 -> 0 `x e ]
+[i _clocktime
+:U ..
+-> 84 `c
+-> 105 `c
+-> 109 `c
+-> 101 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 118: const uint8_t clocktime[] = "Time ";
 "119
-[v _bflag `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 119: uint8_t bflag;
-"120
-[v _lcdfunc `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 120: uint8_t lcdfunc;
+[v _clockdate `Cuc ~T0 @X0 -> 0 `x e ]
+[i _clockdate
+:U ..
+-> 68 `c
+-> 97 `c
+-> 116 `c
+-> 101 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 119: const uint8_t clockdate[] = "Date ";
 "121
-[v _lcdata `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 121: uint8_t lcdata;
+[v _bflag `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 121: uint8_t bflag;
 "122
-[v _lcdline `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 122: uint8_t lcdline;
+[v _lcdfunc `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 122: uint8_t lcdfunc;
 "123
-[v _stradd `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 123: uint8_t stradd;
+[v _lcdata `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 123: uint8_t lcdata;
 "124
-[v _hexnum `um ~T0 @X0 1 e ]
-[; ;lcd.h: 124: uint24_t hexnum;
+[v _lcdline `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 124: uint8_t lcdline;
 "125
-[v _ercode `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 125: uint8_t ercode;
+[v _stradd `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 125: uint8_t stradd;
 "126
-[v _lcdaddress `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 126: uint8_t lcdaddress;
+[v _hexnum `um ~T0 @X0 1 e ]
+[; ;lcd.h: 126: uint24_t hexnum;
 "127
+[v _ercode `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 127: uint8_t ercode;
+"128
+[v _lcdaddress `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 128: uint8_t lcdaddress;
+"129
 [v _dspposition `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 127: uint8_t dspposition;
-[; ;lcd.h: 129: void lcd_dispadd(uint8_t lcdaddress);
-[; ;lcd.h: 131: void displ_code(uint8_t ercode);
-[; ;lcd.h: 133: void lcd_init(void);
-[; ;lcd.h: 135: void lcd_string(uint8_t *, uint8_t lcdline);
-[; ;lcd.h: 137: void lcd_writeC(uint8_t);
-[; ;lcd.h: 139: void lcd_write(uint8_t);
-[; ;lcd.h: 141: void lcd_clockH(void);
-[; ;lcd.h: 143: void lcd_clockL(void);
-[; ;lcd.h: 145: void lcd_clockE(void);
-[; ;lcd.h: 147: void lcd_test(void);
-[; ;lcd.h: 149: void displ_hex(uint24_t);
-[; ;lcd.h: 151: void displ_price(uint8_t vendprice);
-[; ;lcd.h: 153: void displ_nochange(void);
-[; ;lcd.h: 155: void displ_credit(void);
-[; ;lcd.h: 157: void displ_noteer(void);
-[; ;lcd.h: 159: void displ_test(void);
-[; ;lcd.h: 161: void displ_totals(void);
-[; ;lcd.h: 163: void displ_empty(void);
-[; ;lcd.h: 165: void displ_sens(uint8_t smsgpos, uint8_t dmsgpos);
-[; ;lcd.h: 167: void displ_lflags(uint8_t chanel, uint8_t linkflgs);
-[; ;lcd.h: 169: void displ_sflags(uint8_t senseflags, uint8_t channel, uint8_t chanbit);
-[; ;lcd.h: 171: void displ_time(uint8_t motortime, uint8_t channel);
-[; ;lcd.h: 173: uint8_t displ_note(uint8_t *notestring);
-[; ;lcd.h: 175: void displ_nendis(uint8_t notenum);
-[; ;lcd.h: 177: int8_t read_busy(void);
+[; ;lcd.h: 129: uint8_t dspposition;
+[; ;lcd.h: 131: void lcd_dispadd(uint8_t lcdaddress);
+[; ;lcd.h: 133: void displ_code(uint8_t ercode);
+[; ;lcd.h: 135: void lcd_init(void);
+[; ;lcd.h: 137: void lcd_string(uint8_t *, uint8_t lcdline);
+[; ;lcd.h: 139: void lcd_writeC(uint8_t);
+[; ;lcd.h: 141: void lcd_write(uint8_t);
+[; ;lcd.h: 143: void lcd_clockH(void);
+[; ;lcd.h: 145: void lcd_clockL(void);
+[; ;lcd.h: 147: void lcd_clockE(void);
+[; ;lcd.h: 149: void disp_clock(void);
+[; ;lcd.h: 151: void lcd_test(void);
+[; ;lcd.h: 153: void displ_hex(uint24_t);
+[; ;lcd.h: 155: void displ_price(uint8_t vendprice);
+[; ;lcd.h: 157: void displ_nochange(void);
+[; ;lcd.h: 159: void displ_credit(void);
+[; ;lcd.h: 161: void displ_noteer(void);
+[; ;lcd.h: 163: void displ_test(void);
+[; ;lcd.h: 165: void displ_totals(void);
+[; ;lcd.h: 167: void displ_empty(void);
+[; ;lcd.h: 169: void displ_sens(uint8_t smsgpos, uint8_t dmsgpos);
+[; ;lcd.h: 171: void displ_lflags(uint8_t chanel, uint8_t linkflgs);
+[; ;lcd.h: 173: void displ_sflags(uint8_t senseflags, uint8_t channel, uint8_t chanbit);
+[; ;lcd.h: 175: void displ_time(uint8_t motortime, uint8_t channel);
+[; ;lcd.h: 177: uint8_t displ_note(uint8_t *notestring);
+[; ;lcd.h: 179: void displ_nendis(uint8_t notenum);
+[; ;lcd.h: 181: int8_t read_busy(void);
 "17 mdb.h
 [v _note_reset `Cuc ~T0 @X0 1 e ]
 [i _note_reset
@@ -14154,9 +14207,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $ != -> _butval `i -> 0 `i 1412  ]
 [e :U 1413 ]
 [; ;vend.c: 166: }
-[; ;vend.c: 167: _delay((unsigned long)((500)*(12000000/4000.0)));
+[; ;vend.c: 167: _delay((unsigned long)((500)*(64000000/4000.0)));
 "167
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 [; ;vend.c: 169: return butt;
 "169
 [e ) _butt ]
@@ -14179,9 +14232,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;vend.c: 175: LATA6 = 1;
 "175
 [e = _LATA6 -> -> 1 `i `b ]
-[; ;vend.c: 176: _delay((unsigned long)((15)*(12000000/4000.0)));
+[; ;vend.c: 176: _delay((unsigned long)((15)*(64000000/4000.0)));
 "176
-[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "178
 [v _butons `uc ~T0 @X0 1 a ]
 [; ;vend.c: 178: uint8_t butons = ((PORTA >> 1) & 0x0F) << 4;
@@ -14192,9 +14245,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;vend.c: 180: LATA6 = 0;
 "180
 [e = _LATA6 -> -> 0 `i `b ]
-[; ;vend.c: 181: _delay((unsigned long)((15)*(12000000/4000.0)));
+[; ;vend.c: 181: _delay((unsigned long)((15)*(64000000/4000.0)));
 "181
-[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 15 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 [; ;vend.c: 183: butons = ((PORTA >> 1) & 0x0F) | butons;
 "183
 [e = _butons -> | & >> -> _PORTA `i -> 1 `i -> 15 `i -> _butons `i `uc ]
@@ -14626,9 +14679,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;vend.c: 308: DAC1CON1 = 0x01;
 "308
 [e = _DAC1CON1 -> -> 1 `i `uc ]
-[; ;vend.c: 309: _delay((unsigned long)((50)*(12000000/4000000.0)));
+[; ;vend.c: 309: _delay((unsigned long)((50)*(64000000/4000000.0)));
 "309
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 12000000 `l `d .4000000.0 `ul ]
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
 "310
 [v _senval `uc ~T0 @X0 1 a ]
 [; ;vend.c: 310: uint8_t senval = CMOUT;
@@ -14773,9 +14826,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;vend.c: 354: lcd_string(creditclr, line1);
 "354
 [e ( _lcd_string (2 , -> &U _creditclr `*uc _line1 ]
-[; ;vend.c: 355: _delay((unsigned long)((1000)*(12000000/4000.0)));
+[; ;vend.c: 355: _delay((unsigned long)((1000)*(64000000/4000.0)));
 "355
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 [; ;vend.c: 356: }
 "356
 [e :UE 1462 ]
@@ -15302,9 +15355,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;vend.c: 516: Link_chan(get_channel(buttons));
 "516
 [e ( _Link_chan (1 ( _get_channel (1 _buttons ]
-[; ;vend.c: 517: _delay((unsigned long)((1000)*(12000000/4000.0)));
+[; ;vend.c: 517: _delay((unsigned long)((1000)*(64000000/4000.0)));
 "517
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 "518
 }
 [e :U 1513 ]
@@ -15447,9 +15500,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;vend.c: 563: {
 [e :U _Sens_off ]
 [f ]
-[; ;vend.c: 564: _delay((unsigned long)((250)*(12000000/4000.0)));
+[; ;vend.c: 564: _delay((unsigned long)((250)*(64000000/4000.0)));
 "564
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 [; ;vend.c: 565: buttons = butindb();
 "565
 [e = _buttons ( _butindb ..  ]
@@ -15686,9 +15739,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;vend.c: 635: DATAEE_WriteByte(sensorflags, 0x05);
 "635
 [e ( _DATAEE_WriteByte (2 , _sensorflags -> -> 5 `i `uc ]
-[; ;vend.c: 636: _delay((unsigned long)((2000)*(12000000/4000.0)));
+[; ;vend.c: 636: _delay((unsigned long)((2000)*(64000000/4000.0)));
 "636
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
 [; ;vend.c: 637: }
 "637
 [e :UE 1543 ]

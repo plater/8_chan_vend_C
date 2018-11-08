@@ -14367,7 +14367,7 @@ void PIN_MANAGER_IOC(void);
 # 12 "/opt/microchip/xc8/v1.45/include/stdbool.h"
 typedef unsigned char bool;
 
-# 132 "mcc_generated_files/interrupt_manager.h"
+# 110 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
 
 # 100 "mcc_generated_files/tmr5.h"
@@ -14810,23 +14810,42 @@ uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
 
-# 97 "mcc_generated_files/eusart2.h"
+# 64 "mcc_generated_files/eusart2.h"
+volatile uint8_t eusart2RxHead = 0;
+volatile uint8_t eusart2RxTail = 0;
+volatile uint8_t eusart2RxBuffer[512];
+volatile uint8_t eusart2RxCount;
+
+# 90
+extern volatile uint8_t eusart2TxBufferRemaining;
+extern volatile uint8_t eusart2RxCount;
+
+# 97
+void (*EUSART2_RxDefaultInterruptHandler)(void);
+
+# 119
 void EUSART2_Initialize(void);
 
-# 145
+# 167
 bool EUSART2_is_tx_ready(void);
 
-# 193
-bool EUSART2_is_rx_ready(void);
+# 219
+uint8_t EUSART2_is_rx_ready(void);
 
-# 240
+# 266
 bool EUSART2_is_tx_done(void);
 
-# 260
+# 286
 uint8_t EUSART2_Read(void);
 
-# 280
+# 306
 void EUSART2_Write(uint8_t txData);
+
+# 328
+void EUSART2_Receive_ISR(void);
+
+# 349
+void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 
 # 93 "mcc_generated_files/eusart1.h"
 void eusartmdb_Initialize(void);
@@ -14926,6 +14945,8 @@ const uint8_t totalmsg[] = "Total R";
 const uint8_t cashinmsg[] = "Cash in R";
 const uint8_t totalvendsm[] = "Vends ";
 const uint8_t vendispmsg[] = "Use button / Service";
+const uint8_t clocktime[] = "Time ";
+const uint8_t clockdate[] = "Date ";
 
 uint8_t bflag;
 uint8_t lcdfunc;
@@ -14954,6 +14975,8 @@ void lcd_clockH(void);
 void lcd_clockL(void);
 
 void lcd_clockE(void);
+
+void disp_clock(void);
 
 void lcd_test(void);
 
@@ -15504,7 +15527,132 @@ void off_sens(uint8_t channel);
 
 void Reset_settings(void);
 
-# 11 "lcd.c"
+# 4 "/opt/microchip/xc8/v1.45/include/__size_t.h"
+typedef unsigned size_t;
+
+# 14 "/opt/microchip/xc8/v1.45/include/string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+
+# 36
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
+
+# 21 "gsm.h"
+uint8_t gsmbyte = 0;
+uint8_t gsmmsg[512];
+uint8_t gsmums[512];
+uint8_t gsmusm[256];
+uint8_t gsmtim[23];
+uint8_t gsdate[10];
+uint8_t gstime[10];
+uint8_t noofline;
+
+
+const uint8_t smsdel[] = "AT+CMGDA=\"DEL ALL\"\r";
+const uint8_t smslst[] = "AT+CMGL=\"ALL\"\r";
+const uint8_t smscap[] = "AT+CMGL=?\r";
+const uint8_t smstxt[] = "AT+CMGF=1\r";
+const uint8_t engqry[] = "AT+AT+CEER\r";
+const uint8_t engfmt[] = "AT+CENG=?";
+const uint8_t engwrt[] = "AT+CENG?";
+const uint8_t noecho[] = "ATE0;V0\r";
+const uint8_t usdtst[] = "AT+CUSD=?\r";
+const uint8_t ussdrd[] = "AT+CUSD?\r";
+const uint8_t ussdwe[] = "AT+CUSD=1\r";
+const uint8_t ussdwc[] = "AT+CUSD=2\r";
+const uint8_t ussdwv[] = "AT+CUSD=1,\"*135*500#\"\r";
+const uint8_t ussdwm[] = "AT+CUSD=1,\"*136#\"\r";
+const uint8_t ussdw2[] = "AT+CUSD=1,\"*136#\",2\r";
+const uint8_t setgsm[] = "AT+CSCS=\"GSM\"\r";
+const uint8_t airtim[] = "AT+CUSD =1\r";
+const uint8_t prodid[] = "ATI\r";
+const uint8_t dconfg[] = "AT&V\r";
+const uint8_t ownnum[] = "AT+CNUM\r";
+const uint8_t clockr[] = "AT+CCLK?\r";
+const uint8_t clockw[] = "AT+CCLK=";
+const uint8_t pwrsta[] = "AT+CBC\r";
+const uint8_t loctim[] = "AT+CIPGSMLOC=2\r";
+const uint8_t nettst[] = "AT+CLTS=1\r";
+const uint8_t netoff[] = "AT+CLTS=0\r";
+const uint8_t baudra[] = "AT+IPR=19200\r";
+const uint8_t facres[] = "AT&F0\r";
+
+struct
+{
+unsigned retransmit : 1;
+unsigned meerror : 1;
+unsigned mtn : 1;
+unsigned msgavl : 1;
+unsigned spare4 : 1;
+unsigned spare5 : 1;
+unsigned spare6 : 1;
+unsigned spare7 : 1;
+} gsmflags;
+
+void gsm_zerobuff(uint8_t* gsmsgbuf, uint16_t count );
+
+void gsm_waitx(void);
+
+void gsm_waitr(void);
+
+void gsm_transmit(uint8_t txbyte);
+
+void gsm_gettime(void);
+
+void gsm_getbalance(void);
+
+void gsm_setime(void);
+
+void parse_date_time(void);
+
+uint8_t gsm_unsolic(void);
+
+void clock_display(void);
+
+void gsm_receive(uint8_t noofline, uint8_t *messagebuf);
+
+void gsm_msg(uint8_t *msgadd);
+
+void gsm_init(void);
+
+void gsm_txAT(void);
+
+void gsm_on(void);
+
+uint8_t gsm_Read(void);
+
+void gsm_off(void);
+
+void gsm_netwait(void);
+
+uint8_t EUSARTG_Read(void);
+
+# 12 "lcd.c"
 void lcd_init()
 {
 LATE = 0x00;
@@ -15513,10 +15661,10 @@ LATD = 0x03;
 for(count = 3; count > 0; count-- )
 {
 lcd_clockE();
-_delay((unsigned long)((5)*(12000000/4000.0)));
+_delay((unsigned long)((5)*(64000000/4000.0)));
 
 }
-_delay((unsigned long)((50)*(12000000/4000000.0)));
+_delay((unsigned long)((50)*(64000000/4000000.0)));
 LATD = 0x02;
 lcd_clockE();
 
@@ -15530,7 +15678,7 @@ lcd_write(dispnormal);
 lcd_write(dispclr);
 
 lcd_test();
-_delay((unsigned long)((250)*(12000000/4000.0)));
+_delay((unsigned long)((250)*(64000000/4000.0)));
 asm("nop");
 }
 
@@ -15742,6 +15890,15 @@ lcd_dispadd(line3);
 lcd_string(nochange, line3);
 }
 
+void disp_clock(void)
+{
+lcd_write(dispclr);
+lcd_string(clockdate, line2);
+lcd_string(gsdate, line2 + 5);
+lcd_string(clocktime, line3);
+lcd_string(gstime, line3 + 5);
+}
+
 
 void lcd_writeC(uint8_t lcdata)
 {
@@ -15833,7 +15990,7 @@ return(bflag);
 void lcd_clockH(void)
 {
 asm("BSF LATE, 0");
-_delay((unsigned long)((1)*(12000000/4000000.0)));
+_delay((unsigned long)((1)*(64000000/4000000.0)));
 }
 
 
@@ -15841,7 +15998,7 @@ _delay((unsigned long)((1)*(12000000/4000000.0)));
 void lcd_clockL(void)
 {
 asm("BCF LATE, 0");
-_delay((unsigned long)((1)*(12000000/4000000.0)));
+_delay((unsigned long)((1)*(64000000/4000000.0)));
 }
 
 
@@ -15849,7 +16006,7 @@ _delay((unsigned long)((1)*(12000000/4000000.0)));
 void lcd_clockE(void)
 {
 asm("BSF LATE, 0");
-_delay((unsigned long)((1)*(12000000/4000000.0)));
+_delay((unsigned long)((1)*(64000000/4000000.0)));
 asm("BCF LATE, 0");
-_delay((unsigned long)((1)*(12000000/4000000.0)));
+_delay((unsigned long)((1)*(64000000/4000000.0)));
 }

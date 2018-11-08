@@ -14367,7 +14367,7 @@ void PIN_MANAGER_IOC(void);
 # 12 "/opt/microchip/xc8/v1.45/include/stdbool.h"
 typedef unsigned char bool;
 
-# 132 "mcc_generated_files/interrupt_manager.h"
+# 110 "mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
 
 # 100 "mcc_generated_files/tmr5.h"
@@ -14810,23 +14810,42 @@ uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
 
-# 97 "mcc_generated_files/eusart2.h"
+# 64 "mcc_generated_files/eusart2.h"
+volatile uint8_t eusart2RxHead = 0;
+volatile uint8_t eusart2RxTail = 0;
+volatile uint8_t eusart2RxBuffer[512];
+volatile uint8_t eusart2RxCount;
+
+# 90
+extern volatile uint8_t eusart2TxBufferRemaining;
+extern volatile uint8_t eusart2RxCount;
+
+# 97
+void (*EUSART2_RxDefaultInterruptHandler)(void);
+
+# 119
 void EUSART2_Initialize(void);
 
-# 145
+# 167
 bool EUSART2_is_tx_ready(void);
 
-# 193
-bool EUSART2_is_rx_ready(void);
+# 219
+uint8_t EUSART2_is_rx_ready(void);
 
-# 240
+# 266
 bool EUSART2_is_tx_done(void);
 
-# 260
+# 286
 uint8_t EUSART2_Read(void);
 
-# 280
+# 306
 void EUSART2_Write(uint8_t txData);
+
+# 328
+void EUSART2_Receive_ISR(void);
+
+# 349
+void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 
 # 93 "mcc_generated_files/eusart1.h"
 void eusartmdb_Initialize(void);
@@ -14926,6 +14945,8 @@ const uint8_t totalmsg[] = "Total R";
 const uint8_t cashinmsg[] = "Cash in R";
 const uint8_t totalvendsm[] = "Vends ";
 const uint8_t vendispmsg[] = "Use button / Service";
+const uint8_t clocktime[] = "Time ";
+const uint8_t clockdate[] = "Date ";
 
 uint8_t bflag;
 uint8_t lcdfunc;
@@ -14954,6 +14975,8 @@ void lcd_clockH(void);
 void lcd_clockL(void);
 
 void lcd_clockE(void);
+
+void disp_clock(void);
 
 void lcd_test(void);
 
@@ -15663,7 +15686,7 @@ while(butval != 0x00)
 {
 butval = butin();
 }
-_delay((unsigned long)((500)*(12000000/4000.0)));
+_delay((unsigned long)((500)*(64000000/4000.0)));
 
 return butt;
 }
@@ -15672,12 +15695,12 @@ uint8_t butin(void)
 {
 LATA7 = 0;
 LATA6 = 1;
-_delay((unsigned long)((15)*(12000000/4000.0)));
+_delay((unsigned long)((15)*(64000000/4000.0)));
 
 uint8_t butons = ((PORTA >> 1) & 0x0F) << 4;
 LATA7 = 1;
 LATA6 = 0;
-_delay((unsigned long)((15)*(12000000/4000.0)));
+_delay((unsigned long)((15)*(64000000/4000.0)));
 
 butons = ((PORTA >> 1) & 0x0F) | butons;
 LATA7 = 1;
@@ -15805,7 +15828,7 @@ displ_hex((uint24_t)newval);
 uint8_t Read_Service(void)
 {
 DAC1CON1 = 0x01;
-_delay((unsigned long)((50)*(12000000/4000000.0)));
+_delay((unsigned long)((50)*(64000000/4000000.0)));
 uint8_t senval = CMOUT;
 DAC1CON1 = sensorval;
 return senval;
@@ -15851,7 +15874,7 @@ DATAEE_WriteByte(credmem, 0x00);
 DATAEE_WriteByte(venderrors, 0x00);
 DATAEE_WriteByte(hoperror, 0x00);
 lcd_string(creditclr, line1);
-_delay((unsigned long)((1000)*(12000000/4000.0)));
+_delay((unsigned long)((1000)*(64000000/4000.0)));
 }
 
 
@@ -16013,7 +16036,7 @@ buttons = butindb();
 if(buttons != 0x00)
 {
 Link_chan(get_channel(buttons));
-_delay((unsigned long)((1000)*(12000000/4000.0)));
+_delay((unsigned long)((1000)*(64000000/4000.0)));
 }
 if(Read_Service() == 0x00)
 {
@@ -16060,7 +16083,7 @@ lcd_string(chanlinkm, line1);
 
 void Sens_off(void)
 {
-_delay((unsigned long)((250)*(12000000/4000.0)));
+_delay((unsigned long)((250)*(64000000/4000.0)));
 buttons = butindb();
 while(0x04 == buttons)
 {
@@ -16132,6 +16155,6 @@ DATAEE_WriteByte(chantimebits, 0x08);
 chantimebits++;
 }
 DATAEE_WriteByte(sensorflags, 0x05);
-_delay((unsigned long)((2000)*(12000000/4000.0)));
+_delay((unsigned long)((2000)*(64000000/4000.0)));
 }
 

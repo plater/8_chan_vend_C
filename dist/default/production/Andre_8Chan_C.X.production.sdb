@@ -79,6 +79,8 @@ TMR4_C1_OUT_SYNC 8
 TMR4_C2_OUT_SYNC 9
 TMR4_ZCD_OUTPUT 10
 ]
+"8 /opt/microchip/xc8/v1.45/sources/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
 "62 /opt/microchip/xc8/v1.45/sources/common/float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 /opt/microchip/xc8/v1.45/sources/common/ftadd.c
@@ -143,16 +145,38 @@ TMR4_ZCD_OUTPUT 10
 [v _update_vends update_vends `(v  1 e 1 0 ]
 "55 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/eusart_mdb.c
 [v _eusartmdb_Initialize eusartmdb_Initialize `(v  1 e 1 0 ]
-"10 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/gsm.c
-[v _gsm_waitx gsm_waitx `(v  1 e 1 0 ]
-"26
+"26 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/gsm.c
 [v _gsm_transmit gsm_transmit `(v  1 e 1 0 ]
-"32
+"33
+[v _gsm_zerobuff gsm_zerobuff `(v  1 e 1 0 ]
+"44
+[v _gsm_msg gsm_msg `(v  1 e 1 0 ]
+"64
 [v _gsm_init gsm_init `(v  1 e 1 0 ]
-"45
+"145
+[v _clock_display clock_display `(v  1 e 1 0 ]
+"177
+[v _parse_date_time parse_date_time `(v  1 e 1 0 ]
+"220
+[v _gsm_gettime gsm_gettime `(v  1 e 1 0 ]
+"228
+[v _gsm_getbalance gsm_getbalance `(v  1 e 1 0 ]
+"246
+[v _gsm_setime gsm_setime `(v  1 e 1 0 ]
+"367
+[v _gsm_receive gsm_receive `(v  1 e 1 0 ]
+"388
 [v _gsm_txAT gsm_txAT `(v  1 e 1 0 ]
-"51
+"395
 [v _gsm_on gsm_on `(v  1 e 1 0 ]
+"402
+[v _gsm_Read gsm_Read `(uc  1 e 1 0 ]
+"424
+[v _gsm_off gsm_off `(v  1 e 1 0 ]
+"429
+[v _gsm_netwait gsm_netwait `(v  1 e 1 0 ]
+"450
+[v _EUSARTG_Read EUSARTG_Read `(uc  1 e 1 0 ]
 "10 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/hopper.c
 [v _hopper_test hopper_test `(v  1 e 1 0 ]
 "21
@@ -167,53 +191,55 @@ TMR4_ZCD_OUTPUT 10
 [v _switch_read switch_read `(uc  1 e 1 0 ]
 "158
 [v _Update_coinsout Update_coinsout `(v  1 e 1 0 ]
-"11 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+"12 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
 [v _lcd_init lcd_init `(v  1 e 1 0 ]
-"40
+"41
 [v _displ_sens displ_sens `(v  1 e 1 0 ]
-"57
+"58
 [v _displ_lflags displ_lflags `(v  1 e 1 0 ]
-"78
+"79
 [v _displ_sflags displ_sflags `(v  1 e 1 0 ]
-"97
+"98
 [v _displ_time displ_time `(v  1 e 1 0 ]
-"107
+"108
 [v _displ_note displ_note `(uc  1 e 1 0 ]
-"114
+"115
 [v _displ_nendis displ_nendis `(v  1 e 1 0 ]
-"127
+"128
 [v _displ_credit displ_credit `(v  1 e 1 0 ]
-"135
+"136
 [v _displ_code displ_code `(v  1 e 1 0 ]
-"182
+"183
 [v _displ_noteer displ_noteer `(v  1 e 1 0 ]
-"191
+"192
 [v _displ_hex displ_hex `(v  1 e 1 0 ]
-"216
+"217
 [v _lcd_string lcd_string `(v  1 e 1 0 ]
-"234
+"235
 [v _displ_price displ_price `(v  1 e 1 0 ]
-"242
+"243
 [v _displ_nochange displ_nochange `(v  1 e 1 0 ]
 "249
+[v _disp_clock disp_clock `(v  1 e 1 0 ]
+"259
 [v _lcd_writeC lcd_writeC `(v  1 e 1 0 ]
-"269
+"279
 [v _lcd_dispadd lcd_dispadd `(v  1 e 1 0 ]
-"281
+"291
 [v _lcd_write lcd_write `(v  1 e 1 0 ]
-"301
+"311
 [v _lcd_test lcd_test `(v  1 e 1 0 ]
-"312
+"322
 [v _read_busy read_busy `(c  1 e 1 0 ]
-"336
+"346
 [v _lcd_clockH lcd_clockH `(v  1 e 1 0 ]
-"344
+"354
 [v _lcd_clockL lcd_clockL `(v  1 e 1 0 ]
-"352
+"362
 [v _lcd_clockE lcd_clockE `(v  1 e 1 0 ]
 "58 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/main.c
 [v _main main `(v  1 e 1 0 ]
-"215
+"218
 [v _enter_service enter_service `(v  1 e 1 0 ]
 "58 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/cmp1.c
 [v _CMP1_Initialize CMP1_Initialize `(v  1 e 1 0 ]
@@ -229,16 +255,18 @@ TMR4_ZCD_OUTPUT 10
 [v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
 "111
 [v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
-"56 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/eusart2.c
+"59 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/eusart2.c
 [v _EUSART2_Initialize EUSART2_Initialize `(v  1 e 1 0 ]
-"93
-[v _EUSART2_Read EUSART2_Read `(uc  1 e 1 0 ]
-"111
+"126
 [v _EUSART2_Write EUSART2_Write `(v  1 e 1 0 ]
+"137
+[v _EUSART2_Receive_ISR EUSART2_Receive_ISR `(v  1 e 1 0 ]
+"158
+[v _EUSART2_SetRxInterruptHandler EUSART2_SetRxInterruptHandler `(v  1 e 1 0 ]
 "52 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
-"65
-[v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
+"58
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
 "50 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "68
@@ -255,10 +283,8 @@ TMR4_ZCD_OUTPUT 10
 [v _DATAEE_WriteByte DATAEE_WriteByte `(v  1 e 1 0 ]
 "192
 [v _DATAEE_ReadByte DATAEE_ReadByte `(uc  1 e 1 0 ]
-"52 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/pin_manager.c
+"57 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"113
-[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 "65 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 "88
@@ -391,11 +417,13 @@ TMR4_ZCD_OUTPUT 10
 [v _off_sens off_sens `(v  1 e 1 0 ]
 "618
 [v _Reset_settings Reset_settings `(v  1 e 1 0 ]
-[s S63 . 1 `uc 1 RXPPS 1 0 :5:0 
+"50 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
+[v _RX2PPS RX2PPS `VEuc  1 e 1 @3725 ]
+[s S4016 . 1 `uc 1 RXPPS 1 0 :5:0 
 ]
-"60 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
-[u S65 . 1 `S63 1 . 1 0 ]
-[v _RX2PPSbits RX2PPSbits `VES65  1 e 1 @3725 ]
+"60
+[u S4018 . 1 `S4016 1 . 1 0 ]
+[v _RX2PPSbits RX2PPSbits `VES4018  1 e 1 @3725 ]
 "1201
 [v _RC2REG RC2REG `VEuc  1 e 1 @3737 ]
 "1239
@@ -406,7 +434,7 @@ TMR4_ZCD_OUTPUT 10
 [v _SP2BRGH SP2BRGH `VEuc  1 e 1 @3740 ]
 "1360
 [v _RC2STA RC2STA `VEuc  1 e 1 @3741 ]
-[s S182 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S127 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -416,19 +444,19 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 SPEN 1 0 :1:7 
 ]
 "1393
-[s S1661 . 1 `uc 1 . 1 0 :6:0 
+[s S1695 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_92 1 0 :1:6 
 ]
-[s S1664 . 1 `uc 1 . 1 0 :6:0 
+[s S1698 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC92 1 0 :1:6 
 ]
-[s S1667 . 1 `uc 1 RCD82 1 0 :1:0 
+[s S1701 . 1 `uc 1 RCD82 1 0 :1:0 
 ]
-[u S1669 . 1 `S182 1 . 1 0 `S1661 1 . 1 0 `S1664 1 . 1 0 `S1667 1 . 1 0 ]
-[v _RC2STAbits RC2STAbits `VES1669  1 e 1 @3741 ]
+[u S1703 . 1 `S127 1 . 1 0 `S1695 1 . 1 0 `S1698 1 . 1 0 `S1701 1 . 1 0 ]
+[v _RC2STAbits RC2STAbits `VES1703  1 e 1 @3741 ]
 "1534
 [v _TX2STA TX2STA `VEuc  1 e 1 @3742 ]
-[s S149 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S94 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -438,45 +466,50 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 CSRC 1 0 :1:7 
 ]
 "1563
-[s S1628 . 1 `uc 1 . 1 0 :6:0 
+[s S1661 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_92 1 0 :1:6 
 ]
-[s S1631 . 1 `uc 1 TXD82 1 0 :1:0 
+[s S1664 . 1 `uc 1 TXD82 1 0 :1:0 
 ]
-[u S1633 . 1 `S149 1 . 1 0 `S1628 1 . 1 0 `S1631 1 . 1 0 ]
-[v _TX2STAbits TX2STAbits `VES1633  1 e 1 @3742 ]
+[u S1666 . 1 `S94 1 . 1 0 `S1661 1 . 1 0 `S1664 1 . 1 0 ]
+[v _TX2STAbits TX2STAbits `VES1666  1 e 1 @3742 ]
 "1690
 [v _BAUD2CON BAUD2CON `VEuc  1 e 1 @3743 ]
 "2053
 [v _PPSLOCK PPSLOCK `VEuc  1 e 1 @3744 ]
-[s S3836 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
+[s S4009 . 1 `uc 1 PPSLOCKED 1 0 :1:0 
 ]
 "2063
-[u S3838 . 1 `S3836 1 . 1 0 ]
-[v _PPSLOCKbits PPSLOCKbits `VES3838  1 e 1 @3744 ]
+[u S4011 . 1 `S4009 1 . 1 0 ]
+[v _PPSLOCKbits PPSLOCKbits `VES4011  1 e 1 @3744 ]
+"3243
+[v _RX1PPS RX1PPS `VEuc  1 e 1 @3765 ]
 "3258
-[v _RX1PPSbits RX1PPSbits `VES65  1 e 1 @3765 ]
-[s S374 . 1 `uc 1 INT0IP 1 0 :1:0 
-`uc 1 INT1IP 1 0 :1:1 
-`uc 1 INT2IP 1 0 :1:2 
-`uc 1 . 1 0 :1:3 
-`uc 1 IOCIP 1 0 :1:4 
-`uc 1 TMR0IP 1 0 :1:5 
+[v _RX1PPSbits RX1PPSbits `VES4018  1 e 1 @3765 ]
+[s S326 . 1 `uc 1 SSP1IE 1 0 :1:0 
+`uc 1 BCL1IE 1 0 :1:1 
+`uc 1 SSP2IE 1 0 :1:2 
+`uc 1 BCL2IE 1 0 :1:3 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+`uc 1 TX2IE 1 0 :1:6 
+`uc 1 RC2IE 1 0 :1:7 
 ]
-"3426
-[u S381 . 1 `S374 1 . 1 0 ]
-[v _IPR0bits IPR0bits `VES381  1 e 1 @3770 ]
-[s S46 . 1 `uc 1 INT0IE 1 0 :1:0 
-`uc 1 INT1IE 1 0 :1:1 
-`uc 1 INT2IE 1 0 :1:2 
-`uc 1 . 1 0 :1:3 
-`uc 1 IOCIE 1 0 :1:4 
-`uc 1 TMR0IE 1 0 :1:5 
+"3978
+[s S335 . 1 `uc 1 RXB0IE 1 0 :1:0 
+`uc 1 RXB1IE 1 0 :1:1 
+`uc 1 TXB0IE 1 0 :1:2 
+`uc 1 TXB1IE 1 0 :1:3 
+`uc 1 TXB2IE 1 0 :1:4 
 ]
-"3822
-[u S53 . 1 `S46 1 . 1 0 ]
-[v _PIE0bits PIE0bits `VES53  1 e 1 @3778 ]
-[s S79 . 1 `uc 1 INT0IF 1 0 :1:0 
+[s S341 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RXBNIE 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 TXBNIE 1 0 :1:4 
+]
+[u S346 . 1 `S326 1 . 1 0 `S335 1 . 1 0 `S341 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES346  1 e 1 @3781 ]
+[s S1065 . 1 `uc 1 INT0IF 1 0 :1:0 
 `uc 1 INT1IF 1 0 :1:1 
 `uc 1 INT2IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -484,9 +517,9 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "4228
-[u S86 . 1 `S79 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES86  1 e 1 @3786 ]
-[s S117 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[u S1072 . 1 `S1065 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES1072  1 e 1 @3786 ]
+[s S62 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -496,14 +529,14 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 RC2IF 1 0 :1:7 
 ]
 "4377
-[s S126 . 1 `uc 1 . 1 0 :1:0 
+[s S71 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RXBNIF 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 TXBNIF 1 0 :1:4 
 ]
-[u S131 . 1 `S117 1 . 1 0 `S126 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES131  1 e 1 @3789 ]
-[s S572 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S76 . 1 `S62 1 . 1 0 `S71 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES76  1 e 1 @3789 ]
+[s S559 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 TMR3IF 1 0 :1:2 
 `uc 1 TMR4IF 1 0 :1:3 
@@ -511,19 +544,19 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 TMR6IF 1 0 :1:5 
 ]
 "4447
-[u S579 . 1 `S572 1 . 1 0 ]
-[v _PIR4bits PIR4bits `VES579  1 e 1 @3790 ]
-[s S504 . 1 `uc 1 CWGIF 1 0 :1:0 
+[u S566 . 1 `S559 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES566  1 e 1 @3790 ]
+[s S494 . 1 `uc 1 CWGIF 1 0 :1:0 
 `uc 1 . 1 0 :4:1 
 `uc 1 NVMIF 1 0 :1:5 
 `uc 1 CRCIF 1 0 :1:6 
 `uc 1 SCANIF 1 0 :1:7 
 ]
 "4557
-[s S510 . 1 `uc 1 CWG1IF 1 0 :1:0 
+[s S500 . 1 `uc 1 CWG1IF 1 0 :1:0 
 ]
-[u S512 . 1 `S504 1 . 1 0 `S510 1 . 1 0 ]
-[v _PIR7bits PIR7bits `VES512  1 e 1 @3793 ]
+[u S502 . 1 `S494 1 . 1 0 `S500 1 . 1 0 ]
+[v _PIR7bits PIR7bits `VES502  1 e 1 @3793 ]
 "5165
 [v _OSCCON1 OSCCON1 `VEuc  1 e 1 @3800 ]
 "5305
@@ -550,30 +583,40 @@ TMR4_ZCD_OUTPUT 10
 [v _RB5PPS RB5PPS `VEuc  1 e 1 @3828 ]
 "6938
 [v _RC6PPS RC6PPS `VEuc  1 e 1 @3837 ]
+"7758
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @3854 ]
 "7820
 [v _ODCONA ODCONA `VEuc  1 e 1 @3855 ]
 "7882
 [v _WPUA WPUA `VEuc  1 e 1 @3856 ]
 "7944
 [v _ANSELA ANSELA `VEuc  1 e 1 @3857 ]
+"8254
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @3862 ]
 "8316
 [v _ODCONB ODCONB `VEuc  1 e 1 @3863 ]
 "8378
 [v _WPUB WPUB `VEuc  1 e 1 @3864 ]
 "8440
 [v _ANSELB ANSELB `VEuc  1 e 1 @3865 ]
+"8750
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @3870 ]
 "8812
 [v _ODCONC ODCONC `VEuc  1 e 1 @3871 ]
 "8874
 [v _WPUC WPUC `VEuc  1 e 1 @3872 ]
 "8936
 [v _ANSELC ANSELC `VEuc  1 e 1 @3873 ]
+"9060
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @3875 ]
 "9122
 [v _ODCOND ODCOND `VEuc  1 e 1 @3876 ]
 "9184
 [v _WPUD WPUD `VEuc  1 e 1 @3877 ]
 "9246
 [v _ANSELD ANSELD `VEuc  1 e 1 @3878 ]
+"9409
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @3883 ]
 "9441
 [v _ODCONE ODCONE `VEuc  1 e 1 @3884 ]
 "9473
@@ -594,19 +637,19 @@ TMR4_ZCD_OUTPUT 10
 [v _CM1PCH CM1PCH `VEuc  1 e 1 @3900 ]
 "10497
 [v _CMOUT CMOUT `VEuc  1 e 1 @3901 ]
-[s S260 . 1 `uc 1 MC1OUT 1 0 :1:0 
+[s S205 . 1 `uc 1 MC1OUT 1 0 :1:0 
 `uc 1 MC2OUT 1 0 :1:1 
 ]
 "10508
-[u S263 . 1 `S260 1 . 1 0 ]
-[v _CMOUTbits CMOUTbits `VES263  1 e 1 @3901 ]
+[u S208 . 1 `S205 1 . 1 0 ]
+[v _CMOUTbits CMOUTbits `VES208  1 e 1 @3901 ]
 "15462
 [v _NVMADRL NVMADRL `VEuc  1 e 1 @3966 ]
 "15716
 [v _NVMADRH NVMADRH `VEuc  1 e 1 @3967 ]
 "15772
 [v _NVMDAT NVMDAT `VEuc  1 e 1 @3968 ]
-[s S432 . 1 `uc 1 RD 1 0 :1:0 
+[s S422 . 1 `uc 1 RD 1 0 :1:0 
 `uc 1 WR 1 0 :1:1 
 `uc 1 WREN 1 0 :1:2 
 `uc 1 WRERR 1 0 :1:3 
@@ -615,17 +658,17 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 NVMREG 1 0 :2:6 
 ]
 "15863
-[s S440 . 1 `uc 1 . 1 0 :6:0 
+[s S430 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 NVMREG0 1 0 :1:6 
 `uc 1 NVMREG1 1 0 :1:7 
 ]
-[u S444 . 1 `S432 1 . 1 0 `S440 1 . 1 0 ]
-[v _NVMCON1bits NVMCON1bits `VES444  1 e 1 @3969 ]
+[u S434 . 1 `S422 1 . 1 0 `S430 1 . 1 0 ]
+[v _NVMCON1bits NVMCON1bits `VES434  1 e 1 @3969 ]
 "15908
 [v _NVMCON2 NVMCON2 `VEuc  1 e 1 @3970 ]
 "15928
 [v _LATA LATA `VEuc  1 e 1 @3971 ]
-[s S2957 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S3122 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -635,7 +678,7 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 LATA7 1 0 :1:7 
 ]
 "15955
-[s S2966 . 1 `uc 1 LA0 1 0 :1:0 
+[s S3131 . 1 `uc 1 LA0 1 0 :1:0 
 `uc 1 LA1 1 0 :1:1 
 `uc 1 LA2 1 0 :1:2 
 `uc 1 LA3 1 0 :1:3 
@@ -644,13 +687,13 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 LA6 1 0 :1:6 
 `uc 1 LA7 1 0 :1:7 
 ]
-[u S2975 . 1 `S2957 1 . 1 0 `S2966 1 . 1 0 ]
-[v _LATAbits LATAbits `VES2975  1 e 1 @3971 ]
+[u S3140 . 1 `S3122 1 . 1 0 `S3131 1 . 1 0 ]
+[v _LATAbits LATAbits `VES3140  1 e 1 @3971 ]
 "16040
 [v _LATB LATB `VEuc  1 e 1 @3972 ]
 "16152
 [v _LATC LATC `VEuc  1 e 1 @3973 ]
-[s S2997 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S3162 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -660,7 +703,7 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 LATC7 1 0 :1:7 
 ]
 "16179
-[s S3006 . 1 `uc 1 LC0 1 0 :1:0 
+[s S3171 . 1 `uc 1 LC0 1 0 :1:0 
 `uc 1 LC1 1 0 :1:1 
 `uc 1 LC2 1 0 :1:2 
 `uc 1 LC3 1 0 :1:3 
@@ -669,8 +712,8 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 LC6 1 0 :1:6 
 `uc 1 LC7 1 0 :1:7 
 ]
-[u S3015 . 1 `S2997 1 . 1 0 `S3006 1 . 1 0 ]
-[v _LATCbits LATCbits `VES3015  1 e 1 @3973 ]
+[u S3180 . 1 `S3162 1 . 1 0 `S3171 1 . 1 0 ]
+[v _LATCbits LATCbits `VES3180  1 e 1 @3973 ]
 "16264
 [v _LATD LATD `VEuc  1 e 1 @3974 ]
 "16376
@@ -687,7 +730,7 @@ TMR4_ZCD_OUTPUT 10
 [v _TRISE TRISE `VEuc  1 e 1 @3980 ]
 "17023
 [v _PORTA PORTA `VEuc  1 e 1 @3981 ]
-[s S4778 . 1 `uc 1 RB0 1 0 :1:0 
+[s S4973 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -697,11 +740,11 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 RB7 1 0 :1:7 
 ]
 "17128
-[s S4787 . 1 `uc 1 . 1 0 :3:0 
+[s S4982 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
-[u S4790 . 1 `S4778 1 . 1 0 `S4787 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES4790  1 e 1 @3982 ]
+[u S4985 . 1 `S4973 1 . 1 0 `S4982 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES4985  1 e 1 @3982 ]
 "17264
 [v _PORTD PORTD `VEuc  1 e 1 @3984 ]
 "18575
@@ -715,29 +758,29 @@ TMR4_ZCD_OUTPUT 10
 "18734
 [v _RC1STA RC1STA `VEuc  1 e 1 @3997 ]
 "18767
-[s S191 . 1 `uc 1 . 1 0 :6:0 
+[s S136 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S194 . 1 `uc 1 . 1 0 :6:0 
+[s S139 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S197 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S142 . 1 `uc 1 RCD8 1 0 :1:0 
 ]
-[u S199 . 1 `S182 1 . 1 0 `S191 1 . 1 0 `S194 1 . 1 0 `S197 1 . 1 0 ]
-[v _RC1STAbits RC1STAbits `VES199  1 e 1 @3997 ]
+[u S144 . 1 `S127 1 . 1 0 `S136 1 . 1 0 `S139 1 . 1 0 `S142 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES144  1 e 1 @3997 ]
 "18908
 [v _TX1STA TX1STA `VEuc  1 e 1 @3998 ]
 "18937
-[s S158 . 1 `uc 1 . 1 0 :6:0 
+[s S103 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S161 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S106 . 1 `uc 1 TXD8 1 0 :1:0 
 ]
-[u S163 . 1 `S149 1 . 1 0 `S158 1 . 1 0 `S161 1 . 1 0 ]
-[v _TX1STAbits TX1STAbits `VES163  1 e 1 @3998 ]
+[u S108 . 1 `S94 1 . 1 0 `S103 1 . 1 0 `S106 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES108  1 e 1 @3998 ]
 "19064
 [v _BAUD1CON BAUD1CON `VEuc  1 e 1 @3999 ]
-[s S3706 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S3879 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -747,40 +790,40 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "19133
-[s S3715 . 1 `uc 1 ABDEN1 1 0 :1:0 
+[s S3888 . 1 `uc 1 ABDEN1 1 0 :1:0 
 ]
-[s S3717 . 1 `uc 1 . 1 0 :7:0 
+[s S3890 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 ABDOVF1 1 0 :1:7 
 ]
-[s S3720 . 1 `uc 1 . 1 0 :3:0 
+[s S3893 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 BRG161 1 0 :1:3 
 ]
-[s S3723 . 1 `uc 1 . 1 0 :4:0 
+[s S3896 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 CKTXP 1 0 :1:4 
 ]
-[s S3726 . 1 `uc 1 . 1 0 :6:0 
+[s S3899 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RCIDL1 1 0 :1:6 
 ]
-[s S3729 . 1 `uc 1 . 1 0 :6:0 
+[s S3902 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RCMT 1 0 :1:6 
 ]
-[s S3732 . 1 `uc 1 . 1 0 :6:0 
+[s S3905 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RCMT1 1 0 :1:6 
 ]
-[s S3735 . 1 `uc 1 . 1 0 :4:0 
+[s S3908 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 SCKP1 1 0 :1:4 
 ]
-[s S3738 . 1 `uc 1 . 1 0 :4:0 
+[s S3911 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TXCKP 1 0 :1:4 
 ]
-[s S3741 . 1 `uc 1 . 1 0 :4:0 
+[s S3914 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TXCKP1 1 0 :1:4 
 ]
-[s S3744 . 1 `uc 1 . 1 0 :1:0 
+[s S3917 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 WUE1 1 0 :1:1 
 ]
-[u S3747 . 1 `S3706 1 . 1 0 `S3715 1 . 1 0 `S3717 1 . 1 0 `S3720 1 . 1 0 `S3723 1 . 1 0 `S3726 1 . 1 0 `S3729 1 . 1 0 `S3732 1 . 1 0 `S3735 1 . 1 0 `S3738 1 . 1 0 `S3741 1 . 1 0 `S3744 1 . 1 0 ]
-[v _BAUD1CONbits BAUD1CONbits `VES3747  1 e 1 @3999 ]
+[u S3920 . 1 `S3879 1 . 1 0 `S3888 1 . 1 0 `S3890 1 . 1 0 `S3893 1 . 1 0 `S3896 1 . 1 0 `S3899 1 . 1 0 `S3902 1 . 1 0 `S3905 1 . 1 0 `S3908 1 . 1 0 `S3911 1 . 1 0 `S3914 1 . 1 0 `S3917 1 . 1 0 ]
+[v _BAUD1CONbits BAUD1CONbits `VES3920  1 e 1 @3999 ]
 "21228
 [v _T4TMR T4TMR `VEuc  1 e 1 @4021 ]
 "21233
@@ -937,42 +980,42 @@ TMR4_ZCD_OUTPUT 10
 [v _TMR5H TMR5H `VEuc  1 e 1 @4034 ]
 "22701
 [v _T5CON T5CON `VEuc  1 e 1 @4035 ]
-[s S590 . 1 `uc 1 . 1 0 :2:0 
+[s S577 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_SYNC 1 0 :1:2 
 ]
 "22740
-[s S593 . 1 `uc 1 ON 1 0 :1:0 
+[s S580 . 1 `uc 1 ON 1 0 :1:0 
 `uc 1 RD16 1 0 :1:1 
 `uc 1 nSYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 CKPS 1 0 :2:4 
 ]
-[s S931 . 1 `uc 1 . 1 0 :2:0 
+[s S918 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T5SYNC 1 0 :1:2 
 ]
-[s S934 . 1 `uc 1 TMR5ON 1 0 :1:0 
+[s S921 . 1 `uc 1 TMR5ON 1 0 :1:0 
 `uc 1 T5RD16 1 0 :1:1 
 `uc 1 nT5SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T5CKPS0 1 0 :1:4 
 `uc 1 T5CKPS1 1 0 :1:5 
 ]
-[s S609 . 1 `uc 1 . 1 0 :4:0 
+[s S596 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 CKPS0 1 0 :1:4 
 `uc 1 CKPS1 1 0 :1:5 
 ]
-[s S945 . 1 `uc 1 . 1 0 :1:0 
+[s S932 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD165 1 0 :1:1 
 ]
-[u S948 . 1 `S590 1 . 1 0 `S593 1 . 1 0 `S931 1 . 1 0 `S934 1 . 1 0 `S609 1 . 1 0 `S945 1 . 1 0 ]
-[v _T5CONbits T5CONbits `VES948  1 e 1 @4035 ]
+[u S935 . 1 `S577 1 . 1 0 `S580 1 . 1 0 `S918 1 . 1 0 `S921 1 . 1 0 `S596 1 . 1 0 `S932 1 . 1 0 ]
+[v _T5CONbits T5CONbits `VES935  1 e 1 @4035 ]
 "22815
 [v _T5GCON T5GCON `VEuc  1 e 1 @4036 ]
-[s S650 . 1 `uc 1 . 1 0 :3:0 
+[s S637 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 GGO_NOT_DONE 1 0 :1:3 
 ]
 "22857
-[s S653 . 1 `uc 1 . 1 0 :2:0 
+[s S640 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 GVAL 1 0 :1:2 
 `uc 1 GGO_nDONE 1 0 :1:3 
 `uc 1 GSPM 1 0 :1:4 
@@ -980,10 +1023,10 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 GPOL 1 0 :1:6 
 `uc 1 GE 1 0 :1:7 
 ]
-[s S993 . 1 `uc 1 . 1 0 :3:0 
+[s S980 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T5GGO_NOT_DONE 1 0 :1:3 
 ]
-[s S996 . 1 `uc 1 . 1 0 :2:0 
+[s S983 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T5GVAL 1 0 :1:2 
 `uc 1 T5GGO_nDONE 1 0 :1:3 
 `uc 1 T5GSPM 1 0 :1:4 
@@ -991,11 +1034,11 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 T5GPOL 1 0 :1:6 
 `uc 1 T5GE 1 0 :1:7 
 ]
-[s S1004 . 1 `uc 1 . 1 0 :3:0 
+[s S991 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T5GGO 1 0 :1:3 
 ]
-[u S1007 . 1 `S650 1 . 1 0 `S653 1 . 1 0 `S993 1 . 1 0 `S996 1 . 1 0 `S1004 1 . 1 0 ]
-[v _T5GCONbits T5GCONbits `VES1007  1 e 1 @4036 ]
+[u S994 . 1 `S637 1 . 1 0 `S640 1 . 1 0 `S980 1 . 1 0 `S983 1 . 1 0 `S991 1 . 1 0 ]
+[v _T5GCONbits T5GCONbits `VES994  1 e 1 @4036 ]
 "23047
 [v _T5GATE T5GATE `VEuc  1 e 1 @4037 ]
 "23189
@@ -1007,28 +1050,28 @@ TMR4_ZCD_OUTPUT 10
 "23628
 [v _T3CON T3CON `VEuc  1 e 1 @4041 ]
 "23667
-[s S768 . 1 `uc 1 . 1 0 :2:0 
+[s S755 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T3SYNC 1 0 :1:2 
 ]
-[s S771 . 1 `uc 1 TMR3ON 1 0 :1:0 
+[s S758 . 1 `uc 1 TMR3ON 1 0 :1:0 
 `uc 1 T3RD16 1 0 :1:1 
 `uc 1 nT3SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T3CKPS0 1 0 :1:4 
 `uc 1 T3CKPS1 1 0 :1:5 
 ]
-[s S782 . 1 `uc 1 . 1 0 :1:0 
+[s S769 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD163 1 0 :1:1 
 ]
-[u S785 . 1 `S590 1 . 1 0 `S593 1 . 1 0 `S768 1 . 1 0 `S771 1 . 1 0 `S609 1 . 1 0 `S782 1 . 1 0 ]
-[v _T3CONbits T3CONbits `VES785  1 e 1 @4041 ]
+[u S772 . 1 `S577 1 . 1 0 `S580 1 . 1 0 `S755 1 . 1 0 `S758 1 . 1 0 `S596 1 . 1 0 `S769 1 . 1 0 ]
+[v _T3CONbits T3CONbits `VES772  1 e 1 @4041 ]
 "23742
 [v _T3GCON T3GCON `VEuc  1 e 1 @4042 ]
 "23784
-[s S830 . 1 `uc 1 . 1 0 :3:0 
+[s S817 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T3GGO_NOT_DONE 1 0 :1:3 
 ]
-[s S833 . 1 `uc 1 . 1 0 :2:0 
+[s S820 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T3GVAL 1 0 :1:2 
 `uc 1 T3GGO_nDONE 1 0 :1:3 
 `uc 1 T3GSPM 1 0 :1:4 
@@ -1036,11 +1079,11 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 T3GPOL 1 0 :1:6 
 `uc 1 T3GE 1 0 :1:7 
 ]
-[s S841 . 1 `uc 1 . 1 0 :3:0 
+[s S828 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T3GGO 1 0 :1:3 
 ]
-[u S844 . 1 `S650 1 . 1 0 `S653 1 . 1 0 `S830 1 . 1 0 `S833 1 . 1 0 `S841 1 . 1 0 ]
-[v _T3GCONbits T3GCONbits `VES844  1 e 1 @4042 ]
+[u S831 . 1 `S637 1 . 1 0 `S640 1 . 1 0 `S817 1 . 1 0 `S820 1 . 1 0 `S828 1 . 1 0 ]
+[v _T3GCONbits T3GCONbits `VES831  1 e 1 @4042 ]
 "23974
 [v _T3GATE T3GATE `VEuc  1 e 1 @4043 ]
 "24116
@@ -1052,28 +1095,28 @@ TMR4_ZCD_OUTPUT 10
 "24555
 [v _T1CON T1CON `VEuc  1 e 1 @4047 ]
 "24594
-[s S599 . 1 `uc 1 . 1 0 :2:0 
+[s S586 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_T1SYNC 1 0 :1:2 
 ]
-[s S602 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S589 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 T1RD16 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
 `uc 1 T1CKPS1 1 0 :1:5 
 ]
-[s S613 . 1 `uc 1 . 1 0 :1:0 
+[s S600 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD161 1 0 :1:1 
 ]
-[u S616 . 1 `S590 1 . 1 0 `S593 1 . 1 0 `S599 1 . 1 0 `S602 1 . 1 0 `S609 1 . 1 0 `S613 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES616  1 e 1 @4047 ]
+[u S603 . 1 `S577 1 . 1 0 `S580 1 . 1 0 `S586 1 . 1 0 `S589 1 . 1 0 `S596 1 . 1 0 `S600 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES603  1 e 1 @4047 ]
 "24669
 [v _T1GCON T1GCON `VEuc  1 e 1 @4048 ]
 "24711
-[s S661 . 1 `uc 1 . 1 0 :3:0 
+[s S648 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T1GGO_NOT_DONE 1 0 :1:3 
 ]
-[s S664 . 1 `uc 1 . 1 0 :2:0 
+[s S651 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO_nDONE 1 0 :1:3 
 `uc 1 T1GSPM 1 0 :1:4 
@@ -1081,11 +1124,11 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 T1GPOL 1 0 :1:6 
 `uc 1 T1GE 1 0 :1:7 
 ]
-[s S672 . 1 `uc 1 . 1 0 :3:0 
+[s S659 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 T1GGO 1 0 :1:3 
 ]
-[u S675 . 1 `S650 1 . 1 0 `S653 1 . 1 0 `S661 1 . 1 0 `S664 1 . 1 0 `S672 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES675  1 e 1 @4048 ]
+[u S662 . 1 `S637 1 . 1 0 `S640 1 . 1 0 `S648 1 . 1 0 `S651 1 . 1 0 `S659 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES662  1 e 1 @4048 ]
 "24901
 [v _T1GATE T1GATE `VEuc  1 e 1 @4049 ]
 "25043
@@ -1096,23 +1139,23 @@ TMR4_ZCD_OUTPUT 10
 [v _TMR0H TMR0H `VEuc  1 e 1 @4052 ]
 "25577
 [v _T0CON0 T0CON0 `VEuc  1 e 1 @4053 ]
-[s S1089 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+[s S1083 . 1 `uc 1 T0OUTPS 1 0 :4:0 
 `uc 1 T016BIT 1 0 :1:4 
 `uc 1 T0OUT 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 T0EN 1 0 :1:7 
 ]
 "25597
-[s S1095 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+[s S1089 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
 `uc 1 T0OUTPS1 1 0 :1:1 
 `uc 1 T0OUTPS2 1 0 :1:2 
 `uc 1 T0OUTPS3 1 0 :1:3 
 ]
-[u S1100 . 1 `S1089 1 . 1 0 `S1095 1 . 1 0 ]
-[v _T0CON0bits T0CON0bits `VES1100  1 e 1 @4053 ]
+[u S1094 . 1 `S1083 1 . 1 0 `S1089 1 . 1 0 ]
+[v _T0CON0bits T0CON0bits `VES1094  1 e 1 @4053 ]
 "25642
 [v _T0CON1 T0CON1 `VEuc  1 e 1 @4054 ]
-[s S337 . 1 `uc 1 INT0EDG 1 0 :1:0 
+[s S289 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -1121,16 +1164,16 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "26495
-[s S345 . 1 `uc 1 . 1 0 :6:0 
+[s S297 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S349 . 1 `uc 1 . 1 0 :6:0 
+[s S301 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S353 . 1 `S337 1 . 1 0 `S345 1 . 1 0 `S349 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES353  1 e 1 @4082 ]
+[u S305 . 1 `S289 1 . 1 0 `S297 1 . 1 0 `S301 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES305  1 e 1 @4082 ]
 "26597
 [v _TABLAT TABLAT `VEuc  1 e 1 @4085 ]
 "26626
@@ -1157,7 +1200,7 @@ TMR4_ZCD_OUTPUT 10
 [v _cc_poll cc_poll `Cuc  1 e 1 0 ]
 "58
 [v _hpserial hpserial `[3]uc  1 e 3 0 ]
-[s S1745 . 1 `uc 1 isdata 1 0 :1:0 
+[s S1789 . 1 `uc 1 isdata 1 0 :1:0 
 `uc 1 hoperr 1 0 :1:1 
 `uc 1 mode 1 0 :1:2 
 `uc 1 timeout 1 0 :1:3 
@@ -1167,9 +1210,60 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 spare5 1 0 :1:7 
 ]
 "70
-[v _cctflags cctflags `S1745  1 e 1 0 ]
-"20 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/gsm.h
+[v _cctflags cctflags `S1789  1 e 1 0 ]
+"21 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/gsm.h
 [v _gsmbyte gsmbyte `uc  1 e 1 0 ]
+"22
+[v _gsmmsg gsmmsg `[512]uc  1 e 512 0 ]
+"23
+[v _gsmums gsmums `[512]uc  1 e 512 0 ]
+"24
+[v _gsmusm gsmusm `[256]uc  1 e 256 0 ]
+"25
+[v _gsmtim gsmtim `[23]uc  1 e 23 0 ]
+"26
+[v _gsdate gsdate `[10]uc  1 e 10 0 ]
+"27
+[v _gstime gstime `[10]uc  1 e 10 0 ]
+"31
+[v _smsdel smsdel `C[20]uc  1 e 20 0 ]
+"34
+[v _smstxt smstxt `C[11]uc  1 e 11 0 ]
+"35
+[v _engqry engqry `C[12]uc  1 e 12 0 ]
+"38
+[v _noecho noecho `C[9]uc  1 e 9 0 ]
+"42
+[v _ussdwc ussdwc `C[11]uc  1 e 11 0 ]
+"43
+[v _ussdwv ussdwv `C[23]uc  1 e 23 0 ]
+"44
+[v _ussdwm ussdwm `C[19]uc  1 e 19 0 ]
+"45
+[v _ussdw2 ussdw2 `C[21]uc  1 e 21 0 ]
+"46
+[v _setgsm setgsm `C[15]uc  1 e 15 0 ]
+"51
+[v _clockr clockr `C[10]uc  1 e 10 0 ]
+"52
+[v _clockw clockw `C[9]uc  1 e 9 0 ]
+"55
+[v _nettst nettst `C[11]uc  1 e 11 0 ]
+"56
+[v _netoff netoff `C[11]uc  1 e 11 0 ]
+"58
+[v _facres facres `C[7]uc  1 e 7 0 ]
+[s S1913 . 1 `uc 1 retransmit 1 0 :1:0 
+`uc 1 meerror 1 0 :1:1 
+`uc 1 mtn 1 0 :1:2 
+`uc 1 msgavl 1 0 :1:3 
+`uc 1 spare4 1 0 :1:4 
+`uc 1 spare5 1 0 :1:5 
+`uc 1 spare6 1 0 :1:6 
+`uc 1 spare7 1 0 :1:7 
+]
+"70
+[v _gsmflags gsmflags `S1913  1 e 1 0 ]
 "15 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/hopper.h
 [v _change change `uc  1 e 1 0 ]
 "16
@@ -1270,16 +1364,30 @@ TMR4_ZCD_OUTPUT 10
 [v _totalvendsm totalvendsm `C[7]uc  1 e 7 0 ]
 "117
 [v _vendispmsg vendispmsg `C[21]uc  1 e 21 0 ]
+"118
+[v _clocktime clocktime `C[6]uc  1 e 6 0 ]
 "119
-[v _bflag bflag `uc  1 e 1 0 ]
+[v _clockdate clockdate `C[6]uc  1 e 6 0 ]
 "121
-[v _lcdata lcdata `uc  1 e 1 0 ]
+[v _bflag bflag `uc  1 e 1 0 ]
 "123
-[v _stradd stradd `uc  1 e 1 0 ]
+[v _lcdata lcdata `uc  1 e 1 0 ]
 "125
-[v _ercode ercode `uc  1 e 1 0 ]
+[v _stradd stradd `uc  1 e 1 0 ]
 "127
+[v _ercode ercode `uc  1 e 1 0 ]
+"129
 [v _dspposition dspposition `uc  1 e 1 0 ]
+"64 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/eusart2.h
+[v _eusart2RxHead eusart2RxHead `VEuc  1 e 1 0 ]
+"65
+[v _eusart2RxTail eusart2RxTail `VEuc  1 e 1 0 ]
+"66
+[v _eusart2RxBuffer eusart2RxBuffer `VE[512]uc  1 e 512 0 ]
+"67
+[v _eusart2RxCount eusart2RxCount `VEuc  1 e 1 0 ]
+"97
+[v _EUSART2_RxDefaultInterruptHandler EUSART2_RxDefaultInterruptHandler `*.38(v  1 e 3 0 ]
 "58 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/tmr0.c
 [v _timer0ReloadVal16bit timer0ReloadVal16bit `VEui  1 e 2 0 ]
 "57 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/tmr1.c
@@ -1310,7 +1418,7 @@ TMR4_ZCD_OUTPUT 10
 [v _dbcount dbcount `ui  1 e 2 0 ]
 "53
 [v _notenum notenum `uc  1 e 1 0 ]
-[s S1718 . 1 `uc 1 isdata 1 0 :1:0 
+[s S1762 . 1 `uc 1 isdata 1 0 :1:0 
 `uc 1 noteerr 1 0 :1:1 
 `uc 1 mode 1 0 :1:2 
 `uc 1 timeout 1 0 :1:3 
@@ -1320,8 +1428,8 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 spare5 1 0 :1:7 
 ]
 "68
-[v _mdbflags mdbflags `S1718  1 e 1 0 ]
-[s S1727 . 1 `uc 1 R10 1 0 :1:0 
+[v _mdbflags mdbflags `S1762  1 e 1 0 ]
+[s S1771 . 1 `uc 1 R10 1 0 :1:0 
 `uc 1 R20 1 0 :1:1 
 `uc 1 R50 1 0 :1:2 
 `uc 1 R100 1 0 :1:3 
@@ -1331,7 +1439,7 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 spare2 1 0 :1:7 
 ]
 "82
-[v _noteen noteen `S1727  1 e 1 0 ]
+[v _noteen noteen `S1771  1 e 1 0 ]
 "83
 [v _noteen_byte noteen_byte `VEuc  1 e 1 0 ]
 "21 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.h
@@ -1406,7 +1514,7 @@ TMR4_ZCD_OUTPUT 10
 [v _nosentime nosentime `Cui  1 e 2 0 ]
 "94
 [v _hoperror hoperror `Cui  1 e 2 0 ]
-[s S1736 . 1 `uc 1 chan1 1 0 :1:0 
+[s S1780 . 1 `uc 1 chan1 1 0 :1:0 
 `uc 1 chan2 1 0 :1:1 
 `uc 1 chan3 1 0 :1:2 
 `uc 1 chan4 1 0 :1:3 
@@ -1416,26 +1524,26 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 chan8 1 0 :1:7 
 ]
 "106
-[v _senschk senschk `S1736  1 e 1 0 ]
+[v _senschk senschk `S1780  1 e 1 0 ]
 "121
-[v _venderr venderr `S1736  1 e 1 0 ]
+[v _venderr venderr `S1780  1 e 1 0 ]
 "136
-[v _chanlink1 chanlink1 `S1736  1 e 1 @3 ]
+[v _chanlink1 chanlink1 `S1780  1 e 1 @3 ]
 "148
-[v _chanlink2 chanlink2 `S1736  1 e 1 @4 ]
+[v _chanlink2 chanlink2 `S1780  1 e 1 @4 ]
 "160
-[v _chanlink3 chanlink3 `S1736  1 e 1 @5 ]
+[v _chanlink3 chanlink3 `S1780  1 e 1 @5 ]
 "172
-[v _chanlink4 chanlink4 `S1736  1 e 1 @6 ]
+[v _chanlink4 chanlink4 `S1780  1 e 1 @6 ]
 "184
-[v _chanlink5 chanlink5 `S1736  1 e 1 @7 ]
+[v _chanlink5 chanlink5 `S1780  1 e 1 @7 ]
 "196
-[v _chanlink6 chanlink6 `S1736  1 e 1 @8 ]
+[v _chanlink6 chanlink6 `S1780  1 e 1 @8 ]
 "208
-[v _chanlink7 chanlink7 `S1736  1 e 1 @9 ]
+[v _chanlink7 chanlink7 `S1780  1 e 1 @9 ]
 "220
-[v _chanlink8 chanlink8 `S1736  1 e 1 @10 ]
-[s S1844 . 3 `uc 1 iscredit 1 0 :1:0 
+[v _chanlink8 chanlink8 `S1780  1 e 1 @10 ]
+[s S1888 . 3 `uc 1 iscredit 1 0 :1:0 
 `uc 1 error 1 0 :1:1 
 `uc 1 inscoin 1 0 :1:2 
 `uc 1 nochange 1 0 :1:3 
@@ -1461,13 +1569,13 @@ TMR4_ZCD_OUTPUT 10
 `uc 1 spare24 1 2 :1:7 
 ]
 "250
-[v _venflags venflags `S1844  1 e 3 0 ]
+[v _venflags venflags `S1888  1 e 3 0 ]
 "58 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"177
-[v main@channel channel `uc  1 a 1 18 ]
-"201
+"180
+[v main@channel channel `uc  1 a 1 16 ]
+"204
 } 0
 "33 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
 [v _vend_init vend_init `(v  1 e 1 0 ]
@@ -1492,7 +1600,7 @@ TMR4_ZCD_OUTPUT 10
 "47
 [v mdb_reset@i i `uc  1 a 1 29 ]
 "50
-[v mdb_reset@i_4062 i `uc  1 a 1 30 ]
+[v mdb_reset@i_4246 i `uc  1 a 1 30 ]
 "58
 } 0
 "55 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/eusart_mdb.c
@@ -1618,7 +1726,7 @@ TMR4_ZCD_OUTPUT 10
 [v vend_nosense@chanel chanel `uc  1 a 1 wreg ]
 [v vend_nosense@chanel chanel `uc  1 a 1 wreg ]
 "121
-[v vend_nosense@chanel chanel `uc  1 a 1 23 ]
+[v vend_nosense@chanel chanel `uc  1 a 1 24 ]
 "136
 } 0
 "138
@@ -1769,27 +1877,135 @@ TMR4_ZCD_OUTPUT 10
 {
 "109
 } 0
-"11 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+"12 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
 [v _lcd_init lcd_init `(v  1 e 1 0 ]
 {
-"38
+"39
 } 0
-"301
+"311
 [v _lcd_test lcd_test `(v  1 e 1 0 ]
 {
-"303
+"313
 [v lcd_test@character character `uc  1 a 1 25 ]
-"309
+"319
 } 0
-"32 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/gsm.c
+"424 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/gsm.c
+[v _gsm_off gsm_off `(v  1 e 1 0 ]
+{
+"427
+} 0
+"64
 [v _gsm_init gsm_init `(v  1 e 1 0 ]
 {
-"43
+"143
 } 0
-"45
+"388
 [v _gsm_txAT gsm_txAT `(v  1 e 1 0 ]
 {
-"49
+"392
+} 0
+"246
+[v _gsm_setime gsm_setime `(v  1 e 1 0 ]
+{
+"285
+[v gsm_setime@i i `uc  1 a 1 33 ]
+"253
+[v gsm_setime@x x `uc  1 a 1 32 ]
+"338
+} 0
+"395
+[v _gsm_on gsm_on `(v  1 e 1 0 ]
+{
+"400
+} 0
+"429
+[v _gsm_netwait gsm_netwait `(v  1 e 1 0 ]
+{
+"432
+[v gsm_netwait@x x `uc  1 a 1 18 ]
+"448
+} 0
+"228
+[v _gsm_getbalance gsm_getbalance `(v  1 e 1 0 ]
+{
+"244
+} 0
+"145
+[v _clock_display clock_display `(v  1 e 1 0 ]
+{
+"175
+} 0
+"220
+[v _gsm_gettime gsm_gettime `(v  1 e 1 0 ]
+{
+"226
+} 0
+"177
+[v _parse_date_time parse_date_time `(v  1 e 1 0 ]
+{
+"182
+[v parse_date_time@i i `uc  1 a 1 33 ]
+"181
+[v parse_date_time@x x `uc  1 a 1 32 ]
+"186
+[v parse_date_time@hour hour `uc  1 a 1 31 ]
+"187
+[v parse_date_time@hhour hhour `uc  1 a 1 30 ]
+"218
+} 0
+"8 /opt/microchip/xc8/v1.45/sources/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 24 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 23 ]
+[v ___awdiv@counter counter `uc  1 a 1 22 ]
+"8
+[v ___awdiv@dividend dividend `i  1 p 2 18 ]
+[v ___awdiv@divisor divisor `i  1 p 2 20 ]
+"42
+} 0
+"367 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/gsm.c
+[v _gsm_receive gsm_receive `(v  1 e 1 0 ]
+{
+"368
+[v gsm_receive@noofline noofline `uc  1 a 1 wreg ]
+"370
+[v gsm_receive@x x `uc  1 a 1 27 ]
+"368
+[v gsm_receive@noofline noofline `uc  1 a 1 wreg ]
+"367
+[v gsm_receive@messagebuf messagebuf `*.39uc  1 p 2 24 ]
+"369
+[v gsm_receive@noofline noofline `uc  1 a 1 26 ]
+"386
+} 0
+"33
+[v _gsm_zerobuff gsm_zerobuff `(v  1 e 1 0 ]
+{
+"35
+[v gsm_zerobuff@x x `ui  1 a 2 22 ]
+"33
+[v gsm_zerobuff@gsmsgbuf gsmsgbuf `*.39uc  1 p 2 18 ]
+[v gsm_zerobuff@count count `ui  1 p 2 20 ]
+"42
+} 0
+"450
+[v _EUSARTG_Read EUSARTG_Read `(uc  1 e 1 0 ]
+{
+"469
+} 0
+"44
+[v _gsm_msg gsm_msg `(v  1 e 1 0 ]
+{
+"51
+[v gsm_msg@gsmstr gsmstr `uc  1 a 1 27 ]
+"46
+[v gsm_msg@msgbkup msgbkup `um  1 a 3 24 ]
+"44
+[v gsm_msg@msgadd msgadd `*.34uc  1 p 2 20 ]
+"61
 } 0
 "26
 [v _gsm_transmit gsm_transmit `(v  1 e 1 0 ]
@@ -1798,35 +2014,25 @@ TMR4_ZCD_OUTPUT 10
 [v gsm_transmit@txbyte txbyte `uc  1 a 1 wreg ]
 "28
 [v gsm_transmit@txbyte txbyte `uc  1 a 1 19 ]
-"30
+"31
 } 0
-"10
-[v _gsm_waitx gsm_waitx `(v  1 e 1 0 ]
-{
-"16
-} 0
-"111 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/eusart2.c
+"126 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/eusart2.c
 [v _EUSART2_Write EUSART2_Write `(v  1 e 1 0 ]
 {
 [v EUSART2_Write@txData txData `uc  1 a 1 wreg ]
 [v EUSART2_Write@txData txData `uc  1 a 1 wreg ]
 [v EUSART2_Write@txData txData `uc  1 a 1 18 ]
-"118
+"133
 } 0
-"51 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/gsm.c
-[v _gsm_on gsm_on `(v  1 e 1 0 ]
+"249 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+[v _disp_clock disp_clock `(v  1 e 1 0 ]
 {
-"55
+"256
 } 0
-"93 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/eusart2.c
-[v _EUSART2_Read EUSART2_Read `(uc  1 e 1 0 ]
-{
-"109
-} 0
-"215 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/main.c
+"218 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/main.c
 [v _enter_service enter_service `(v  1 e 1 0 ]
 {
-"247
+"250
 } 0
 "60 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mdb.c
 [v _set_notes set_notes `(v  1 e 1 0 ]
@@ -1847,23 +2053,23 @@ TMR4_ZCD_OUTPUT 10
 {
 "136
 } 0
-"114 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+"115 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
 [v _displ_nendis displ_nendis `(v  1 e 1 0 ]
 {
 [v displ_nendis@note2disp note2disp `uc  1 a 1 wreg ]
-"116
+"117
 [v displ_nendis@x x `uc  1 a 1 31 ]
-"114
+"115
 [v displ_nendis@note2disp note2disp `uc  1 a 1 wreg ]
-"116
+"117
 [v displ_nendis@note2disp note2disp `uc  1 a 1 30 ]
-"125
+"126
 } 0
-"107
+"108
 [v _displ_note displ_note `(uc  1 e 1 0 ]
 {
 [v displ_note@notestring notestring `*.32uc  1 p 2 30 ]
-"112
+"113
 } 0
 "359 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
 [v _price_set price_set `(v  1 e 1 0 ]
@@ -1882,14 +2088,14 @@ TMR4_ZCD_OUTPUT 10
 [v set_price@buttons buttons `uc  1 a 1 12 ]
 "422
 } 0
-"234 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+"235 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
 [v _displ_price displ_price `(v  1 e 1 0 ]
 {
-"235
+"236
 [v displ_price@vendprice vendprice `uc  1 a 1 wreg ]
 [v displ_price@vendprice vendprice `uc  1 a 1 wreg ]
 [v displ_price@vendprice vendprice `uc  1 a 1 31 ]
-"240
+"241
 } 0
 "382 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mdb.c
 [v _mdb_unlock mdb_unlock `(v  1 e 1 0 ]
@@ -1977,15 +2183,15 @@ TMR4_ZCD_OUTPUT 10
 [v Vend_timeset@channel channel `uc  1 a 1 15 ]
 "505
 } 0
-"97 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+"98 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
 [v _displ_time displ_time `(v  1 e 1 0 ]
 {
 [v displ_time@motortime motortime `uc  1 a 1 wreg ]
 [v displ_time@motortime motortime `uc  1 a 1 wreg ]
 [v displ_time@channel channel `uc  1 p 1 31 ]
-"99
+"100
 [v displ_time@motortime motortime `uc  1 a 1 32 ]
-"105
+"106
 } 0
 "562 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
 [v _Sens_off Sens_off `(v  1 e 1 0 ]
@@ -2006,16 +2212,16 @@ TMR4_ZCD_OUTPUT 10
 [v off_sens@channel channel `uc  1 a 1 0 ]
 "616
 } 0
-"78 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+"79 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
 [v _displ_sflags displ_sflags `(v  1 e 1 0 ]
 {
 [v displ_sflags@senseflags senseflags `uc  1 a 1 wreg ]
 [v displ_sflags@senseflags senseflags `uc  1 a 1 wreg ]
 [v displ_sflags@chanel chanel `uc  1 p 1 30 ]
 [v displ_sflags@chanbit chanbit `uc  1 p 1 31 ]
-"81
+"82
 [v displ_sflags@senseflags senseflags `uc  1 a 1 32 ]
-"95
+"96
 } 0
 "618 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
 [v _Reset_settings Reset_settings `(v  1 e 1 0 ]
@@ -2063,18 +2269,18 @@ TMR4_ZCD_OUTPUT 10
 [v Link_chan@channel channel `uc  1 a 1 3 ]
 "559
 } 0
-"57 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+"58 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
 [v _displ_lflags displ_lflags `(v  1 e 1 0 ]
 {
 [v displ_lflags@chanel chanel `uc  1 a 1 wreg ]
-"61
+"62
 [v displ_lflags@lchan lchan `uc  1 a 1 32 ]
-"57
+"58
 [v displ_lflags@chanel chanel `uc  1 a 1 wreg ]
 [v displ_lflags@linkflgs linkflgs `uc  1 p 1 30 ]
-"59
+"60
 [v displ_lflags@chanel chanel `uc  1 a 1 31 ]
-"76
+"77
 } 0
 "306 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
 [v _Read_Service Read_Service `(uc  1 e 1 0 ]
@@ -2090,15 +2296,15 @@ TMR4_ZCD_OUTPUT 10
 [v Sensor_set@dacpos dacpos `uc  1 a 1 33 ]
 "347
 } 0
-"40 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+"41 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
 [v _displ_sens displ_sens `(v  1 e 1 0 ]
 {
 [v displ_sens@smsgpos smsgpos `uc  1 a 1 wreg ]
 [v displ_sens@smsgpos smsgpos `uc  1 a 1 wreg ]
 [v displ_sens@dmsgpos dmsgpos `uc  1 p 1 31 ]
-"42
+"43
 [v displ_sens@smsgpos smsgpos `uc  1 a 1 32 ]
-"55
+"56
 } 0
 "239 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/vend.c
 [v _Hopper_coin Hopper_coin `(v  1 e 1 0 ]
@@ -2111,9 +2317,9 @@ TMR4_ZCD_OUTPUT 10
 [v _butindb butindb `(uc  1 e 1 0 ]
 {
 "161
-[v butindb@butt butt `uc  1 a 1 23 ]
+[v butindb@butt butt `uc  1 a 1 24 ]
 "162
-[v butindb@butval butval `uc  1 a 1 22 ]
+[v butindb@butval butval `uc  1 a 1 23 ]
 "170
 } 0
 "265
@@ -2160,7 +2366,7 @@ TMR4_ZCD_OUTPUT 10
 [v _butin butin `(uc  1 e 1 0 ]
 {
 "178
-[v butin@butons butons `uc  1 a 1 19 ]
+[v butin@butons butons `uc  1 a 1 20 ]
 "187
 } 0
 "96
@@ -2179,109 +2385,109 @@ TMR4_ZCD_OUTPUT 10
 {
 "78
 } 0
-"182 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
+"183 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/lcd.c
 [v _displ_noteer displ_noteer `(v  1 e 1 0 ]
 {
-"189
+"190
 } 0
-"135
+"136
 [v _displ_code displ_code `(v  1 e 1 0 ]
 {
-"136
+"137
 [v displ_code@ercode ercode `uc  1 a 1 wreg ]
 [v displ_code@ercode ercode `uc  1 a 1 wreg ]
 [v displ_code@ercode ercode `uc  1 a 1 27 ]
-"180
+"181
 } 0
-"242
+"243
 [v _displ_nochange displ_nochange `(v  1 e 1 0 ]
 {
-"246
+"247
 } 0
-"127
+"128
 [v _displ_credit displ_credit `(v  1 e 1 0 ]
 {
-"129
+"130
 [v displ_credit@cash cash `uc  1 a 1 31 ]
-"133
+"134
 } 0
-"216
+"217
 [v _lcd_string lcd_string `(v  1 e 1 0 ]
 {
-[v lcd_string@lcdstring lcdstring `*.32uc  1 p 2 25 ]
+[v lcd_string@lcdstring lcdstring `*.34uc  1 p 2 25 ]
 [v lcd_string@lcdline lcdline `uc  1 p 1 27 ]
-"232
+"233
 } 0
-"191
+"192
 [v _displ_hex displ_hex `(v  1 e 1 0 ]
 {
-"194
-[v displ_hex@value value `[8]uc  1 a 8 0 ]
 "195
+[v displ_hex@value value `[8]uc  1 a 8 0 ]
+"196
 [v displ_hex@hexnumsave hexnumsave `um  1 a 3 8 ]
-"193
+"194
 [v displ_hex@i i `c  1 a 1 11 ]
-"192
+"193
 [v displ_hex@hexnum hexnum `um  1 p 3 28 ]
-"213
+"214
 } 0
-"249
+"259
 [v _lcd_writeC lcd_writeC `(v  1 e 1 0 ]
 {
-"250
+"260
 [v lcd_writeC@lcdata lcdata `uc  1 a 1 wreg ]
 [v lcd_writeC@lcdata lcdata `uc  1 a 1 wreg ]
-"253
+"263
 [v lcd_writeC@lcdata lcdata `uc  1 a 1 24 ]
-"267
+"277
 } 0
-"269
+"279
 [v _lcd_dispadd lcd_dispadd `(v  1 e 1 0 ]
 {
-"270
+"280
 [v lcd_dispadd@lcdaddress lcdaddress `uc  1 a 1 wreg ]
-"271
+"281
 [v lcd_dispadd@lcdatasave lcdatasave `uc  1 a 1 23 ]
-"270
+"280
 [v lcd_dispadd@lcdaddress lcdaddress `uc  1 a 1 wreg ]
 [v lcd_dispadd@lcdaddress lcdaddress `uc  1 a 1 22 ]
-"278
+"288
 } 0
-"281
+"291
 [v _lcd_write lcd_write `(v  1 e 1 0 ]
 {
-"282
+"292
 [v lcd_write@lcdata lcdata `uc  1 a 1 wreg ]
-"283
+"293
 [v lcd_write@savelatd savelatd `uc  1 a 1 20 ]
-"282
+"292
 [v lcd_write@lcdata lcdata `uc  1 a 1 wreg ]
 [v lcd_write@lcdata lcdata `uc  1 a 1 21 ]
-"299
+"309
 } 0
-"312
+"322
 [v _read_busy read_busy `(c  1 e 1 0 ]
 {
-"315
+"325
 [v read_busy@savelatd savelatd `uc  1 a 1 19 ]
-"314
+"324
 [v read_busy@savelate savelate `uc  1 a 1 18 ]
-"331
+"341
 } 0
-"344
+"354
 [v _lcd_clockL lcd_clockL `(v  1 e 1 0 ]
 {
-"348
+"358
 } 0
-"336
+"346
 [v _lcd_clockH lcd_clockH `(v  1 e 1 0 ]
 {
-"340
+"350
 } 0
-"352
+"362
 [v _lcd_clockE lcd_clockE `(v  1 e 1 0 ]
 {
-"358
+"368
 } 0
 "8 /opt/microchip/xc8/v1.45/sources/common/ltmod.c
 [v ___ltmod __ltmod `(um  1 e 3 0 ]
@@ -2356,10 +2562,10 @@ TMR4_ZCD_OUTPUT 10
 {
 "96
 } 0
-"52 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/pin_manager.c
+"57 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"111
+"124
 } 0
 "68 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
@@ -2369,12 +2575,18 @@ TMR4_ZCD_OUTPUT 10
 "52 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
-"63
+"56
 } 0
-"56 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/eusart2.c
+"59 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/eusart2.c
 [v _EUSART2_Initialize EUSART2_Initialize `(v  1 e 1 0 ]
 {
-"76
+"89
+} 0
+"158
+[v _EUSART2_SetRxInterruptHandler EUSART2_SetRxInterruptHandler `(v  1 e 1 0 ]
+{
+[v EUSART2_SetRxInterruptHandler@interruptHandler interruptHandler `*.38(v  1 p 3 18 ]
+"160
 } 0
 "56 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/eusart1.c
 [v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
@@ -2391,13 +2603,13 @@ TMR4_ZCD_OUTPUT 10
 {
 "73
 } 0
-"65 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/interrupt_manager.c
-[v _INTERRUPT_InterruptManagerHigh INTERRUPT_InterruptManagerHigh `IIH(v  1 e 1 0 ]
+"58 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
 {
 "76
 } 0
-"113 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/pin_manager.c
-[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+"137 /home/davepl/MPLABXProjects/Andre_8Chan_C.X/mcc_generated_files/eusart2.c
+[v _EUSART2_Receive_ISR EUSART2_Receive_ISR `(v  1 e 1 0 ]
 {
-"119
+"155
 } 0

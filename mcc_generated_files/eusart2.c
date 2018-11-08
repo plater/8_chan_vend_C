@@ -49,12 +49,18 @@
 */
 #include "eusart2.h"
 
+/**
+  Section: Macro Declarations
+*/
 
 /**
   Section: EUSART2 APIs
 */
 void EUSART2_Initialize(void)
 {
+    // disable interrupts before changing states
+    PIE3bits.RC2IE = 0;
+    EUSART2_SetRxInterruptHandler(EUSART2_Receive_ISR);
     // Set the EUSART2 module to the options selected in the user interface.
 
     // ABDOVF no_overflow; SCKP Non-Inverted; BRG16 16bit_generator; WUE disabled; ABDEN disabled; 
@@ -66,13 +72,20 @@ void EUSART2_Initialize(void)
     // TX9 8-bit; TX9D 0; SENDB sync_break_complete; TXEN enabled; SYNC asynchronous; BRGH hi_speed; CSRC slave; 
     TX2STA = 0x24;
 
-    // SP2BRGL 25; 
-    SP2BRGL = 0x19;
+    // SP2BRGL 64; 
+    SP2BRGL = 0x40;
 
-    // SP2BRGH 0; 
-    SP2BRGH = 0x00;
+    // SP2BRGH 3; 
+    SP2BRGH = 0x03;
 
 
+
+    eusart2RxHead = 0;
+    eusart2RxTail = 0;
+    eusart2RxCount = 0;
+
+    // enable receive interrupt
+    PIE3bits.RC2IE = 1;
 }
 
 bool EUSART2_is_tx_ready(void)
@@ -80,9 +93,9 @@ bool EUSART2_is_tx_ready(void)
     return (bool)(PIR3bits.TX2IF && TX2STAbits.TXEN);
 }
 
-bool EUSART2_is_rx_ready(void)
+uint8_t EUSART2_is_rx_ready(void)
 {
-    return PIR3bits.RC2IF;
+    return eusart2RxCount;
 }
 
 bool EUSART2_is_tx_done(void)
@@ -92,20 +105,22 @@ bool EUSART2_is_tx_done(void)
 
 uint8_t EUSART2_Read(void)
 {
-    while(!PIR3bits.RC2IF)
-    {
-    }
-
+    uint8_t readValue  = 0;
     
-    if(1 == RC2STAbits.OERR)
+    while(0 == eusart2RxCount)
     {
-        // EUSART2 error - restart
-
-        RC2STAbits.CREN = 0; 
-        RC2STAbits.CREN = 1; 
     }
 
-    return RC2REG;
+    readValue = eusart2RxBuffer[eusart2RxTail++];
+    if(sizeof(eusart2RxBuffer) <= eusart2RxTail)
+    {
+        eusart2RxTail = 0;
+    }
+    PIE3bits.RC2IE = 0;
+    eusart2RxCount--;
+    PIE3bits.RC2IE = 1;
+
+    return readValue;
 }
 
 void EUSART2_Write(uint8_t txData)
@@ -119,8 +134,30 @@ void EUSART2_Write(uint8_t txData)
 
 
 
+void EUSART2_Receive_ISR(void)
+{
+    
+    if(1 == RC2STAbits.OERR)
+    {
+        // EUSART2 error - restart
+
+        RC2STAbits.CREN = 0;
+        RC2STAbits.CREN = 1;
+    }
+
+    // buffer overruns are ignored
+    eusart2RxBuffer[eusart2RxHead++] = RC2REG;
+    if(sizeof(eusart2RxBuffer) <= eusart2RxHead)
+    {
+        eusart2RxHead = 0;
+    }
+    eusart2RxCount++;
+}
 
 
+void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void)){
+    EUSART2_RxDefaultInterruptHandler = interruptHandler;
+}
 /**
   End of File
 */

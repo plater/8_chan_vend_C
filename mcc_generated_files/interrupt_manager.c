@@ -1,11 +1,11 @@
 /**
-  Generated Interrupt Manager Header File
+  Generated Interrupt Manager Source File
 
   @Company:
     Microchip Technology Inc.
 
   @File Name:
-    interrupt_manager.h
+    interrupt_manager.c
 
   @Summary:
     This is the Interrupt Manager file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
@@ -17,7 +17,7 @@
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65.2
         Device            :  PIC18F47K40
-        Driver Version    :  2.12
+        Driver Version    :  2.03
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.45 or later
         MPLAB 	          :  MPLAB X 4.15
@@ -51,30 +51,29 @@
 
 void  INTERRUPT_Initialize (void)
 {
-    // Enable Interrupt Priority Vectors
-    INTCONbits.IPEN = 1;
-
-    // Assign peripheral interrupt priority vectors
-
-    // IOCI - high priority
-    IPR0bits.IOCIP = 1;
-
-
+    // Disable Interrupt Priority Vectors (16CXXX Compatibility Mode)
+    INTCONbits.IPEN = 0;
 }
 
-void __interrupt() INTERRUPT_InterruptManagerHigh (void)
+void __interrupt() INTERRUPT_InterruptManager (void)
 {
-   // interrupt handler
-    if(PIE0bits.IOCIE == 1 && PIR0bits.IOCIF == 1)
+    // interrupt handler
+    if(INTCONbits.PEIE == 1)
     {
-        PIN_MANAGER_IOC();
-    }
+        if(PIE3bits.RC2IE == 1 && PIR3bits.RC2IF == 1)
+        {
+            EUSART2_Receive_ISR();
+        } 
+        else
+        {
+            //Unhandled Interrupt
+        }
+    }      
     else
     {
         //Unhandled Interrupt
     }
 }
-
 /**
  End of File
 */

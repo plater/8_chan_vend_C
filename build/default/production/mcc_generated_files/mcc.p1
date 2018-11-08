@@ -1,5 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"132 mcc_generated_files/interrupt_manager.h
+[v F11842 `(v ~T0 @X0 0 tf ]
+"110 mcc_generated_files/interrupt_manager.h
 [v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
 "106 mcc_generated_files/mcc.h
 [v _PMD_Initialize `(v ~T0 @X0 0 ef ]
@@ -25,7 +26,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
 "95 mcc_generated_files/eusart1.h
 [v _EUSART1_Initialize `(v ~T0 @X0 0 ef ]
-"97 mcc_generated_files/eusart2.h
+"119 mcc_generated_files/eusart2.h
 [v _EUSART2_Initialize `(v ~T0 @X0 0 ef ]
 "5165 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
 [v _OSCCON1 `Vuc ~T0 @X0 0 e@3800 ]
@@ -10807,7 +10808,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;interrupt_manager.h: 132: void INTERRUPT_Initialize (void);
+[; ;interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
 [; ;tmr5.h: 100: void TMR5_Initialize(void);
 [; ;tmr5.h: 129: void TMR5_StartTimer(void);
 [; ;tmr5.h: 161: void TMR5_StopTimer(void);
@@ -10959,12 +10960,37 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;memory.h: 249: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [; ;memory.h: 275: uint8_t DATAEE_ReadByte(uint16_t bAdd);
 [; ;memory.h: 277: void MEMORY_Tasks(void);
-[; ;eusart2.h: 97: void EUSART2_Initialize(void);
-[; ;eusart2.h: 145: bool EUSART2_is_tx_ready(void);
-[; ;eusart2.h: 193: bool EUSART2_is_rx_ready(void);
-[; ;eusart2.h: 240: bool EUSART2_is_tx_done(void);
-[; ;eusart2.h: 260: uint8_t EUSART2_Read(void);
-[; ;eusart2.h: 280: void EUSART2_Write(uint8_t txData);
+"64 mcc_generated_files/eusart2.h
+[v _eusart2RxHead `Vuc ~T0 @X0 1 e ]
+[i _eusart2RxHead
+-> -> 0 `i `uc
+]
+[; ;eusart2.h: 64: volatile uint8_t eusart2RxHead = 0;
+"65
+[v _eusart2RxTail `Vuc ~T0 @X0 1 e ]
+[i _eusart2RxTail
+-> -> 0 `i `uc
+]
+[; ;eusart2.h: 65: volatile uint8_t eusart2RxTail = 0;
+"66
+[v _eusart2RxBuffer `Vuc ~T0 @X0 -> 512 `i e ]
+[; ;eusart2.h: 66: volatile uint8_t eusart2RxBuffer[512];
+"67
+[v _eusart2RxCount `Vuc ~T0 @X0 1 e ]
+[; ;eusart2.h: 67: volatile uint8_t eusart2RxCount;
+[; ;eusart2.h: 90: extern volatile uint8_t eusart2TxBufferRemaining;
+[; ;eusart2.h: 91: extern volatile uint8_t eusart2RxCount;
+"97
+[v _EUSART2_RxDefaultInterruptHandler `*F11842 ~T0 @X0 1 e ]
+[; ;eusart2.h: 97: void (*EUSART2_RxDefaultInterruptHandler)(void);
+[; ;eusart2.h: 119: void EUSART2_Initialize(void);
+[; ;eusart2.h: 167: bool EUSART2_is_tx_ready(void);
+[; ;eusart2.h: 219: uint8_t EUSART2_is_rx_ready(void);
+[; ;eusart2.h: 266: bool EUSART2_is_tx_done(void);
+[; ;eusart2.h: 286: uint8_t EUSART2_Read(void);
+[; ;eusart2.h: 306: void EUSART2_Write(uint8_t txData);
+[; ;eusart2.h: 328: void EUSART2_Receive_ISR(void);
+[; ;eusart2.h: 349: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart1.h: 93: void eusartmdb_Initialize(void);
 [; ;eusart1.h: 95: void EUSART1_Initialize(void);
 [; ;eusart1.h: 115: uint8_t EUSART1_Read(void);
@@ -11043,9 +11069,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;mcc.c: 75: OSCEN = 0x00;
 "75
 [e = _OSCEN -> -> 0 `i `uc ]
-[; ;mcc.c: 77: OSCFRQ = 0x04;
+[; ;mcc.c: 77: OSCFRQ = 0x08;
 "77
-[e = _OSCFRQ -> -> 4 `i `uc ]
+[e = _OSCFRQ -> -> 8 `i `uc ]
 [; ;mcc.c: 79: OSCTUNE = 0x00;
 "79
 [e = _OSCTUNE -> -> 0 `i `uc ]

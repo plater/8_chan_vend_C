@@ -1,4 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
+[v F11842 `(v ~T0 @X0 0 tf ]
 "58 mdb.h
 [s S1368 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1368 . isdata noteerr mode timeout vending noteset endis spare5 ]
@@ -44,12 +45,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 "225
 [s S1382 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1382 . iscredit error inscoin nochange credisplay initialrun noterr service priceset setprice vendset chanlink mottime nosense settime sensno linkchan swclosed pricedisplay audit hiprice spare22 spare23 spare24 ]
+"61 gsm.h
+[s S1383 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1383 . retransmit meerror mtn msgavl spare4 spare5 spare6 spare7 ]
 [p mainexit ]
 "80 mcc_generated_files/mcc.h
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"133 lcd.h
+"104 gsm.h
+[v _gsm_off `(v ~T0 @X0 0 ef ]
+"135 lcd.h
 [v _lcd_init `(v ~T0 @X0 0 ef ]
-"32 gsm.h
+"100 gsm.h
+[v _gsm_on `(v ~T0 @X0 0 ef ]
+"96
 [v _gsm_init `(v ~T0 @X0 0 ef ]
 "260 vend.h
 [v _vend_init `(v ~T0 @X0 0 ef ]
@@ -59,11 +67,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _CMP1_GetOutputStatus `(uc ~T0 @X0 0 ef ]
 "53 main.c
 [v _enter_service `(v ~T0 @X0 0 ef ]
-"135 lcd.h
+"137 lcd.h
 [v _lcd_string `(v ~T0 @X0 0 ef2`*uc`uc ]
-"153
+"157
 [v _displ_nochange `(v ~T0 @X0 0 ef ]
-"155
+"159
 [v _displ_credit `(v ~T0 @X0 0 ef ]
 "4438 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
 [s S266 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -77,7 +85,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _mdb_poll `(uc ~T0 @X0 0 ef ]
 "102
 [v _mdb_init `(v ~T0 @X0 0 ef ]
-"157 lcd.h
+"161 lcd.h
 [v _displ_noteer `(v ~T0 @X0 0 ef ]
 "256 vend.h
 [v _credit_add `(v ~T0 @X0 0 ef1`uc ]
@@ -89,7 +97,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _get_channel `(uc ~T0 @X0 0 ef1`uc ]
 "275 mcc_generated_files/memory.h
 [v _DATAEE_ReadByte `(uc ~T0 @X0 0 ef1`ui ]
-"151 lcd.h
+"155 lcd.h
 [v _displ_price `(v ~T0 @X0 0 ef1`uc ]
 "136 mdb.h
 [v _mdb_unlock `(v ~T0 @X0 0 ef ]
@@ -10869,7 +10877,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;interrupt_manager.h: 132: void INTERRUPT_Initialize (void);
+[; ;interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
 [; ;tmr5.h: 100: void TMR5_Initialize(void);
 [; ;tmr5.h: 129: void TMR5_StartTimer(void);
 [; ;tmr5.h: 161: void TMR5_StopTimer(void);
@@ -11021,12 +11029,37 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;memory.h: 249: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [; ;memory.h: 275: uint8_t DATAEE_ReadByte(uint16_t bAdd);
 [; ;memory.h: 277: void MEMORY_Tasks(void);
-[; ;eusart2.h: 97: void EUSART2_Initialize(void);
-[; ;eusart2.h: 145: bool EUSART2_is_tx_ready(void);
-[; ;eusart2.h: 193: bool EUSART2_is_rx_ready(void);
-[; ;eusart2.h: 240: bool EUSART2_is_tx_done(void);
-[; ;eusart2.h: 260: uint8_t EUSART2_Read(void);
-[; ;eusart2.h: 280: void EUSART2_Write(uint8_t txData);
+"64 mcc_generated_files/eusart2.h
+[v _eusart2RxHead `Vuc ~T0 @X0 1 e ]
+[i _eusart2RxHead
+-> -> 0 `i `uc
+]
+[; ;eusart2.h: 64: volatile uint8_t eusart2RxHead = 0;
+"65
+[v _eusart2RxTail `Vuc ~T0 @X0 1 e ]
+[i _eusart2RxTail
+-> -> 0 `i `uc
+]
+[; ;eusart2.h: 65: volatile uint8_t eusart2RxTail = 0;
+"66
+[v _eusart2RxBuffer `Vuc ~T0 @X0 -> 512 `i e ]
+[; ;eusart2.h: 66: volatile uint8_t eusart2RxBuffer[512];
+"67
+[v _eusart2RxCount `Vuc ~T0 @X0 1 e ]
+[; ;eusart2.h: 67: volatile uint8_t eusart2RxCount;
+[; ;eusart2.h: 90: extern volatile uint8_t eusart2TxBufferRemaining;
+[; ;eusart2.h: 91: extern volatile uint8_t eusart2RxCount;
+"97
+[v _EUSART2_RxDefaultInterruptHandler `*F11842 ~T0 @X0 1 e ]
+[; ;eusart2.h: 97: void (*EUSART2_RxDefaultInterruptHandler)(void);
+[; ;eusart2.h: 119: void EUSART2_Initialize(void);
+[; ;eusart2.h: 167: bool EUSART2_is_tx_ready(void);
+[; ;eusart2.h: 219: uint8_t EUSART2_is_rx_ready(void);
+[; ;eusart2.h: 266: bool EUSART2_is_tx_done(void);
+[; ;eusart2.h: 286: uint8_t EUSART2_Read(void);
+[; ;eusart2.h: 306: void EUSART2_Write(uint8_t txData);
+[; ;eusart2.h: 328: void EUSART2_Receive_ISR(void);
+[; ;eusart2.h: 349: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart1.h: 93: void eusartmdb_Initialize(void);
 [; ;eusart1.h: 95: void EUSART1_Initialize(void);
 [; ;eusart1.h: 115: uint8_t EUSART1_Read(void);
@@ -12797,58 +12830,85 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ]
 [; ;lcd.h: 117: const uint8_t vendispmsg[] = "Use button / Service";
+"118
+[v _clocktime `Cuc ~T0 @X0 -> 0 `x e ]
+[i _clocktime
+:U ..
+-> 84 `c
+-> 105 `c
+-> 109 `c
+-> 101 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 118: const uint8_t clocktime[] = "Time ";
 "119
-[v _bflag `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 119: uint8_t bflag;
-"120
-[v _lcdfunc `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 120: uint8_t lcdfunc;
+[v _clockdate `Cuc ~T0 @X0 -> 0 `x e ]
+[i _clockdate
+:U ..
+-> 68 `c
+-> 97 `c
+-> 116 `c
+-> 101 `c
+-> 32 `c
+-> 0 `c
+..
+]
+[; ;lcd.h: 119: const uint8_t clockdate[] = "Date ";
 "121
-[v _lcdata `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 121: uint8_t lcdata;
+[v _bflag `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 121: uint8_t bflag;
 "122
-[v _lcdline `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 122: uint8_t lcdline;
+[v _lcdfunc `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 122: uint8_t lcdfunc;
 "123
-[v _stradd `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 123: uint8_t stradd;
+[v _lcdata `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 123: uint8_t lcdata;
 "124
-[v _hexnum `um ~T0 @X0 1 e ]
-[; ;lcd.h: 124: uint24_t hexnum;
+[v _lcdline `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 124: uint8_t lcdline;
 "125
-[v _ercode `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 125: uint8_t ercode;
+[v _stradd `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 125: uint8_t stradd;
 "126
-[v _lcdaddress `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 126: uint8_t lcdaddress;
+[v _hexnum `um ~T0 @X0 1 e ]
+[; ;lcd.h: 126: uint24_t hexnum;
 "127
+[v _ercode `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 127: uint8_t ercode;
+"128
+[v _lcdaddress `uc ~T0 @X0 1 e ]
+[; ;lcd.h: 128: uint8_t lcdaddress;
+"129
 [v _dspposition `uc ~T0 @X0 1 e ]
-[; ;lcd.h: 127: uint8_t dspposition;
-[; ;lcd.h: 129: void lcd_dispadd(uint8_t lcdaddress);
-[; ;lcd.h: 131: void displ_code(uint8_t ercode);
-[; ;lcd.h: 133: void lcd_init(void);
-[; ;lcd.h: 135: void lcd_string(uint8_t *, uint8_t lcdline);
-[; ;lcd.h: 137: void lcd_writeC(uint8_t);
-[; ;lcd.h: 139: void lcd_write(uint8_t);
-[; ;lcd.h: 141: void lcd_clockH(void);
-[; ;lcd.h: 143: void lcd_clockL(void);
-[; ;lcd.h: 145: void lcd_clockE(void);
-[; ;lcd.h: 147: void lcd_test(void);
-[; ;lcd.h: 149: void displ_hex(uint24_t);
-[; ;lcd.h: 151: void displ_price(uint8_t vendprice);
-[; ;lcd.h: 153: void displ_nochange(void);
-[; ;lcd.h: 155: void displ_credit(void);
-[; ;lcd.h: 157: void displ_noteer(void);
-[; ;lcd.h: 159: void displ_test(void);
-[; ;lcd.h: 161: void displ_totals(void);
-[; ;lcd.h: 163: void displ_empty(void);
-[; ;lcd.h: 165: void displ_sens(uint8_t smsgpos, uint8_t dmsgpos);
-[; ;lcd.h: 167: void displ_lflags(uint8_t chanel, uint8_t linkflgs);
-[; ;lcd.h: 169: void displ_sflags(uint8_t senseflags, uint8_t channel, uint8_t chanbit);
-[; ;lcd.h: 171: void displ_time(uint8_t motortime, uint8_t channel);
-[; ;lcd.h: 173: uint8_t displ_note(uint8_t *notestring);
-[; ;lcd.h: 175: void displ_nendis(uint8_t notenum);
-[; ;lcd.h: 177: int8_t read_busy(void);
+[; ;lcd.h: 129: uint8_t dspposition;
+[; ;lcd.h: 131: void lcd_dispadd(uint8_t lcdaddress);
+[; ;lcd.h: 133: void displ_code(uint8_t ercode);
+[; ;lcd.h: 135: void lcd_init(void);
+[; ;lcd.h: 137: void lcd_string(uint8_t *, uint8_t lcdline);
+[; ;lcd.h: 139: void lcd_writeC(uint8_t);
+[; ;lcd.h: 141: void lcd_write(uint8_t);
+[; ;lcd.h: 143: void lcd_clockH(void);
+[; ;lcd.h: 145: void lcd_clockL(void);
+[; ;lcd.h: 147: void lcd_clockE(void);
+[; ;lcd.h: 149: void disp_clock(void);
+[; ;lcd.h: 151: void lcd_test(void);
+[; ;lcd.h: 153: void displ_hex(uint24_t);
+[; ;lcd.h: 155: void displ_price(uint8_t vendprice);
+[; ;lcd.h: 157: void displ_nochange(void);
+[; ;lcd.h: 159: void displ_credit(void);
+[; ;lcd.h: 161: void displ_noteer(void);
+[; ;lcd.h: 163: void displ_test(void);
+[; ;lcd.h: 165: void displ_totals(void);
+[; ;lcd.h: 167: void displ_empty(void);
+[; ;lcd.h: 169: void displ_sens(uint8_t smsgpos, uint8_t dmsgpos);
+[; ;lcd.h: 171: void displ_lflags(uint8_t chanel, uint8_t linkflgs);
+[; ;lcd.h: 173: void displ_sflags(uint8_t senseflags, uint8_t channel, uint8_t chanbit);
+[; ;lcd.h: 175: void displ_time(uint8_t motortime, uint8_t channel);
+[; ;lcd.h: 177: uint8_t displ_note(uint8_t *notestring);
+[; ;lcd.h: 179: void displ_nendis(uint8_t notenum);
+[; ;lcd.h: 181: int8_t read_busy(void);
 "17 mdb.h
 [v _note_reset `Cuc ~T0 @X0 1 e ]
 [i _note_reset
@@ -13657,28 +13717,624 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;vend.h: 306: void Sens_off(void);
 [; ;vend.h: 308: void off_sens(uint8_t channel);
 [; ;vend.h: 310: void Reset_settings(void);
-"20 gsm.h
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;string.h: 14: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 15: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 16: extern void * memset(void *, int, size_t);
+[; ;string.h: 36: extern char * strcat(char *, const char *);
+[; ;string.h: 37: extern char * strcpy(char *, const char *);
+[; ;string.h: 38: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 39: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 40: extern char * strdup(const char *);
+[; ;string.h: 41: extern char * strtok(char *, const char *);
+[; ;string.h: 44: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 45: extern int strcmp(const char *, const char *);
+[; ;string.h: 46: extern int stricmp(const char *, const char *);
+[; ;string.h: 47: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 48: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 49: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 50: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 51: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 52: extern size_t strspn(const char *, const char *);
+[; ;string.h: 53: extern char * strstr(const char *, const char *);
+[; ;string.h: 54: extern char * stristr(const char *, const char *);
+[; ;string.h: 55: extern char * strerror(int);
+[; ;string.h: 56: extern size_t strlen(const char *);
+[; ;string.h: 57: extern char * strchr(const char *, int);
+[; ;string.h: 58: extern char * strichr(const char *, int);
+[; ;string.h: 59: extern char * strrchr(const char *, int);
+[; ;string.h: 60: extern char * strrichr(const char *, int);
+"21 gsm.h
 [v _gsmbyte `uc ~T0 @X0 1 e ]
 [i _gsmbyte
 -> -> 0 `i `uc
 ]
-[; ;gsm.h: 20: uint8_t gsmbyte = 0;
-"21
-[v _gsmmsg `uc ~T0 @X0 -> 0 `x e ]
-[; ;gsm.h: 21: uint8_t gsmmsg[];
+[; ;gsm.h: 21: uint8_t gsmbyte = 0;
+"22
+[v _gsmmsg `uc ~T0 @X0 -> 512 `i e ]
+[; ;gsm.h: 22: uint8_t gsmmsg[512];
+"23
+[v _gsmums `uc ~T0 @X0 -> 512 `i e ]
+[; ;gsm.h: 23: uint8_t gsmums[512];
 "24
-[v _noecho `Cuc ~T0 @X0 1 e ]
-[i _noecho
--> :s 1C `Cuc
+[v _gsmusm `uc ~T0 @X0 -> 256 `i e ]
+[; ;gsm.h: 24: uint8_t gsmusm[256];
+"25
+[v _gsmtim `uc ~T0 @X0 -> 23 `i e ]
+[; ;gsm.h: 25: uint8_t gsmtim[23];
+"26
+[v _gsdate `uc ~T0 @X0 -> 10 `i e ]
+[; ;gsm.h: 26: uint8_t gsdate[10];
+"27
+[v _gstime `uc ~T0 @X0 -> 10 `i e ]
+[; ;gsm.h: 27: uint8_t gstime[10];
+"28
+[v _noofline `uc ~T0 @X0 1 e ]
+[; ;gsm.h: 28: uint8_t noofline;
+"31
+[v _smsdel `Cuc ~T0 @X0 -> 0 `x e ]
+[i _smsdel
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 77 `c
+-> 71 `c
+-> 68 `c
+-> 65 `c
+-> 61 `c
+-> 34 `c
+-> 68 `c
+-> 69 `c
+-> 76 `c
+-> 32 `c
+-> 65 `c
+-> 76 `c
+-> 76 `c
+-> 34 `c
+-> 13 `c
+-> 0 `c
+..
 ]
-[; ;gsm.h: 24: const uint8_t noecho = "ATE0";
-[; ;gsm.h: 26: void gsm_waitx(void);
-[; ;gsm.h: 28: void gsm_waitr(void);
-[; ;gsm.h: 30: void gsm_transmit(uint8_t txbyte);
-[; ;gsm.h: 32: void gsm_init(void);
-[; ;gsm.h: 34: void gsm_txAT(void);
-[; ;gsm.h: 36: void gsm_on(void);
-[; ;gsm.h: 38: void gsm_off(void);
+[; ;gsm.h: 31: const uint8_t smsdel[] = "AT+CMGDA=\"DEL ALL\"\r";
+"32
+[v _smslst `Cuc ~T0 @X0 -> 0 `x e ]
+[i _smslst
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 77 `c
+-> 71 `c
+-> 76 `c
+-> 61 `c
+-> 34 `c
+-> 65 `c
+-> 76 `c
+-> 76 `c
+-> 34 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 32: const uint8_t smslst[] = "AT+CMGL=\"ALL\"\r";
+"33
+[v _smscap `Cuc ~T0 @X0 -> 0 `x e ]
+[i _smscap
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 77 `c
+-> 71 `c
+-> 76 `c
+-> 61 `c
+-> 63 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 33: const uint8_t smscap[] = "AT+CMGL=?\r";
+"34
+[v _smstxt `Cuc ~T0 @X0 -> 0 `x e ]
+[i _smstxt
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 77 `c
+-> 71 `c
+-> 70 `c
+-> 61 `c
+-> 49 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 34: const uint8_t smstxt[] = "AT+CMGF=1\r";
+"35
+[v _engqry `Cuc ~T0 @X0 -> 0 `x e ]
+[i _engqry
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 69 `c
+-> 69 `c
+-> 82 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 35: const uint8_t engqry[] = "AT+AT+CEER\r";
+"36
+[v _engfmt `Cuc ~T0 @X0 -> 0 `x e ]
+[i _engfmt
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 69 `c
+-> 78 `c
+-> 71 `c
+-> 61 `c
+-> 63 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 36: const uint8_t engfmt[] = "AT+CENG=?";
+"37
+[v _engwrt `Cuc ~T0 @X0 -> 0 `x e ]
+[i _engwrt
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 69 `c
+-> 78 `c
+-> 71 `c
+-> 63 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 37: const uint8_t engwrt[] = "AT+CENG?";
+"38
+[v _noecho `Cuc ~T0 @X0 -> 0 `x e ]
+[i _noecho
+:U ..
+-> 65 `c
+-> 84 `c
+-> 69 `c
+-> 48 `c
+-> 59 `c
+-> 86 `c
+-> 48 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 38: const uint8_t noecho[] = "ATE0;V0\r";
+"39
+[v _usdtst `Cuc ~T0 @X0 -> 0 `x e ]
+[i _usdtst
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 61 `c
+-> 63 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 39: const uint8_t usdtst[] = "AT+CUSD=?\r";
+"40
+[v _ussdrd `Cuc ~T0 @X0 -> 0 `x e ]
+[i _ussdrd
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 63 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 40: const uint8_t ussdrd[] = "AT+CUSD?\r";
+"41
+[v _ussdwe `Cuc ~T0 @X0 -> 0 `x e ]
+[i _ussdwe
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 61 `c
+-> 49 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 41: const uint8_t ussdwe[] = "AT+CUSD=1\r";
+"42
+[v _ussdwc `Cuc ~T0 @X0 -> 0 `x e ]
+[i _ussdwc
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 61 `c
+-> 50 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 42: const uint8_t ussdwc[] = "AT+CUSD=2\r";
+"43
+[v _ussdwv `Cuc ~T0 @X0 -> 0 `x e ]
+[i _ussdwv
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 61 `c
+-> 49 `c
+-> 44 `c
+-> 34 `c
+-> 42 `c
+-> 49 `c
+-> 51 `c
+-> 53 `c
+-> 42 `c
+-> 53 `c
+-> 48 `c
+-> 48 `c
+-> 35 `c
+-> 34 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 43: const uint8_t ussdwv[] = "AT+CUSD=1,\"*135*500#\"\r";
+"44
+[v _ussdwm `Cuc ~T0 @X0 -> 0 `x e ]
+[i _ussdwm
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 61 `c
+-> 49 `c
+-> 44 `c
+-> 34 `c
+-> 42 `c
+-> 49 `c
+-> 51 `c
+-> 54 `c
+-> 35 `c
+-> 34 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 44: const uint8_t ussdwm[] = "AT+CUSD=1,\"*136#\"\r";
+"45
+[v _ussdw2 `Cuc ~T0 @X0 -> 0 `x e ]
+[i _ussdw2
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 61 `c
+-> 49 `c
+-> 44 `c
+-> 34 `c
+-> 42 `c
+-> 49 `c
+-> 51 `c
+-> 54 `c
+-> 35 `c
+-> 34 `c
+-> 44 `c
+-> 50 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 45: const uint8_t ussdw2[] = "AT+CUSD=1,\"*136#\",2\r";
+"46
+[v _setgsm `Cuc ~T0 @X0 -> 0 `x e ]
+[i _setgsm
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 83 `c
+-> 67 `c
+-> 83 `c
+-> 61 `c
+-> 34 `c
+-> 71 `c
+-> 83 `c
+-> 77 `c
+-> 34 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 46: const uint8_t setgsm[] = "AT+CSCS=\"GSM\"\r";
+"47
+[v _airtim `Cuc ~T0 @X0 -> 0 `x e ]
+[i _airtim
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 85 `c
+-> 83 `c
+-> 68 `c
+-> 32 `c
+-> 61 `c
+-> 49 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 47: const uint8_t airtim[] = "AT+CUSD =1\r";
+"48
+[v _prodid `Cuc ~T0 @X0 -> 0 `x e ]
+[i _prodid
+:U ..
+-> 65 `c
+-> 84 `c
+-> 73 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 48: const uint8_t prodid[] = "ATI\r";
+"49
+[v _dconfg `Cuc ~T0 @X0 -> 0 `x e ]
+[i _dconfg
+:U ..
+-> 65 `c
+-> 84 `c
+-> 38 `c
+-> 86 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 49: const uint8_t dconfg[] = "AT&V\r";
+"50
+[v _ownnum `Cuc ~T0 @X0 -> 0 `x e ]
+[i _ownnum
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 78 `c
+-> 85 `c
+-> 77 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 50: const uint8_t ownnum[] = "AT+CNUM\r";
+"51
+[v _clockr `Cuc ~T0 @X0 -> 0 `x e ]
+[i _clockr
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 67 `c
+-> 76 `c
+-> 75 `c
+-> 63 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 51: const uint8_t clockr[] = "AT+CCLK?\r";
+"52
+[v _clockw `Cuc ~T0 @X0 -> 0 `x e ]
+[i _clockw
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 67 `c
+-> 76 `c
+-> 75 `c
+-> 61 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 52: const uint8_t clockw[] = "AT+CCLK=";
+"53
+[v _pwrsta `Cuc ~T0 @X0 -> 0 `x e ]
+[i _pwrsta
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 66 `c
+-> 67 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 53: const uint8_t pwrsta[] = "AT+CBC\r";
+"54
+[v _loctim `Cuc ~T0 @X0 -> 0 `x e ]
+[i _loctim
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 73 `c
+-> 80 `c
+-> 71 `c
+-> 83 `c
+-> 77 `c
+-> 76 `c
+-> 79 `c
+-> 67 `c
+-> 61 `c
+-> 50 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 54: const uint8_t loctim[] = "AT+CIPGSMLOC=2\r";
+"55
+[v _nettst `Cuc ~T0 @X0 -> 0 `x e ]
+[i _nettst
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 76 `c
+-> 84 `c
+-> 83 `c
+-> 61 `c
+-> 49 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 55: const uint8_t nettst[] = "AT+CLTS=1\r";
+"56
+[v _netoff `Cuc ~T0 @X0 -> 0 `x e ]
+[i _netoff
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 67 `c
+-> 76 `c
+-> 84 `c
+-> 83 `c
+-> 61 `c
+-> 48 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 56: const uint8_t netoff[] = "AT+CLTS=0\r";
+"57
+[v _baudra `Cuc ~T0 @X0 -> 0 `x e ]
+[i _baudra
+:U ..
+-> 65 `c
+-> 84 `c
+-> 43 `c
+-> 73 `c
+-> 80 `c
+-> 82 `c
+-> 61 `c
+-> 49 `c
+-> 57 `c
+-> 50 `c
+-> 48 `c
+-> 48 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 57: const uint8_t baudra[] = "AT+IPR=19200\r";
+"58
+[v _facres `Cuc ~T0 @X0 -> 0 `x e ]
+[i _facres
+:U ..
+-> 65 `c
+-> 84 `c
+-> 38 `c
+-> 70 `c
+-> 48 `c
+-> 13 `c
+-> 0 `c
+..
+]
+[; ;gsm.h: 58: const uint8_t facres[] = "AT&F0\r";
+"70
+[v _gsmflags `S1383 ~T0 @X0 1 e ]
+[; ;gsm.h: 60: struct
+[; ;gsm.h: 61: {
+[; ;gsm.h: 62: unsigned retransmit : 1;
+[; ;gsm.h: 63: unsigned meerror : 1;
+[; ;gsm.h: 64: unsigned mtn : 1;
+[; ;gsm.h: 65: unsigned msgavl : 1;
+[; ;gsm.h: 66: unsigned spare4 : 1;
+[; ;gsm.h: 67: unsigned spare5 : 1;
+[; ;gsm.h: 68: unsigned spare6 : 1;
+[; ;gsm.h: 69: unsigned spare7 : 1;
+[; ;gsm.h: 70: } gsmflags;
+[; ;gsm.h: 72: void gsm_zerobuff(uint8_t* gsmsgbuf, uint16_t count );
+[; ;gsm.h: 74: void gsm_waitx(void);
+[; ;gsm.h: 76: void gsm_waitr(void);
+[; ;gsm.h: 78: void gsm_transmit(uint8_t txbyte);
+[; ;gsm.h: 80: void gsm_gettime(void);
+[; ;gsm.h: 82: void gsm_getbalance(void);
+[; ;gsm.h: 84: void gsm_setime(void);
+[; ;gsm.h: 86: void parse_date_time(void);
+[; ;gsm.h: 88: uint8_t gsm_unsolic(void);
+[; ;gsm.h: 90: void clock_display(void);
+[; ;gsm.h: 92: void gsm_receive(uint8_t noofline, uint8_t *messagebuf);
+[; ;gsm.h: 94: void gsm_msg(uint8_t *msgadd);
+[; ;gsm.h: 96: void gsm_init(void);
+[; ;gsm.h: 98: void gsm_txAT(void);
+[; ;gsm.h: 100: void gsm_on(void);
+[; ;gsm.h: 102: uint8_t gsm_Read(void);
+[; ;gsm.h: 104: void gsm_off(void);
+[; ;gsm.h: 106: void gsm_netwait(void);
+[; ;gsm.h: 108: uint8_t EUSARTG_Read(void);
 [; ;main.c: 53: void enter_service(void);
 [v $root$_main `(v ~T0 @X0 0 e ]
 "58 main.c
@@ -13692,214 +14348,210 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 61: SYSTEM_Initialize();
 "61
 [e ( _SYSTEM_Initialize ..  ]
-[; ;main.c: 63: lcd_init();
+[; ;main.c: 63: gsm_off();
 "63
-[e ( _lcd_init ..  ]
-[; ;main.c: 64: gsm_init();
-"64
-[e ( _gsm_init ..  ]
-[; ;main.c: 65: vend_init();
+[e ( _gsm_off ..  ]
+[; ;main.c: 65: lcd_init();
 "65
-[e ( _vend_init ..  ]
-[; ;main.c: 68: while(1 == 1)
+[e ( _lcd_init ..  ]
+[; ;main.c: 66: gsm_on();
+"66
+[e ( _gsm_on ..  ]
+[; ;main.c: 67: gsm_init();
+"67
+[e ( _gsm_init ..  ]
+[; ;main.c: 68: vend_init();
 "68
-[e $U 1384  ]
-[e :U 1385 ]
-[; ;main.c: 69: {
-"69
-{
-[; ;main.c: 70: asm("nop");
-"70
-[; <" nop ;# ">
-[; ;main.c: 71: DAC1CON1 = 0x01;
+[e ( _vend_init ..  ]
+[; ;main.c: 71: while(1 == 1)
 "71
-[e = _DAC1CON1 -> -> 1 `i `uc ]
-[; ;main.c: 72: if (!CMP1_GetOutputStatus())
+[e $U 1385  ]
+[e :U 1386 ]
+[; ;main.c: 72: {
 "72
-[e $ ! ! != -> ( _CMP1_GetOutputStatus ..  `i -> -> -> 0 `i `uc `i 1387  ]
-[; ;main.c: 73: {
+{
+[; ;main.c: 73: asm("nop");
 "73
-{
-[; ;main.c: 74: venflags.service = 1;
+[; <" nop ;# ">
+[; ;main.c: 74: DAC1CON1 = 0x01;
 "74
-[e = . _venflags 7 -> -> 1 `i `uc ]
+[e = _DAC1CON1 -> -> 1 `i `uc ]
+[; ;main.c: 75: if (!CMP1_GetOutputStatus())
+"75
+[e $ ! ! != -> ( _CMP1_GetOutputStatus ..  `i -> -> -> 0 `i `uc `i 1388  ]
+[; ;main.c: 76: {
 "76
-}
-[e :U 1387 ]
-[; ;main.c: 76: }
-[; ;main.c: 77: DAC1CON1 = sensorval;
-"77
-[e = _DAC1CON1 _sensorval ]
-[; ;main.c: 79: if(venflags.service == 1)
-"79
-[e $ ! == -> . _venflags 7 `i -> 1 `i 1388  ]
-[; ;main.c: 80: {
-"80
 {
-[; ;main.c: 81: enter_service();
-"81
-[e ( _enter_service ..  ]
-"82
+[; ;main.c: 77: venflags.service = 1;
+"77
+[e = . _venflags 7 -> -> 1 `i `uc ]
+"79
 }
 [e :U 1388 ]
-[; ;main.c: 82: }
-[; ;main.c: 84: if(venflags.inscoin == 1)
+[; ;main.c: 79: }
+[; ;main.c: 80: DAC1CON1 = sensorval;
+"80
+[e = _DAC1CON1 _sensorval ]
+[; ;main.c: 82: if(venflags.service == 1)
+"82
+[e $ ! == -> . _venflags 7 `i -> 1 `i 1389  ]
+[; ;main.c: 83: {
+"83
+{
+[; ;main.c: 84: enter_service();
 "84
-[e $ ! == -> . _venflags 2 `i -> 1 `i 1389  ]
-[; ;main.c: 85: {
+[e ( _enter_service ..  ]
 "85
-{
-[; ;main.c: 86: lcd_string(inscoin, line1);
-"86
-[e ( _lcd_string (2 , -> &U _inscoin `*uc _line1 ]
-[; ;main.c: 87: venflags.inscoin = 0;
-"87
-[e = . _venflags 2 -> -> 0 `i `uc ]
-[; ;main.c: 88: if(venflags.nochange)
-"88
-[e $ ! != -> . _venflags 3 `i -> -> -> 0 `i `uc `i 1390  ]
-[; ;main.c: 89: {
-"89
-{
-[; ;main.c: 90: displ_nochange();
-"90
-[e ( _displ_nochange ..  ]
-"91
-}
-[e :U 1390 ]
-"92
 }
 [e :U 1389 ]
-[; ;main.c: 91: }
-[; ;main.c: 92: }
-[; ;main.c: 93: if(venflags.initialrun == 1)
-"93
-[e $ ! == -> . _venflags 5 `i -> 1 `i 1391  ]
-[; ;main.c: 94: {
-"94
+[; ;main.c: 85: }
+[; ;main.c: 87: if(venflags.inscoin == 1)
+"87
+[e $ ! == -> . _venflags 2 `i -> 1 `i 1390  ]
+[; ;main.c: 88: {
+"88
 {
-[; ;main.c: 95: venflags.initialrun = 0;
-"95
-[e = . _venflags 5 -> -> 0 `i `uc ]
-[; ;main.c: 96: mdbflags.noteerr == 0;
-"96
-[e == -> . _mdbflags 1 `i -> 0 `i ]
-"97
+[; ;main.c: 89: lcd_string(inscoin, line1);
+"89
+[e ( _lcd_string (2 , -> &U _inscoin `*uc _line1 ]
+[; ;main.c: 90: venflags.inscoin = 0;
+"90
+[e = . _venflags 2 -> -> 0 `i `uc ]
+[; ;main.c: 91: if(venflags.nochange)
+"91
+[e $ ! != -> . _venflags 3 `i -> -> -> 0 `i `uc `i 1391  ]
+[; ;main.c: 92: {
+"92
+{
+[; ;main.c: 93: displ_nochange();
+"93
+[e ( _displ_nochange ..  ]
+"94
 }
 [e :U 1391 ]
-[; ;main.c: 97: }
-[; ;main.c: 98: if(venflags.credisplay == 1)
-"98
-[e $ ! == -> . _venflags 4 `i -> 1 `i 1392  ]
-[; ;main.c: 99: {
-"99
+"95
+}
+[e :U 1390 ]
+[; ;main.c: 94: }
+[; ;main.c: 95: }
+[; ;main.c: 96: if(venflags.initialrun == 1)
+"96
+[e $ ! == -> . _venflags 5 `i -> 1 `i 1392  ]
+[; ;main.c: 97: {
+"97
 {
-[; ;main.c: 100: displ_credit();
+[; ;main.c: 98: venflags.initialrun = 0;
+"98
+[e = . _venflags 5 -> -> 0 `i `uc ]
+[; ;main.c: 99: mdbflags.noteerr == 0;
+"99
+[e == -> . _mdbflags 1 `i -> 0 `i ]
 "100
-[e ( _displ_credit ..  ]
-[; ;main.c: 101: if(venflags.nochange)
+}
+[e :U 1392 ]
+[; ;main.c: 100: }
+[; ;main.c: 101: if(venflags.credisplay == 1)
 "101
-[e $ ! != -> . _venflags 3 `i -> -> -> 0 `i `uc `i 1393  ]
+[e $ ! == -> . _venflags 4 `i -> 1 `i 1393  ]
 [; ;main.c: 102: {
 "102
 {
-[; ;main.c: 103: displ_nochange();
+[; ;main.c: 103: displ_credit();
 "103
-[e ( _displ_nochange ..  ]
+[e ( _displ_credit ..  ]
+[; ;main.c: 104: if(venflags.nochange)
 "104
+[e $ ! != -> . _venflags 3 `i -> -> -> 0 `i `uc `i 1394  ]
+[; ;main.c: 105: {
+"105
+{
+[; ;main.c: 106: displ_nochange();
+"106
+[e ( _displ_nochange ..  ]
+"107
+}
+[e :U 1394 ]
+"108
 }
 [e :U 1393 ]
-"105
-}
-[e :U 1392 ]
-[; ;main.c: 104: }
-[; ;main.c: 105: }
-[; ;main.c: 107: if(PIR4bits.TMR3IF)
-"107
-[e $ ! != -> . . _PIR4bits 0 2 `i -> -> -> 0 `i `Vuc `i 1394  ]
-[; ;main.c: 108: {
-"108
-{
-[; ;main.c: 109: credit = mdb_poll();
-"109
-[e = _credit ( _mdb_poll ..  ]
-[; ;main.c: 110: if(credit != 0x00)
+[; ;main.c: 107: }
+[; ;main.c: 108: }
+[; ;main.c: 110: if(PIR4bits.TMR3IF)
 "110
-[e $ ! != -> _credit `i -> 0 `i 1395  ]
+[e $ ! != -> . . _PIR4bits 0 2 `i -> -> -> 0 `i `Vuc `i 1395  ]
 [; ;main.c: 111: {
 "111
 {
-[; ;main.c: 112: if(mdbflags.noteerr == 1)
+[; ;main.c: 112: credit = mdb_poll();
 "112
-[e $ ! == -> . _mdbflags 1 `i -> 1 `i 1396  ]
-[; ;main.c: 113: {
+[e = _credit ( _mdb_poll ..  ]
+[; ;main.c: 113: if(credit != 0x00)
 "113
-{
-[; ;main.c: 114: switch(credit)
+[e $ ! != -> _credit `i -> 0 `i 1396  ]
+[; ;main.c: 114: {
 "114
-[e $U 1398  ]
-[; ;main.c: 115: {
+{
+[; ;main.c: 115: if(mdbflags.noteerr == 1)
 "115
+[e $ ! == -> . _mdbflags 1 `i -> 1 `i 1397  ]
+[; ;main.c: 116: {
+"116
 {
-[; ;main.c: 117: case 0x06 : mdb_init();
+[; ;main.c: 117: switch(credit)
 "117
-[e :U 1399 ]
-[e ( _mdb_init ..  ]
-[; ;main.c: 118: mdbflags.noteerr == 0;
+[e $U 1399  ]
+[; ;main.c: 118: {
 "118
-[e == -> . _mdbflags 1 `i -> 0 `i ]
-[; ;main.c: 119: credit = 0;
-"119
-[e = _credit -> -> 0 `i `uc ]
-[; ;main.c: 120: break;
+{
+[; ;main.c: 120: case 0x06 : mdb_init();
 "120
-[e $U 1397  ]
-[; ;main.c: 122: case 0x09:
-"122
 [e :U 1400 ]
-[; ;main.c: 123: if(mdbflags.vending)
-"123
-[e $ ! != -> . _mdbflags 4 `i -> -> -> 0 `i `uc `i 1401  ]
-[; ;main.c: 124: {
-"124
-{
-[; ;main.c: 125: credit = 0;
-"125
-[e = _credit -> -> 0 `i `uc ]
-"126
-}
-[; ;main.c: 126: }
-[e $U 1402  ]
-"127
-[e :U 1401 ]
-[; ;main.c: 127: else
-[; ;main.c: 128: {
-"128
-{
-[; ;main.c: 129: mdb_init();
-"129
 [e ( _mdb_init ..  ]
-[; ;main.c: 130: credit = 0;
-"130
-[e = _credit -> -> 0 `i `uc ]
-"131
-}
-[e :U 1402 ]
-[; ;main.c: 131: }
-[; ;main.c: 132: break;
-"132
-[e $U 1397  ]
-[; ;main.c: 133: case 0x10:mdbflags.noteerr == 0;
-"133
-[e :U 1403 ]
+[; ;main.c: 121: mdbflags.noteerr == 0;
+"121
 [e == -> . _mdbflags 1 `i -> 0 `i ]
-[; ;main.c: 134: credit = 0;
-"134
+[; ;main.c: 122: credit = 0;
+"122
 [e = _credit -> -> 0 `i `uc ]
+[; ;main.c: 123: break;
+"123
+[e $U 1398  ]
+[; ;main.c: 125: case 0x09:
+"125
+[e :U 1401 ]
+[; ;main.c: 126: if(mdbflags.vending)
+"126
+[e $ ! != -> . _mdbflags 4 `i -> -> -> 0 `i `uc `i 1402  ]
+[; ;main.c: 127: {
+"127
+{
+[; ;main.c: 128: credit = 0;
+"128
+[e = _credit -> -> 0 `i `uc ]
+"129
+}
+[; ;main.c: 129: }
+[e $U 1403  ]
+"130
+[e :U 1402 ]
+[; ;main.c: 130: else
+[; ;main.c: 131: {
+"131
+{
+[; ;main.c: 132: mdb_init();
+"132
+[e ( _mdb_init ..  ]
+[; ;main.c: 133: credit = 0;
+"133
+[e = _credit -> -> 0 `i `uc ]
+"134
+}
+[e :U 1403 ]
+[; ;main.c: 134: }
 [; ;main.c: 135: break;
 "135
-[e $U 1397  ]
-[; ;main.c: 136: case 0x0C : mdbflags.noteerr == 0;
+[e $U 1398  ]
+[; ;main.c: 136: case 0x10:mdbflags.noteerr == 0;
 "136
 [e :U 1404 ]
 [e == -> . _mdbflags 1 `i -> 0 `i ]
@@ -13908,321 +14560,329 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _credit -> -> 0 `i `uc ]
 [; ;main.c: 138: break;
 "138
-[e $U 1397  ]
-[; ;main.c: 139: default: displ_noteer();
+[e $U 1398  ]
+[; ;main.c: 139: case 0x0C : mdbflags.noteerr == 0;
 "139
 [e :U 1405 ]
-[e ( _displ_noteer ..  ]
+[e == -> . _mdbflags 1 `i -> 0 `i ]
+[; ;main.c: 140: credit = 0;
 "140
-}
-[; ;main.c: 140: }
-[e $U 1397  ]
-"114
-[e :U 1398 ]
-[e [\ _credit , $ -> -> 6 `i `uc 1399
- , $ -> -> 9 `i `uc 1400
- , $ -> -> 16 `i `uc 1403
- , $ -> -> 12 `i `uc 1404
- 1405 ]
-"140
-[e :U 1397 ]
+[e = _credit -> -> 0 `i `uc ]
+[; ;main.c: 141: break;
 "141
-}
-[; ;main.c: 141: }
-[e $U 1406  ]
+[e $U 1398  ]
+[; ;main.c: 142: default: displ_noteer();
 "142
-[e :U 1396 ]
-[; ;main.c: 142: else
-[; ;main.c: 143: {
-"143
-{
-[; ;main.c: 144: credit_add(credit);
-"144
-[e ( _credit_add (1 _credit ]
-[; ;main.c: 145: venflags.iscredit = 1;
-"145
-[e = . _venflags 0 -> -> 1 `i `uc ]
-"146
-}
 [e :U 1406 ]
-"147
-}
-[; ;main.c: 146: }
-[; ;main.c: 147: }
-[e $U 1407  ]
-"148
-[e :U 1395 ]
-[; ;main.c: 148: else
-[; ;main.c: 149: {
-"149
-{
-[; ;main.c: 150: if(mdbflags.noteerr == 1)
-"150
-[e $ ! == -> . _mdbflags 1 `i -> 1 `i 1408  ]
-[; ;main.c: 151: {
-"151
-{
-[; ;main.c: 152: displ_noteer();
-"152
 [e ( _displ_noteer ..  ]
-"153
+"143
 }
-[e :U 1408 ]
-"156
+[; ;main.c: 143: }
+[e $U 1398  ]
+"117
+[e :U 1399 ]
+[e [\ _credit , $ -> -> 6 `i `uc 1400
+ , $ -> -> 9 `i `uc 1401
+ , $ -> -> 16 `i `uc 1404
+ , $ -> -> 12 `i `uc 1405
+ 1406 ]
+"143
+[e :U 1398 ]
+"144
+}
+[; ;main.c: 144: }
+[e $U 1407  ]
+"145
+[e :U 1397 ]
+[; ;main.c: 145: else
+[; ;main.c: 146: {
+"146
+{
+[; ;main.c: 147: credit_add(credit);
+"147
+[e ( _credit_add (1 _credit ]
+[; ;main.c: 148: venflags.iscredit = 1;
+"148
+[e = . _venflags 0 -> -> 1 `i `uc ]
+"149
 }
 [e :U 1407 ]
-"157
+"150
 }
-[e :U 1394 ]
-[; ;main.c: 153: }
-[; ;main.c: 156: }
-[; ;main.c: 157: }
-[; ;main.c: 158: if(venflags.iscredit)
-"158
-[e $ ! != -> . _venflags 0 `i -> -> -> 0 `i `uc `i 1409  ]
-[; ;main.c: 159: {
-"159
+[; ;main.c: 149: }
+[; ;main.c: 150: }
+[e $U 1408  ]
+"151
+[e :U 1396 ]
+[; ;main.c: 151: else
+[; ;main.c: 152: {
+"152
 {
-[; ;main.c: 160: if(price_check())
-"160
-[e $ ! != -> ( _price_check ..  `i -> -> -> 0 `i `uc `i 1410  ]
-[; ;main.c: 161: {
-"161
+[; ;main.c: 153: if(mdbflags.noteerr == 1)
+"153
+[e $ ! == -> . _mdbflags 1 `i -> 1 `i 1409  ]
+[; ;main.c: 154: {
+"154
 {
-[; ;main.c: 162: asm("RESET");
-"162
-[; <" RESET ;# ">
-"163
+[; ;main.c: 155: displ_noteer();
+"155
+[e ( _displ_noteer ..  ]
+"156
 }
-[e :U 1410 ]
-"164
-}
-[; ;main.c: 163: }
-[; ;main.c: 164: }
-[e $U 1411  ]
-"165
 [e :U 1409 ]
-[; ;main.c: 165: else
-[; ;main.c: 166: {
+"159
+}
+[e :U 1408 ]
+"160
+}
+[e :U 1395 ]
+[; ;main.c: 156: }
+[; ;main.c: 159: }
+[; ;main.c: 160: }
+[; ;main.c: 161: if(venflags.iscredit)
+"161
+[e $ ! != -> . _venflags 0 `i -> -> -> 0 `i `uc `i 1410  ]
+[; ;main.c: 162: {
+"162
+{
+[; ;main.c: 163: if(price_check())
+"163
+[e $ ! != -> ( _price_check ..  `i -> -> -> 0 `i `uc `i 1411  ]
+[; ;main.c: 164: {
+"164
+{
+[; ;main.c: 165: asm("RESET");
+"165
+[; <" RESET ;# ">
 "166
-{
-[; ;main.c: 167: if(butin() != 0)
-"167
-[e $ ! != -> ( _butin ..  `i -> 0 `i 1412  ]
-[; ;main.c: 168: {
-"168
-{
-[; ;main.c: 170: buttons = butin();
-"170
-[e = _buttons ( _butin ..  ]
-[; ;main.c: 171: if(((buttons & ~errormask) == 0x00) && !venflags.pricedisplay)
-"171
-[e $ ! && == & -> _buttons `i ~ -> _errormask `i -> 0 `i ! != -> . _venflags 18 `i -> -> -> 0 `i `uc `i 1413  ]
-[; ;main.c: 172: {
-"172
-{
-[; ;main.c: 173: lcd_string(emptymsg, line1);
-"173
-[e ( _lcd_string (2 , -> &U _emptymsg `*uc _line1 ]
-[; ;main.c: 174: venflags.pricedisplay = 1;
-"174
-[e = . _venflags 18 -> -> 1 `i `uc ]
-"175
-}
-[e :U 1413 ]
-[; ;main.c: 175: }
-[; ;main.c: 176: if(!venflags.pricedisplay)
-"176
-[e $ ! ! != -> . _venflags 18 `i -> -> -> 0 `i `uc `i 1414  ]
-[; ;main.c: 177: {
-"177
-{
-[v _channel `uc ~T0 @X0 1 a ]
-[; ;main.c: 178: uint8_t channel = get_channel(buttons);
-"178
-[e = _channel ( _get_channel (1 _buttons ]
-[; ;main.c: 179: vendprice = DATAEE_ReadByte(pricestore + channel);
-"179
-[e = _vendprice ( _DATAEE_ReadByte (1 + _pricestore -> _channel `ui ]
-[; ;main.c: 180: displ_price(vendprice);
-"180
-[e ( _displ_price (1 _vendprice ]
-[; ;main.c: 181: venflags.pricedisplay = 1;
-"181
-[e = . _venflags 18 -> -> 1 `i `uc ]
-"182
-}
-[e :U 1414 ]
-"183
-}
-[; ;main.c: 182: }
-[; ;main.c: 183: }
-[e $U 1415  ]
-"184
-[e :U 1412 ]
-[; ;main.c: 184: else
-[; ;main.c: 185: {
-"185
-{
-[; ;main.c: 186: if(venflags.pricedisplay)
-"186
-[e $ ! != -> . _venflags 18 `i -> -> -> 0 `i `uc `i 1416  ]
-[; ;main.c: 187: {
-"187
-{
-[; ;main.c: 188: venflags.pricedisplay = 0;
-"188
-[e = . _venflags 18 -> -> 0 `i `uc ]
-[; ;main.c: 189: venflags.inscoin = 1;
-"189
-[e = . _venflags 2 -> -> 1 `i `uc ]
-"190
-}
-[e :U 1416 ]
-"191
-}
-[e :U 1415 ]
-"194
 }
 [e :U 1411 ]
-"198
+"167
 }
-[e :U 1384 ]
-"68
-[e $ == -> 1 `i -> 1 `i 1385  ]
-[e :U 1386 ]
-[; ;main.c: 190: }
-[; ;main.c: 191: }
-[; ;main.c: 194: }
-[; ;main.c: 198: }
-[; ;main.c: 201: }
-"201
-[e :UE 1383 ]
-}
-"215
-[v _enter_service `(v ~T0 @X0 1 ef ]
-"216
+[; ;main.c: 166: }
+[; ;main.c: 167: }
+[e $U 1412  ]
+"168
+[e :U 1410 ]
+[; ;main.c: 168: else
+[; ;main.c: 169: {
+"169
 {
-[; ;main.c: 215: void enter_service(void)
-[; ;main.c: 216: {
+[; ;main.c: 170: if(butin() != 0)
+"170
+[e $ ! != -> ( _butin ..  `i -> 0 `i 1413  ]
+[; ;main.c: 171: {
+"171
+{
+[; ;main.c: 173: buttons = butin();
+"173
+[e = _buttons ( _butin ..  ]
+[; ;main.c: 174: if(((buttons & ~errormask) == 0x00) && !venflags.pricedisplay)
+"174
+[e $ ! && == & -> _buttons `i ~ -> _errormask `i -> 0 `i ! != -> . _venflags 18 `i -> -> -> 0 `i `uc `i 1414  ]
+[; ;main.c: 175: {
+"175
+{
+[; ;main.c: 176: lcd_string(emptymsg, line1);
+"176
+[e ( _lcd_string (2 , -> &U _emptymsg `*uc _line1 ]
+[; ;main.c: 177: venflags.pricedisplay = 1;
+"177
+[e = . _venflags 18 -> -> 1 `i `uc ]
+"178
+}
+[e :U 1414 ]
+[; ;main.c: 178: }
+[; ;main.c: 179: if(!venflags.pricedisplay)
+"179
+[e $ ! ! != -> . _venflags 18 `i -> -> -> 0 `i `uc `i 1415  ]
+[; ;main.c: 180: {
+"180
+{
+[v _channel `uc ~T0 @X0 1 a ]
+[; ;main.c: 181: uint8_t channel = get_channel(buttons);
+"181
+[e = _channel ( _get_channel (1 _buttons ]
+[; ;main.c: 182: vendprice = DATAEE_ReadByte(pricestore + channel);
+"182
+[e = _vendprice ( _DATAEE_ReadByte (1 + _pricestore -> _channel `ui ]
+[; ;main.c: 183: displ_price(vendprice);
+"183
+[e ( _displ_price (1 _vendprice ]
+[; ;main.c: 184: venflags.pricedisplay = 1;
+"184
+[e = . _venflags 18 -> -> 1 `i `uc ]
+"185
+}
+[e :U 1415 ]
+"186
+}
+[; ;main.c: 185: }
+[; ;main.c: 186: }
+[e $U 1416  ]
+"187
+[e :U 1413 ]
+[; ;main.c: 187: else
+[; ;main.c: 188: {
+"188
+{
+[; ;main.c: 189: if(venflags.pricedisplay)
+"189
+[e $ ! != -> . _venflags 18 `i -> -> -> 0 `i `uc `i 1417  ]
+[; ;main.c: 190: {
+"190
+{
+[; ;main.c: 191: venflags.pricedisplay = 0;
+"191
+[e = . _venflags 18 -> -> 0 `i `uc ]
+[; ;main.c: 192: venflags.inscoin = 1;
+"192
+[e = . _venflags 2 -> -> 1 `i `uc ]
+"193
+}
+[e :U 1417 ]
+"194
+}
+[e :U 1416 ]
+"197
+}
+[e :U 1412 ]
+"201
+}
+[e :U 1385 ]
+"71
+[e $ == -> 1 `i -> 1 `i 1386  ]
+[e :U 1387 ]
+[; ;main.c: 193: }
+[; ;main.c: 194: }
+[; ;main.c: 197: }
+[; ;main.c: 201: }
+[; ;main.c: 204: }
+"204
+[e :UE 1384 ]
+}
+"218
+[v _enter_service `(v ~T0 @X0 1 ef ]
+"219
+{
+[; ;main.c: 218: void enter_service(void)
+[; ;main.c: 219: {
 [e :U _enter_service ]
 [f ]
-[; ;main.c: 217: mdb_unlock();
-"217
+[; ;main.c: 220: mdb_unlock();
+"220
 [e ( _mdb_unlock ..  ]
-[; ;main.c: 218: lcd_string(servmsg, line1);
-"218
-[e ( _lcd_string (2 , -> &U _servmsg `*uc _line1 ]
-[; ;main.c: 221: while(venflags.service)
+[; ;main.c: 221: lcd_string(servmsg, line1);
 "221
-[e $U 1418  ]
-[e :U 1419 ]
-[; ;main.c: 222: {
-"222
-{
-[; ;main.c: 223: buttons = butindb();
-"223
-[e = _buttons ( _butindb ..  ]
-[; ;main.c: 224: switch(buttons)
+[e ( _lcd_string (2 , -> &U _servmsg `*uc _line1 ]
+[; ;main.c: 224: while(venflags.service)
 "224
-[e $U 1422  ]
+[e $U 1419  ]
+[e :U 1420 ]
 [; ;main.c: 225: {
 "225
 {
-[; ;main.c: 226: case 0x01 : Audit();
+[; ;main.c: 226: buttons = butindb();
 "226
-[e :U 1423 ]
-[e ( _Audit ..  ]
-[; ;main.c: 227: break;
+[e = _buttons ( _butindb ..  ]
+[; ;main.c: 227: switch(buttons)
 "227
-[e $U 1421  ]
-[; ;main.c: 228: case 0x02 : Sensor_set();
+[e $U 1423  ]
+[; ;main.c: 228: {
 "228
-[e :U 1424 ]
-[e ( _Sensor_set ..  ]
-[; ;main.c: 229: break;
+{
+[; ;main.c: 229: case 0x01 : Audit();
 "229
-[e $U 1421  ]
-[; ;main.c: 230: case 0x04 : Hopper_coin();
+[e :U 1424 ]
+[e ( _Audit ..  ]
+[; ;main.c: 230: break;
 "230
-[e :U 1425 ]
-[e ( _Hopper_coin ..  ]
-[; ;main.c: 231: break;
+[e $U 1422  ]
+[; ;main.c: 231: case 0x02 : Sensor_set();
 "231
-[e $U 1421  ]
-[; ;main.c: 232: case 0x08 : set_notes();
+[e :U 1425 ]
+[e ( _Sensor_set ..  ]
+[; ;main.c: 232: break;
 "232
-[e :U 1426 ]
-[e ( _set_notes ..  ]
-[; ;main.c: 233: break;
+[e $U 1422  ]
+[; ;main.c: 233: case 0x04 : Hopper_coin();
 "233
-[e $U 1421  ]
-[; ;main.c: 234: case 0x10 : Clear_cred();
+[e :U 1426 ]
+[e ( _Hopper_coin ..  ]
+[; ;main.c: 234: break;
 "234
-[e :U 1427 ]
-[e ( _Clear_cred ..  ]
-[; ;main.c: 235: venflags.service = 0;
+[e $U 1422  ]
+[; ;main.c: 235: case 0x08 : set_notes();
 "235
-[e = . _venflags 7 -> -> 0 `i `uc ]
-[; ;main.c: 236: asm("RESET");
+[e :U 1427 ]
+[e ( _set_notes ..  ]
+[; ;main.c: 236: break;
 "236
-[; <" RESET ;# ">
-[; ;main.c: 237: case 0x20 : price_set();
+[e $U 1422  ]
+[; ;main.c: 237: case 0x10 : Clear_cred();
 "237
 [e :U 1428 ]
-[e ( _price_set ..  ]
-[; ;main.c: 238: break;
+[e ( _Clear_cred ..  ]
+[; ;main.c: 238: venflags.service = 0;
 "238
-[e $U 1421  ]
-[; ;main.c: 239: case 0x40 : Vend_setup();
-"239
-[e :U 1429 ]
-[e ( _Vend_setup ..  ]
-[; ;main.c: 240: break;
-"240
-[e $U 1421  ]
-[; ;main.c: 241: case 0x80 : venflags.service = 0;
-"241
-[e :U 1430 ]
 [e = . _venflags 7 -> -> 0 `i `uc ]
-[; ;main.c: 242: asm("RESET");
-"242
+[; ;main.c: 239: asm("RESET");
+"239
 [; <" RESET ;# ">
+[; ;main.c: 240: case 0x20 : price_set();
+"240
+[e :U 1429 ]
+[e ( _price_set ..  ]
+[; ;main.c: 241: break;
+"241
+[e $U 1422  ]
+[; ;main.c: 242: case 0x40 : Vend_setup();
+"242
+[e :U 1430 ]
+[e ( _Vend_setup ..  ]
 [; ;main.c: 243: break;
 "243
-[e $U 1421  ]
-[; ;main.c: 244: case 0x03 : hopper_test();
+[e $U 1422  ]
+[; ;main.c: 244: case 0x80 : venflags.service = 0;
 "244
 [e :U 1431 ]
-[e ( _hopper_test ..  ]
+[e = . _venflags 7 -> -> 0 `i `uc ]
+[; ;main.c: 245: asm("RESET");
 "245
-}
-[; ;main.c: 245: }
-[e $U 1421  ]
-"224
-[e :U 1422 ]
-[e [\ _buttons , $ -> -> 1 `i `uc 1423
- , $ -> -> 2 `i `uc 1424
- , $ -> -> 4 `i `uc 1425
- , $ -> -> 8 `i `uc 1426
- , $ -> -> 16 `i `uc 1427
- , $ -> -> 32 `i `uc 1428
- , $ -> -> 64 `i `uc 1429
- , $ -> -> 128 `i `uc 1430
- , $ -> -> 3 `i `uc 1431
- 1421 ]
-"245
-[e :U 1421 ]
+[; <" RESET ;# ">
+[; ;main.c: 246: break;
 "246
-}
-[e :U 1418 ]
-"221
-[e $ != -> . _venflags 7 `i -> -> -> 0 `i `uc `i 1419  ]
-[e :U 1420 ]
-[; ;main.c: 246: }
-[; ;main.c: 247: }
+[e $U 1422  ]
+[; ;main.c: 247: case 0x03 : hopper_test();
 "247
-[e :UE 1417 ]
+[e :U 1432 ]
+[e ( _hopper_test ..  ]
+"248
 }
-[a 1C 65 84 69 48 0 ]
-
+[; ;main.c: 248: }
+[e $U 1422  ]
+"227
+[e :U 1423 ]
+[e [\ _buttons , $ -> -> 1 `i `uc 1424
+ , $ -> -> 2 `i `uc 1425
+ , $ -> -> 4 `i `uc 1426
+ , $ -> -> 8 `i `uc 1427
+ , $ -> -> 16 `i `uc 1428
+ , $ -> -> 32 `i `uc 1429
+ , $ -> -> 64 `i `uc 1430
+ , $ -> -> 128 `i `uc 1431
+ , $ -> -> 3 `i `uc 1432
+ 1422 ]
+"248
+[e :U 1422 ]
+"249
+}
+[e :U 1419 ]
+"224
+[e $ != -> . _venflags 7 `i -> -> -> 0 `i `uc `i 1420  ]
+[e :U 1421 ]
+[; ;main.c: 249: }
+[; ;main.c: 250: }
+"250
+[e :UE 1418 ]
+}

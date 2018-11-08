@@ -115,6 +115,8 @@ const uint8_t totalmsg[] = "Total R";
 const uint8_t cashinmsg[] = "Cash in R";
 const uint8_t totalvendsm[] = "Vends ";
 const uint8_t vendispmsg[] = "Use button / Service";
+const uint8_t clocktime[] = "Time ";
+const uint8_t clockdate[] = "Date ";
 
 uint8_t bflag;
 uint8_t lcdfunc;
@@ -143,6 +145,8 @@ void lcd_clockH(void);
 void lcd_clockL(void);
  //Clocks E low
 void lcd_clockE(void);
+
+void disp_clock(void);
 
 void lcd_test(void);
 

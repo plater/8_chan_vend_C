@@ -1,4 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
+[v F11842 `(v ~T0 @X0 0 tf ]
 "26475 /opt/microchip/xc8/v1.45/include/pic18f47k40.h
 [s S1338 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1338 . INT0EDG INT1EDG INT2EDG . IPEN PEIE_GIEL GIE_GIEH ]
@@ -13,35 +14,36 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1337 . . . . ]
 "26495
 [v _INTCONbits `VS1337 ~T0 @X0 0 e@4082 ]
-"3417
-[s S212 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S212 . INT0IP INT1IP INT2IP . IOCIP TMR0IP ]
-"3416
-[u S211 `S212 1 ]
-[n S211 . . ]
-"3426
-[v _IPR0bits `VS211 ~T0 @X0 0 e@3770 ]
 [t ~ __interrupt . k ]
 [t T6 __interrupt  ]
-"3813
-[s S234 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S234 . INT0IE INT1IE INT2IE . IOCIE TMR0IE ]
-"3812
-[u S233 `S234 1 ]
-[n S233 . . ]
-"3822
-[v _PIE0bits `VS233 ~T0 @X0 0 e@3778 ]
-"4219
-[s S255 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S255 . INT0IF INT1IF INT2IF . IOCIF TMR0IF ]
-"4218
-[u S254 `S255 1 ]
-[n S254 . . ]
-"4228
-[v _PIR0bits `VS254 ~T0 @X0 0 e@3786 ]
-"704 mcc_generated_files/pin_manager.h
-[v _PIN_MANAGER_IOC `(v ~T0 @X0 0 ef ]
-[; ;interrupt_manager.h: 132: void INTERRUPT_Initialize (void);
+"3954
+[s S242 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S242 . SSP1IE BCL1IE SSP2IE BCL2IE TX1IE RC1IE TX2IE RC2IE ]
+"3964
+[s S243 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S243 . RXB0IE RXB1IE TXB0IE TXB1IE TXB2IE ]
+"3971
+[s S244 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S244 . . RXBNIE . TXBNIE ]
+"3953
+[u S241 `S242 1 `S243 1 `S244 1 ]
+[n S241 . . . . ]
+"3978
+[v _PIE3bits `VS241 ~T0 @X0 0 e@3781 ]
+"4360
+[s S263 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S263 . SSP1IF BCL1IF SSP2IF BCL2IF TX1IF RC1IF TX2IF RC2IF ]
+"4370
+[s S264 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S264 . . RXBNIF . TXBNIF ]
+"4359
+[u S262 `S263 1 `S264 1 ]
+[n S262 . . . ]
+"4377
+[v _PIR3bits `VS262 ~T0 @X0 0 e@3789 ]
+"328 mcc_generated_files/eusart2.h
+[v _EUSART2_Receive_ISR `(v ~T0 @X0 0 ef ]
+[; ;interrupt_manager.h: 110: void INTERRUPT_Initialize (void);
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -10951,12 +10953,37 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;memory.h: 249: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [; ;memory.h: 275: uint8_t DATAEE_ReadByte(uint16_t bAdd);
 [; ;memory.h: 277: void MEMORY_Tasks(void);
-[; ;eusart2.h: 97: void EUSART2_Initialize(void);
-[; ;eusart2.h: 145: bool EUSART2_is_tx_ready(void);
-[; ;eusart2.h: 193: bool EUSART2_is_rx_ready(void);
-[; ;eusart2.h: 240: bool EUSART2_is_tx_done(void);
-[; ;eusart2.h: 260: uint8_t EUSART2_Read(void);
-[; ;eusart2.h: 280: void EUSART2_Write(uint8_t txData);
+"64 mcc_generated_files/eusart2.h
+[v _eusart2RxHead `Vuc ~T0 @X0 1 e ]
+[i _eusart2RxHead
+-> -> 0 `i `uc
+]
+[; ;eusart2.h: 64: volatile uint8_t eusart2RxHead = 0;
+"65
+[v _eusart2RxTail `Vuc ~T0 @X0 1 e ]
+[i _eusart2RxTail
+-> -> 0 `i `uc
+]
+[; ;eusart2.h: 65: volatile uint8_t eusart2RxTail = 0;
+"66
+[v _eusart2RxBuffer `Vuc ~T0 @X0 -> 512 `i e ]
+[; ;eusart2.h: 66: volatile uint8_t eusart2RxBuffer[512];
+"67
+[v _eusart2RxCount `Vuc ~T0 @X0 1 e ]
+[; ;eusart2.h: 67: volatile uint8_t eusart2RxCount;
+[; ;eusart2.h: 90: extern volatile uint8_t eusart2TxBufferRemaining;
+[; ;eusart2.h: 91: extern volatile uint8_t eusart2RxCount;
+"97
+[v _EUSART2_RxDefaultInterruptHandler `*F11842 ~T0 @X0 1 e ]
+[; ;eusart2.h: 97: void (*EUSART2_RxDefaultInterruptHandler)(void);
+[; ;eusart2.h: 119: void EUSART2_Initialize(void);
+[; ;eusart2.h: 167: bool EUSART2_is_tx_ready(void);
+[; ;eusart2.h: 219: uint8_t EUSART2_is_rx_ready(void);
+[; ;eusart2.h: 266: bool EUSART2_is_tx_done(void);
+[; ;eusart2.h: 286: uint8_t EUSART2_Read(void);
+[; ;eusart2.h: 306: void EUSART2_Write(uint8_t txData);
+[; ;eusart2.h: 328: void EUSART2_Receive_ISR(void);
+[; ;eusart2.h: 349: void EUSART2_SetRxInterruptHandler(void (* interruptHandler)(void));
 [; ;eusart1.h: 93: void eusartmdb_Initialize(void);
 [; ;eusart1.h: 95: void EUSART1_Initialize(void);
 [; ;eusart1.h: 115: uint8_t EUSART1_Read(void);
@@ -10972,38 +10999,55 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;interrupt_manager.c: 53: {
 [e :U _INTERRUPT_Initialize ]
 [f ]
-[; ;interrupt_manager.c: 55: INTCONbits.IPEN = 1;
+[; ;interrupt_manager.c: 55: INTCONbits.IPEN = 0;
 "55
-[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
-[; ;interrupt_manager.c: 60: IPR0bits.IOCIP = 1;
-"60
-[e = . . _IPR0bits 0 4 -> -> 1 `i `uc ]
-[; ;interrupt_manager.c: 63: }
-"63
+[e = . . _INTCONbits 0 4 -> -> 0 `i `uc ]
+[; ;interrupt_manager.c: 56: }
+"56
 [e :UE 1368 ]
 }
-[v $root$_INTERRUPT_InterruptManagerHigh `(v ~T0 @X0 0 e ]
-"65
-[v _INTERRUPT_InterruptManagerHigh `(v ~T6 @X0 1 ef ]
-"66
+[v $root$_INTERRUPT_InterruptManager `(v ~T0 @X0 0 e ]
+"58
+[v _INTERRUPT_InterruptManager `(v ~T6 @X0 1 ef ]
+"59
 {
-[; ;interrupt_manager.c: 65: void __interrupt() INTERRUPT_InterruptManagerHigh (void)
-[; ;interrupt_manager.c: 66: {
-[e :U _INTERRUPT_InterruptManagerHigh ]
+[; ;interrupt_manager.c: 58: void __interrupt() INTERRUPT_InterruptManager (void)
+[; ;interrupt_manager.c: 59: {
+[e :U _INTERRUPT_InterruptManager ]
 [f ]
-[; ;interrupt_manager.c: 68: if(PIE0bits.IOCIE == 1 && PIR0bits.IOCIF == 1)
-"68
-[e $ ! && == -> . . _PIE0bits 0 4 `i -> 1 `i == -> . . _PIR0bits 0 4 `i -> 1 `i 1370  ]
-[; ;interrupt_manager.c: 69: {
-"69
+[; ;interrupt_manager.c: 61: if(INTCONbits.PEIE == 1)
+"61
+[e $ ! == -> . . _INTCONbits 1 1 `i -> 1 `i 1370  ]
+[; ;interrupt_manager.c: 62: {
+"62
 {
-[; ;interrupt_manager.c: 70: PIN_MANAGER_IOC();
+[; ;interrupt_manager.c: 63: if(PIE3bits.RC2IE == 1 && PIR3bits.RC2IF == 1)
+"63
+[e $ ! && == -> . . _PIE3bits 0 7 `i -> 1 `i == -> . . _PIR3bits 0 7 `i -> 1 `i 1371  ]
+[; ;interrupt_manager.c: 64: {
+"64
+{
+[; ;interrupt_manager.c: 65: EUSART2_Receive_ISR();
+"65
+[e ( _EUSART2_Receive_ISR ..  ]
+"66
+}
+[; ;interrupt_manager.c: 66: }
+[e $U 1372  ]
+"67
+[e :U 1371 ]
+[; ;interrupt_manager.c: 67: else
+[; ;interrupt_manager.c: 68: {
+"68
+{
 "70
-[e ( _PIN_MANAGER_IOC ..  ]
+}
+[e :U 1372 ]
 "71
 }
+[; ;interrupt_manager.c: 70: }
 [; ;interrupt_manager.c: 71: }
-[e $U 1371  ]
+[e $U 1373  ]
 "72
 [e :U 1370 ]
 [; ;interrupt_manager.c: 72: else
@@ -11012,7 +11056,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 {
 "75
 }
-[e :U 1371 ]
+[e :U 1373 ]
 [; ;interrupt_manager.c: 75: }
 [; ;interrupt_manager.c: 76: }
 "76
