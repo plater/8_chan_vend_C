@@ -1,4 +1,3 @@
- build/default/production/eusart_mdb.d  \
- build/default/production/eusart_mdb.p1:  \
- eusart_mdb.c  \
+build/default/production/eusart_mdb.p1:  \
+eusart_mdb.c  \
 mcc_generated_files/eusart1.h 

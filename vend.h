@@ -28,7 +28,7 @@ volatile uint8_t nvcash[3];
 volatile uint8_t tvends[8];
 volatile uint8_t vcashout[2];
 volatile uint16_t pvcash;
-volatile uint24_t pnvcash;
+volatile __uint24 pnvcash;
 volatile uint8_t senspos;
 volatile uint8_t dummy[8];
 volatile uint8_t pricevend[8];
@@ -133,7 +133,7 @@ struct
     unsigned chan6 : 1;
     unsigned chan7 : 1;
     unsigned chan8 : 1;
-} chanlink1 @ 0x003;
+} chanlink1 __at(0x003);
 
 struct
 {
@@ -145,7 +145,7 @@ struct
     unsigned chan6 : 1;
     unsigned chan7 : 1;
     unsigned chan8 : 1;
-} chanlink2 @ 0x004;
+} chanlink2 __at(0x004);
 
 struct
 {
@@ -157,7 +157,7 @@ struct
     unsigned chan6 : 1;
     unsigned chan7 : 1;
     unsigned chan8 : 1;
-} chanlink3 @ 0x005;
+} chanlink3 __at(0x005);
 
 struct
 {
@@ -169,7 +169,7 @@ struct
     unsigned chan6 : 1;
     unsigned chan7 : 1;
     unsigned chan8 : 1;
-} chanlink4 @ 0x006;
+} chanlink4 __at(0x006);
 
 struct
 {
@@ -181,7 +181,7 @@ struct
     unsigned chan6 : 1;
     unsigned chan7 : 1;
     unsigned chan8 : 1;
-} chanlink5 @ 0x007;
+} chanlink5 __at(0x007);
 
 struct
 {
@@ -193,7 +193,7 @@ struct
     unsigned chan6 : 1;
     unsigned chan7 : 1;
     unsigned chan8 : 1;
-} chanlink6 @ 0x008;
+} chanlink6 __at(0x008);
 
 struct
 {
@@ -205,7 +205,7 @@ struct
     unsigned chan6 : 1;
     unsigned chan7 : 1;
     unsigned chan8 : 1;
-} chanlink7 @ 0x009;
+} chanlink7 __at(0x009);
 
 struct
 {
@@ -217,7 +217,7 @@ struct
     unsigned chan6 : 1;
     unsigned chan7 : 1;
     unsigned chan8 : 1;
-} chanlink8 @ 0x00A;
+} chanlink8 __at(0x00A);
 
 /*vend flags bit 0=still credit bit 1=error bit 2=display insert coin
   bit 3=no change bit4=credit display bit5=Buy another?*/
