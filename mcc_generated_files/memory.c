@@ -50,12 +50,12 @@
 #include <xc.h>
 #include "memory.h"
 
-//__EEPROM_DATA(5,0,0,0,0,0,0,0); //0 to 7
-//__EEPROM_DATA(0,0,0,0,0,0,0,5); //8 to F
-//__EEPROM_DATA(10,15,20,25,30,35,40,0); //10 to 17
-//__EEPROM_DATA(0x07,0,0,0,0x02,0,0,0); //18 to 1F
-//__EEPROM_DATA(0x00,0,0,0,0x00,0,0,0); //20 to 27
-//__EEPROM_DATA(0x00,0,0,0,0x00,0,0,0); //28 to 2F
+__EEPROM_DATA(5,0,0,0,0,0,0,0); //0 to 7
+__EEPROM_DATA(0,0,0,0,0,0,0,5); //8 to F
+__EEPROM_DATA(10,15,20,25,30,35,40,0); //10 to 17
+__EEPROM_DATA(0x07,0,0,0,0x02,0,0,0); //18 to 1F
+__EEPROM_DATA(0x00,0,0,0,0x00,0,0,0); //20 to 27
+__EEPROM_DATA(0x00,0,0,0,0x00,0,0,0); //28 to 2F
 
 /**
   Section: Flash Module APIs

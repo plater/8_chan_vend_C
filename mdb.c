@@ -39,8 +39,8 @@ void mdb_init(void)
 uint8_t mdb_reset(void)
 {
     //Enable 9 bit for MDB
-//    RC1STA = 0xD0;
-//    TX1STA = 0xEC;
+    RC1STA = 0xD0;
+    TX1STA = 0xEC;
     mdbflags.timeout = 1;
     while(mdbflags.timeout)
     {
@@ -241,6 +241,33 @@ uint8_t mdb_poll(void)
     
 }
 
+void mdb_test(void)
+{
+    uint8_t i = 0;
+    uint8_t x = note_reset;
+    TX1STAbits.TXEN = 1;
+    while(i < 8)
+    {
+        
+        
+        TX1STAbits.TX9D = 1;
+        mdb_transmit(x);
+        
+        TX1STAbits.TX9D = 0;
+        mdb_transmit(x);
+        
+        TX1STAbits.TXEN = 0;
+        asm("nop");
+//        mdb_ron();
+//        wait_ack();
+        i++;
+        x++;
+        TX1STAbits.TXEN = 1;
+        mdb_on();
+    }
+    TX1STAbits.TXEN = 0;
+}
+
 uint8_t mdb_comm(uint8_t slvadd, uint8_t mcount)
 {
     //Counter for data bytes in mdbdata
@@ -279,6 +306,7 @@ uint8_t mdb_comm(uint8_t slvadd, uint8_t mcount)
     //mdb_ron();
     init_mdbdata(0xFF);
     TMR1_Initialize();
+    T1CONbits.TMR1ON = 1;
     dbcount = 0;
     mdbflags.isdata = 0;
     i = 0;
@@ -299,6 +327,7 @@ uint8_t mdb_comm(uint8_t slvadd, uint8_t mcount)
             //End of transmission when 9th bit set.
             mdbflags.isdata = RC1STAbits.RX9D;
             TMR1_Initialize();
+            T1CONbits.TMR1ON = 1;
             i++;
             
         }
@@ -351,32 +380,6 @@ void mdb_waitr(void)
     }
 }
 
-void mdb_test(void)
-{
-    uint8_t i = 0;
-    uint8_t x = note_reset;
-    TX1STAbits.TXEN = 1;
-    while(i < 8)
-    {
-        
-        
-        TX1STAbits.TX9D = 1;
-        mdb_transmit(x);
-        
-        TX1STAbits.TX9D = 0;
-        mdb_transmit(x);
-        
-        TX1STAbits.TXEN = 0;
-        asm("nop");
-        mdb_ron();
-        wait_ack();
-        i++;
-        x++;
-        TX1STAbits.TXEN = 1;
-        mdb_on();
-    }
-    TX1STAbits.TXEN = 0;
-}
 //Turn off and bus reset mdb bus
 //Used to disable all mdb devices
 void mdb_unlock(void)

@@ -68,18 +68,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "80 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 80: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"104 ./gsm.h
-[; ;./gsm.h: 104: void gsm_off(void);
-[v _gsm_off `(v ~T0 @X0 0 ef ]
 "135 ./lcd.h
 [; ;./lcd.h: 135: void lcd_init(void);
 [v _lcd_init `(v ~T0 @X0 0 ef ]
-"100 ./gsm.h
-[; ;./gsm.h: 100: void gsm_on(void);
-[v _gsm_on `(v ~T0 @X0 0 ef ]
-"96
-[; ;./gsm.h: 96: void gsm_init(void);
-[v _gsm_init `(v ~T0 @X0 0 ef ]
 "260 ./vend.h
 [; ;./vend.h: 260: void vend_init(void);
 [v _vend_init `(v ~T0 @X0 0 ef ]
@@ -4522,234 +4513,225 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 61:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
 "63
-[; ;main.c: 63:     gsm_off();
-[e ( _gsm_off ..  ]
-"65
-[; ;main.c: 65:     lcd_init();
+[; ;main.c: 63:     lcd_init();
 [e ( _lcd_init ..  ]
-"66
-[; ;main.c: 66:     gsm_on();
-[e ( _gsm_on ..  ]
-"67
-[; ;main.c: 67:     gsm_init();
-[e ( _gsm_init ..  ]
-"68
-[; ;main.c: 68:     vend_init();
+"64
+[; ;main.c: 64:     vend_init();
 [e ( _vend_init ..  ]
-"71
-[; ;main.c: 71:     while(1 == 1)
+"67
+[; ;main.c: 67:     while(1 == 1)
 [e $U 1508  ]
 [e :U 1509 ]
+"68
+[; ;main.c: 68:     {
+{
+"69
+[; ;main.c: 69:         __asm("nop");
+[; <" nop ;# ">
+"70
+[; ;main.c: 70:         DAC1CON1 = 0x01;
+[e = _DAC1CON1 -> -> 1 `i `uc ]
+"71
+[; ;main.c: 71:         if (!CMP1_GetOutputStatus())
+[e $ ! ! != -> ( _CMP1_GetOutputStatus ..  `i -> 0 `i 1511  ]
 "72
-[; ;main.c: 72:     {
+[; ;main.c: 72:         {
 {
 "73
-[; ;main.c: 73:         __asm("nop");
-[; <" nop ;# ">
-"74
-[; ;main.c: 74:         DAC1CON1 = 0x01;
-[e = _DAC1CON1 -> -> 1 `i `uc ]
-"75
-[; ;main.c: 75:         if (!CMP1_GetOutputStatus())
-[e $ ! ! != -> ( _CMP1_GetOutputStatus ..  `i -> 0 `i 1511  ]
-"76
-[; ;main.c: 76:         {
-{
-"77
-[; ;main.c: 77:             venflags.service = 1;
+[; ;main.c: 73:             venflags.service = 1;
 [e = . _venflags 7 -> -> 1 `i `uc ]
-"79
-[; ;main.c: 79:         }
+"75
+[; ;main.c: 75:         }
 }
 [e :U 1511 ]
-"80
-[; ;main.c: 80:         DAC1CON1 = sensorval;
+"76
+[; ;main.c: 76:         DAC1CON1 = sensorval;
 [e = _DAC1CON1 _sensorval ]
-"82
-[; ;main.c: 82:         if(venflags.service == 1)
+"78
+[; ;main.c: 78:         if(venflags.service == 1)
 [e $ ! == -> . _venflags 7 `i -> 1 `i 1512  ]
-"83
-[; ;main.c: 83:         {
+"79
+[; ;main.c: 79:         {
 {
-"84
-[; ;main.c: 84:             enter_service();
+"80
+[; ;main.c: 80:             enter_service();
 [e ( _enter_service ..  ]
-"85
-[; ;main.c: 85:         }
+"81
+[; ;main.c: 81:         }
 }
 [e :U 1512 ]
-"87
-[; ;main.c: 87:         if(venflags.inscoin == 1)
+"83
+[; ;main.c: 83:         if(venflags.inscoin == 1)
 [e $ ! == -> . _venflags 2 `i -> 1 `i 1513  ]
+"84
+[; ;main.c: 84:         {
+{
+"85
+[; ;main.c: 85:             lcd_string(inscoin, line1);
+[e ( _lcd_string (2 , -> &U _inscoin `*uc -> _line1 `uc ]
+"86
+[; ;main.c: 86:             venflags.inscoin = 0;
+[e = . _venflags 2 -> -> 0 `i `uc ]
+"87
+[; ;main.c: 87:             if(venflags.nochange)
+[e $ ! != -> . _venflags 3 `i -> 0 `i 1514  ]
 "88
-[; ;main.c: 88:         {
+[; ;main.c: 88:             {
 {
 "89
-[; ;main.c: 89:             lcd_string(inscoin, line1);
-[e ( _lcd_string (2 , -> &U _inscoin `*uc -> _line1 `uc ]
-"90
-[; ;main.c: 90:             venflags.inscoin = 0;
-[e = . _venflags 2 -> -> 0 `i `uc ]
-"91
-[; ;main.c: 91:             if(venflags.nochange)
-[e $ ! != -> . _venflags 3 `i -> 0 `i 1514  ]
-"92
-[; ;main.c: 92:             {
-{
-"93
-[; ;main.c: 93:                 displ_nochange();
+[; ;main.c: 89:                 displ_nochange();
 [e ( _displ_nochange ..  ]
-"94
-[; ;main.c: 94:             }
+"90
+[; ;main.c: 90:             }
 }
 [e :U 1514 ]
-"95
-[; ;main.c: 95:         }
+"91
+[; ;main.c: 91:         }
 }
 [e :U 1513 ]
-"96
-[; ;main.c: 96:         if(venflags.initialrun == 1)
+"92
+[; ;main.c: 92:         if(venflags.initialrun == 1)
 [e $ ! == -> . _venflags 5 `i -> 1 `i 1515  ]
-"97
-[; ;main.c: 97:         {
+"93
+[; ;main.c: 93:         {
 {
-"98
-[; ;main.c: 98:             venflags.initialrun = 0;
+"94
+[; ;main.c: 94:             venflags.initialrun = 0;
 [e = . _venflags 5 -> -> 0 `i `uc ]
-"99
-[; ;main.c: 99:             mdbflags.noteerr == 0;
+"95
+[; ;main.c: 95:             mdbflags.noteerr == 0;
 [e == -> . _mdbflags 1 `i -> 0 `i ]
-"100
-[; ;main.c: 100:         }
+"96
+[; ;main.c: 96:         }
 }
 [e :U 1515 ]
-"101
-[; ;main.c: 101:         if(venflags.credisplay == 1)
+"97
+[; ;main.c: 97:         if(venflags.credisplay == 1)
 [e $ ! == -> . _venflags 4 `i -> 1 `i 1516  ]
-"102
-[; ;main.c: 102:         {
+"98
+[; ;main.c: 98:         {
 {
-"103
-[; ;main.c: 103:             displ_credit();
+"99
+[; ;main.c: 99:             displ_credit();
 [e ( _displ_credit ..  ]
-"104
-[; ;main.c: 104:             if(venflags.nochange)
+"100
+[; ;main.c: 100:             if(venflags.nochange)
 [e $ ! != -> . _venflags 3 `i -> 0 `i 1517  ]
-"105
-[; ;main.c: 105:             {
+"101
+[; ;main.c: 101:             {
 {
-"106
-[; ;main.c: 106:                 displ_nochange();
+"102
+[; ;main.c: 102:                 displ_nochange();
 [e ( _displ_nochange ..  ]
-"107
-[; ;main.c: 107:             }
+"103
+[; ;main.c: 103:             }
 }
 [e :U 1517 ]
-"108
-[; ;main.c: 108:         }
+"104
+[; ;main.c: 104:         }
 }
 [e :U 1516 ]
-"110
-[; ;main.c: 110:         if(PIR4bits.TMR3IF)
+"106
+[; ;main.c: 106:         if(PIR4bits.TMR3IF)
 [e $ ! != -> . . _PIR4bits 0 2 `i -> 0 `i 1518  ]
-"111
-[; ;main.c: 111:         {
+"107
+[; ;main.c: 107:         {
 {
-"112
-[; ;main.c: 112:             credit = mdb_poll();
+"108
+[; ;main.c: 108:             credit = mdb_poll();
 [e = _credit ( _mdb_poll ..  ]
-"113
-[; ;main.c: 113:             if(credit != 0x00)
+"109
+[; ;main.c: 109:             if(credit != 0x00)
 [e $ ! != -> _credit `i -> 0 `i 1519  ]
-"114
-[; ;main.c: 114:             {
+"110
+[; ;main.c: 110:             {
 {
-"115
-[; ;main.c: 115:                 if(mdbflags.noteerr == 1)
+"111
+[; ;main.c: 111:                 if(mdbflags.noteerr == 1)
 [e $ ! == -> . _mdbflags 1 `i -> 1 `i 1520  ]
-"116
-[; ;main.c: 116:                 {
+"112
+[; ;main.c: 112:                 {
 {
-"117
-[; ;main.c: 117:                     switch(credit)
+"113
+[; ;main.c: 113:                     switch(credit)
 [e $U 1522  ]
-"118
-[; ;main.c: 118:                     {
+"114
+[; ;main.c: 114:                     {
 {
-"120
-[; ;main.c: 120:                         case 0x06 : mdb_init();
+"116
+[; ;main.c: 116:                         case 0x06 : mdb_init();
 [e :U 1523 ]
 [e ( _mdb_init ..  ]
-"121
-[; ;main.c: 121:                         mdbflags.noteerr == 0;
+"117
+[; ;main.c: 117:                         mdbflags.noteerr == 0;
 [e == -> . _mdbflags 1 `i -> 0 `i ]
-"122
-[; ;main.c: 122:                         credit = 0;
+"118
+[; ;main.c: 118:                         credit = 0;
 [e = _credit -> -> 0 `i `uc ]
-"123
-[; ;main.c: 123:                         break;
+"119
+[; ;main.c: 119:                         break;
 [e $U 1521  ]
-"125
-[; ;main.c: 125:                         case 0x09:
+"121
+[; ;main.c: 121:                         case 0x09:
 [e :U 1524 ]
-"126
-[; ;main.c: 126:                             if(mdbflags.vending)
+"122
+[; ;main.c: 122:                             if(mdbflags.vending)
 [e $ ! != -> . _mdbflags 4 `i -> 0 `i 1525  ]
+"123
+[; ;main.c: 123:                             {
+{
+"124
+[; ;main.c: 124:                                 credit = 0;
+[e = _credit -> -> 0 `i `uc ]
+"125
+[; ;main.c: 125:                             }
+}
+[e $U 1526  ]
+"126
+[; ;main.c: 126:                             else
+[e :U 1525 ]
 "127
 [; ;main.c: 127:                             {
 {
 "128
-[; ;main.c: 128:                                 credit = 0;
-[e = _credit -> -> 0 `i `uc ]
-"129
-[; ;main.c: 129:                             }
-}
-[e $U 1526  ]
-"130
-[; ;main.c: 130:                             else
-[e :U 1525 ]
-"131
-[; ;main.c: 131:                             {
-{
-"132
-[; ;main.c: 132:                                 mdb_init();
+[; ;main.c: 128:                                 mdb_init();
 [e ( _mdb_init ..  ]
-"133
-[; ;main.c: 133:                                 credit = 0;
+"129
+[; ;main.c: 129:                                 credit = 0;
 [e = _credit -> -> 0 `i `uc ]
-"134
-[; ;main.c: 134:                             }
+"130
+[; ;main.c: 130:                             }
 }
 [e :U 1526 ]
-"135
-[; ;main.c: 135:                         break;
+"131
+[; ;main.c: 131:                         break;
 [e $U 1521  ]
-"136
-[; ;main.c: 136:                         case 0x10:mdbflags.noteerr == 0;
+"132
+[; ;main.c: 132:                         case 0x10:mdbflags.noteerr == 0;
 [e :U 1527 ]
 [e == -> . _mdbflags 1 `i -> 0 `i ]
-"137
-[; ;main.c: 137:                         credit = 0;
+"133
+[; ;main.c: 133:                         credit = 0;
 [e = _credit -> -> 0 `i `uc ]
-"138
-[; ;main.c: 138:                         break;
+"134
+[; ;main.c: 134:                         break;
 [e $U 1521  ]
-"139
-[; ;main.c: 139:                         case 0x0C : mdbflags.noteerr == 0;
+"135
+[; ;main.c: 135:                         case 0x0C : mdbflags.noteerr == 0;
 [e :U 1528 ]
 [e == -> . _mdbflags 1 `i -> 0 `i ]
-"140
-[; ;main.c: 140:                         credit = 0;
+"136
+[; ;main.c: 136:                         credit = 0;
 [e = _credit -> -> 0 `i `uc ]
-"141
-[; ;main.c: 141:                         break;
+"137
+[; ;main.c: 137:                         break;
 [e $U 1521  ]
-"142
-[; ;main.c: 142:                         default: displ_noteer();
+"138
+[; ;main.c: 138:                         default: displ_noteer();
 [e :U 1529 ]
 [e ( _displ_noteer ..  ]
-"143
-[; ;main.c: 143:                     }
+"139
+[; ;main.c: 139:                     }
 }
 [e $U 1521  ]
 [e :U 1522 ]
@@ -4759,278 +4741,278 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 12 `i 1528
  1529 ]
 [e :U 1521 ]
-"144
-[; ;main.c: 144:                 }
+"140
+[; ;main.c: 140:                 }
 }
 [e $U 1530  ]
-"145
-[; ;main.c: 145:                 else
+"141
+[; ;main.c: 141:                 else
 [e :U 1520 ]
-"146
-[; ;main.c: 146:                 {
+"142
+[; ;main.c: 142:                 {
 {
-"147
-[; ;main.c: 147:                     credit_add(credit);
+"143
+[; ;main.c: 143:                     credit_add(credit);
 [e ( _credit_add (1 _credit ]
-"148
-[; ;main.c: 148:                     venflags.iscredit = 1;
+"144
+[; ;main.c: 144:                     venflags.iscredit = 1;
 [e = . _venflags 0 -> -> 1 `i `uc ]
-"149
-[; ;main.c: 149:                 }
+"145
+[; ;main.c: 145:                 }
 }
 [e :U 1530 ]
-"150
-[; ;main.c: 150:             }
+"146
+[; ;main.c: 146:             }
 }
 [e $U 1531  ]
-"151
-[; ;main.c: 151:             else
+"147
+[; ;main.c: 147:             else
 [e :U 1519 ]
-"152
-[; ;main.c: 152:             {
+"148
+[; ;main.c: 148:             {
 {
-"153
-[; ;main.c: 153:                 if(mdbflags.noteerr == 1)
+"149
+[; ;main.c: 149:                 if(mdbflags.noteerr == 1)
 [e $ ! == -> . _mdbflags 1 `i -> 1 `i 1532  ]
-"154
-[; ;main.c: 154:                 {
+"150
+[; ;main.c: 150:                 {
 {
-"155
-[; ;main.c: 155:                     displ_noteer();
+"151
+[; ;main.c: 151:                     displ_noteer();
 [e ( _displ_noteer ..  ]
-"156
-[; ;main.c: 156:                 }
+"152
+[; ;main.c: 152:                 }
 }
 [e :U 1532 ]
-"159
-[; ;main.c: 159:            }
+"155
+[; ;main.c: 155:            }
 }
 [e :U 1531 ]
-"160
-[; ;main.c: 160:         }
+"156
+[; ;main.c: 156:         }
 }
 [e :U 1518 ]
-"161
-[; ;main.c: 161:         if(venflags.iscredit)
+"157
+[; ;main.c: 157:         if(venflags.iscredit)
 [e $ ! != -> . _venflags 0 `i -> 0 `i 1533  ]
-"162
-[; ;main.c: 162:         {
+"158
+[; ;main.c: 158:         {
 {
-"163
-[; ;main.c: 163:             if(price_check())
+"159
+[; ;main.c: 159:             if(price_check())
 [e $ ! != -> ( _price_check ..  `i -> 0 `i 1534  ]
-"164
-[; ;main.c: 164:             {
+"160
+[; ;main.c: 160:             {
 {
-"165
-[; ;main.c: 165:                 __asm("RESET");
+"161
+[; ;main.c: 161:                 __asm("RESET");
 [; <" RESET ;# ">
-"166
-[; ;main.c: 166:             }
+"162
+[; ;main.c: 162:             }
 }
 [e :U 1534 ]
-"167
-[; ;main.c: 167:         }
+"163
+[; ;main.c: 163:         }
 }
 [e $U 1535  ]
-"168
-[; ;main.c: 168:         else
+"164
+[; ;main.c: 164:         else
 [e :U 1533 ]
-"169
-[; ;main.c: 169:         {
+"165
+[; ;main.c: 165:         {
 {
-"170
-[; ;main.c: 170:             if(butin() != 0)
+"166
+[; ;main.c: 166:             if(butin() != 0)
 [e $ ! != -> ( _butin ..  `i -> 0 `i 1536  ]
-"171
-[; ;main.c: 171:             {
+"167
+[; ;main.c: 167:             {
 {
-"173
-[; ;main.c: 173:                 buttons = butin();
+"169
+[; ;main.c: 169:                 buttons = butin();
 [e = _buttons ( _butin ..  ]
-"174
-[; ;main.c: 174:                 if(((buttons & ~errormask) == 0x00) && !venflags.pricedisplay)
+"170
+[; ;main.c: 170:                 if(((buttons & ~errormask) == 0x00) && !venflags.pricedisplay)
 [e $ ! && == & -> _buttons `i ~ -> _errormask `i -> 0 `i ! != -> . _venflags 18 `i -> 0 `i 1537  ]
-"175
-[; ;main.c: 175:                 {
+"171
+[; ;main.c: 171:                 {
 {
-"176
-[; ;main.c: 176:                     lcd_string(emptymsg, line1);
+"172
+[; ;main.c: 172:                     lcd_string(emptymsg, line1);
 [e ( _lcd_string (2 , -> &U _emptymsg `*uc -> _line1 `uc ]
-"177
-[; ;main.c: 177:                     venflags.pricedisplay = 1;
+"173
+[; ;main.c: 173:                     venflags.pricedisplay = 1;
 [e = . _venflags 18 -> -> 1 `i `uc ]
-"178
-[; ;main.c: 178:                 }
+"174
+[; ;main.c: 174:                 }
 }
 [e :U 1537 ]
-"179
-[; ;main.c: 179:                 if(!venflags.pricedisplay)
+"175
+[; ;main.c: 175:                 if(!venflags.pricedisplay)
 [e $ ! ! != -> . _venflags 18 `i -> 0 `i 1538  ]
-"180
-[; ;main.c: 180:                 {
+"176
+[; ;main.c: 176:                 {
 {
-"181
-[; ;main.c: 181:                     uint8_t channel = get_channel(buttons);
+"177
+[; ;main.c: 177:                     uint8_t channel = get_channel(buttons);
 [v _channel `uc ~T0 @X0 1 a ]
 [e = _channel ( _get_channel (1 _buttons ]
-"182
-[; ;main.c: 182:                     vendprice = DATAEE_ReadByte(pricestore + channel);
+"178
+[; ;main.c: 178:                     vendprice = DATAEE_ReadByte(pricestore + channel);
 [e = _vendprice ( _DATAEE_ReadByte (1 -> + -> _pricestore `ui -> _channel `ui `us ]
-"183
-[; ;main.c: 183:                     displ_price(vendprice);
+"179
+[; ;main.c: 179:                     displ_price(vendprice);
 [e ( _displ_price (1 _vendprice ]
-"184
-[; ;main.c: 184:                     venflags.pricedisplay = 1;
+"180
+[; ;main.c: 180:                     venflags.pricedisplay = 1;
 [e = . _venflags 18 -> -> 1 `i `uc ]
-"185
-[; ;main.c: 185:                }
+"181
+[; ;main.c: 181:                }
 }
 [e :U 1538 ]
-"186
-[; ;main.c: 186:             }
+"182
+[; ;main.c: 182:             }
 }
 [e $U 1539  ]
-"187
-[; ;main.c: 187:             else
+"183
+[; ;main.c: 183:             else
 [e :U 1536 ]
-"188
-[; ;main.c: 188:             {
+"184
+[; ;main.c: 184:             {
 {
-"189
-[; ;main.c: 189:                 if(venflags.pricedisplay)
+"185
+[; ;main.c: 185:                 if(venflags.pricedisplay)
 [e $ ! != -> . _venflags 18 `i -> 0 `i 1540  ]
-"190
-[; ;main.c: 190:                 {
+"186
+[; ;main.c: 186:                 {
 {
-"191
-[; ;main.c: 191:                     venflags.pricedisplay = 0;
+"187
+[; ;main.c: 187:                     venflags.pricedisplay = 0;
 [e = . _venflags 18 -> -> 0 `i `uc ]
-"192
-[; ;main.c: 192:                     venflags.inscoin = 1;
+"188
+[; ;main.c: 188:                     venflags.inscoin = 1;
 [e = . _venflags 2 -> -> 1 `i `uc ]
-"193
-[; ;main.c: 193:                 }
+"189
+[; ;main.c: 189:                 }
 }
 [e :U 1540 ]
-"194
-[; ;main.c: 194:             }
+"190
+[; ;main.c: 190:             }
 }
 [e :U 1539 ]
-"197
-[; ;main.c: 197:         }
+"193
+[; ;main.c: 193:         }
 }
 [e :U 1535 ]
-"201
-[; ;main.c: 201:     }
+"197
+[; ;main.c: 197:     }
 }
 [e :U 1508 ]
-"71
-[; ;main.c: 71:     while(1 == 1)
+"67
+[; ;main.c: 67:     while(1 == 1)
 [e $ == -> 1 `i -> 1 `i 1509  ]
 [e :U 1510 ]
-"204
-[; ;main.c: 204: }
+"200
+[; ;main.c: 200: }
 [e :UE 1507 ]
 }
-"218
-[; ;main.c: 218: void enter_service(void)
+"214
+[; ;main.c: 214: void enter_service(void)
 [v _enter_service `(v ~T0 @X0 1 ef ]
-"219
-[; ;main.c: 219: {
+"215
+[; ;main.c: 215: {
 {
 [e :U _enter_service ]
 [f ]
-"220
-[; ;main.c: 220:     mdb_unlock();
+"216
+[; ;main.c: 216:     mdb_unlock();
 [e ( _mdb_unlock ..  ]
-"221
-[; ;main.c: 221:     lcd_string(servmsg, line1);
+"217
+[; ;main.c: 217:     lcd_string(servmsg, line1);
 [e ( _lcd_string (2 , -> &U _servmsg `*uc -> _line1 `uc ]
-"224
-[; ;main.c: 224:     while(venflags.service)
+"220
+[; ;main.c: 220:     while(venflags.service)
 [e $U 1542  ]
 [e :U 1543 ]
-"225
-[; ;main.c: 225:     {
+"221
+[; ;main.c: 221:     {
 {
-"226
-[; ;main.c: 226:         buttons = butindb();
+"222
+[; ;main.c: 222:         buttons = butindb();
 [e = _buttons ( _butindb ..  ]
-"227
-[; ;main.c: 227:         switch(buttons)
+"223
+[; ;main.c: 223:         switch(buttons)
 [e $U 1546  ]
-"228
-[; ;main.c: 228:         {
+"224
+[; ;main.c: 224:         {
 {
-"229
-[; ;main.c: 229:             case 0x01 : Audit();
+"225
+[; ;main.c: 225:             case 0x01 : Audit();
 [e :U 1547 ]
 [e ( _Audit ..  ]
+"226
+[; ;main.c: 226:             break;
+[e $U 1545  ]
+"227
+[; ;main.c: 227:             case 0x02 : Sensor_set();
+[e :U 1548 ]
+[e ( _Sensor_set ..  ]
+"228
+[; ;main.c: 228:             break;
+[e $U 1545  ]
+"229
+[; ;main.c: 229:             case 0x04 : Hopper_coin();
+[e :U 1549 ]
+[e ( _Hopper_coin ..  ]
 "230
 [; ;main.c: 230:             break;
 [e $U 1545  ]
 "231
-[; ;main.c: 231:             case 0x02 : Sensor_set();
-[e :U 1548 ]
-[e ( _Sensor_set ..  ]
+[; ;main.c: 231:             case 0x08 : set_notes();
+[e :U 1550 ]
+[e ( _set_notes ..  ]
 "232
 [; ;main.c: 232:             break;
 [e $U 1545  ]
 "233
-[; ;main.c: 233:             case 0x04 : Hopper_coin();
-[e :U 1549 ]
-[e ( _Hopper_coin ..  ]
-"234
-[; ;main.c: 234:             break;
-[e $U 1545  ]
-"235
-[; ;main.c: 235:             case 0x08 : set_notes();
-[e :U 1550 ]
-[e ( _set_notes ..  ]
-"236
-[; ;main.c: 236:             break;
-[e $U 1545  ]
-"237
-[; ;main.c: 237:             case 0x10 : Clear_cred();
+[; ;main.c: 233:             case 0x10 : Clear_cred();
 [e :U 1551 ]
 [e ( _Clear_cred ..  ]
-"238
-[; ;main.c: 238:             venflags.service = 0;
+"234
+[; ;main.c: 234:             venflags.service = 0;
 [e = . _venflags 7 -> -> 0 `i `uc ]
-"239
-[; ;main.c: 239:             __asm("RESET");
+"235
+[; ;main.c: 235:             __asm("RESET");
 [; <" RESET ;# ">
-"240
-[; ;main.c: 240:             case 0x20 : price_set();
+"236
+[; ;main.c: 236:             case 0x20 : price_set();
 [e :U 1552 ]
 [e ( _price_set ..  ]
-"241
-[; ;main.c: 241:             break;
+"237
+[; ;main.c: 237:             break;
 [e $U 1545  ]
-"242
-[; ;main.c: 242:             case 0x40 : Vend_setup();
+"238
+[; ;main.c: 238:             case 0x40 : Vend_setup();
 [e :U 1553 ]
 [e ( _Vend_setup ..  ]
-"243
-[; ;main.c: 243:             break;
+"239
+[; ;main.c: 239:             break;
 [e $U 1545  ]
-"244
-[; ;main.c: 244:             case 0x80 : venflags.service = 0;
+"240
+[; ;main.c: 240:             case 0x80 : venflags.service = 0;
 [e :U 1554 ]
 [e = . _venflags 7 -> -> 0 `i `uc ]
-"245
-[; ;main.c: 245:             __asm("RESET");
+"241
+[; ;main.c: 241:             __asm("RESET");
 [; <" RESET ;# ">
-"246
-[; ;main.c: 246:             break;
+"242
+[; ;main.c: 242:             break;
 [e $U 1545  ]
-"247
-[; ;main.c: 247:             case 0x03 : hopper_test();
+"243
+[; ;main.c: 243:             case 0x03 : hopper_test();
 [e :U 1555 ]
 [e ( _hopper_test ..  ]
-"248
-[; ;main.c: 248:         }
+"244
+[; ;main.c: 244:         }
 }
 [e $U 1545  ]
 [e :U 1546 ]
@@ -5045,15 +5027,15 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 3 `i 1555
  1545 ]
 [e :U 1545 ]
-"249
-[; ;main.c: 249:     }
+"245
+[; ;main.c: 245:     }
 }
 [e :U 1542 ]
-"224
-[; ;main.c: 224:     while(venflags.service)
+"220
+[; ;main.c: 220:     while(venflags.service)
 [e $ != -> . _venflags 7 `i -> 0 `i 1543  ]
 [e :U 1544 ]
-"250
-[; ;main.c: 250: }
+"246
+[; ;main.c: 246: }
 [e :UE 1541 ]
 }

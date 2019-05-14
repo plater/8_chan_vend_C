@@ -59,12 +59,9 @@ void main(void)
 {
     // Initialize the device
     SYSTEM_Initialize();
-//Initialise gsm unit and start 5 second timer
-    gsm_off();
     // Initialize lcd display
     lcd_init();
-    gsm_on();
-    gsm_init();
+    mdb_on();
     vend_init();
 
     

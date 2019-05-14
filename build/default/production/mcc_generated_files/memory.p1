@@ -1467,7 +1467,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28207
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 28207: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"64 mcc_generated_files/memory.c
+"53 mcc_generated_files/memory.c
+[; ;mcc_generated_files/memory.c: 53: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "5" "," "0" "," "0" "," "0" "," "0" "," "0" "," "0" "," "0");
+[; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
+[; <" 	db	5,0,0,0,0,0,0,0 ;# ">
+"54
+[; ;mcc_generated_files/memory.c: 54: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0" "," "0" "," "0" "," "0" "," "0" "," "0" "," "0" "," "5");
+[; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
+[; <" 	db	0,0,0,0,0,0,0,5 ;# ">
+"55
+[; ;mcc_generated_files/memory.c: 55: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "10" "," "15" "," "20" "," "25" "," "30" "," "35" "," "40" "," "0");
+[; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
+[; <" 	db	10,15,20,25,30,35,40,0 ;# ">
+"56
+[; ;mcc_generated_files/memory.c: 56: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x07" "," "0" "," "0" "," "0" "," "0x02" "," "0" "," "0" "," "0");
+[; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
+[; <" 	db	0x07,0,0,0,0x02,0,0,0 ;# ">
+"57
+[; ;mcc_generated_files/memory.c: 57: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x00" "," "0" "," "0" "," "0" "," "0x00" "," "0" "," "0" "," "0");
+[; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
+[; <" 	db	0x00,0,0,0,0x00,0,0,0 ;# ">
+"58
+[; ;mcc_generated_files/memory.c: 58: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x00" "," "0" "," "0" "," "0" "," "0x00" "," "0" "," "0" "," "0");
+[; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
+[; <" 	db	0x00,0,0,0,0x00,0,0,0 ;# ">
+"64
 [; ;mcc_generated_files/memory.c: 64: uint8_t FLASH_ReadByte(uint32_t flashAddr)
 [v _FLASH_ReadByte `(uc ~T0 @X0 1 ef1`ul ]
 "65
