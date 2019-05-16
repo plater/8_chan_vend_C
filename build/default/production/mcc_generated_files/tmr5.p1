@@ -1472,226 +1472,226 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28207
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 28207: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"57 mcc_generated_files/tmr5.c
-[; ;mcc_generated_files/tmr5.c: 57: volatile uint16_t timer5ReloadVal;
+"56 mcc_generated_files/tmr5.c
+[; ;mcc_generated_files/tmr5.c: 56: volatile uint16_t timer5ReloadVal;
 [v _timer5ReloadVal `Vus ~T0 @X0 1 e ]
-"63
-[; ;mcc_generated_files/tmr5.c: 63: void TMR5_Initialize(void)
+"62
+[; ;mcc_generated_files/tmr5.c: 62: void TMR5_Initialize(void)
 [v _TMR5_Initialize `(v ~T0 @X0 1 ef ]
-"64
-[; ;mcc_generated_files/tmr5.c: 64: {
+"63
+[; ;mcc_generated_files/tmr5.c: 63: {
 {
 [e :U _TMR5_Initialize ]
 [f ]
-"68
-[; ;mcc_generated_files/tmr5.c: 68:     T5GCON = 0x00;
+"67
+[; ;mcc_generated_files/tmr5.c: 67:     T5GCON = 0x00;
 [e = _T5GCON -> -> 0 `i `uc ]
-"71
-[; ;mcc_generated_files/tmr5.c: 71:     T5GATE = 0x00;
+"70
+[; ;mcc_generated_files/tmr5.c: 70:     T5GATE = 0x00;
 [e = _T5GATE -> -> 0 `i `uc ]
-"74
-[; ;mcc_generated_files/tmr5.c: 74:     T5CLK = 0x04;
+"73
+[; ;mcc_generated_files/tmr5.c: 73:     T5CLK = 0x04;
 [e = _T5CLK -> -> 4 `i `uc ]
-"77
-[; ;mcc_generated_files/tmr5.c: 77:     TMR5H = 0xE1;
+"76
+[; ;mcc_generated_files/tmr5.c: 76:     TMR5H = 0xE1;
 [e = _TMR5H -> -> 225 `i `uc ]
-"80
-[; ;mcc_generated_files/tmr5.c: 80:     TMR5L = 0xBA;
+"79
+[; ;mcc_generated_files/tmr5.c: 79:     TMR5L = 0xBA;
 [e = _TMR5L -> -> 186 `i `uc ]
-"83
-[; ;mcc_generated_files/tmr5.c: 83:     timer5ReloadVal=(uint16_t)((TMR5H << 8) | TMR5L);
+"82
+[; ;mcc_generated_files/tmr5.c: 82:     timer5ReloadVal=(uint16_t)((TMR5H << 8) | TMR5L);
 [e = _timer5ReloadVal -> | << -> _TMR5H `i -> 8 `i -> _TMR5L `i `us ]
-"86
-[; ;mcc_generated_files/tmr5.c: 86:     PIR4bits.TMR5IF = 0;
+"85
+[; ;mcc_generated_files/tmr5.c: 85:     PIR4bits.TMR5IF = 0;
 [e = . . _PIR4bits 0 4 -> -> 0 `i `uc ]
-"89
-[; ;mcc_generated_files/tmr5.c: 89:     T5CON = 0x01;
+"88
+[; ;mcc_generated_files/tmr5.c: 88:     T5CON = 0x01;
 [e = _T5CON -> -> 1 `i `uc ]
-"90
-[; ;mcc_generated_files/tmr5.c: 90: }
+"89
+[; ;mcc_generated_files/tmr5.c: 89: }
 [e :UE 1490 ]
 }
-"92
-[; ;mcc_generated_files/tmr5.c: 92: void TMR5_StartTimer(void)
+"91
+[; ;mcc_generated_files/tmr5.c: 91: void TMR5_StartTimer(void)
 [v _TMR5_StartTimer `(v ~T0 @X0 1 ef ]
-"93
-[; ;mcc_generated_files/tmr5.c: 93: {
+"92
+[; ;mcc_generated_files/tmr5.c: 92: {
 {
 [e :U _TMR5_StartTimer ]
 [f ]
-"95
-[; ;mcc_generated_files/tmr5.c: 95:     T5CONbits.TMR5ON = 1;
+"94
+[; ;mcc_generated_files/tmr5.c: 94:     T5CONbits.TMR5ON = 1;
 [e = . . _T5CONbits 3 0 -> -> 1 `i `uc ]
-"96
-[; ;mcc_generated_files/tmr5.c: 96: }
+"95
+[; ;mcc_generated_files/tmr5.c: 95: }
 [e :UE 1491 ]
 }
-"98
-[; ;mcc_generated_files/tmr5.c: 98: void TMR5_StopTimer(void)
+"97
+[; ;mcc_generated_files/tmr5.c: 97: void TMR5_StopTimer(void)
 [v _TMR5_StopTimer `(v ~T0 @X0 1 ef ]
-"99
-[; ;mcc_generated_files/tmr5.c: 99: {
+"98
+[; ;mcc_generated_files/tmr5.c: 98: {
 {
 [e :U _TMR5_StopTimer ]
 [f ]
-"101
-[; ;mcc_generated_files/tmr5.c: 101:     T5CONbits.TMR5ON = 0;
+"100
+[; ;mcc_generated_files/tmr5.c: 100:     T5CONbits.TMR5ON = 0;
 [e = . . _T5CONbits 3 0 -> -> 0 `i `uc ]
-"102
-[; ;mcc_generated_files/tmr5.c: 102: }
+"101
+[; ;mcc_generated_files/tmr5.c: 101: }
 [e :UE 1492 ]
 }
-"104
-[; ;mcc_generated_files/tmr5.c: 104: uint16_t TMR5_ReadTimer(void)
+"103
+[; ;mcc_generated_files/tmr5.c: 103: uint16_t TMR5_ReadTimer(void)
 [v _TMR5_ReadTimer `(us ~T0 @X0 1 ef ]
-"105
-[; ;mcc_generated_files/tmr5.c: 105: {
+"104
+[; ;mcc_generated_files/tmr5.c: 104: {
 {
 [e :U _TMR5_ReadTimer ]
 [f ]
-"106
-[; ;mcc_generated_files/tmr5.c: 106:     uint16_t readVal;
+"105
+[; ;mcc_generated_files/tmr5.c: 105:     uint16_t readVal;
 [v _readVal `us ~T0 @X0 1 a ]
-"107
-[; ;mcc_generated_files/tmr5.c: 107:     uint8_t readValHigh;
+"106
+[; ;mcc_generated_files/tmr5.c: 106:     uint8_t readValHigh;
 [v _readValHigh `uc ~T0 @X0 1 a ]
-"108
-[; ;mcc_generated_files/tmr5.c: 108:     uint8_t readValLow;
+"107
+[; ;mcc_generated_files/tmr5.c: 107:     uint8_t readValLow;
 [v _readValLow `uc ~T0 @X0 1 a ]
-"110
-[; ;mcc_generated_files/tmr5.c: 110:     T5CONbits.T5RD16 = 1;
+"109
+[; ;mcc_generated_files/tmr5.c: 109:     T5CONbits.T5RD16 = 1;
 [e = . . _T5CONbits 3 1 -> -> 1 `i `uc ]
-"112
-[; ;mcc_generated_files/tmr5.c: 112:     readValLow = TMR5L;
+"111
+[; ;mcc_generated_files/tmr5.c: 111:     readValLow = TMR5L;
 [e = _readValLow _TMR5L ]
-"113
-[; ;mcc_generated_files/tmr5.c: 113:     readValHigh = TMR5H;
+"112
+[; ;mcc_generated_files/tmr5.c: 112:     readValHigh = TMR5H;
 [e = _readValHigh _TMR5H ]
-"115
-[; ;mcc_generated_files/tmr5.c: 115:     readVal = ((uint16_t)readValHigh << 8) | readValLow;
+"114
+[; ;mcc_generated_files/tmr5.c: 114:     readVal = ((uint16_t)readValHigh << 8) | readValLow;
 [e = _readVal -> | << -> -> _readValHigh `us `ui -> 8 `i -> _readValLow `ui `us ]
-"117
-[; ;mcc_generated_files/tmr5.c: 117:     return readVal;
+"116
+[; ;mcc_generated_files/tmr5.c: 116:     return readVal;
 [e ) _readVal ]
 [e $UE 1493  ]
-"118
-[; ;mcc_generated_files/tmr5.c: 118: }
+"117
+[; ;mcc_generated_files/tmr5.c: 117: }
 [e :UE 1493 ]
 }
-"120
-[; ;mcc_generated_files/tmr5.c: 120: void TMR5_WriteTimer(uint16_t timerVal)
+"119
+[; ;mcc_generated_files/tmr5.c: 119: void TMR5_WriteTimer(uint16_t timerVal)
 [v _TMR5_WriteTimer `(v ~T0 @X0 1 ef1`us ]
-"121
-[; ;mcc_generated_files/tmr5.c: 121: {
+"120
+[; ;mcc_generated_files/tmr5.c: 120: {
 {
 [e :U _TMR5_WriteTimer ]
-"120
-[; ;mcc_generated_files/tmr5.c: 120: void TMR5_WriteTimer(uint16_t timerVal)
+"119
+[; ;mcc_generated_files/tmr5.c: 119: void TMR5_WriteTimer(uint16_t timerVal)
 [v _timerVal `us ~T0 @X0 1 r1 ]
-"121
-[; ;mcc_generated_files/tmr5.c: 121: {
+"120
+[; ;mcc_generated_files/tmr5.c: 120: {
 [f ]
-"122
-[; ;mcc_generated_files/tmr5.c: 122:     if (T5CONbits.nT5SYNC == 1)
+"121
+[; ;mcc_generated_files/tmr5.c: 121:     if (T5CONbits.nT5SYNC == 1)
 [e $ ! == -> . . _T5CONbits 3 2 `i -> 1 `i 1495  ]
-"123
-[; ;mcc_generated_files/tmr5.c: 123:     {
+"122
+[; ;mcc_generated_files/tmr5.c: 122:     {
 {
-"125
-[; ;mcc_generated_files/tmr5.c: 125:         T5CONbits.TMR5ON = 0;
+"124
+[; ;mcc_generated_files/tmr5.c: 124:         T5CONbits.TMR5ON = 0;
 [e = . . _T5CONbits 3 0 -> -> 0 `i `uc ]
-"128
-[; ;mcc_generated_files/tmr5.c: 128:         TMR5H = (timerVal >> 8);
+"127
+[; ;mcc_generated_files/tmr5.c: 127:         TMR5H = (timerVal >> 8);
 [e = _TMR5H -> >> -> _timerVal `ui -> 8 `i `uc ]
-"129
-[; ;mcc_generated_files/tmr5.c: 129:         TMR5L = timerVal;
+"128
+[; ;mcc_generated_files/tmr5.c: 128:         TMR5L = timerVal;
 [e = _TMR5L -> _timerVal `uc ]
-"132
-[; ;mcc_generated_files/tmr5.c: 132:         T5CONbits.TMR5ON =1;
+"131
+[; ;mcc_generated_files/tmr5.c: 131:         T5CONbits.TMR5ON =1;
 [e = . . _T5CONbits 3 0 -> -> 1 `i `uc ]
-"133
-[; ;mcc_generated_files/tmr5.c: 133:     }
+"132
+[; ;mcc_generated_files/tmr5.c: 132:     }
 }
 [e $U 1496  ]
-"134
-[; ;mcc_generated_files/tmr5.c: 134:     else
+"133
+[; ;mcc_generated_files/tmr5.c: 133:     else
 [e :U 1495 ]
-"135
-[; ;mcc_generated_files/tmr5.c: 135:     {
+"134
+[; ;mcc_generated_files/tmr5.c: 134:     {
 {
-"137
-[; ;mcc_generated_files/tmr5.c: 137:         TMR5H = (timerVal >> 8);
+"136
+[; ;mcc_generated_files/tmr5.c: 136:         TMR5H = (timerVal >> 8);
 [e = _TMR5H -> >> -> _timerVal `ui -> 8 `i `uc ]
-"138
-[; ;mcc_generated_files/tmr5.c: 138:         TMR5L = timerVal;
+"137
+[; ;mcc_generated_files/tmr5.c: 137:         TMR5L = timerVal;
 [e = _TMR5L -> _timerVal `uc ]
-"139
-[; ;mcc_generated_files/tmr5.c: 139:     }
+"138
+[; ;mcc_generated_files/tmr5.c: 138:     }
 }
 [e :U 1496 ]
-"140
-[; ;mcc_generated_files/tmr5.c: 140: }
+"139
+[; ;mcc_generated_files/tmr5.c: 139: }
 [e :UE 1494 ]
 }
-"142
-[; ;mcc_generated_files/tmr5.c: 142: void TMR5_Reload(void)
+"141
+[; ;mcc_generated_files/tmr5.c: 141: void TMR5_Reload(void)
 [v _TMR5_Reload `(v ~T0 @X0 1 ef ]
-"143
-[; ;mcc_generated_files/tmr5.c: 143: {
+"142
+[; ;mcc_generated_files/tmr5.c: 142: {
 {
 [e :U _TMR5_Reload ]
 [f ]
-"144
-[; ;mcc_generated_files/tmr5.c: 144:     TMR5_WriteTimer(timer5ReloadVal);
+"143
+[; ;mcc_generated_files/tmr5.c: 143:     TMR5_WriteTimer(timer5ReloadVal);
 [e ( _TMR5_WriteTimer (1 _timer5ReloadVal ]
-"145
-[; ;mcc_generated_files/tmr5.c: 145: }
+"144
+[; ;mcc_generated_files/tmr5.c: 144: }
 [e :UE 1497 ]
 }
-"147
-[; ;mcc_generated_files/tmr5.c: 147: void TMR5_StartSinglePulseAcquisition(void)
+"146
+[; ;mcc_generated_files/tmr5.c: 146: void TMR5_StartSinglePulseAcquisition(void)
 [v _TMR5_StartSinglePulseAcquisition `(v ~T0 @X0 1 ef ]
-"148
-[; ;mcc_generated_files/tmr5.c: 148: {
+"147
+[; ;mcc_generated_files/tmr5.c: 147: {
 {
 [e :U _TMR5_StartSinglePulseAcquisition ]
 [f ]
-"149
-[; ;mcc_generated_files/tmr5.c: 149:     T5GCONbits.T5GGO = 1;
+"148
+[; ;mcc_generated_files/tmr5.c: 148:     T5GCONbits.T5GGO = 1;
 [e = . . _T5GCONbits 4 1 -> -> 1 `i `uc ]
-"150
-[; ;mcc_generated_files/tmr5.c: 150: }
+"149
+[; ;mcc_generated_files/tmr5.c: 149: }
 [e :UE 1498 ]
 }
-"152
-[; ;mcc_generated_files/tmr5.c: 152: uint8_t TMR5_CheckGateValueStatus(void)
+"151
+[; ;mcc_generated_files/tmr5.c: 151: uint8_t TMR5_CheckGateValueStatus(void)
 [v _TMR5_CheckGateValueStatus `(uc ~T0 @X0 1 ef ]
-"153
-[; ;mcc_generated_files/tmr5.c: 153: {
+"152
+[; ;mcc_generated_files/tmr5.c: 152: {
 {
 [e :U _TMR5_CheckGateValueStatus ]
 [f ]
-"154
-[; ;mcc_generated_files/tmr5.c: 154:     return (T5GCONbits.T5GVAL);
+"153
+[; ;mcc_generated_files/tmr5.c: 153:     return (T5GCONbits.T5GVAL);
 [e ) . . _T5GCONbits 3 1 ]
 [e $UE 1499  ]
-"155
-[; ;mcc_generated_files/tmr5.c: 155: }
+"154
+[; ;mcc_generated_files/tmr5.c: 154: }
 [e :UE 1499 ]
 }
-"157
-[; ;mcc_generated_files/tmr5.c: 157: _Bool TMR5_HasOverflowOccured(void)
+"156
+[; ;mcc_generated_files/tmr5.c: 156: _Bool TMR5_HasOverflowOccured(void)
 [v _TMR5_HasOverflowOccured `(a ~T0 @X0 1 ef ]
-"158
-[; ;mcc_generated_files/tmr5.c: 158: {
+"157
+[; ;mcc_generated_files/tmr5.c: 157: {
 {
 [e :U _TMR5_HasOverflowOccured ]
 [f ]
-"160
-[; ;mcc_generated_files/tmr5.c: 160:     return(PIR4bits.TMR5IF);
+"159
+[; ;mcc_generated_files/tmr5.c: 159:     return(PIR4bits.TMR5IF);
 [e ) -> . . _PIR4bits 0 4 `a ]
 [e $UE 1500  ]
-"161
-[; ;mcc_generated_files/tmr5.c: 161: }
+"160
+[; ;mcc_generated_files/tmr5.c: 160: }
 [e :UE 1500 ]
 }

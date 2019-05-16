@@ -49,7 +49,7 @@
 #include "mdb.h"
 #include "cctalk.h"
 #include "dispense.h"
-#include "gsm.h"
+
 void enter_service(void);
 
 /*

@@ -1,5 +1,4 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F10230 `(v ~T0 @X0 0 tf ]
 "58 ./mdb.h
 [; ;./mdb.h: 58: {
 [s S1490 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -60,10 +59,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./vend.h: 225: {
 [s S1504 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1504 . iscredit error inscoin nochange credisplay initialrun noterr service priceset setprice vendset chanlink mottime nosense settime sensno linkchan swclosed pricedisplay audit hiprice spare22 spare23 spare24 ]
-"61 ./gsm.h
-[; ;./gsm.h: 61: {
-[s S1506 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1506 . retransmit meerror mtn msgavl spare4 spare5 spare6 spare7 ]
 "16835 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 16835: extern volatile unsigned char LATE __attribute__((address(0xF87)));
 [v _LATE `Vuc ~T0 @X0 0 e@3975 ]
@@ -83,14 +78,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "151
 [; ;./lcd.h: 151: void lcd_test(void);
 [v _lcd_test `(v ~T0 @X0 0 ef ]
-"132 ./mcc_generated_files/cmp1.h
-[; ;./mcc_generated_files/cmp1.h: 132: _Bool CMP1_GetOutputStatus(void);
+"131 ./mcc_generated_files/cmp1.h
+[; ;./mcc_generated_files/cmp1.h: 131: _Bool CMP1_GetOutputStatus(void);
 [v _CMP1_GetOutputStatus `(a ~T0 @X0 0 ef ]
 "137 ./lcd.h
 [; ;./lcd.h: 137: void lcd_string(uint8_t *, uint8_t lcdline);
 [v _lcd_string `(v ~T0 @X0 0 ef2`*uc`uc ]
-"249 ./mcc_generated_files/memory.h
-[; ;./mcc_generated_files/memory.h: 249: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
+"248 ./mcc_generated_files/memory.h
+[; ;./mcc_generated_files/memory.h: 248: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [v _DATAEE_WriteByte `(v ~T0 @X0 0 ef2`us`uc ]
 "131 ./lcd.h
 [; ;./lcd.h: 131: void lcd_dispadd(uint8_t lcdaddress);
@@ -1508,27 +1503,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28207
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 28207: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"64 ./mcc_generated_files/eusart2.h
-[; ;./mcc_generated_files/eusart2.h: 64: volatile uint8_t eusart2RxHead = 0;
-[v _eusart2RxHead `Vuc ~T0 @X0 1 e ]
-[i _eusart2RxHead
--> -> 0 `i `uc
-]
-"65
-[; ;./mcc_generated_files/eusart2.h: 65: volatile uint8_t eusart2RxTail = 0;
-[v _eusart2RxTail `Vuc ~T0 @X0 1 e ]
-[i _eusart2RxTail
--> -> 0 `i `uc
-]
-"66
-[; ;./mcc_generated_files/eusart2.h: 66: volatile uint8_t eusart2RxBuffer[512];
-[v _eusart2RxBuffer `Vuc ~T0 @X0 -> 512 `i e ]
-"67
-[; ;./mcc_generated_files/eusart2.h: 67: volatile uint8_t eusart2RxCount;
-[v _eusart2RxCount `Vuc ~T0 @X0 1 e ]
-"97
-[; ;./mcc_generated_files/eusart2.h: 97: void (*EUSART2_RxDefaultInterruptHandler)(void);
-[v _EUSART2_RxDefaultInterruptHandler `*F10230 ~T0 @X0 1 e ]
 "41 ./lcd.h
 [; ;./lcd.h: 41: signed char count;
 [v _count `c ~T0 @X0 1 e ]
@@ -3280,19 +3254,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"118
-[; ;./lcd.h: 118: const uint8_t clocktime[] = "Time ";
-[v _clocktime `Cuc ~T0 @X0 -> 6 `i e ]
-[i _clocktime
-:U ..
--> 84 `c
--> 105 `c
--> 109 `c
--> 101 `c
--> 32 `c
--> 0 `c
-..
-]
 "119
 [; ;./lcd.h: 119: const uint8_t clockdate[] = "Date ";
 [v _clockdate `Cuc ~T0 @X0 -> 6 `i e ]
@@ -3454,8 +3415,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 12 `i `uc
 ]
 "47
-[; ;./mdb.h: 47: uint8_t mdbdata[31];
-[v _mdbdata `uc ~T0 @X0 -> 31 `i e ]
+[; ;./mdb.h: 47: uint8_t mdbdata[32];
+[v _mdbdata `uc ~T0 @X0 -> 32 `i e ]
 "48
 [; ;./mdb.h: 48: uint8_t slvadd;
 [v _slvadd `uc ~T0 @X0 1 e ]
@@ -3900,568 +3861,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "250
 [; ;./vend.h: 250: } venflags;
 [v _venflags `S1504 ~T0 @X0 1 e ]
-"21 ./gsm.h
-[; ;./gsm.h: 21: uint8_t gsmbyte = 0;
-[v _gsmbyte `uc ~T0 @X0 1 e ]
-[i _gsmbyte
--> -> 0 `i `uc
-]
-"22
-[; ;./gsm.h: 22: uint8_t gsmmsg[512];
-[v _gsmmsg `uc ~T0 @X0 -> 512 `i e ]
-"23
-[; ;./gsm.h: 23: uint8_t gsmums[512];
-[v _gsmums `uc ~T0 @X0 -> 512 `i e ]
-"24
-[; ;./gsm.h: 24: uint8_t gsmusm[256];
-[v _gsmusm `uc ~T0 @X0 -> 256 `i e ]
-"25
-[; ;./gsm.h: 25: uint8_t gsmtim[23];
-[v _gsmtim `uc ~T0 @X0 -> 23 `i e ]
-"26
-[; ;./gsm.h: 26: uint8_t gsdate[10];
-[v _gsdate `uc ~T0 @X0 -> 10 `i e ]
-"27
-[; ;./gsm.h: 27: uint8_t gstime[10];
-[v _gstime `uc ~T0 @X0 -> 10 `i e ]
-"28
-[; ;./gsm.h: 28: uint8_t noofline;
-[v _noofline `uc ~T0 @X0 1 e ]
-"31
-[; ;./gsm.h: 31: const uint8_t smsdel[] = "AT+CMGDA=\"DEL ALL\"\r";
-[v _smsdel `Cuc ~T0 @X0 -> 20 `i e ]
-[i _smsdel
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 77 `c
--> 71 `c
--> 68 `c
--> 65 `c
--> 61 `c
--> 34 `c
--> 68 `c
--> 69 `c
--> 76 `c
--> 32 `c
--> 65 `c
--> 76 `c
--> 76 `c
--> 34 `c
--> 13 `c
--> 0 `c
-..
-]
-"32
-[; ;./gsm.h: 32: const uint8_t smslst[] = "AT+CMGL=\"ALL\"\r";
-[v _smslst `Cuc ~T0 @X0 -> 15 `i e ]
-[i _smslst
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 77 `c
--> 71 `c
--> 76 `c
--> 61 `c
--> 34 `c
--> 65 `c
--> 76 `c
--> 76 `c
--> 34 `c
--> 13 `c
--> 0 `c
-..
-]
-"33
-[; ;./gsm.h: 33: const uint8_t smscap[] = "AT+CMGL=?\r";
-[v _smscap `Cuc ~T0 @X0 -> 11 `i e ]
-[i _smscap
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 77 `c
--> 71 `c
--> 76 `c
--> 61 `c
--> 63 `c
--> 13 `c
--> 0 `c
-..
-]
-"34
-[; ;./gsm.h: 34: const uint8_t smstxt[] = "AT+CMGF=1\r";
-[v _smstxt `Cuc ~T0 @X0 -> 11 `i e ]
-[i _smstxt
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 77 `c
--> 71 `c
--> 70 `c
--> 61 `c
--> 49 `c
--> 13 `c
--> 0 `c
-..
-]
-"35
-[; ;./gsm.h: 35: const uint8_t engqry[] = "AT+AT+CEER\r";
-[v _engqry `Cuc ~T0 @X0 -> 12 `i e ]
-[i _engqry
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 69 `c
--> 69 `c
--> 82 `c
--> 13 `c
--> 0 `c
-..
-]
-"36
-[; ;./gsm.h: 36: const uint8_t engfmt[] = "AT+CENG=?";
-[v _engfmt `Cuc ~T0 @X0 -> 10 `i e ]
-[i _engfmt
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 69 `c
--> 78 `c
--> 71 `c
--> 61 `c
--> 63 `c
--> 0 `c
-..
-]
-"37
-[; ;./gsm.h: 37: const uint8_t engwrt[] = "AT+CENG?";
-[v _engwrt `Cuc ~T0 @X0 -> 9 `i e ]
-[i _engwrt
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 69 `c
--> 78 `c
--> 71 `c
--> 63 `c
--> 0 `c
-..
-]
-"38
-[; ;./gsm.h: 38: const uint8_t noecho[] = "ATE0;V0\r";
-[v _noecho `Cuc ~T0 @X0 -> 9 `i e ]
-[i _noecho
-:U ..
--> 65 `c
--> 84 `c
--> 69 `c
--> 48 `c
--> 59 `c
--> 86 `c
--> 48 `c
--> 13 `c
--> 0 `c
-..
-]
-"39
-[; ;./gsm.h: 39: const uint8_t usdtst[] = "AT+CUSD=?\r";
-[v _usdtst `Cuc ~T0 @X0 -> 11 `i e ]
-[i _usdtst
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 85 `c
--> 83 `c
--> 68 `c
--> 61 `c
--> 63 `c
--> 13 `c
--> 0 `c
-..
-]
-"40
-[; ;./gsm.h: 40: const uint8_t ussdrd[] = "AT+CUSD?\r";
-[v _ussdrd `Cuc ~T0 @X0 -> 10 `i e ]
-[i _ussdrd
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 85 `c
--> 83 `c
--> 68 `c
--> 63 `c
--> 13 `c
--> 0 `c
-..
-]
-"41
-[; ;./gsm.h: 41: const uint8_t ussdwe[] = "AT+CUSD=1\r";
-[v _ussdwe `Cuc ~T0 @X0 -> 11 `i e ]
-[i _ussdwe
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 85 `c
--> 83 `c
--> 68 `c
--> 61 `c
--> 49 `c
--> 13 `c
--> 0 `c
-..
-]
-"42
-[; ;./gsm.h: 42: const uint8_t ussdwc[] = "AT+CUSD=2\r";
-[v _ussdwc `Cuc ~T0 @X0 -> 11 `i e ]
-[i _ussdwc
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 85 `c
--> 83 `c
--> 68 `c
--> 61 `c
--> 50 `c
--> 13 `c
--> 0 `c
-..
-]
-"43
-[; ;./gsm.h: 43: const uint8_t ussdwv[] = "AT+CUSD=1,\"*135*500#\"\r";
-[v _ussdwv `Cuc ~T0 @X0 -> 23 `i e ]
-[i _ussdwv
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 85 `c
--> 83 `c
--> 68 `c
--> 61 `c
--> 49 `c
--> 44 `c
--> 34 `c
--> 42 `c
--> 49 `c
--> 51 `c
--> 53 `c
--> 42 `c
--> 53 `c
--> 48 `c
--> 48 `c
--> 35 `c
--> 34 `c
--> 13 `c
--> 0 `c
-..
-]
-"44
-[; ;./gsm.h: 44: const uint8_t ussdwm[] = "AT+CUSD=1,\"*136#\"\r";
-[v _ussdwm `Cuc ~T0 @X0 -> 19 `i e ]
-[i _ussdwm
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 85 `c
--> 83 `c
--> 68 `c
--> 61 `c
--> 49 `c
--> 44 `c
--> 34 `c
--> 42 `c
--> 49 `c
--> 51 `c
--> 54 `c
--> 35 `c
--> 34 `c
--> 13 `c
--> 0 `c
-..
-]
-"45
-[; ;./gsm.h: 45: const uint8_t ussdw2[] = "AT+CUSD=1,\"*136#\",2\r";
-[v _ussdw2 `Cuc ~T0 @X0 -> 21 `i e ]
-[i _ussdw2
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 85 `c
--> 83 `c
--> 68 `c
--> 61 `c
--> 49 `c
--> 44 `c
--> 34 `c
--> 42 `c
--> 49 `c
--> 51 `c
--> 54 `c
--> 35 `c
--> 34 `c
--> 44 `c
--> 50 `c
--> 13 `c
--> 0 `c
-..
-]
-"46
-[; ;./gsm.h: 46: const uint8_t setgsm[] = "AT+CSCS=\"GSM\"\r";
-[v _setgsm `Cuc ~T0 @X0 -> 15 `i e ]
-[i _setgsm
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 83 `c
--> 67 `c
--> 83 `c
--> 61 `c
--> 34 `c
--> 71 `c
--> 83 `c
--> 77 `c
--> 34 `c
--> 13 `c
--> 0 `c
-..
-]
-"47
-[; ;./gsm.h: 47: const uint8_t airtim[] = "AT+CUSD =1\r";
-[v _airtim `Cuc ~T0 @X0 -> 12 `i e ]
-[i _airtim
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 85 `c
--> 83 `c
--> 68 `c
--> 32 `c
--> 61 `c
--> 49 `c
--> 13 `c
--> 0 `c
-..
-]
-"48
-[; ;./gsm.h: 48: const uint8_t prodid[] = "ATI\r";
-[v _prodid `Cuc ~T0 @X0 -> 5 `i e ]
-[i _prodid
-:U ..
--> 65 `c
--> 84 `c
--> 73 `c
--> 13 `c
--> 0 `c
-..
-]
-"49
-[; ;./gsm.h: 49: const uint8_t dconfg[] = "AT&V\r";
-[v _dconfg `Cuc ~T0 @X0 -> 6 `i e ]
-[i _dconfg
-:U ..
--> 65 `c
--> 84 `c
--> 38 `c
--> 86 `c
--> 13 `c
--> 0 `c
-..
-]
-"50
-[; ;./gsm.h: 50: const uint8_t ownnum[] = "AT+CNUM\r";
-[v _ownnum `Cuc ~T0 @X0 -> 9 `i e ]
-[i _ownnum
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 78 `c
--> 85 `c
--> 77 `c
--> 13 `c
--> 0 `c
-..
-]
-"51
-[; ;./gsm.h: 51: const uint8_t clockr[] = "AT+CCLK?\r";
-[v _clockr `Cuc ~T0 @X0 -> 10 `i e ]
-[i _clockr
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 67 `c
--> 76 `c
--> 75 `c
--> 63 `c
--> 13 `c
--> 0 `c
-..
-]
-"52
-[; ;./gsm.h: 52: const uint8_t clockw[] = "AT+CCLK=";
-[v _clockw `Cuc ~T0 @X0 -> 9 `i e ]
-[i _clockw
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 67 `c
--> 76 `c
--> 75 `c
--> 61 `c
--> 0 `c
-..
-]
-"53
-[; ;./gsm.h: 53: const uint8_t pwrsta[] = "AT+CBC\r";
-[v _pwrsta `Cuc ~T0 @X0 -> 8 `i e ]
-[i _pwrsta
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 66 `c
--> 67 `c
--> 13 `c
--> 0 `c
-..
-]
-"54
-[; ;./gsm.h: 54: const uint8_t loctim[] = "AT+CIPGSMLOC=2\r";
-[v _loctim `Cuc ~T0 @X0 -> 16 `i e ]
-[i _loctim
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 73 `c
--> 80 `c
--> 71 `c
--> 83 `c
--> 77 `c
--> 76 `c
--> 79 `c
--> 67 `c
--> 61 `c
--> 50 `c
--> 13 `c
--> 0 `c
-..
-]
-"55
-[; ;./gsm.h: 55: const uint8_t nettst[] = "AT+CLTS=1\r";
-[v _nettst `Cuc ~T0 @X0 -> 11 `i e ]
-[i _nettst
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 76 `c
--> 84 `c
--> 83 `c
--> 61 `c
--> 49 `c
--> 13 `c
--> 0 `c
-..
-]
-"56
-[; ;./gsm.h: 56: const uint8_t netoff[] = "AT+CLTS=0\r";
-[v _netoff `Cuc ~T0 @X0 -> 11 `i e ]
-[i _netoff
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 67 `c
--> 76 `c
--> 84 `c
--> 83 `c
--> 61 `c
--> 48 `c
--> 13 `c
--> 0 `c
-..
-]
-"57
-[; ;./gsm.h: 57: const uint8_t baudra[] = "AT+IPR=19200\r";
-[v _baudra `Cuc ~T0 @X0 -> 14 `i e ]
-[i _baudra
-:U ..
--> 65 `c
--> 84 `c
--> 43 `c
--> 73 `c
--> 80 `c
--> 82 `c
--> 61 `c
--> 49 `c
--> 57 `c
--> 50 `c
--> 48 `c
--> 48 `c
--> 13 `c
--> 0 `c
-..
-]
-"58
-[; ;./gsm.h: 58: const uint8_t facres[] = "AT&F0\r";
-[v _facres `Cuc ~T0 @X0 -> 7 `i e ]
-[i _facres
-:U ..
--> 65 `c
--> 84 `c
--> 38 `c
--> 70 `c
--> 48 `c
--> 13 `c
--> 0 `c
-..
-]
-"70
-[; ;./gsm.h: 70: } gsmflags;
-[v _gsmflags `S1506 ~T0 @X0 1 e ]
 "12 lcd.c
 [; ;lcd.c: 12: void lcd_init()
 [v _lcd_init `(v ~T0 @X0 1 ef ]
@@ -4480,9 +3879,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;lcd.c: 17:     for(count = 3; count > 0; count-- )
 {
 [e = _count -> -> 3 `i `c ]
-[e $ > -> _count `i -> 0 `i 1508  ]
-[e $U 1509  ]
-[e :U 1508 ]
+[e $ > -> _count `i -> 0 `i 1506  ]
+[e $U 1507  ]
+[e :U 1506 ]
 "18
 [; ;lcd.c: 18:     {
 {
@@ -4490,18 +3889,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;lcd.c: 19:         lcd_clockE();
 [e ( _lcd_clockE ..  ]
 "20
-[; ;lcd.c: 20:         _delay((unsigned long)((5)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;lcd.c: 20:         _delay((unsigned long)((5)*(12000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
 "22
 [; ;lcd.c: 22:     }
 }
 [e -- _count -> -> 1 `i `c ]
-[e $ > -> _count `i -> 0 `i 1508  ]
-[e :U 1509 ]
+[e $ > -> _count `i -> 0 `i 1506  ]
+[e :U 1507 ]
 }
 "23
-[; ;lcd.c: 23:     _delay((unsigned long)((50)*(64000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
+[; ;lcd.c: 23:     _delay((unsigned long)((50)*(12000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 12000000 `l `d .4000000.0 `ul ]
 "24
 [; ;lcd.c: 24:     LATD = 0x02;
 [e = _LATD -> -> 2 `i `uc ]
@@ -4524,14 +3923,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;lcd.c: 36:     lcd_test();
 [e ( _lcd_test ..  ]
 "37
-[; ;lcd.c: 37:     _delay((unsigned long)((250)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;lcd.c: 37:     _delay((unsigned long)((250)*(12000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
 "38
 [; ;lcd.c: 38:     __asm("nop");
 [; <" nop ;# ">
 "39
 [; ;lcd.c: 39: }
-[e :UE 1507 ]
+[e :UE 1505 ]
 }
 "41
 [; ;lcd.c: 41: void displ_sens(uint8_t smsgpos, uint8_t dmsgpos)
@@ -4549,7 +3948,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "43
 [; ;lcd.c: 43:     if(CMP1_GetOutputStatus())
-[e $ ! != -> ( _CMP1_GetOutputStatus ..  `i -> 0 `i 1512  ]
+[e $ ! != -> ( _CMP1_GetOutputStatus ..  `i -> 0 `i 1510  ]
 "44
 [; ;lcd.c: 44:     {
 {
@@ -4559,10 +3958,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "46
 [; ;lcd.c: 46:     }
 }
-[e $U 1513  ]
+[e $U 1511  ]
 "47
 [; ;lcd.c: 47:     else
-[e :U 1512 ]
+[e :U 1510 ]
 "48
 [; ;lcd.c: 48:     {
 {
@@ -4572,7 +3971,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50
 [; ;lcd.c: 50:     }
 }
-[e :U 1513 ]
+[e :U 1511 ]
 "51
 [; ;lcd.c: 51:     DATAEE_WriteByte(sensval, sensorval);
 [e ( _DATAEE_WriteByte (2 , _sensval _sensorval ]
@@ -4587,7 +3986,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _displ_hex (1 -> _DAC1CON1 `um ]
 "56
 [; ;lcd.c: 56: }
-[e :UE 1511 ]
+[e :UE 1509 ]
 }
 "58
 [; ;lcd.c: 58: void displ_lflags(uint8_t chanel, uint8_t linkflgs)
@@ -4621,14 +4020,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _lcd_dispadd (1 -> _line3 `uc ]
 "66
 [; ;lcd.c: 66:     while(lchan < 0x09)
-[e $U 1515  ]
-[e :U 1516 ]
+[e $U 1513  ]
+[e :U 1514 ]
 "67
 [; ;lcd.c: 67:     {
 {
 "68
 [; ;lcd.c: 68:         if(linkflgs & 0x01)
-[e $ ! != & -> _linkflgs `i -> 1 `i -> 0 `i 1518  ]
+[e $ ! != & -> _linkflgs `i -> 1 `i -> 0 `i 1516  ]
 "69
 [; ;lcd.c: 69:         {
 {
@@ -4644,7 +4043,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "73
 [; ;lcd.c: 73:         }
 }
-[e :U 1518 ]
+[e :U 1516 ]
 "74
 [; ;lcd.c: 74:         lchan++;
 [e ++ _lchan -> -> 1 `i `uc ]
@@ -4654,14 +4053,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "76
 [; ;lcd.c: 76:     }
 }
-[e :U 1515 ]
+[e :U 1513 ]
 "66
 [; ;lcd.c: 66:     while(lchan < 0x09)
-[e $ < -> _lchan `i -> 9 `i 1516  ]
-[e :U 1517 ]
+[e $ < -> _lchan `i -> 9 `i 1514  ]
+[e :U 1515 ]
 "77
 [; ;lcd.c: 77: }
-[e :UE 1514 ]
+[e :UE 1512 ]
 }
 "79
 [; ;lcd.c: 79: void displ_sflags(uint8_t senseflags, uint8_t chanel, uint8_t chanbit)
@@ -4692,7 +4091,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _lcd_string (2 , -> &U _sensoffmsg `*uc -> _line3 `uc ]
 "87
 [; ;lcd.c: 87:     if((senseflags & chanbit) != 0)
-[e $ ! != & -> _senseflags `i -> _chanbit `i -> 0 `i 1520  ]
+[e $ ! != & -> _senseflags `i -> _chanbit `i -> 0 `i 1518  ]
 "88
 [; ;lcd.c: 88:     {
 {
@@ -4702,10 +4101,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "90
 [; ;lcd.c: 90:     }
 }
-[e $U 1521  ]
+[e $U 1519  ]
 "91
 [; ;lcd.c: 91:     else
-[e :U 1520 ]
+[e :U 1518 ]
 "92
 [; ;lcd.c: 92:     {
 {
@@ -4715,10 +4114,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "94
 [; ;lcd.c: 94:     }
 }
-[e :U 1521 ]
+[e :U 1519 ]
 "96
 [; ;lcd.c: 96: }
-[e :UE 1519 ]
+[e :UE 1517 ]
 }
 "98
 [; ;lcd.c: 98: void displ_time(uint8_t motortime, uint8_t channel)
@@ -4754,7 +4153,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _displ_hex (1 -> _motortime `um ]
 "106
 [; ;lcd.c: 106: }
-[e :UE 1522 ]
+[e :UE 1520 ]
 }
 "108
 [; ;lcd.c: 108: uint8_t displ_note(uint8_t *notestring)
@@ -4778,10 +4177,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "112
 [; ;lcd.c: 112:     return bflag+2;
 [e ) -> + -> _bflag `i -> 2 `i `uc ]
-[e $UE 1523  ]
+[e $UE 1521  ]
 "113
 [; ;lcd.c: 113: }
-[e :UE 1523 ]
+[e :UE 1521 ]
 }
 "115
 [; ;lcd.c: 115: void displ_nendis(uint8_t note2disp)
@@ -4802,7 +4201,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _x -> & -> _note2disp `i -> _noteen_byte `i `uc ]
 "118
 [; ;lcd.c: 118:     if(x != 0x00)
-[e $ ! != -> _x `i -> 0 `i 1525  ]
+[e $ ! != -> _x `i -> 0 `i 1523  ]
 "119
 [; ;lcd.c: 119:     {
 {
@@ -4812,10 +4211,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "121
 [; ;lcd.c: 121:     }
 }
-[e $U 1526  ]
+[e $U 1524  ]
 "122
 [; ;lcd.c: 122:     else
-[e :U 1525 ]
+[e :U 1523 ]
 "123
 [; ;lcd.c: 123:     {
 {
@@ -4825,10 +4224,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "125
 [; ;lcd.c: 125:     }
 }
-[e :U 1526 ]
+[e :U 1524 ]
 "126
 [; ;lcd.c: 126: }
-[e :UE 1524 ]
+[e :UE 1522 ]
 }
 "128
 [; ;lcd.c: 128: void displ_credit(void)
@@ -4853,7 +4252,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . _venflags 4 -> -> 0 `i `uc ]
 "134
 [; ;lcd.c: 134: }
-[e :UE 1527 ]
+[e :UE 1525 ]
 }
 "136
 [; ;lcd.c: 136: void displ_code(uint8_t ercode)
@@ -4870,7 +4269,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "138
 [; ;lcd.c: 138:     if((ercode >> 4) < 0x0A)
-[e $ ! < >> -> _ercode `i -> 4 `i -> 10 `i 1529  ]
+[e $ ! < >> -> _ercode `i -> 4 `i -> 10 `i 1527  ]
 "139
 [; ;lcd.c: 139:     {
 {
@@ -4880,78 +4279,78 @@ Version 4.0 HI-TECH Software Intermediate Code
 "141
 [; ;lcd.c: 141:     }
 }
-[e $U 1530  ]
+[e $U 1528  ]
 "142
 [; ;lcd.c: 142:     else
-[e :U 1529 ]
+[e :U 1527 ]
 "143
 [; ;lcd.c: 143:     {
 {
 "144
 [; ;lcd.c: 144:         switch(ercode >> 4)
-[e $U 1532  ]
+[e $U 1530  ]
 "145
 [; ;lcd.c: 145:         {
 {
 "146
 [; ;lcd.c: 146:             case 0x0A : lcd_writeC(0x41);
-[e :U 1533 ]
+[e :U 1531 ]
 [e ( _lcd_writeC (1 -> -> 65 `i `uc ]
 "147
 [; ;lcd.c: 147:             break;
-[e $U 1531  ]
+[e $U 1529  ]
 "148
 [; ;lcd.c: 148:             case 0x0B : lcd_writeC(0x42);
-[e :U 1534 ]
+[e :U 1532 ]
 [e ( _lcd_writeC (1 -> -> 66 `i `uc ]
 "149
 [; ;lcd.c: 149:             break;
-[e $U 1531  ]
+[e $U 1529  ]
 "150
 [; ;lcd.c: 150:             case 0x0C : lcd_writeC(0x43);
-[e :U 1535 ]
+[e :U 1533 ]
 [e ( _lcd_writeC (1 -> -> 67 `i `uc ]
 "151
 [; ;lcd.c: 151:             break;
-[e $U 1531  ]
+[e $U 1529  ]
 "152
 [; ;lcd.c: 152:             case 0x0D : lcd_writeC(0x44);
-[e :U 1536 ]
+[e :U 1534 ]
 [e ( _lcd_writeC (1 -> -> 68 `i `uc ]
 "153
 [; ;lcd.c: 153:             break;
-[e $U 1531  ]
+[e $U 1529  ]
 "154
 [; ;lcd.c: 154:             case 0x0E : lcd_writeC(0x45);
-[e :U 1537 ]
+[e :U 1535 ]
 [e ( _lcd_writeC (1 -> -> 69 `i `uc ]
 "155
 [; ;lcd.c: 155:             break;
-[e $U 1531  ]
+[e $U 1529  ]
 "156
 [; ;lcd.c: 156:             case 0x0F : lcd_writeC(0x46);
-[e :U 1538 ]
+[e :U 1536 ]
 [e ( _lcd_writeC (1 -> -> 70 `i `uc ]
 "157
 [; ;lcd.c: 157:         }
 }
-[e $U 1531  ]
-[e :U 1532 ]
-[e [\ >> -> _ercode `i -> 4 `i , $ -> 10 `i 1533
- , $ -> 11 `i 1534
- , $ -> 12 `i 1535
- , $ -> 13 `i 1536
- , $ -> 14 `i 1537
- , $ -> 15 `i 1538
- 1531 ]
-[e :U 1531 ]
+[e $U 1529  ]
+[e :U 1530 ]
+[e [\ >> -> _ercode `i -> 4 `i , $ -> 10 `i 1531
+ , $ -> 11 `i 1532
+ , $ -> 12 `i 1533
+ , $ -> 13 `i 1534
+ , $ -> 14 `i 1535
+ , $ -> 15 `i 1536
+ 1529 ]
+[e :U 1529 ]
 "158
 [; ;lcd.c: 158:     }
 }
-[e :U 1530 ]
+[e :U 1528 ]
 "159
 [; ;lcd.c: 159:     if((ercode & 0x0F) < 0x0A)
-[e $ ! < & -> _ercode `i -> 15 `i -> 10 `i 1539  ]
+[e $ ! < & -> _ercode `i -> 15 `i -> 10 `i 1537  ]
 "160
 [; ;lcd.c: 160:     {
 {
@@ -4961,78 +4360,78 @@ Version 4.0 HI-TECH Software Intermediate Code
 "162
 [; ;lcd.c: 162:     }
 }
-[e $U 1540  ]
+[e $U 1538  ]
 "163
 [; ;lcd.c: 163:     else
-[e :U 1539 ]
+[e :U 1537 ]
 "164
 [; ;lcd.c: 164:     {
 {
 "165
 [; ;lcd.c: 165:         switch(ercode & 0x0F)
-[e $U 1542  ]
+[e $U 1540  ]
 "166
 [; ;lcd.c: 166:         {
 {
 "167
 [; ;lcd.c: 167:             case 0x0A : lcd_writeC(0x41);
-[e :U 1543 ]
+[e :U 1541 ]
 [e ( _lcd_writeC (1 -> -> 65 `i `uc ]
 "168
 [; ;lcd.c: 168:             break;
-[e $U 1541  ]
+[e $U 1539  ]
 "169
 [; ;lcd.c: 169:             case 0x0B : lcd_writeC(0x42);
-[e :U 1544 ]
+[e :U 1542 ]
 [e ( _lcd_writeC (1 -> -> 66 `i `uc ]
 "170
 [; ;lcd.c: 170:             break;
-[e $U 1541  ]
+[e $U 1539  ]
 "171
 [; ;lcd.c: 171:             case 0x0C : lcd_writeC(0x43);
-[e :U 1545 ]
+[e :U 1543 ]
 [e ( _lcd_writeC (1 -> -> 67 `i `uc ]
 "172
 [; ;lcd.c: 172:             break;
-[e $U 1541  ]
+[e $U 1539  ]
 "173
 [; ;lcd.c: 173:             case 0x0D : lcd_writeC(0x44);
-[e :U 1546 ]
+[e :U 1544 ]
 [e ( _lcd_writeC (1 -> -> 68 `i `uc ]
 "174
 [; ;lcd.c: 174:             break;
-[e $U 1541  ]
+[e $U 1539  ]
 "175
 [; ;lcd.c: 175:             case 0x0E : lcd_writeC(0x45);
-[e :U 1547 ]
+[e :U 1545 ]
 [e ( _lcd_writeC (1 -> -> 69 `i `uc ]
 "176
 [; ;lcd.c: 176:             break;
-[e $U 1541  ]
+[e $U 1539  ]
 "177
 [; ;lcd.c: 177:             case 0x0F : lcd_writeC(0x46);
-[e :U 1548 ]
+[e :U 1546 ]
 [e ( _lcd_writeC (1 -> -> 70 `i `uc ]
 "178
 [; ;lcd.c: 178:         }
 }
-[e $U 1541  ]
-[e :U 1542 ]
-[e [\ & -> _ercode `i -> 15 `i , $ -> 10 `i 1543
- , $ -> 11 `i 1544
- , $ -> 12 `i 1545
- , $ -> 13 `i 1546
- , $ -> 14 `i 1547
- , $ -> 15 `i 1548
- 1541 ]
-[e :U 1541 ]
+[e $U 1539  ]
+[e :U 1540 ]
+[e [\ & -> _ercode `i -> 15 `i , $ -> 10 `i 1541
+ , $ -> 11 `i 1542
+ , $ -> 12 `i 1543
+ , $ -> 13 `i 1544
+ , $ -> 14 `i 1545
+ , $ -> 15 `i 1546
+ 1539 ]
+[e :U 1539 ]
 "180
 [; ;lcd.c: 180:     }
 }
-[e :U 1540 ]
+[e :U 1538 ]
 "181
 [; ;lcd.c: 181: }
-[e :UE 1528 ]
+[e :UE 1526 ]
 }
 "183
 [; ;lcd.c: 183: void displ_noteer(void)
@@ -5059,7 +4458,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . _venflags 6 -> -> 0 `i `uc ]
 "190
 [; ;lcd.c: 190: }
-[e :UE 1549 ]
+[e :UE 1547 ]
 }
 "192
 [; ;lcd.c: 192: void displ_hex(__uint24 hexnum)
@@ -5087,8 +4486,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _hexnumsave _hexnum ]
 "197
 [; ;lcd.c: 197:     while(hexnum > 0)
-[e $U 1551  ]
-[e :U 1552 ]
+[e $U 1549  ]
+[e :U 1550 ]
 "198
 [; ;lcd.c: 198:     {
 {
@@ -5104,15 +4503,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "202
 [; ;lcd.c: 202:     }
 }
-[e :U 1551 ]
+[e :U 1549 ]
 "197
 [; ;lcd.c: 197:     while(hexnum > 0)
-[e $ > _hexnum -> -> -> 0 `i `m `um 1552  ]
-[e :U 1553 ]
+[e $ > _hexnum -> -> -> 0 `i `m `um 1550  ]
+[e :U 1551 ]
 "204
 [; ;lcd.c: 204:     while(i > 0)
-[e $U 1554  ]
-[e :U 1555 ]
+[e $U 1552  ]
+[e :U 1553 ]
 "205
 [; ;lcd.c: 205:     {
 {
@@ -5125,14 +4524,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "208
 [; ;lcd.c: 208:     }
 }
-[e :U 1554 ]
+[e :U 1552 ]
 "204
 [; ;lcd.c: 204:     while(i > 0)
-[e $ > -> _i `i -> 0 `i 1555  ]
-[e :U 1556 ]
+[e $ > -> _i `i -> 0 `i 1553  ]
+[e :U 1554 ]
 "210
 [; ;lcd.c: 210:     if(hexnumsave == 0)
-[e $ ! == _hexnumsave -> -> -> 0 `i `m `um 1557  ]
+[e $ ! == _hexnumsave -> -> -> 0 `i `m `um 1555  ]
 "211
 [; ;lcd.c: 211:     {
 {
@@ -5142,10 +4541,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "213
 [; ;lcd.c: 213:     }
 }
-[e :U 1557 ]
+[e :U 1555 ]
 "214
 [; ;lcd.c: 214: }
-[e :UE 1550 ]
+[e :UE 1548 ]
 }
 "217
 [; ;lcd.c: 217: void lcd_string(uint8_t *lcdstring, uint8_t lcdline)
@@ -5163,7 +4562,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "219
 [; ;lcd.c: 219:     if(lcdline == line1)
-[e $ ! == -> _lcdline `i -> _line1 `i 1559  ]
+[e $ ! == -> _lcdline `i -> _line1 `i 1557  ]
 "220
 [; ;lcd.c: 220:     {
 {
@@ -5173,10 +4572,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "222
 [; ;lcd.c: 222:     }
 }
-[e $U 1560  ]
+[e $U 1558  ]
 "223
 [; ;lcd.c: 223:     else
-[e :U 1559 ]
+[e :U 1557 ]
 "224
 [; ;lcd.c: 224:     {
 {
@@ -5186,13 +4585,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "227
 [; ;lcd.c: 227:     }
 }
-[e :U 1560 ]
+[e :U 1558 ]
 "228
 [; ;lcd.c: 228:     for(stradd = 0; lcdstring[stradd] != 0; stradd++)
 {
 [e = _stradd -> -> 0 `i `uc ]
-[e $U 1564  ]
-[e :U 1561 ]
+[e $U 1562  ]
+[e :U 1559 ]
 "229
 [; ;lcd.c: 229:     {
 {
@@ -5206,13 +4605,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;lcd.c: 232:     }
 }
 [e ++ _stradd -> -> 1 `i `uc ]
-[e :U 1564 ]
-[e $ != -> *U + _lcdstring * -> _stradd `ux -> -> # *U _lcdstring `ui `ux `i -> 0 `i 1561  ]
 [e :U 1562 ]
+[e $ != -> *U + _lcdstring * -> _stradd `ux -> -> # *U _lcdstring `ui `ux `i -> 0 `i 1559  ]
+[e :U 1560 ]
 }
 "233
 [; ;lcd.c: 233: }
-[e :UE 1558 ]
+[e :UE 1556 ]
 }
 "235
 [; ;lcd.c: 235: void displ_price(uint8_t vendprice)
@@ -5241,7 +4640,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _displ_hex (1 -> _vendprice `um ]
 "241
 [; ;lcd.c: 241: }
-[e :UE 1565 ]
+[e :UE 1563 ]
 }
 "243
 [; ;lcd.c: 243: void displ_nochange(void)
@@ -5259,342 +4658,315 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _lcd_string (2 , -> &U _nochange `*uc -> _line3 `uc ]
 "247
 [; ;lcd.c: 247: }
-[e :UE 1566 ]
+[e :UE 1564 ]
 }
-"249
-[; ;lcd.c: 249: void disp_clock(void)
-[v _disp_clock `(v ~T0 @X0 1 ef ]
 "250
-[; ;lcd.c: 250: {
-{
-[e :U _disp_clock ]
-[f ]
-"251
-[; ;lcd.c: 251:     lcd_write(dispclr);
-[e ( _lcd_write (1 -> _dispclr `uc ]
-"252
-[; ;lcd.c: 252:     lcd_string(clockdate, line2);
-[e ( _lcd_string (2 , -> &U _clockdate `*uc -> _line2 `uc ]
-"253
-[; ;lcd.c: 253:     lcd_string(gsdate, line2 + 5);
-[e ( _lcd_string (2 , &U _gsdate -> + -> _line2 `i -> 5 `i `uc ]
-"254
-[; ;lcd.c: 254:     lcd_string(clocktime, line3);
-[e ( _lcd_string (2 , -> &U _clocktime `*uc -> _line3 `uc ]
-"255
-[; ;lcd.c: 255:     lcd_string(gstime, line3 + 5);
-[e ( _lcd_string (2 , &U _gstime -> + -> _line3 `i -> 5 `i `uc ]
-"256
-[; ;lcd.c: 256: }
-[e :UE 1567 ]
-}
-"259
-[; ;lcd.c: 259: void lcd_writeC(uint8_t lcdata)
+[; ;lcd.c: 250: void lcd_writeC(uint8_t lcdata)
 [v _lcd_writeC `(v ~T0 @X0 1 ef1`uc ]
-"260
-[; ;lcd.c: 260: {
+"251
+[; ;lcd.c: 251: {
 {
 [e :U _lcd_writeC ]
-"259
-[; ;lcd.c: 259: void lcd_writeC(uint8_t lcdata)
+"250
+[; ;lcd.c: 250: void lcd_writeC(uint8_t lcdata)
 [v _lcdata `uc ~T0 @X0 1 r1 ]
-"260
-[; ;lcd.c: 260: {
+"251
+[; ;lcd.c: 251: {
 [f ]
-"263
-[; ;lcd.c: 263:     __asm("BSF LATE, 2");
+"254
+[; ;lcd.c: 254:     __asm("BSF LATE, 2");
 [; <" BSF LATE, 2 ;# ">
-"264
-[; ;lcd.c: 264:     lcd_write(lcdata);
+"255
+[; ;lcd.c: 255:     lcd_write(lcdata);
 [e ( _lcd_write (1 _lcdata ]
-"268
-[; ;lcd.c: 268:     switch(bflag)
-[e $U 1570  ]
-"269
-[; ;lcd.c: 269:     {
+"259
+[; ;lcd.c: 259:     switch(bflag)
+[e $U 1567  ]
+"260
+[; ;lcd.c: 260:     {
 {
-"270
-[; ;lcd.c: 270:         case 0x13:lcd_dispadd(line2);
-[e :U 1571 ]
+"261
+[; ;lcd.c: 261:         case 0x13:lcd_dispadd(line2);
+[e :U 1568 ]
 [e ( _lcd_dispadd (1 -> _line2 `uc ]
-"271
-[; ;lcd.c: 271:         break;
-[e $U 1569  ]
-"272
-[; ;lcd.c: 272:         case 0x53:lcd_dispadd(line3);
-[e :U 1572 ]
-[e ( _lcd_dispadd (1 -> _line3 `uc ]
-"273
-[; ;lcd.c: 273:         break;
-[e $U 1569  ]
-"274
-[; ;lcd.c: 274:         case 0x27:lcd_dispadd(line4);
-[e :U 1573 ]
-[e ( _lcd_dispadd (1 -> _line4 `uc ]
-"275
-[; ;lcd.c: 275:     }
-}
-[e $U 1569  ]
-[e :U 1570 ]
-[e [\ -> _bflag `i , $ -> 19 `i 1571
- , $ -> 83 `i 1572
- , $ -> 39 `i 1573
- 1569 ]
+"262
+[; ;lcd.c: 262:         break;
+[e $U 1566  ]
+"263
+[; ;lcd.c: 263:         case 0x53:lcd_dispadd(line3);
 [e :U 1569 ]
-"276
-[; ;lcd.c: 276:     __asm("BCF LATE, 2");
-[; <" BCF LATE, 2 ;# ">
-"277
-[; ;lcd.c: 277: }
-[e :UE 1568 ]
+[e ( _lcd_dispadd (1 -> _line3 `uc ]
+"264
+[; ;lcd.c: 264:         break;
+[e $U 1566  ]
+"265
+[; ;lcd.c: 265:         case 0x27:lcd_dispadd(line4);
+[e :U 1570 ]
+[e ( _lcd_dispadd (1 -> _line4 `uc ]
+"266
+[; ;lcd.c: 266:     }
 }
-"279
-[; ;lcd.c: 279: void lcd_dispadd(uint8_t lcdaddress)
+[e $U 1566  ]
+[e :U 1567 ]
+[e [\ -> _bflag `i , $ -> 19 `i 1568
+ , $ -> 83 `i 1569
+ , $ -> 39 `i 1570
+ 1566 ]
+[e :U 1566 ]
+"267
+[; ;lcd.c: 267:     __asm("BCF LATE, 2");
+[; <" BCF LATE, 2 ;# ">
+"268
+[; ;lcd.c: 268: }
+[e :UE 1565 ]
+}
+"270
+[; ;lcd.c: 270: void lcd_dispadd(uint8_t lcdaddress)
 [v _lcd_dispadd `(v ~T0 @X0 1 ef1`uc ]
-"280
-[; ;lcd.c: 280: {
+"271
+[; ;lcd.c: 271: {
 {
 [e :U _lcd_dispadd ]
-"279
-[; ;lcd.c: 279: void lcd_dispadd(uint8_t lcdaddress)
+"270
+[; ;lcd.c: 270: void lcd_dispadd(uint8_t lcdaddress)
 [v _lcdaddress `uc ~T0 @X0 1 r1 ]
-"280
-[; ;lcd.c: 280: {
+"271
+[; ;lcd.c: 271: {
 [f ]
-"281
-[; ;lcd.c: 281:         uint8_t lcdatasave = lcdata;
+"272
+[; ;lcd.c: 272:         uint8_t lcdatasave = lcdata;
 [v _lcdatasave `uc ~T0 @X0 1 a ]
 [e = _lcdatasave _lcdata ]
-"282
-[; ;lcd.c: 282:         __asm("BCF LATE, 2");
+"273
+[; ;lcd.c: 273:         __asm("BCF LATE, 2");
 [; <" BCF LATE, 2 ;# ">
-"284
-[; ;lcd.c: 284:         lcd_write(lcdaddress | 0x80);
+"275
+[; ;lcd.c: 275:         lcd_write(lcdaddress | 0x80);
 [e ( _lcd_write (1 -> | -> _lcdaddress `i -> 128 `i `uc ]
-"285
-[; ;lcd.c: 285:         __asm("BSF LATE, 2");
+"276
+[; ;lcd.c: 276:         __asm("BSF LATE, 2");
 [; <" BSF LATE, 2 ;# ">
-"286
-[; ;lcd.c: 286:         lcdata = lcdatasave;
+"277
+[; ;lcd.c: 277:         lcdata = lcdatasave;
 [e = _lcdata _lcdatasave ]
-"288
-[; ;lcd.c: 288: }
-[e :UE 1574 ]
+"279
+[; ;lcd.c: 279: }
+[e :UE 1571 ]
 }
-"291
-[; ;lcd.c: 291: void lcd_write(uint8_t lcdata)
+"282
+[; ;lcd.c: 282: void lcd_write(uint8_t lcdata)
 [v _lcd_write `(v ~T0 @X0 1 ef1`uc ]
-"292
-[; ;lcd.c: 292: {
+"283
+[; ;lcd.c: 283: {
 {
 [e :U _lcd_write ]
-"291
-[; ;lcd.c: 291: void lcd_write(uint8_t lcdata)
+"282
+[; ;lcd.c: 282: void lcd_write(uint8_t lcdata)
 [v _lcdata `uc ~T0 @X0 1 r1 ]
-"292
-[; ;lcd.c: 292: {
+"283
+[; ;lcd.c: 283: {
 [f ]
-"293
-[; ;lcd.c: 293:     uint8_t savelatd = LATD;
+"284
+[; ;lcd.c: 284:     uint8_t savelatd = LATD;
 [v _savelatd `uc ~T0 @X0 1 a ]
 [e = _savelatd _LATD ]
-"296
-[; ;lcd.c: 296:     bflag = read_busy();
+"287
+[; ;lcd.c: 287:     bflag = read_busy();
 [e = _bflag -> ( _read_busy ..  `uc ]
-"297
-[; ;lcd.c: 297:     while(bflag & 0x80)
-[e $U 1576  ]
-[e :U 1577 ]
-"298
-[; ;lcd.c: 298:     {
+"288
+[; ;lcd.c: 288:     while(bflag & 0x80)
+[e $U 1573  ]
+[e :U 1574 ]
+"289
+[; ;lcd.c: 289:     {
 {
-"299
-[; ;lcd.c: 299:       bflag = read_busy();
+"290
+[; ;lcd.c: 290:       bflag = read_busy();
 [e = _bflag -> ( _read_busy ..  `uc ]
-"300
-[; ;lcd.c: 300:     }
+"291
+[; ;lcd.c: 291:     }
 }
-[e :U 1576 ]
-"297
-[; ;lcd.c: 297:     while(bflag & 0x80)
-[e $ != & -> _bflag `i -> 128 `i -> 0 `i 1577  ]
-[e :U 1578 ]
-"301
-[; ;lcd.c: 301:     LATD = (lcdata >> 4) & 0x0F;
+[e :U 1573 ]
+"288
+[; ;lcd.c: 288:     while(bflag & 0x80)
+[e $ != & -> _bflag `i -> 128 `i -> 0 `i 1574  ]
+[e :U 1575 ]
+"292
+[; ;lcd.c: 292:     LATD = (lcdata >> 4) & 0x0F;
 [e = _LATD -> & >> -> _lcdata `i -> 4 `i -> 15 `i `uc ]
-"303
-[; ;lcd.c: 303:     lcd_clockE();
+"294
+[; ;lcd.c: 294:     lcd_clockE();
 [e ( _lcd_clockE ..  ]
-"305
-[; ;lcd.c: 305:     LATD = lcdata & 0x0F;
+"296
+[; ;lcd.c: 296:     LATD = lcdata & 0x0F;
 [e = _LATD -> & -> _lcdata `i -> 15 `i `uc ]
-"306
-[; ;lcd.c: 306:     lcd_clockE();
+"297
+[; ;lcd.c: 297:     lcd_clockE();
 [e ( _lcd_clockE ..  ]
-"307
-[; ;lcd.c: 307:     LATD = savelatd;
+"298
+[; ;lcd.c: 298:     LATD = savelatd;
 [e = _LATD _savelatd ]
-"309
-[; ;lcd.c: 309: }
-[e :UE 1575 ]
+"300
+[; ;lcd.c: 300: }
+[e :UE 1572 ]
 }
-"311
-[; ;lcd.c: 311: void lcd_test(void)
+"302
+[; ;lcd.c: 302: void lcd_test(void)
 [v _lcd_test `(v ~T0 @X0 1 ef ]
-"312
-[; ;lcd.c: 312: {
+"303
+[; ;lcd.c: 303: {
 {
 [e :U _lcd_test ]
 [f ]
-"313
-[; ;lcd.c: 313:     uint8_t character = 0x30;
+"304
+[; ;lcd.c: 304:     uint8_t character = 0x30;
 [v _character `uc ~T0 @X0 1 a ]
 [e = _character -> -> 48 `i `uc ]
-"314
-[; ;lcd.c: 314:     while(character < 0x80)
-[e $U 1580  ]
-[e :U 1581 ]
-"315
-[; ;lcd.c: 315:     {
+"305
+[; ;lcd.c: 305:     while(character < 0x80)
+[e $U 1577  ]
+[e :U 1578 ]
+"306
+[; ;lcd.c: 306:     {
 {
-"316
-[; ;lcd.c: 316:         lcd_writeC(character);
+"307
+[; ;lcd.c: 307:         lcd_writeC(character);
 [e ( _lcd_writeC (1 _character ]
-"317
-[; ;lcd.c: 317:         character = character+ 1;
+"308
+[; ;lcd.c: 308:         character = character+ 1;
 [e = _character -> + -> _character `i -> 1 `i `uc ]
-"318
-[; ;lcd.c: 318:     }
+"309
+[; ;lcd.c: 309:     }
 }
-[e :U 1580 ]
-"314
-[; ;lcd.c: 314:     while(character < 0x80)
-[e $ < -> _character `i -> 128 `i 1581  ]
-[e :U 1582 ]
-"319
-[; ;lcd.c: 319: }
-[e :UE 1579 ]
+[e :U 1577 ]
+"305
+[; ;lcd.c: 305:     while(character < 0x80)
+[e $ < -> _character `i -> 128 `i 1578  ]
+[e :U 1579 ]
+"310
+[; ;lcd.c: 310: }
+[e :UE 1576 ]
 }
-"322
-[; ;lcd.c: 322: int8_t read_busy(void)
+"313
+[; ;lcd.c: 313: int8_t read_busy(void)
 [v _read_busy `(c ~T0 @X0 1 ef ]
-"323
-[; ;lcd.c: 323: {
+"314
+[; ;lcd.c: 314: {
 {
 [e :U _read_busy ]
 [f ]
-"324
-[; ;lcd.c: 324:     uint8_t savelate = LATE;
+"315
+[; ;lcd.c: 315:     uint8_t savelate = LATE;
 [v _savelate `uc ~T0 @X0 1 a ]
 [e = _savelate _LATE ]
-"325
-[; ;lcd.c: 325:     uint8_t savelatd = LATD;
+"316
+[; ;lcd.c: 316:     uint8_t savelatd = LATD;
 [v _savelatd `uc ~T0 @X0 1 a ]
 [e = _savelatd _LATD ]
-"326
-[; ;lcd.c: 326:     __asm("BCF LATE, 2");
+"317
+[; ;lcd.c: 317:     __asm("BCF LATE, 2");
 [; <" BCF LATE, 2 ;# ">
-"327
-[; ;lcd.c: 327:     __asm("BSF LATE, 1");
+"318
+[; ;lcd.c: 318:     __asm("BSF LATE, 1");
 [; <" BSF LATE, 1 ;# ">
-"328
-[; ;lcd.c: 328:     TRISD = (TRISD | 0x0F);
+"319
+[; ;lcd.c: 319:     TRISD = (TRISD | 0x0F);
 [e = _TRISD -> | -> _TRISD `i -> 15 `i `uc ]
-"329
-[; ;lcd.c: 329:     lcd_clockH();
+"320
+[; ;lcd.c: 320:     lcd_clockH();
 [e ( _lcd_clockH ..  ]
-"330
-[; ;lcd.c: 330:     bflag = (PORTD << 4);
+"321
+[; ;lcd.c: 321:     bflag = (PORTD << 4);
 [e = _bflag -> << -> _PORTD `i -> 4 `i `uc ]
-"331
-[; ;lcd.c: 331:     lcd_clockL();
+"322
+[; ;lcd.c: 322:     lcd_clockL();
 [e ( _lcd_clockL ..  ]
-"332
-[; ;lcd.c: 332:     lcd_clockH();
+"323
+[; ;lcd.c: 323:     lcd_clockH();
 [e ( _lcd_clockH ..  ]
-"333
-[; ;lcd.c: 333:     bflag = bflag | (PORTD & 0x0F);
+"324
+[; ;lcd.c: 324:     bflag = bflag | (PORTD & 0x0F);
 [e = _bflag -> | -> _bflag `i & -> _PORTD `i -> 15 `i `uc ]
-"334
-[; ;lcd.c: 334:     __asm("BCF LATE, 0");
+"325
+[; ;lcd.c: 325:     __asm("BCF LATE, 0");
 [; <" BCF LATE, 0 ;# ">
-"335
-[; ;lcd.c: 335:     TRISD = (TRISD & 0xF0);
+"326
+[; ;lcd.c: 326:     TRISD = (TRISD & 0xF0);
 [e = _TRISD -> & -> _TRISD `i -> 240 `i `uc ]
-"336
-[; ;lcd.c: 336:     __asm("BCF LATE, 1");
+"327
+[; ;lcd.c: 327:     __asm("BCF LATE, 1");
 [; <" BCF LATE, 1 ;# ">
-"337
-[; ;lcd.c: 337:     LATD = savelatd;
+"328
+[; ;lcd.c: 328:     LATD = savelatd;
 [e = _LATD _savelatd ]
-"338
-[; ;lcd.c: 338:     LATE = savelate;
+"329
+[; ;lcd.c: 329:     LATE = savelate;
 [e = _LATE _savelate ]
-"339
-[; ;lcd.c: 339:     return(bflag);
+"330
+[; ;lcd.c: 330:     return(bflag);
 [e ) -> _bflag `c ]
-[e $UE 1583  ]
-"341
-[; ;lcd.c: 341: }
-[e :UE 1583 ]
+[e $UE 1580  ]
+"332
+[; ;lcd.c: 332: }
+[e :UE 1580 ]
 }
-"346
-[; ;lcd.c: 346: void lcd_clockH(void)
+"337
+[; ;lcd.c: 337: void lcd_clockH(void)
 [v _lcd_clockH `(v ~T0 @X0 1 ef ]
-"347
-[; ;lcd.c: 347: {
+"338
+[; ;lcd.c: 338: {
 {
 [e :U _lcd_clockH ]
 [f ]
-"348
-[; ;lcd.c: 348:     __asm("BSF LATE, 0");
+"339
+[; ;lcd.c: 339:     __asm("BSF LATE, 0");
 [; <" BSF LATE, 0 ;# ">
-"349
-[; ;lcd.c: 349:     _delay((unsigned long)((1)*(64000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-"350
-[; ;lcd.c: 350: }
-[e :UE 1584 ]
+"340
+[; ;lcd.c: 340:     _delay((unsigned long)((1)*(12000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 12000000 `l `d .4000000.0 `ul ]
+"341
+[; ;lcd.c: 341: }
+[e :UE 1581 ]
 }
-"354
-[; ;lcd.c: 354: void lcd_clockL(void)
+"345
+[; ;lcd.c: 345: void lcd_clockL(void)
 [v _lcd_clockL `(v ~T0 @X0 1 ef ]
-"355
-[; ;lcd.c: 355: {
+"346
+[; ;lcd.c: 346: {
 {
 [e :U _lcd_clockL ]
 [f ]
-"356
-[; ;lcd.c: 356:     __asm("BCF LATE, 0");
+"347
+[; ;lcd.c: 347:     __asm("BCF LATE, 0");
 [; <" BCF LATE, 0 ;# ">
-"357
-[; ;lcd.c: 357:     _delay((unsigned long)((1)*(64000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-"358
-[; ;lcd.c: 358: }
-[e :UE 1585 ]
+"348
+[; ;lcd.c: 348:     _delay((unsigned long)((1)*(12000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 12000000 `l `d .4000000.0 `ul ]
+"349
+[; ;lcd.c: 349: }
+[e :UE 1582 ]
 }
-"362
-[; ;lcd.c: 362: void lcd_clockE(void)
+"353
+[; ;lcd.c: 353: void lcd_clockE(void)
 [v _lcd_clockE `(v ~T0 @X0 1 ef ]
-"363
-[; ;lcd.c: 363: {
+"354
+[; ;lcd.c: 354: {
 {
 [e :U _lcd_clockE ]
 [f ]
-"364
-[; ;lcd.c: 364:      __asm("BSF LATE, 0");
+"355
+[; ;lcd.c: 355:      __asm("BSF LATE, 0");
 [; <" BSF LATE, 0 ;# ">
-"365
-[; ;lcd.c: 365:     _delay((unsigned long)((1)*(64000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-"366
-[; ;lcd.c: 366:      __asm("BCF LATE, 0");
+"356
+[; ;lcd.c: 356:     _delay((unsigned long)((1)*(12000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 12000000 `l `d .4000000.0 `ul ]
+"357
+[; ;lcd.c: 357:      __asm("BCF LATE, 0");
 [; <" BCF LATE, 0 ;# ">
-"367
-[; ;lcd.c: 367:     _delay((unsigned long)((1)*(64000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 64000000 `l `d .4000000.0 `ul ]
-"368
-[; ;lcd.c: 368: }
-[e :UE 1586 ]
+"358
+[; ;lcd.c: 358:     _delay((unsigned long)((1)*(12000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 12000000 `l `d .4000000.0 `ul ]
+"359
+[; ;lcd.c: 359: }
+[e :UE 1583 ]
 }

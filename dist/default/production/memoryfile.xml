@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production/8_chan_vend_C.production.hex">
+  <executable name="dist/default/production/8_chan_vend_reverted.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>131072</length>
-      <used>11096</used>
-      <free>119976</free>
+      <used>10344</used>
+      <free>120728</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>3720</length>
-      <used>2018</used>
-      <free>1702</free>
+      <used>172</used>
+      <free>3548</free>
     </memory>
   </executable>
 </project>

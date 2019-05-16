@@ -1472,226 +1472,226 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28207
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 28207: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"57 mcc_generated_files/tmr3.c
-[; ;mcc_generated_files/tmr3.c: 57: volatile uint16_t timer3ReloadVal;
+"56 mcc_generated_files/tmr3.c
+[; ;mcc_generated_files/tmr3.c: 56: volatile uint16_t timer3ReloadVal;
 [v _timer3ReloadVal `Vus ~T0 @X0 1 e ]
-"63
-[; ;mcc_generated_files/tmr3.c: 63: void TMR3_Initialize(void)
+"62
+[; ;mcc_generated_files/tmr3.c: 62: void TMR3_Initialize(void)
 [v _TMR3_Initialize `(v ~T0 @X0 1 ef ]
-"64
-[; ;mcc_generated_files/tmr3.c: 64: {
+"63
+[; ;mcc_generated_files/tmr3.c: 63: {
 {
 [e :U _TMR3_Initialize ]
 [f ]
-"68
-[; ;mcc_generated_files/tmr3.c: 68:     T3GCON = 0x00;
+"67
+[; ;mcc_generated_files/tmr3.c: 67:     T3GCON = 0x00;
 [e = _T3GCON -> -> 0 `i `uc ]
-"71
-[; ;mcc_generated_files/tmr3.c: 71:     T3GATE = 0x00;
+"70
+[; ;mcc_generated_files/tmr3.c: 70:     T3GATE = 0x00;
 [e = _T3GATE -> -> 0 `i `uc ]
-"74
-[; ;mcc_generated_files/tmr3.c: 74:     T3CLK = 0x05;
+"73
+[; ;mcc_generated_files/tmr3.c: 73:     T3CLK = 0x05;
 [e = _T3CLK -> -> 5 `i `uc ]
-"77
-[; ;mcc_generated_files/tmr3.c: 77:     TMR3H = 0x9E;
+"76
+[; ;mcc_generated_files/tmr3.c: 76:     TMR3H = 0x9E;
 [e = _TMR3H -> -> 158 `i `uc ]
-"80
-[; ;mcc_generated_files/tmr3.c: 80:     TMR3L = 0x58;
+"79
+[; ;mcc_generated_files/tmr3.c: 79:     TMR3L = 0x58;
 [e = _TMR3L -> -> 88 `i `uc ]
-"83
-[; ;mcc_generated_files/tmr3.c: 83:     timer3ReloadVal=(uint16_t)((TMR3H << 8) | TMR3L);
+"82
+[; ;mcc_generated_files/tmr3.c: 82:     timer3ReloadVal=(uint16_t)((TMR3H << 8) | TMR3L);
 [e = _timer3ReloadVal -> | << -> _TMR3H `i -> 8 `i -> _TMR3L `i `us ]
-"86
-[; ;mcc_generated_files/tmr3.c: 86:     PIR4bits.TMR3IF = 0;
+"85
+[; ;mcc_generated_files/tmr3.c: 85:     PIR4bits.TMR3IF = 0;
 [e = . . _PIR4bits 0 2 -> -> 0 `i `uc ]
-"89
-[; ;mcc_generated_files/tmr3.c: 89:     T3CON = 0x01;
+"88
+[; ;mcc_generated_files/tmr3.c: 88:     T3CON = 0x01;
 [e = _T3CON -> -> 1 `i `uc ]
-"90
-[; ;mcc_generated_files/tmr3.c: 90: }
+"89
+[; ;mcc_generated_files/tmr3.c: 89: }
 [e :UE 1490 ]
 }
-"92
-[; ;mcc_generated_files/tmr3.c: 92: void TMR3_StartTimer(void)
+"91
+[; ;mcc_generated_files/tmr3.c: 91: void TMR3_StartTimer(void)
 [v _TMR3_StartTimer `(v ~T0 @X0 1 ef ]
-"93
-[; ;mcc_generated_files/tmr3.c: 93: {
+"92
+[; ;mcc_generated_files/tmr3.c: 92: {
 {
 [e :U _TMR3_StartTimer ]
 [f ]
-"95
-[; ;mcc_generated_files/tmr3.c: 95:     T3CONbits.TMR3ON = 1;
+"94
+[; ;mcc_generated_files/tmr3.c: 94:     T3CONbits.TMR3ON = 1;
 [e = . . _T3CONbits 3 0 -> -> 1 `i `uc ]
-"96
-[; ;mcc_generated_files/tmr3.c: 96: }
+"95
+[; ;mcc_generated_files/tmr3.c: 95: }
 [e :UE 1491 ]
 }
-"98
-[; ;mcc_generated_files/tmr3.c: 98: void TMR3_StopTimer(void)
+"97
+[; ;mcc_generated_files/tmr3.c: 97: void TMR3_StopTimer(void)
 [v _TMR3_StopTimer `(v ~T0 @X0 1 ef ]
-"99
-[; ;mcc_generated_files/tmr3.c: 99: {
+"98
+[; ;mcc_generated_files/tmr3.c: 98: {
 {
 [e :U _TMR3_StopTimer ]
 [f ]
-"101
-[; ;mcc_generated_files/tmr3.c: 101:     T3CONbits.TMR3ON = 0;
+"100
+[; ;mcc_generated_files/tmr3.c: 100:     T3CONbits.TMR3ON = 0;
 [e = . . _T3CONbits 3 0 -> -> 0 `i `uc ]
-"102
-[; ;mcc_generated_files/tmr3.c: 102: }
+"101
+[; ;mcc_generated_files/tmr3.c: 101: }
 [e :UE 1492 ]
 }
-"104
-[; ;mcc_generated_files/tmr3.c: 104: uint16_t TMR3_ReadTimer(void)
+"103
+[; ;mcc_generated_files/tmr3.c: 103: uint16_t TMR3_ReadTimer(void)
 [v _TMR3_ReadTimer `(us ~T0 @X0 1 ef ]
-"105
-[; ;mcc_generated_files/tmr3.c: 105: {
+"104
+[; ;mcc_generated_files/tmr3.c: 104: {
 {
 [e :U _TMR3_ReadTimer ]
 [f ]
-"106
-[; ;mcc_generated_files/tmr3.c: 106:     uint16_t readVal;
+"105
+[; ;mcc_generated_files/tmr3.c: 105:     uint16_t readVal;
 [v _readVal `us ~T0 @X0 1 a ]
-"107
-[; ;mcc_generated_files/tmr3.c: 107:     uint8_t readValHigh;
+"106
+[; ;mcc_generated_files/tmr3.c: 106:     uint8_t readValHigh;
 [v _readValHigh `uc ~T0 @X0 1 a ]
-"108
-[; ;mcc_generated_files/tmr3.c: 108:     uint8_t readValLow;
+"107
+[; ;mcc_generated_files/tmr3.c: 107:     uint8_t readValLow;
 [v _readValLow `uc ~T0 @X0 1 a ]
-"110
-[; ;mcc_generated_files/tmr3.c: 110:     T3CONbits.T3RD16 = 1;
+"109
+[; ;mcc_generated_files/tmr3.c: 109:     T3CONbits.T3RD16 = 1;
 [e = . . _T3CONbits 3 1 -> -> 1 `i `uc ]
-"112
-[; ;mcc_generated_files/tmr3.c: 112:     readValLow = TMR3L;
+"111
+[; ;mcc_generated_files/tmr3.c: 111:     readValLow = TMR3L;
 [e = _readValLow _TMR3L ]
-"113
-[; ;mcc_generated_files/tmr3.c: 113:     readValHigh = TMR3H;
+"112
+[; ;mcc_generated_files/tmr3.c: 112:     readValHigh = TMR3H;
 [e = _readValHigh _TMR3H ]
-"115
-[; ;mcc_generated_files/tmr3.c: 115:     readVal = ((uint16_t)readValHigh << 8) | readValLow;
+"114
+[; ;mcc_generated_files/tmr3.c: 114:     readVal = ((uint16_t)readValHigh << 8) | readValLow;
 [e = _readVal -> | << -> -> _readValHigh `us `ui -> 8 `i -> _readValLow `ui `us ]
-"117
-[; ;mcc_generated_files/tmr3.c: 117:     return readVal;
+"116
+[; ;mcc_generated_files/tmr3.c: 116:     return readVal;
 [e ) _readVal ]
 [e $UE 1493  ]
-"118
-[; ;mcc_generated_files/tmr3.c: 118: }
+"117
+[; ;mcc_generated_files/tmr3.c: 117: }
 [e :UE 1493 ]
 }
-"120
-[; ;mcc_generated_files/tmr3.c: 120: void TMR3_WriteTimer(uint16_t timerVal)
+"119
+[; ;mcc_generated_files/tmr3.c: 119: void TMR3_WriteTimer(uint16_t timerVal)
 [v _TMR3_WriteTimer `(v ~T0 @X0 1 ef1`us ]
-"121
-[; ;mcc_generated_files/tmr3.c: 121: {
+"120
+[; ;mcc_generated_files/tmr3.c: 120: {
 {
 [e :U _TMR3_WriteTimer ]
-"120
-[; ;mcc_generated_files/tmr3.c: 120: void TMR3_WriteTimer(uint16_t timerVal)
+"119
+[; ;mcc_generated_files/tmr3.c: 119: void TMR3_WriteTimer(uint16_t timerVal)
 [v _timerVal `us ~T0 @X0 1 r1 ]
-"121
-[; ;mcc_generated_files/tmr3.c: 121: {
+"120
+[; ;mcc_generated_files/tmr3.c: 120: {
 [f ]
-"122
-[; ;mcc_generated_files/tmr3.c: 122:     if (T3CONbits.nT3SYNC == 1)
+"121
+[; ;mcc_generated_files/tmr3.c: 121:     if (T3CONbits.nT3SYNC == 1)
 [e $ ! == -> . . _T3CONbits 3 2 `i -> 1 `i 1495  ]
-"123
-[; ;mcc_generated_files/tmr3.c: 123:     {
+"122
+[; ;mcc_generated_files/tmr3.c: 122:     {
 {
-"125
-[; ;mcc_generated_files/tmr3.c: 125:         T3CONbits.TMR3ON = 0;
+"124
+[; ;mcc_generated_files/tmr3.c: 124:         T3CONbits.TMR3ON = 0;
 [e = . . _T3CONbits 3 0 -> -> 0 `i `uc ]
-"128
-[; ;mcc_generated_files/tmr3.c: 128:         TMR3H = (timerVal >> 8);
+"127
+[; ;mcc_generated_files/tmr3.c: 127:         TMR3H = (timerVal >> 8);
 [e = _TMR3H -> >> -> _timerVal `ui -> 8 `i `uc ]
-"129
-[; ;mcc_generated_files/tmr3.c: 129:         TMR3L = timerVal;
+"128
+[; ;mcc_generated_files/tmr3.c: 128:         TMR3L = timerVal;
 [e = _TMR3L -> _timerVal `uc ]
-"132
-[; ;mcc_generated_files/tmr3.c: 132:         T3CONbits.TMR3ON =1;
+"131
+[; ;mcc_generated_files/tmr3.c: 131:         T3CONbits.TMR3ON =1;
 [e = . . _T3CONbits 3 0 -> -> 1 `i `uc ]
-"133
-[; ;mcc_generated_files/tmr3.c: 133:     }
+"132
+[; ;mcc_generated_files/tmr3.c: 132:     }
 }
 [e $U 1496  ]
-"134
-[; ;mcc_generated_files/tmr3.c: 134:     else
+"133
+[; ;mcc_generated_files/tmr3.c: 133:     else
 [e :U 1495 ]
-"135
-[; ;mcc_generated_files/tmr3.c: 135:     {
+"134
+[; ;mcc_generated_files/tmr3.c: 134:     {
 {
-"137
-[; ;mcc_generated_files/tmr3.c: 137:         TMR3H = (timerVal >> 8);
+"136
+[; ;mcc_generated_files/tmr3.c: 136:         TMR3H = (timerVal >> 8);
 [e = _TMR3H -> >> -> _timerVal `ui -> 8 `i `uc ]
-"138
-[; ;mcc_generated_files/tmr3.c: 138:         TMR3L = timerVal;
+"137
+[; ;mcc_generated_files/tmr3.c: 137:         TMR3L = timerVal;
 [e = _TMR3L -> _timerVal `uc ]
-"139
-[; ;mcc_generated_files/tmr3.c: 139:     }
+"138
+[; ;mcc_generated_files/tmr3.c: 138:     }
 }
 [e :U 1496 ]
-"140
-[; ;mcc_generated_files/tmr3.c: 140: }
+"139
+[; ;mcc_generated_files/tmr3.c: 139: }
 [e :UE 1494 ]
 }
-"142
-[; ;mcc_generated_files/tmr3.c: 142: void TMR3_Reload(void)
+"141
+[; ;mcc_generated_files/tmr3.c: 141: void TMR3_Reload(void)
 [v _TMR3_Reload `(v ~T0 @X0 1 ef ]
-"143
-[; ;mcc_generated_files/tmr3.c: 143: {
+"142
+[; ;mcc_generated_files/tmr3.c: 142: {
 {
 [e :U _TMR3_Reload ]
 [f ]
-"144
-[; ;mcc_generated_files/tmr3.c: 144:     TMR3_WriteTimer(timer3ReloadVal);
+"143
+[; ;mcc_generated_files/tmr3.c: 143:     TMR3_WriteTimer(timer3ReloadVal);
 [e ( _TMR3_WriteTimer (1 _timer3ReloadVal ]
-"145
-[; ;mcc_generated_files/tmr3.c: 145: }
+"144
+[; ;mcc_generated_files/tmr3.c: 144: }
 [e :UE 1497 ]
 }
-"147
-[; ;mcc_generated_files/tmr3.c: 147: void TMR3_StartSinglePulseAcquisition(void)
+"146
+[; ;mcc_generated_files/tmr3.c: 146: void TMR3_StartSinglePulseAcquisition(void)
 [v _TMR3_StartSinglePulseAcquisition `(v ~T0 @X0 1 ef ]
-"148
-[; ;mcc_generated_files/tmr3.c: 148: {
+"147
+[; ;mcc_generated_files/tmr3.c: 147: {
 {
 [e :U _TMR3_StartSinglePulseAcquisition ]
 [f ]
-"149
-[; ;mcc_generated_files/tmr3.c: 149:     T3GCONbits.T3GGO = 1;
+"148
+[; ;mcc_generated_files/tmr3.c: 148:     T3GCONbits.T3GGO = 1;
 [e = . . _T3GCONbits 4 1 -> -> 1 `i `uc ]
-"150
-[; ;mcc_generated_files/tmr3.c: 150: }
+"149
+[; ;mcc_generated_files/tmr3.c: 149: }
 [e :UE 1498 ]
 }
-"152
-[; ;mcc_generated_files/tmr3.c: 152: uint8_t TMR3_CheckGateValueStatus(void)
+"151
+[; ;mcc_generated_files/tmr3.c: 151: uint8_t TMR3_CheckGateValueStatus(void)
 [v _TMR3_CheckGateValueStatus `(uc ~T0 @X0 1 ef ]
-"153
-[; ;mcc_generated_files/tmr3.c: 153: {
+"152
+[; ;mcc_generated_files/tmr3.c: 152: {
 {
 [e :U _TMR3_CheckGateValueStatus ]
 [f ]
-"154
-[; ;mcc_generated_files/tmr3.c: 154:     return (T3GCONbits.T3GVAL);
+"153
+[; ;mcc_generated_files/tmr3.c: 153:     return (T3GCONbits.T3GVAL);
 [e ) . . _T3GCONbits 3 1 ]
 [e $UE 1499  ]
-"155
-[; ;mcc_generated_files/tmr3.c: 155: }
+"154
+[; ;mcc_generated_files/tmr3.c: 154: }
 [e :UE 1499 ]
 }
-"157
-[; ;mcc_generated_files/tmr3.c: 157: _Bool TMR3_HasOverflowOccured(void)
+"156
+[; ;mcc_generated_files/tmr3.c: 156: _Bool TMR3_HasOverflowOccured(void)
 [v _TMR3_HasOverflowOccured `(a ~T0 @X0 1 ef ]
-"158
-[; ;mcc_generated_files/tmr3.c: 158: {
+"157
+[; ;mcc_generated_files/tmr3.c: 157: {
 {
 [e :U _TMR3_HasOverflowOccured ]
 [f ]
-"160
-[; ;mcc_generated_files/tmr3.c: 160:     return(PIR4bits.TMR3IF);
+"159
+[; ;mcc_generated_files/tmr3.c: 159:     return(PIR4bits.TMR3IF);
 [e ) -> . . _PIR4bits 0 2 `a ]
 [e $UE 1500  ]
-"161
-[; ;mcc_generated_files/tmr3.c: 161: }
+"160
+[; ;mcc_generated_files/tmr3.c: 160: }
 [e :UE 1500 ]
 }

@@ -1,5 +1,4 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F10230 `(v ~T0 @X0 0 tf ]
 "58 ./mdb.h
 [; ;./mdb.h: 58: {
 [s S1490 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -99,8 +98,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16 ./dispense.h
 [; ;./dispense.h: 16: void dispense(uint8_t chanel);
 [v _dispense `(v ~T0 @X0 0 ef1`uc ]
-"275 ./mcc_generated_files/memory.h
-[; ;./mcc_generated_files/memory.h: 275: uint8_t DATAEE_ReadByte(uint16_t bAdd);
+"274 ./mcc_generated_files/memory.h
+[; ;./mcc_generated_files/memory.h: 274: uint8_t DATAEE_ReadByte(uint16_t bAdd);
 [v _DATAEE_ReadByte `(uc ~T0 @X0 0 ef1`us ]
 "258 ./vend.h
 [; ;./vend.h: 258: void credit_subtract(uint8_t credit);
@@ -164,20 +163,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4806
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 4806: extern volatile PIR0bits_t PIR0bits __attribute__((address(0xECA)));
 [v _PIR0bits `VS304 ~T0 @X0 0 e@3786 ]
-"161 ./mcc_generated_files/tmr0.h
-[; ;./mcc_generated_files/tmr0.h: 161: void TMR0_StopTimer(void);
+"160 ./mcc_generated_files/tmr0.h
+[; ;./mcc_generated_files/tmr0.h: 160: void TMR0_StopTimer(void);
 [v _TMR0_StopTimer `(v ~T0 @X0 0 ef ]
 "30 ./dispense.h
 [; ;./dispense.h: 30: void disable_channel(uint8_t chanel);
 [v _disable_channel `(v ~T0 @X0 0 ef1`uc ]
-"236 ./mcc_generated_files/tmr0.h
-[; ;./mcc_generated_files/tmr0.h: 236: void TMR0_WriteTimer(uint16_t timerVal);
-[v _TMR0_WriteTimer `(v ~T0 @X0 0 ef1`us ]
-"129
-[; ;./mcc_generated_files/tmr0.h: 129: void TMR0_StartTimer(void);
+"235 ./mcc_generated_files/tmr0.h
+[; ;./mcc_generated_files/tmr0.h: 235: void TMR0_Write16bitTimer(uint16_t timerVal);
+[v _TMR0_Write16bitTimer `(v ~T0 @X0 0 ef1`us ]
+"128
+[; ;./mcc_generated_files/tmr0.h: 128: void TMR0_StartTimer(void);
 [v _TMR0_StartTimer `(v ~T0 @X0 0 ef ]
-"249 ./mcc_generated_files/memory.h
-[; ;./mcc_generated_files/memory.h: 249: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
+"248 ./mcc_generated_files/memory.h
+[; ;./mcc_generated_files/memory.h: 248: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [v _DATAEE_WriteByte `(v ~T0 @X0 0 ef2`us`uc ]
 "54 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 54: __asm("RX2PPS equ 0E8Dh");
@@ -1565,27 +1564,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28207
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 28207: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"64 ./mcc_generated_files/eusart2.h
-[; ;./mcc_generated_files/eusart2.h: 64: volatile uint8_t eusart2RxHead = 0;
-[v _eusart2RxHead `Vuc ~T0 @X0 1 e ]
-[i _eusart2RxHead
--> -> 0 `i `uc
-]
-"65
-[; ;./mcc_generated_files/eusart2.h: 65: volatile uint8_t eusart2RxTail = 0;
-[v _eusart2RxTail `Vuc ~T0 @X0 1 e ]
-[i _eusart2RxTail
--> -> 0 `i `uc
-]
-"66
-[; ;./mcc_generated_files/eusart2.h: 66: volatile uint8_t eusart2RxBuffer[512];
-[v _eusart2RxBuffer `Vuc ~T0 @X0 -> 512 `i e ]
-"67
-[; ;./mcc_generated_files/eusart2.h: 67: volatile uint8_t eusart2RxCount;
-[v _eusart2RxCount `Vuc ~T0 @X0 1 e ]
-"97
-[; ;./mcc_generated_files/eusart2.h: 97: void (*EUSART2_RxDefaultInterruptHandler)(void);
-[v _EUSART2_RxDefaultInterruptHandler `*F10230 ~T0 @X0 1 e ]
 "41 ./lcd.h
 [; ;./lcd.h: 41: signed char count;
 [v _count `c ~T0 @X0 1 e ]
@@ -3337,19 +3315,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"118
-[; ;./lcd.h: 118: const uint8_t clocktime[] = "Time ";
-[v _clocktime `Cuc ~T0 @X0 -> 6 `i e ]
-[i _clocktime
-:U ..
--> 84 `c
--> 105 `c
--> 109 `c
--> 101 `c
--> 32 `c
--> 0 `c
-..
-]
 "119
 [; ;./lcd.h: 119: const uint8_t clockdate[] = "Date ";
 [v _clockdate `Cuc ~T0 @X0 -> 6 `i e ]
@@ -3511,8 +3476,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 12 `i `uc
 ]
 "47
-[; ;./mdb.h: 47: uint8_t mdbdata[31];
-[v _mdbdata `uc ~T0 @X0 -> 31 `i e ]
+[; ;./mdb.h: 47: uint8_t mdbdata[32];
+[v _mdbdata `uc ~T0 @X0 -> 32 `i e ]
 "48
 [; ;./mdb.h: 48: uint8_t slvadd;
 [v _slvadd `uc ~T0 @X0 1 e ]
@@ -4335,8 +4300,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;dispense.c: 132:     LATD = chanmask & 0xF0;
 [e = _LATD -> & -> _chanmask `i -> 240 `i `uc ]
 "133
-[; ;dispense.c: 133:     _delay((unsigned long)((250)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;dispense.c: 133:     _delay((unsigned long)((250)*(12000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
 "134
 [; ;dispense.c: 134:     LATB = 0;
 [e = _LATB -> -> 0 `i `uc ]
@@ -4490,8 +4455,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;dispense.c: 182:     time = time - (second_5 * i);
 [e = _time -> - -> _time `ui * -> _second_5 `ui -> _i `ui `us ]
 "183
-[; ;dispense.c: 183:     TMR0_WriteTimer(time);
-[e ( _TMR0_WriteTimer (1 _time ]
+[; ;dispense.c: 183:     TMR0_Write16bitTimer(time);
+[e ( _TMR0_Write16bitTimer (1 _time ]
 "184
 [; ;dispense.c: 184:     TMR0_StartTimer();
 [e ( _TMR0_StartTimer ..  ]

@@ -1,5 +1,4 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F10230 `(v ~T0 @X0 0 tf ]
 "61 ./cctalk.h
 [; ;./cctalk.h: 61: {
 [s S1490 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -60,15 +59,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./mdb.h: 87: {
 [s S1504 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1504 . chan1 chan2 chan3 chan4 chan5 chan6 chan7 chan8 ]
-"32 ./dispense.h
-[; ;./dispense.h: 32: void init_pricestore(void);
-[v _init_pricestore `(v ~T0 @X0 0 ef ]
 [v F10007 `(v ~T0 @X0 1 tf1`ul ]
 "183 /opt/microchip/xc8/v2.05/pic/include/pic18.h
 [v __delay `JF10007 ~T0 @X0 0 e ]
 [p i __delay ]
-"275 ./mcc_generated_files/memory.h
-[; ;./mcc_generated_files/memory.h: 275: uint8_t DATAEE_ReadByte(uint16_t bAdd);
+"274 ./mcc_generated_files/memory.h
+[; ;./mcc_generated_files/memory.h: 274: uint8_t DATAEE_ReadByte(uint16_t bAdd);
 [v _DATAEE_ReadByte `(uc ~T0 @X0 0 ef1`us ]
 "93 ./mcc_generated_files/eusart1.h
 [; ;./mcc_generated_files/eusart1.h: 93: void eusartmdb_Initialize(void);
@@ -103,11 +99,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "110 ./mdb.h
 [; ;./mdb.h: 110: void save_notes(void);
 [v _save_notes `(v ~T0 @X0 0 ef ]
-"249 ./mcc_generated_files/memory.h
-[; ;./mcc_generated_files/memory.h: 249: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
+"248 ./mcc_generated_files/memory.h
+[; ;./mcc_generated_files/memory.h: 248: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [v _DATAEE_WriteByte `(v ~T0 @X0 0 ef2`us`uc ]
-"100 ./mcc_generated_files/tmr3.h
-[; ;./mcc_generated_files/tmr3.h: 100: void TMR3_Initialize(void);
+"99 ./mcc_generated_files/tmr3.h
+[; ;./mcc_generated_files/tmr3.h: 99: void TMR3_Initialize(void);
 [v _TMR3_Initialize `(v ~T0 @X0 0 ef ]
 "19573 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 19573:     struct {
@@ -166,8 +162,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "138
 [; ;./mdb.h: 138: void mdb_transmit(uint8_t txbyte);
 [v _mdb_transmit `(v ~T0 @X0 0 ef1`uc ]
-"100 ./mcc_generated_files/tmr1.h
-[; ;./mcc_generated_files/tmr1.h: 100: void TMR1_Initialize(void);
+"99 ./mcc_generated_files/tmr1.h
+[; ;./mcc_generated_files/tmr1.h: 99: void TMR1_Initialize(void);
 [v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
 "115 ./mcc_generated_files/eusart1.h
 [; ;./mcc_generated_files/eusart1.h: 115: uint8_t EUSART1_Read(void);
@@ -433,14 +429,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "66
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 66: extern volatile RX2PPSbits_t RX2PPSbits __attribute__((address(0xE8D)));
 [v _RX2PPSbits `VS6 ~T0 @X0 0 e@3725 ]
-"92 ./mcc_generated_files/cmp1.h
-[; ;./mcc_generated_files/cmp1.h: 92: void CMP1_Initialize(void);
+"91 ./mcc_generated_files/cmp1.h
+[; ;./mcc_generated_files/cmp1.h: 91: void CMP1_Initialize(void);
 [v _CMP1_Initialize `(v ~T0 @X0 0 ef ]
-"93 ./mcc_generated_files/dac1.h
-[; ;./mcc_generated_files/dac1.h: 93: void DAC1_Initialize(void);
+"92 ./mcc_generated_files/dac1.h
+[; ;./mcc_generated_files/dac1.h: 92: void DAC1_Initialize(void);
 [v _DAC1_Initialize `(v ~T0 @X0 0 ef ]
-"100 ./mcc_generated_files/tmr5.h
-[; ;./mcc_generated_files/tmr5.h: 100: void TMR5_Initialize(void);
+"99 ./mcc_generated_files/tmr5.h
+[; ;./mcc_generated_files/tmr5.h: 99: void TMR5_Initialize(void);
 [v _TMR5_Initialize `(v ~T0 @X0 0 ef ]
 "135 ./mcc_generated_files/eusart1.h
 [; ;./mcc_generated_files/eusart1.h: 135: void EUSART1_Write(uint8_t txData);
@@ -1831,27 +1827,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28207
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 28207: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"64 ./mcc_generated_files/eusart2.h
-[; ;./mcc_generated_files/eusart2.h: 64: volatile uint8_t eusart2RxHead = 0;
-[v _eusart2RxHead `Vuc ~T0 @X0 1 e ]
-[i _eusart2RxHead
--> -> 0 `i `uc
-]
-"65
-[; ;./mcc_generated_files/eusart2.h: 65: volatile uint8_t eusart2RxTail = 0;
-[v _eusart2RxTail `Vuc ~T0 @X0 1 e ]
-[i _eusart2RxTail
--> -> 0 `i `uc
-]
-"66
-[; ;./mcc_generated_files/eusart2.h: 66: volatile uint8_t eusart2RxBuffer[512];
-[v _eusart2RxBuffer `Vuc ~T0 @X0 -> 512 `i e ]
-"67
-[; ;./mcc_generated_files/eusart2.h: 67: volatile uint8_t eusart2RxCount;
-[v _eusart2RxCount `Vuc ~T0 @X0 1 e ]
-"97
-[; ;./mcc_generated_files/eusart2.h: 97: void (*EUSART2_RxDefaultInterruptHandler)(void);
-[v _EUSART2_RxDefaultInterruptHandler `*F10230 ~T0 @X0 1 e ]
 "41 ./lcd.h
 [; ;./lcd.h: 41: signed char count;
 [v _count `c ~T0 @X0 1 e ]
@@ -3603,19 +3578,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"118
-[; ;./lcd.h: 118: const uint8_t clocktime[] = "Time ";
-[v _clocktime `Cuc ~T0 @X0 -> 6 `i e ]
-[i _clocktime
-:U ..
--> 84 `c
--> 105 `c
--> 109 `c
--> 101 `c
--> 32 `c
--> 0 `c
-..
-]
 "119
 [; ;./lcd.h: 119: const uint8_t clockdate[] = "Date ";
 [v _clockdate `Cuc ~T0 @X0 -> 6 `i e ]
@@ -4179,8 +4141,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 12 `i `uc
 ]
 "47
-[; ;./mdb.h: 47: uint8_t mdbdata[31];
-[v _mdbdata `uc ~T0 @X0 -> 31 `i e ]
+[; ;./mdb.h: 47: uint8_t mdbdata[32];
+[v _mdbdata `uc ~T0 @X0 -> 32 `i e ]
 "48
 [; ;./mdb.h: 48: uint8_t slvadd;
 [v _slvadd `uc ~T0 @X0 1 e ]
@@ -4237,237 +4199,230 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mdb.c: 14: {
 [f ]
 "15
-[; ;mdb.c: 15:     char i = 0;
+[; ;mdb.c: 15:     for(uint8_t i = 0;i < 33; i++)
+{
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-"16
-[; ;mdb.c: 16:     while(i < 32)
-[e $U 1506  ]
-[e :U 1507 ]
-"17
-[; ;mdb.c: 17:     {
-{
-"18
-[; ;mdb.c: 18:         mdbdata[i] = initdata;
-[e = *U + &U _mdbdata * -> _i `ux -> -> # *U &U _mdbdata `ui `ux _initdata ]
-"19
-[; ;mdb.c: 19:         i++;
-[e ++ _i -> -> 1 `i `uc ]
-"20
-[; ;mdb.c: 20:     }
-}
+[e $ < -> _i `i -> 33 `i 1506  ]
+[e $U 1507  ]
 [e :U 1506 ]
 "16
-[; ;mdb.c: 16:     while(i < 32)
-[e $ < -> _i `i -> 32 `i 1507  ]
-[e :U 1508 ]
-"21
-[; ;mdb.c: 21:     init_pricestore();
-[e ( _init_pricestore ..  ]
-"22
-[; ;mdb.c: 22: }
+[; ;mdb.c: 16:     {
+{
+"17
+[; ;mdb.c: 17:         mdbdata[i] = initdata;
+[e = *U + &U _mdbdata * -> _i `ux -> -> # *U &U _mdbdata `ui `ux _initdata ]
+"18
+[; ;mdb.c: 18:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 33 `i 1506  ]
+[e :U 1507 ]
+}
+"19
+[; ;mdb.c: 19: }
 [e :UE 1505 ]
 }
-"24
-[; ;mdb.c: 24: void mdb_init(void)
+"21
+[; ;mdb.c: 21: void mdb_init(void)
 [v _mdb_init `(v ~T0 @X0 1 ef ]
-"25
-[; ;mdb.c: 25: {
+"22
+[; ;mdb.c: 22: {
 {
 [e :U _mdb_init ]
 [f ]
-"26
-[; ;mdb.c: 26:     _delay((unsigned long)((250)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"27
-[; ;mdb.c: 27:     noteen_byte = DATAEE_ReadByte(notebits);
+"23
+[; ;mdb.c: 23:     _delay((unsigned long)((250)*(12000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
+"24
+[; ;mdb.c: 24:     noteen_byte = DATAEE_ReadByte(notebits);
 [e = _noteen_byte ( _DATAEE_ReadByte (1 _notebits ]
-"28
-[; ;mdb.c: 28:     ((uint8_t*) &noteen)[0] = noteen_byte;
+"25
+[; ;mdb.c: 25:     ((uint8_t*) &noteen)[0] = noteen_byte;
 [e = *U + -> &U _noteen `*uc * -> -> 0 `i `x -> -> # *U -> &U _noteen `*uc `i `x _noteen_byte ]
-"29
-[; ;mdb.c: 29:     eusartmdb_Initialize();
+"26
+[; ;mdb.c: 26:     eusartmdb_Initialize();
 [e ( _eusartmdb_Initialize ..  ]
-"30
-[; ;mdb.c: 30:     mdbflags.noteerr = 0;
+"27
+[; ;mdb.c: 27:     mdbflags.noteerr = 0;
 [e = . _mdbflags 1 -> -> 0 `i `uc ]
-"31
-[; ;mdb.c: 31:     mdbflags.isdata = 0;
+"28
+[; ;mdb.c: 28:     mdbflags.isdata = 0;
 [e = . _mdbflags 0 -> -> 0 `i `uc ]
-"32
-[; ;mdb.c: 32:     mdb_reset();
+"29
+[; ;mdb.c: 29:     mdb_reset();
 [e ( _mdb_reset ..  ]
-"33
-[; ;mdb.c: 33:     mdb_noten();
+"30
+[; ;mdb.c: 30:     mdb_noten();
 [e ( _mdb_noten ..  ]
-"34
-[; ;mdb.c: 34:     mdb_security();
+"31
+[; ;mdb.c: 31:     mdb_security();
 [e ( _mdb_security ..  ]
-"35
-[; ;mdb.c: 35:     uint8_t i = mdb_comm(note_poll, 0x00);
+"32
+[; ;mdb.c: 32:     uint8_t i = mdb_comm(note_poll, 0x00);
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i ( _mdb_comm (2 , _note_poll -> -> 0 `i `uc ]
-"37
-[; ;mdb.c: 37: }
+"34
+[; ;mdb.c: 34: }
 [e :UE 1509 ]
 }
-"39
-[; ;mdb.c: 39: uint8_t mdb_reset(void)
+"36
+[; ;mdb.c: 36: uint8_t mdb_reset(void)
 [v _mdb_reset `(uc ~T0 @X0 1 ef ]
-"40
-[; ;mdb.c: 40: {
+"37
+[; ;mdb.c: 37: {
 {
 [e :U _mdb_reset ]
 [f ]
-"44
-[; ;mdb.c: 44:     mdbflags.timeout = 1;
+"41
+[; ;mdb.c: 41:     mdbflags.timeout = 1;
 [e = . _mdbflags 3 -> -> 1 `i `uc ]
-"45
-[; ;mdb.c: 45:     while(mdbflags.timeout)
+"42
+[; ;mdb.c: 42:     while(mdbflags.timeout)
 [e $U 1511  ]
 [e :U 1512 ]
-"46
-[; ;mdb.c: 46:     {
+"43
+[; ;mdb.c: 43:     {
 {
-"47
-[; ;mdb.c: 47:         uint8_t i = mdb_comm(note_reset, 0x00);
+"44
+[; ;mdb.c: 44:         uint8_t i = mdb_comm(note_reset, 0x00);
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i ( _mdb_comm (2 , _note_reset -> -> 0 `i `uc ]
-"48
-[; ;mdb.c: 48:     }
+"45
+[; ;mdb.c: 45:     }
 }
 [e :U 1511 ]
-"45
-[; ;mdb.c: 45:     while(mdbflags.timeout)
+"42
+[; ;mdb.c: 42:     while(mdbflags.timeout)
 [e $ != -> . _mdbflags 3 `i -> 0 `i 1512  ]
 [e :U 1513 ]
-"49
-[; ;mdb.c: 49:     __asm("nop");
+"46
+[; ;mdb.c: 46:     __asm("nop");
 [; <" nop ;# ">
-"50
-[; ;mdb.c: 50:     uint8_t i = mdb_comm(note_poll, 0x00);
+"47
+[; ;mdb.c: 47:     uint8_t i = mdb_comm(note_poll, 0x00);
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i ( _mdb_comm (2 , _note_poll -> -> 0 `i `uc ]
-"51
-[; ;mdb.c: 51:     if(mdbdata[--i] == just_reset)
+"48
+[; ;mdb.c: 48:     if(mdbdata[--i] == just_reset)
 [e $ ! == -> *U + &U _mdbdata * -> =- _i -> -> 1 `i `uc `ux -> -> # *U &U _mdbdata `ui `ux `i -> _just_reset `i 1514  ]
-"52
-[; ;mdb.c: 52:     {
+"49
+[; ;mdb.c: 49:     {
 {
-"54
-[; ;mdb.c: 54:         i = mdb_comm(note_poll, 0x00);
+"51
+[; ;mdb.c: 51:         i = mdb_comm(note_poll, 0x00);
 [e = _i ( _mdb_comm (2 , _note_poll -> -> 0 `i `uc ]
-"55
-[; ;mdb.c: 55:     }
+"52
+[; ;mdb.c: 52:     }
 }
 [e :U 1514 ]
-"57
-[; ;mdb.c: 57:     return i;
+"54
+[; ;mdb.c: 54:     return i;
 [e ) _i ]
 [e $UE 1510  ]
-"58
-[; ;mdb.c: 58: }
+"55
+[; ;mdb.c: 55: }
 [e :UE 1510 ]
 }
-"60
-[; ;mdb.c: 60: void set_notes(void)
+"57
+[; ;mdb.c: 57: void set_notes(void)
 [v _set_notes `(v ~T0 @X0 1 ef ]
-"61
-[; ;mdb.c: 61: {
+"58
+[; ;mdb.c: 58: {
 {
 [e :U _set_notes ]
 [f ]
-"62
-[; ;mdb.c: 62:     lcd_string(setnotes, line1);
+"59
+[; ;mdb.c: 59:     lcd_string(setnotes, line1);
 [e ( _lcd_string (2 , -> &U _setnotes `*uc -> _line1 `uc ]
-"63
-[; ;mdb.c: 63:     mdbflags.noteset = 1;
+"60
+[; ;mdb.c: 60:     mdbflags.noteset = 1;
 [e = . _mdbflags 5 -> -> 1 `i `uc ]
-"64
-[; ;mdb.c: 64:     mdbflags.endis = 1;
+"61
+[; ;mdb.c: 61:     mdbflags.endis = 1;
 [e = . _mdbflags 6 -> -> 1 `i `uc ]
-"65
-[; ;mdb.c: 65:     while(mdbflags.noteset)
+"62
+[; ;mdb.c: 62:     while(mdbflags.noteset)
 [e $U 1516  ]
 [e :U 1517 ]
-"66
-[; ;mdb.c: 66:     {
+"63
+[; ;mdb.c: 63:     {
 {
-"67
-[; ;mdb.c: 67:         buttons = butindb();
+"64
+[; ;mdb.c: 64:         buttons = butindb();
 [e = _buttons ( _butindb ..  ]
-"68
-[; ;mdb.c: 68:         notenum = buttons;
+"65
+[; ;mdb.c: 65:         notenum = buttons;
 [e = _notenum _buttons ]
-"69
-[; ;mdb.c: 69:         switch(buttons)
+"66
+[; ;mdb.c: 66:         switch(buttons)
 [e $U 1520  ]
-"70
-[; ;mdb.c: 70:         {
+"67
+[; ;mdb.c: 67:         {
 {
-"72
-[; ;mdb.c: 72:             case 0x01 : dspposition = displ_note(tenrand);
+"69
+[; ;mdb.c: 69:             case 0x01 : dspposition = displ_note(tenrand);
 [e :U 1521 ]
 [e = _dspposition ( _displ_note (1 -> &U _tenrand `*uc ]
-"73
-[; ;mdb.c: 73:             enable_notes(0x01);
+"70
+[; ;mdb.c: 70:             enable_notes(0x01);
 [e ( _enable_notes (1 -> -> 1 `i `uc ]
-"74
-[; ;mdb.c: 74:             break;
+"71
+[; ;mdb.c: 71:             break;
 [e $U 1519  ]
-"76
-[; ;mdb.c: 76:             case 0x02 : dspposition = displ_note(twentyrand);
+"73
+[; ;mdb.c: 73:             case 0x02 : dspposition = displ_note(twentyrand);
 [e :U 1522 ]
 [e = _dspposition ( _displ_note (1 -> &U _twentyrand `*uc ]
-"77
-[; ;mdb.c: 77:             enable_notes(0x02);
+"74
+[; ;mdb.c: 74:             enable_notes(0x02);
 [e ( _enable_notes (1 -> -> 2 `i `uc ]
-"78
-[; ;mdb.c: 78:             break;
+"75
+[; ;mdb.c: 75:             break;
 [e $U 1519  ]
-"80
-[; ;mdb.c: 80:             case 0x04 : dspposition = displ_note(fiftyrand);
+"77
+[; ;mdb.c: 77:             case 0x04 : dspposition = displ_note(fiftyrand);
 [e :U 1523 ]
 [e = _dspposition ( _displ_note (1 -> &U _fiftyrand `*uc ]
-"81
-[; ;mdb.c: 81:             enable_notes(0x04);
+"78
+[; ;mdb.c: 78:             enable_notes(0x04);
 [e ( _enable_notes (1 -> -> 4 `i `uc ]
-"82
-[; ;mdb.c: 82:             break;
+"79
+[; ;mdb.c: 79:             break;
 [e $U 1519  ]
-"84
-[; ;mdb.c: 84:             case 0x08 : dspposition = displ_note(hundredrand);
+"81
+[; ;mdb.c: 81:             case 0x08 : dspposition = displ_note(hundredrand);
 [e :U 1524 ]
 [e = _dspposition ( _displ_note (1 -> &U _hundredrand `*uc ]
-"85
-[; ;mdb.c: 85:             enable_notes(0x08);
+"82
+[; ;mdb.c: 82:             enable_notes(0x08);
 [e ( _enable_notes (1 -> -> 8 `i `uc ]
-"86
-[; ;mdb.c: 86:             break;
+"83
+[; ;mdb.c: 83:             break;
 [e $U 1519  ]
-"88
-[; ;mdb.c: 88:             case 0x10 : dspposition = displ_note(twohundredrand);
+"85
+[; ;mdb.c: 85:             case 0x10 : dspposition = displ_note(twohundredrand);
 [e :U 1525 ]
 [e = _dspposition ( _displ_note (1 -> &U _twohundredrand `*uc ]
-"89
-[; ;mdb.c: 89:             enable_notes(0x10);
+"86
+[; ;mdb.c: 86:             enable_notes(0x10);
 [e ( _enable_notes (1 -> -> 16 `i `uc ]
-"90
-[; ;mdb.c: 90:             break;
+"87
+[; ;mdb.c: 87:             break;
 [e $U 1519  ]
-"92
-[; ;mdb.c: 92:             case 0x80 : lcd_string(servmsg, line1);
+"89
+[; ;mdb.c: 89:             case 0x80 : lcd_string(servmsg, line1);
 [e :U 1526 ]
 [e ( _lcd_string (2 , -> &U _servmsg `*uc -> _line1 `uc ]
-"93
-[; ;mdb.c: 93:             mdbflags.noteset = 0;
+"90
+[; ;mdb.c: 90:             mdbflags.noteset = 0;
 [e = . _mdbflags 5 -> -> 0 `i `uc ]
-"94
-[; ;mdb.c: 94:             default : break;
+"91
+[; ;mdb.c: 91:             default : break;
 [e :U 1527 ]
 [e $U 1519  ]
-"95
-[; ;mdb.c: 95:         }
+"92
+[; ;mdb.c: 92:         }
 }
 [e $U 1519  ]
 [e :U 1520 ]
@@ -4479,101 +4434,101 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 128 `i 1526
  1527 ]
 [e :U 1519 ]
-"96
-[; ;mdb.c: 96:         ((uint8_t*) &noteen)[0] = noteen_byte;
+"93
+[; ;mdb.c: 93:         ((uint8_t*) &noteen)[0] = noteen_byte;
 [e = *U + -> &U _noteen `*uc * -> -> 0 `i `x -> -> # *U -> &U _noteen `*uc `i `x _noteen_byte ]
-"97
-[; ;mdb.c: 97:         __asm("nop");
+"94
+[; ;mdb.c: 94:         __asm("nop");
 [; <" nop ;# ">
-"98
-[; ;mdb.c: 98:     }
+"95
+[; ;mdb.c: 95:     }
 }
 [e :U 1516 ]
-"65
-[; ;mdb.c: 65:     while(mdbflags.noteset)
+"62
+[; ;mdb.c: 62:     while(mdbflags.noteset)
 [e $ != -> . _mdbflags 5 `i -> 0 `i 1517  ]
 [e :U 1518 ]
-"99
-[; ;mdb.c: 99: }
+"96
+[; ;mdb.c: 96: }
 [e :UE 1515 ]
 }
-"101
-[; ;mdb.c: 101: void enable_notes(uint8_t notenum)
+"98
+[; ;mdb.c: 98: void enable_notes(uint8_t notenum)
 [v _enable_notes `(v ~T0 @X0 1 ef1`uc ]
-"102
-[; ;mdb.c: 102: {
+"99
+[; ;mdb.c: 99: {
 {
 [e :U _enable_notes ]
-"101
-[; ;mdb.c: 101: void enable_notes(uint8_t notenum)
+"98
+[; ;mdb.c: 98: void enable_notes(uint8_t notenum)
 [v _notenum `uc ~T0 @X0 1 r1 ]
-"102
-[; ;mdb.c: 102: {
+"99
+[; ;mdb.c: 99: {
 [f ]
-"103
-[; ;mdb.c: 103:     mdbflags.endis = 1;
+"100
+[; ;mdb.c: 100:     mdbflags.endis = 1;
 [e = . _mdbflags 6 -> -> 1 `i `uc ]
-"104
-[; ;mdb.c: 104:     displ_nendis(notenum);
+"101
+[; ;mdb.c: 101:     displ_nendis(notenum);
 [e ( _displ_nendis (1 _notenum ]
-"105
-[; ;mdb.c: 105:     while(mdbflags.endis)
+"102
+[; ;mdb.c: 102:     while(mdbflags.endis)
 [e $U 1529  ]
 [e :U 1530 ]
+"103
+[; ;mdb.c: 103:     {
+{
+"104
+[; ;mdb.c: 104:         buttons = butindb();
+[e = _buttons ( _butindb ..  ]
+"105
+[; ;mdb.c: 105:         switch(buttons)
+[e $U 1533  ]
 "106
-[; ;mdb.c: 106:     {
+[; ;mdb.c: 106:         {
 {
 "107
-[; ;mdb.c: 107:         buttons = butindb();
-[e = _buttons ( _butindb ..  ]
-"108
-[; ;mdb.c: 108:         switch(buttons)
-[e $U 1533  ]
-"109
-[; ;mdb.c: 109:         {
-{
-"110
-[; ;mdb.c: 110:             case 0x01 : noteen_byte = noteen_byte | notenum;
+[; ;mdb.c: 107:             case 0x01 : noteen_byte = noteen_byte | notenum;
 [e :U 1534 ]
 [e = _noteen_byte -> | -> _noteen_byte `i -> _notenum `i `uc ]
-"111
-[; ;mdb.c: 111:             save_notes();
+"108
+[; ;mdb.c: 108:             save_notes();
 [e ( _save_notes ..  ]
-"112
-[; ;mdb.c: 112:             displ_nendis(notenum);
+"109
+[; ;mdb.c: 109:             displ_nendis(notenum);
 [e ( _displ_nendis (1 _notenum ]
-"113
-[; ;mdb.c: 113:             break;
+"110
+[; ;mdb.c: 110:             break;
 [e $U 1532  ]
-"114
-[; ;mdb.c: 114:             case 0x02 : noteen_byte = noteen_byte & ~notenum;
+"111
+[; ;mdb.c: 111:             case 0x02 : noteen_byte = noteen_byte & ~notenum;
 [e :U 1535 ]
 [e = _noteen_byte -> & -> _noteen_byte `i ~ -> _notenum `i `uc ]
-"115
-[; ;mdb.c: 115:             save_notes();
+"112
+[; ;mdb.c: 112:             save_notes();
 [e ( _save_notes ..  ]
-"116
-[; ;mdb.c: 116:             displ_nendis(notenum);
+"113
+[; ;mdb.c: 113:             displ_nendis(notenum);
 [e ( _displ_nendis (1 _notenum ]
-"117
-[; ;mdb.c: 117:             break;
+"114
+[; ;mdb.c: 114:             break;
 [e $U 1532  ]
-"118
-[; ;mdb.c: 118:             case 0x80 : mdbflags.endis = 0;
+"115
+[; ;mdb.c: 115:             case 0x80 : mdbflags.endis = 0;
 [e :U 1536 ]
 [e = . _mdbflags 6 -> -> 0 `i `uc ]
-"119
-[; ;mdb.c: 119:             lcd_string(setnotes, line1);
+"116
+[; ;mdb.c: 116:             lcd_string(setnotes, line1);
 [e ( _lcd_string (2 , -> &U _setnotes `*uc -> _line1 `uc ]
-"120
-[; ;mdb.c: 120:             buttons = 0;
+"117
+[; ;mdb.c: 117:             buttons = 0;
 [e = _buttons -> -> 0 `i `uc ]
-"121
-[; ;mdb.c: 121:             default : break;
+"118
+[; ;mdb.c: 118:             default : break;
 [e :U 1537 ]
 [e $U 1532  ]
-"122
-[; ;mdb.c: 122:         }
+"119
+[; ;mdb.c: 119:         }
 }
 [e $U 1532  ]
 [e :U 1533 ]
@@ -4582,850 +4537,837 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 128 `i 1536
  1537 ]
 [e :U 1532 ]
-"123
-[; ;mdb.c: 123:     }
+"120
+[; ;mdb.c: 120:     }
 }
 [e :U 1529 ]
-"105
-[; ;mdb.c: 105:     while(mdbflags.endis)
+"102
+[; ;mdb.c: 102:     while(mdbflags.endis)
 [e $ != -> . _mdbflags 6 `i -> 0 `i 1530  ]
 [e :U 1531 ]
-"124
-[; ;mdb.c: 124: }
+"121
+[; ;mdb.c: 121: }
 [e :UE 1528 ]
 }
-"126
-[; ;mdb.c: 126: void note_disable(void)
+"123
+[; ;mdb.c: 123: void note_disable(void)
 [v _note_disable `(v ~T0 @X0 1 ef ]
-"127
-[; ;mdb.c: 127: {
+"124
+[; ;mdb.c: 124: {
 {
 [e :U _note_disable ]
 [f ]
-"128
-[; ;mdb.c: 128:     noteen_byte = 0x00;
+"125
+[; ;mdb.c: 125:     noteen_byte = 0x00;
 [e = _noteen_byte -> -> 0 `i `uc ]
-"129
-[; ;mdb.c: 129:     mdb_noten();
+"126
+[; ;mdb.c: 126:     mdb_noten();
 [e ( _mdb_noten ..  ]
-"130
-[; ;mdb.c: 130: }
+"127
+[; ;mdb.c: 127: }
 [e :UE 1538 ]
 }
-"132
-[; ;mdb.c: 132: void save_notes(void)
+"129
+[; ;mdb.c: 129: void save_notes(void)
 [v _save_notes `(v ~T0 @X0 1 ef ]
-"133
-[; ;mdb.c: 133: {
+"130
+[; ;mdb.c: 130: {
 {
 [e :U _save_notes ]
 [f ]
-"134
-[; ;mdb.c: 134:     DATAEE_WriteByte(notebits, noteen_byte);
+"131
+[; ;mdb.c: 131:     DATAEE_WriteByte(notebits, noteen_byte);
 [e ( _DATAEE_WriteByte (2 , _notebits _noteen_byte ]
-"136
-[; ;mdb.c: 136: }
+"133
+[; ;mdb.c: 133: }
 [e :UE 1539 ]
 }
-"138
-[; ;mdb.c: 138: void mdb_noten(void)
+"135
+[; ;mdb.c: 135: void mdb_noten(void)
 [v _mdb_noten `(v ~T0 @X0 1 ef ]
-"139
-[; ;mdb.c: 139: {
+"136
+[; ;mdb.c: 136: {
 {
 [e :U _mdb_noten ]
 [f ]
-"140
-[; ;mdb.c: 140:     if(venflags.hiprice)
-[e $ ! != -> . _venflags 20 `i -> 0 `i 1541  ]
-"141
-[; ;mdb.c: 141:     {
-{
-"142
-[; ;mdb.c: 142:         noteen_byte = 0x00;
-[e = _noteen_byte -> -> 0 `i `uc ]
-"143
-[; ;mdb.c: 143:     }
-}
-[e :U 1541 ]
-"145
-[; ;mdb.c: 145:     init_mdbdata(0x00);
+"138
+[; ;mdb.c: 138:     init_mdbdata(0x00);
 [e ( _init_mdbdata (1 -> -> 0 `i `uc ]
-"147
-[; ;mdb.c: 147:     mcount = 3;
+"140
+[; ;mdb.c: 140:     mcount = 3;
 [e = _mcount -> -> 3 `i `uc ]
-"149
-[; ;mdb.c: 149:     mdbdata[0] = 0x00;
+"142
+[; ;mdb.c: 142:     mdbdata[0] = 0x00;
 [e = *U + &U _mdbdata * -> -> -> 0 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux -> -> 0 `i `uc ]
-"150
-[; ;mdb.c: 150:     mdbdata[1] = 0x00;
+"143
+[; ;mdb.c: 143:     mdbdata[1] = 0x00;
 [e = *U + &U _mdbdata * -> -> -> 1 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux -> -> 0 `i `uc ]
-"152
-[; ;mdb.c: 152:     mdbdata[2] = noteen_byte;
+"145
+[; ;mdb.c: 145:     mdbdata[2] = noteen_byte;
 [e = *U + &U _mdbdata * -> -> -> 2 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux _noteen_byte ]
-"154
-[; ;mdb.c: 154:     mdbdata[3] = 0x00;
+"147
+[; ;mdb.c: 147:     mdbdata[3] = 0x00;
 [e = *U + &U _mdbdata * -> -> -> 3 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux -> -> 0 `i `uc ]
-"155
-[; ;mdb.c: 155:     mcount = mdb_comm(note_type, mcount);
+"148
+[; ;mdb.c: 148:     mcount = mdb_comm(note_type, mcount);
 [e = _mcount ( _mdb_comm (2 , _note_type _mcount ]
-"156
-[; ;mdb.c: 156:     mdbflags.vending = 0;
+"149
+[; ;mdb.c: 149:     mdbflags.vending = 0;
 [e = . _mdbflags 4 -> -> 0 `i `uc ]
-"157
-[; ;mdb.c: 157: }
+"150
+[; ;mdb.c: 150: }
 [e :UE 1540 ]
 }
-"158
-[; ;mdb.c: 158: void mdb_security()
+"151
+[; ;mdb.c: 151: void mdb_security()
 [v _mdb_security `(v ~T0 @X0 1 ef ]
-"159
-[; ;mdb.c: 159: {
+"152
+[; ;mdb.c: 152: {
 {
 [e :U _mdb_security ]
 [f ]
-"160
-[; ;mdb.c: 160:     init_mdbdata(0x00);
+"153
+[; ;mdb.c: 153:     init_mdbdata(0x00);
 [e ( _init_mdbdata (1 -> -> 0 `i `uc ]
-"161
-[; ;mdb.c: 161:     mdb_comm(note_security, 0x01);
+"154
+[; ;mdb.c: 154:     mdb_comm(note_security, 0x01);
 [e ( _mdb_comm (2 , _note_security -> -> 1 `i `uc ]
-"162
-[; ;mdb.c: 162: }
-[e :UE 1542 ]
+"155
+[; ;mdb.c: 155: }
+[e :UE 1541 ]
 }
-"164
-[; ;mdb.c: 164: uint8_t mdb_poll(void)
+"157
+[; ;mdb.c: 157: uint8_t mdb_poll(void)
 [v _mdb_poll `(uc ~T0 @X0 1 ef ]
-"165
-[; ;mdb.c: 165: {
+"158
+[; ;mdb.c: 158: {
 {
 [e :U _mdb_poll ]
 [f ]
-"168
-[; ;mdb.c: 168:     TMR3_Initialize();
+"161
+[; ;mdb.c: 161:     TMR3_Initialize();
 [e ( _TMR3_Initialize ..  ]
-"169
-[; ;mdb.c: 169:     uint8_t i = mdb_comm(note_poll, 0x00);
+"162
+[; ;mdb.c: 162:     uint8_t i = mdb_comm(note_poll, 0x00);
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i ( _mdb_comm (2 , _note_poll -> -> 0 `i `uc ]
-"170
-[; ;mdb.c: 170:     notebyte = mdbdata[0];
+"163
+[; ;mdb.c: 163:     notebyte = mdbdata[0];
 [e = _notebyte *U + &U _mdbdata * -> -> -> 0 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux ]
-"172
-[; ;mdb.c: 172:     if((mdbdata[0] & 0x80) != 0)
-[e $ ! != & -> *U + &U _mdbdata * -> -> -> 0 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux `i -> 128 `i -> 0 `i 1544  ]
-"173
-[; ;mdb.c: 173:     {
+"165
+[; ;mdb.c: 165:     if((mdbdata[0] & 0x80) != 0)
+[e $ ! != & -> *U + &U _mdbdata * -> -> -> 0 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux `i -> 128 `i -> 0 `i 1543  ]
+"166
+[; ;mdb.c: 166:     {
 {
-"174
-[; ;mdb.c: 174:         notebyte = mdbdata[0] & 0x7F;
+"167
+[; ;mdb.c: 167:         notebyte = mdbdata[0] & 0x7F;
 [e = _notebyte -> & -> *U + &U _mdbdata * -> -> -> 0 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux `i -> 127 `i `uc ]
-"175
-[; ;mdb.c: 175:         switch(notebyte)
-[e $U 1546  ]
-"176
-[; ;mdb.c: 176:         {
+"168
+[; ;mdb.c: 168:         switch(notebyte)
+[e $U 1545  ]
+"169
+[; ;mdb.c: 169:         {
 {
-"177
-[; ;mdb.c: 177:             case 0: credit = 10;
-[e :U 1547 ]
+"170
+[; ;mdb.c: 170:             case 0: credit = 10;
+[e :U 1546 ]
 [e = _credit -> -> 10 `i `uc ]
-"178
-[; ;mdb.c: 178:             return credit;
+"171
+[; ;mdb.c: 171:             return credit;
 [e ) _credit ]
-[e $UE 1543  ]
-"179
-[; ;mdb.c: 179:             case 1: credit = 20;
-[e :U 1548 ]
+[e $UE 1542  ]
+"172
+[; ;mdb.c: 172:             case 1: credit = 20;
+[e :U 1547 ]
 [e = _credit -> -> 20 `i `uc ]
-"180
-[; ;mdb.c: 180:             return credit;
+"173
+[; ;mdb.c: 173:             return credit;
 [e ) _credit ]
-[e $UE 1543  ]
-"181
-[; ;mdb.c: 181:             case 2: credit = 50;
-[e :U 1549 ]
+[e $UE 1542  ]
+"174
+[; ;mdb.c: 174:             case 2: credit = 50;
+[e :U 1548 ]
 [e = _credit -> -> 50 `i `uc ]
+"175
+[; ;mdb.c: 175:             return credit;
+[e ) _credit ]
+[e $UE 1542  ]
+"176
+[; ;mdb.c: 176:             case 3: credit = 100;
+[e :U 1549 ]
+[e = _credit -> -> 100 `i `uc ]
+"177
+[; ;mdb.c: 177:             return credit;
+[e ) _credit ]
+[e $UE 1542  ]
+"178
+[; ;mdb.c: 178:             case 4: credit = 200;
+[e :U 1550 ]
+[e = _credit -> -> 200 `i `uc ]
+"179
+[; ;mdb.c: 179:             return credit;
+[e ) _credit ]
+[e $UE 1542  ]
+"180
+[; ;mdb.c: 180:             default: credit = 0x10;
+[e :U 1551 ]
+[e = _credit -> -> 16 `i `uc ]
+"181
+[; ;mdb.c: 181:             mdbflags.noteerr = 1;
+[e = . _mdbflags 1 -> -> 1 `i `uc ]
 "182
 [; ;mdb.c: 182:             return credit;
 [e ) _credit ]
-[e $UE 1543  ]
+[e $UE 1542  ]
 "183
-[; ;mdb.c: 183:             case 3: credit = 100;
-[e :U 1550 ]
-[e = _credit -> -> 100 `i `uc ]
-"184
-[; ;mdb.c: 184:             return credit;
-[e ) _credit ]
-[e $UE 1543  ]
-"185
-[; ;mdb.c: 185:             case 4: credit = 200;
-[e :U 1551 ]
-[e = _credit -> -> 200 `i `uc ]
-"186
-[; ;mdb.c: 186:             return credit;
-[e ) _credit ]
-[e $UE 1543  ]
-"187
-[; ;mdb.c: 187:             default: credit = 0x10;
-[e :U 1552 ]
-[e = _credit -> -> 16 `i `uc ]
-"188
-[; ;mdb.c: 188:             mdbflags.noteerr = 1;
-[e = . _mdbflags 1 -> -> 1 `i `uc ]
-"189
-[; ;mdb.c: 189:             return credit;
-[e ) _credit ]
-[e $UE 1543  ]
-"190
-[; ;mdb.c: 190:         }
+[; ;mdb.c: 183:         }
 }
-[e $U 1545  ]
-[e :U 1546 ]
-[e [\ -> _notebyte `i , $ -> 0 `i 1547
- , $ -> 1 `i 1548
- , $ -> 2 `i 1549
- , $ -> 3 `i 1550
- , $ -> 4 `i 1551
- 1552 ]
+[e $U 1544  ]
 [e :U 1545 ]
-"191
-[; ;mdb.c: 191:     }
-}
-[e $U 1553  ]
-"192
-[; ;mdb.c: 192:     else
+[e [\ -> _notebyte `i , $ -> 0 `i 1546
+ , $ -> 1 `i 1547
+ , $ -> 2 `i 1548
+ , $ -> 3 `i 1549
+ , $ -> 4 `i 1550
+ 1551 ]
 [e :U 1544 ]
-"193
-[; ;mdb.c: 193:     {
+"184
+[; ;mdb.c: 184:     }
+}
+[e $U 1552  ]
+"185
+[; ;mdb.c: 185:     else
+[e :U 1543 ]
+"186
+[; ;mdb.c: 186:     {
 {
-"194
-[; ;mdb.c: 194:         switch(mdbdata[0])
-[e $U 1555  ]
-"195
-[; ;mdb.c: 195:         {
-{
-"197
-[; ;mdb.c: 197:             case 0x00: credit = 0;
-[e :U 1556 ]
-[e = _credit -> -> 0 `i `uc ]
-"198
-[; ;mdb.c: 198:             return credit;
-[e ) _credit ]
-[e $UE 1543  ]
-"200
-[; ;mdb.c: 200:             case 0x01:credit = 0x01;
-[e :U 1557 ]
-[e = _credit -> -> 1 `i `uc ]
-"201
-[; ;mdb.c: 201:             break;
+"187
+[; ;mdb.c: 187:         switch(mdbdata[0])
 [e $U 1554  ]
-"203
-[; ;mdb.c: 203:             case 0x02:credit = 0x02;
-[e :U 1558 ]
+"188
+[; ;mdb.c: 188:         {
+{
+"190
+[; ;mdb.c: 190:             case 0x00: credit = 0;
+[e :U 1555 ]
+[e = _credit -> -> 0 `i `uc ]
+"191
+[; ;mdb.c: 191:             return credit;
+[e ) _credit ]
+[e $UE 1542  ]
+"193
+[; ;mdb.c: 193:             case 0x01:credit = 0x01;
+[e :U 1556 ]
+[e = _credit -> -> 1 `i `uc ]
+"194
+[; ;mdb.c: 194:             break;
+[e $U 1553  ]
+"196
+[; ;mdb.c: 196:             case 0x02:credit = 0x02;
+[e :U 1557 ]
 [e = _credit -> -> 2 `i `uc ]
+"197
+[; ;mdb.c: 197:             break;
+[e $U 1553  ]
+"199
+[; ;mdb.c: 199:             case 0x03:credit = 0x00;
+[e :U 1558 ]
+[e = _credit -> -> 0 `i `uc ]
+"200
+[; ;mdb.c: 200:             mdbflags.noteerr = 0;
+[e = . _mdbflags 1 -> -> 0 `i `uc ]
+"201
+[; ;mdb.c: 201:             return credit;
+[e ) _credit ]
+[e $UE 1542  ]
+"203
+[; ;mdb.c: 203:             case 0x04:credit = 0x04;
+[e :U 1559 ]
+[e = _credit -> -> 4 `i `uc ]
 "204
 [; ;mdb.c: 204:             break;
-[e $U 1554  ]
+[e $U 1553  ]
 "206
-[; ;mdb.c: 206:             case 0x03:credit = 0x00;
-[e :U 1559 ]
-[e = _credit -> -> 0 `i `uc ]
-"207
-[; ;mdb.c: 207:             mdbflags.noteerr = 0;
-[e = . _mdbflags 1 -> -> 0 `i `uc ]
-"208
-[; ;mdb.c: 208:             return credit;
-[e ) _credit ]
-[e $UE 1543  ]
-"210
-[; ;mdb.c: 210:             case 0x04:credit = 0x04;
+[; ;mdb.c: 206:             case 0x05:credit = 0x05;
 [e :U 1560 ]
-[e = _credit -> -> 4 `i `uc ]
-"211
-[; ;mdb.c: 211:             break;
-[e $U 1554  ]
-"213
-[; ;mdb.c: 213:             case 0x05:credit = 0x05;
-[e :U 1561 ]
 [e = _credit -> -> 5 `i `uc ]
-"214
-[; ;mdb.c: 214:             break;
-[e $U 1554  ]
-"216
-[; ;mdb.c: 216:             case 0x06:credit = 0x06;
-[e :U 1562 ]
+"207
+[; ;mdb.c: 207:             break;
+[e $U 1553  ]
+"209
+[; ;mdb.c: 209:             case 0x06:credit = 0x06;
+[e :U 1561 ]
 [e = _credit -> -> 6 `i `uc ]
-"217
-[; ;mdb.c: 217:             break;
-[e $U 1554  ]
-"219
-[; ;mdb.c: 219:             case 0x07: credit = 0x07;
-[e :U 1563 ]
+"210
+[; ;mdb.c: 210:             break;
+[e $U 1553  ]
+"212
+[; ;mdb.c: 212:             case 0x07: credit = 0x07;
+[e :U 1562 ]
 [e = _credit -> -> 7 `i `uc ]
-"220
-[; ;mdb.c: 220:             break;
-[e $U 1554  ]
-"222
-[; ;mdb.c: 222:             case 0x08: credit = 0x08;
-[e :U 1564 ]
+"213
+[; ;mdb.c: 213:             break;
+[e $U 1553  ]
+"215
+[; ;mdb.c: 215:             case 0x08: credit = 0x08;
+[e :U 1563 ]
 [e = _credit -> -> 8 `i `uc ]
-"223
-[; ;mdb.c: 223:             break;
-[e $U 1554  ]
-"225
-[; ;mdb.c: 225:             case 0x09:credit = 0x09;
-[e :U 1565 ]
+"216
+[; ;mdb.c: 216:             break;
+[e $U 1553  ]
+"218
+[; ;mdb.c: 218:             case 0x09:credit = 0x09;
+[e :U 1564 ]
 [e = _credit -> -> 9 `i `uc ]
-"226
-[; ;mdb.c: 226:             break;
-[e $U 1554  ]
-"228
-[; ;mdb.c: 228:             case 0x0A:credit = 0x0A;
-[e :U 1566 ]
+"219
+[; ;mdb.c: 219:             break;
+[e $U 1553  ]
+"221
+[; ;mdb.c: 221:             case 0x0A:credit = 0x0A;
+[e :U 1565 ]
 [e = _credit -> -> 10 `i `uc ]
-"229
-[; ;mdb.c: 229:             break;
-[e $U 1554  ]
-"231
-[; ;mdb.c: 231:             case 0x0B:credit = 0x0B;
-[e :U 1567 ]
+"222
+[; ;mdb.c: 222:             break;
+[e $U 1553  ]
+"224
+[; ;mdb.c: 224:             case 0x0B:credit = 0x0B;
+[e :U 1566 ]
 [e = _credit -> -> 11 `i `uc ]
-"232
-[; ;mdb.c: 232:             break;
-[e $U 1554  ]
-"234
-[; ;mdb.c: 234:             case 0x0C:credit = 0x0C;
-[e :U 1568 ]
+"225
+[; ;mdb.c: 225:             break;
+[e $U 1553  ]
+"227
+[; ;mdb.c: 227:             case 0x0C:credit = 0x0C;
+[e :U 1567 ]
 [e = _credit -> -> 12 `i `uc ]
-"235
-[; ;mdb.c: 235:             break;
-[e $U 1554  ]
-"236
-[; ;mdb.c: 236:             default: credit = 0;
-[e :U 1569 ]
+"228
+[; ;mdb.c: 228:             break;
+[e $U 1553  ]
+"229
+[; ;mdb.c: 229:             default: credit = 0;
+[e :U 1568 ]
 [e = _credit -> -> 0 `i `uc ]
-"237
-[; ;mdb.c: 237:         }
+"230
+[; ;mdb.c: 230:         }
 }
-[e $U 1554  ]
-[e :U 1555 ]
-[e [\ -> *U + &U _mdbdata * -> -> -> 0 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux `i , $ -> 0 `i 1556
- , $ -> 1 `i 1557
- , $ -> 2 `i 1558
- , $ -> 3 `i 1559
- , $ -> 4 `i 1560
- , $ -> 5 `i 1561
- , $ -> 6 `i 1562
- , $ -> 7 `i 1563
- , $ -> 8 `i 1564
- , $ -> 9 `i 1565
- , $ -> 10 `i 1566
- , $ -> 11 `i 1567
- , $ -> 12 `i 1568
- 1569 ]
+[e $U 1553  ]
 [e :U 1554 ]
-"238
-[; ;mdb.c: 238:         mdbflags.noteerr = 1;
-[e = . _mdbflags 1 -> -> 1 `i `uc ]
-"239
-[; ;mdb.c: 239:         return credit;
-[e ) _credit ]
-[e $UE 1543  ]
-"240
-[; ;mdb.c: 240:     }
-}
+[e [\ -> *U + &U _mdbdata * -> -> -> 0 `i `ui `ux -> -> # *U &U _mdbdata `ui `ux `i , $ -> 0 `i 1555
+ , $ -> 1 `i 1556
+ , $ -> 2 `i 1557
+ , $ -> 3 `i 1558
+ , $ -> 4 `i 1559
+ , $ -> 5 `i 1560
+ , $ -> 6 `i 1561
+ , $ -> 7 `i 1562
+ , $ -> 8 `i 1563
+ , $ -> 9 `i 1564
+ , $ -> 10 `i 1565
+ , $ -> 11 `i 1566
+ , $ -> 12 `i 1567
+ 1568 ]
 [e :U 1553 ]
-"242
-[; ;mdb.c: 242: }
-[e :UE 1543 ]
+"231
+[; ;mdb.c: 231:         mdbflags.noteerr = 1;
+[e = . _mdbflags 1 -> -> 1 `i `uc ]
+"232
+[; ;mdb.c: 232:         return credit;
+[e ) _credit ]
+[e $UE 1542  ]
+"233
+[; ;mdb.c: 233:     }
 }
-"244
-[; ;mdb.c: 244: uint8_t mdb_comm(uint8_t slvadd, uint8_t mcount)
+[e :U 1552 ]
+"235
+[; ;mdb.c: 235: }
+[e :UE 1542 ]
+}
+"237
+[; ;mdb.c: 237: uint8_t mdb_comm(uint8_t slvadd, uint8_t mcount)
 [v _mdb_comm `(uc ~T0 @X0 1 ef2`uc`uc ]
-"245
-[; ;mdb.c: 245: {
+"238
+[; ;mdb.c: 238: {
 {
 [e :U _mdb_comm ]
-"244
-[; ;mdb.c: 244: uint8_t mdb_comm(uint8_t slvadd, uint8_t mcount)
+"237
+[; ;mdb.c: 237: uint8_t mdb_comm(uint8_t slvadd, uint8_t mcount)
 [v _slvadd `uc ~T0 @X0 1 r1 ]
 [v _mcount `uc ~T0 @X0 1 r2 ]
-"245
-[; ;mdb.c: 245: {
+"238
+[; ;mdb.c: 238: {
 [f ]
-"247
-[; ;mdb.c: 247:     uint8_t i = 0;
+"240
+[; ;mdb.c: 240:     uint8_t i = 0;
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-"249
-[; ;mdb.c: 249:     TX1STAbits.TX9D = 1;
+"242
+[; ;mdb.c: 242:     TX1STAbits.TX9D = 1;
 [e = . . _TX1STAbits 0 0 -> -> 1 `i `uc ]
-"250
-[; ;mdb.c: 250:     mdb_on();
+"243
+[; ;mdb.c: 243:     mdb_on();
 [e ( _mdb_on ..  ]
-"254
-[; ;mdb.c: 254:     mdb_transmit(slvadd);
+"247
+[; ;mdb.c: 247:     mdb_transmit(slvadd);
 [e ( _mdb_transmit (1 _slvadd ]
-"255
-[; ;mdb.c: 255:     TX1STAbits.TX9D = 0;
+"248
+[; ;mdb.c: 248:     TX1STAbits.TX9D = 0;
 [e = . . _TX1STAbits 0 0 -> -> 0 `i `uc ]
-"259
-[; ;mdb.c: 259:     chkbyte = slvadd;
+"252
+[; ;mdb.c: 252:     chkbyte = slvadd;
 [e = _chkbyte _slvadd ]
-"260
-[; ;mdb.c: 260:     if(mcount != 0)
-[e $ ! != -> _mcount `i -> 0 `i 1571  ]
-"261
-[; ;mdb.c: 261:     {
+"253
+[; ;mdb.c: 253:     if(mcount != 0)
+[e $ ! != -> _mcount `i -> 0 `i 1570  ]
+"254
+[; ;mdb.c: 254:     {
 {
-"262
-[; ;mdb.c: 262:         i = mcount + 1;
+"255
+[; ;mdb.c: 255:         i = mcount + 1;
 [e = _i -> + -> _mcount `i -> 1 `i `uc ]
-"263
-[; ;mdb.c: 263:         while(i != 0)
-[e $U 1572  ]
-[e :U 1573 ]
-"264
-[; ;mdb.c: 264:         {
-{
-"265
-[; ;mdb.c: 265:             mdb_transmit(mdbdata[mcount]);
-[e ( _mdb_transmit (1 *U + &U _mdbdata * -> _mcount `ux -> -> # *U &U _mdbdata `ui `ux ]
-"268
-[; ;mdb.c: 268:             chkbyte = chkbyte + mdbdata[mcount];
-[e = _chkbyte -> + -> _chkbyte `i -> *U + &U _mdbdata * -> _mcount `ux -> -> # *U &U _mdbdata `ui `ux `i `uc ]
-"269
-[; ;mdb.c: 269:             i--;
-[e -- _i -> -> 1 `i `uc ]
-"270
-[; ;mdb.c: 270:             mcount--;
-[e -- _mcount -> -> 1 `i `uc ]
-"271
-[; ;mdb.c: 271:         }
-}
+"256
+[; ;mdb.c: 256:         while(i != 0)
+[e $U 1571  ]
 [e :U 1572 ]
+"257
+[; ;mdb.c: 257:         {
+{
+"258
+[; ;mdb.c: 258:             mdb_transmit(mdbdata[mcount]);
+[e ( _mdb_transmit (1 *U + &U _mdbdata * -> _mcount `ux -> -> # *U &U _mdbdata `ui `ux ]
+"261
+[; ;mdb.c: 261:             chkbyte = chkbyte + mdbdata[mcount];
+[e = _chkbyte -> + -> _chkbyte `i -> *U + &U _mdbdata * -> _mcount `ux -> -> # *U &U _mdbdata `ui `ux `i `uc ]
+"262
+[; ;mdb.c: 262:             i--;
+[e -- _i -> -> 1 `i `uc ]
 "263
-[; ;mdb.c: 263:         while(i != 0)
-[e $ != -> _i `i -> 0 `i 1573  ]
-[e :U 1574 ]
-"272
-[; ;mdb.c: 272:     }
+[; ;mdb.c: 263:             mcount--;
+[e -- _mcount -> -> 1 `i `uc ]
+"264
+[; ;mdb.c: 264:         }
 }
 [e :U 1571 ]
-"273
-[; ;mdb.c: 273:     mdb_transmit(chkbyte);
+"256
+[; ;mdb.c: 256:         while(i != 0)
+[e $ != -> _i `i -> 0 `i 1572  ]
+[e :U 1573 ]
+"265
+[; ;mdb.c: 265:     }
+}
+[e :U 1570 ]
+"266
+[; ;mdb.c: 266:     mdb_transmit(chkbyte);
 [e ( _mdb_transmit (1 _chkbyte ]
-"280
-[; ;mdb.c: 280:     init_mdbdata(0xFF);
+"273
+[; ;mdb.c: 273:     init_mdbdata(0xFF);
 [e ( _init_mdbdata (1 -> -> 255 `i `uc ]
-"281
-[; ;mdb.c: 281:     TMR1_Initialize();
+"274
+[; ;mdb.c: 274:     TMR1_Initialize();
 [e ( _TMR1_Initialize ..  ]
-"282
-[; ;mdb.c: 282:     dbcount = 0;
+"275
+[; ;mdb.c: 275:     dbcount = 0;
 [e = _dbcount -> -> 0 `i `us ]
-"283
-[; ;mdb.c: 283:     mdbflags.isdata = 0;
+"276
+[; ;mdb.c: 276:     mdbflags.isdata = 0;
 [e = . _mdbflags 0 -> -> 0 `i `uc ]
-"284
-[; ;mdb.c: 284:     i = 0;
+"277
+[; ;mdb.c: 277:     i = 0;
 [e = _i -> -> 0 `i `uc ]
-"286
-[; ;mdb.c: 286:     while(!PIR4bits.TMR1IF && !mdbflags.isdata)
-[e $U 1575  ]
-[e :U 1576 ]
-"287
-[; ;mdb.c: 287:     {
-{
-"289
-[; ;mdb.c: 289:         dbcount++;
-[e ++ _dbcount -> -> 1 `i `us ]
-"290
-[; ;mdb.c: 290:         mdbflags.isdata = 0;
-[e = . _mdbflags 0 -> -> 0 `i `uc ]
-"293
-[; ;mdb.c: 293:         while(PIR3bits.RC1IF && !mdbflags.isdata)
-[e $U 1578  ]
-[e :U 1579 ]
-"294
-[; ;mdb.c: 294:         {
-{
-"297
-[; ;mdb.c: 297:             mdbdata[i] = EUSART1_Read();
-[e = *U + &U _mdbdata * -> _i `ux -> -> # *U &U _mdbdata `ui `ux ( _EUSART1_Read ..  ]
-"298
-[; ;mdb.c: 298:             mdb_waitr();
-[e ( _mdb_waitr ..  ]
-"300
-[; ;mdb.c: 300:             mdbflags.isdata = RC1STAbits.RX9D;
-[e = . _mdbflags 0 . . _RC1STAbits 0 0 ]
-"301
-[; ;mdb.c: 301:             TMR1_Initialize();
-[e ( _TMR1_Initialize ..  ]
-"302
-[; ;mdb.c: 302:             i++;
-[e ++ _i -> -> 1 `i `uc ]
-"304
-[; ;mdb.c: 304:         }
-}
-[e :U 1578 ]
-"293
-[; ;mdb.c: 293:         while(PIR3bits.RC1IF && !mdbflags.isdata)
-[e $ && != -> . . _PIR3bits 0 5 `i -> 0 `i ! != -> . _mdbflags 0 `i -> 0 `i 1579  ]
-[e :U 1580 ]
-"306
-[; ;mdb.c: 306:     }
-}
+"279
+[; ;mdb.c: 279:     while(!PIR4bits.TMR1IF && !mdbflags.isdata)
+[e $U 1574  ]
 [e :U 1575 ]
-"286
-[; ;mdb.c: 286:     while(!PIR4bits.TMR1IF && !mdbflags.isdata)
-[e $ && ! != -> . . _PIR4bits 0 0 `i -> 0 `i ! != -> . _mdbflags 0 `i -> 0 `i 1576  ]
-[e :U 1577 ]
-"308
-[; ;mdb.c: 308:     i--;
-[e -- _i -> -> 1 `i `uc ]
-"310
-[; ;mdb.c: 310:     mdbflags.timeout = PIR4bits.TMR1IF;
-[e = . _mdbflags 3 . . _PIR4bits 0 0 ]
-"312
-[; ;mdb.c: 312:     if(mdbflags.isdata == 1 && mdbdata[i] != 0x00)
-[e $ ! && == -> . _mdbflags 0 `i -> 1 `i != -> *U + &U _mdbdata * -> _i `ux -> -> # *U &U _mdbdata `ui `ux `i -> 0 `i 1581  ]
-"313
-[; ;mdb.c: 313:     {
+"280
+[; ;mdb.c: 280:     {
 {
-"314
-[; ;mdb.c: 314:         TX1STAbits.TX9D = 1;
+"282
+[; ;mdb.c: 282:         dbcount++;
+[e ++ _dbcount -> -> 1 `i `us ]
+"283
+[; ;mdb.c: 283:         mdbflags.isdata = 0;
+[e = . _mdbflags 0 -> -> 0 `i `uc ]
+"286
+[; ;mdb.c: 286:         while(PIR3bits.RC1IF && !mdbflags.isdata)
+[e $U 1577  ]
+[e :U 1578 ]
+"287
+[; ;mdb.c: 287:         {
+{
+"290
+[; ;mdb.c: 290:             mdbdata[i] = EUSART1_Read();
+[e = *U + &U _mdbdata * -> _i `ux -> -> # *U &U _mdbdata `ui `ux ( _EUSART1_Read ..  ]
+"291
+[; ;mdb.c: 291:             mdb_waitr();
+[e ( _mdb_waitr ..  ]
+"293
+[; ;mdb.c: 293:             mdbflags.isdata = RC1STAbits.RX9D;
+[e = . _mdbflags 0 . . _RC1STAbits 0 0 ]
+"294
+[; ;mdb.c: 294:             TMR1_Initialize();
+[e ( _TMR1_Initialize ..  ]
+"295
+[; ;mdb.c: 295:             i++;
+[e ++ _i -> -> 1 `i `uc ]
+"297
+[; ;mdb.c: 297:         }
+}
+[e :U 1577 ]
+"286
+[; ;mdb.c: 286:         while(PIR3bits.RC1IF && !mdbflags.isdata)
+[e $ && != -> . . _PIR3bits 0 5 `i -> 0 `i ! != -> . _mdbflags 0 `i -> 0 `i 1578  ]
+[e :U 1579 ]
+"299
+[; ;mdb.c: 299:     }
+}
+[e :U 1574 ]
+"279
+[; ;mdb.c: 279:     while(!PIR4bits.TMR1IF && !mdbflags.isdata)
+[e $ && ! != -> . . _PIR4bits 0 0 `i -> 0 `i ! != -> . _mdbflags 0 `i -> 0 `i 1575  ]
+[e :U 1576 ]
+"301
+[; ;mdb.c: 301:     i--;
+[e -- _i -> -> 1 `i `uc ]
+"303
+[; ;mdb.c: 303:     mdbflags.timeout = PIR4bits.TMR1IF;
+[e = . _mdbflags 3 . . _PIR4bits 0 0 ]
+"305
+[; ;mdb.c: 305:     if(mdbflags.isdata == 1 && mdbdata[i] != 0x00)
+[e $ ! && == -> . _mdbflags 0 `i -> 1 `i != -> *U + &U _mdbdata * -> _i `ux -> -> # *U &U _mdbdata `ui `ux `i -> 0 `i 1580  ]
+"306
+[; ;mdb.c: 306:     {
+{
+"307
+[; ;mdb.c: 307:         TX1STAbits.TX9D = 1;
 [e = . . _TX1STAbits 0 0 -> -> 1 `i `uc ]
-"315
-[; ;mdb.c: 315:         mdb_on();
+"308
+[; ;mdb.c: 308:         mdb_on();
 [e ( _mdb_on ..  ]
-"316
-[; ;mdb.c: 316:         mdb_transmit(0x00);
+"309
+[; ;mdb.c: 309:         mdb_transmit(0x00);
 [e ( _mdb_transmit (1 -> -> 0 `i `uc ]
-"318
-[; ;mdb.c: 318:     }
+"311
+[; ;mdb.c: 311:     }
 }
-[e :U 1581 ]
-"320
-[; ;mdb.c: 320:     mdb_on();
+[e :U 1580 ]
+"313
+[; ;mdb.c: 313:     mdb_on();
 [e ( _mdb_on ..  ]
-"322
-[; ;mdb.c: 322:     return(i);
+"315
+[; ;mdb.c: 315:     return(i);
 [e ) _i ]
-[e $UE 1570  ]
-"323
-[; ;mdb.c: 323: }
-[e :UE 1570 ]
+[e $UE 1569  ]
+"316
+[; ;mdb.c: 316: }
+[e :UE 1569 ]
 }
-"325
-[; ;mdb.c: 325: void mdb_on(void)
+"318
+[; ;mdb.c: 318: void mdb_on(void)
 [v _mdb_on `(v ~T0 @X0 1 ef ]
-"326
-[; ;mdb.c: 326: {
+"319
+[; ;mdb.c: 319: {
 {
 [e :U _mdb_on ]
 [f ]
-"331
-[; ;mdb.c: 331:     LATCbits.LATC0 = 1;
+"324
+[; ;mdb.c: 324:     LATCbits.LATC0 = 1;
 [e = . . _LATCbits 0 0 -> -> 1 `i `uc ]
-"335
-[; ;mdb.c: 335: }
-[e :UE 1582 ]
+"328
+[; ;mdb.c: 328: }
+[e :UE 1581 ]
 }
-"338
-[; ;mdb.c: 338: void mdb_waitx(void)
+"331
+[; ;mdb.c: 331: void mdb_waitx(void)
 [v _mdb_waitx `(v ~T0 @X0 1 ef ]
-"339
-[; ;mdb.c: 339: {
+"332
+[; ;mdb.c: 332: {
 {
 [e :U _mdb_waitx ]
 [f ]
-"340
-[; ;mdb.c: 340:     while(TX1STAbits.TRMT == 0)
-[e $U 1584  ]
-[e :U 1585 ]
-"341
-[; ;mdb.c: 341:     {
-{
-"343
-[; ;mdb.c: 343:     }
-}
+"333
+[; ;mdb.c: 333:     while(TX1STAbits.TRMT == 0)
+[e $U 1583  ]
 [e :U 1584 ]
-"340
-[; ;mdb.c: 340:     while(TX1STAbits.TRMT == 0)
-[e $ == -> . . _TX1STAbits 0 1 `i -> 0 `i 1585  ]
-[e :U 1586 ]
-"344
-[; ;mdb.c: 344: }
-[e :UE 1583 ]
+"334
+[; ;mdb.c: 334:     {
+{
+"336
+[; ;mdb.c: 336:     }
 }
-"346
-[; ;mdb.c: 346: void mdb_waitr(void)
+[e :U 1583 ]
+"333
+[; ;mdb.c: 333:     while(TX1STAbits.TRMT == 0)
+[e $ == -> . . _TX1STAbits 0 1 `i -> 0 `i 1584  ]
+[e :U 1585 ]
+"337
+[; ;mdb.c: 337: }
+[e :UE 1582 ]
+}
+"339
+[; ;mdb.c: 339: void mdb_waitr(void)
 [v _mdb_waitr `(v ~T0 @X0 1 ef ]
-"347
-[; ;mdb.c: 347: {
+"340
+[; ;mdb.c: 340: {
 {
 [e :U _mdb_waitr ]
 [f ]
-"348
-[; ;mdb.c: 348:     while(BAUD1CONbits.RCIDL == 0)
-[e $U 1588  ]
-[e :U 1589 ]
-"349
-[; ;mdb.c: 349:     {
-{
-"351
-[; ;mdb.c: 351:     }
-}
+"341
+[; ;mdb.c: 341:     while(BAUD1CONbits.RCIDL == 0)
+[e $U 1587  ]
 [e :U 1588 ]
-"348
-[; ;mdb.c: 348:     while(BAUD1CONbits.RCIDL == 0)
-[e $ == -> . . _BAUD1CONbits 0 6 `i -> 0 `i 1589  ]
-[e :U 1590 ]
-"352
-[; ;mdb.c: 352: }
-[e :UE 1587 ]
+"342
+[; ;mdb.c: 342:     {
+{
+"344
+[; ;mdb.c: 344:     }
 }
-"354
-[; ;mdb.c: 354: void mdb_test(void)
+[e :U 1587 ]
+"341
+[; ;mdb.c: 341:     while(BAUD1CONbits.RCIDL == 0)
+[e $ == -> . . _BAUD1CONbits 0 6 `i -> 0 `i 1588  ]
+[e :U 1589 ]
+"345
+[; ;mdb.c: 345: }
+[e :UE 1586 ]
+}
+"347
+[; ;mdb.c: 347: void mdb_test(void)
 [v _mdb_test `(v ~T0 @X0 1 ef ]
-"355
-[; ;mdb.c: 355: {
+"348
+[; ;mdb.c: 348: {
 {
 [e :U _mdb_test ]
 [f ]
-"356
-[; ;mdb.c: 356:     uint8_t i = 0;
+"349
+[; ;mdb.c: 349:     uint8_t i = 0;
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-"357
-[; ;mdb.c: 357:     uint8_t x = note_reset;
+"350
+[; ;mdb.c: 350:     uint8_t x = note_reset;
 [v _x `uc ~T0 @X0 1 a ]
 [e = _x _note_reset ]
-"358
-[; ;mdb.c: 358:     TX1STAbits.TXEN = 1;
+"351
+[; ;mdb.c: 351:     TX1STAbits.TXEN = 1;
 [e = . . _TX1STAbits 0 5 -> -> 1 `i `uc ]
-"359
-[; ;mdb.c: 359:     while(i < 8)
-[e $U 1592  ]
-[e :U 1593 ]
-"360
-[; ;mdb.c: 360:     {
-{
-"363
-[; ;mdb.c: 363:         TX1STAbits.TX9D = 1;
-[e = . . _TX1STAbits 0 0 -> -> 1 `i `uc ]
-"364
-[; ;mdb.c: 364:         mdb_transmit(x);
-[e ( _mdb_transmit (1 _x ]
-"366
-[; ;mdb.c: 366:         TX1STAbits.TX9D = 0;
-[e = . . _TX1STAbits 0 0 -> -> 0 `i `uc ]
-"367
-[; ;mdb.c: 367:         mdb_transmit(x);
-[e ( _mdb_transmit (1 _x ]
-"369
-[; ;mdb.c: 369:         TX1STAbits.TXEN = 0;
-[e = . . _TX1STAbits 0 5 -> -> 0 `i `uc ]
-"370
-[; ;mdb.c: 370:         __asm("nop");
-[; <" nop ;# ">
-"371
-[; ;mdb.c: 371:         mdb_ron();
-[e ( _mdb_ron ..  ]
-"372
-[; ;mdb.c: 372:         wait_ack();
-[e ( _wait_ack ..  ]
-"373
-[; ;mdb.c: 373:         i++;
-[e ++ _i -> -> 1 `i `uc ]
-"374
-[; ;mdb.c: 374:         x++;
-[e ++ _x -> -> 1 `i `uc ]
-"375
-[; ;mdb.c: 375:         TX1STAbits.TXEN = 1;
-[e = . . _TX1STAbits 0 5 -> -> 1 `i `uc ]
-"376
-[; ;mdb.c: 376:         mdb_on();
-[e ( _mdb_on ..  ]
-"377
-[; ;mdb.c: 377:     }
-}
+"352
+[; ;mdb.c: 352:     while(i < 8)
+[e $U 1591  ]
 [e :U 1592 ]
+"353
+[; ;mdb.c: 353:     {
+{
+"356
+[; ;mdb.c: 356:         TX1STAbits.TX9D = 1;
+[e = . . _TX1STAbits 0 0 -> -> 1 `i `uc ]
+"357
+[; ;mdb.c: 357:         mdb_transmit(x);
+[e ( _mdb_transmit (1 _x ]
 "359
-[; ;mdb.c: 359:     while(i < 8)
-[e $ < -> _i `i -> 8 `i 1593  ]
-[e :U 1594 ]
-"378
-[; ;mdb.c: 378:     TX1STAbits.TXEN = 0;
+[; ;mdb.c: 359:         TX1STAbits.TX9D = 0;
+[e = . . _TX1STAbits 0 0 -> -> 0 `i `uc ]
+"360
+[; ;mdb.c: 360:         mdb_transmit(x);
+[e ( _mdb_transmit (1 _x ]
+"362
+[; ;mdb.c: 362:         TX1STAbits.TXEN = 0;
 [e = . . _TX1STAbits 0 5 -> -> 0 `i `uc ]
-"379
-[; ;mdb.c: 379: }
-[e :UE 1591 ]
+"363
+[; ;mdb.c: 363:         __asm("nop");
+[; <" nop ;# ">
+"364
+[; ;mdb.c: 364:         mdb_ron();
+[e ( _mdb_ron ..  ]
+"365
+[; ;mdb.c: 365:         wait_ack();
+[e ( _wait_ack ..  ]
+"366
+[; ;mdb.c: 366:         i++;
+[e ++ _i -> -> 1 `i `uc ]
+"367
+[; ;mdb.c: 367:         x++;
+[e ++ _x -> -> 1 `i `uc ]
+"368
+[; ;mdb.c: 368:         TX1STAbits.TXEN = 1;
+[e = . . _TX1STAbits 0 5 -> -> 1 `i `uc ]
+"369
+[; ;mdb.c: 369:         mdb_on();
+[e ( _mdb_on ..  ]
+"370
+[; ;mdb.c: 370:     }
 }
-"382
-[; ;mdb.c: 382: void mdb_unlock(void)
+[e :U 1591 ]
+"352
+[; ;mdb.c: 352:     while(i < 8)
+[e $ < -> _i `i -> 8 `i 1592  ]
+[e :U 1593 ]
+"371
+[; ;mdb.c: 371:     TX1STAbits.TXEN = 0;
+[e = . . _TX1STAbits 0 5 -> -> 0 `i `uc ]
+"372
+[; ;mdb.c: 372: }
+[e :UE 1590 ]
+}
+"375
+[; ;mdb.c: 375: void mdb_unlock(void)
 [v _mdb_unlock `(v ~T0 @X0 1 ef ]
-"383
-[; ;mdb.c: 383: {
+"376
+[; ;mdb.c: 376: {
 {
 [e :U _mdb_unlock ]
 [f ]
-"384
-[; ;mdb.c: 384:     _delay((unsigned long)((50)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
-"385
-[; ;mdb.c: 385:     LATE = 0x00;
+"377
+[; ;mdb.c: 377:     _delay((unsigned long)((50)*(12000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
+"378
+[; ;mdb.c: 378:     LATE = 0x00;
 [e = _LATE -> -> 0 `i `uc ]
-"386
-[; ;mdb.c: 386:     LATD = 0x00;
+"379
+[; ;mdb.c: 379:     LATD = 0x00;
 [e = _LATD -> -> 0 `i `uc ]
-"387
-[; ;mdb.c: 387:     LATA = 0xC0;
+"380
+[; ;mdb.c: 380:     LATA = 0xC0;
 [e = _LATA -> -> 192 `i `uc ]
-"388
-[; ;mdb.c: 388:     LATB = 0x00;
+"381
+[; ;mdb.c: 381:     LATB = 0x00;
 [e = _LATB -> -> 0 `i `uc ]
-"389
-[; ;mdb.c: 389:     LATC = 0x01;
+"382
+[; ;mdb.c: 382:     LATC = 0x01;
 [e = _LATC -> -> 1 `i `uc ]
-"394
-[; ;mdb.c: 394:     TRISE = 0x00;
+"387
+[; ;mdb.c: 387:     TRISE = 0x00;
 [e = _TRISE -> -> 0 `i `uc ]
-"395
-[; ;mdb.c: 395:     TRISA = 0x1F;
+"388
+[; ;mdb.c: 388:     TRISA = 0x1F;
 [e = _TRISA -> -> 31 `i `uc ]
-"396
-[; ;mdb.c: 396:     TRISB = 0xD0;
+"389
+[; ;mdb.c: 389:     TRISB = 0xD0;
 [e = _TRISB -> -> 208 `i `uc ]
-"397
-[; ;mdb.c: 397:     TRISC = 0x80;
+"390
+[; ;mdb.c: 390:     TRISC = 0x80;
 [e = _TRISC -> -> 128 `i `uc ]
-"398
-[; ;mdb.c: 398:     TRISD = 0x00;
+"391
+[; ;mdb.c: 391:     TRISD = 0x00;
 [e = _TRISD -> -> 0 `i `uc ]
-"403
-[; ;mdb.c: 403:     ANSELC = 0x00;
+"396
+[; ;mdb.c: 396:     ANSELC = 0x00;
 [e = _ANSELC -> -> 0 `i `uc ]
-"404
-[; ;mdb.c: 404:     ANSELB = 0xC0;
+"397
+[; ;mdb.c: 397:     ANSELB = 0xC0;
 [e = _ANSELB -> -> 192 `i `uc ]
-"405
-[; ;mdb.c: 405:     ANSELD = 0x00;
+"398
+[; ;mdb.c: 398:     ANSELD = 0x00;
 [e = _ANSELD -> -> 0 `i `uc ]
-"406
-[; ;mdb.c: 406:     ANSELE = 0x00;
+"399
+[; ;mdb.c: 399:     ANSELE = 0x00;
 [e = _ANSELE -> -> 0 `i `uc ]
-"407
-[; ;mdb.c: 407:     ANSELA = 0x01;
+"400
+[; ;mdb.c: 400:     ANSELA = 0x01;
 [e = _ANSELA -> -> 1 `i `uc ]
-"412
-[; ;mdb.c: 412:     WPUD = 0x00;
+"405
+[; ;mdb.c: 405:     WPUD = 0x00;
 [e = _WPUD -> -> 0 `i `uc ]
-"413
-[; ;mdb.c: 413:     WPUE = 0x00;
+"406
+[; ;mdb.c: 406:     WPUE = 0x00;
 [e = _WPUE -> -> 0 `i `uc ]
-"414
-[; ;mdb.c: 414:     WPUB = 0x00;
+"407
+[; ;mdb.c: 407:     WPUB = 0x00;
 [e = _WPUB -> -> 0 `i `uc ]
-"415
-[; ;mdb.c: 415:     WPUA = 0x00;
+"408
+[; ;mdb.c: 408:     WPUA = 0x00;
 [e = _WPUA -> -> 0 `i `uc ]
-"416
-[; ;mdb.c: 416:     WPUC = 0x00;
+"409
+[; ;mdb.c: 409:     WPUC = 0x00;
 [e = _WPUC -> -> 0 `i `uc ]
-"421
-[; ;mdb.c: 421:     ODCONE = 0x00;
+"414
+[; ;mdb.c: 414:     ODCONE = 0x00;
 [e = _ODCONE -> -> 0 `i `uc ]
-"422
-[; ;mdb.c: 422:     ODCONA = 0x00;
+"415
+[; ;mdb.c: 415:     ODCONA = 0x00;
 [e = _ODCONA -> -> 0 `i `uc ]
-"423
-[; ;mdb.c: 423:     ODCONB = 0x00;
+"416
+[; ;mdb.c: 416:     ODCONB = 0x00;
 [e = _ODCONB -> -> 0 `i `uc ]
-"424
-[; ;mdb.c: 424:     ODCONC = 0x00;
+"417
+[; ;mdb.c: 417:     ODCONC = 0x00;
 [e = _ODCONC -> -> 0 `i `uc ]
-"425
-[; ;mdb.c: 425:     ODCOND = 0x00;
+"418
+[; ;mdb.c: 418:     ODCOND = 0x00;
 [e = _ODCOND -> -> 0 `i `uc ]
-"426
-[; ;mdb.c: 426:     LATC = 0x01;
+"419
+[; ;mdb.c: 419:     LATC = 0x01;
 [e = _LATC -> -> 1 `i `uc ]
-"427
-[; ;mdb.c: 427:     TRISC = 0x80;
+"420
+[; ;mdb.c: 420:     TRISC = 0x80;
 [e = _TRISC -> -> 128 `i `uc ]
-"428
-[; ;mdb.c: 428:     ANSELC = 0x00;
+"421
+[; ;mdb.c: 421:     ANSELC = 0x00;
 [e = _ANSELC -> -> 0 `i `uc ]
-"429
-[; ;mdb.c: 429:     WPUC = 0x00;
+"422
+[; ;mdb.c: 422:     WPUC = 0x00;
 [e = _WPUC -> -> 0 `i `uc ]
-"430
-[; ;mdb.c: 430:     ODCONC = 0x00;
+"423
+[; ;mdb.c: 423:     ODCONC = 0x00;
 [e = _ODCONC -> -> 0 `i `uc ]
-"431
-[; ;mdb.c: 431:     PPSLOCK = 0x55;
+"424
+[; ;mdb.c: 424:     PPSLOCK = 0x55;
 [e = _PPSLOCK -> -> 85 `i `uc ]
-"432
-[; ;mdb.c: 432:     PPSLOCK = 0xAA;
+"425
+[; ;mdb.c: 425:     PPSLOCK = 0xAA;
 [e = _PPSLOCK -> -> 170 `i `uc ]
-"433
-[; ;mdb.c: 433:     PPSLOCKbits.PPSLOCKED = 0x00;
+"426
+[; ;mdb.c: 426:     PPSLOCKbits.PPSLOCKED = 0x00;
 [e = . . _PPSLOCKbits 0 0 -> -> 0 `i `uc ]
-"435
-[; ;mdb.c: 435:     RX1PPSbits.RXPPS = 0x0;
+"428
+[; ;mdb.c: 428:     RX1PPSbits.RXPPS = 0x0;
 [e = . . _RX1PPSbits 1 0 -> -> 0 `i `uc ]
-"436
-[; ;mdb.c: 436:     RC6PPS = 0x0;
+"429
+[; ;mdb.c: 429:     RC6PPS = 0x0;
 [e = _RC6PPS -> -> 0 `i `uc ]
-"437
-[; ;mdb.c: 437:     RB5PPS = 0x0;
+"430
+[; ;mdb.c: 430:     RB5PPS = 0x0;
 [e = _RB5PPS -> -> 0 `i `uc ]
-"438
-[; ;mdb.c: 438:     RX2PPSbits.RXPPS = 0x0;
+"431
+[; ;mdb.c: 431:     RX2PPSbits.RXPPS = 0x0;
 [e = . . _RX2PPSbits 1 0 -> -> 0 `i `uc ]
-"439
-[; ;mdb.c: 439:     CMP1_Initialize();
+"432
+[; ;mdb.c: 432:     CMP1_Initialize();
 [e ( _CMP1_Initialize ..  ]
-"440
-[; ;mdb.c: 440:     TMR3_Initialize();
+"433
+[; ;mdb.c: 433:     TMR3_Initialize();
 [e ( _TMR3_Initialize ..  ]
-"441
-[; ;mdb.c: 441:     DAC1_Initialize();
+"434
+[; ;mdb.c: 434:     DAC1_Initialize();
 [e ( _DAC1_Initialize ..  ]
-"442
-[; ;mdb.c: 442:     TMR5_Initialize();
+"435
+[; ;mdb.c: 435:     TMR5_Initialize();
 [e ( _TMR5_Initialize ..  ]
-"443
-[; ;mdb.c: 443:     TMR1_Initialize();
+"436
+[; ;mdb.c: 436:     TMR1_Initialize();
 [e ( _TMR1_Initialize ..  ]
-"445
-[; ;mdb.c: 445: }
-[e :UE 1595 ]
+"438
+[; ;mdb.c: 438: }
+[e :UE 1594 ]
 }
-"447
-[; ;mdb.c: 447: void mdb_transmit(uint8_t txbyte)
+"440
+[; ;mdb.c: 440: void mdb_transmit(uint8_t txbyte)
 [v _mdb_transmit `(v ~T0 @X0 1 ef1`uc ]
-"448
-[; ;mdb.c: 448: {
+"441
+[; ;mdb.c: 441: {
 {
 [e :U _mdb_transmit ]
-"447
-[; ;mdb.c: 447: void mdb_transmit(uint8_t txbyte)
+"440
+[; ;mdb.c: 440: void mdb_transmit(uint8_t txbyte)
 [v _txbyte `uc ~T0 @X0 1 r1 ]
-"448
-[; ;mdb.c: 448: {
+"441
+[; ;mdb.c: 441: {
 [f ]
-"449
-[; ;mdb.c: 449:     EUSART1_Write(txbyte);
+"442
+[; ;mdb.c: 442:     EUSART1_Write(txbyte);
 [e ( _EUSART1_Write (1 _txbyte ]
-"450
-[; ;mdb.c: 450:     mdb_waitx();
+"443
+[; ;mdb.c: 443:     mdb_waitx();
 [e ( _mdb_waitx ..  ]
-"451
-[; ;mdb.c: 451: }
-[e :UE 1596 ]
+"444
+[; ;mdb.c: 444: }
+[e :UE 1595 ]
 }

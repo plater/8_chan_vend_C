@@ -13,39 +13,38 @@
   @Description
     This header file provides APIs for TMR0.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65.2
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65
         Device            :  PIC18F47K40
-        Driver Version    :  3.10
+        Driver Version    :  2.00
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.45
-        MPLAB 	          :  MPLAB X 4.15
+        MPLAB 	          :  MPLAB X 4.10
 */
 
-/*
-    (c) 2018 Microchip Technology Inc. and its subsidiaries. 
-    
-    Subject to your compliance with these terms, you may use Microchip software and any 
-    derivatives exclusively with Microchip products. It is your responsibility to comply with third party 
-    license terms applicable to your use of third party software (including open source software) that 
-    may accompany Microchip software.
-    
-    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
-    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY 
-    IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS 
-    FOR A PARTICULAR PURPOSE.
-    
-    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
-    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP 
-    HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO 
-    THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL 
-    CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
-    OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
-    SOFTWARE.
+/**
+    (c) 2016 Microchip Technology Inc. and its subsidiaries. You may use this
+    software and any derivatives exclusively with Microchip products.
+
+    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
+    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED
+    WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A
+    PARTICULAR PURPOSE, OR ITS INTERACTION WITH MICROCHIP PRODUCTS, COMBINATION
+    WITH ANY OTHER PRODUCTS, OR USE IN ANY APPLICATION.
+
+    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
+    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
+    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS
+    BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE
+    FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
+    ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
+    THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+
+    MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE
+    TERMS.
 */
 
-#ifndef TMR0_H
-#define TMR0_H
+#ifndef _TMR0_H
+#define _TMR0_H
 
 /**
   Section: Included Files
@@ -185,7 +184,7 @@ void TMR0_StopTimer(void);
     TMR0_StartTimer();
 
     // Read the current value of TMR0
-    if(0 == TMR0_ReadTimer())
+    if(0 == TMR0_Read16bitTimer())
     {
         // Do something else...
 
@@ -194,7 +193,7 @@ void TMR0_StopTimer(void);
     }
     </code>
 */
-uint16_t TMR0_ReadTimer(void);
+uint16_t TMR0_Read16bitTimer(void);
 
 /**
   @Summary
@@ -221,19 +220,19 @@ uint16_t TMR0_ReadTimer(void);
     while(1)
     {
         //Read the TMR0 register
-        if(ZERO == TMR0_ReadTimer())
+        if(ZERO == TMR0_Read16bitTimer())
         {
             // Do something else...
 
             // Write the TMR0 register
-            TMR0_WriteTimer(PERIOD);
+            TMR0_Write16bitTimer(PERIOD);
         }
 
         // Do something else...
     }
     </code>
 */
-void TMR0_WriteTimer(uint16_t timerVal);
+void TMR0_Write16bitTimer(uint16_t timerVal);
 
 /**
   @Summary
@@ -264,12 +263,12 @@ void TMR0_WriteTimer(uint16_t timerVal);
             TMR0IF = 0;
 
             // Reload the initial value of TMR0
-            TMR0_Reload();
+            TMR0_Reload16bit();
         }
     }
     </code>
 */
-void TMR0_Reload(void);
+void TMR0_Reload16bit(void);
 
 /**
   @Summary
@@ -302,7 +301,7 @@ void TMR0_Reload(void);
             TMR0IF = 0;
 
             // Reload the TMR0 value
-            TMR0_Reload();
+            TMR0_Reload16bit();
         }
     }
     </code>
@@ -315,7 +314,7 @@ bool TMR0_HasOverflowOccured(void);
 
 #endif
 
-#endif // TMR0_H
+#endif // _TMR0_H
 /**
  End of File
 */

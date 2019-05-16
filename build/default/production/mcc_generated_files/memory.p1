@@ -26,8 +26,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "27886
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 27886: extern volatile unsigned char TABLAT __attribute__((address(0xFF5)));
 [v _TABLAT `Vuc ~T0 @X0 0 e@4085 ]
-"193 mcc_generated_files/memory.h
-[; ;mcc_generated_files/memory.h: 193: int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
+"192 mcc_generated_files/memory.h
+[; ;mcc_generated_files/memory.h: 192: int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
 [v _FLASH_WriteBlock `(c ~T0 @X0 0 ef2`ul`*uc ]
 "27764 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 27764:     struct {
@@ -48,8 +48,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "27784
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 27784: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
 [v _INTCONbits `VS1459 ~T0 @X0 0 e@4082 ]
-"218 mcc_generated_files/memory.h
-[; ;mcc_generated_files/memory.h: 218: void FLASH_EraseBlock(uint32_t baseAddr);
+"217 mcc_generated_files/memory.h
+[; ;mcc_generated_files/memory.h: 217: void FLASH_EraseBlock(uint32_t baseAddr);
 [v _FLASH_EraseBlock `(v ~T0 @X0 0 ef1`ul ]
 "16367 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 16367: extern volatile unsigned char NVMCON2 __attribute__((address(0xF82)));
@@ -1467,447 +1467,423 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28207
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 28207: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"53 mcc_generated_files/memory.c
-[; ;mcc_generated_files/memory.c: 53: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "5" "," "0" "," "0" "," "0" "," "0" "," "0" "," "0" "," "0");
-[; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
-[; <" 	db	5,0,0,0,0,0,0,0 ;# ">
-"54
-[; ;mcc_generated_files/memory.c: 54: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0" "," "0" "," "0" "," "0" "," "0" "," "0" "," "0" "," "5");
-[; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
-[; <" 	db	0,0,0,0,0,0,0,5 ;# ">
-"55
-[; ;mcc_generated_files/memory.c: 55: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "10" "," "15" "," "20" "," "25" "," "30" "," "35" "," "40" "," "0");
-[; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
-[; <" 	db	10,15,20,25,30,35,40,0 ;# ">
-"56
-[; ;mcc_generated_files/memory.c: 56: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x07" "," "0" "," "0" "," "0" "," "0x02" "," "0" "," "0" "," "0");
-[; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
-[; <" 	db	0x07,0,0,0,0x02,0,0,0 ;# ">
-"57
-[; ;mcc_generated_files/memory.c: 57: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x00" "," "0" "," "0" "," "0" "," "0x00" "," "0" "," "0" "," "0");
-[; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
-[; <" 	db	0x00,0,0,0,0x00,0,0,0 ;# ">
-"58
-[; ;mcc_generated_files/memory.c: 58: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x00" "," "0" "," "0" "," "0" "," "0x00" "," "0" "," "0" "," "0");
-[; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
-[; <" 	db	0x00,0,0,0,0x00,0,0,0 ;# ">
-"64
-[; ;mcc_generated_files/memory.c: 64: uint8_t FLASH_ReadByte(uint32_t flashAddr)
+"63 mcc_generated_files/memory.c
+[; ;mcc_generated_files/memory.c: 63: uint8_t FLASH_ReadByte(uint32_t flashAddr)
 [v _FLASH_ReadByte `(uc ~T0 @X0 1 ef1`ul ]
-"65
-[; ;mcc_generated_files/memory.c: 65: {
+"64
+[; ;mcc_generated_files/memory.c: 64: {
 {
 [e :U _FLASH_ReadByte ]
-"64
-[; ;mcc_generated_files/memory.c: 64: uint8_t FLASH_ReadByte(uint32_t flashAddr)
+"63
+[; ;mcc_generated_files/memory.c: 63: uint8_t FLASH_ReadByte(uint32_t flashAddr)
 [v _flashAddr `ul ~T0 @X0 1 r1 ]
-"65
-[; ;mcc_generated_files/memory.c: 65: {
+"64
+[; ;mcc_generated_files/memory.c: 64: {
 [f ]
-"66
-[; ;mcc_generated_files/memory.c: 66:  NVMCON1bits.NVMREG = 2;
+"65
+[; ;mcc_generated_files/memory.c: 65:  NVMCON1bits.NVMREG = 2;
 [e = . . _NVMCON1bits 0 6 -> -> 2 `i `uc ]
-"67
-[; ;mcc_generated_files/memory.c: 67:     TBLPTRU = (uint8_t)((flashAddr & 0x00FF0000) >> 16);
+"66
+[; ;mcc_generated_files/memory.c: 66:     TBLPTRU = (uint8_t)((flashAddr & 0x00FF0000) >> 16);
 [e = _TBLPTRU -> >> & _flashAddr -> -> 16711680 `l `ul -> 16 `i `uc ]
-"68
-[; ;mcc_generated_files/memory.c: 68:     TBLPTRH = (uint8_t)((flashAddr & 0x0000FF00)>> 8);
+"67
+[; ;mcc_generated_files/memory.c: 67:     TBLPTRH = (uint8_t)((flashAddr & 0x0000FF00)>> 8);
 [e = _TBLPTRH -> >> & _flashAddr -> -> 65280 `ui `ul -> 8 `i `uc ]
-"69
-[; ;mcc_generated_files/memory.c: 69:     TBLPTRL = (uint8_t)(flashAddr & 0x000000FF);
+"68
+[; ;mcc_generated_files/memory.c: 68:     TBLPTRL = (uint8_t)(flashAddr & 0x000000FF);
 [e = _TBLPTRL -> & _flashAddr -> -> -> 255 `i `l `ul `uc ]
-"71
-[; ;mcc_generated_files/memory.c: 71:     __asm("TBLRD");
+"70
+[; ;mcc_generated_files/memory.c: 70:     __asm("TBLRD");
 [; <" TBLRD ;# ">
-"73
-[; ;mcc_generated_files/memory.c: 73:     return (TABLAT);
+"72
+[; ;mcc_generated_files/memory.c: 72:     return (TABLAT);
 [e ) _TABLAT ]
 [e $UE 1490  ]
-"74
-[; ;mcc_generated_files/memory.c: 74: }
+"73
+[; ;mcc_generated_files/memory.c: 73: }
 [e :UE 1490 ]
 }
-"76
-[; ;mcc_generated_files/memory.c: 76: uint16_t FLASH_ReadWord(uint32_t flashAddr)
+"75
+[; ;mcc_generated_files/memory.c: 75: uint16_t FLASH_ReadWord(uint32_t flashAddr)
 [v _FLASH_ReadWord `(us ~T0 @X0 1 ef1`ul ]
-"77
-[; ;mcc_generated_files/memory.c: 77: {
+"76
+[; ;mcc_generated_files/memory.c: 76: {
 {
 [e :U _FLASH_ReadWord ]
-"76
-[; ;mcc_generated_files/memory.c: 76: uint16_t FLASH_ReadWord(uint32_t flashAddr)
+"75
+[; ;mcc_generated_files/memory.c: 75: uint16_t FLASH_ReadWord(uint32_t flashAddr)
 [v _flashAddr `ul ~T0 @X0 1 r1 ]
-"77
-[; ;mcc_generated_files/memory.c: 77: {
+"76
+[; ;mcc_generated_files/memory.c: 76: {
 [f ]
-"78
-[; ;mcc_generated_files/memory.c: 78:     return ((((uint16_t)FLASH_ReadByte(flashAddr+1))<<8)|(FLASH_ReadByte(flashAddr)));
+"77
+[; ;mcc_generated_files/memory.c: 77:     return ((((uint16_t)FLASH_ReadByte(flashAddr+1))<<8)|(FLASH_ReadByte(flashAddr)));
 [e ) -> | << -> -> ( _FLASH_ReadByte (1 + _flashAddr -> -> -> 1 `i `l `ul `us `ui -> 8 `i -> ( _FLASH_ReadByte (1 _flashAddr `ui `us ]
 [e $UE 1491  ]
-"79
-[; ;mcc_generated_files/memory.c: 79: }
+"78
+[; ;mcc_generated_files/memory.c: 78: }
 [e :UE 1491 ]
 }
-"81
-[; ;mcc_generated_files/memory.c: 81: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte)
+"80
+[; ;mcc_generated_files/memory.c: 80: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte)
 [v _FLASH_WriteByte `(v ~T0 @X0 1 ef3`ul`*uc`uc ]
-"82
-[; ;mcc_generated_files/memory.c: 82: {
+"81
+[; ;mcc_generated_files/memory.c: 81: {
 {
 [e :U _FLASH_WriteByte ]
-"81
-[; ;mcc_generated_files/memory.c: 81: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte)
+"80
+[; ;mcc_generated_files/memory.c: 80: void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte)
 [v _flashAddr `ul ~T0 @X0 1 r1 ]
 [v _flashRdBufPtr `*uc ~T0 @X0 1 r2 ]
 [v _byte `uc ~T0 @X0 1 r3 ]
-"82
-[; ;mcc_generated_files/memory.c: 82: {
+"81
+[; ;mcc_generated_files/memory.c: 81: {
 [f ]
-"83
-[; ;mcc_generated_files/memory.c: 83:     uint32_t blockStartAddr = (uint32_t)(flashAddr & ((0x020000 -1) ^ (128 -1)));
+"82
+[; ;mcc_generated_files/memory.c: 82:     uint32_t blockStartAddr = (uint32_t)(flashAddr & ((0x020000 -1) ^ (128 -1)));
 [v _blockStartAddr `ul ~T0 @X0 1 a ]
 [e = _blockStartAddr & _flashAddr -> ^ - -> 131072 `l -> -> 1 `i `l -> - -> 128 `i -> 1 `i `l `ul ]
-"84
-[; ;mcc_generated_files/memory.c: 84:     uint8_t offset = (uint8_t)(flashAddr & (128 -1));
+"83
+[; ;mcc_generated_files/memory.c: 83:     uint8_t offset = (uint8_t)(flashAddr & (128 -1));
 [v _offset `uc ~T0 @X0 1 a ]
 [e = _offset -> & _flashAddr -> -> - -> 128 `i -> 1 `i `l `ul `uc ]
-"85
-[; ;mcc_generated_files/memory.c: 85:     uint8_t i;
+"84
+[; ;mcc_generated_files/memory.c: 84:     uint8_t i;
 [v _i `uc ~T0 @X0 1 a ]
-"88
-[; ;mcc_generated_files/memory.c: 88:     for (i=0; i<128; i++)
+"87
+[; ;mcc_generated_files/memory.c: 87:     for (i=0; i<128; i++)
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 128 `i 1493  ]
 [e $U 1494  ]
 [e :U 1493 ]
-"89
-[; ;mcc_generated_files/memory.c: 89:     {
+"88
+[; ;mcc_generated_files/memory.c: 88:     {
 {
-"90
-[; ;mcc_generated_files/memory.c: 90:         flashRdBufPtr[i] = FLASH_ReadByte((blockStartAddr+i));
+"89
+[; ;mcc_generated_files/memory.c: 89:         flashRdBufPtr[i] = FLASH_ReadByte((blockStartAddr+i));
 [e = *U + _flashRdBufPtr * -> _i `ux -> -> # *U _flashRdBufPtr `ui `ux ( _FLASH_ReadByte (1 + _blockStartAddr -> _i `ul ]
-"91
-[; ;mcc_generated_files/memory.c: 91:     }
+"90
+[; ;mcc_generated_files/memory.c: 90:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 128 `i 1493  ]
 [e :U 1494 ]
 }
-"94
-[; ;mcc_generated_files/memory.c: 94:     flashRdBufPtr[offset] = byte;
+"93
+[; ;mcc_generated_files/memory.c: 93:     flashRdBufPtr[offset] = byte;
 [e = *U + _flashRdBufPtr * -> _offset `ux -> -> # *U _flashRdBufPtr `ui `ux _byte ]
-"97
-[; ;mcc_generated_files/memory.c: 97:     FLASH_WriteBlock(blockStartAddr, flashRdBufPtr);
+"96
+[; ;mcc_generated_files/memory.c: 96:     FLASH_WriteBlock(blockStartAddr, flashRdBufPtr);
 [e ( _FLASH_WriteBlock (2 , _blockStartAddr _flashRdBufPtr ]
-"98
-[; ;mcc_generated_files/memory.c: 98: }
+"97
+[; ;mcc_generated_files/memory.c: 97: }
 [e :UE 1492 ]
 }
-"100
-[; ;mcc_generated_files/memory.c: 100: int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr)
+"99
+[; ;mcc_generated_files/memory.c: 99: int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr)
 [v _FLASH_WriteBlock `(c ~T0 @X0 1 ef2`ul`*uc ]
-"101
-[; ;mcc_generated_files/memory.c: 101: {
+"100
+[; ;mcc_generated_files/memory.c: 100: {
 {
 [e :U _FLASH_WriteBlock ]
-"100
-[; ;mcc_generated_files/memory.c: 100: int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr)
+"99
+[; ;mcc_generated_files/memory.c: 99: int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr)
 [v _writeAddr `ul ~T0 @X0 1 r1 ]
 [v _flashWrBufPtr `*uc ~T0 @X0 1 r2 ]
-"101
-[; ;mcc_generated_files/memory.c: 101: {
+"100
+[; ;mcc_generated_files/memory.c: 100: {
 [f ]
-"102
-[; ;mcc_generated_files/memory.c: 102:     uint32_t blockStartAddr = (uint32_t )(writeAddr & ((0x020000 -1) ^ (128 -1)));
+"101
+[; ;mcc_generated_files/memory.c: 101:     uint32_t blockStartAddr = (uint32_t )(writeAddr & ((0x020000 -1) ^ (128 -1)));
 [v _blockStartAddr `ul ~T0 @X0 1 a ]
 [e = _blockStartAddr & _writeAddr -> ^ - -> 131072 `l -> -> 1 `i `l -> - -> 128 `i -> 1 `i `l `ul ]
-"103
-[; ;mcc_generated_files/memory.c: 103:     uint8_t GIEBitValue = INTCONbits.GIE;
+"102
+[; ;mcc_generated_files/memory.c: 102:     uint8_t GIEBitValue = INTCONbits.GIE;
 [v _GIEBitValue `uc ~T0 @X0 1 a ]
 [e = _GIEBitValue . . _INTCONbits 1 2 ]
-"104
-[; ;mcc_generated_files/memory.c: 104:     uint8_t i;
+"103
+[; ;mcc_generated_files/memory.c: 103:     uint8_t i;
 [v _i `uc ~T0 @X0 1 a ]
-"107
-[; ;mcc_generated_files/memory.c: 107:     if( writeAddr != blockStartAddr )
+"106
+[; ;mcc_generated_files/memory.c: 106:     if( writeAddr != blockStartAddr )
 [e $ ! != _writeAddr _blockStartAddr 1497  ]
-"108
-[; ;mcc_generated_files/memory.c: 108:     {
+"107
+[; ;mcc_generated_files/memory.c: 107:     {
 {
-"109
-[; ;mcc_generated_files/memory.c: 109:         return -1;
+"108
+[; ;mcc_generated_files/memory.c: 108:         return -1;
 [e ) -> -U -> 1 `i `c ]
 [e $UE 1496  ]
-"110
-[; ;mcc_generated_files/memory.c: 110:     }
+"109
+[; ;mcc_generated_files/memory.c: 109:     }
 }
 [e :U 1497 ]
-"113
-[; ;mcc_generated_files/memory.c: 113:     FLASH_EraseBlock(writeAddr);
+"112
+[; ;mcc_generated_files/memory.c: 112:     FLASH_EraseBlock(writeAddr);
 [e ( _FLASH_EraseBlock (1 _writeAddr ]
-"116
-[; ;mcc_generated_files/memory.c: 116:     TBLPTRU = (uint8_t)((writeAddr & 0x00FF0000) >> 16);
+"115
+[; ;mcc_generated_files/memory.c: 115:     TBLPTRU = (uint8_t)((writeAddr & 0x00FF0000) >> 16);
 [e = _TBLPTRU -> >> & _writeAddr -> -> 16711680 `l `ul -> 16 `i `uc ]
-"117
-[; ;mcc_generated_files/memory.c: 117:     TBLPTRH = (uint8_t)((writeAddr & 0x0000FF00)>> 8);
+"116
+[; ;mcc_generated_files/memory.c: 116:     TBLPTRH = (uint8_t)((writeAddr & 0x0000FF00)>> 8);
 [e = _TBLPTRH -> >> & _writeAddr -> -> 65280 `ui `ul -> 8 `i `uc ]
-"118
-[; ;mcc_generated_files/memory.c: 118:     TBLPTRL = (uint8_t)(writeAddr & 0x000000FF);
+"117
+[; ;mcc_generated_files/memory.c: 117:     TBLPTRL = (uint8_t)(writeAddr & 0x000000FF);
 [e = _TBLPTRL -> & _writeAddr -> -> -> 255 `i `l `ul `uc ]
-"121
-[; ;mcc_generated_files/memory.c: 121:     for (i=0; i<128; i++)
+"120
+[; ;mcc_generated_files/memory.c: 120:     for (i=0; i<128; i++)
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 128 `i 1498  ]
 [e $U 1499  ]
 [e :U 1498 ]
+"121
+[; ;mcc_generated_files/memory.c: 121:     {
+{
 "122
-[; ;mcc_generated_files/memory.c: 122:     {
-{
-"123
-[; ;mcc_generated_files/memory.c: 123:         TABLAT = flashWrBufPtr[i];
+[; ;mcc_generated_files/memory.c: 122:         TABLAT = flashWrBufPtr[i];
 [e = _TABLAT *U + _flashWrBufPtr * -> _i `ux -> -> # *U _flashWrBufPtr `ui `ux ]
-"125
-[; ;mcc_generated_files/memory.c: 125:         if (i == (128 -1))
+"124
+[; ;mcc_generated_files/memory.c: 124:         if (i == (128 -1))
 [e $ ! == -> _i `i - -> 128 `i -> 1 `i 1501  ]
-"126
-[; ;mcc_generated_files/memory.c: 126:         {
+"125
+[; ;mcc_generated_files/memory.c: 125:         {
 {
-"127
-[; ;mcc_generated_files/memory.c: 127:             __asm("TBLWT");
+"126
+[; ;mcc_generated_files/memory.c: 126:             __asm("TBLWT");
 [; <" TBLWT ;# ">
-"128
-[; ;mcc_generated_files/memory.c: 128:         }
+"127
+[; ;mcc_generated_files/memory.c: 127:         }
 }
 [e $U 1502  ]
-"129
-[; ;mcc_generated_files/memory.c: 129:         else
+"128
+[; ;mcc_generated_files/memory.c: 128:         else
 [e :U 1501 ]
-"130
-[; ;mcc_generated_files/memory.c: 130:         {
+"129
+[; ;mcc_generated_files/memory.c: 129:         {
 {
-"131
-[; ;mcc_generated_files/memory.c: 131:             __asm("TBLWTPOSTINC");
+"130
+[; ;mcc_generated_files/memory.c: 130:             __asm("TBLWTPOSTINC");
 [; <" TBLWTPOSTINC ;# ">
-"132
-[; ;mcc_generated_files/memory.c: 132:         }
+"131
+[; ;mcc_generated_files/memory.c: 131:         }
 }
 [e :U 1502 ]
-"133
-[; ;mcc_generated_files/memory.c: 133:     }
+"132
+[; ;mcc_generated_files/memory.c: 132:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 128 `i 1498  ]
 [e :U 1499 ]
 }
-"135
-[; ;mcc_generated_files/memory.c: 135:     NVMCON1bits.NVMREG = 2;
+"134
+[; ;mcc_generated_files/memory.c: 134:     NVMCON1bits.NVMREG = 2;
 [e = . . _NVMCON1bits 0 6 -> -> 2 `i `uc ]
-"136
-[; ;mcc_generated_files/memory.c: 136:     NVMCON1bits.WREN = 1;
+"135
+[; ;mcc_generated_files/memory.c: 135:     NVMCON1bits.WREN = 1;
 [e = . . _NVMCON1bits 0 2 -> -> 1 `i `uc ]
-"137
-[; ;mcc_generated_files/memory.c: 137:     INTCONbits.GIE = 0;
+"136
+[; ;mcc_generated_files/memory.c: 136:     INTCONbits.GIE = 0;
 [e = . . _INTCONbits 1 2 -> -> 0 `i `uc ]
-"138
-[; ;mcc_generated_files/memory.c: 138:     NVMCON2 = 0x55;
+"137
+[; ;mcc_generated_files/memory.c: 137:     NVMCON2 = 0x55;
 [e = _NVMCON2 -> -> 85 `i `uc ]
-"139
-[; ;mcc_generated_files/memory.c: 139:     NVMCON2 = 0xAA;
+"138
+[; ;mcc_generated_files/memory.c: 138:     NVMCON2 = 0xAA;
 [e = _NVMCON2 -> -> 170 `i `uc ]
-"140
-[; ;mcc_generated_files/memory.c: 140:     NVMCON1bits.WR = 1;
+"139
+[; ;mcc_generated_files/memory.c: 139:     NVMCON1bits.WR = 1;
 [e = . . _NVMCON1bits 0 1 -> -> 1 `i `uc ]
-"142
-[; ;mcc_generated_files/memory.c: 142:     NVMCON1bits.WREN = 0;
+"141
+[; ;mcc_generated_files/memory.c: 141:     NVMCON1bits.WREN = 0;
 [e = . . _NVMCON1bits 0 2 -> -> 0 `i `uc ]
-"143
-[; ;mcc_generated_files/memory.c: 143:     INTCONbits.GIE = GIEBitValue;
+"142
+[; ;mcc_generated_files/memory.c: 142:     INTCONbits.GIE = GIEBitValue;
 [e = . . _INTCONbits 1 2 _GIEBitValue ]
-"145
-[; ;mcc_generated_files/memory.c: 145:     return 0;
+"144
+[; ;mcc_generated_files/memory.c: 144:     return 0;
 [e ) -> -> 0 `i `c ]
 [e $UE 1496  ]
-"146
-[; ;mcc_generated_files/memory.c: 146: }
+"145
+[; ;mcc_generated_files/memory.c: 145: }
 [e :UE 1496 ]
 }
-"148
-[; ;mcc_generated_files/memory.c: 148: void FLASH_EraseBlock(uint32_t baseAddr)
+"147
+[; ;mcc_generated_files/memory.c: 147: void FLASH_EraseBlock(uint32_t baseAddr)
 [v _FLASH_EraseBlock `(v ~T0 @X0 1 ef1`ul ]
-"149
-[; ;mcc_generated_files/memory.c: 149: {
+"148
+[; ;mcc_generated_files/memory.c: 148: {
 {
 [e :U _FLASH_EraseBlock ]
-"148
-[; ;mcc_generated_files/memory.c: 148: void FLASH_EraseBlock(uint32_t baseAddr)
+"147
+[; ;mcc_generated_files/memory.c: 147: void FLASH_EraseBlock(uint32_t baseAddr)
 [v _baseAddr `ul ~T0 @X0 1 r1 ]
-"149
-[; ;mcc_generated_files/memory.c: 149: {
+"148
+[; ;mcc_generated_files/memory.c: 148: {
 [f ]
-"150
-[; ;mcc_generated_files/memory.c: 150:     uint8_t GIEBitValue = INTCONbits.GIE;
+"149
+[; ;mcc_generated_files/memory.c: 149:     uint8_t GIEBitValue = INTCONbits.GIE;
 [v _GIEBitValue `uc ~T0 @X0 1 a ]
 [e = _GIEBitValue . . _INTCONbits 1 2 ]
-"152
-[; ;mcc_generated_files/memory.c: 152:     TBLPTRU = (uint8_t)((baseAddr & 0x00FF0000) >> 16);
+"151
+[; ;mcc_generated_files/memory.c: 151:     TBLPTRU = (uint8_t)((baseAddr & 0x00FF0000) >> 16);
 [e = _TBLPTRU -> >> & _baseAddr -> -> 16711680 `l `ul -> 16 `i `uc ]
-"153
-[; ;mcc_generated_files/memory.c: 153:     TBLPTRH = (uint8_t)((baseAddr & 0x0000FF00)>> 8);
+"152
+[; ;mcc_generated_files/memory.c: 152:     TBLPTRH = (uint8_t)((baseAddr & 0x0000FF00)>> 8);
 [e = _TBLPTRH -> >> & _baseAddr -> -> 65280 `ui `ul -> 8 `i `uc ]
-"154
-[; ;mcc_generated_files/memory.c: 154:     TBLPTRL = (uint8_t)(baseAddr & 0x000000FF);
+"153
+[; ;mcc_generated_files/memory.c: 153:     TBLPTRL = (uint8_t)(baseAddr & 0x000000FF);
 [e = _TBLPTRL -> & _baseAddr -> -> -> 255 `i `l `ul `uc ]
-"156
-[; ;mcc_generated_files/memory.c: 156:     NVMCON1bits.NVMREG = 2;
+"155
+[; ;mcc_generated_files/memory.c: 155:     NVMCON1bits.NVMREG = 2;
 [e = . . _NVMCON1bits 0 6 -> -> 2 `i `uc ]
-"157
-[; ;mcc_generated_files/memory.c: 157:     NVMCON1bits.WREN = 1;
+"156
+[; ;mcc_generated_files/memory.c: 156:     NVMCON1bits.WREN = 1;
 [e = . . _NVMCON1bits 0 2 -> -> 1 `i `uc ]
-"158
-[; ;mcc_generated_files/memory.c: 158:     NVMCON1bits.FREE = 1;
+"157
+[; ;mcc_generated_files/memory.c: 157:     NVMCON1bits.FREE = 1;
 [e = . . _NVMCON1bits 0 4 -> -> 1 `i `uc ]
-"159
-[; ;mcc_generated_files/memory.c: 159:     INTCONbits.GIE = 0;
+"158
+[; ;mcc_generated_files/memory.c: 158:     INTCONbits.GIE = 0;
 [e = . . _INTCONbits 1 2 -> -> 0 `i `uc ]
-"160
-[; ;mcc_generated_files/memory.c: 160:     NVMCON2 = 0x55;
+"159
+[; ;mcc_generated_files/memory.c: 159:     NVMCON2 = 0x55;
 [e = _NVMCON2 -> -> 85 `i `uc ]
-"161
-[; ;mcc_generated_files/memory.c: 161:     NVMCON2 = 0xAA;
+"160
+[; ;mcc_generated_files/memory.c: 160:     NVMCON2 = 0xAA;
 [e = _NVMCON2 -> -> 170 `i `uc ]
-"162
-[; ;mcc_generated_files/memory.c: 162:     NVMCON1bits.WR = 1;
+"161
+[; ;mcc_generated_files/memory.c: 161:     NVMCON1bits.WR = 1;
 [e = . . _NVMCON1bits 0 1 -> -> 1 `i `uc ]
-"163
-[; ;mcc_generated_files/memory.c: 163:     INTCONbits.GIE = GIEBitValue;
+"162
+[; ;mcc_generated_files/memory.c: 162:     INTCONbits.GIE = GIEBitValue;
 [e = . . _INTCONbits 1 2 _GIEBitValue ]
-"164
-[; ;mcc_generated_files/memory.c: 164: }
+"163
+[; ;mcc_generated_files/memory.c: 163: }
 [e :UE 1503 ]
 }
-"170
-[; ;mcc_generated_files/memory.c: 170: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData)
+"169
+[; ;mcc_generated_files/memory.c: 169: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData)
 [v _DATAEE_WriteByte `(v ~T0 @X0 1 ef2`us`uc ]
-"171
-[; ;mcc_generated_files/memory.c: 171: {
+"170
+[; ;mcc_generated_files/memory.c: 170: {
 {
 [e :U _DATAEE_WriteByte ]
-"170
-[; ;mcc_generated_files/memory.c: 170: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData)
+"169
+[; ;mcc_generated_files/memory.c: 169: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData)
 [v _bAdd `us ~T0 @X0 1 r1 ]
 [v _bData `uc ~T0 @X0 1 r2 ]
-"171
-[; ;mcc_generated_files/memory.c: 171: {
+"170
+[; ;mcc_generated_files/memory.c: 170: {
 [f ]
-"172
-[; ;mcc_generated_files/memory.c: 172:  uint8_t GIEBitValue = INTCONbits.GIE;
+"171
+[; ;mcc_generated_files/memory.c: 171:  uint8_t GIEBitValue = INTCONbits.GIE;
 [v _GIEBitValue `uc ~T0 @X0 1 a ]
 [e = _GIEBitValue . . _INTCONbits 1 2 ]
-"174
-[; ;mcc_generated_files/memory.c: 174:     NVMADRH = ((bAdd >> 8) & 0x03);
+"173
+[; ;mcc_generated_files/memory.c: 173:     NVMADRH = ((bAdd >> 8) & 0x03);
 [e = _NVMADRH -> & >> -> _bAdd `ui -> 8 `i -> -> 3 `i `ui `uc ]
-"175
-[; ;mcc_generated_files/memory.c: 175:     NVMADRL = (bAdd & 0xFF);
+"174
+[; ;mcc_generated_files/memory.c: 174:     NVMADRL = (bAdd & 0xFF);
 [e = _NVMADRL -> & -> _bAdd `ui -> -> 255 `i `ui `uc ]
-"176
-[; ;mcc_generated_files/memory.c: 176:     NVMDAT = bData;
+"175
+[; ;mcc_generated_files/memory.c: 175:     NVMDAT = bData;
 [e = _NVMDAT _bData ]
-"177
-[; ;mcc_generated_files/memory.c: 177:     NVMCON1bits.NVMREG = 0;
+"176
+[; ;mcc_generated_files/memory.c: 176:     NVMCON1bits.NVMREG = 0;
 [e = . . _NVMCON1bits 0 6 -> -> 0 `i `uc ]
-"178
-[; ;mcc_generated_files/memory.c: 178:     NVMCON1bits.WREN = 1;
+"177
+[; ;mcc_generated_files/memory.c: 177:     NVMCON1bits.WREN = 1;
 [e = . . _NVMCON1bits 0 2 -> -> 1 `i `uc ]
-"179
-[; ;mcc_generated_files/memory.c: 179:  INTCONbits.GIE = 0;
+"178
+[; ;mcc_generated_files/memory.c: 178:  INTCONbits.GIE = 0;
 [e = . . _INTCONbits 1 2 -> -> 0 `i `uc ]
-"180
-[; ;mcc_generated_files/memory.c: 180:     NVMCON2 = 0x55;
+"179
+[; ;mcc_generated_files/memory.c: 179:     NVMCON2 = 0x55;
 [e = _NVMCON2 -> -> 85 `i `uc ]
-"181
-[; ;mcc_generated_files/memory.c: 181:     NVMCON2 = 0xAA;
+"180
+[; ;mcc_generated_files/memory.c: 180:     NVMCON2 = 0xAA;
 [e = _NVMCON2 -> -> 170 `i `uc ]
-"182
-[; ;mcc_generated_files/memory.c: 182:     NVMCON1bits.WR = 1;
+"181
+[; ;mcc_generated_files/memory.c: 181:     NVMCON1bits.WR = 1;
 [e = . . _NVMCON1bits 0 1 -> -> 1 `i `uc ]
-"184
-[; ;mcc_generated_files/memory.c: 184:     while (NVMCON1bits.WR)
+"183
+[; ;mcc_generated_files/memory.c: 183:     while (NVMCON1bits.WR)
 [e $U 1505  ]
 [e :U 1506 ]
-"185
-[; ;mcc_generated_files/memory.c: 185:     {
+"184
+[; ;mcc_generated_files/memory.c: 184:     {
 {
-"186
-[; ;mcc_generated_files/memory.c: 186:     }
+"185
+[; ;mcc_generated_files/memory.c: 185:     }
 }
 [e :U 1505 ]
-"184
-[; ;mcc_generated_files/memory.c: 184:     while (NVMCON1bits.WR)
+"183
+[; ;mcc_generated_files/memory.c: 183:     while (NVMCON1bits.WR)
 [e $ != -> . . _NVMCON1bits 0 1 `i -> 0 `i 1506  ]
 [e :U 1507 ]
-"188
-[; ;mcc_generated_files/memory.c: 188:     NVMCON1bits.WREN = 0;
+"187
+[; ;mcc_generated_files/memory.c: 187:     NVMCON1bits.WREN = 0;
 [e = . . _NVMCON1bits 0 2 -> -> 0 `i `uc ]
-"189
-[; ;mcc_generated_files/memory.c: 189:  INTCONbits.GIE = GIEBitValue;
+"188
+[; ;mcc_generated_files/memory.c: 188:  INTCONbits.GIE = GIEBitValue;
 [e = . . _INTCONbits 1 2 _GIEBitValue ]
-"190
-[; ;mcc_generated_files/memory.c: 190: }
+"189
+[; ;mcc_generated_files/memory.c: 189: }
 [e :UE 1504 ]
 }
-"192
-[; ;mcc_generated_files/memory.c: 192: uint8_t DATAEE_ReadByte(uint16_t bAdd)
+"191
+[; ;mcc_generated_files/memory.c: 191: uint8_t DATAEE_ReadByte(uint16_t bAdd)
 [v _DATAEE_ReadByte `(uc ~T0 @X0 1 ef1`us ]
-"193
-[; ;mcc_generated_files/memory.c: 193: {
+"192
+[; ;mcc_generated_files/memory.c: 192: {
 {
 [e :U _DATAEE_ReadByte ]
-"192
-[; ;mcc_generated_files/memory.c: 192: uint8_t DATAEE_ReadByte(uint16_t bAdd)
+"191
+[; ;mcc_generated_files/memory.c: 191: uint8_t DATAEE_ReadByte(uint16_t bAdd)
 [v _bAdd `us ~T0 @X0 1 r1 ]
-"193
-[; ;mcc_generated_files/memory.c: 193: {
+"192
+[; ;mcc_generated_files/memory.c: 192: {
 [f ]
-"194
-[; ;mcc_generated_files/memory.c: 194:     NVMADRH = ((bAdd >> 8) & 0x03);
+"193
+[; ;mcc_generated_files/memory.c: 193:     NVMADRH = ((bAdd >> 8) & 0x03);
 [e = _NVMADRH -> & >> -> _bAdd `ui -> 8 `i -> -> 3 `i `ui `uc ]
-"195
-[; ;mcc_generated_files/memory.c: 195:     NVMADRL = (bAdd & 0xFF);
+"194
+[; ;mcc_generated_files/memory.c: 194:     NVMADRL = (bAdd & 0xFF);
 [e = _NVMADRL -> & -> _bAdd `ui -> -> 255 `i `ui `uc ]
-"196
-[; ;mcc_generated_files/memory.c: 196:     NVMCON1bits.NVMREG = 0;
+"195
+[; ;mcc_generated_files/memory.c: 195:     NVMCON1bits.NVMREG = 0;
 [e = . . _NVMCON1bits 0 6 -> -> 0 `i `uc ]
-"197
-[; ;mcc_generated_files/memory.c: 197:     NVMCON1bits.RD = 1;
+"196
+[; ;mcc_generated_files/memory.c: 196:     NVMCON1bits.RD = 1;
 [e = . . _NVMCON1bits 0 0 -> -> 1 `i `uc ]
+"197
+[; ;mcc_generated_files/memory.c: 197:     __nop();
+[e ( ___nop ..  ]
 "198
 [; ;mcc_generated_files/memory.c: 198:     __nop();
 [e ( ___nop ..  ]
-"199
-[; ;mcc_generated_files/memory.c: 199:     __nop();
-[e ( ___nop ..  ]
-"201
-[; ;mcc_generated_files/memory.c: 201:     return (NVMDAT);
+"200
+[; ;mcc_generated_files/memory.c: 200:     return (NVMDAT);
 [e ) _NVMDAT ]
 [e $UE 1508  ]
-"202
-[; ;mcc_generated_files/memory.c: 202: }
+"201
+[; ;mcc_generated_files/memory.c: 201: }
 [e :UE 1508 ]
 }
-"204
-[; ;mcc_generated_files/memory.c: 204: void MEMORY_Tasks( void )
+"203
+[; ;mcc_generated_files/memory.c: 203: void MEMORY_Tasks( void )
 [v _MEMORY_Tasks `(v ~T0 @X0 1 ef ]
-"205
-[; ;mcc_generated_files/memory.c: 205: {
+"204
+[; ;mcc_generated_files/memory.c: 204: {
 {
 [e :U _MEMORY_Tasks ]
 [f ]
-"207
-[; ;mcc_generated_files/memory.c: 207:     PIR7bits.NVMIF = 0;
+"206
+[; ;mcc_generated_files/memory.c: 206:     PIR7bits.NVMIF = 0;
 [e = . . _PIR7bits 0 2 -> -> 0 `i `uc ]
-"208
-[; ;mcc_generated_files/memory.c: 208: }
+"207
+[; ;mcc_generated_files/memory.c: 207: }
 [e :UE 1509 ]
 }

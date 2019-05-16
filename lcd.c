@@ -5,7 +5,7 @@
 #include "vend.h"
 #include "mdb.h"
 #include "hopper.h"
-#include "gsm.h"
+
 /* Initialize display E=RE0 R/W=RE1 RS=RE2 D4 to D7 = RD0 to RD3
    All bits initialized as digital outputs */
 //Initialize LCD display
@@ -244,15 +244,6 @@ void displ_nochange(void)
 {
     lcd_dispadd(line3);
     lcd_string(nochange, line3);
-}
-
-void disp_clock(void)
-{
-    lcd_write(dispclr);
-    lcd_string(clockdate, line2);
-    lcd_string(gsdate, line2 + 5);
-    lcd_string(clocktime, line3);
-    lcd_string(gstime, line3 + 5);
 }
 
 //Write character to LCD

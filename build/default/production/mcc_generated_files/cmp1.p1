@@ -1408,43 +1408,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28207
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 28207: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"58 mcc_generated_files/cmp1.c
-[; ;mcc_generated_files/cmp1.c: 58: void CMP1_Initialize(void)
+"57 mcc_generated_files/cmp1.c
+[; ;mcc_generated_files/cmp1.c: 57: void CMP1_Initialize(void)
 [v _CMP1_Initialize `(v ~T0 @X0 1 ef ]
-"59
-[; ;mcc_generated_files/cmp1.c: 59: {
+"58
+[; ;mcc_generated_files/cmp1.c: 58: {
 {
 [e :U _CMP1_Initialize ]
 [f ]
-"62
-[; ;mcc_generated_files/cmp1.c: 62:     CM1CON0 = 0x90;
+"61
+[; ;mcc_generated_files/cmp1.c: 61:     CM1CON0 = 0x90;
 [e = _CM1CON0 -> -> 144 `i `uc ]
-"65
-[; ;mcc_generated_files/cmp1.c: 65:     CM1CON1 = 0x00;
+"64
+[; ;mcc_generated_files/cmp1.c: 64:     CM1CON1 = 0x00;
 [e = _CM1CON1 -> -> 0 `i `uc ]
-"68
-[; ;mcc_generated_files/cmp1.c: 68:     CM1NCH = 0x00;
+"67
+[; ;mcc_generated_files/cmp1.c: 67:     CM1NCH = 0x00;
 [e = _CM1NCH -> -> 0 `i `uc ]
-"71
-[; ;mcc_generated_files/cmp1.c: 71:     CM1PCH = 0x05;
+"70
+[; ;mcc_generated_files/cmp1.c: 70:     CM1PCH = 0x05;
 [e = _CM1PCH -> -> 5 `i `uc ]
-"73
-[; ;mcc_generated_files/cmp1.c: 73: }
+"72
+[; ;mcc_generated_files/cmp1.c: 72: }
 [e :UE 1490 ]
 }
-"75
-[; ;mcc_generated_files/cmp1.c: 75: _Bool CMP1_GetOutputStatus(void)
+"74
+[; ;mcc_generated_files/cmp1.c: 74: _Bool CMP1_GetOutputStatus(void)
 [v _CMP1_GetOutputStatus `(a ~T0 @X0 1 ef ]
-"76
-[; ;mcc_generated_files/cmp1.c: 76: {
+"75
+[; ;mcc_generated_files/cmp1.c: 75: {
 {
 [e :U _CMP1_GetOutputStatus ]
 [f ]
-"77
-[; ;mcc_generated_files/cmp1.c: 77:  return (CMOUTbits.MC1OUT);
+"76
+[; ;mcc_generated_files/cmp1.c: 76:  return (CMOUTbits.MC1OUT);
 [e ) -> . . _CMOUTbits 0 0 `a ]
 [e $UE 1491  ]
-"78
-[; ;mcc_generated_files/cmp1.c: 78: }
+"77
+[; ;mcc_generated_files/cmp1.c: 77: }
 [e :UE 1491 ]
 }

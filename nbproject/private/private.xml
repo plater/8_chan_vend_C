@@ -3,16 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_C/lcd.h</file>
-            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_C/vend.h</file>
-            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_C/vend.c</file>
-            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_C/mcc_generated_files/memory.c</file>
-            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_C/main.c</file>
-            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_C/mdb.c</file>
-            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_C/mdb.h</file>
-            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_C/eusart_mdb.c</file>
-            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_C/mcc_generated_files/tmr1.h</file>
-            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_C/mcc_generated_files/tmr1.c</file>
+            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_reverted/vend.h</file>
+            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_reverted/lcd.h</file>
+            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_reverted/main.c</file>
+            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_reverted/dispense.c</file>
+            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_reverted/lcd.c</file>
+            <file>file:/home/davepl/MPLABXProjects/8_chan_vend_reverted/vend.c</file>
         </group>
     </open-files>
 </project-private>

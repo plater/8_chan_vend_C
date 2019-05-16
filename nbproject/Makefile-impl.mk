@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=8_chan_vend_C
+PROJECTNAME=8_chan_vend_reverted
 
 # Active Configuration
 DEFAULTCONF=default

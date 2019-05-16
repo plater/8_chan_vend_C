@@ -30,19 +30,14 @@
             <word>cctalk</word>
             <word>chan</word>
             <word>chanlinkx</word>
-            <word>chanmask</word>
             <word>chany</word>
             <word>clr</word>
             <word>const</word>
             <word>Cred</word>
             <word>eeprom</word>
-            <word>gsm</word>
-            <word>gsmbyte</word>
-            <word>gsmtim</word>
             <word>hexnum</word>
             <word>init</word>
             <word>inithop</word>
-            <word>Initialise</word>
             <word>lcd</word>
             <word>lcdstring</word>
             <word>linkbits</word>
@@ -59,13 +54,11 @@
             <word>pnvcash</word>
             <word>pricevend</word>
             <word>pvcash</word>
-            <word>reg</word>
             <word>setimemsg</word>
             <word>storeadd</word>
             <word>storemem</word>
             <word>storesize</word>
             <word>struct</word>
-            <word>Tx</word>
             <word>uint</word>
             <word>unclearable</word>
             <word>vcash</word>
@@ -73,7 +66,6 @@
             <word>vends</word>
             <word>vendtimem</word>
             <word>vendtimemsg</word>
-            <word>yyyy</word>
         </spellchecker-wordlist>
     </configuration>
 </project>

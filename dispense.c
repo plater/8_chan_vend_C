@@ -180,7 +180,7 @@ void set_motortime(uint8_t chanel)
     //Initialize timer at one second
     uint16_t time = second1;
     time = time - (second_5 * i);
-    TMR0_WriteTimer(time);
+    TMR0_Write16bitTimer(time);
     TMR0_StartTimer();
 }
 

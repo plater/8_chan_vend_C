@@ -1391,57 +1391,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28207
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 28207: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"58 mcc_generated_files/dac1.c
-[; ;mcc_generated_files/dac1.c: 58: void DAC1_Initialize(void)
+"57 mcc_generated_files/dac1.c
+[; ;mcc_generated_files/dac1.c: 57: void DAC1_Initialize(void)
 [v _DAC1_Initialize `(v ~T0 @X0 1 ef ]
-"59
-[; ;mcc_generated_files/dac1.c: 59: {
+"58
+[; ;mcc_generated_files/dac1.c: 58: {
 {
 [e :U _DAC1_Initialize ]
 [f ]
-"61
-[; ;mcc_generated_files/dac1.c: 61:     DAC1CON0 = 0x80;
+"60
+[; ;mcc_generated_files/dac1.c: 60:     DAC1CON0 = 0x80;
 [e = _DAC1CON0 -> -> 128 `i `uc ]
+"62
+[; ;mcc_generated_files/dac1.c: 62:     DAC1CON1 = 0x1C;
+[e = _DAC1CON1 -> -> 28 `i `uc ]
 "63
-[; ;mcc_generated_files/dac1.c: 63:     DAC1CON1 = 0x0E;
-[e = _DAC1CON1 -> -> 14 `i `uc ]
-"64
-[; ;mcc_generated_files/dac1.c: 64: }
+[; ;mcc_generated_files/dac1.c: 63: }
 [e :UE 1490 ]
 }
-"66
-[; ;mcc_generated_files/dac1.c: 66: void DAC1_SetOutput(uint8_t inputData)
+"65
+[; ;mcc_generated_files/dac1.c: 65: void DAC1_SetOutput(uint8_t inputData)
 [v _DAC1_SetOutput `(v ~T0 @X0 1 ef1`uc ]
-"67
-[; ;mcc_generated_files/dac1.c: 67: {
+"66
+[; ;mcc_generated_files/dac1.c: 66: {
 {
 [e :U _DAC1_SetOutput ]
-"66
-[; ;mcc_generated_files/dac1.c: 66: void DAC1_SetOutput(uint8_t inputData)
+"65
+[; ;mcc_generated_files/dac1.c: 65: void DAC1_SetOutput(uint8_t inputData)
 [v _inputData `uc ~T0 @X0 1 r1 ]
+"66
+[; ;mcc_generated_files/dac1.c: 66: {
+[f ]
 "67
-[; ;mcc_generated_files/dac1.c: 67: {
-[f ]
-"68
-[; ;mcc_generated_files/dac1.c: 68:     DAC1CON1 = inputData;
+[; ;mcc_generated_files/dac1.c: 67:     DAC1CON1 = inputData;
 [e = _DAC1CON1 _inputData ]
-"69
-[; ;mcc_generated_files/dac1.c: 69: }
+"68
+[; ;mcc_generated_files/dac1.c: 68: }
 [e :UE 1491 ]
-}
-"71
-[; ;mcc_generated_files/dac1.c: 71: uint8_t DAC1_GetOutput(void)
-[v _DAC1_GetOutput `(uc ~T0 @X0 1 ef ]
-"72
-[; ;mcc_generated_files/dac1.c: 72: {
-{
-[e :U _DAC1_GetOutput ]
-[f ]
-"73
-[; ;mcc_generated_files/dac1.c: 73:     return DAC1CON1;
-[e ) _DAC1CON1 ]
-[e $UE 1492  ]
-"74
-[; ;mcc_generated_files/dac1.c: 74: }
-[e :UE 1492 ]
 }
