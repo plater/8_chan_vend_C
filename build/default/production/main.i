@@ -17903,7 +17903,7 @@ struct
     unsigned chan6 : 1;
     unsigned chan7 : 1;
     unsigned chan8 : 1;
-} senschk;
+} senschk __attribute__((address(0x001)));
 
 
 
@@ -17918,7 +17918,7 @@ struct
     unsigned chan6 : 1;
     unsigned chan7 : 1;
     unsigned chan8 : 1;
-} venderr;
+} venderr __attribute__((address(0x002)));
 
 
 
@@ -18047,7 +18047,7 @@ struct
    unsigned spare22 : 1;
    unsigned spare23 : 1;
    unsigned spare24 : 1;
-} venflags;
+} venflags __attribute__((address(0x00B)));
 
 void Write_NVstore(uint16_t storeadd, uint8_t *storemem, uint8_t storesize);
 

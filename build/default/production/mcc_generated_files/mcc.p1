@@ -37,37 +37,37 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _EUSART1_Initialize `(v ~T0 @X0 0 ef ]
 "5743 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 5743: extern volatile unsigned char OSCCON1 __attribute__((address(0xED8)));
-[v _OSCCON1 `Vuc ~T0 @X0 0 e@3800 ]
+[v _OSCCON1 `VAuc ~T0 @X0 0 e@3800 ]
 "5883
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 5883: extern volatile unsigned char OSCCON3 __attribute__((address(0xEDA)));
-[v _OSCCON3 `Vuc ~T0 @X0 0 e@3802 ]
+[v _OSCCON3 `VAuc ~T0 @X0 0 e@3802 ]
 "6035
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 6035: extern volatile unsigned char OSCEN __attribute__((address(0xEDC)));
-[v _OSCEN `Vuc ~T0 @X0 0 e@3804 ]
+[v _OSCEN `VAuc ~T0 @X0 0 e@3804 ]
 "6144
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 6144: extern volatile unsigned char OSCFRQ __attribute__((address(0xEDE)));
-[v _OSCFRQ `Vuc ~T0 @X0 0 e@3806 ]
+[v _OSCFRQ `VAuc ~T0 @X0 0 e@3806 ]
 "6086
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 6086: extern volatile unsigned char OSCTUNE __attribute__((address(0xEDD)));
-[v _OSCTUNE `Vuc ~T0 @X0 0 e@3805 ]
+[v _OSCTUNE `VAuc ~T0 @X0 0 e@3805 ]
 "6251
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 6251: extern volatile unsigned char PMD0 __attribute__((address(0xEE1)));
-[v _PMD0 `Vuc ~T0 @X0 0 e@3809 ]
+[v _PMD0 `VAuc ~T0 @X0 0 e@3809 ]
 "6328
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 6328: extern volatile unsigned char PMD1 __attribute__((address(0xEE2)));
-[v _PMD1 `Vuc ~T0 @X0 0 e@3810 ]
+[v _PMD1 `VAuc ~T0 @X0 0 e@3810 ]
 "6392
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 6392: extern volatile unsigned char PMD2 __attribute__((address(0xEE3)));
-[v _PMD2 `Vuc ~T0 @X0 0 e@3811 ]
+[v _PMD2 `VAuc ~T0 @X0 0 e@3811 ]
 "6437
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 6437: extern volatile unsigned char PMD3 __attribute__((address(0xEE4)));
-[v _PMD3 `Vuc ~T0 @X0 0 e@3812 ]
+[v _PMD3 `VAuc ~T0 @X0 0 e@3812 ]
 "6475
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 6475: extern volatile unsigned char PMD4 __attribute__((address(0xEE5)));
-[v _PMD4 `Vuc ~T0 @X0 0 e@3813 ]
+[v _PMD4 `VAuc ~T0 @X0 0 e@3813 ]
 "6528
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 6528: extern volatile unsigned char PMD5 __attribute__((address(0xEE6)));
-[v _PMD5 `Vuc ~T0 @X0 0 e@3814 ]
+[v _PMD5 `VAuc ~T0 @X0 0 e@3814 ]
 "49 mcc_generated_files/mcc.c
 [p x FEXTOSC = OFF ]
 "50
@@ -1540,9 +1540,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28207
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 28207: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+[v F10230 `(v ~T0 @X0 1 tf ]
 "116 mcc_generated_files/mcc.c
 [; ;mcc_generated_files/mcc.c: 116: void SYSTEM_Initialize(void)
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
+[v _SYSTEM_Initialize `AF10230 ~T0 @X0 1 e ]
 "117
 [; ;mcc_generated_files/mcc.c: 117: {
 {
@@ -1588,9 +1589,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/mcc.c: 130: }
 [e :UE 1490 ]
 }
+[v F10232 `(v ~T0 @X0 1 tf ]
 "132
 [; ;mcc_generated_files/mcc.c: 132: void OSCILLATOR_Initialize(void)
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
+[v _OSCILLATOR_Initialize `AF10232 ~T0 @X0 1 e ]
 "133
 [; ;mcc_generated_files/mcc.c: 133: {
 {
@@ -1615,9 +1617,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/mcc.c: 144: }
 [e :UE 1491 ]
 }
+[v F10234 `(v ~T0 @X0 1 tf ]
 "146
 [; ;mcc_generated_files/mcc.c: 146: void PMD_Initialize(void)
-[v _PMD_Initialize `(v ~T0 @X0 1 ef ]
+[v _PMD_Initialize `AF10234 ~T0 @X0 1 e ]
 "147
 [; ;mcc_generated_files/mcc.c: 147: {
 {

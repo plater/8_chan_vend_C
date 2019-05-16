@@ -1,79 +1,79 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "16835 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 16835: extern volatile unsigned char LATE __attribute__((address(0xF87)));
-[v _LATE `Vuc ~T0 @X0 0 e@3975 ]
+[v _LATE `VAuc ~T0 @X0 0 e@3975 ]
 "16723
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 16723: extern volatile unsigned char LATD __attribute__((address(0xF86)));
-[v _LATD `Vuc ~T0 @X0 0 e@3974 ]
+[v _LATD `VAuc ~T0 @X0 0 e@3974 ]
 "16387
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 16387: extern volatile unsigned char LATA __attribute__((address(0xF83)));
-[v _LATA `Vuc ~T0 @X0 0 e@3971 ]
+[v _LATA `VAuc ~T0 @X0 0 e@3971 ]
 "16499
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 16499: extern volatile unsigned char LATB __attribute__((address(0xF84)));
-[v _LATB `Vuc ~T0 @X0 0 e@3972 ]
+[v _LATB `VAuc ~T0 @X0 0 e@3972 ]
 "16611
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 16611: extern volatile unsigned char LATC __attribute__((address(0xF85)));
-[v _LATC `Vuc ~T0 @X0 0 e@3973 ]
+[v _LATC `VAuc ~T0 @X0 0 e@3973 ]
 "17420
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 17420: extern volatile unsigned char TRISE __attribute__((address(0xF8C)));
-[v _TRISE `Vuc ~T0 @X0 0 e@3980 ]
+[v _TRISE `VAuc ~T0 @X0 0 e@3980 ]
 "16932
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 16932: extern volatile unsigned char TRISA __attribute__((address(0xF88)));
-[v _TRISA `Vuc ~T0 @X0 0 e@3976 ]
+[v _TRISA `VAuc ~T0 @X0 0 e@3976 ]
 "17054
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 17054: extern volatile unsigned char TRISB __attribute__((address(0xF89)));
-[v _TRISB `Vuc ~T0 @X0 0 e@3977 ]
+[v _TRISB `VAuc ~T0 @X0 0 e@3977 ]
 "17176
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 17176: extern volatile unsigned char TRISC __attribute__((address(0xF8A)));
-[v _TRISC `Vuc ~T0 @X0 0 e@3978 ]
+[v _TRISC `VAuc ~T0 @X0 0 e@3978 ]
 "17298
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 17298: extern volatile unsigned char TRISD __attribute__((address(0xF8B)));
-[v _TRISD `Vuc ~T0 @X0 0 e@3979 ]
+[v _TRISD `VAuc ~T0 @X0 0 e@3979 ]
 "9514
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 9514: extern volatile unsigned char ANSELC __attribute__((address(0xF21)));
-[v _ANSELC `Vuc ~T0 @X0 0 e@3873 ]
+[v _ANSELC `VAuc ~T0 @X0 0 e@3873 ]
 "9018
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 9018: extern volatile unsigned char ANSELB __attribute__((address(0xF19)));
-[v _ANSELB `Vuc ~T0 @X0 0 e@3865 ]
+[v _ANSELB `VAuc ~T0 @X0 0 e@3865 ]
 "9824
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 9824: extern volatile unsigned char ANSELD __attribute__((address(0xF26)));
-[v _ANSELD `Vuc ~T0 @X0 0 e@3878 ]
+[v _ANSELD `VAuc ~T0 @X0 0 e@3878 ]
 "10089
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 10089: extern volatile unsigned char ANSELE __attribute__((address(0xF2E)));
-[v _ANSELE `Vuc ~T0 @X0 0 e@3886 ]
+[v _ANSELE `VAuc ~T0 @X0 0 e@3886 ]
 "8522
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 8522: extern volatile unsigned char ANSELA __attribute__((address(0xF11)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@3857 ]
+[v _ANSELA `VAuc ~T0 @X0 0 e@3857 ]
 "9762
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 9762: extern volatile unsigned char WPUD __attribute__((address(0xF25)));
-[v _WPUD `Vuc ~T0 @X0 0 e@3877 ]
+[v _WPUD `VAuc ~T0 @X0 0 e@3877 ]
 "10051
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 10051: extern volatile unsigned char WPUE __attribute__((address(0xF2D)));
-[v _WPUE `Vuc ~T0 @X0 0 e@3885 ]
+[v _WPUE `VAuc ~T0 @X0 0 e@3885 ]
 "8956
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 8956: extern volatile unsigned char WPUB __attribute__((address(0xF18)));
-[v _WPUB `Vuc ~T0 @X0 0 e@3864 ]
+[v _WPUB `VAuc ~T0 @X0 0 e@3864 ]
 "8460
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 8460: extern volatile unsigned char WPUA __attribute__((address(0xF10)));
-[v _WPUA `Vuc ~T0 @X0 0 e@3856 ]
+[v _WPUA `VAuc ~T0 @X0 0 e@3856 ]
 "9452
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 9452: extern volatile unsigned char WPUC __attribute__((address(0xF20)));
-[v _WPUC `Vuc ~T0 @X0 0 e@3872 ]
+[v _WPUC `VAuc ~T0 @X0 0 e@3872 ]
 "10019
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 10019: extern volatile unsigned char ODCONE __attribute__((address(0xF2C)));
-[v _ODCONE `Vuc ~T0 @X0 0 e@3884 ]
+[v _ODCONE `VAuc ~T0 @X0 0 e@3884 ]
 "8398
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 8398: extern volatile unsigned char ODCONA __attribute__((address(0xF0F)));
-[v _ODCONA `Vuc ~T0 @X0 0 e@3855 ]
+[v _ODCONA `VAuc ~T0 @X0 0 e@3855 ]
 "8894
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 8894: extern volatile unsigned char ODCONB __attribute__((address(0xF17)));
-[v _ODCONB `Vuc ~T0 @X0 0 e@3863 ]
+[v _ODCONB `VAuc ~T0 @X0 0 e@3863 ]
 "9390
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 9390: extern volatile unsigned char ODCONC __attribute__((address(0xF1F)));
-[v _ODCONC `Vuc ~T0 @X0 0 e@3871 ]
+[v _ODCONC `VAuc ~T0 @X0 0 e@3871 ]
 "9700
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 9700: extern volatile unsigned char ODCOND __attribute__((address(0xF24)));
-[v _ODCOND `Vuc ~T0 @X0 0 e@3876 ]
+[v _ODCOND `VAuc ~T0 @X0 0 e@3876 ]
 "3610
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 3610:     struct {
 [s S226 :3 `uc 1 :2 `uc 1 ]
@@ -88,10 +88,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S225 . . . ]
 "3618
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 3618: extern volatile RX1PPSbits_t RX1PPSbits __attribute__((address(0xEB5)));
-[v _RX1PPSbits `VS225 ~T0 @X0 0 e@3765 ]
+[v _RX1PPSbits `VAS225 ~T0 @X0 0 e@3765 ]
 "7516
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 7516: extern volatile unsigned char RC6PPS __attribute__((address(0xEFD)));
-[v _RC6PPS `Vuc ~T0 @X0 0 e@3837 ]
+[v _RC6PPS `VAuc ~T0 @X0 0 e@3837 ]
 "54 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 54: __asm("RX2PPS equ 0E8Dh");
 [; <" RX2PPS equ 0E8Dh ;# ">
@@ -1478,9 +1478,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28207
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 28207: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+[v F10018 `(v ~T0 @X0 1 tf ]
 "52 mcc_generated_files/pin_manager.c
 [; ;mcc_generated_files/pin_manager.c: 52: void PIN_MANAGER_Initialize(void)
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
+[v _PIN_MANAGER_Initialize `AF10018 ~T0 @X0 1 e ]
 "53
 [; ;mcc_generated_files/pin_manager.c: 53: {
 {
@@ -1571,9 +1572,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/pin_manager.c: 107: }
 [e :UE 1490 ]
 }
+[v F10020 `(v ~T0 @X0 1 tf ]
 "109
 [; ;mcc_generated_files/pin_manager.c: 109: void PIN_MANAGER_IOC(void)
-[v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
+[v _PIN_MANAGER_IOC `AF10020 ~T0 @X0 1 e ]
 "110
 [; ;mcc_generated_files/pin_manager.c: 110: {
 {

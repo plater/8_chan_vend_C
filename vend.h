@@ -103,7 +103,7 @@ struct
     unsigned chan6 : 1;
     unsigned chan7 : 1;
     unsigned chan8 : 1;
-} senschk;
+} senschk __at(0x001);
 
 //To access bit structures ((uint8_t*) &struct_name) for 16 bit structures uint16_t
 
@@ -118,7 +118,7 @@ struct
     unsigned chan6 : 1;
     unsigned chan7 : 1;
     unsigned chan8 : 1;
-} venderr;
+} venderr __at(0x002);
 
 //These bit structures enable the channels to be linked ie. vend pie and coke.
 //If one of these bits is set in chanlinkx then a vend on channel x will also
@@ -247,7 +247,7 @@ struct
    unsigned spare22 : 1;
    unsigned spare23 : 1;
    unsigned spare24 : 1;
-} venflags;
+} venflags __at(0x00B);
 //Write multiple EEprom bytes to ram array
 void Write_NVstore(uint16_t storeadd, uint8_t *storemem, uint8_t storesize);
 //Read multiple EEProm to ram array.

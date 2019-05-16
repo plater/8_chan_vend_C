@@ -94,7 +94,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S823 . . . ]
 "16414
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 16414: extern volatile LATAbits_t LATAbits __attribute__((address(0xF83)));
-[v _LATAbits `VS823 ~T0 @X0 0 e@3971 ]
+[v _LATAbits `VAS823 ~T0 @X0 0 e@3971 ]
 "16617
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 16617:     struct {
 [s S830 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -109,7 +109,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S829 . . . ]
 "16638
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 16638: extern volatile LATCbits_t LATCbits __attribute__((address(0xF85)));
-[v _LATCbits `VS829 ~T0 @X0 0 e@3973 ]
+[v _LATCbits `VAS829 ~T0 @X0 0 e@3973 ]
 "248 ./mcc_generated_files/memory.h
 [; ;./mcc_generated_files/memory.h: 248: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 [v _DATAEE_WriteByte `(v ~T0 @X0 0 ef2`us`uc ]
@@ -122,16 +122,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p i __delay ]
 "30828 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 30828: extern volatile __bit LATA7 __attribute__((address(0x7C1F)));
-[v _LATA7 `Vb ~T0 @X0 0 e@31775 ]
+[v _LATA7 `VAb ~T0 @X0 0 e@31775 ]
 "30825
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 30825: extern volatile __bit LATA6 __attribute__((address(0x7C1E)));
-[v _LATA6 `Vb ~T0 @X0 0 e@31774 ]
+[v _LATA6 `VAb ~T0 @X0 0 e@31774 ]
 "17482
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 17482: extern volatile unsigned char PORTA __attribute__((address(0xF8D)));
-[v _PORTA `Vuc ~T0 @X0 0 e@3981 ]
+[v _PORTA `VAuc ~T0 @X0 0 e@3981 ]
 "10543
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 10543: extern volatile unsigned char DAC1CON1 __attribute__((address(0xF34)));
-[v _DAC1CON1 `Vuc ~T0 @X0 0 e@3892 ]
+[v _DAC1CON1 `VAuc ~T0 @X0 0 e@3892 ]
 "153 ./lcd.h
 [; ;./lcd.h: 153: void displ_hex(__uint24);
 [v _displ_hex `(v ~T0 @X0 0 ef1`um ]
@@ -149,7 +149,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _Update_Hopcoin `(v ~T0 @X0 0 ef2`uc`uc ]
 "11075 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 11075: extern volatile unsigned char CMOUT __attribute__((address(0xF3D)));
-[v _CMOUT `Vuc ~T0 @X0 0 e@3901 ]
+[v _CMOUT `VAuc ~T0 @X0 0 e@3901 ]
 "169 ./lcd.h
 [; ;./lcd.h: 169: void displ_sens(uint8_t smsgpos, uint8_t dmsgpos);
 [v _displ_sens `(v ~T0 @X0 0 ef2`uc`uc ]
@@ -163,7 +163,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S315 . . ]
 "5025
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 5025: extern volatile PIR4bits_t PIR4bits __attribute__((address(0xECE)));
-[v _PIR4bits `VS315 ~T0 @X0 0 e@3790 ]
+[v _PIR4bits `VAS315 ~T0 @X0 0 e@3790 ]
 "294 ./vend.h
 [; ;./vend.h: 294: void set_price(uint8_t buttons);
 [v _set_price `(v ~T0 @X0 0 ef1`uc ]
@@ -1588,118 +1588,118 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSU equ 0FFFh ;# ">
 "41 ./lcd.h
 [; ;./lcd.h: 41: signed char count;
-[v _count `c ~T0 @X0 1 e ]
+[v _count `Ac ~T0 @X0 1 e ]
 "43
 [; ;./lcd.h: 43: const char dispfunc1 = 0x24;
-[v _dispfunc1 `Cuc ~T0 @X0 1 e ]
+[v _dispfunc1 `CAuc ~T0 @X0 1 e ]
 [i _dispfunc1
 -> -> 36 `i `uc
 ]
 "44
 [; ;./lcd.h: 44: const char dispfunc2 = 0x28;
-[v _dispfunc2 `Cuc ~T0 @X0 1 e ]
+[v _dispfunc2 `CAuc ~T0 @X0 1 e ]
 [i _dispfunc2
 -> -> 40 `i `uc
 ]
 "45
 [; ;./lcd.h: 45: const char dispfunc3 = 0x2C;
-[v _dispfunc3 `Cuc ~T0 @X0 1 e ]
+[v _dispfunc3 `CAuc ~T0 @X0 1 e ]
 [i _dispfunc3
 -> -> 44 `i `uc
 ]
 "46
 [; ;./lcd.h: 46: const char dispon = 0x0C;
-[v _dispon `Cuc ~T0 @X0 1 e ]
+[v _dispon `CAuc ~T0 @X0 1 e ]
 [i _dispon
 -> -> 12 `i `uc
 ]
 "47
 [; ;./lcd.h: 47: const char dispclr = 0x01;
-[v _dispclr `Cuc ~T0 @X0 1 e ]
+[v _dispclr `CAuc ~T0 @X0 1 e ]
 [i _dispclr
 -> -> 1 `i `uc
 ]
 "48
 [; ;./lcd.h: 48: const char dispaddr = 0xA8;
-[v _dispaddr `Cuc ~T0 @X0 1 e ]
+[v _dispaddr `CAuc ~T0 @X0 1 e ]
 [i _dispaddr
 -> -> 168 `i `uc
 ]
 "49
 [; ;./lcd.h: 49: const char dsphome = 0x02;
-[v _dsphome `Cuc ~T0 @X0 1 e ]
+[v _dsphome `CAuc ~T0 @X0 1 e ]
 [i _dsphome
 -> -> 2 `i `uc
 ]
 "50
 [; ;./lcd.h: 50: const char dispnormal = 0x06;
-[v _dispnormal `Cuc ~T0 @X0 1 e ]
+[v _dispnormal `CAuc ~T0 @X0 1 e ]
 [i _dispnormal
 -> -> 6 `i `uc
 ]
 "51
 [; ;./lcd.h: 51: const char dispcursor = 0x04;
-[v _dispcursor `Cuc ~T0 @X0 1 e ]
+[v _dispcursor `CAuc ~T0 @X0 1 e ]
 [i _dispcursor
 -> -> 4 `i `uc
 ]
 "52
 [; ;./lcd.h: 52: const char dispshright = 0x05;
-[v _dispshright `Cuc ~T0 @X0 1 e ]
+[v _dispshright `CAuc ~T0 @X0 1 e ]
 [i _dispshright
 -> -> 5 `i `uc
 ]
 "53
 [; ;./lcd.h: 53: const char dispshleft = 0x07;
-[v _dispshleft `Cuc ~T0 @X0 1 e ]
+[v _dispshleft `CAuc ~T0 @X0 1 e ]
 [i _dispshleft
 -> -> 7 `i `uc
 ]
 "54
 [; ;./lcd.h: 54: const char dispoff = 0x08;
-[v _dispoff `Cuc ~T0 @X0 1 e ]
+[v _dispoff `CAuc ~T0 @X0 1 e ]
 [i _dispoff
 -> -> 8 `i `uc
 ]
 "55
 [; ;./lcd.h: 55: const char dispsr = 0x1B;
-[v _dispsr `Cuc ~T0 @X0 1 e ]
+[v _dispsr `CAuc ~T0 @X0 1 e ]
 [i _dispsr
 -> -> 27 `i `uc
 ]
 "56
 [; ;./lcd.h: 56: const char dispsl = 0x18;
-[v _dispsl `Cuc ~T0 @X0 1 e ]
+[v _dispsl `CAuc ~T0 @X0 1 e ]
 [i _dispsl
 -> -> 24 `i `uc
 ]
 "58
 [; ;./lcd.h: 58: const char line1 = 0x00;
-[v _line1 `Cuc ~T0 @X0 1 e ]
+[v _line1 `CAuc ~T0 @X0 1 e ]
 [i _line1
 -> -> 0 `i `uc
 ]
 "60
 [; ;./lcd.h: 60: const char line2 = 0x40;
-[v _line2 `Cuc ~T0 @X0 1 e ]
+[v _line2 `CAuc ~T0 @X0 1 e ]
 [i _line2
 -> -> 64 `i `uc
 ]
 "62
 [; ;./lcd.h: 62: const char line3 = 0x14;
-[v _line3 `Cuc ~T0 @X0 1 e ]
+[v _line3 `CAuc ~T0 @X0 1 e ]
 [i _line3
 -> -> 20 `i `uc
 ]
 "64
 [; ;./lcd.h: 64: const char line4 = 0x54;
-[v _line4 `Cuc ~T0 @X0 1 e ]
+[v _line4 `CAuc ~T0 @X0 1 e ]
 [i _line4
 -> -> 84 `i `uc
 ]
 "67
 [; ;./lcd.h: 67: const uint8_t clrline[] ="                    ";
-[v _clrline `Cuc ~T0 @X0 -> 21 `i e ]
+[v _clrline `CAuc ~T0 @X0 -> 21 `i e ]
 [i _clrline
 :U ..
 -> 32 `c
@@ -1727,7 +1727,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "68
 [; ;./lcd.h: 68: const uint8_t inscoin[] = "Insert Notes & PressLit Button To Vend" ;
-[v _inscoin `Cuc ~T0 @X0 -> 39 `i e ]
+[v _inscoin `CAuc ~T0 @X0 -> 39 `i e ]
 [i _inscoin
 :U ..
 -> 73 `c
@@ -1773,7 +1773,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "69
 [; ;./lcd.h: 69: const uint8_t nochange[] = "No Change Use Exact      Amount!";
-[v _nochange `Cuc ~T0 @X0 -> 33 `i e ]
+[v _nochange `CAuc ~T0 @X0 -> 33 `i e ]
 [i _nochange
 :U ..
 -> 78 `c
@@ -1813,7 +1813,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "70
 [; ;./lcd.h: 70: const uint8_t credits[] = "  Credit = R";
-[v _credits `Cuc ~T0 @X0 -> 13 `i e ]
+[v _credits `CAuc ~T0 @X0 -> 13 `i e ]
 [i _credits
 :U ..
 -> 32 `c
@@ -1833,7 +1833,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "71
 [; ;./lcd.h: 71: const uint8_t emptymsg[] = "No Stock";
-[v _emptymsg `Cuc ~T0 @X0 -> 9 `i e ]
+[v _emptymsg `CAuc ~T0 @X0 -> 9 `i e ]
 [i _emptymsg
 :U ..
 -> 78 `c
@@ -1849,7 +1849,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "72
 [; ;./lcd.h: 72: const uint8_t pricesetmsg[] = "   Price set mode";
-[v _pricesetmsg `Cuc ~T0 @X0 -> 18 `i e ]
+[v _pricesetmsg `CAuc ~T0 @X0 -> 18 `i e ]
 [i _pricesetmsg
 :U ..
 -> 32 `c
@@ -1874,7 +1874,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "73
 [; ;./lcd.h: 73: const uint8_t pricesetm2[] = "Press channel button    to set price      Service = Exit";
-[v _pricesetm2 `Cuc ~T0 @X0 -> 57 `i e ]
+[v _pricesetm2 `CAuc ~T0 @X0 -> 57 `i e ]
 [i _pricesetm2
 :U ..
 -> 80 `c
@@ -1938,7 +1938,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "74
 [; ;./lcd.h: 74: const uint8_t vendsetup[] = "Push 1 Vend Time,   2 ChanLink 3 SensOff4 ClrTot 5 FacReset 8 exit";
-[v _vendsetup `Cuc ~T0 @X0 -> 67 `i e ]
+[v _vendsetup `CAuc ~T0 @X0 -> 67 `i e ]
 [i _vendsetup
 :U ..
 -> 80 `c
@@ -2012,7 +2012,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "75
 [; ;./lcd.h: 75: const uint8_t setimemsg[] = "Push channel button Push service to exit";
-[v _setimemsg `Cuc ~T0 @X0 -> 41 `i e ]
+[v _setimemsg `CAuc ~T0 @X0 -> 41 `i e ]
 [i _setimemsg
 :U ..
 -> 80 `c
@@ -2060,7 +2060,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "76
 [; ;./lcd.h: 76: const uint8_t sensoffms[] = "Hold channel button or Push service to  exit";
-[v _sensoffms `Cuc ~T0 @X0 -> 45 `i e ]
+[v _sensoffms `CAuc ~T0 @X0 -> 45 `i e ]
 [i _sensoffms
 :U ..
 -> 72 `c
@@ -2112,7 +2112,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "77
 [; ;./lcd.h: 77: const uint8_t vendtimem[] = "Push 1 = +.5 second Push 2 = -.5 second ";
-[v _vendtimem `Cuc ~T0 @X0 -> 41 `i e ]
+[v _vendtimem `CAuc ~T0 @X0 -> 41 `i e ]
 [i _vendtimem
 :U ..
 -> 80 `c
@@ -2160,7 +2160,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "78
 [; ;./lcd.h: 78: const uint8_t chanlinkm[] = "Press channel button    to link to      Service = Exit";
-[v _chanlinkm `Cuc ~T0 @X0 -> 55 `i e ]
+[v _chanlinkm `CAuc ~T0 @X0 -> 55 `i e ]
 [i _chanlinkm
 :U ..
 -> 80 `c
@@ -2222,7 +2222,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "79
 [; ;./lcd.h: 79: const uint8_t linkmsg[] = "linked to :";
-[v _linkmsg `Cuc ~T0 @X0 -> 12 `i e ]
+[v _linkmsg `CAuc ~T0 @X0 -> 12 `i e ]
 [i _linkmsg
 :U ..
 -> 108 `c
@@ -2241,7 +2241,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "80
 [; ;./lcd.h: 80: const uint8_t chanmsg[] = "   Channel ";
-[v _chanmsg `Cuc ~T0 @X0 -> 12 `i e ]
+[v _chanmsg `CAuc ~T0 @X0 -> 12 `i e ]
 [i _chanmsg
 :U ..
 -> 32 `c
@@ -2260,7 +2260,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "81
 [; ;./lcd.h: 81: const uint8_t timemsg[] = "Time in 1/2sec = ";
-[v _timemsg `Cuc ~T0 @X0 -> 18 `i e ]
+[v _timemsg `CAuc ~T0 @X0 -> 18 `i e ]
 [i _timemsg
 :U ..
 -> 84 `c
@@ -2285,7 +2285,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "82
 [; ;./lcd.h: 82: const uint8_t pricemsg[] = "Price R";
-[v _pricemsg `Cuc ~T0 @X0 -> 8 `i e ]
+[v _pricemsg `CAuc ~T0 @X0 -> 8 `i e ]
 [i _pricemsg
 :U ..
 -> 80 `c
@@ -2300,7 +2300,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "83
 [; ;./lcd.h: 83: const uint8_t priceexit[] ="Press service to exit";
-[v _priceexit `Cuc ~T0 @X0 -> 22 `i e ]
+[v _priceexit `CAuc ~T0 @X0 -> 22 `i e ]
 [i _priceexit
 :U ..
 -> 80 `c
@@ -2329,7 +2329,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "84
 [; ;./lcd.h: 84: const uint8_t auditmsg[] = "  Audit Mode";
-[v _auditmsg `Cuc ~T0 @X0 -> 13 `i e ]
+[v _auditmsg `CAuc ~T0 @X0 -> 13 `i e ]
 [i _auditmsg
 :U ..
 -> 32 `c
@@ -2349,7 +2349,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "85
 [; ;./lcd.h: 85: const uint8_t hoppcoin[] = "Hopper Coin         Button 1 = + & 2 = - Value = R";
-[v _hoppcoin `Cuc ~T0 @X0 -> 51 `i e ]
+[v _hoppcoin `CAuc ~T0 @X0 -> 51 `i e ]
 [i _hoppcoin
 :U ..
 -> 72 `c
@@ -2407,7 +2407,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "86
 [; ;./lcd.h: 86: const uint8_t senset[] = "  Setup Sensor";
-[v _senset `Cuc ~T0 @X0 -> 15 `i e ]
+[v _senset `CAuc ~T0 @X0 -> 15 `i e ]
 [i _senset
 :U ..
 -> 32 `c
@@ -2429,7 +2429,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "87
 [; ;./lcd.h: 87: const uint8_t credclr[] = "Push button 1 to clear credits   and exit";
-[v _credclr `Cuc ~T0 @X0 -> 42 `i e ]
+[v _credclr `CAuc ~T0 @X0 -> 42 `i e ]
 [i _credclr
 :U ..
 -> 80 `c
@@ -2478,7 +2478,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "88
 [; ;./lcd.h: 88: const uint8_t vendtest[] = " Push button to     vend";
-[v _vendtest `Cuc ~T0 @X0 -> 25 `i e ]
+[v _vendtest `CAuc ~T0 @X0 -> 25 `i e ]
 [i _vendtest
 :U ..
 -> 32 `c
@@ -2510,7 +2510,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "89
 [; ;./lcd.h: 89: const uint8_t notetest[] = "  Insert Note";
-[v _notetest `Cuc ~T0 @X0 -> 14 `i e ]
+[v _notetest `CAuc ~T0 @X0 -> 14 `i e ]
 [i _notetest
 :U ..
 -> 32 `c
@@ -2531,7 +2531,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "91
 [; ;./lcd.h: 91: const uint8_t servmsg[] = "1 = Audit 2 = Sensor3=Hop-Coin 4=Note-en5=Cred-clr 6=Prices 7=Vend setup 8=Exit";
-[v _servmsg `Cuc ~T0 @X0 -> 80 `i e ]
+[v _servmsg `CAuc ~T0 @X0 -> 80 `i e ]
 [i _servmsg
 :U ..
 -> 49 `c
@@ -2618,7 +2618,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "92
 [; ;./lcd.h: 92: const uint8_t noteerr[] = "   Note error     code = 0x";
-[v _noteerr `Cuc ~T0 @X0 -> 28 `i e ]
+[v _noteerr `CAuc ~T0 @X0 -> 28 `i e ]
 [i _noteerr
 :U ..
 -> 32 `c
@@ -2653,7 +2653,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "93
 [; ;./lcd.h: 93: const uint8_t inithop[] = "  Initialize Hopper";
-[v _inithop `Cuc ~T0 @X0 -> 20 `i e ]
+[v _inithop `CAuc ~T0 @X0 -> 20 `i e ]
 [i _inithop
 :U ..
 -> 32 `c
@@ -2680,7 +2680,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "94
 [; ;./lcd.h: 94: const uint8_t initnote[] = "     Initialize          Note Reader";
-[v _initnote `Cuc ~T0 @X0 -> 37 `i e ]
+[v _initnote `CAuc ~T0 @X0 -> 37 `i e ]
 [i _initnote
 :U ..
 -> 32 `c
@@ -2724,7 +2724,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "95
 [; ;./lcd.h: 95: const uint8_t setnotes[] = "Enable / Disable    1 = R10, 2 = R20    3 = R50, 4 = R100   5 = R200";
-[v _setnotes `Cuc ~T0 @X0 -> 69 `i e ]
+[v _setnotes `CAuc ~T0 @X0 -> 69 `i e ]
 [i _setnotes
 :U ..
 -> 69 `c
@@ -2800,7 +2800,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "96
 [; ;./lcd.h: 96: const uint8_t tenrand[] = "   R10  ";
-[v _tenrand `Cuc ~T0 @X0 -> 9 `i e ]
+[v _tenrand `CAuc ~T0 @X0 -> 9 `i e ]
 [i _tenrand
 :U ..
 -> 32 `c
@@ -2816,7 +2816,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "97
 [; ;./lcd.h: 97: const uint8_t twentyrand[] = "  R20  ";
-[v _twentyrand `Cuc ~T0 @X0 -> 8 `i e ]
+[v _twentyrand `CAuc ~T0 @X0 -> 8 `i e ]
 [i _twentyrand
 :U ..
 -> 32 `c
@@ -2831,7 +2831,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "98
 [; ;./lcd.h: 98: const uint8_t fiftyrand[] = "  R50  ";
-[v _fiftyrand `Cuc ~T0 @X0 -> 8 `i e ]
+[v _fiftyrand `CAuc ~T0 @X0 -> 8 `i e ]
 [i _fiftyrand
 :U ..
 -> 32 `c
@@ -2846,7 +2846,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "99
 [; ;./lcd.h: 99: const uint8_t hundredrand[] = "  R100 ";
-[v _hundredrand `Cuc ~T0 @X0 -> 8 `i e ]
+[v _hundredrand `CAuc ~T0 @X0 -> 8 `i e ]
 [i _hundredrand
 :U ..
 -> 32 `c
@@ -2861,7 +2861,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "100
 [; ;./lcd.h: 100: const uint8_t twohundredrand[] = "  R200 ";
-[v _twohundredrand `Cuc ~T0 @X0 -> 8 `i e ]
+[v _twohundredrand `CAuc ~T0 @X0 -> 8 `i e ]
 [i _twohundredrand
 :U ..
 -> 32 `c
@@ -2876,7 +2876,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "101
 [; ;./lcd.h: 101: const uint8_t enabled[] = " enabled ";
-[v _enabled `Cuc ~T0 @X0 -> 10 `i e ]
+[v _enabled `CAuc ~T0 @X0 -> 10 `i e ]
 [i _enabled
 :U ..
 -> 32 `c
@@ -2893,7 +2893,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "102
 [; ;./lcd.h: 102: const uint8_t disabled[] = " disabled";
-[v _disabled `Cuc ~T0 @X0 -> 10 `i e ]
+[v _disabled `CAuc ~T0 @X0 -> 10 `i e ]
 [i _disabled
 :U ..
 -> 32 `c
@@ -2910,7 +2910,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "103
 [; ;./lcd.h: 103: const uint8_t creditclr[] = "Credits Cleared";
-[v _creditclr `Cuc ~T0 @X0 -> 16 `i e ]
+[v _creditclr `CAuc ~T0 @X0 -> 16 `i e ]
 [i _creditclr
 :U ..
 -> 67 `c
@@ -2933,7 +2933,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "104
 [; ;./lcd.h: 104: const uint8_t sensmsg[] = "Sensor is ";
-[v _sensmsg `Cuc ~T0 @X0 -> 11 `i e ]
+[v _sensmsg `CAuc ~T0 @X0 -> 11 `i e ]
 [i _sensmsg
 :U ..
 -> 83 `c
@@ -2951,7 +2951,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "105
 [; ;./lcd.h: 105: const uint8_t onmsg[] = "On ";
-[v _onmsg `Cuc ~T0 @X0 -> 4 `i e ]
+[v _onmsg `CAuc ~T0 @X0 -> 4 `i e ]
 [i _onmsg
 :U ..
 -> 79 `c
@@ -2962,7 +2962,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "106
 [; ;./lcd.h: 106: const uint8_t offmsg[] = "Off";
-[v _offmsg `Cuc ~T0 @X0 -> 4 `i e ]
+[v _offmsg `CAuc ~T0 @X0 -> 4 `i e ]
 [i _offmsg
 :U ..
 -> 79 `c
@@ -2973,7 +2973,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "107
 [; ;./lcd.h: 107: const uint8_t clrmsg[] = "         ";
-[v _clrmsg `Cuc ~T0 @X0 -> 10 `i e ]
+[v _clrmsg `CAuc ~T0 @X0 -> 10 `i e ]
 [i _clrmsg
 :U ..
 -> 32 `c
@@ -2990,7 +2990,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "108
 [; ;./lcd.h: 108: const uint8_t dacmsg[] = "Sensitivity ";
-[v _dacmsg `Cuc ~T0 @X0 -> 13 `i e ]
+[v _dacmsg `CAuc ~T0 @X0 -> 13 `i e ]
 [i _dacmsg
 :U ..
 -> 83 `c
@@ -3010,7 +3010,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "109
 [; ;./lcd.h: 109: const uint8_t motimemsg[] = " Press Channel Vend Button or Press       Service to Exit";
-[v _motimemsg `Cuc ~T0 @X0 -> 58 `i e ]
+[v _motimemsg `CAuc ~T0 @X0 -> 58 `i e ]
 [i _motimemsg
 :U ..
 -> 32 `c
@@ -3075,7 +3075,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "110
 [; ;./lcd.h: 110: const uint8_t settimemsg[] = "Press 1 = + or 2 = -  Press 8 to Exit";
-[v _settimemsg `Cuc ~T0 @X0 -> 38 `i e ]
+[v _settimemsg `CAuc ~T0 @X0 -> 38 `i e ]
 [i _settimemsg
 :U ..
 -> 80 `c
@@ -3120,7 +3120,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "111
 [; ;./lcd.h: 111: const uint8_t chanlinkmsg[] = "Push Button to Link Push again to UnlinkPush Service to Exit";
-[v _chanlinkmsg `Cuc ~T0 @X0 -> 61 `i e ]
+[v _chanlinkmsg `CAuc ~T0 @X0 -> 61 `i e ]
 [i _chanlinkmsg
 :U ..
 -> 80 `c
@@ -3188,7 +3188,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "112
 [; ;./lcd.h: 112: const uint8_t chanresetmsg[] = "Reset to Default    Start Again";
-[v _chanresetmsg `Cuc ~T0 @X0 -> 32 `i e ]
+[v _chanresetmsg `CAuc ~T0 @X0 -> 32 `i e ]
 [i _chanresetmsg
 :U ..
 -> 82 `c
@@ -3227,7 +3227,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "113
 [; ;./lcd.h: 113: const uint8_t sensoffmsg[] = "Push 1 = On, 2 = Off, 8 = Exit";
-[v _sensoffmsg `Cuc ~T0 @X0 -> 31 `i e ]
+[v _sensoffmsg `CAuc ~T0 @X0 -> 31 `i e ]
 [i _sensoffmsg
 :U ..
 -> 80 `c
@@ -3265,7 +3265,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "114
 [; ;./lcd.h: 114: const uint8_t totalmsg[] = "Total R";
-[v _totalmsg `Cuc ~T0 @X0 -> 8 `i e ]
+[v _totalmsg `CAuc ~T0 @X0 -> 8 `i e ]
 [i _totalmsg
 :U ..
 -> 84 `c
@@ -3280,7 +3280,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "115
 [; ;./lcd.h: 115: const uint8_t cashinmsg[] = "Cash in R";
-[v _cashinmsg `Cuc ~T0 @X0 -> 10 `i e ]
+[v _cashinmsg `CAuc ~T0 @X0 -> 10 `i e ]
 [i _cashinmsg
 :U ..
 -> 67 `c
@@ -3297,7 +3297,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "116
 [; ;./lcd.h: 116: const uint8_t totalvendsm[] = "Vends ";
-[v _totalvendsm `Cuc ~T0 @X0 -> 7 `i e ]
+[v _totalvendsm `CAuc ~T0 @X0 -> 7 `i e ]
 [i _totalvendsm
 :U ..
 -> 86 `c
@@ -3311,7 +3311,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "117
 [; ;./lcd.h: 117: const uint8_t vendispmsg[] = "Use button / Service";
-[v _vendispmsg `Cuc ~T0 @X0 -> 21 `i e ]
+[v _vendispmsg `CAuc ~T0 @X0 -> 21 `i e ]
 [i _vendispmsg
 :U ..
 -> 85 `c
@@ -3339,7 +3339,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "119
 [; ;./lcd.h: 119: const uint8_t clockdate[] = "Date ";
-[v _clockdate `Cuc ~T0 @X0 -> 6 `i e ]
+[v _clockdate `CAuc ~T0 @X0 -> 6 `i e ]
 [i _clockdate
 :U ..
 -> 68 `c
@@ -3352,601 +3352,602 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "121
 [; ;./lcd.h: 121: uint8_t bflag;
-[v _bflag `uc ~T0 @X0 1 e ]
+[v _bflag `Auc ~T0 @X0 1 e ]
 "122
 [; ;./lcd.h: 122: uint8_t lcdfunc;
-[v _lcdfunc `uc ~T0 @X0 1 e ]
+[v _lcdfunc `Auc ~T0 @X0 1 e ]
 "123
 [; ;./lcd.h: 123: uint8_t lcdata;
-[v _lcdata `uc ~T0 @X0 1 e ]
+[v _lcdata `Auc ~T0 @X0 1 e ]
 "124
 [; ;./lcd.h: 124: uint8_t lcdline;
-[v _lcdline `uc ~T0 @X0 1 e ]
+[v _lcdline `Auc ~T0 @X0 1 e ]
 "125
 [; ;./lcd.h: 125: uint8_t stradd;
-[v _stradd `uc ~T0 @X0 1 e ]
+[v _stradd `Auc ~T0 @X0 1 e ]
 "126
 [; ;./lcd.h: 126: __uint24 hexnum;
-[v _hexnum `um ~T0 @X0 1 e ]
+[v _hexnum `Aum ~T0 @X0 1 e ]
 "127
 [; ;./lcd.h: 127: uint8_t ercode;
-[v _ercode `uc ~T0 @X0 1 e ]
+[v _ercode `Auc ~T0 @X0 1 e ]
 "128
 [; ;./lcd.h: 128: uint8_t lcdaddress;
-[v _lcdaddress `uc ~T0 @X0 1 e ]
+[v _lcdaddress `Auc ~T0 @X0 1 e ]
 "129
 [; ;./lcd.h: 129: uint8_t dspposition;
-[v _dspposition `uc ~T0 @X0 1 e ]
+[v _dspposition `Auc ~T0 @X0 1 e ]
 "17 ./mdb.h
 [; ;./mdb.h: 17: const uint8_t note_reset = 0x30;
-[v _note_reset `Cuc ~T0 @X0 1 e ]
+[v _note_reset `CAuc ~T0 @X0 1 e ]
 [i _note_reset
 -> -> 48 `i `uc
 ]
 "19
 [; ;./mdb.h: 19: const uint8_t note_setup = 0x31;
-[v _note_setup `Cuc ~T0 @X0 1 e ]
+[v _note_setup `CAuc ~T0 @X0 1 e ]
 [i _note_setup
 -> -> 49 `i `uc
 ]
 "21
 [; ;./mdb.h: 21: const uint8_t note_security = 0x32;
-[v _note_security `Cuc ~T0 @X0 1 e ]
+[v _note_security `CAuc ~T0 @X0 1 e ]
 [i _note_security
 -> -> 50 `i `uc
 ]
 "23
 [; ;./mdb.h: 23: const uint8_t note_poll = 0x33;
-[v _note_poll `Cuc ~T0 @X0 1 e ]
+[v _note_poll `CAuc ~T0 @X0 1 e ]
 [i _note_poll
 -> -> 51 `i `uc
 ]
 "25
 [; ;./mdb.h: 25: const uint8_t note_type = 0x34;
-[v _note_type `Cuc ~T0 @X0 1 e ]
+[v _note_type `CAuc ~T0 @X0 1 e ]
 [i _note_type
 -> -> 52 `i `uc
 ]
 "27
 [; ;./mdb.h: 27: const uint8_t note_escrow = 0x35;
-[v _note_escrow `Cuc ~T0 @X0 1 e ]
+[v _note_escrow `CAuc ~T0 @X0 1 e ]
 [i _note_escrow
 -> -> 53 `i `uc
 ]
 "29
 [; ;./mdb.h: 29: const uint8_t note_stacker = 0x36;
-[v _note_stacker `Cuc ~T0 @X0 1 e ]
+[v _note_stacker `CAuc ~T0 @X0 1 e ]
 [i _note_stacker
 -> -> 54 `i `uc
 ]
 "31
 [; ;./mdb.h: 31: const uint8_t note_features = 0x33;
-[v _note_features `Cuc ~T0 @X0 1 e ]
+[v _note_features `CAuc ~T0 @X0 1 e ]
 [i _note_features
 -> -> 51 `i `uc
 ]
 "33
 [; ;./mdb.h: 33: const uint8_t motr_error = 0x01;
-[v _motr_error `Cuc ~T0 @X0 1 e ]
+[v _motr_error `CAuc ~T0 @X0 1 e ]
 [i _motr_error
 -> -> 1 `i `uc
 ]
 "34
 [; ;./mdb.h: 34: const uint8_t sens_error = 0x02;
-[v _sens_error `Cuc ~T0 @X0 1 e ]
+[v _sens_error `CAuc ~T0 @X0 1 e ]
 [i _sens_error
 -> -> 2 `i `uc
 ]
 "35
 [; ;./mdb.h: 35: const uint8_t just_busy = 0x03;
-[v _just_busy `Cuc ~T0 @X0 1 e ]
+[v _just_busy `CAuc ~T0 @X0 1 e ]
 [i _just_busy
 -> -> 3 `i `uc
 ]
 "36
 [; ;./mdb.h: 36: const uint8_t rom_error = 0x04;
-[v _rom_error `Cuc ~T0 @X0 1 e ]
+[v _rom_error `CAuc ~T0 @X0 1 e ]
 [i _rom_error
 -> -> 4 `i `uc
 ]
 "37
 [; ;./mdb.h: 37: const uint8_t jammed_err = 0x05;
-[v _jammed_err `Cuc ~T0 @X0 1 e ]
+[v _jammed_err `CAuc ~T0 @X0 1 e ]
 [i _jammed_err
 -> -> 5 `i `uc
 ]
 "38
 [; ;./mdb.h: 38: const uint8_t just_reset = 0x06;
-[v _just_reset `Cuc ~T0 @X0 1 e ]
+[v _just_reset `CAuc ~T0 @X0 1 e ]
 [i _just_reset
 -> -> 6 `i `uc
 ]
 "39
 [; ;./mdb.h: 39: const uint8_t note_removed = 0x07;
-[v _note_removed `Cuc ~T0 @X0 1 e ]
+[v _note_removed `CAuc ~T0 @X0 1 e ]
 [i _note_removed
 -> -> 7 `i `uc
 ]
 "40
 [; ;./mdb.h: 40: const uint8_t cashbox_err = 0x08;
-[v _cashbox_err `Cuc ~T0 @X0 1 e ]
+[v _cashbox_err `CAuc ~T0 @X0 1 e ]
 [i _cashbox_err
 -> -> 8 `i `uc
 ]
 "41
 [; ;./mdb.h: 41: const uint8_t acept_disabled = 0x09;
-[v _acept_disabled `Cuc ~T0 @X0 1 e ]
+[v _acept_disabled `CAuc ~T0 @X0 1 e ]
 [i _acept_disabled
 -> -> 9 `i `uc
 ]
 "42
 [; ;./mdb.h: 42: const uint8_t invalid_escrow = 0x0A;
-[v _invalid_escrow `Cuc ~T0 @X0 1 e ]
+[v _invalid_escrow `CAuc ~T0 @X0 1 e ]
 [i _invalid_escrow
 -> -> 10 `i `uc
 ]
 "43
 [; ;./mdb.h: 43: const uint8_t note_rejected = 0x0B;
-[v _note_rejected `Cuc ~T0 @X0 1 e ]
+[v _note_rejected `CAuc ~T0 @X0 1 e ]
 [i _note_rejected
 -> -> 11 `i `uc
 ]
 "44
 [; ;./mdb.h: 44: const uint8_t theft_attempt = 0x0C;
-[v _theft_attempt `Cuc ~T0 @X0 1 e ]
+[v _theft_attempt `CAuc ~T0 @X0 1 e ]
 [i _theft_attempt
 -> -> 12 `i `uc
 ]
 "47
 [; ;./mdb.h: 47: uint8_t mdbdata[32];
-[v _mdbdata `uc ~T0 @X0 -> 32 `i e ]
+[v _mdbdata `Auc ~T0 @X0 -> 32 `i e ]
 "48
 [; ;./mdb.h: 48: uint8_t slvadd;
-[v _slvadd `uc ~T0 @X0 1 e ]
+[v _slvadd `Auc ~T0 @X0 1 e ]
 "49
 [; ;./mdb.h: 49: uint8_t mcount = 0;
-[v _mcount `uc ~T0 @X0 1 e ]
+[v _mcount `Auc ~T0 @X0 1 e ]
 [i _mcount
 -> -> 0 `i `uc
 ]
 "50
 [; ;./mdb.h: 50: uint8_t notebyte;
-[v _notebyte `uc ~T0 @X0 1 e ]
+[v _notebyte `Auc ~T0 @X0 1 e ]
 "51
 [; ;./mdb.h: 51: uint8_t chkbyte;
-[v _chkbyte `uc ~T0 @X0 1 e ]
+[v _chkbyte `Auc ~T0 @X0 1 e ]
 "52
 [; ;./mdb.h: 52: uint16_t dbcount=0;
-[v _dbcount `us ~T0 @X0 1 e ]
+[v _dbcount `Aus ~T0 @X0 1 e ]
 [i _dbcount
 -> -> 0 `i `us
 ]
 "53
 [; ;./mdb.h: 53: uint8_t notenum = 0xFF;
-[v _notenum `uc ~T0 @X0 1 e ]
+[v _notenum `Auc ~T0 @X0 1 e ]
 [i _notenum
 -> -> 255 `i `uc
 ]
 "68
 [; ;./mdb.h: 68: }mdbflags;
-[v _mdbflags `S1490 ~T0 @X0 1 e ]
+[v _mdbflags `AS1490 ~T0 @X0 1 e ]
 "82
 [; ;./mdb.h: 82: }noteen;
-[v _noteen `S1491 ~T0 @X0 1 e ]
+[v _noteen `AS1491 ~T0 @X0 1 e ]
 "83
 [; ;./mdb.h: 83: volatile uint8_t noteen_byte;
-[v _noteen_byte `Vuc ~T0 @X0 1 e ]
+[v _noteen_byte `VAuc ~T0 @X0 1 e ]
 "96
 [; ;./mdb.h: 96:  } errorflags;
-[v _errorflags `S1492 ~T0 @X0 1 e ]
+[v _errorflags `AS1492 ~T0 @X0 1 e ]
 "98
 [; ;./mdb.h: 98:  uint8_t mdbtxbyte;
-[v _mdbtxbyte `uc ~T0 @X0 1 e ]
+[v _mdbtxbyte `Auc ~T0 @X0 1 e ]
 "18 ./cctalk.h
 [; ;./cctalk.h: 18: const uint8_t hopadd = 0x03;
-[v _hopadd `Cuc ~T0 @X0 1 e ]
+[v _hopadd `CAuc ~T0 @X0 1 e ]
 [i _hopadd
 -> -> 3 `i `uc
 ]
 "20
 [; ;./cctalk.h: 20: const uint8_t mastadd = 0x01;
-[v _mastadd `Cuc ~T0 @X0 1 e ]
+[v _mastadd `CAuc ~T0 @X0 1 e ]
 [i _mastadd
 -> -> 1 `i `uc
 ]
 "22
 [; ;./cctalk.h: 22: const uint8_t cc_reset = 0x01;
-[v _cc_reset `Cuc ~T0 @X0 1 e ]
+[v _cc_reset `CAuc ~T0 @X0 1 e ]
 [i _cc_reset
 -> -> 1 `i `uc
 ]
 "26
 [; ;./cctalk.h: 26: const uint8_t cc_test = 0xA3;
-[v _cc_test `Cuc ~T0 @X0 1 e ]
+[v _cc_test `CAuc ~T0 @X0 1 e ]
 [i _cc_test
 -> -> 163 `i `uc
 ]
 "28
 [; ;./cctalk.h: 28: const uint8_t cc_enable =0xA4;
-[v _cc_enable `Cuc ~T0 @X0 1 e ]
+[v _cc_enable `CAuc ~T0 @X0 1 e ]
 [i _cc_enable
 -> -> 164 `i `uc
 ]
 "31
 [; ;./cctalk.h: 31: const uint8_t cc_status = 0xA6;
-[v _cc_status `Cuc ~T0 @X0 1 e ]
+[v _cc_status `CAuc ~T0 @X0 1 e ]
 [i _cc_status
 -> -> 166 `i `uc
 ]
 "34
 [; ;./cctalk.h: 34: const uint8_t cc_pay = 0xA7;
-[v _cc_pay `Cuc ~T0 @X0 1 e ]
+[v _cc_pay `CAuc ~T0 @X0 1 e ]
 [i _cc_pay
 -> -> 167 `i `uc
 ]
 "36
 [; ;./cctalk.h: 36: const uint8_t cc_countrq = 0xA8;
-[v _cc_countrq `Cuc ~T0 @X0 1 e ]
+[v _cc_countrq `CAuc ~T0 @X0 1 e ]
 [i _cc_countrq
 -> -> 168 `i `uc
 ]
 "38
 [; ;./cctalk.h: 38: const uint8_t cc_stop = 0xAC;
-[v _cc_stop `Cuc ~T0 @X0 1 e ]
+[v _cc_stop `CAuc ~T0 @X0 1 e ]
 [i _cc_stop
 -> -> 172 `i `uc
 ]
 "40
 [; ;./cctalk.h: 40: const uint8_t cc_level = 0xEC;
-[v _cc_level `Cuc ~T0 @X0 1 e ]
+[v _cc_level `CAuc ~T0 @X0 1 e ]
 [i _cc_level
 -> -> 236 `i `uc
 ]
 "42
 [; ;./cctalk.h: 42: const uint8_t cc_pin = 0xDA;
-[v _cc_pin `Cuc ~T0 @X0 1 e ]
+[v _cc_pin `CAuc ~T0 @X0 1 e ]
 [i _cc_pin
 -> -> 218 `i `uc
 ]
 "44
 [; ;./cctalk.h: 44: const uint8_t cc_newpin = 0xDB;
-[v _cc_newpin `Cuc ~T0 @X0 1 e ]
+[v _cc_newpin `CAuc ~T0 @X0 1 e ]
 [i _cc_newpin
 -> -> 219 `i `uc
 ]
 "47
 [; ;./cctalk.h: 47: const uint8_t cc_serial = 0xF2;
-[v _cc_serial `Cuc ~T0 @X0 1 e ]
+[v _cc_serial `CAuc ~T0 @X0 1 e ]
 [i _cc_serial
 -> -> 242 `i `uc
 ]
 "49
 [; ;./cctalk.h: 49: const uint8_t cc_adpoll = 0xFD;
-[v _cc_adpoll `Cuc ~T0 @X0 1 e ]
+[v _cc_adpoll `CAuc ~T0 @X0 1 e ]
 [i _cc_adpoll
 -> -> 253 `i `uc
 ]
 "51
 [; ;./cctalk.h: 51: const uint8_t cc_poll = 0xFE;
-[v _cc_poll `Cuc ~T0 @X0 1 e ]
+[v _cc_poll `CAuc ~T0 @X0 1 e ]
 [i _cc_poll
 -> -> 254 `i `uc
 ]
 "53
 [; ;./cctalk.h: 53: uint8_t dest;
-[v _dest `uc ~T0 @X0 1 e ]
+[v _dest `Auc ~T0 @X0 1 e ]
 "54
 [; ;./cctalk.h: 54: uint8_t nobytes;
-[v _nobytes `uc ~T0 @X0 1 e ]
+[v _nobytes `Auc ~T0 @X0 1 e ]
 "55
 [; ;./cctalk.h: 55: uint8_t command;
-[v _command `uc ~T0 @X0 1 e ]
+[v _command `Auc ~T0 @X0 1 e ]
 "58
 [; ;./cctalk.h: 58: uint8_t hpserial[3];
-[v _hpserial `uc ~T0 @X0 -> 3 `i e ]
+[v _hpserial `Auc ~T0 @X0 -> 3 `i e ]
 "70
 [; ;./cctalk.h: 70: }cctflags;
-[v _cctflags `S1493 ~T0 @X0 1 e ]
+[v _cctflags `AS1493 ~T0 @X0 1 e ]
 "15 ./hopper.h
 [; ;./hopper.h: 15: uint8_t change = 0;
-[v _change `uc ~T0 @X0 1 e ]
+[v _change `Auc ~T0 @X0 1 e ]
 [i _change
 -> -> 0 `i `uc
 ]
 "16
 [; ;./hopper.h: 16: uint8_t outcoins;
-[v _outcoins `uc ~T0 @X0 1 e ]
+[v _outcoins `Auc ~T0 @X0 1 e ]
 "17
 [; ;./hopper.h: 17: signed char hopercount = 3;
-[v _hopercount `c ~T0 @X0 1 e ]
+[v _hopercount `Ac ~T0 @X0 1 e ]
 [i _hopercount
 -> -> 3 `i `c
 ]
 "21 ./vend.h
 [; ;./vend.h: 21: volatile uint8_t credit;
-[v _credit `Vuc ~T0 @X0 1 e ]
+[v _credit `VAuc ~T0 @X0 1 e ]
 "22
 [; ;./vend.h: 22: volatile uint8_t cash;
-[v _cash `Vuc ~T0 @X0 1 e ]
+[v _cash `VAuc ~T0 @X0 1 e ]
 "23
 [; ;./vend.h: 23: volatile uint8_t buttons;
-[v _buttons `Vuc ~T0 @X0 1 e ]
+[v _buttons `VAuc ~T0 @X0 1 e ]
 "24
 [; ;./vend.h: 24: volatile uint8_t vendprice;
-[v _vendprice `Vuc ~T0 @X0 1 e ]
+[v _vendprice `VAuc ~T0 @X0 1 e ]
 "25
 [; ;./vend.h: 25: volatile uint8_t sensorval;
-[v _sensorval `Vuc ~T0 @X0 1 e ]
+[v _sensorval `VAuc ~T0 @X0 1 e ]
 "26
 [; ;./vend.h: 26: volatile uint8_t vcash[2];
-[v _vcash `Vuc ~T0 @X0 -> 2 `i e ]
+[v _vcash `VAuc ~T0 @X0 -> 2 `i e ]
 "27
 [; ;./vend.h: 27: volatile uint8_t nvcash[3];
-[v _nvcash `Vuc ~T0 @X0 -> 3 `i e ]
+[v _nvcash `VAuc ~T0 @X0 -> 3 `i e ]
 "28
 [; ;./vend.h: 28: volatile uint8_t tvends[8];
-[v _tvends `Vuc ~T0 @X0 -> 8 `i e ]
+[v _tvends `VAuc ~T0 @X0 -> 8 `i e ]
 "29
 [; ;./vend.h: 29: volatile uint8_t vcashout[2];
-[v _vcashout `Vuc ~T0 @X0 -> 2 `i e ]
+[v _vcashout `VAuc ~T0 @X0 -> 2 `i e ]
 "30
 [; ;./vend.h: 30: volatile uint16_t pvcash;
-[v _pvcash `Vus ~T0 @X0 1 e ]
+[v _pvcash `VAus ~T0 @X0 1 e ]
 "31
 [; ;./vend.h: 31: volatile __uint24 pnvcash;
-[v _pnvcash `Vum ~T0 @X0 1 e ]
+[v _pnvcash `VAum ~T0 @X0 1 e ]
 "32
 [; ;./vend.h: 32: volatile uint8_t senspos;
-[v _senspos `Vuc ~T0 @X0 1 e ]
+[v _senspos `VAuc ~T0 @X0 1 e ]
 "33
 [; ;./vend.h: 33: volatile uint8_t dummy[8];
-[v _dummy `Vuc ~T0 @X0 -> 8 `i e ]
+[v _dummy `VAuc ~T0 @X0 -> 8 `i e ]
 "34
 [; ;./vend.h: 34: volatile uint8_t pricevend[8];
-[v _pricevend `Vuc ~T0 @X0 -> 8 `i e ]
+[v _pricevend `VAuc ~T0 @X0 -> 8 `i e ]
 "35
 [; ;./vend.h: 35: volatile uint8_t highprice;
-[v _highprice `Vuc ~T0 @X0 1 e ]
+[v _highprice `VAuc ~T0 @X0 1 e ]
 "36
 [; ;./vend.h: 36: volatile uint8_t lowprice;
-[v _lowprice `Vuc ~T0 @X0 1 e ]
+[v _lowprice `VAuc ~T0 @X0 1 e ]
 "37
 [; ;./vend.h: 37: volatile uint8_t chanmask;
-[v _chanmask `Vuc ~T0 @X0 1 e ]
+[v _chanmask `VAuc ~T0 @X0 1 e ]
 "38
 [; ;./vend.h: 38: volatile uint8_t errormask;
-[v _errormask `Vuc ~T0 @X0 1 e ]
+[v _errormask `VAuc ~T0 @X0 1 e ]
 "39
 [; ;./vend.h: 39: volatile uint8_t channel;
-[v _channel `Vuc ~T0 @X0 1 e ]
+[v _channel `VAuc ~T0 @X0 1 e ]
 "42
 [; ;./vend.h: 42: const uint16_t second1 = 0xE1BA ;
-[v _second1 `Cus ~T0 @X0 1 e ]
+[v _second1 `CAus ~T0 @X0 1 e ]
 [i _second1
 -> -> 57786 `ui `us
 ]
 "44
 [; ;./vend.h: 44: const uint16_t second_5 = 0x0F23 ;
-[v _second_5 `Cus ~T0 @X0 1 e ]
+[v _second_5 `CAus ~T0 @X0 1 e ]
 [i _second_5
 -> -> 3875 `i `us
 ]
 "46
 [; ;./vend.h: 46: const uint16_t secondadd = 0x1E46 ;
-[v _secondadd `Cus ~T0 @X0 1 e ]
+[v _secondadd `CAus ~T0 @X0 1 e ]
 [i _secondadd
 -> -> 7750 `i `us
 ]
 "50
 [; ;./vend.h: 50: const uint16_t credmem = 0x00;
-[v _credmem `Cus ~T0 @X0 1 e ]
+[v _credmem `CAus ~T0 @X0 1 e ]
 [i _credmem
 -> -> 0 `i `us
 ]
 "52
 [; ;./vend.h: 52: const uint16_t cashinv = 0x02;
-[v _cashinv `Cus ~T0 @X0 1 e ]
+[v _cashinv `CAus ~T0 @X0 1 e ]
 [i _cashinv
 -> -> 2 `i `us
 ]
 "54
 [; ;./vend.h: 54: const uint16_t vendstore = 0x04;
-[v _vendstore `Cus ~T0 @X0 1 e ]
+[v _vendstore `CAus ~T0 @X0 1 e ]
 [i _vendstore
 -> -> 4 `i `us
 ]
 "56
 [; ;./vend.h: 56: const uint16_t cashint = 0x0C;
-[v _cashint `Cus ~T0 @X0 1 e ]
+[v _cashint `CAus ~T0 @X0 1 e ]
 [i _cashint
 -> -> 12 `i `us
 ]
 "58
 [; ;./vend.h: 58: const uint16_t pricestore = 0x0F;
-[v _pricestore `Cus ~T0 @X0 1 e ]
+[v _pricestore `CAus ~T0 @X0 1 e ]
 [i _pricestore
 -> -> 15 `i `us
 ]
 "60
 [; ;./vend.h: 60: const uint16_t venderrors = 0x17;
-[v _venderrors `Cus ~T0 @X0 1 e ]
+[v _venderrors `CAus ~T0 @X0 1 e ]
 [i _venderrors
 -> -> 23 `i `us
 ]
 "62
 [; ;./vend.h: 62: const uint16_t notebits = 0x18;
-[v _notebits `Cus ~T0 @X0 1 e ]
+[v _notebits `CAus ~T0 @X0 1 e ]
 [i _notebits
 -> -> 24 `i `us
 ]
 "65
 [; ;./vend.h: 65: const uint16_t sensval = 0x19;
-[v _sensval `Cus ~T0 @X0 1 e ]
+[v _sensval `CAus ~T0 @X0 1 e ]
 [i _sensval
 -> -> 25 `i `us
 ]
 "67
 [; ;./vend.h: 67: const uint16_t cashoutv = 0x1A;
-[v _cashoutv `Cus ~T0 @X0 1 e ]
+[v _cashoutv `CAus ~T0 @X0 1 e ]
 [i _cashoutv
 -> -> 26 `i `us
 ]
 "69
 [; ;./vend.h: 69: const uint16_t hopcoin = 0x1C;
-[v _hopcoin `Cus ~T0 @X0 1 e ]
+[v _hopcoin `CAus ~T0 @X0 1 e ]
 [i _hopcoin
 -> -> 28 `i `us
 ]
 "71
 [; ;./vend.h: 71: const uint16_t chan1linkbits = 0x1D;
-[v _chan1linkbits `Cus ~T0 @X0 1 e ]
+[v _chan1linkbits `CAus ~T0 @X0 1 e ]
 [i _chan1linkbits
 -> -> 29 `i `us
 ]
 "72
 [; ;./vend.h: 72: const uint16_t chan2linkbits = 0x1E;
-[v _chan2linkbits `Cus ~T0 @X0 1 e ]
+[v _chan2linkbits `CAus ~T0 @X0 1 e ]
 [i _chan2linkbits
 -> -> 30 `i `us
 ]
 "73
 [; ;./vend.h: 73: const uint16_t chan3linkbits = 0x1F;
-[v _chan3linkbits `Cus ~T0 @X0 1 e ]
+[v _chan3linkbits `CAus ~T0 @X0 1 e ]
 [i _chan3linkbits
 -> -> 31 `i `us
 ]
 "74
 [; ;./vend.h: 74: const uint16_t chan4linkbits = 0x20;
-[v _chan4linkbits `Cus ~T0 @X0 1 e ]
+[v _chan4linkbits `CAus ~T0 @X0 1 e ]
 [i _chan4linkbits
 -> -> 32 `i `us
 ]
 "75
 [; ;./vend.h: 75: const uint16_t chan5linkbits = 0x21;
-[v _chan5linkbits `Cus ~T0 @X0 1 e ]
+[v _chan5linkbits `CAus ~T0 @X0 1 e ]
 [i _chan5linkbits
 -> -> 33 `i `us
 ]
 "76
 [; ;./vend.h: 76: const uint16_t chan6linkbits = 0x22;
-[v _chan6linkbits `Cus ~T0 @X0 1 e ]
+[v _chan6linkbits `CAus ~T0 @X0 1 e ]
 [i _chan6linkbits
 -> -> 34 `i `us
 ]
 "77
 [; ;./vend.h: 77: const uint16_t chan7linkbits = 0x23;
-[v _chan7linkbits `Cus ~T0 @X0 1 e ]
+[v _chan7linkbits `CAus ~T0 @X0 1 e ]
 [i _chan7linkbits
 -> -> 35 `i `us
 ]
 "78
 [; ;./vend.h: 78: const uint16_t chan8linkbits = 0x24;
-[v _chan8linkbits `Cus ~T0 @X0 1 e ]
+[v _chan8linkbits `CAus ~T0 @X0 1 e ]
 [i _chan8linkbits
 -> -> 36 `i `us
 ]
 "80
 [; ;./vend.h: 80: const uint16_t sensorflags = 0x25;
-[v _sensorflags `Cus ~T0 @X0 1 e ]
+[v _sensorflags `CAus ~T0 @X0 1 e ]
 [i _sensorflags
 -> -> 37 `i `us
 ]
 "83
 [; ;./vend.h: 83: const uint16_t chan1time = 0x26;
-[v _chan1time `Cus ~T0 @X0 1 e ]
+[v _chan1time `CAus ~T0 @X0 1 e ]
 [i _chan1time
 -> -> 38 `i `us
 ]
 "84
 [; ;./vend.h: 84: const uint16_t chan2time = 0x27;
-[v _chan2time `Cus ~T0 @X0 1 e ]
+[v _chan2time `CAus ~T0 @X0 1 e ]
 [i _chan2time
 -> -> 39 `i `us
 ]
 "85
 [; ;./vend.h: 85: const uint16_t chan3time = 0x28;
-[v _chan3time `Cus ~T0 @X0 1 e ]
+[v _chan3time `CAus ~T0 @X0 1 e ]
 [i _chan3time
 -> -> 40 `i `us
 ]
 "86
 [; ;./vend.h: 86: const uint16_t chan4time = 0x29;
-[v _chan4time `Cus ~T0 @X0 1 e ]
+[v _chan4time `CAus ~T0 @X0 1 e ]
 [i _chan4time
 -> -> 41 `i `us
 ]
 "87
 [; ;./vend.h: 87: const uint16_t chan5time = 0x2A;
-[v _chan5time `Cus ~T0 @X0 1 e ]
+[v _chan5time `CAus ~T0 @X0 1 e ]
 [i _chan5time
 -> -> 42 `i `us
 ]
 "88
 [; ;./vend.h: 88: const uint16_t chan6time = 0x2B;
-[v _chan6time `Cus ~T0 @X0 1 e ]
+[v _chan6time `CAus ~T0 @X0 1 e ]
 [i _chan6time
 -> -> 43 `i `us
 ]
 "89
 [; ;./vend.h: 89: const uint16_t chan7time = 0x2C;
-[v _chan7time `Cus ~T0 @X0 1 e ]
+[v _chan7time `CAus ~T0 @X0 1 e ]
 [i _chan7time
 -> -> 44 `i `us
 ]
 "90
 [; ;./vend.h: 90: const uint16_t chan8time = 0x2D;
-[v _chan8time `Cus ~T0 @X0 1 e ]
+[v _chan8time `CAus ~T0 @X0 1 e ]
 [i _chan8time
 -> -> 45 `i `us
 ]
 "92
 [; ;./vend.h: 92: const uint16_t nosentime = 0x2E;
-[v _nosentime `Cus ~T0 @X0 1 e ]
+[v _nosentime `CAus ~T0 @X0 1 e ]
 [i _nosentime
 -> -> 46 `i `us
 ]
 "94
 [; ;./vend.h: 94: const uint16_t hoperror = 0x2F;
-[v _hoperror `Cus ~T0 @X0 1 e ]
+[v _hoperror `CAus ~T0 @X0 1 e ]
 [i _hoperror
 -> -> 47 `i `us
 ]
 "106
-[; ;./vend.h: 106: } senschk;
-[v _senschk `S1494 ~T0 @X0 1 e ]
+[; ;./vend.h: 106: } senschk __attribute__((address(0x001)));
+[v _senschk `AS1494 ~T0 @X0 1 e@1 ]
 "121
-[; ;./vend.h: 121: } venderr;
-[v _venderr `S1495 ~T0 @X0 1 e ]
+[; ;./vend.h: 121: } venderr __attribute__((address(0x002)));
+[v _venderr `AS1495 ~T0 @X0 1 e@2 ]
 "136
 [; ;./vend.h: 136: } chanlink1 __attribute__((address(0x003)));
-[v _chanlink1 `S1496 ~T0 @X0 1 e@3 ]
+[v _chanlink1 `AS1496 ~T0 @X0 1 e@3 ]
 "148
 [; ;./vend.h: 148: } chanlink2 __attribute__((address(0x004)));
-[v _chanlink2 `S1497 ~T0 @X0 1 e@4 ]
+[v _chanlink2 `AS1497 ~T0 @X0 1 e@4 ]
 "160
 [; ;./vend.h: 160: } chanlink3 __attribute__((address(0x005)));
-[v _chanlink3 `S1498 ~T0 @X0 1 e@5 ]
+[v _chanlink3 `AS1498 ~T0 @X0 1 e@5 ]
 "172
 [; ;./vend.h: 172: } chanlink4 __attribute__((address(0x006)));
-[v _chanlink4 `S1499 ~T0 @X0 1 e@6 ]
+[v _chanlink4 `AS1499 ~T0 @X0 1 e@6 ]
 "184
 [; ;./vend.h: 184: } chanlink5 __attribute__((address(0x007)));
-[v _chanlink5 `S1500 ~T0 @X0 1 e@7 ]
+[v _chanlink5 `AS1500 ~T0 @X0 1 e@7 ]
 "196
 [; ;./vend.h: 196: } chanlink6 __attribute__((address(0x008)));
-[v _chanlink6 `S1501 ~T0 @X0 1 e@8 ]
+[v _chanlink6 `AS1501 ~T0 @X0 1 e@8 ]
 "208
 [; ;./vend.h: 208: } chanlink7 __attribute__((address(0x009)));
-[v _chanlink7 `S1502 ~T0 @X0 1 e@9 ]
+[v _chanlink7 `AS1502 ~T0 @X0 1 e@9 ]
 "220
 [; ;./vend.h: 220: } chanlink8 __attribute__((address(0x00A)));
-[v _chanlink8 `S1503 ~T0 @X0 1 e@10 ]
+[v _chanlink8 `AS1503 ~T0 @X0 1 e@10 ]
 "250
-[; ;./vend.h: 250: } venflags;
-[v _venflags `S1504 ~T0 @X0 1 e ]
+[; ;./vend.h: 250: } venflags __attribute__((address(0x00B)));
+[v _venflags `AS1504 ~T0 @X0 1 e@11 ]
+[v F10730 `(v ~T0 @X0 1 tf ]
 "9 vend.c
 [; ;vend.c: 9: void Init_vendmem(void)
-[v _Init_vendmem `(v ~T0 @X0 1 ef ]
+[v _Init_vendmem `AF10730 ~T0 @X0 1 e ]
 "10
 [; ;vend.c: 10: {
 {
@@ -4016,9 +4017,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 29: }
 [e :UE 1505 ]
 }
+[v F10735 `(v ~T0 @X0 1 tf ]
 "33
 [; ;vend.c: 33: void vend_init(void)
-[v _vend_init `(v ~T0 @X0 1 ef ]
+[v _vend_init `AF10735 ~T0 @X0 1 e ]
 "34
 [; ;vend.c: 34: {
 {
@@ -4143,9 +4145,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 84: }
 [e :UE 1512 ]
 }
+[v F10737 `(v ~T0 @X0 1 tf3`us`*uc`uc ]
 "86
 [; ;vend.c: 86: void Write_NVstore(uint16_t storeadd, uint8_t *storemem, uint8_t storesize)
-[v _Write_NVstore `(v ~T0 @X0 1 ef3`us`*uc`uc ]
+[v _Write_NVstore `AF10737 ~T0 @X0 1 e ]
 "87
 [; ;vend.c: 87: {
 {
@@ -4187,9 +4190,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 94: }
 [e :UE 1517 ]
 }
+[v F10743 `(v ~T0 @X0 1 tf3`us`*uc`uc ]
 "96
 [; ;vend.c: 96: void Read_NVstore(uint16_t storeadd, uint8_t *storemem, uint8_t storesize)
-[v _Read_NVstore `(v ~T0 @X0 1 ef3`us`*uc`uc ]
+[v _Read_NVstore `AF10743 ~T0 @X0 1 e ]
 "97
 [; ;vend.c: 97: {
 {
@@ -4231,9 +4235,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 104: }
 [e :UE 1521 ]
 }
+[v F10749 `(v ~T0 @X0 1 tf1`uc ]
 "106
 [; ;vend.c: 106: void Update_cashaudit(uint8_t addcash)
-[v _Update_cashaudit `(v ~T0 @X0 1 ef1`uc ]
+[v _Update_cashaudit `AF10749 ~T0 @X0 1 e ]
 "107
 [; ;vend.c: 107: {
 {
@@ -4269,9 +4274,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 118: }
 [e :UE 1525 ]
 }
+[v F10752 `(v ~T0 @X0 1 tf1`uc ]
 "121
 [; ;vend.c: 121: void credit_add(uint8_t credit)
-[v _credit_add `(v ~T0 @X0 1 ef1`uc ]
+[v _credit_add `AF10752 ~T0 @X0 1 e ]
 "122
 [; ;vend.c: 122: {
 {
@@ -4317,9 +4323,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 134: }
 [e :UE 1526 ]
 }
+[v F10755 `(v ~T0 @X0 1 tf1`uc ]
 "136
 [; ;vend.c: 136: void credit_subtract(uint8_t credit)
-[v _credit_subtract `(v ~T0 @X0 1 ef1`uc ]
+[v _credit_subtract `AF10755 ~T0 @X0 1 e ]
 "137
 [; ;vend.c: 137: {
 {
@@ -4362,9 +4369,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 147: }
 [e :UE 1528 ]
 }
+[v F10758 `(uc ~T0 @X0 1 tf ]
 "149
 [; ;vend.c: 149: uint8_t credit_check(void)
-[v _credit_check `(uc ~T0 @X0 1 ef ]
+[v _credit_check `AF10758 ~T0 @X0 1 e ]
 "150
 [; ;vend.c: 150: {
 {
@@ -4381,9 +4389,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 153: }
 [e :UE 1530 ]
 }
+[v F10760 `(uc ~T0 @X0 1 tf ]
 "155
 [; ;vend.c: 155: uint8_t butindb(void)
-[v _butindb `(uc ~T0 @X0 1 ef ]
+[v _butindb `AF10760 ~T0 @X0 1 e ]
 "156
 [; ;vend.c: 156: {
 {
@@ -4440,9 +4449,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 170: }
 [e :UE 1531 ]
 }
+[v F10764 `(uc ~T0 @X0 1 tf ]
 "172
 [; ;vend.c: 172: uint8_t butin(void)
-[v _butin `(uc ~T0 @X0 1 ef ]
+[v _butin `AF10764 ~T0 @X0 1 e ]
 "173
 [; ;vend.c: 173: {
 {
@@ -4487,9 +4497,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 187: }
 [e :UE 1536 ]
 }
+[v F10767 `(v ~T0 @X0 1 tf ]
 "189
 [; ;vend.c: 189: void setup(void)
-[v _setup `(v ~T0 @X0 1 ef ]
+[v _setup `AF10767 ~T0 @X0 1 e ]
 "190
 [; ;vend.c: 190: {
 {
@@ -4499,9 +4510,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 192: }
 [e :UE 1537 ]
 }
+[v F10769 `(v ~T0 @X0 1 tf ]
 "194
 [; ;vend.c: 194: void Audit(void)
-[v _Audit `(v ~T0 @X0 1 ef ]
+[v _Audit `AF10769 ~T0 @X0 1 e ]
 "195
 [; ;vend.c: 195: {
 {
@@ -4616,9 +4628,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 226: }
 [e :UE 1538 ]
 }
+[v F10772 `(v ~T0 @X0 1 tf ]
 "228
 [; ;vend.c: 228: void Clear_Totals(void)
-[v _Clear_Totals `(v ~T0 @X0 1 ef ]
+[v _Clear_Totals `AF10772 ~T0 @X0 1 e ]
 "229
 [; ;vend.c: 229: {
 {
@@ -4656,9 +4669,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 237: }
 [e :UE 1547 ]
 }
+[v F10775 `(v ~T0 @X0 1 tf ]
 "239
 [; ;vend.c: 239: void Hopper_coin(void)
-[v _Hopper_coin `(v ~T0 @X0 1 ef ]
+[v _Hopper_coin `AF10775 ~T0 @X0 1 e ]
 "240
 [; ;vend.c: 240: {
 {
@@ -4751,9 +4765,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 263: }
 [e :UE 1551 ]
 }
+[v F10778 `(v ~T0 @X0 1 tf2`uc`uc ]
 "265
 [; ;vend.c: 265: void Update_Hopcoin(uint8_t newval, uint8_t direction)
-[v _Update_Hopcoin `(v ~T0 @X0 1 ef2`uc`uc ]
+[v _Update_Hopcoin `AF10778 ~T0 @X0 1 e ]
 "266
 [; ;vend.c: 266: {
 {
@@ -4891,9 +4906,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 304: }
 [e :UE 1560 ]
 }
+[v F10782 `(uc ~T0 @X0 1 tf ]
 "306
 [; ;vend.c: 306: uint8_t Read_Service(void)
-[v _Read_Service `(uc ~T0 @X0 1 ef ]
+[v _Read_Service `AF10782 ~T0 @X0 1 e ]
 "307
 [; ;vend.c: 307: {
 {
@@ -4920,9 +4936,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 313: }
 [e :UE 1573 ]
 }
+[v F10785 `(v ~T0 @X0 1 tf ]
 "315
 [; ;vend.c: 315: void Sensor_set(void)
-[v _Sensor_set `(v ~T0 @X0 1 ef ]
+[v _Sensor_set `AF10785 ~T0 @X0 1 e ]
 "316
 [; ;vend.c: 316: {
 {
@@ -4966,7 +4983,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "332
 [; ;vend.c: 332:             case 0x01 : DAC1CON1 = (sensorval++) & 0x1F;
 [e :U 1580 ]
-[e = _DAC1CON1 -> & -> ++ _sensorval -> -> 1 `i `Vuc `i -> 31 `i `uc ]
+[e = _DAC1CON1 -> & -> ++ _sensorval -> -> 1 `i `VAuc `i -> 31 `i `uc ]
 "333
 [; ;vend.c: 333:             displ_sens(senspos, dacpos);
 [e ( _displ_sens (2 , _senspos _dacpos ]
@@ -4976,7 +4993,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "335
 [; ;vend.c: 335:             case 0x02 : DAC1CON1 = (sensorval--) & 0x1F;
 [e :U 1581 ]
-[e = _DAC1CON1 -> & -> -- _sensorval -> -> 1 `i `Vuc `i -> 31 `i `uc ]
+[e = _DAC1CON1 -> & -> -- _sensorval -> -> 1 `i `VAuc `i -> 31 `i `uc ]
 "336
 [; ;vend.c: 336:             displ_sens(senspos, dacpos);
 [e ( _displ_sens (2 , _senspos _dacpos ]
@@ -5028,9 +5045,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 347: }
 [e :UE 1574 ]
 }
+[v F10788 `(v ~T0 @X0 1 tf ]
 "349
 [; ;vend.c: 349: void Clear_cred(void)
-[v _Clear_cred `(v ~T0 @X0 1 ef ]
+[v _Clear_cred `AF10788 ~T0 @X0 1 e ]
 "350
 [; ;vend.c: 350: {
 {
@@ -5055,9 +5073,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 356: }
 [e :UE 1584 ]
 }
+[v F10790 `(v ~T0 @X0 1 tf ]
 "359
 [; ;vend.c: 359: void price_set(void)
-[v _price_set `(v ~T0 @X0 1 ef ]
+[v _price_set `AF10790 ~T0 @X0 1 e ]
 "360
 [; ;vend.c: 360: {
 {
@@ -5123,9 +5142,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 377: }
 [e :UE 1585 ]
 }
+[v F10792 `(uc ~T0 @X0 1 tf1`uc ]
 "379
 [; ;vend.c: 379: uint8_t get_channel(uint8_t butons)
-[v _get_channel `(uc ~T0 @X0 1 ef1`uc ]
+[v _get_channel `AF10792 ~T0 @X0 1 e ]
 "380
 [; ;vend.c: 380: {
 {
@@ -5148,7 +5168,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "385
 [; ;vend.c: 385:         channel++;
-[e ++ _channel -> -> 1 `i `Vuc ]
+[e ++ _channel -> -> 1 `i `VAuc ]
 "386
 [; ;vend.c: 386:         butons = butons >> 1;
 [e = _butons -> >> -> _butons `i -> 1 `i `uc ]
@@ -5162,7 +5182,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1594 ]
 "388
 [; ;vend.c: 388:     channel--;
-[e -- _channel -> -> 1 `i `Vuc ]
+[e -- _channel -> -> 1 `i `VAuc ]
 "389
 [; ;vend.c: 389:     return channel;
 [e ) _channel ]
@@ -5171,9 +5191,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 390: }
 [e :UE 1591 ]
 }
+[v F10795 `(v ~T0 @X0 1 tf1`uc ]
 "392
 [; ;vend.c: 392: void set_price(uint8_t buttons)
-[v _set_price `(v ~T0 @X0 1 ef1`uc ]
+[v _set_price `AF10795 ~T0 @X0 1 e ]
 "393
 [; ;vend.c: 393: {
 {
@@ -5216,7 +5237,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "405
 [; ;vend.c: 405:             case 0x01 : vendprice++;
 [e :U 1601 ]
-[e ++ _vendprice -> -> 1 `i `Vuc ]
+[e ++ _vendprice -> -> 1 `i `VAuc ]
 "406
 [; ;vend.c: 406:             DATAEE_WriteByte(pricestore + channel, vendprice);
 [e ( _DATAEE_WriteByte (2 , -> + -> _pricestore `ui -> _channel `ui `us _vendprice ]
@@ -5229,7 +5250,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "409
 [; ;vend.c: 409:             case 0x02 : vendprice--;
 [e :U 1602 ]
-[e -- _vendprice -> -> 1 `i `Vuc ]
+[e -- _vendprice -> -> 1 `i `VAuc ]
 "410
 [; ;vend.c: 410:             DATAEE_WriteByte(pricestore + channel, vendprice);
 [e ( _DATAEE_WriteByte (2 , -> + -> _pricestore `ui -> _channel `ui `us _vendprice ]
@@ -5274,9 +5295,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 422: }
 [e :UE 1595 ]
 }
+[v F10799 `(v ~T0 @X0 1 tf ]
 "425
 [; ;vend.c: 425: void Vend_setup(void)
-[v _Vend_setup `(v ~T0 @X0 1 ef ]
+[v _Vend_setup `AF10799 ~T0 @X0 1 e ]
 "426
 [; ;vend.c: 426: {
 {
@@ -5389,9 +5411,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 455: }
 [e :UE 1604 ]
 }
+[v F10801 `(v ~T0 @X0 1 tf ]
 "457
 [; ;vend.c: 457: void Vend_settime(void)
-[v _Vend_settime `(v ~T0 @X0 1 ef ]
+[v _Vend_settime `AF10801 ~T0 @X0 1 e ]
 "458
 [; ;vend.c: 458: {
 {
@@ -5454,9 +5477,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 477: }
 [e :UE 1616 ]
 }
+[v F10803 `(v ~T0 @X0 1 tf1`uc ]
 "480
 [; ;vend.c: 480: void Vend_timeset(uint8_t channel)
-[v _Vend_timeset `(v ~T0 @X0 1 ef1`uc ]
+[v _Vend_timeset `AF10803 ~T0 @X0 1 e ]
 "481
 [; ;vend.c: 481: {
 {
@@ -5554,9 +5578,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 505: }
 [e :UE 1622 ]
 }
+[v F10807 `(v ~T0 @X0 1 tf ]
 "507
 [; ;vend.c: 507: void Chan_link(void)
-[v _Chan_link `(v ~T0 @X0 1 ef ]
+[v _Chan_link `AF10807 ~T0 @X0 1 e ]
 "508
 [; ;vend.c: 508: {
 {
@@ -5619,9 +5644,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 526: }
 [e :UE 1631 ]
 }
+[v F10809 `(v ~T0 @X0 1 tf1`uc ]
 "528
 [; ;vend.c: 528: void Link_chan(uint8_t channel)
-[v _Link_chan `(v ~T0 @X0 1 ef1`uc ]
+[v _Link_chan `AF10809 ~T0 @X0 1 e ]
 "529
 [; ;vend.c: 529: {
 {
@@ -5731,9 +5757,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 559: }
 [e :UE 1637 ]
 }
+[v F10814 `(v ~T0 @X0 1 tf ]
 "562
 [; ;vend.c: 562: void Sens_off(void)
-[v _Sens_off `(v ~T0 @X0 1 ef ]
+[v _Sens_off `AF10814 ~T0 @X0 1 e ]
 "563
 [; ;vend.c: 563: {
 {
@@ -5820,9 +5847,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 587: }
 [e :UE 1647 ]
 }
+[v F10816 `(v ~T0 @X0 1 tf1`uc ]
 "589
 [; ;vend.c: 589: void off_sens(uint8_t channel)
-[v _off_sens `(v ~T0 @X0 1 ef1`uc ]
+[v _off_sens `AF10816 ~T0 @X0 1 e ]
 "590
 [; ;vend.c: 590: {
 {
@@ -5921,9 +5949,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 616: }
 [e :UE 1656 ]
 }
+[v F10821 `(v ~T0 @X0 1 tf ]
 "618
 [; ;vend.c: 618: void Reset_settings(void)
-[v _Reset_settings `(v ~T0 @X0 1 ef ]
+[v _Reset_settings `AF10821 ~T0 @X0 1 e ]
 "619
 [; ;vend.c: 619: {
 {

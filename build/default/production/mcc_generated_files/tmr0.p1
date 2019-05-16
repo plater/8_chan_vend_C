@@ -1,13 +1,13 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "26931 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 26931: extern volatile unsigned char T0CON1 __attribute__((address(0xFD6)));
-[v _T0CON1 `Vuc ~T0 @X0 0 e@4054 ]
+[v _T0CON1 `VAuc ~T0 @X0 0 e@4054 ]
 "26612
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 26612: extern volatile unsigned char TMR0H __attribute__((address(0xFD4)));
-[v _TMR0H `Vuc ~T0 @X0 0 e@4052 ]
+[v _TMR0H `VAuc ~T0 @X0 0 e@4052 ]
 "26474
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 26474: extern volatile unsigned char TMR0L __attribute__((address(0xFD3)));
-[v _TMR0L `Vuc ~T0 @X0 0 e@4051 ]
+[v _TMR0L `VAuc ~T0 @X0 0 e@4051 ]
 "4797
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 4797:     struct {
 [s S305 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -18,10 +18,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S304 . . ]
 "4806
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 4806: extern volatile PIR0bits_t PIR0bits __attribute__((address(0xECA)));
-[v _PIR0bits `VS304 ~T0 @X0 0 e@3786 ]
+[v _PIR0bits `VAS304 ~T0 @X0 0 e@3786 ]
 "26866
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 26866: extern volatile unsigned char T0CON0 __attribute__((address(0xFD5)));
-[v _T0CON0 `Vuc ~T0 @X0 0 e@4053 ]
+[v _T0CON0 `VAuc ~T0 @X0 0 e@4053 ]
 "26872
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 26872:     struct {
 [s S1397 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -36,7 +36,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S1396 . . . ]
 "26886
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 26886: extern volatile T0CON0bits_t T0CON0bits __attribute__((address(0xFD5)));
-[v _T0CON0bits `VS1396 ~T0 @X0 0 e@4053 ]
+[v _T0CON0bits `VAS1396 ~T0 @X0 0 e@4053 ]
 "54 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 54: __asm("RX2PPS equ 0E8Dh");
 [; <" RX2PPS equ 0E8Dh ;# ">
@@ -1425,10 +1425,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSU equ 0FFFh ;# ">
 "57 mcc_generated_files/tmr0.c
 [; ;mcc_generated_files/tmr0.c: 57: volatile uint16_t timer0ReloadVal16bit;
-[v _timer0ReloadVal16bit `Vus ~T0 @X0 1 e ]
+[v _timer0ReloadVal16bit `VAus ~T0 @X0 1 e ]
+[v F10055 `(v ~T0 @X0 1 tf ]
 "64
 [; ;mcc_generated_files/tmr0.c: 64: void TMR0_Initialize(void)
-[v _TMR0_Initialize `(v ~T0 @X0 1 ef ]
+[v _TMR0_Initialize `AF10055 ~T0 @X0 1 e ]
 "65
 [; ;mcc_generated_files/tmr0.c: 65: {
 {
@@ -1456,9 +1457,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr0.c: 85: }
 [e :UE 1490 ]
 }
+[v F10057 `(v ~T0 @X0 1 tf ]
 "87
 [; ;mcc_generated_files/tmr0.c: 87: void TMR0_StartTimer(void)
-[v _TMR0_StartTimer `(v ~T0 @X0 1 ef ]
+[v _TMR0_StartTimer `AF10057 ~T0 @X0 1 e ]
 "88
 [; ;mcc_generated_files/tmr0.c: 88: {
 {
@@ -1471,9 +1473,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr0.c: 91: }
 [e :UE 1491 ]
 }
+[v F10059 `(v ~T0 @X0 1 tf ]
 "93
 [; ;mcc_generated_files/tmr0.c: 93: void TMR0_StopTimer(void)
-[v _TMR0_StopTimer `(v ~T0 @X0 1 ef ]
+[v _TMR0_StopTimer `AF10059 ~T0 @X0 1 e ]
 "94
 [; ;mcc_generated_files/tmr0.c: 94: {
 {
@@ -1486,9 +1489,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr0.c: 97: }
 [e :UE 1492 ]
 }
+[v F10061 `(us ~T0 @X0 1 tf ]
 "99
 [; ;mcc_generated_files/tmr0.c: 99: uint16_t TMR0_Read16bitTimer(void)
-[v _TMR0_Read16bitTimer `(us ~T0 @X0 1 ef ]
+[v _TMR0_Read16bitTimer `AF10061 ~T0 @X0 1 e ]
 "100
 [; ;mcc_generated_files/tmr0.c: 100: {
 {
@@ -1520,9 +1524,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr0.c: 110: }
 [e :UE 1493 ]
 }
+[v F10066 `(v ~T0 @X0 1 tf1`us ]
 "112
 [; ;mcc_generated_files/tmr0.c: 112: void TMR0_Write16bitTimer(uint16_t timerVal)
-[v _TMR0_Write16bitTimer `(v ~T0 @X0 1 ef1`us ]
+[v _TMR0_Write16bitTimer `AF10066 ~T0 @X0 1 e ]
 "113
 [; ;mcc_generated_files/tmr0.c: 113: {
 {
@@ -1543,9 +1548,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr0.c: 117: }
 [e :UE 1494 ]
 }
+[v F10069 `(v ~T0 @X0 1 tf ]
 "119
 [; ;mcc_generated_files/tmr0.c: 119: void TMR0_Reload16bit(void)
-[v _TMR0_Reload16bit `(v ~T0 @X0 1 ef ]
+[v _TMR0_Reload16bit `AF10069 ~T0 @X0 1 e ]
 "120
 [; ;mcc_generated_files/tmr0.c: 120: {
 {
@@ -1561,9 +1567,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr0.c: 124: }
 [e :UE 1495 ]
 }
+[v F10071 `(a ~T0 @X0 1 tf ]
 "126
 [; ;mcc_generated_files/tmr0.c: 126: _Bool TMR0_HasOverflowOccured(void)
-[v _TMR0_HasOverflowOccured `(a ~T0 @X0 1 ef ]
+[v _TMR0_HasOverflowOccured `AF10071 ~T0 @X0 1 e ]
 "127
 [; ;mcc_generated_files/tmr0.c: 127: {
 {

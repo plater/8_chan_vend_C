@@ -1,19 +1,19 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "24104 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 24104: extern volatile unsigned char T5GCON __attribute__((address(0xFC4)));
-[v _T5GCON `Vuc ~T0 @X0 0 e@4036 ]
+[v _T5GCON `VAuc ~T0 @X0 0 e@4036 ]
 "24336
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 24336: extern volatile unsigned char T5GATE __attribute__((address(0xFC5)));
-[v _T5GATE `Vuc ~T0 @X0 0 e@4037 ]
+[v _T5GATE `VAuc ~T0 @X0 0 e@4037 ]
 "24478
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 24478: extern volatile unsigned char T5CLK __attribute__((address(0xFC6)));
-[v _T5CLK `Vuc ~T0 @X0 0 e@4038 ]
+[v _T5CLK `VAuc ~T0 @X0 0 e@4038 ]
 "23870
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 23870: extern volatile unsigned char TMR5H __attribute__((address(0xFC2)));
-[v _TMR5H `Vuc ~T0 @X0 0 e@4034 ]
+[v _TMR5H `VAuc ~T0 @X0 0 e@4034 ]
 "23700
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 23700: extern volatile unsigned char TMR5L __attribute__((address(0xFC1)));
-[v _TMR5L `Vuc ~T0 @X0 0 e@4033 ]
+[v _TMR5L `VAuc ~T0 @X0 0 e@4033 ]
 "5016
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 5016:     struct {
 [s S316 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -24,10 +24,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S315 . . ]
 "5025
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 5025: extern volatile PIR4bits_t PIR4bits __attribute__((address(0xECE)));
-[v _PIR4bits `VS315 ~T0 @X0 0 e@3790 ]
+[v _PIR4bits `VAS315 ~T0 @X0 0 e@3790 ]
 "23990
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 23990: extern volatile unsigned char T5CON __attribute__((address(0xFC3)));
-[v _T5CON `Vuc ~T0 @X0 0 e@4035 ]
+[v _T5CON `VAuc ~T0 @X0 0 e@4035 ]
 "23996
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 23996:     struct {
 [s S1258 :2 `uc 1 :1 `uc 1 ]
@@ -58,7 +58,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S1257 . . . . . . . ]
 "24029
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 24029: extern volatile T5CONbits_t T5CONbits __attribute__((address(0xFC3)));
-[v _T5CONbits `VS1257 ~T0 @X0 0 e@4035 ]
+[v _T5CONbits `VAS1257 ~T0 @X0 0 e@4035 ]
 "24115
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 24115:     struct {
 [s S1265 :3 `uc 1 :1 `uc 1 ]
@@ -85,7 +85,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S1264 . . . . . . ]
 "24146
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 24146: extern volatile T5GCONbits_t T5GCONbits __attribute__((address(0xFC4)));
-[v _T5GCONbits `VS1264 ~T0 @X0 0 e@4036 ]
+[v _T5GCONbits `VAS1264 ~T0 @X0 0 e@4036 ]
 "54 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 54: __asm("RX2PPS equ 0E8Dh");
 [; <" RX2PPS equ 0E8Dh ;# ">
@@ -1474,10 +1474,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSU equ 0FFFh ;# ">
 "56 mcc_generated_files/tmr5.c
 [; ;mcc_generated_files/tmr5.c: 56: volatile uint16_t timer5ReloadVal;
-[v _timer5ReloadVal `Vus ~T0 @X0 1 e ]
+[v _timer5ReloadVal `VAus ~T0 @X0 1 e ]
+[v F10057 `(v ~T0 @X0 1 tf ]
 "62
 [; ;mcc_generated_files/tmr5.c: 62: void TMR5_Initialize(void)
-[v _TMR5_Initialize `(v ~T0 @X0 1 ef ]
+[v _TMR5_Initialize `AF10057 ~T0 @X0 1 e ]
 "63
 [; ;mcc_generated_files/tmr5.c: 63: {
 {
@@ -1511,9 +1512,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr5.c: 89: }
 [e :UE 1490 ]
 }
+[v F10059 `(v ~T0 @X0 1 tf ]
 "91
 [; ;mcc_generated_files/tmr5.c: 91: void TMR5_StartTimer(void)
-[v _TMR5_StartTimer `(v ~T0 @X0 1 ef ]
+[v _TMR5_StartTimer `AF10059 ~T0 @X0 1 e ]
 "92
 [; ;mcc_generated_files/tmr5.c: 92: {
 {
@@ -1526,9 +1528,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr5.c: 95: }
 [e :UE 1491 ]
 }
+[v F10061 `(v ~T0 @X0 1 tf ]
 "97
 [; ;mcc_generated_files/tmr5.c: 97: void TMR5_StopTimer(void)
-[v _TMR5_StopTimer `(v ~T0 @X0 1 ef ]
+[v _TMR5_StopTimer `AF10061 ~T0 @X0 1 e ]
 "98
 [; ;mcc_generated_files/tmr5.c: 98: {
 {
@@ -1541,9 +1544,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr5.c: 101: }
 [e :UE 1492 ]
 }
+[v F10063 `(us ~T0 @X0 1 tf ]
 "103
 [; ;mcc_generated_files/tmr5.c: 103: uint16_t TMR5_ReadTimer(void)
-[v _TMR5_ReadTimer `(us ~T0 @X0 1 ef ]
+[v _TMR5_ReadTimer `AF10063 ~T0 @X0 1 e ]
 "104
 [; ;mcc_generated_files/tmr5.c: 104: {
 {
@@ -1578,9 +1582,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr5.c: 117: }
 [e :UE 1493 ]
 }
+[v F10068 `(v ~T0 @X0 1 tf1`us ]
 "119
 [; ;mcc_generated_files/tmr5.c: 119: void TMR5_WriteTimer(uint16_t timerVal)
-[v _TMR5_WriteTimer `(v ~T0 @X0 1 ef1`us ]
+[v _TMR5_WriteTimer `AF10068 ~T0 @X0 1 e ]
 "120
 [; ;mcc_generated_files/tmr5.c: 120: {
 {
@@ -1633,9 +1638,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr5.c: 139: }
 [e :UE 1494 ]
 }
+[v F10071 `(v ~T0 @X0 1 tf ]
 "141
 [; ;mcc_generated_files/tmr5.c: 141: void TMR5_Reload(void)
-[v _TMR5_Reload `(v ~T0 @X0 1 ef ]
+[v _TMR5_Reload `AF10071 ~T0 @X0 1 e ]
 "142
 [; ;mcc_generated_files/tmr5.c: 142: {
 {
@@ -1648,9 +1654,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr5.c: 144: }
 [e :UE 1497 ]
 }
+[v F10073 `(v ~T0 @X0 1 tf ]
 "146
 [; ;mcc_generated_files/tmr5.c: 146: void TMR5_StartSinglePulseAcquisition(void)
-[v _TMR5_StartSinglePulseAcquisition `(v ~T0 @X0 1 ef ]
+[v _TMR5_StartSinglePulseAcquisition `AF10073 ~T0 @X0 1 e ]
 "147
 [; ;mcc_generated_files/tmr5.c: 147: {
 {
@@ -1663,9 +1670,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr5.c: 149: }
 [e :UE 1498 ]
 }
+[v F10075 `(uc ~T0 @X0 1 tf ]
 "151
 [; ;mcc_generated_files/tmr5.c: 151: uint8_t TMR5_CheckGateValueStatus(void)
-[v _TMR5_CheckGateValueStatus `(uc ~T0 @X0 1 ef ]
+[v _TMR5_CheckGateValueStatus `AF10075 ~T0 @X0 1 e ]
 "152
 [; ;mcc_generated_files/tmr5.c: 152: {
 {
@@ -1679,9 +1687,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr5.c: 154: }
 [e :UE 1499 ]
 }
+[v F10077 `(a ~T0 @X0 1 tf ]
 "156
 [; ;mcc_generated_files/tmr5.c: 156: _Bool TMR5_HasOverflowOccured(void)
-[v _TMR5_HasOverflowOccured `(a ~T0 @X0 1 ef ]
+[v _TMR5_HasOverflowOccured `AF10077 ~T0 @X0 1 e ]
 "157
 [; ;mcc_generated_files/tmr5.c: 157: {
 {

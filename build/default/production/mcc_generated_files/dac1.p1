@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "10442 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 10442: extern volatile unsigned char DAC1CON0 __attribute__((address(0xF33)));
-[v _DAC1CON0 `Vuc ~T0 @X0 0 e@3891 ]
+[v _DAC1CON0 `VAuc ~T0 @X0 0 e@3891 ]
 "10543
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 10543: extern volatile unsigned char DAC1CON1 __attribute__((address(0xF34)));
-[v _DAC1CON1 `Vuc ~T0 @X0 0 e@3892 ]
+[v _DAC1CON1 `VAuc ~T0 @X0 0 e@3892 ]
 "54 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 54: __asm("RX2PPS equ 0E8Dh");
 [; <" RX2PPS equ 0E8Dh ;# ">
@@ -1391,9 +1391,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28207
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 28207: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+[v F10049 `(v ~T0 @X0 1 tf ]
 "57 mcc_generated_files/dac1.c
 [; ;mcc_generated_files/dac1.c: 57: void DAC1_Initialize(void)
-[v _DAC1_Initialize `(v ~T0 @X0 1 ef ]
+[v _DAC1_Initialize `AF10049 ~T0 @X0 1 e ]
 "58
 [; ;mcc_generated_files/dac1.c: 58: {
 {
@@ -1409,9 +1410,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/dac1.c: 63: }
 [e :UE 1490 ]
 }
+[v F10051 `(v ~T0 @X0 1 tf1`uc ]
 "65
 [; ;mcc_generated_files/dac1.c: 65: void DAC1_SetOutput(uint8_t inputData)
-[v _DAC1_SetOutput `(v ~T0 @X0 1 ef1`uc ]
+[v _DAC1_SetOutput `AF10051 ~T0 @X0 1 e ]
 "66
 [; ;mcc_generated_files/dac1.c: 66: {
 {

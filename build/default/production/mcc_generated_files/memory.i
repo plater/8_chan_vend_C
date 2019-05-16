@@ -16936,7 +16936,19 @@ uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
 # 52 "mcc_generated_files/memory.c" 2
-# 63 "mcc_generated_files/memory.c"
+
+__asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "5" "," "0" "," "0" "," "0" "," "0" "," "0" "," "0" "," "0");
+__asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0" "," "0" "," "0" "," "0" "," "0" "," "0" "," "0" "," "5");
+__asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "10" "," "15" "," "20" "," "25" "," "30" "," "35" "," "40" "," "0");
+__asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x07" "," "0" "," "0" "," "0" "," "0x02" "," "0" "," "0" "," "0");
+__asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x00" "," "0" "," "0" "," "0" "," "0x00" "," "0" "," "0" "," "0");
+__asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x00" "," "0" "," "0" "," "0" "," "0x00" "," "0" "," "0" "," "0");
+
+
+
+
+
+
 uint8_t FLASH_ReadByte(uint32_t flashAddr)
 {
  NVMCON1bits.NVMREG = 2;

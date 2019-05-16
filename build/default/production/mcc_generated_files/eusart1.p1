@@ -1,19 +1,19 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "20002 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 20002: extern volatile unsigned char BAUD1CON __attribute__((address(0xF9F)));
-[v _BAUD1CON `Vuc ~T0 @X0 0 e@3999 ]
+[v _BAUD1CON `VAuc ~T0 @X0 0 e@3999 ]
 "19273
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 19273: extern volatile unsigned char RC1STA __attribute__((address(0xF9D)));
-[v _RC1STA `Vuc ~T0 @X0 0 e@3997 ]
+[v _RC1STA `VAuc ~T0 @X0 0 e@3997 ]
 "19558
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 19558: extern volatile unsigned char TX1STA __attribute__((address(0xF9E)));
-[v _TX1STA `Vuc ~T0 @X0 0 e@3998 ]
+[v _TX1STA `VAuc ~T0 @X0 0 e@3998 ]
 "19149
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 19149: extern volatile unsigned char SP1BRGL __attribute__((address(0xF9B)));
-[v _SP1BRGL `Vuc ~T0 @X0 0 e@3995 ]
+[v _SP1BRGL `VAuc ~T0 @X0 0 e@3995 ]
 "19219
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 19219: extern volatile unsigned char SP1BRGH __attribute__((address(0xF9C)));
-[v _SP1BRGH `Vuc ~T0 @X0 0 e@3996 ]
+[v _SP1BRGH `VAuc ~T0 @X0 0 e@3996 ]
 "4938
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 4938:     struct {
 [s S313 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -28,7 +28,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S312 . . . ]
 "4955
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 4955: extern volatile PIR3bits_t PIR3bits __attribute__((address(0xECD)));
-[v _PIR3bits `VS312 ~T0 @X0 0 e@3789 ]
+[v _PIR3bits `VAS312 ~T0 @X0 0 e@3789 ]
 "19288
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 19288:     struct {
 [s S967 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -55,13 +55,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S966 . . . . . . ]
 "19314
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 19314: extern volatile RC1STAbits_t RC1STAbits __attribute__((address(0xF9D)));
-[v _RC1STAbits `VS966 ~T0 @X0 0 e@3997 ]
+[v _RC1STAbits `VAS966 ~T0 @X0 0 e@3997 ]
 "19034
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 19034: extern volatile unsigned char RC1REG __attribute__((address(0xF99)));
-[v _RC1REG `Vuc ~T0 @X0 0 e@3993 ]
+[v _RC1REG `VAuc ~T0 @X0 0 e@3993 ]
 "19088
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 19088: extern volatile unsigned char TX1REG __attribute__((address(0xF9A)));
-[v _TX1REG `Vuc ~T0 @X0 0 e@3994 ]
+[v _TX1REG `VAuc ~T0 @X0 0 e@3994 ]
 "54 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 54: __asm("RX2PPS equ 0E8Dh");
 [; <" RX2PPS equ 0E8Dh ;# ">
@@ -1448,9 +1448,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28207
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 28207: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+[v F10051 `(v ~T0 @X0 1 tf ]
 "53 mcc_generated_files/eusart1.c
 [; ;mcc_generated_files/eusart1.c: 53: void EUSART1_Initialize(void)
-[v _EUSART1_Initialize `(v ~T0 @X0 1 ef ]
+[v _EUSART1_Initialize `AF10051 ~T0 @X0 1 e ]
 "54
 [; ;mcc_generated_files/eusart1.c: 54: {
 {
@@ -1475,9 +1476,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/eusart1.c: 73: }
 [e :UE 1490 ]
 }
+[v F10053 `(uc ~T0 @X0 1 tf ]
 "75
 [; ;mcc_generated_files/eusart1.c: 75: uint8_t EUSART1_Read(void)
-[v _EUSART1_Read `(uc ~T0 @X0 1 ef ]
+[v _EUSART1_Read `AF10053 ~T0 @X0 1 e ]
 "76
 [; ;mcc_generated_files/eusart1.c: 76: {
 {
@@ -1522,9 +1524,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/eusart1.c: 91: }
 [e :UE 1491 ]
 }
+[v F10055 `(v ~T0 @X0 1 tf1`uc ]
 "93
 [; ;mcc_generated_files/eusart1.c: 93: void EUSART1_Write(uint8_t txData)
-[v _EUSART1_Write `(v ~T0 @X0 1 ef1`uc ]
+[v _EUSART1_Write `AF10055 ~T0 @X0 1 e ]
 "94
 [; ;mcc_generated_files/eusart1.c: 94: {
 {

@@ -1,16 +1,16 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "10835 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 10835: extern volatile unsigned char CM1CON0 __attribute__((address(0xF39)));
-[v _CM1CON0 `Vuc ~T0 @X0 0 e@3897 ]
+[v _CM1CON0 `VAuc ~T0 @X0 0 e@3897 ]
 "10915
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 10915: extern volatile unsigned char CM1CON1 __attribute__((address(0xF3A)));
-[v _CM1CON1 `Vuc ~T0 @X0 0 e@3898 ]
+[v _CM1CON1 `VAuc ~T0 @X0 0 e@3898 ]
 "10955
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 10955: extern volatile unsigned char CM1NCH __attribute__((address(0xF3B)));
-[v _CM1NCH `Vuc ~T0 @X0 0 e@3899 ]
+[v _CM1NCH `VAuc ~T0 @X0 0 e@3899 ]
 "11015
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 11015: extern volatile unsigned char CM1PCH __attribute__((address(0xF3C)));
-[v _CM1PCH `Vuc ~T0 @X0 0 e@3900 ]
+[v _CM1PCH `VAuc ~T0 @X0 0 e@3900 ]
 "11081
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 11081:     struct {
 [s S583 :1 `uc 1 :1 `uc 1 ]
@@ -21,7 +21,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S582 . . ]
 "11086
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 11086: extern volatile CMOUTbits_t CMOUTbits __attribute__((address(0xF3D)));
-[v _CMOUTbits `VS582 ~T0 @X0 0 e@3901 ]
+[v _CMOUTbits `VAS582 ~T0 @X0 0 e@3901 ]
 "54 /opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 54: __asm("RX2PPS equ 0E8Dh");
 [; <" RX2PPS equ 0E8Dh ;# ">
@@ -1408,9 +1408,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28207
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f47k40.h: 28207: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
+[v F10048 `(v ~T0 @X0 1 tf ]
 "57 mcc_generated_files/cmp1.c
 [; ;mcc_generated_files/cmp1.c: 57: void CMP1_Initialize(void)
-[v _CMP1_Initialize `(v ~T0 @X0 1 ef ]
+[v _CMP1_Initialize `AF10048 ~T0 @X0 1 e ]
 "58
 [; ;mcc_generated_files/cmp1.c: 58: {
 {
@@ -1432,9 +1433,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/cmp1.c: 72: }
 [e :UE 1490 ]
 }
+[v F10050 `(a ~T0 @X0 1 tf ]
 "74
 [; ;mcc_generated_files/cmp1.c: 74: _Bool CMP1_GetOutputStatus(void)
-[v _CMP1_GetOutputStatus `(a ~T0 @X0 1 ef ]
+[v _CMP1_GetOutputStatus `AF10050 ~T0 @X0 1 e ]
 "75
 [; ;mcc_generated_files/cmp1.c: 75: {
 {

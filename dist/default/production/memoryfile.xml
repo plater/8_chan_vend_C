@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production/8_chan_vend_reverted.production.hex">
+  <executable name="dist/default/production/8_chan_vend_C.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>131072</length>
-      <used>10344</used>
-      <free>120728</free>
+      <used>14718</used>
+      <free>116354</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
