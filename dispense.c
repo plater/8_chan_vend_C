@@ -41,7 +41,7 @@ bool price_check(void)
     //Turn on button lights for enabled channels.
     //Channel 1 to 4 = RB0 to RB3
     //Channel 5 to 8 = RD4 to RD7
-    LATCbits.LATC2 = 1;
+    asm("BSF LATC,2"); //LATCbits.LATC2 = 1;
     LATB = chanmask & 0x0F;
     LATD = chanmask & 0xF0;
     buttons = butin();
