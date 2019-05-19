@@ -3471,8 +3471,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 12 `i `uc
 ]
 "47
-[; ;./mdb.h: 47: uint8_t mdbdata[32];
-[v _mdbdata `uc ~T0 @X0 -> 32 `i e ]
+[; ;./mdb.h: 47: uint8_t mdbdata[33];
+[v _mdbdata `uc ~T0 @X0 -> 33 `i e ]
 "48
 [; ;./mdb.h: 48: uint8_t slvadd;
 [v _slvadd `uc ~T0 @X0 1 e ]

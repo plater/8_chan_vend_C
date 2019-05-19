@@ -17597,7 +17597,7 @@ const uint8_t note_rejected = 0x0B;
 const uint8_t theft_attempt = 0x0C;
 
 
-uint8_t mdbdata[32];
+uint8_t mdbdata[33];
 uint8_t slvadd;
 uint8_t mcount = 0;
 uint8_t notebyte;
@@ -18330,7 +18330,7 @@ void lcd_string(uint8_t *lcdstring, uint8_t lcdline)
 
         lcd_dispadd(lcdline | 0x80);
     }
-    for(stradd = 0; lcdstring[stradd] != 0; stradd++)
+    for(stradd = 0; lcdstring[stradd] >= 0x10; stradd++)
     {
         lcdata = lcdstring[stradd];
         lcd_writeC(lcdstring[stradd]);
