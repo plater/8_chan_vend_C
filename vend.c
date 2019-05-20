@@ -329,10 +329,10 @@ void Sensor_set(void)
         buttons = butindb();
         switch(buttons)
         {
-            case 0x01 : DAC1CON1 = (sensorval++) & 0x1F;
+            case 0x01 : DAC1CON1 = (++sensorval) & 0x1F;
             displ_sens(senspos, dacpos);
             break;
-            case 0x02 : DAC1CON1 = (sensorval--) & 0x1F;
+            case 0x02 : DAC1CON1 = (--sensorval) & 0x1F;
             displ_sens(senspos, dacpos);
             break;
             case 0x80 : mdbflags.endis = 0;

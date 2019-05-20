@@ -1480,9 +1480,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
 [; <" 	db	10,15,20,25,30,35,40,0 ;# ">
 "56
-[; ;mcc_generated_files/memory.c: 56: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x07" "," "0" "," "0" "," "0" "," "0x02" "," "0" "," "0" "," "0");
+[; ;mcc_generated_files/memory.c: 56: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x07" "," "4" "," "0" "," "0" "," "0x02" "," "0" "," "0" "," "0");
 [; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
-[; <" 	db	0x07,0,0,0,0x02,0,0,0 ;# ">
+[; <" 	db	0x07,4,0,0,0x02,0,0,0 ;# ">
 "57
 [; ;mcc_generated_files/memory.c: 57: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x00" "," "0" "," "0" "," "0" "," "0x00" "," "0" "," "6" "," "6");
 [; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">

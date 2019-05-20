@@ -59,8 +59,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./vend.h: 225: {
 [s S1504 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1504 . iscredit error inscoin nochange credisplay initialrun noterr service priceset setprice vendset chanlink mottime nosense settime sensno linkchan swclosed pricedisplay audit hiprice spare22 spare23 spare24 ]
-"20 ./hopper.h
-[; ;./hopper.h: 20: uint8_t hopper_pay(uint8_t change);
+"21 ./hopper.h
+[; ;./hopper.h: 21: uint8_t hopper_pay(uint8_t change);
 [v _hopper_pay `(uc ~T0 @X0 0 ef1`uc ]
 "258 ./vend.h
 [; ;./vend.h: 258: void credit_subtract(uint8_t credit);
@@ -74,14 +74,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "78 ./cctalk.h
 [; ;./cctalk.h: 78: void cctalk_on(void);
 [v _cctalk_on `(v ~T0 @X0 0 ef ]
-"22 ./hopper.h
-[; ;./hopper.h: 22: _Bool pay_coin(void);
+"23 ./hopper.h
+[; ;./hopper.h: 23: _Bool pay_coin(void);
 [v _pay_coin `(a ~T0 @X0 0 ef ]
 "77 ./cctalk.h
 [; ;./cctalk.h: 77: void cctalk_off(void);
 [v _cctalk_off `(v ~T0 @X0 0 ef ]
-"23 ./hopper.h
-[; ;./hopper.h: 23: void Update_coinsout(uint8_t coinsout);
+"24 ./hopper.h
+[; ;./hopper.h: 24: void Update_coinsout(uint8_t coinsout);
 [v _Update_coinsout `(v ~T0 @X0 0 ef1`uc ]
 "248 ./mcc_generated_files/memory.h
 [; ;./mcc_generated_files/memory.h: 248: void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
@@ -93,8 +93,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "306 ./mcc_generated_files/tmr4.h
 [; ;./mcc_generated_files/tmr4.h: 306: void TMR4_Initialize(void);
 [v _TMR4_Initialize `(v ~T0 @X0 0 ef ]
-"21 ./hopper.h
-[; ;./hopper.h: 21: _Bool switch_read(void);
+"22 ./hopper.h
+[; ;./hopper.h: 22: _Bool switch_read(void);
 [v _switch_read `(a ~T0 @X0 0 ef ]
 "306 ./mcc_generated_files/tmr2.h
 [; ;./mcc_generated_files/tmr2.h: 306: void TMR2_Initialize(void);
@@ -3874,7 +3874,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./hopper.h: 16: uint8_t outcoins;
 [v _outcoins `uc ~T0 @X0 1 e ]
 "17
-[; ;./hopper.h: 17: signed char hopercount = 3;
+[; ;./hopper.h: 17: uint8_t hoperrcode;
+[v _hoperrcode `uc ~T0 @X0 1 e ]
+"18
+[; ;./hopper.h: 18: signed char hopercount = 3;
 [v _hopercount `c ~T0 @X0 1 e ]
 [i _hopercount
 -> -> 3 `i `c
@@ -4104,28 +4107,31 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;hopper.c: 77: }
 [e :UE 1515 ]
 }
-"79
-[; ;hopper.c: 79:  _Bool pay_coin(void)
+"84
+[; ;hopper.c: 84:  _Bool pay_coin(void)
 [v _pay_coin `(a ~T0 @X0 1 ef ]
-"80
-[; ;hopper.c: 80: {
+"85
+[; ;hopper.c: 85: {
 {
 [e :U _pay_coin ]
 [f ]
-"82
-[; ;hopper.c: 82:     hopercount = 3;
+"87
+[; ;hopper.c: 87:     hoperrcode = 0;
+[e = _hoperrcode -> -> 0 `i `uc ]
+"89
+[; ;hopper.c: 89:     hopercount = 3;
 [e = _hopercount -> -> 3 `i `c ]
-"83
-[; ;hopper.c: 83:     if(switch_read())
+"90
+[; ;hopper.c: 90:     if(switch_read())
 [e $ ! != -> ( _switch_read ..  `i -> 0 `i 1519  ]
-"84
-[; ;hopper.c: 84:     {
+"91
+[; ;hopper.c: 91:     {
 {
-"85
-[; ;hopper.c: 85:         TMR2_Initialize();
+"92
+[; ;hopper.c: 92:         TMR2_Initialize();
 [e ( _TMR2_Initialize ..  ]
-"86
-[; ;hopper.c: 86:         while(switch_read() && !PIR4bits.TMR2IF){}
+"93
+[; ;hopper.c: 93:         while(switch_read() && !PIR4bits.TMR2IF){}
 [e $U 1520  ]
 [e :U 1521 ]
 {
@@ -4133,103 +4139,112 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1520 ]
 [e $ && != -> ( _switch_read ..  `i -> 0 `i ! != -> . . _PIR4bits 0 1 `i -> 0 `i 1521  ]
 [e :U 1522 ]
-"88
-[; ;hopper.c: 88:         if(PIR4bits.TMR2IF)
+"95
+[; ;hopper.c: 95:         if(PIR4bits.TMR2IF)
 [e $ ! != -> . . _PIR4bits 0 1 `i -> 0 `i 1523  ]
-"89
-[; ;hopper.c: 89:         {
+"96
+[; ;hopper.c: 96:         {
 {
-"91
-[; ;hopper.c: 91:             return 1;
+"97
+[; ;hopper.c: 97:             cctalk_off();
+[e ( _cctalk_off ..  ]
+"98
+[; ;hopper.c: 98:             hoperrcode = 1;
+[e = _hoperrcode -> -> 1 `i `uc ]
+"99
+[; ;hopper.c: 99:             return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1518  ]
-"92
-[; ;hopper.c: 92:         }
+"100
+[; ;hopper.c: 100:         }
 }
 [e $U 1524  ]
-"93
-[; ;hopper.c: 93:         else
+"101
+[; ;hopper.c: 101:         else
 [e :U 1523 ]
-"94
-[; ;hopper.c: 94:         {
+"102
+[; ;hopper.c: 102:         {
 {
-"95
-[; ;hopper.c: 95:             return 0;
+"103
+[; ;hopper.c: 103:             return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1518  ]
-"96
-[; ;hopper.c: 96:         }
+"104
+[; ;hopper.c: 104:         }
 }
 [e :U 1524 ]
-"97
-[; ;hopper.c: 97:     }
+"105
+[; ;hopper.c: 105:     }
 }
 [e $U 1525  ]
-"98
-[; ;hopper.c: 98:     else
+"106
+[; ;hopper.c: 106:     else
 [e :U 1519 ]
-"99
-[; ;hopper.c: 99:     {
+"107
+[; ;hopper.c: 107:     {
 {
-"100
-[; ;hopper.c: 100:         cctalk_on();
+"108
+[; ;hopper.c: 108:         cctalk_on();
 [e ( _cctalk_on ..  ]
-"101
-[; ;hopper.c: 101:         TMR4_Initialize();
+"109
+[; ;hopper.c: 109:         TMR4_Initialize();
 [e ( _TMR4_Initialize ..  ]
-"103
-[; ;hopper.c: 103:         while(!switch_read())
+"111
+[; ;hopper.c: 111:         while(!switch_read())
 [e $U 1526  ]
 [e :U 1527 ]
-"104
-[; ;hopper.c: 104:         {
+"112
+[; ;hopper.c: 112:         {
 {
-"105
-[; ;hopper.c: 105:             if(PIR4bits.TMR4IF)
+"113
+[; ;hopper.c: 113:             if(PIR4bits.TMR4IF)
 [e $ ! != -> . . _PIR4bits 0 3 `i -> 0 `i 1529  ]
-"106
-[; ;hopper.c: 106:             {
+"114
+[; ;hopper.c: 114:             {
 {
-"107
-[; ;hopper.c: 107:                 if(Reset_hopper())
+"115
+[; ;hopper.c: 115:                 if(Reset_hopper())
 [e $ ! != -> ( _Reset_hopper ..  `i -> 0 `i 1530  ]
-"108
-[; ;hopper.c: 108:                 {
+"116
+[; ;hopper.c: 116:                 {
 {
-"109
-[; ;hopper.c: 109:                     cctalk_off();
+"117
+[; ;hopper.c: 117:                     cctalk_off();
 [e ( _cctalk_off ..  ]
-"110
-[; ;hopper.c: 110:                     return 1;
+"118
+[; ;hopper.c: 118:                     hoperrcode = 2;
+[e = _hoperrcode -> -> 2 `i `uc ]
+"119
+[; ;hopper.c: 119:                     return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1518  ]
-"111
-[; ;hopper.c: 111:                 }
+"120
+[; ;hopper.c: 120:                 }
 }
 [e :U 1530 ]
-"113
-[; ;hopper.c: 113:             }
+"122
+[; ;hopper.c: 122:             }
 }
 [e :U 1529 ]
-"114
-[; ;hopper.c: 114:         }
+"123
+[; ;hopper.c: 123:         }
 }
 [e :U 1526 ]
-"103
-[; ;hopper.c: 103:         while(!switch_read())
+"111
+[; ;hopper.c: 111:         while(!switch_read())
 [e $ ! != -> ( _switch_read ..  `i -> 0 `i 1527  ]
 [e :U 1528 ]
-"115
-[; ;hopper.c: 115:         cctalk_off();
+"124
+[; ;hopper.c: 124:         cctalk_off();
 [e ( _cctalk_off ..  ]
-"116
-[; ;hopper.c: 116:         TMR2_Initialize();
+"125
+[; ;hopper.c: 125:         TMR2_Initialize();
 [e ( _TMR2_Initialize ..  ]
-"117
-[; ;hopper.c: 117:         cctalk_on();
+"126
+[; ;hopper.c: 126:         cctalk_on();
 [e ( _cctalk_on ..  ]
-"118
-[; ;hopper.c: 118:         while(switch_read() && !PIR4bits.TMR2IF){}
+"127
+[; ;hopper.c: 127:         while(switch_read() && !PIR4bits.TMR2IF){}
 [e $U 1531  ]
 [e :U 1532 ]
 {
@@ -4237,150 +4252,156 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 1531 ]
 [e $ && != -> ( _switch_read ..  `i -> 0 `i ! != -> . . _PIR4bits 0 1 `i -> 0 `i 1532  ]
 [e :U 1533 ]
-"119
-[; ;hopper.c: 119:         cctalk_off();
+"128
+[; ;hopper.c: 128:         cctalk_off();
 [e ( _cctalk_off ..  ]
-"120
-[; ;hopper.c: 120:         if(PIR4bits.TMR2IF)
+"129
+[; ;hopper.c: 129:         if(PIR4bits.TMR2IF)
 [e $ ! != -> . . _PIR4bits 0 1 `i -> 0 `i 1534  ]
-"121
-[; ;hopper.c: 121:         {
+"130
+[; ;hopper.c: 130:         {
 {
-"122
-[; ;hopper.c: 122:             return 1;
+"131
+[; ;hopper.c: 131:             hoperrcode = 3;
+[e = _hoperrcode -> -> 3 `i `uc ]
+"132
+[; ;hopper.c: 132:             return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1518  ]
-"123
-[; ;hopper.c: 123:         }
+"133
+[; ;hopper.c: 133:         }
 }
 [e $U 1535  ]
-"124
-[; ;hopper.c: 124:         else
+"134
+[; ;hopper.c: 134:         else
 [e :U 1534 ]
-"125
-[; ;hopper.c: 125:         {
+"135
+[; ;hopper.c: 135:         {
 {
-"126
-[; ;hopper.c: 126:             return 0;
+"136
+[; ;hopper.c: 136:             hoperrcode = 4;
+[e = _hoperrcode -> -> 4 `i `uc ]
+"137
+[; ;hopper.c: 137:             return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1518  ]
-"127
-[; ;hopper.c: 127:         }
+"138
+[; ;hopper.c: 138:         }
 }
 [e :U 1535 ]
-"128
-[; ;hopper.c: 128:     }
+"139
+[; ;hopper.c: 139:     }
 }
 [e :U 1525 ]
-"131
-[; ;hopper.c: 131: }
+"142
+[; ;hopper.c: 142: }
 [e :UE 1518 ]
 }
-"133
-[; ;hopper.c: 133: _Bool switch_read(void)
+"144
+[; ;hopper.c: 144: _Bool switch_read(void)
 [v _switch_read `(a ~T0 @X0 1 ef ]
-"134
-[; ;hopper.c: 134: {
+"145
+[; ;hopper.c: 145: {
 {
 [e :U _switch_read ]
 [f ]
-"135
-[; ;hopper.c: 135:     if(PORTCbits.RC4 == venflags.swclosed)
-[e $ ! == -> . . _PORTCbits 0 4 `i -> . _venflags 17 `i 1537  ]
-"136
-[; ;hopper.c: 136:     {
-{
-"137
-[; ;hopper.c: 137:         if(venflags.swclosed)
-[e $ ! != -> . _venflags 17 `i -> 0 `i 1538  ]
-"138
-[; ;hopper.c: 138:         {
-{
-"139
-[; ;hopper.c: 139:             _delay((unsigned long)((5)*(12000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
-"140
-[; ;hopper.c: 140:         }
-}
-[e $U 1539  ]
-"141
-[; ;hopper.c: 141:         else
-[e :U 1538 ]
-"142
-[; ;hopper.c: 142:         {
-{
-"143
-[; ;hopper.c: 143:             _delay((unsigned long)((20)*(12000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
-"144
-[; ;hopper.c: 144:         }
-}
-[e :U 1539 ]
-"145
-[; ;hopper.c: 145:     }
-}
-[e :U 1537 ]
 "146
-[; ;hopper.c: 146:     if(PORTCbits.RC4)
-[e $ ! != -> . . _PORTCbits 0 4 `i -> 0 `i 1540  ]
+[; ;hopper.c: 146:     if(PORTCbits.RC4 == venflags.swclosed)
+[e $ ! == -> . . _PORTCbits 0 4 `i -> . _venflags 17 `i 1537  ]
 "147
 [; ;hopper.c: 147:     {
 {
 "148
-[; ;hopper.c: 148:         venflags.swclosed = 0;
-[e = . _venflags 17 -> -> 0 `i `uc ]
+[; ;hopper.c: 148:         if(venflags.swclosed)
+[e $ ! != -> . _venflags 17 `i -> 0 `i 1538  ]
 "149
-[; ;hopper.c: 149:         return 0;
+[; ;hopper.c: 149:         {
+{
+"150
+[; ;hopper.c: 150:             _delay((unsigned long)((5)*(12000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
+"151
+[; ;hopper.c: 151:         }
+}
+[e $U 1539  ]
+"152
+[; ;hopper.c: 152:         else
+[e :U 1538 ]
+"153
+[; ;hopper.c: 153:         {
+{
+"154
+[; ;hopper.c: 154:             _delay((unsigned long)((20)*(12000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
+"155
+[; ;hopper.c: 155:         }
+}
+[e :U 1539 ]
+"156
+[; ;hopper.c: 156:     }
+}
+[e :U 1537 ]
+"157
+[; ;hopper.c: 157:     if(PORTCbits.RC4)
+[e $ ! != -> . . _PORTCbits 0 4 `i -> 0 `i 1540  ]
+"158
+[; ;hopper.c: 158:     {
+{
+"159
+[; ;hopper.c: 159:         venflags.swclosed = 0;
+[e = . _venflags 17 -> -> 0 `i `uc ]
+"160
+[; ;hopper.c: 160:         return 0;
 [e ) -> -> 0 `i `a ]
 [e $UE 1536  ]
-"150
-[; ;hopper.c: 150:     }
+"161
+[; ;hopper.c: 161:     }
 }
 [e $U 1541  ]
-"151
-[; ;hopper.c: 151:     else
+"162
+[; ;hopper.c: 162:     else
 [e :U 1540 ]
-"152
-[; ;hopper.c: 152:     {
+"163
+[; ;hopper.c: 163:     {
 {
-"153
-[; ;hopper.c: 153:         venflags.swclosed = 1;
+"164
+[; ;hopper.c: 164:         venflags.swclosed = 1;
 [e = . _venflags 17 -> -> 1 `i `uc ]
-"154
-[; ;hopper.c: 154:         return 1;
+"165
+[; ;hopper.c: 165:         return 1;
 [e ) -> -> 1 `i `a ]
 [e $UE 1536  ]
-"155
-[; ;hopper.c: 155:     }
+"166
+[; ;hopper.c: 166:     }
 }
 [e :U 1541 ]
-"156
-[; ;hopper.c: 156: }
+"167
+[; ;hopper.c: 167: }
 [e :UE 1536 ]
 }
-"158
-[; ;hopper.c: 158: void Update_coinsout(uint8_t coinsout)
+"169
+[; ;hopper.c: 169: void Update_coinsout(uint8_t coinsout)
 [v _Update_coinsout `(v ~T0 @X0 1 ef1`uc ]
-"159
-[; ;hopper.c: 159: {
+"170
+[; ;hopper.c: 170: {
 {
 [e :U _Update_coinsout ]
-"158
-[; ;hopper.c: 158: void Update_coinsout(uint8_t coinsout)
+"169
+[; ;hopper.c: 169: void Update_coinsout(uint8_t coinsout)
 [v _coinsout `uc ~T0 @X0 1 r1 ]
-"159
-[; ;hopper.c: 159: {
+"170
+[; ;hopper.c: 170: {
 [f ]
-"160
-[; ;hopper.c: 160:     Read_NVstore(cashoutv, ((uint8_t*) &pvcash), 0x02);
+"171
+[; ;hopper.c: 171:     Read_NVstore(cashoutv, ((uint8_t*) &pvcash), 0x02);
 [e ( _Read_NVstore (3 , , _cashoutv -> &U _pvcash `*uc -> -> 2 `i `uc ]
-"161
-[; ;hopper.c: 161:     pvcash = pvcash + (uint16_t)coinsout;
+"172
+[; ;hopper.c: 172:     pvcash = pvcash + (uint16_t)coinsout;
 [e = _pvcash -> + -> _pvcash `ui -> -> _coinsout `us `ui `us ]
-"162
-[; ;hopper.c: 162:     Write_NVstore(cashoutv, ((uint8_t*) &pvcash), 0x02);
+"173
+[; ;hopper.c: 173:     Write_NVstore(cashoutv, ((uint8_t*) &pvcash), 0x02);
 [e ( _Write_NVstore (3 , , _cashoutv -> &U _pvcash `*uc -> -> 2 `i `uc ]
-"163
-[; ;hopper.c: 163: }
+"174
+[; ;hopper.c: 174: }
 [e :UE 1542 ]
 }

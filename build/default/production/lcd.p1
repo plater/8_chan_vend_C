@@ -3574,7 +3574,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./hopper.h: 16: uint8_t outcoins;
 [v _outcoins `uc ~T0 @X0 1 e ]
 "17
-[; ;./hopper.h: 17: signed char hopercount = 3;
+[; ;./hopper.h: 17: uint8_t hoperrcode;
+[v _hoperrcode `uc ~T0 @X0 1 e ]
+"18
+[; ;./hopper.h: 18: signed char hopercount = 3;
 [v _hopercount `c ~T0 @X0 1 e ]
 [i _hopercount
 -> -> 3 `i `c

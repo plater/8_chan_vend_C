@@ -429,12 +429,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "66
 [; ;/opt/microchip/xc8/v2.00/pic/include/pic18f47k40.h: 66: extern volatile RX2PPSbits_t RX2PPSbits __attribute__((address(0xE8D)));
 [v _RX2PPSbits `VS6 ~T0 @X0 0 e@3725 ]
-"91 ./mcc_generated_files/cmp1.h
-[; ;./mcc_generated_files/cmp1.h: 91: void CMP1_Initialize(void);
-[v _CMP1_Initialize `(v ~T0 @X0 0 ef ]
-"92 ./mcc_generated_files/dac1.h
-[; ;./mcc_generated_files/dac1.h: 92: void DAC1_Initialize(void);
-[v _DAC1_Initialize `(v ~T0 @X0 0 ef ]
 "99 ./mcc_generated_files/tmr5.h
 [; ;./mcc_generated_files/tmr5.h: 99: void TMR5_Initialize(void);
 [v _TMR5_Initialize `(v ~T0 @X0 0 ef ]
@@ -3733,7 +3727,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./hopper.h: 16: uint8_t outcoins;
 [v _outcoins `uc ~T0 @X0 1 e ]
 "17
-[; ;./hopper.h: 17: signed char hopercount = 3;
+[; ;./hopper.h: 17: uint8_t hoperrcode;
+[v _hoperrcode `uc ~T0 @X0 1 e ]
+"18
+[; ;./hopper.h: 18: signed char hopercount = 3;
 [v _hopercount `c ~T0 @X0 1 e ]
 [i _hopercount
 -> -> 3 `i `c
@@ -5243,8 +5240,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mdb.c: 389:     TRISB = 0xD0;
 [e = _TRISB -> -> 208 `i `uc ]
 "390
-[; ;mdb.c: 390:     TRISC = 0x80;
-[e = _TRISC -> -> 128 `i `uc ]
+[; ;mdb.c: 390:     TRISC = 0x90;
+[e = _TRISC -> -> 144 `i `uc ]
 "391
 [; ;mdb.c: 391:     TRISD = 0x00;
 [e = _TRISD -> -> 0 `i `uc ]
@@ -5297,8 +5294,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mdb.c: 419:     LATC = 0x01;
 [e = _LATC -> -> 1 `i `uc ]
 "420
-[; ;mdb.c: 420:     TRISC = 0x80;
-[e = _TRISC -> -> 128 `i `uc ]
+[; ;mdb.c: 420:     TRISC = 0x90;
+[e = _TRISC -> -> 144 `i `uc ]
 "421
 [; ;mdb.c: 421:     ANSELC = 0x00;
 [e = _ANSELC -> -> 0 `i `uc ]
@@ -5330,44 +5327,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mdb.c: 431:     RX2PPSbits.RXPPS = 0x0;
 [e = . . _RX2PPSbits 1 0 -> -> 0 `i `uc ]
 "432
-[; ;mdb.c: 432:     CMP1_Initialize();
-[e ( _CMP1_Initialize ..  ]
-"433
-[; ;mdb.c: 433:     TMR3_Initialize();
+[; ;mdb.c: 432:     TMR3_Initialize();
 [e ( _TMR3_Initialize ..  ]
-"434
-[; ;mdb.c: 434:     DAC1_Initialize();
-[e ( _DAC1_Initialize ..  ]
-"435
-[; ;mdb.c: 435:     TMR5_Initialize();
+"433
+[; ;mdb.c: 433:     TMR5_Initialize();
 [e ( _TMR5_Initialize ..  ]
-"436
-[; ;mdb.c: 436:     TMR1_Initialize();
+"434
+[; ;mdb.c: 434:     TMR1_Initialize();
 [e ( _TMR1_Initialize ..  ]
-"438
-[; ;mdb.c: 438: }
+"436
+[; ;mdb.c: 436: }
 [e :UE 1594 ]
 }
-"440
-[; ;mdb.c: 440: void mdb_transmit(uint8_t txbyte)
+"438
+[; ;mdb.c: 438: void mdb_transmit(uint8_t txbyte)
 [v _mdb_transmit `(v ~T0 @X0 1 ef1`uc ]
-"441
-[; ;mdb.c: 441: {
+"439
+[; ;mdb.c: 439: {
 {
 [e :U _mdb_transmit ]
-"440
-[; ;mdb.c: 440: void mdb_transmit(uint8_t txbyte)
+"438
+[; ;mdb.c: 438: void mdb_transmit(uint8_t txbyte)
 [v _txbyte `uc ~T0 @X0 1 r1 ]
-"441
-[; ;mdb.c: 441: {
+"439
+[; ;mdb.c: 439: {
 [f ]
-"442
-[; ;mdb.c: 442:     EUSART1_Write(txbyte);
+"440
+[; ;mdb.c: 440:     EUSART1_Write(txbyte);
 [e ( _EUSART1_Write (1 _txbyte ]
-"443
-[; ;mdb.c: 443:     mdb_waitx();
+"441
+[; ;mdb.c: 441:     mdb_waitx();
 [e ( _mdb_waitx ..  ]
-"444
-[; ;mdb.c: 444: }
+"442
+[; ;mdb.c: 442: }
 [e :UE 1595 ]
 }

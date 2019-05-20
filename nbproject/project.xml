@@ -36,6 +36,8 @@
             <word>Cred</word>
             <word>eeprom</word>
             <word>hexnum</word>
+            <word>hopercount</word>
+            <word>hoperrcode</word>
             <word>init</word>
             <word>inithop</word>
             <word>lcd</word>

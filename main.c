@@ -51,7 +51,7 @@
 #include "dispense.h"
 
 void enter_service(void);
-
+ 
 /*
                          Main application
  */

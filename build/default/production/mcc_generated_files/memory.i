@@ -16936,7 +16936,7 @@ void MEMORY_Tasks(void);
 __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0" "," "0" "," "0" "," "0" "," "0" "," "0" "," "0" "," "0");
 __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0" "," "0" "," "0" "," "0" "," "0" "," "0" "," "0" "," "5");
 __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "10" "," "15" "," "20" "," "25" "," "30" "," "35" "," "40" "," "0");
-__asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x07" "," "0" "," "0" "," "0" "," "0x02" "," "0" "," "0" "," "0");
+__asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x07" "," "4" "," "0" "," "0" "," "0x02" "," "0" "," "0" "," "0");
 __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x00" "," "0" "," "0" "," "0" "," "0x00" "," "0" "," "6" "," "6");
 __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x06" "," "6" "," "6" "," "6" "," "0x06" "," "6" "," "1" "," "0");
 

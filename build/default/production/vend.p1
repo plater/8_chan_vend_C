@@ -3657,7 +3657,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./hopper.h: 16: uint8_t outcoins;
 [v _outcoins `uc ~T0 @X0 1 e ]
 "17
-[; ;./hopper.h: 17: signed char hopercount = 3;
+[; ;./hopper.h: 17: uint8_t hoperrcode;
+[v _hoperrcode `uc ~T0 @X0 1 e ]
+"18
+[; ;./hopper.h: 18: signed char hopercount = 3;
 [v _hopercount `c ~T0 @X0 1 e ]
 [i _hopercount
 -> -> 3 `i `c
@@ -4964,9 +4967,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 331:         {
 {
 "332
-[; ;vend.c: 332:             case 0x01 : DAC1CON1 = (sensorval++) & 0x1F;
+[; ;vend.c: 332:             case 0x01 : DAC1CON1 = (++sensorval) & 0x1F;
 [e :U 1580 ]
-[e = _DAC1CON1 -> & -> ++ _sensorval -> -> 1 `i `Vuc `i -> 31 `i `uc ]
+[e = _DAC1CON1 -> & -> =+ _sensorval -> -> 1 `i `Vuc `i -> 31 `i `uc ]
 "333
 [; ;vend.c: 333:             displ_sens(senspos, dacpos);
 [e ( _displ_sens (2 , _senspos _dacpos ]
@@ -4974,9 +4977,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;vend.c: 334:             break;
 [e $U 1578  ]
 "335
-[; ;vend.c: 335:             case 0x02 : DAC1CON1 = (sensorval--) & 0x1F;
+[; ;vend.c: 335:             case 0x02 : DAC1CON1 = (--sensorval) & 0x1F;
 [e :U 1581 ]
-[e = _DAC1CON1 -> & -> -- _sensorval -> -> 1 `i `Vuc `i -> 31 `i `uc ]
+[e = _DAC1CON1 -> & -> =- _sensorval -> -> 1 `i `Vuc `i -> 31 `i `uc ]
 "336
 [; ;vend.c: 336:             displ_sens(senspos, dacpos);
 [e ( _displ_sens (2 , _senspos _dacpos ]

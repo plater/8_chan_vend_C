@@ -14,6 +14,7 @@
 
 uint8_t change = 0;
 uint8_t outcoins;
+uint8_t hoperrcode;
 signed char hopercount = 3;
 
 void hopper_test(void);

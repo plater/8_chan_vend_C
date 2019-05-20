@@ -76,9 +76,16 @@ bool Reset_hopper(void)
     }
 }
 
+//Read hoperrcode 0 = start closed exit on open
+//hoperrcode 1 = start closed stay closed switch jammed
+//hoperrcode 2 = Start open never closed
+//hoperrcode 3 = Closed but never opened
+//hoperrcode 4 = Start open, close then opened again
  bool pay_coin(void)
 {//Pickup and exit one coin, return 0 for successful cycle.
     //cctalk_on();
+    hoperrcode = 0;
+    //hopercount = number of retries for empty
     hopercount = 3;
     if(switch_read())
     {//Switch closed start exit timer 1 second
@@ -87,7 +94,8 @@ bool Reset_hopper(void)
        // cctalk_off();
         if(PIR4bits.TMR2IF)
         {//Timeout occurred - error
-            
+            cctalk_off();
+            hoperrcode = 1;
             return 1;
         }
         else
@@ -107,6 +115,7 @@ bool Reset_hopper(void)
                 if(Reset_hopper())
                 {
                     cctalk_off();
+                    hoperrcode = 2;
                     return 1;
                 }
                 
@@ -119,10 +128,12 @@ bool Reset_hopper(void)
         cctalk_off();
         if(PIR4bits.TMR2IF)
         {
+            hoperrcode = 3;
             return 1;
         }
         else
         {
+            hoperrcode = 4;
             return 0;
         }
     }

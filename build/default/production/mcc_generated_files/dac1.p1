@@ -1403,8 +1403,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/dac1.c: 60:     DAC1CON0 = 0x80;
 [e = _DAC1CON0 -> -> 128 `i `uc ]
 "62
-[; ;mcc_generated_files/dac1.c: 62:     DAC1CON1 = 0x1C;
-[e = _DAC1CON1 -> -> 28 `i `uc ]
+[; ;mcc_generated_files/dac1.c: 62:     DAC1CON1 = 0x04;
+[e = _DAC1CON1 -> -> 4 `i `uc ]
 "63
 [; ;mcc_generated_files/dac1.c: 63: }
 [e :UE 1490 ]

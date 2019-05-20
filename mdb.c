@@ -387,7 +387,7 @@ void mdb_unlock(void)
     TRISE = 0x00;
     TRISA = 0x1F;
     TRISB = 0xD0;
-    TRISC = 0x80;
+    TRISC = 0x90;
     TRISD = 0x00;
 
     /**
@@ -417,7 +417,7 @@ void mdb_unlock(void)
     ODCONC = 0x00;
     ODCOND = 0x00;
     LATC = 0x01;
-    TRISC = 0x80;
+    TRISC = 0x90;
     ANSELC = 0x00;
     WPUC = 0x00;
     ODCONC = 0x00;
@@ -429,9 +429,7 @@ void mdb_unlock(void)
     RC6PPS = 0x0;   //RC6->EUSART1:TX1;
     RB5PPS = 0x0;   //RB5->EUSART2:TX2;
     RX2PPSbits.RXPPS = 0x0;   //RB4->EUSART2:RX2;*/
-    CMP1_Initialize();
     TMR3_Initialize();
-    DAC1_Initialize();
     TMR5_Initialize();
     TMR1_Initialize();
 
