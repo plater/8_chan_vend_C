@@ -20,12 +20,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92 mcc_generated_files/dac1.h
 [; ;mcc_generated_files/dac1.h: 92: void DAC1_Initialize(void);
 [v _DAC1_Initialize `(v ~T0 @X0 0 ef ]
-"306 mcc_generated_files/tmr2.h
-[; ;mcc_generated_files/tmr2.h: 306: void TMR2_Initialize(void);
-[v _TMR2_Initialize `(v ~T0 @X0 0 ef ]
 "99 mcc_generated_files/tmr5.h
 [; ;mcc_generated_files/tmr5.h: 99: void TMR5_Initialize(void);
 [v _TMR5_Initialize `(v ~T0 @X0 0 ef ]
+"306 mcc_generated_files/tmr2.h
+[; ;mcc_generated_files/tmr2.h: 306: void TMR2_Initialize(void);
+[v _TMR2_Initialize `(v ~T0 @X0 0 ef ]
 "99 mcc_generated_files/tmr1.h
 [; ;mcc_generated_files/tmr1.h: 99: void TMR1_Initialize(void);
 [v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
@@ -1570,11 +1570,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/mcc.c: 124:     DAC1_Initialize();
 [e ( _DAC1_Initialize ..  ]
 "125
-[; ;mcc_generated_files/mcc.c: 125:     TMR2_Initialize();
-[e ( _TMR2_Initialize ..  ]
-"126
-[; ;mcc_generated_files/mcc.c: 126:     TMR5_Initialize();
+[; ;mcc_generated_files/mcc.c: 125:     TMR5_Initialize();
 [e ( _TMR5_Initialize ..  ]
+"126
+[; ;mcc_generated_files/mcc.c: 126:     TMR2_Initialize();
+[e ( _TMR2_Initialize ..  ]
 "127
 [; ;mcc_generated_files/mcc.c: 127:     TMR1_Initialize();
 [e ( _TMR1_Initialize ..  ]

@@ -110,21 +110,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 "5025
 [; ;/opt/microchip/xc8/v2.00/pic/include/pic18f47k40.h: 5025: extern volatile PIR4bits_t PIR4bits __attribute__((address(0xECE)));
 [v _PIR4bits `VS315 ~T0 @X0 0 e@3790 ]
-"17572
-[; ;/opt/microchip/xc8/v2.00/pic/include/pic18f47k40.h: 17572:     struct {
-[s S867 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S867 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"17582
-[; ;/opt/microchip/xc8/v2.00/pic/include/pic18f47k40.h: 17582:     struct {
-[s S868 :3 `uc 1 :1 `uc 1 ]
-[n S868 . . CCP2_PA2 ]
-"17571
-[; ;/opt/microchip/xc8/v2.00/pic/include/pic18f47k40.h: 17571: typedef union {
-[u S866 `S867 1 `S868 1 ]
-[n S866 . . . ]
-"17587
-[; ;/opt/microchip/xc8/v2.00/pic/include/pic18f47k40.h: 17587: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF8E)));
-[v _PORTBbits `VS866 ~T0 @X0 0 e@3982 ]
+"17643
+[; ;/opt/microchip/xc8/v2.00/pic/include/pic18f47k40.h: 17643:     struct {
+[s S870 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S870 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"17653
+[; ;/opt/microchip/xc8/v2.00/pic/include/pic18f47k40.h: 17653:     struct {
+[s S871 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S871 . . CCP2 PA1 ]
+"17658
+[; ;/opt/microchip/xc8/v2.00/pic/include/pic18f47k40.h: 17658:     struct {
+[s S872 :1 `uc 1 :1 `uc 1 ]
+[n S872 . . PA2 ]
+"17642
+[; ;/opt/microchip/xc8/v2.00/pic/include/pic18f47k40.h: 17642: typedef union {
+[u S869 `S870 1 `S871 1 `S872 1 ]
+[n S869 . . . . ]
+"17663
+[; ;/opt/microchip/xc8/v2.00/pic/include/pic18f47k40.h: 17663: extern volatile PORTCbits_t PORTCbits __attribute__((address(0xF8F)));
+[v _PORTCbits `VS869 ~T0 @X0 0 e@3983 ]
 "254 ./vend.h
 [; ;./vend.h: 254: void Read_NVstore(uint16_t storeadd, uint8_t *storemem, uint8_t storesize);
 [v _Read_NVstore `(v ~T0 @X0 0 ef3`us`*uc`uc ]
@@ -4281,8 +4285,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _switch_read ]
 [f ]
 "135
-[; ;hopper.c: 135:     if(PORTBbits.RB4 == venflags.swclosed)
-[e $ ! == -> . . _PORTBbits 0 4 `i -> . _venflags 17 `i 1537  ]
+[; ;hopper.c: 135:     if(PORTCbits.RC4 == venflags.swclosed)
+[e $ ! == -> . . _PORTCbits 0 4 `i -> . _venflags 17 `i 1537  ]
 "136
 [; ;hopper.c: 136:     {
 {
@@ -4317,8 +4321,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 1537 ]
 "146
-[; ;hopper.c: 146:     if(PORTBbits.RB4)
-[e $ ! != -> . . _PORTBbits 0 4 `i -> 0 `i 1540  ]
+[; ;hopper.c: 146:     if(PORTCbits.RC4)
+[e $ ! != -> . . _PORTCbits 0 4 `i -> 0 `i 1540  ]
 "147
 [; ;hopper.c: 147:     {
 {

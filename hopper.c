@@ -132,7 +132,7 @@ bool Reset_hopper(void)
 
 bool switch_read(void)
 {
-    if(PORTBbits.RB4 == venflags.swclosed)
+    if(PORTCbits.RC4 == venflags.swclosed)
     {//Switch changed state
         if(venflags.swclosed)
         {//switch transition from closed to open
@@ -143,7 +143,7 @@ bool switch_read(void)
             __delay_ms(20);
         }
     }
-    if(PORTBbits.RB4)
+    if(PORTCbits.RC4)
     {//Switch is open
         venflags.swclosed = 0;
         return 0;

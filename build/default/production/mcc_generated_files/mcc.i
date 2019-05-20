@@ -17432,12 +17432,6 @@ void TMR0_Reload16bit(void);
 # 309 "mcc_generated_files/tmr0.h"
 _Bool TMR0_HasOverflowOccured(void);
 # 59 "mcc_generated_files/mcc.h" 2
-# 1 "mcc_generated_files/dac1.h" 1
-# 92 "mcc_generated_files/dac1.h"
-void DAC1_Initialize(void);
-# 128 "mcc_generated_files/dac1.h"
-void DAC1_SetOutput(uint8_t inputData);
-# 60 "mcc_generated_files/mcc.h" 2
 # 1 "mcc_generated_files/memory.h" 1
 # 98 "mcc_generated_files/memory.h"
 uint8_t FLASH_ReadByte(uint32_t flashAddr);
@@ -17455,6 +17449,12 @@ void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
 uint8_t DATAEE_ReadByte(uint16_t bAdd);
 
 void MEMORY_Tasks(void);
+# 60 "mcc_generated_files/mcc.h" 2
+# 1 "mcc_generated_files/dac1.h" 1
+# 92 "mcc_generated_files/dac1.h"
+void DAC1_Initialize(void);
+# 128 "mcc_generated_files/dac1.h"
+void DAC1_SetOutput(uint8_t inputData);
 # 61 "mcc_generated_files/mcc.h" 2
 # 1 "mcc_generated_files/eusart1.h" 1
 # 93 "mcc_generated_files/eusart1.h"
@@ -17484,8 +17484,8 @@ void SYSTEM_Initialize(void)
     TMR3_Initialize();
     TMR4_Initialize();
     DAC1_Initialize();
-    TMR2_Initialize();
     TMR5_Initialize();
+    TMR2_Initialize();
     TMR1_Initialize();
     TMR0_Initialize();
     EUSART1_Initialize();
